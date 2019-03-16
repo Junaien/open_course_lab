@@ -173,7 +173,7 @@ int isTmax(int x) {
   //x ^ 01111111 == 00000000 iff x == 01111111,
   //so we can identify if x is Tmax by this fact
   int negativeTmax = x + 2;
-  int isNegativeOne = !(~x);
+  int isNegativeOne = !(~x); 
   return !isNegativeOne & !(negativeTmax + x);
 }
 /*
@@ -216,7 +216,7 @@ int negate(int x) {
 int isAsciiDigit(int x) {
   //x is in range iff  x  == 00110ppp (call this a match)
                   //or x  == 0011100p (call this b match)
-
+             
   //we can identify whether x belongs to 00110ppp or 0011100p
   int a_mask = 6;
   int a_match = !((x >> 3) ^ a_mask);
@@ -322,6 +322,7 @@ int howManyBits(int x) {
   notEquality  = (!(firstHalf ^ 0) | !(firstHalf ^ allF)) ^ 1;
   mask = ~notEquality + 1;
   ret += (mask & 1);
+
   return ret + 1;
 }
 //float
@@ -337,21 +338,7 @@ int howManyBits(int x) {
  *   Rating: 4
  */
 unsigned floatScale2(unsigned uf) {
-  //if exp == 11111111 return uf
-  //if exp == 00000000 && first_bit(mantissa) is 1,shift mantissa to the left by 1, increment esp by 1
-  //if exp == 00000000 && first bit of mantissa is not 1, shift mantissa to the left by 1
-  //other situation just increment esp by one, no shift
-
-  int exp  = (uf >> 23) & 255;
-  int sign = (uf & (1 << 31));
-  int mantissa = uf;
-  int firstBitOfMantissa = (mantissa >> 22) & 1;
-
-  if(exp == 255)return uf;
-  if(exp == 0){mantissa = mantissa << 1;}
-  if(firstBitOfMantissa || exp != 0){exp += 1;}
-  mantissa = mantissa & (~(~0 << 23));
-  return sign | (exp << 23) | mantissa;
+  )
 }
 /*
  * floatFloat2Int - Return bit-level equivalent of expression (int) f
@@ -366,24 +353,7 @@ unsigned floatScale2(unsigned uf) {
  *   Rating: 4
  */
 int floatFloat2Int(unsigned uf) {
-  //if exp < 2 ** 7 - 1, return 0
-  //if exp >= 2 ** 7 - 1, convert to number and check
-
-  int E    = ((uf >> 23) & 255) - 127;
-  int mantissa = ~((-1) << 23) & uf;
-  int sign = uf >> 31;
-
-  if(E < 0)return 0;
-  if((sign == 0 && E > 30) ||
-     (sign && E > 31) ||
-     (sign && E == 31 && mantissa != 0))return 1 << 31;
-
-  mantissa = (1 << 23) | mantissa;
-  if(E <= 23)mantissa = mantissa >> (23 - E);
-  else mantissa =  mantissa << (E - 23);
-
-  if(sign)mantissa = ~mantissa + 1;
-  return mantissa;
+  return 2;
 }
 /*
  * floatPower2 - Return bit-level equivalent of the expression 2.0^x
@@ -399,13 +369,5 @@ int floatFloat2Int(unsigned uf) {
  *   Rating: 4
  */
 unsigned floatPower2(int x) {
-    //minimum representable float is: 2 ^ -149
-    //maximum representable float is: 2 ^ 127
-    //denorm range [2 ^ -149, 2 ^ -127]
-    //norma  range [2 ^ -126, 2 ^ 127]
-    if(x < -149)return 0;
-    if(x >  127)return 255 << 23;
-    if(x <= -127)return 1 << (x + 149);
-    else return (x + 127) << 23;
-
+    return 2;
 }
