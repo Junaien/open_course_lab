@@ -1,0 +1,63 @@
+;Solution to Problem 1
+(defun MIN-2 (x1 x2)
+             (cond ((not (numberp x1))   'ERROR)
+                   ((not (numberp x2))   'ERROR)
+                   ((<= x1 x2)            x1)
+                   (T                     x2)))
+;Solution to Problem 2
+(defun SAFE-AVG (x1 x2)
+             (cond ((not (numberp x1))  NIL)
+                   ((not (numberp x2))  NIL)
+                   (T                  (/ (+ x1 x2) 2))))
+
+;Solution to Problem 3
+(defun ODD-GT-MILLION (x)
+                      (cond ((not (integerp x))   NIL)
+                            ((<= x 1000000)       NIL)
+                            ((= (mod x 2) 0)      NIL)
+                            (T                    T)))
+;Solution to Problem 4
+(defun MULTIPLE-MEMBER (s l)
+                       (cond ((not (or (symbolp s) (numberp s))) NIL)
+                             ((not (listp l))                    NIL)
+                             (T    (let ((first (member s l)))
+                                         (if (null first)
+                                              NIL
+                                             (member s (cdr first)))))))
+;Solution to Problem 5
+(defun MONTH->INTEGER (x)
+                      (cond ((not (symbolp x)) 'ERROR)
+                            ((eq x 'January)   1 )
+                            ((eq x 'February)  2)
+                            ((eq x 'March)     3)
+                            ((eq x 'April)     4)
+                            ((eq x 'May)       5)
+                            ((eq x 'June)      6)
+                            ((eq x 'July)      7)
+                            ((eq x 'August)    8)
+                            ((eq x 'September) 9)
+                            ((eq x 'October)   10)
+                            ((eq x 'November)  11)
+                            ((eq x 'December)  12)
+                            (T                 'ERROR)))
+;Solution to Problem 6
+(defun SCORE->GRADE (x)
+                    (cond ((not (numberp x)) NIL)
+                          ((>= x 90)  'A)
+                          ((>= x 87)  'A-)
+                          ((>= x 83)  'B+)
+                          ((>= x 80)  'B)
+                          ((>= x 77)  'B-)
+                          ((>= x 73)  'C+)
+                          ((>= x 70)  'C)
+                          ((>= x 60)  'D)
+                          (T          'F)))
+;Solution to Problem 7
+(defun GT (x y)
+          (or (and (numberp x) (numberp y) (> x y)) NIL))
+;Solution to Problem 8
+(defun SAME-PARITY (x y)
+                   (or (and (integerp x) (integerp y) (= (REM x 2) (rem y 2))) NIL))
+;Solution to Problem 9
+(defun SAFE-DIV (x y)
+                (and (numberp x) (numberp y) (not (zerop y)) (/ x y)))

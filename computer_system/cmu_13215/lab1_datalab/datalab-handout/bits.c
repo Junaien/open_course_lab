@@ -216,7 +216,7 @@ int isAsciiDigit(int x) {
   //x is in range iff  x  == 00100ppp (call this a match)
                   //or x  == 0001111p (call this b match)
   //we can identify whether x belongs to 00100ppp or 0001111p
-  int a_mask = 4
+  int a_mask = 4;
   int a_match = !((x >> 3) ^ a_mask);
   int b_mask = 15;
   int b_match = !((x >> 1) ^ b_mask);
@@ -231,7 +231,6 @@ int isAsciiDigit(int x) {
  */
 int conditional(int x, int y, int z) {
   //if x is true, mask = ff, else mask = 00000000
-  int zero_or_one = !x;
   int mask = (~x + 1) >> 31;
   return (y & mask) | (z & (~mask));
 }
@@ -248,7 +247,7 @@ int isLessOrEqual(int x, int y) {
   int leBySign = (x >> 31) & (~(y >> 31));
   int gtBySign =  ~(x >> 31) & (y >> 31);
   int leNotBySign = !((y + (~x + 1)) >> 31);
-  return leBySign | gtBySign & leNotBySign;
+  return leBySign | (gtBySign & leNotBySign);
 }
 //4
 /*
@@ -324,7 +323,6 @@ int howManyBits(int x) {
   notEquality  = (!(firstHalf ^ 0) | !(firstHalf ^ -1)) ^ 1;
   mask = ~notEquality + 1;
   ret += (mask & 1);
-
   return ret + 1;
 }
 //float

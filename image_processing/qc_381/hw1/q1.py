@@ -13,12 +13,18 @@ def to_gray(img):
     ret_img = np.zeros((row,col))
     for i in range(row):
         for j in range(col):
-            ret_img[i][j] = (int(img[i][j][0]) + 
+            ret_img[i][j] = (int(img[i][j][0]) +
                                            img[i][j][1] +
                                            img[i][j][2]) / 3
-           
+
     return ret_img
-              
+def calculate_histo(img, level, row, col):
+    hist = np.zeros(level);
+    for i in range(row):
+        for j in range(col):
+            hist[img(i)(j)] += 1
+    return hist
+    
 def main():
     over_exposed_img = cv.imread("overexposed.jpg")
     under_exposed_img = cv.imread("underexposed.jpg")
@@ -33,8 +39,8 @@ def main():
     #plt.legend()
     #plt.hist(np.ravel(over_exposed_img[:,:,2]),256, label = 'red')
     #plt.legend()
-    
-    
+
+
     plt.figure(1)
     plt.hist(np.ravel(under_exposed_gray_img),256, label = 'gray')
     plt.legend()
@@ -46,4 +52,3 @@ def main():
     #plt.legend()
 if __name__ == "__main__":
     main()
-    
