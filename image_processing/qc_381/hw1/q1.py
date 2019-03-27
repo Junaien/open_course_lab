@@ -1,54 +1,73 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+Created on Thu Mar 14 19:08:56 2019
 
-This is a temporary script file.
+@author: enlin
 """
-import numpy as np, cv2 as cv
+"""
+Question: Describe briefly the differences in the histograms?
+Answer:
+    
+    
+    
+"""
+import numpy as np
 import matplotlib.pyplot as plt
 
-
+#assumption1: image has three bands
+#input:       image with R,G,B bands
+#output:      image with one band
 def to_gray(img):
-    (row,col) = (img.shape[0], img.shape[1])
-    ret_img = np.zeros((row,col))
-    for i in range(row):
-        for j in range(col):
+    (rows,cols) = (img.shape[0], img.shape[1])
+    ret_img = np.zeros((rows,cols),'uint8')
+    for i in range(rows):
+        for j in range(cols):
             ret_img[i][j] = (int(img[i][j][0]) +
-                                           img[i][j][1] +
-                                           img[i][j][2]) / 3
-
+                             int(img[i][j][1]) +
+                             int(img[i][j][2])) / 3
     return ret_img
-def calculate_histo(img, level, row, col):
-    hist = np.zeros(level);
-    for i in range(row):
-        for j in range(col):
-            hist[img(i)(j)] += 1
+
+#assumption1: image has only one band, with pixel value [0,level)
+#input:       image with gray scale value
+#output:      a histogram of this image
+def calculate_histo(img, level):
+    hist = np.zeros(level,'int16');
+    (rows, cols) = np.shape(img)
+    for i in range(rows):
+        for j in range(cols):
+            hist[img[i,j]] += 1
     return hist
     
 def main():
-    over_exposed_img = cv.imread("overexposed.jpg")
-    under_exposed_img = cv.imread("underexposed.jpg")
+    over_exposed_img = plt.imread("overexposed.jpg")
+    under_exposed_img = plt.imread("underexposed.jpg")
+    
     over_exposed_gray_img = to_gray(over_exposed_img)
     under_exposed_gray_img = to_gray(under_exposed_img)
+    x = range(256)
     plt.figure(0)
-    plt.hist(np.ravel(over_exposed_gray_img),256, label = 'gray')
+    plt.title('over-exposed')
+    plt.plot(x,calculate_histo(over_exposed_gray_img,256),color='k',label = 'gray histo')
     plt.legend()
-    #plt.hist(np.ravel(over_exposed_img[:,:,0]),256, label = 'blue')
-    #plt.legend()
-    #plt.hist(np.ravel(over_exposed_img[:,:,1]),256, label = 'green')
-    #plt.legend()
-    #plt.hist(np.ravel(over_exposed_img[:,:,2]),256, label = 'red')
-    #plt.legend()
+    plt.plot(x,calculate_histo(over_exposed_img[:,:,0],256),color='r',label = 'red histo')
 
-
+    plt.legend()
+    plt.plot(x,calculate_histo(over_exposed_img[:,:,1],256),color='g',label = 'green histo')
+    plt.legend()
+    plt.plot(x,calculate_histo(over_exposed_img[:,:,2],256),color='b',label = 'blue histo')
+    plt.legend()
+    
     plt.figure(1)
-    plt.hist(np.ravel(under_exposed_gray_img),256, label = 'gray')
+    plt.title('under-exposed')
+    plt.plot(x,calculate_histo(under_exposed_gray_img,256),color='k',label = 'gray histo')
     plt.legend()
-    #plt.hist(np.ravel(under_exposed_img[:,:,0]),256, label = 'blue')
-    #plt.legend()
-    #plt.hist(np.ravel(under_exposed_img[:,:,1]),256, label = 'green')
-    #plt.legend()
-    #plt.hist(np.ravel(under_exposed_img[:,:,2]),256, label = 'red')
-    #plt.legend()
+    plt.plot(x,calculate_histo(under_exposed_img[:,:,0],256),color='r',label = 'red histo')
+
+    plt.legend()
+    plt.plot(x,calculate_histo(under_exposed_img[:,:,1],256),color='g',label = 'green histo')
+    plt.legend()
+    plt.plot(x,calculate_histo(under_exposed_img[:,:,2],256),color='b',label = 'blue histo')
+    plt.legend()
+    
 if __name__ == "__main__":
     main()

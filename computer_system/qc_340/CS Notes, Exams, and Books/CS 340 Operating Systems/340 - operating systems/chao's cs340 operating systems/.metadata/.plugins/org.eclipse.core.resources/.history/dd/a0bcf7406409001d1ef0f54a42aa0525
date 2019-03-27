@@ -1,0 +1,71 @@
+/*
+CSCI 340 6:30 - 7:45pm 
+Project 1
+By: Yachao Liu
+April 7, 2008
+*/
+
+
+public class Project1{
+	
+	Visitor[] visitor;//array of visitors
+	Car[] cars;//array of cars
+	Controller controller;//controller
+	boolean allLeft;//see if all visitors have left
+	int numVisitors;//numVisitors
+	int numCar;//numCars
+	int groupSize;//groupSize
+	int hTime;//time to wait for handicapp person
+	
+	public Project1(){
+		allLeft = false;
+		
+	}//constructor
+	
+	public static void main(String args[]){
+		
+		try{
+		Project1 main = new Project1();
+			
+		main.numVisitors = Integer.parseInt(args[0]);
+		main.numCar = Integer.parseInt(args[1]);
+		main.groupSize = Integer.parseInt(args[2]);
+		main.hTime = Integer.parseInt(args[3]);
+		
+		main.initVisitors(main.numVisitors, main);
+		main.initCar(main.numCar, main);
+		controller = new Thread(new Controller(main), "Controller");
+		controller.start();
+		
+		}//try
+		catch(Exception e){
+			System.out.println("Must supply argument values");
+		}//catch
+	}//main
+	
+	
+	
+	public boolean carsNotReady(){
+		
+		return false;
+	}//carsNotReady
+	
+	public void initVisitors(int numVisitors, Project1 p){
+		Thread Visitors[] = new Thread[numVisitors];
+		
+		for(int i = 0; i < numVisitors; i++){
+			Visitors[i] = new Thread(new Visitor(p), "Visitor " + i);
+			Visitors[i].start();
+		}//for
+	}//initVisitors
+	
+	public void initCar(int numCar, Project1 p){
+		Thread Cars[] = new Thread[numCar];
+		
+		for(int i = 0; i < numCar; i++){
+			Cars[i] = new Thread(new Car(p), "Car " + i);
+			Cars[i].start();
+		}//for
+	}//initCar
+		
+}//Project 1

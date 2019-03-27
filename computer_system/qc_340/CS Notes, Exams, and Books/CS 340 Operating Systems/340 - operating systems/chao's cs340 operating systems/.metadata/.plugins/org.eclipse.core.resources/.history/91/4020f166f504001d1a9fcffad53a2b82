@@ -1,0 +1,22 @@
+/*
+CSCI 340 6:30 - 7:45pm 
+Project 1
+By: Yachao Liu
+April 7, 2008
+*/
+
+
+public class Project1{
+	
+	public static void main(String args[]){
+		
+		Thread Visitors[];
+		
+		for(int i = 0; i <= 7; i++){
+			Visitors[i] = Thread(new Visitor());
+		}
+		
+		
+	}//main
+		
+}//Project 1

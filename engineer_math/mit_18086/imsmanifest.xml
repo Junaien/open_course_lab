@@ -1,0 +1,2289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+          xmlns:cwsp="http://www.dspace.org/xmlns/cwspace_imscp"
+          xmlns:ocw="https://ocw.mit.edu/xmlns/ocw_imscp"
+          xmlns:lom="https://ocw.mit.edu/xmlns/LOM"
+          identifier="urn_edu.mit.ocw_18-086-mathematical-methods-for-engineers-ii-spring-2006"
+          version="2018-6-18T6:7:37"
+          cwsp:packageType="Course"
+          xml:base="18-086-spring-2006/"
+          xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 http://www.imsglobal.org/xsd/imscp_v1p1.xsd  http://www.adlnet.org/xsd/adlcp_rootv1p2 http://www.adlnet.org/xsd/adlcp_rootv1p2.xsd http://www.dspace.org/xmlns/cwspace_imscp http://www.dspace.org/xsd/cwspace_imscp/version10/cwspace_imscpv10.xsd https://ocw.mit.edu/xmlns/ocw_imscp https://ocw.mit.edu/xsd/ocw_imscp/version10/ocw_imscpv10.xsd https://ocw.mit.edu/xmlns/LOM https://ocw.mit.edu/xsd/LOM/lomv1.0/lomv1.0.xsd">
+   	<metadata>
+   		<schema>IMS Content</schema>
+        <schemaversion>1.1</schemaversion>
+        <cwsp:packageMetadata>
+            <cwsp:sourceSystem>OCW</cwsp:sourceSystem>
+            <cwsp:profile>CWSpace</cwsp:profile>
+            <cwsp:profileVersion>0.1</cwsp:profileVersion>
+        </cwsp:packageMetadata>
+        <lom:general uniqueElementName="general">
+            <lom:title uniqueElementName="title">
+				<lom:string language="en">Mathematical Methods for Engineers II</lom:string>
+			</lom:title>
+			<lom:identifier>
+				<lom:catalog uniqueElementName="catalog">OCW Master Course Number</lom:catalog>
+		      	<lom:entry uniqueElementName="entry">18.086</lom:entry>
+			</lom:identifier>
+        </lom:general>
+        <lom:lifecycle uniqueElementName="lifeCycle">
+            <lom:version uniqueElementName="version">
+				<lom:string language="en">Spring 2006</lom:string>
+			</lom:version>
+            <lom:contribute>
+	            <lom:role>
+	                <lom:source uniqueElementName="source">OCW_LOMv1.0</lom:source>
+	                <lom:value uniqueElementName="value">Author</lom:value>
+	            </lom:role>
+	            <lom:entity>Strang, Gilbert</lom:entity>
+	            <lom:date uniqueElementName="date">
+	                <lom:dateTime uniqueElementName="dateTime">2018-6-18</lom:dateTime>
+	            </lom:date>
+        	</lom:contribute>
+        </lom:lifecycle>
+        <lom:relation uniqueElementName="relation">
+        	<lom:kind uniqueElementName="kind">
+        		<lom:source uniqueElementName="source">OCW_LOMv1.0</lom:source>
+        		<lom:value uniqueElementName="value">isbasedon</lom:value>
+        	</lom:kind>
+        	<lom:resource uniqueElementName="resource">
+        		<lom:identifier>
+        			<lom:catalog uniqueElementName="catalog">URI</lom:catalog>
+        			<lom:entry uniqueElementName="entry">http://hdl.handle.net/1721.1/35273</lom:entry>
+        		</lom:identifier>
+        		<lom:description uniqueElementName="description">
+        			<lom:string language="en">Previous version of the course</lom:string>
+        		</lom:description>
+        	</lom:resource>
+        </lom:relation>
+        <lom:taxonPath>
+            <lom:source uniqueElementName="source">
+                <lom:string language="en">OCW Course Topics</lom:string>
+            </lom:source>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Mathematics</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Applied Mathematics</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            
+        </lom:taxonPath>
+        <lom:taxonPath>
+            <lom:source uniqueElementName="source">
+                <lom:string language="en">OCW Course Topics</lom:string>
+            </lom:source>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Engineering</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Systems Engineering</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Computational Science and Engineering</lom:string>
+                </lom:entry>
+            </lom:taxon>
+        </lom:taxonPath>
+        <lom:taxonPath>
+            <lom:source uniqueElementName="source">
+                <lom:string language="en">OCW Course Topics</lom:string>
+            </lom:source>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Mathematics</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Linear Algebra</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            
+        </lom:taxonPath>
+        <lom:taxonPath>
+            <lom:source uniqueElementName="source">
+                <lom:string language="en">OCW Course Topics</lom:string>
+            </lom:source>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Mathematics</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Differential Equations</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            
+        </lom:taxonPath>        
+        <adlcp:location>contents/index.htm.xml</adlcp:location>
+    </metadata>
+    <organizations default="ocw_18-086-mathematical-methods-for-engineers-ii-spring-2006">
+        <organization identifier="ocw_18-086-mathematical-methods-for-engineers-ii-spring-2006">
+            <title>Mathematical Methods for Engineers II</title>
+            <item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.CourseHome"
+                  identifierref="r_contents.index.htm"
+                  ocw:sectionTemplateType="CourseHomePage"
+                  ocw:sectionTemplateVersion="2018-6-18">
+				<title>Mathematical Methods for Engineers II</title>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.18-086s06.jpg"
+          identifierref="r_contents.18-086s06.jpg">
+				<title>18-086s06.jpg</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.18-086s06-th.jpg"
+          identifierref="r_contents.18-086s06-th.jpg">
+				<title>18-086s06-th.jpg</title>
+				</item>
+			</item>
+            <item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.syllabus"
+                  identifierref="r_contents.syllabus.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2018-6-18">
+				<title>Syllabus</title>
+			</item>
+            <item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.calendar"
+                  identifierref="r_contents.calendar.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2018-6-18">
+				<title>Calendar</title>
+			</item>
+            <item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings"
+                  identifierref="r_contents.readings.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2018-6-18">
+				<title>Readings</title>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am61.pdf"
+          identifierref="r_contents.readings.am61.pdf">
+				<title>am61.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am64.pdf"
+          identifierref="r_contents.readings.am64.pdf">
+				<title>am64.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am62.pdf"
+          identifierref="r_contents.readings.am62.pdf">
+				<title>am62.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am52.pdf"
+          identifierref="r_contents.readings.am52.pdf">
+				<title>am52.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am35.pdf"
+          identifierref="r_contents.readings.am35.pdf">
+				<title>am35.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am57.pdf"
+          identifierref="r_contents.readings.am57.pdf">
+				<title>am57.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am56.pdf"
+          identifierref="r_contents.readings.am56.pdf">
+				<title>am56.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am65.pdf"
+          identifierref="r_contents.readings.am65.pdf">
+				<title>am65.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am36.pdf"
+          identifierref="r_contents.readings.am36.pdf">
+				<title>am36.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am72.pdf"
+          identifierref="r_contents.readings.am72.pdf">
+				<title>am72.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am55.pdf"
+          identifierref="r_contents.readings.am55.pdf">
+				<title>am55.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am71.pdf"
+          identifierref="r_contents.readings.am71.pdf">
+				<title>am71.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am51.pdf"
+          identifierref="r_contents.readings.am51.pdf">
+				<title>am51.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am53.pdf"
+          identifierref="r_contents.readings.am53.pdf">
+				<title>am53.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am63.pdf"
+          identifierref="r_contents.readings.am63.pdf">
+				<title>am63.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.readings.am54.pdf"
+          identifierref="r_contents.readings.am54.pdf">
+				<title>am54.pdf</title>
+				</item>
+			</item>
+            <item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments"
+                  identifierref="r_contents.assignments.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2018-6-18">
+				<title>Assignments</title>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.case2.m"
+          identifierref="r_contents.assignments.case2.m">
+				<title>case2.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.case1.m"
+          identifierref="r_contents.assignments.case1.m">
+				<title>case1.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.hw2_086_s06.pdf"
+          identifierref="r_contents.assignments.hw2_086_s06.pdf">
+				<title>hw2_086_s06.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.cdi.m"
+          identifierref="r_contents.assignments.cdi.m">
+				<title>cdi.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.f_is.m"
+          identifierref="r_contents.assignments.f_is.m">
+				<title>f_is.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.cde.m"
+          identifierref="r_contents.assignments.cde.m">
+				<title>cde.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.schrodinger_stable_implicit.m"
+          identifierref="r_contents.assignments.schrodinger_stable_implicit.m">
+				<title>schrodinger_stable_implicit.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.RK_2.m"
+          identifierref="r_contents.assignments.RK_2.m">
+				<title>RK_2.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.hw1_086_s06.pdf"
+          identifierref="r_contents.assignments.hw1_086_s06.pdf">
+				<title>hw1_086_s06.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.upwind.m"
+          identifierref="r_contents.assignments.upwind.m">
+				<title>upwind.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.LW.m"
+          identifierref="r_contents.assignments.LW.m">
+				<title>LW.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.schrodinger_unstable.m"
+          identifierref="r_contents.assignments.schrodinger_unstable.m">
+				<title>schrodinger_unstable.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.simulation.m"
+          identifierref="r_contents.assignments.simulation.m">
+				<title>simulation.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.hw2_086_s06_sol.pdf"
+          identifierref="r_contents.assignments.hw2_086_s06_sol.pdf">
+				<title>hw2_086_s06_sol.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.nonlinear_upwind.m"
+          identifierref="r_contents.assignments.nonlinear_upwind.m">
+				<title>nonlinear_upwind.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.nonlinear_lw.m"
+          identifierref="r_contents.assignments.nonlinear_lw.m">
+				<title>nonlinear_lw.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.hw1_086_s06_sol.pdf"
+          identifierref="r_contents.assignments.hw1_086_s06_sol.pdf">
+				<title>hw1_086_s06_sol.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.LF.m"
+          identifierref="r_contents.assignments.LF.m">
+				<title>LF.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.HW1_2.m"
+          identifierref="r_contents.assignments.HW1_2.m">
+				<title>HW1_2.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.Lax_friedrichs_1.m"
+          identifierref="r_contents.assignments.Lax_friedrichs_1.m">
+				<title>Lax_friedrichs_1.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.batch.m"
+          identifierref="r_contents.assignments.batch.m">
+				<title>batch.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.homework3.pdf"
+          identifierref="r_contents.assignments.homework3.pdf">
+				<title>homework3.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.HW1_1.m"
+          identifierref="r_contents.assignments.HW1_1.m">
+				<title>HW1_1.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.Leap_frog.m"
+          identifierref="r_contents.assignments.Leap_frog.m">
+				<title>Leap_frog.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.AB_2.m"
+          identifierref="r_contents.assignments.AB_2.m">
+				<title>AB_2.m</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.assignments.schrodinger_stable.m"
+          identifierref="r_contents.assignments.schrodinger_stable.m">
+				<title>schrodinger_stable.m</title>
+				</item>
+			</item>
+            <item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.projects"
+                  identifierref="r_contents.projects.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2018-6-18">
+				<title>Projects</title>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.projects.project1domnguez.pdf"
+          identifierref="r_contents.projects.project1domnguez.pdf">
+				<title>project1domnguez.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.projects.Matlab_Files_for_Project.zip"
+          identifierref="r_contents.projects.Matlab_Files_for_Project.zip">
+				<title>Matlab_Files_for_Project.zip</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.projects.overview.pdf"
+          identifierref="r_contents.projects.overview.pdf">
+				<title>overview.pdf</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.projects.josephkovacpro.pdf"
+          identifierref="r_contents.projects.josephkovacpro.pdf">
+				<title>josephkovacpro.pdf</title>
+				</item>
+			</item>
+            <item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.study-materials"
+                  identifierref="r_contents.study-materials.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2018-6-18">
+				<title>Study Materials</title>
+			</item>
+            <item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures"
+                  identifierref="r_contents.video-lectures.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2018-6-18">
+				<title>Video Lectures</title>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-1-difference-methods-for-ordinary-differential-equations"
+          identifierref="r_contents.video-lectures.lecture-1-difference-methods-for-ordinary-differential-equations.index.htm">
+				<title>Lecture 1: Difference Methods for Ordinary Differential Equations</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-1-difference-methods-for-ordinary-differential-equations.gv-AB35V2k8.srt"
+          identifierref="r_contents.video-lectures.lecture-1-difference-methods-for-ordinary-differential-equations.gv-AB35V2k8.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-1-difference-methods-for-ordinary-differential-equations.gv-AB35V2k8.pdf"
+          identifierref="r_contents.video-lectures.lecture-1-difference-methods-for-ordinary-differential-equations.gv-AB35V2k8.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-2-finite-differences-accuracy-stability-convergence"
+          identifierref="r_contents.video-lectures.lecture-2-finite-differences-accuracy-stability-convergence.index.htm">
+				<title>Lecture 2: Finite Differences, Accuracy, Stability, Convergence</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-2-finite-differences-accuracy-stability-convergence.nlO9ci0kPLg.srt"
+          identifierref="r_contents.video-lectures.lecture-2-finite-differences-accuracy-stability-convergence.nlO9ci0kPLg.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-2-finite-differences-accuracy-stability-convergence.nlO9ci0kPLg.pdf"
+          identifierref="r_contents.video-lectures.lecture-2-finite-differences-accuracy-stability-convergence.nlO9ci0kPLg.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability"
+          identifierref="r_contents.video-lectures.lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability.index.htm">
+				<title>Lecture 3: The One-way Wave Equation and CFL / von Neumann Stability</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability.dxNyJxI_2eI.srt"
+          identifierref="r_contents.video-lectures.lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability.dxNyJxI_2eI.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability.dxNyJxI_2eI.pdf"
+          identifierref="r_contents.video-lectures.lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability.dxNyJxI_2eI.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-4-comparison-of-methods-for-the-wave-equation"
+          identifierref="r_contents.video-lectures.lecture-4-comparison-of-methods-for-the-wave-equation.index.htm">
+				<title>Lecture 4: Comparison of Methods for the Wave Equation</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-4-comparison-of-methods-for-the-wave-equation.HHwDX-3IPT0.srt"
+          identifierref="r_contents.video-lectures.lecture-4-comparison-of-methods-for-the-wave-equation.HHwDX-3IPT0.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-4-comparison-of-methods-for-the-wave-equation.HHwDX-3IPT0.pdf"
+          identifierref="r_contents.video-lectures.lecture-4-comparison-of-methods-for-the-wave-equation.HHwDX-3IPT0.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-5-second-order-wave-equation-including-leapfrog"
+          identifierref="r_contents.video-lectures.lecture-5-second-order-wave-equation-including-leapfrog.index.htm">
+				<title>Lecture 5: Second-order Wave Equation (including leapfrog)</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-5-second-order-wave-equation-including-leapfrog.0aa6fUHTTeU.srt"
+          identifierref="r_contents.video-lectures.lecture-5-second-order-wave-equation-including-leapfrog.0aa6fUHTTeU.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-5-second-order-wave-equation-including-leapfrog.0aa6fUHTTeU.pdf"
+          identifierref="r_contents.video-lectures.lecture-5-second-order-wave-equation-including-leapfrog.0aa6fUHTTeU.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-6-wave-profiles-heat-equation-point-source"
+          identifierref="r_contents.video-lectures.lecture-6-wave-profiles-heat-equation-point-source.index.htm">
+				<title>Lecture 6: Wave Profiles, Heat Equation / point source</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-6-wave-profiles-heat-equation-point-source.ZPmBMd6OZeQ.srt"
+          identifierref="r_contents.video-lectures.lecture-6-wave-profiles-heat-equation-point-source.ZPmBMd6OZeQ.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-6-wave-profiles-heat-equation-point-source.ZPmBMd6OZeQ.pdf"
+          identifierref="r_contents.video-lectures.lecture-6-wave-profiles-heat-equation-point-source.ZPmBMd6OZeQ.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-7-finite-differences-for-the-heat-equation"
+          identifierref="r_contents.video-lectures.lecture-7-finite-differences-for-the-heat-equation.index.htm">
+				<title>Lecture 7: Finite Differences for the Heat Equation</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-7-finite-differences-for-the-heat-equation.ByGXz_uHEdM.srt"
+          identifierref="r_contents.video-lectures.lecture-7-finite-differences-for-the-heat-equation.ByGXz_uHEdM.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-7-finite-differences-for-the-heat-equation.ByGXz_uHEdM.pdf"
+          identifierref="r_contents.video-lectures.lecture-7-finite-differences-for-the-heat-equation.ByGXz_uHEdM.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-8-convection-diffusion-conservation-laws"
+          identifierref="r_contents.video-lectures.lecture-8-convection-diffusion-conservation-laws.index.htm">
+				<title>Lecture 8: Convection-Diffusion / Conservation Laws</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-8-convection-diffusion-conservation-laws.FrrTXj13DNk.srt"
+          identifierref="r_contents.video-lectures.lecture-8-convection-diffusion-conservation-laws.FrrTXj13DNk.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-8-convection-diffusion-conservation-laws.FrrTXj13DNk.pdf"
+          identifierref="r_contents.video-lectures.lecture-8-convection-diffusion-conservation-laws.FrrTXj13DNk.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-9-conservation-laws-analysis-shocks"
+          identifierref="r_contents.video-lectures.lecture-9-conservation-laws-analysis-shocks.index.htm">
+				<title>Lecture 9: Conservation Laws / Analysis / Shocks</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-9-conservation-laws-analysis-shocks.sleOqiMUTXE.srt"
+          identifierref="r_contents.video-lectures.lecture-9-conservation-laws-analysis-shocks.sleOqiMUTXE.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-9-conservation-laws-analysis-shocks.sleOqiMUTXE.pdf"
+          identifierref="r_contents.video-lectures.lecture-9-conservation-laws-analysis-shocks.sleOqiMUTXE.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-10-shocks-and-fans-from-point-source"
+          identifierref="r_contents.video-lectures.lecture-10-shocks-and-fans-from-point-source.index.htm">
+				<title>Lecture 10: Shocks and Fans from Point Source</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-10-shocks-and-fans-from-point-source.NpTzMWTYbM8.srt"
+          identifierref="r_contents.video-lectures.lecture-10-shocks-and-fans-from-point-source.NpTzMWTYbM8.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-10-shocks-and-fans-from-point-source.NpTzMWTYbM8.pdf"
+          identifierref="r_contents.video-lectures.lecture-10-shocks-and-fans-from-point-source.NpTzMWTYbM8.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-11-level-set-method"
+          identifierref="r_contents.video-lectures.lecture-11-level-set-method.index.htm">
+				<title>Lecture 11: Level Set Method</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-11-level-set-method.ZpOJJk6en2o.srt"
+          identifierref="r_contents.video-lectures.lecture-11-level-set-method.ZpOJJk6en2o.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-11-level-set-method.ZpOJJk6en2o.pdf"
+          identifierref="r_contents.video-lectures.lecture-11-level-set-method.ZpOJJk6en2o.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-12-matrices-in-difference-equations-1d-2d-3d"
+          identifierref="r_contents.video-lectures.lecture-12-matrices-in-difference-equations-1d-2d-3d.index.htm">
+				<title>Lecture 12: Matrices in Difference Equations (1D, 2D, 3D)</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-12-matrices-in-difference-equations-1d-2d-3d.r1-r1t5i58g.srt"
+          identifierref="r_contents.video-lectures.lecture-12-matrices-in-difference-equations-1d-2d-3d.r1-r1t5i58g.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-12-matrices-in-difference-equations-1d-2d-3d.r1-r1t5i58g.pdf"
+          identifierref="r_contents.video-lectures.lecture-12-matrices-in-difference-equations-1d-2d-3d.r1-r1t5i58g.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-13-elimination-with-reordering-sparse-matrices"
+          identifierref="r_contents.video-lectures.lecture-13-elimination-with-reordering-sparse-matrices.index.htm">
+				<title>Lecture 13: Elimination with Reordering: Sparse Matrices</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-13-elimination-with-reordering-sparse-matrices.S6dw885-SZI.srt"
+          identifierref="r_contents.video-lectures.lecture-13-elimination-with-reordering-sparse-matrices.S6dw885-SZI.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-13-elimination-with-reordering-sparse-matrices.S6dw885-SZI.pdf"
+          identifierref="r_contents.video-lectures.lecture-13-elimination-with-reordering-sparse-matrices.S6dw885-SZI.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-14-financial-mathematics-black-scholes-equation"
+          identifierref="r_contents.video-lectures.lecture-14-financial-mathematics-black-scholes-equation.index.htm">
+				<title>Lecture 14: Financial Mathematics / Black-Scholes Equation</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-14-financial-mathematics-black-scholes-equation.pEuuJ5E7ZS0.srt"
+          identifierref="r_contents.video-lectures.lecture-14-financial-mathematics-black-scholes-equation.pEuuJ5E7ZS0.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-14-financial-mathematics-black-scholes-equation.pEuuJ5E7ZS0.pdf"
+          identifierref="r_contents.video-lectures.lecture-14-financial-mathematics-black-scholes-equation.pEuuJ5E7ZS0.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-15-iterative-methods-and-preconditioners"
+          identifierref="r_contents.video-lectures.lecture-15-iterative-methods-and-preconditioners.index.htm">
+				<title>Lecture 15: Iterative Methods and Preconditioners</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-15-iterative-methods-and-preconditioners.LtNVodIs1dI.srt"
+          identifierref="r_contents.video-lectures.lecture-15-iterative-methods-and-preconditioners.LtNVodIs1dI.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-15-iterative-methods-and-preconditioners.LtNVodIs1dI.pdf"
+          identifierref="r_contents.video-lectures.lecture-15-iterative-methods-and-preconditioners.LtNVodIs1dI.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-16-general-methods-for-sparse-systems"
+          identifierref="r_contents.video-lectures.lecture-16-general-methods-for-sparse-systems.index.htm">
+				<title>Lecture 16: General Methods for Sparse Systems</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-16-general-methods-for-sparse-systems.XPo4dHK48Nw.srt"
+          identifierref="r_contents.video-lectures.lecture-16-general-methods-for-sparse-systems.XPo4dHK48Nw.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-16-general-methods-for-sparse-systems.XPo4dHK48Nw.pdf"
+          identifierref="r_contents.video-lectures.lecture-16-general-methods-for-sparse-systems.XPo4dHK48Nw.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-17-multigrid-methods"
+          identifierref="r_contents.video-lectures.lecture-17-multigrid-methods.index.htm">
+				<title>Lecture 17: Multigrid Methods</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-17-multigrid-methods.Y25UBGeu_2g.srt"
+          identifierref="r_contents.video-lectures.lecture-17-multigrid-methods.Y25UBGeu_2g.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-17-multigrid-methods.Y25UBGeu_2g.pdf"
+          identifierref="r_contents.video-lectures.lecture-17-multigrid-methods.Y25UBGeu_2g.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-18-krylov-methods-multigrid-continued"
+          identifierref="r_contents.video-lectures.lecture-18-krylov-methods-multigrid-continued.index.htm">
+				<title>Lecture 18: Krylov Methods / Multigrid Continued</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-18-krylov-methods-multigrid-continued.vIydsgrYGIY.srt"
+          identifierref="r_contents.video-lectures.lecture-18-krylov-methods-multigrid-continued.vIydsgrYGIY.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-18-krylov-methods-multigrid-continued.vIydsgrYGIY.pdf"
+          identifierref="r_contents.video-lectures.lecture-18-krylov-methods-multigrid-continued.vIydsgrYGIY.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-19-conjugate-gradient-method"
+          identifierref="r_contents.video-lectures.lecture-19-conjugate-gradient-method.index.htm">
+				<title>Lecture 19: Conjugate Gradient Method</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-19-conjugate-gradient-method.zha1744fTRs.srt"
+          identifierref="r_contents.video-lectures.lecture-19-conjugate-gradient-method.zha1744fTRs.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-19-conjugate-gradient-method.zha1744fTRs.pdf"
+          identifierref="r_contents.video-lectures.lecture-19-conjugate-gradient-method.zha1744fTRs.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-20-fast-poisson-solver"
+          identifierref="r_contents.video-lectures.lecture-20-fast-poisson-solver.index.htm">
+				<title>Lecture 20: Fast Poisson Solver</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-20-fast-poisson-solver.kyx2QgGkEpc.srt"
+          identifierref="r_contents.video-lectures.lecture-20-fast-poisson-solver.kyx2QgGkEpc.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-20-fast-poisson-solver.kyx2QgGkEpc.pdf"
+          identifierref="r_contents.video-lectures.lecture-20-fast-poisson-solver.kyx2QgGkEpc.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-21-optimization-with-constraints"
+          identifierref="r_contents.video-lectures.lecture-21-optimization-with-constraints.index.htm">
+				<title>Lecture 21: Optimization with constraints</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-21-optimization-with-constraints.7dVYOOHB4g4.srt"
+          identifierref="r_contents.video-lectures.lecture-21-optimization-with-constraints.7dVYOOHB4g4.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-21-optimization-with-constraints.7dVYOOHB4g4.pdf"
+          identifierref="r_contents.video-lectures.lecture-21-optimization-with-constraints.7dVYOOHB4g4.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-22-weighted-least-squares"
+          identifierref="r_contents.video-lectures.lecture-22-weighted-least-squares.index.htm">
+				<title>Lecture 22: Weighted Least Squares</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-22-weighted-least-squares.zIK5EnoiLL0.srt"
+          identifierref="r_contents.video-lectures.lecture-22-weighted-least-squares.zIK5EnoiLL0.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-22-weighted-least-squares.zIK5EnoiLL0.pdf"
+          identifierref="r_contents.video-lectures.lecture-22-weighted-least-squares.zIK5EnoiLL0.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-23-calculus-of-variations-weak-form"
+          identifierref="r_contents.video-lectures.lecture-23-calculus-of-variations-weak-form.index.htm">
+				<title>Lecture 23: Calculus of Variations / Weak Form</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-23-calculus-of-variations-weak-form.94nmfDkTL-E.srt"
+          identifierref="r_contents.video-lectures.lecture-23-calculus-of-variations-weak-form.94nmfDkTL-E.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-23-calculus-of-variations-weak-form.94nmfDkTL-E.pdf"
+          identifierref="r_contents.video-lectures.lecture-23-calculus-of-variations-weak-form.94nmfDkTL-E.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-24-error-estimates-projections"
+          identifierref="r_contents.video-lectures.lecture-24-error-estimates-projections.index.htm">
+				<title>Lecture 24: Error Estimates / Projections</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-24-error-estimates-projections.c9XosfcouiM.srt"
+          identifierref="r_contents.video-lectures.lecture-24-error-estimates-projections.c9XosfcouiM.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-24-error-estimates-projections.c9XosfcouiM.pdf"
+          identifierref="r_contents.video-lectures.lecture-24-error-estimates-projections.c9XosfcouiM.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-25-saddle-points-inf-sup-condition"
+          identifierref="r_contents.video-lectures.lecture-25-saddle-points-inf-sup-condition.index.htm">
+				<title>Lecture 25: Saddle Points / Inf-sup condition</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-25-saddle-points-inf-sup-condition.j-C6QC5ufSw.srt"
+          identifierref="r_contents.video-lectures.lecture-25-saddle-points-inf-sup-condition.j-C6QC5ufSw.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-25-saddle-points-inf-sup-condition.j-C6QC5ufSw.pdf"
+          identifierref="r_contents.video-lectures.lecture-25-saddle-points-inf-sup-condition.j-C6QC5ufSw.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-26-two-squares-equality-constraint-bu-d"
+          identifierref="r_contents.video-lectures.lecture-26-two-squares-equality-constraint-bu-d.index.htm">
+				<title>Lecture 26: Two Squares / Equality Constraint Bu = d</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-26-two-squares-equality-constraint-bu-d.xzUOJ-uQ8F0.srt"
+          identifierref="r_contents.video-lectures.lecture-26-two-squares-equality-constraint-bu-d.xzUOJ-uQ8F0.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-26-two-squares-equality-constraint-bu-d.xzUOJ-uQ8F0.pdf"
+          identifierref="r_contents.video-lectures.lecture-26-two-squares-equality-constraint-bu-d.xzUOJ-uQ8F0.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-27-regularization-by-penalty-term"
+          identifierref="r_contents.video-lectures.lecture-27-regularization-by-penalty-term.index.htm">
+				<title>Lecture 27: Regularization by Penalty Term</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-27-regularization-by-penalty-term.iVUsEwSg-lw.srt"
+          identifierref="r_contents.video-lectures.lecture-27-regularization-by-penalty-term.iVUsEwSg-lw.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-27-regularization-by-penalty-term.iVUsEwSg-lw.pdf"
+          identifierref="r_contents.video-lectures.lecture-27-regularization-by-penalty-term.iVUsEwSg-lw.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-28-linear-programming-and-duality"
+          identifierref="r_contents.video-lectures.lecture-28-linear-programming-and-duality.index.htm">
+				<title>Lecture 28: Linear Programming and Duality</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-28-linear-programming-and-duality.fpwsw7SdkyY.srt"
+          identifierref="r_contents.video-lectures.lecture-28-linear-programming-and-duality.fpwsw7SdkyY.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-28-linear-programming-and-duality.fpwsw7SdkyY.pdf"
+          identifierref="r_contents.video-lectures.lecture-28-linear-programming-and-duality.fpwsw7SdkyY.pdf">
+				<title>3play pdf file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.lecture-29-duality-puzzle-inverse-problem-integral-equations"
+          identifierref="r_contents.video-lectures.lecture-29-duality-puzzle-inverse-problem-integral-equations.index.htm">
+				<title>Lecture 29: Duality Puzzle / Inverse Problem / Integral Equations</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-29-duality-puzzle-inverse-problem-integral-equations.NEsObJTwDXI.srt"
+          identifierref="r_contents.video-lectures.lecture-29-duality-puzzle-inverse-problem-integral-equations.NEsObJTwDXI.srt">
+				<title>3play caption file</title>
+				</item>
+				<item identifier="i_18-086-mathematical-methods-for-engineers-ii-spring-2006.video-lectures.video-lectures.lecture-29-duality-puzzle-inverse-problem-integral-equations.NEsObJTwDXI.pdf"
+          identifierref="r_contents.video-lectures.lecture-29-duality-puzzle-inverse-problem-integral-equations.NEsObJTwDXI.pdf">
+				<title>3play pdf file</title>
+				</item>
+			</item>
+            <item identifier="i_terms"
+                  identifierref="r_common.terms.index.htm"
+                  ocw:sectionTemplateType="GlobalSection"
+                  ocw:sectionTemplateVersion="2018-6-18">
+				<title>Legal Notices</title>
+			</item>
+            <item identifier="i_terms"
+                  identifierref="r_common.terms.index.htm"
+                  ocw:sectionTemplateType="GlobalSection"
+                  ocw:sectionTemplateVersion="2018-6-18">
+				<title>Privacy Statement</title>
+			</item>
+            <item identifier="i_terms.trademarks"
+                  identifierref="r_common.terms.trademarks.index.htm"
+                  ocw:sectionTemplateType="GlobalSection"
+                  ocw:sectionTemplateVersion="2018-6-18">
+				<title>Trademark Notices</title>
+			</item>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="r_contents.video-lectures.lecture-15-iterative-methods-and-preconditioners.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-15-iterative-methods-and-preconditioners/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-15-iterative-methods-and-preconditioners/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-15-iterative-methods-and-preconditioners/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.readings.am62.pdf"
+                  type="other"
+                  href="contents/readings/am62.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am62.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am62.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-17-multigrid-methods.Y25UBGeu_2g.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-17-multigrid-methods/Y25UBGeu_2g.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-17-multigrid-methods/Y25UBGeu_2g.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-17-multigrid-methods/Y25UBGeu_2g.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-4-comparison-of-methods-for-the-wave-equation.HHwDX-3IPT0.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-4-comparison-of-methods-for-the-wave-equation/HHwDX-3IPT0.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-4-comparison-of-methods-for-the-wave-equation/HHwDX-3IPT0.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-4-comparison-of-methods-for-the-wave-equation/HHwDX-3IPT0.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-7-finite-differences-for-the-heat-equation.ByGXz_uHEdM.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-7-finite-differences-for-the-heat-equation/ByGXz_uHEdM.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-7-finite-differences-for-the-heat-equation/ByGXz_uHEdM.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-7-finite-differences-for-the-heat-equation/ByGXz_uHEdM.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.nonlinear_lw.m"
+                  type="other"
+                  href="contents/assignments/nonlinear_lw.m">
+            <metadata>
+                <adlcp:location>contents/assignments/nonlinear_lw.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/nonlinear_lw.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-16-general-methods-for-sparse-systems.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-16-general-methods-for-sparse-systems/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-16-general-methods-for-sparse-systems/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-16-general-methods-for-sparse-systems/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.hw2_086_s06_sol.pdf"
+                  type="other"
+                  href="contents/assignments/hw2_086_s06_sol.pdf">
+            <metadata>
+                <adlcp:location>contents/assignments/hw2_086_s06_sol.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/hw2_086_s06_sol.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.readings.am56.pdf"
+                  type="other"
+                  href="contents/readings/am56.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am56.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am56.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.calendar.index.htm"
+                  type="webcontent"
+                  href="contents/calendar/index.htm">
+            <metadata>
+                <adlcp:location>contents/calendar/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/calendar/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.hw1_086_s06_sol.pdf"
+                  type="other"
+                  href="contents/assignments/hw1_086_s06_sol.pdf">
+            <metadata>
+                <adlcp:location>contents/assignments/hw1_086_s06_sol.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/hw1_086_s06_sol.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-16-general-methods-for-sparse-systems.XPo4dHK48Nw.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-16-general-methods-for-sparse-systems/XPo4dHK48Nw.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-16-general-methods-for-sparse-systems/XPo4dHK48Nw.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-16-general-methods-for-sparse-systems/XPo4dHK48Nw.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.HW1_2.m"
+                  type="other"
+                  href="contents/assignments/HW1_2.m">
+            <metadata>
+                <adlcp:location>contents/assignments/HW1_2.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/HW1_2.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-29-duality-puzzle-inverse-problem-integral-equations.NEsObJTwDXI.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-29-duality-puzzle-inverse-problem-integral-equations/NEsObJTwDXI.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-29-duality-puzzle-inverse-problem-integral-equations/NEsObJTwDXI.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-29-duality-puzzle-inverse-problem-integral-equations/NEsObJTwDXI.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-19-conjugate-gradient-method.zha1744fTRs.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-19-conjugate-gradient-method/zha1744fTRs.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-19-conjugate-gradient-method/zha1744fTRs.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-19-conjugate-gradient-method/zha1744fTRs.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-14-financial-mathematics-black-scholes-equation.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-14-financial-mathematics-black-scholes-equation/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-14-financial-mathematics-black-scholes-equation/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-14-financial-mathematics-black-scholes-equation/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.projects.Matlab_Files_for_Project.zip"
+                  type="other"
+                  href="contents/projects/Matlab_Files_for_Project.zip">
+            <metadata>
+                <adlcp:location>contents/projects/Matlab_Files_for_Project.zip.xml</adlcp:location>
+            </metadata>
+            <file href="contents/projects/Matlab_Files_for_Project.zip"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-25-saddle-points-inf-sup-condition.j-C6QC5ufSw.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-25-saddle-points-inf-sup-condition/j-C6QC5ufSw.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-25-saddle-points-inf-sup-condition/j-C6QC5ufSw.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-25-saddle-points-inf-sup-condition/j-C6QC5ufSw.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.LF.m"
+                  type="other"
+                  href="contents/assignments/LF.m">
+            <metadata>
+                <adlcp:location>contents/assignments/LF.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/LF.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-19-conjugate-gradient-method.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-19-conjugate-gradient-method/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-19-conjugate-gradient-method/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-19-conjugate-gradient-method/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-23-calculus-of-variations-weak-form.94nmfDkTL-E.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-23-calculus-of-variations-weak-form/94nmfDkTL-E.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-23-calculus-of-variations-weak-form/94nmfDkTL-E.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-23-calculus-of-variations-weak-form/94nmfDkTL-E.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-6-wave-profiles-heat-equation-point-source.ZPmBMd6OZeQ.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-6-wave-profiles-heat-equation-point-source/ZPmBMd6OZeQ.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-6-wave-profiles-heat-equation-point-source/ZPmBMd6OZeQ.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-6-wave-profiles-heat-equation-point-source/ZPmBMd6OZeQ.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.readings.am53.pdf"
+                  type="other"
+                  href="contents/readings/am53.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am53.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am53.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-2-finite-differences-accuracy-stability-convergence.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-2-finite-differences-accuracy-stability-convergence/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-2-finite-differences-accuracy-stability-convergence/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-2-finite-differences-accuracy-stability-convergence/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-9-conservation-laws-analysis-shocks.sleOqiMUTXE.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-9-conservation-laws-analysis-shocks/sleOqiMUTXE.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-9-conservation-laws-analysis-shocks/sleOqiMUTXE.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-9-conservation-laws-analysis-shocks/sleOqiMUTXE.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-25-saddle-points-inf-sup-condition.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-25-saddle-points-inf-sup-condition/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-25-saddle-points-inf-sup-condition/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-25-saddle-points-inf-sup-condition/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.readings.am65.pdf"
+                  type="other"
+                  href="contents/readings/am65.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am65.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am65.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-26-two-squares-equality-constraint-bu-d.xzUOJ-uQ8F0.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-26-two-squares-equality-constraint-bu-d/xzUOJ-uQ8F0.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-26-two-squares-equality-constraint-bu-d/xzUOJ-uQ8F0.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-26-two-squares-equality-constraint-bu-d/xzUOJ-uQ8F0.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.schrodinger_stable_implicit.m"
+                  type="other"
+                  href="contents/assignments/schrodinger_stable_implicit.m">
+            <metadata>
+                <adlcp:location>contents/assignments/schrodinger_stable_implicit.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/schrodinger_stable_implicit.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-10-shocks-and-fans-from-point-source.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-10-shocks-and-fans-from-point-source/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-10-shocks-and-fans-from-point-source/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-10-shocks-and-fans-from-point-source/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-22-weighted-least-squares.zIK5EnoiLL0.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-22-weighted-least-squares/zIK5EnoiLL0.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-22-weighted-least-squares/zIK5EnoiLL0.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-22-weighted-least-squares/zIK5EnoiLL0.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-20-fast-poisson-solver.kyx2QgGkEpc.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-20-fast-poisson-solver/kyx2QgGkEpc.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-20-fast-poisson-solver/kyx2QgGkEpc.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-20-fast-poisson-solver/kyx2QgGkEpc.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-12-matrices-in-difference-equations-1d-2d-3d.r1-r1t5i58g.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-12-matrices-in-difference-equations-1d-2d-3d/r1-r1t5i58g.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-12-matrices-in-difference-equations-1d-2d-3d/r1-r1t5i58g.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-12-matrices-in-difference-equations-1d-2d-3d/r1-r1t5i58g.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.hw1_086_s06.pdf"
+                  type="other"
+                  href="contents/assignments/hw1_086_s06.pdf">
+            <metadata>
+                <adlcp:location>contents/assignments/hw1_086_s06.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/hw1_086_s06.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-5-second-order-wave-equation-including-leapfrog.0aa6fUHTTeU.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-5-second-order-wave-equation-including-leapfrog/0aa6fUHTTeU.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-5-second-order-wave-equation-including-leapfrog/0aa6fUHTTeU.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-5-second-order-wave-equation-including-leapfrog/0aa6fUHTTeU.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-16-general-methods-for-sparse-systems.XPo4dHK48Nw.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-16-general-methods-for-sparse-systems/XPo4dHK48Nw.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-16-general-methods-for-sparse-systems/XPo4dHK48Nw.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-16-general-methods-for-sparse-systems/XPo4dHK48Nw.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.readings.am52.pdf"
+                  type="other"
+                  href="contents/readings/am52.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am52.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am52.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.schrodinger_unstable.m"
+                  type="other"
+                  href="contents/assignments/schrodinger_unstable.m">
+            <metadata>
+                <adlcp:location>contents/assignments/schrodinger_unstable.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/schrodinger_unstable.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-12-matrices-in-difference-equations-1d-2d-3d.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-12-matrices-in-difference-equations-1d-2d-3d/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-12-matrices-in-difference-equations-1d-2d-3d/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-12-matrices-in-difference-equations-1d-2d-3d/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-17-multigrid-methods.Y25UBGeu_2g.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-17-multigrid-methods/Y25UBGeu_2g.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-17-multigrid-methods/Y25UBGeu_2g.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-17-multigrid-methods/Y25UBGeu_2g.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-13-elimination-with-reordering-sparse-matrices.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-13-elimination-with-reordering-sparse-matrices/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-13-elimination-with-reordering-sparse-matrices/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-13-elimination-with-reordering-sparse-matrices/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.readings.am61.pdf"
+                  type="other"
+                  href="contents/readings/am61.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am61.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am61.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-20-fast-poisson-solver.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-20-fast-poisson-solver/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-20-fast-poisson-solver/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-20-fast-poisson-solver/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-11-level-set-method.ZpOJJk6en2o.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-11-level-set-method/ZpOJJk6en2o.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-11-level-set-method/ZpOJJk6en2o.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-11-level-set-method/ZpOJJk6en2o.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-5-second-order-wave-equation-including-leapfrog.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-5-second-order-wave-equation-including-leapfrog/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-5-second-order-wave-equation-including-leapfrog/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-5-second-order-wave-equation-including-leapfrog/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-9-conservation-laws-analysis-shocks.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-9-conservation-laws-analysis-shocks/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-9-conservation-laws-analysis-shocks/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-9-conservation-laws-analysis-shocks/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-21-optimization-with-constraints.7dVYOOHB4g4.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-21-optimization-with-constraints/7dVYOOHB4g4.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-21-optimization-with-constraints/7dVYOOHB4g4.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-21-optimization-with-constraints/7dVYOOHB4g4.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework3.pdf"
+                  type="other"
+                  href="contents/assignments/homework3.pdf">
+            <metadata>
+                <adlcp:location>contents/assignments/homework3.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework3.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.HW1_1.m"
+                  type="other"
+                  href="contents/assignments/HW1_1.m">
+            <metadata>
+                <adlcp:location>contents/assignments/HW1_1.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/HW1_1.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability.dxNyJxI_2eI.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability/dxNyJxI_2eI.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability/dxNyJxI_2eI.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability/dxNyJxI_2eI.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-2-finite-differences-accuracy-stability-convergence.nlO9ci0kPLg.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-2-finite-differences-accuracy-stability-convergence/nlO9ci0kPLg.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-2-finite-differences-accuracy-stability-convergence/nlO9ci0kPLg.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-2-finite-differences-accuracy-stability-convergence/nlO9ci0kPLg.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.projects.project1domnguez.pdf"
+                  type="other"
+                  href="contents/projects/project1domnguez.pdf">
+            <metadata>
+                <adlcp:location>contents/projects/project1domnguez.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/projects/project1domnguez.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-2-finite-differences-accuracy-stability-convergence.nlO9ci0kPLg.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-2-finite-differences-accuracy-stability-convergence/nlO9ci0kPLg.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-2-finite-differences-accuracy-stability-convergence/nlO9ci0kPLg.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-2-finite-differences-accuracy-stability-convergence/nlO9ci0kPLg.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.readings.am63.pdf"
+                  type="other"
+                  href="contents/readings/am63.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am63.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am63.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-4-comparison-of-methods-for-the-wave-equation.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-4-comparison-of-methods-for-the-wave-equation/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-4-comparison-of-methods-for-the-wave-equation/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-4-comparison-of-methods-for-the-wave-equation/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.Leap_frog.m"
+                  type="other"
+                  href="contents/assignments/Leap_frog.m">
+            <metadata>
+                <adlcp:location>contents/assignments/Leap_frog.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/Leap_frog.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-1-difference-methods-for-ordinary-differential-equations.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-1-difference-methods-for-ordinary-differential-equations/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-1-difference-methods-for-ordinary-differential-equations/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-1-difference-methods-for-ordinary-differential-equations/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-14-financial-mathematics-black-scholes-equation.pEuuJ5E7ZS0.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-14-financial-mathematics-black-scholes-equation/pEuuJ5E7ZS0.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-14-financial-mathematics-black-scholes-equation/pEuuJ5E7ZS0.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-14-financial-mathematics-black-scholes-equation/pEuuJ5E7ZS0.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-8-convection-diffusion-conservation-laws.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-8-convection-diffusion-conservation-laws/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-8-convection-diffusion-conservation-laws/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-8-convection-diffusion-conservation-laws/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-8-convection-diffusion-conservation-laws.FrrTXj13DNk.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-8-convection-diffusion-conservation-laws/FrrTXj13DNk.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-8-convection-diffusion-conservation-laws/FrrTXj13DNk.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-8-convection-diffusion-conservation-laws/FrrTXj13DNk.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.readings.am71.pdf"
+                  type="other"
+                  href="contents/readings/am71.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am71.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am71.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-23-calculus-of-variations-weak-form.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-23-calculus-of-variations-weak-form/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-23-calculus-of-variations-weak-form/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-23-calculus-of-variations-weak-form/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-17-multigrid-methods.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-17-multigrid-methods/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-17-multigrid-methods/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-17-multigrid-methods/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-1-difference-methods-for-ordinary-differential-equations.gv-AB35V2k8.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-1-difference-methods-for-ordinary-differential-equations/gv-AB35V2k8.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-1-difference-methods-for-ordinary-differential-equations/gv-AB35V2k8.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-1-difference-methods-for-ordinary-differential-equations/gv-AB35V2k8.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-13-elimination-with-reordering-sparse-matrices.S6dw885-SZI.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-13-elimination-with-reordering-sparse-matrices/S6dw885-SZI.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-13-elimination-with-reordering-sparse-matrices/S6dw885-SZI.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-13-elimination-with-reordering-sparse-matrices/S6dw885-SZI.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-18-krylov-methods-multigrid-continued.vIydsgrYGIY.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-18-krylov-methods-multigrid-continued/vIydsgrYGIY.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-18-krylov-methods-multigrid-continued/vIydsgrYGIY.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-18-krylov-methods-multigrid-continued/vIydsgrYGIY.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-6-wave-profiles-heat-equation-point-source.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-6-wave-profiles-heat-equation-point-source/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-6-wave-profiles-heat-equation-point-source/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-6-wave-profiles-heat-equation-point-source/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-26-two-squares-equality-constraint-bu-d.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-26-two-squares-equality-constraint-bu-d/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-26-two-squares-equality-constraint-bu-d/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-26-two-squares-equality-constraint-bu-d/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.upwind.m"
+                  type="other"
+                  href="contents/assignments/upwind.m">
+            <metadata>
+                <adlcp:location>contents/assignments/upwind.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/upwind.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-18-krylov-methods-multigrid-continued.vIydsgrYGIY.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-18-krylov-methods-multigrid-continued/vIydsgrYGIY.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-18-krylov-methods-multigrid-continued/vIydsgrYGIY.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-18-krylov-methods-multigrid-continued/vIydsgrYGIY.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.nonlinear_upwind.m"
+                  type="other"
+                  href="contents/assignments/nonlinear_upwind.m">
+            <metadata>
+                <adlcp:location>contents/assignments/nonlinear_upwind.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/nonlinear_upwind.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.readings.am35.pdf"
+                  type="other"
+                  href="contents/readings/am35.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am35.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am35.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-15-iterative-methods-and-preconditioners.LtNVodIs1dI.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-15-iterative-methods-and-preconditioners/LtNVodIs1dI.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-15-iterative-methods-and-preconditioners/LtNVodIs1dI.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-15-iterative-methods-and-preconditioners/LtNVodIs1dI.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.study-materials.index.htm"
+                  type="webcontent"
+                  href="contents/study-materials/index.htm">
+            <metadata>
+                <adlcp:location>contents/study-materials/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/study-materials/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.AB_2.m"
+                  type="other"
+                  href="contents/assignments/AB_2.m">
+            <metadata>
+                <adlcp:location>contents/assignments/AB_2.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/AB_2.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability.dxNyJxI_2eI.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability/dxNyJxI_2eI.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability/dxNyJxI_2eI.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-3-the-one-way-wave-equation-and-cfl-von-neumann-stability/dxNyJxI_2eI.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.Lax_friedrichs_1.m"
+                  type="other"
+                  href="contents/assignments/Lax_friedrichs_1.m">
+            <metadata>
+                <adlcp:location>contents/assignments/Lax_friedrichs_1.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/Lax_friedrichs_1.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.case1.m"
+                  type="other"
+                  href="contents/assignments/case1.m">
+            <metadata>
+                <adlcp:location>contents/assignments/case1.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/case1.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-22-weighted-least-squares.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-22-weighted-least-squares/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-22-weighted-least-squares/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-22-weighted-least-squares/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.schrodinger_stable.m"
+                  type="other"
+                  href="contents/assignments/schrodinger_stable.m">
+            <metadata>
+                <adlcp:location>contents/assignments/schrodinger_stable.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/schrodinger_stable.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.index.htm"
+                  type="webcontent"
+                  href="contents/index.htm">
+            <metadata>
+                <adlcp:location>contents/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.readings.am36.pdf"
+                  type="other"
+                  href="contents/readings/am36.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am36.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am36.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-1-difference-methods-for-ordinary-differential-equations.gv-AB35V2k8.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-1-difference-methods-for-ordinary-differential-equations/gv-AB35V2k8.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-1-difference-methods-for-ordinary-differential-equations/gv-AB35V2k8.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-1-difference-methods-for-ordinary-differential-equations/gv-AB35V2k8.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-5-second-order-wave-equation-including-leapfrog.0aa6fUHTTeU.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-5-second-order-wave-equation-including-leapfrog/0aa6fUHTTeU.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-5-second-order-wave-equation-including-leapfrog/0aa6fUHTTeU.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-5-second-order-wave-equation-including-leapfrog/0aa6fUHTTeU.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.index.htm"
+                  type="webcontent"
+                  href="contents/assignments/index.htm">
+            <metadata>
+                <adlcp:location>contents/assignments/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-6-wave-profiles-heat-equation-point-source.ZPmBMd6OZeQ.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-6-wave-profiles-heat-equation-point-source/ZPmBMd6OZeQ.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-6-wave-profiles-heat-equation-point-source/ZPmBMd6OZeQ.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-6-wave-profiles-heat-equation-point-source/ZPmBMd6OZeQ.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-18-krylov-methods-multigrid-continued.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-18-krylov-methods-multigrid-continued/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-18-krylov-methods-multigrid-continued/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-18-krylov-methods-multigrid-continued/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-29-duality-puzzle-inverse-problem-integral-equations.NEsObJTwDXI.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-29-duality-puzzle-inverse-problem-integral-equations/NEsObJTwDXI.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-29-duality-puzzle-inverse-problem-integral-equations/NEsObJTwDXI.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-29-duality-puzzle-inverse-problem-integral-equations/NEsObJTwDXI.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.cdi.m"
+                  type="other"
+                  href="contents/assignments/cdi.m">
+            <metadata>
+                <adlcp:location>contents/assignments/cdi.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/cdi.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.hw2_086_s06.pdf"
+                  type="other"
+                  href="contents/assignments/hw2_086_s06.pdf">
+            <metadata>
+                <adlcp:location>contents/assignments/hw2_086_s06.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/hw2_086_s06.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-27-regularization-by-penalty-term.iVUsEwSg-lw.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-27-regularization-by-penalty-term/iVUsEwSg-lw.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-27-regularization-by-penalty-term/iVUsEwSg-lw.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-27-regularization-by-penalty-term/iVUsEwSg-lw.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-4-comparison-of-methods-for-the-wave-equation.HHwDX-3IPT0.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-4-comparison-of-methods-for-the-wave-equation/HHwDX-3IPT0.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-4-comparison-of-methods-for-the-wave-equation/HHwDX-3IPT0.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-4-comparison-of-methods-for-the-wave-equation/HHwDX-3IPT0.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-8-convection-diffusion-conservation-laws.FrrTXj13DNk.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-8-convection-diffusion-conservation-laws/FrrTXj13DNk.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-8-convection-diffusion-conservation-laws/FrrTXj13DNk.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-8-convection-diffusion-conservation-laws/FrrTXj13DNk.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.RK_2.m"
+                  type="other"
+                  href="contents/assignments/RK_2.m">
+            <metadata>
+                <adlcp:location>contents/assignments/RK_2.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/RK_2.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-9-conservation-laws-analysis-shocks.sleOqiMUTXE.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-9-conservation-laws-analysis-shocks/sleOqiMUTXE.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-9-conservation-laws-analysis-shocks/sleOqiMUTXE.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-9-conservation-laws-analysis-shocks/sleOqiMUTXE.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.readings.am72.pdf"
+                  type="other"
+                  href="contents/readings/am72.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am72.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am72.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-22-weighted-least-squares.zIK5EnoiLL0.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-22-weighted-least-squares/zIK5EnoiLL0.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-22-weighted-least-squares/zIK5EnoiLL0.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-22-weighted-least-squares/zIK5EnoiLL0.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-21-optimization-with-constraints.7dVYOOHB4g4.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-21-optimization-with-constraints/7dVYOOHB4g4.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-21-optimization-with-constraints/7dVYOOHB4g4.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-21-optimization-with-constraints/7dVYOOHB4g4.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.syllabus.index.htm"
+                  type="webcontent"
+                  href="contents/syllabus/index.htm">
+            <metadata>
+                <adlcp:location>contents/syllabus/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/syllabus/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-28-linear-programming-and-duality.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-28-linear-programming-and-duality/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-28-linear-programming-and-duality/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-28-linear-programming-and-duality/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-23-calculus-of-variations-weak-form.94nmfDkTL-E.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-23-calculus-of-variations-weak-form/94nmfDkTL-E.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-23-calculus-of-variations-weak-form/94nmfDkTL-E.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-23-calculus-of-variations-weak-form/94nmfDkTL-E.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.projects.index.htm"
+                  type="webcontent"
+                  href="contents/projects/index.htm">
+            <metadata>
+                <adlcp:location>contents/projects/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/projects/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-11-level-set-method.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-11-level-set-method/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-11-level-set-method/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-11-level-set-method/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-24-error-estimates-projections.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-24-error-estimates-projections/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-24-error-estimates-projections/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-24-error-estimates-projections/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-11-level-set-method.ZpOJJk6en2o.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-11-level-set-method/ZpOJJk6en2o.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-11-level-set-method/ZpOJJk6en2o.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-11-level-set-method/ZpOJJk6en2o.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.readings.am57.pdf"
+                  type="other"
+                  href="contents/readings/am57.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am57.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am57.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-25-saddle-points-inf-sup-condition.j-C6QC5ufSw.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-25-saddle-points-inf-sup-condition/j-C6QC5ufSw.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-25-saddle-points-inf-sup-condition/j-C6QC5ufSw.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-25-saddle-points-inf-sup-condition/j-C6QC5ufSw.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-20-fast-poisson-solver.kyx2QgGkEpc.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-20-fast-poisson-solver/kyx2QgGkEpc.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-20-fast-poisson-solver/kyx2QgGkEpc.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-20-fast-poisson-solver/kyx2QgGkEpc.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.f_is.m"
+                  type="other"
+                  href="contents/assignments/f_is.m">
+            <metadata>
+                <adlcp:location>contents/assignments/f_is.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/f_is.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-28-linear-programming-and-duality.fpwsw7SdkyY.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-28-linear-programming-and-duality/fpwsw7SdkyY.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-28-linear-programming-and-duality/fpwsw7SdkyY.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-28-linear-programming-and-duality/fpwsw7SdkyY.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.readings.am51.pdf"
+                  type="other"
+                  href="contents/readings/am51.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am51.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am51.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-15-iterative-methods-and-preconditioners.LtNVodIs1dI.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-15-iterative-methods-and-preconditioners/LtNVodIs1dI.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-15-iterative-methods-and-preconditioners/LtNVodIs1dI.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-15-iterative-methods-and-preconditioners/LtNVodIs1dI.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.readings.am64.pdf"
+                  type="other"
+                  href="contents/readings/am64.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am64.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am64.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-24-error-estimates-projections.c9XosfcouiM.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-24-error-estimates-projections/c9XosfcouiM.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-24-error-estimates-projections/c9XosfcouiM.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-24-error-estimates-projections/c9XosfcouiM.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-10-shocks-and-fans-from-point-source.NpTzMWTYbM8.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-10-shocks-and-fans-from-point-source/NpTzMWTYbM8.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-10-shocks-and-fans-from-point-source/NpTzMWTYbM8.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-10-shocks-and-fans-from-point-source/NpTzMWTYbM8.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.case2.m"
+                  type="other"
+                  href="contents/assignments/case2.m">
+            <metadata>
+                <adlcp:location>contents/assignments/case2.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/case2.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-27-regularization-by-penalty-term.iVUsEwSg-lw.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-27-regularization-by-penalty-term/iVUsEwSg-lw.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-27-regularization-by-penalty-term/iVUsEwSg-lw.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-27-regularization-by-penalty-term/iVUsEwSg-lw.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.projects.overview.pdf"
+                  type="other"
+                  href="contents/projects/overview.pdf">
+            <metadata>
+                <adlcp:location>contents/projects/overview.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/projects/overview.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-27-regularization-by-penalty-term.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-27-regularization-by-penalty-term/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-27-regularization-by-penalty-term/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-27-regularization-by-penalty-term/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-7-finite-differences-for-the-heat-equation.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-7-finite-differences-for-the-heat-equation/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-7-finite-differences-for-the-heat-equation/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-7-finite-differences-for-the-heat-equation/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.18-086s06.jpg"
+                  type="other" href="contents/18-086s06.jpg">
+            <metadata>
+                <adlcp:location>contents/18-086s06.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/18-086s06.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.LW.m"
+                  type="other"
+                  href="contents/assignments/LW.m">
+            <metadata>
+                <adlcp:location>contents/assignments/LW.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/LW.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.projects.josephkovacpro.pdf"
+                  type="other"
+                  href="contents/projects/josephkovacpro.pdf">
+            <metadata>
+                <adlcp:location>contents/projects/josephkovacpro.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/projects/josephkovacpro.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-7-finite-differences-for-the-heat-equation.ByGXz_uHEdM.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-7-finite-differences-for-the-heat-equation/ByGXz_uHEdM.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-7-finite-differences-for-the-heat-equation/ByGXz_uHEdM.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-7-finite-differences-for-the-heat-equation/ByGXz_uHEdM.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-29-duality-puzzle-inverse-problem-integral-equations.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-29-duality-puzzle-inverse-problem-integral-equations/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-29-duality-puzzle-inverse-problem-integral-equations/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-29-duality-puzzle-inverse-problem-integral-equations/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.readings.index.htm"
+                  type="webcontent"
+                  href="contents/readings/index.htm">
+            <metadata>
+                <adlcp:location>contents/readings/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-10-shocks-and-fans-from-point-source.NpTzMWTYbM8.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-10-shocks-and-fans-from-point-source/NpTzMWTYbM8.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-10-shocks-and-fans-from-point-source/NpTzMWTYbM8.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-10-shocks-and-fans-from-point-source/NpTzMWTYbM8.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.18-086s06-th.jpg"
+                  type="other"
+                  href="contents/18-086s06-th.jpg">
+            <metadata>
+                <adlcp:location>contents/18-086s06-th.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/18-086s06-th.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-24-error-estimates-projections.c9XosfcouiM.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-24-error-estimates-projections/c9XosfcouiM.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-24-error-estimates-projections/c9XosfcouiM.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-24-error-estimates-projections/c9XosfcouiM.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.batch.m"
+                  type="other"
+                  href="contents/assignments/batch.m">
+            <metadata>
+                <adlcp:location>contents/assignments/batch.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/batch.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-12-matrices-in-difference-equations-1d-2d-3d.r1-r1t5i58g.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-12-matrices-in-difference-equations-1d-2d-3d/r1-r1t5i58g.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-12-matrices-in-difference-equations-1d-2d-3d/r1-r1t5i58g.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-12-matrices-in-difference-equations-1d-2d-3d/r1-r1t5i58g.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-28-linear-programming-and-duality.fpwsw7SdkyY.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-28-linear-programming-and-duality/fpwsw7SdkyY.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-28-linear-programming-and-duality/fpwsw7SdkyY.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-28-linear-programming-and-duality/fpwsw7SdkyY.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.simulation.m"
+                  type="other"
+                  href="contents/assignments/simulation.m">
+            <metadata>
+                <adlcp:location>contents/assignments/simulation.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/simulation.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-13-elimination-with-reordering-sparse-matrices.S6dw885-SZI.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-13-elimination-with-reordering-sparse-matrices/S6dw885-SZI.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-13-elimination-with-reordering-sparse-matrices/S6dw885-SZI.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-13-elimination-with-reordering-sparse-matrices/S6dw885-SZI.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.readings.am55.pdf"
+                  type="other"
+                  href="contents/readings/am55.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am55.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am55.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-19-conjugate-gradient-method.zha1744fTRs.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-19-conjugate-gradient-method/zha1744fTRs.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-19-conjugate-gradient-method/zha1744fTRs.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-19-conjugate-gradient-method/zha1744fTRs.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-14-financial-mathematics-black-scholes-equation.pEuuJ5E7ZS0.srt"
+                  type="other"
+                  href="contents/video-lectures/lecture-14-financial-mathematics-black-scholes-equation/pEuuJ5E7ZS0.srt">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-14-financial-mathematics-black-scholes-equation/pEuuJ5E7ZS0.srt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-14-financial-mathematics-black-scholes-equation/pEuuJ5E7ZS0.srt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.cde.m"
+                  type="other"
+                  href="contents/assignments/cde.m">
+            <metadata>
+                <adlcp:location>contents/assignments/cde.m.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/cde.m"/>
+                        
+        </resource>
+        <resource identifier="r_contents.readings.am54.pdf"
+                  type="other"
+                  href="contents/readings/am54.pdf">
+            <metadata>
+                <adlcp:location>contents/readings/am54.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/readings/am54.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-21-optimization-with-constraints.index.htm"
+                  type="webcontent"
+                  href="contents/video-lectures/lecture-21-optimization-with-constraints/index.htm">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-21-optimization-with-constraints/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-21-optimization-with-constraints/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_contents.video-lectures.lecture-26-two-squares-equality-constraint-bu-d.xzUOJ-uQ8F0.pdf"
+                  type="other"
+                  href="contents/video-lectures/lecture-26-two-squares-equality-constraint-bu-d/xzUOJ-uQ8F0.pdf">
+            <metadata>
+                <adlcp:location>contents/video-lectures/lecture-26-two-squares-equality-constraint-bu-d/xzUOJ-uQ8F0.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/video-lectures/lecture-26-two-squares-equality-constraint-bu-d/xzUOJ-uQ8F0.pdf"/>
+                        
+        </resource>        
+        <resource identifier="r_common.search.AdvancedSearch.htm"
+                  type="webcontent"
+                  href="common/search/AdvancedSearch.htm">
+            <file href="common/search/AdvancedSearch.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_common.jsp.feedback.htm"
+                  type="webcontent"
+                  href="common/jsp/feedback.htm">
+            <file href="common/jsp/feedback.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_common.terms.index.htm"
+                  type="webcontent"
+                  href="common/terms/index.htm">
+            <file href="common/terms/by.png"/>
+            <file href="common/terms/nc.png"/>
+            <file href="common/terms/sa.png"/>
+            <file href="common/terms/deedheadyellow.png"/>
+            <file href="common/terms/freedomsheader.png"/>
+            <file href="common/terms/limitationsheader.png"/>
+            <file href="common/terms/understandingheader.jpg"/>
+            <file href="common/terms/deedfootyellow.png"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="r_common.terms.trademarks.index.htm"
+                  type="webcontent"
+                  href="common/terms/trademarks/index.htm">
+            <file href="common/terms/trademarks/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"/>            
+        </resource>
+        <resource identifier="webrenderrequirements.18-086-mathematical-methods-for-engineers-ii-spring-2006"
+                  type="webcontent">
+        	<file href="common/styles/base.css"/>
+        	<file href="common/styles/courses.css"/>
+        	<file href="common/styles/courses_new.css"/>
+        	<file href="common/styles/educator.css"/>
+        	<file href="common/styles/global.css"/>
+        	<file href="common/styles/grid.css"/>
+        	<file href="common/styles/highslide.css"/>
+        	<file href="common/styles/highslide-ie6.css"/>
+        	<file href="common/styles/jquery.bubblepopup.css"/>
+        	<file href="common/styles/jquery.jscrollpane.css"/>
+        	<file href="common/styles/jquery-ui.css"/>
+        	<file href="common/styles/menu.css"/>
+        	<file href="common/styles/scholar2.css"/>
+        	<file href="common/styles/media_tabs.css"/>
+        	<file href="common/styles/three_play.css"/>
+        	<file href="common/scripts/bubble-popup-offline.js"/>
+        	<file href="common/scripts/jquery.js"/>
+        	<file href="common/scripts/ocw-media-utils.js"/>
+        	<file href="common/scripts/ocw-media-utils-offline.js"/>
+        	<file href="common/scripts/highslide-with-gallery.js"/>
+        	<file href="common/scripts/jquery.bubblepopup.min.js"/>
+        	<file href="common/scripts/jquery.jscrollpane.min.js"/>
+        	<file href="common/scripts/jquery-ui.min.js"/>
+        	<file href="common/scripts/jQuizMe-uncompressed.js"/>
+        	<file href="common/scripts/ocw-offline.js"/>
+        	<file href="common/scripts/expandy.js"/>
+        	<file href="common/scripts/chart.js"/>
+        	<file href="common/scripts/jquery.anythingslider.js"/>
+        	<file href="common/images/ocw_mast.png"/>
+        	<file href="common/images/button_subscribe.png"/>
+        	<file href="common/images/icon_fb.png"/>
+        	<file href="common/images/icon_gp.png"/>
+        	<file href="common/images/icon_pin.png"/>
+        	<file href="common/images/icon_tw.png"/>
+        	<file href="common/images/icon-question-ovt.png"/>
+        	<file href="common/images/icon-question-svt.png"/>
+        	<file href="common/images/icon-question-avt.png"/>
+        	<file href="common/images/icon-question-cl.png"/>
+        	<file href="common/images/top-nav_home.png"/>
+        	<file href="common/images/button_search.png"/>
+        	<file href="common/images/bg_top.png"/>
+        	<file href="common/images/bg_social.png"/>
+        	<file href="common/images/bg_social2.png"/>
+        	<file href="common/images/bg_mega-courses.png"/>
+        	<file href="common/images/bg_center2.png"/>
+        	<file href="common/images/bg_course-nav_current.png"/>
+        	<file href="common/images/button_donate-now.png"/>
+        	<file href="common/images/logo_mit.png"/>
+        	<file href="common/images/logo_ocwc.gif"/>
+        	<file href="common/images/cc_by-nc-sa.png"/>
+        	<file href="common/images/logo_dow.png"/>
+        	<file href="common/images/logo_lockheed.png"/>
+        	<file href="common/images/logo_mathworks.png"/>
+        	<file href="common/images/logo_abinitio.png"/>
+        	<file href="common/images/logo_sapient.png"/>
+        	<file href="common/images/bg_bottom.png"/>
+        	<file href="common/images/nav_arrow.png"/>
+        	<file href="common/images/news-subscibe_bg.png"/>
+        	<file href="common/images/3play_logo.png"/>
+        	<file href="common/images/black-arrow.gif"/>
+        	<file href="common/images/trans.gif"/>
+        	<file href="common/images/arrow-bullet.gif"/>
+        	<file href="common/images/apple-touch-icon.png"/>
+        	<file href="common/images/highslide/graphics/zoomin.cur"/>
+        	<file href="common/images/highslide/graphics/zoomout.cur"/>
+        	<file href="common/images/highslide/graphics/controlbar2.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar3.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar4.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar4-hover.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar-black-border.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar-white.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar-white-small.gif"/>
+        	<file href="common/images/highslide/graphics/fullexpand.gif"/>
+        	<file href="common/images/highslide/graphics/icon.gif"/>
+        	<file href="common/images/highslide/graphics/loader.gif"/>
+        	<file href="common/images/highslide/graphics/loader.white.gif"/>
+        	<file href="common/images/highslide/graphics/resize.gif"/>
+        	<file href="common/images/highslide/graphics/close.png"/>
+        	<file href="common/images/highslide/graphics/closeX.png"/>
+        	<file href="common/images/highslide/graphics/controlbar-text-buttons.png"/>
+        	<file href="common/images/highslide/graphics/geckodimmer.png"/>
+        	<file href="common/images/highslide/graphics/scrollarrows.png"/>
+        	<file href="common/images/highslide/graphics/outlines/beveled.png"/>
+        	<file href="common/images/highslide/graphics/outlines/drop-shadow.png"/>
+        	<file href="common/images/highslide/graphics/outlines/glossy-dark.png"/>
+        	<file href="common/images/highslide/graphics/outlines/outer-glow.png"/>
+        	<file href="common/images/highslide/graphics/outlines/rounded-black.png"/>
+        	<file href="common/images/highslide/graphics/outlines/rounded-white.png"/>
+        	<file href="common/images/highslide/graphics/outlines/Outlines.psd"/>
+        	<file href="common/images/button_continue.jpg"/>
+        	<file href="common/images/button_donate.jpg"/>
+        	<file href="common/images/button_start.jpg"/>
+        	<file href="common/images/scholar_bar_chp.png"/>
+        	<file href="common/images/scholar_bar.png"/>
+        	<file href="common/images/logo_pdf.jpg"/>
+        	<file href="common/images/h2_trigger_open_close.gif"/>
+        	<file href="common/images/bookmark.gif"/>
+        	<file href="common/images/check.png"/>
+        	<file href="common/images/lightbulb.png"/>
+        	<file href="common/images/audio_file.gif"/>
+        	<file href="common/images/audio_only_slate.gif"/>
+        	<file href="common/images/video_file.gif"/>
+        	<file href="common/images/back-5.png"/>
+        	<file href="common/images/btn_next_resource.png"/>
+        	<file href="common/images/btn_previous_resource.png"/>
+        	<file href="common/images/close.png"/>
+        	<file href="common/images/inacessible.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/bottom-left.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/bottom-middle.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/bottom-right.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/middle-left.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/middle-right.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/tail-bottom.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/tail-left.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/tail-right.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/tail-top.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/top-left.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/top-middle.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/top-right.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/bottom-left.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/bottom-middle.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/bottom-right.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/middle-left.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/middle-right.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/tail-bottom.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/tail-left.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/tail-right.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/tail-top.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/top-left.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/top-middle.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/top-right.png"/>
+        	<file href="common/images/educator/classroom_next.png"/>
+        	<file href="common/images/educator/classroom_next_dim.png"/>
+        	<file href="common/images/educator/classroom_prev.png"/>
+        	<file href="common/images/educator/classroom_prev_dim.png"/>
+        	<file href="common/images/educator/edu_b-blank.png"/>
+        	<file href="common/images/educator/edu_b-blank-key.png"/>
+        	<file href="common/images/educator/edu_b-duedate.png"/>
+        	<file href="common/images/educator/edu_b-duedate-key.png"/>
+        	<file href="common/images/educator/edu_b-exam.png"/>
+        	<file href="common/images/educator/edu_b-exam-key.png"/>
+        	<file href="common/images/educator/edu_b-lab.png"/>
+        	<file href="common/images/educator/edu_b-lab-key.png"/>
+        	<file href="common/images/educator/edu_b-lab-team.png"/>
+        	<file href="common/images/educator/edu_b-lab-duedate.png"/>
+        	<file href="common/images/educator/edu_b-leclab.png"/>
+        	<file href="common/images/educator/edu_b-leclab-key.png"/>
+        	<file href="common/images/educator/edu_b-lecture.png"/>
+        	<file href="common/images/educator/edu_b-lecture-duedate.png"/>
+        	<file href="common/images/educator/edu_b-lecture-exam.png"/>
+        	<file href="common/images/educator/edu_b-lecture-key.png"/>
+        	<file href="common/images/educator/edu_b-lecture-lunch.png"/>
+        	<file href="common/images/educator/edu_b-lecture-preslab.png"/>
+        	<file href="common/images/educator/edu_b-lecture-quiz.png"/>
+        	<file href="common/images/educator/edu_b-lecture-team.png"/>
+        	<file href="common/images/educator/edu_b-lecrec-key.png"/>
+        	<file href="common/images/educator/edu_b-leclab-duedate.png"/>
+        	<file href="common/images/educator/edu_b-lecrec.png"/>
+        	<file href="common/images/educator/edu_b-lecrec-duedate.png"/>
+        	<file href="common/images/educator/edu_b-noclass-quiz.png"/>
+        	<file href="common/images/educator/edu_b-lunch.png"/>
+        	<file href="common/images/educator/edu_b-lunch-key.png"/>
+        	<file href="common/images/educator/edu_b-noclass.png"/>
+        	<file href="common/images/educator/edu_b-noclass-duedate.png"/>
+        	<file href="common/images/educator/edu_b-noclass-exam.png"/>
+        	<file href="common/images/educator/edu_b-noclass-key.png"/>
+        	<file href="common/images/educator/edu_b-office.png"/>
+        	<file href="common/images/educator/edu_b-office-key.png"/>
+        	<file href="common/images/educator/edu_b-present.png"/>
+        	<file href="common/images/educator/edu_b-present-duedate.png"/>
+        	<file href="common/images/educator/edu_b-present-key.png"/>
+        	<file href="common/images/educator/edu_b-preslab.png"/>
+        	<file href="common/images/educator/edu_b-preslab-key.png"/>
+        	<file href="common/images/educator/edu_b-quiz-key.png"/>
+        	<file href="common/images/educator/edu_b-reclab-key.png"/>
+        	<file href="common/images/educator/edu_b-reclab-concert.png"/>
+        	<file href="common/images/educator/edu_b-reclab.png"/>
+        	<file href="common/images/educator/edu_b-noclass-concert.png"/>
+        	<file href="common/images/educator/edu_b-leclab-concert.png"/>
+        	<file href="common/images/educator/edu_b-concert-key.png"/>
+        	<file href="common/images/educator/edu_b-concert.png"/>
+        	<file href="common/images/educator/edu_b-recitation.png"/>
+        	<file href="common/images/educator/edu_b-recitation-duedate.png"/>
+        	<file href="common/images/educator/edu_b-recitation-exam.png"/>
+        	<file href="common/images/educator/edu_b-recitation-key.png"/>
+        	<file href="common/images/educator/edu_b-team.png"/>
+        	<file href="common/images/educator/edu_b-team-key.png"/>
+        	<file href="common/images/educator/edu_b-team-preslab.png"/>
+        	<file href="common/images/educator/edu_b-work.png"/>
+        	<file href="common/images/educator/edu_b-work-key.png"/>
+        	<file href="common/images/educator/icon-question-cih.png"/>
+        	<file href="common/images/educator/icon-question-cihw.png"/>
+        	<file href="common/images/educator/icon-question-cim.png"/>
+        	<file href="common/images/educator/icon-question-collab.png"/>
+        	<file href="common/images/educator/icon-question-coop.png"/>
+        	<file href="common/images/educator/icon-question-fas.png"/>
+        	<file href="common/images/educator/icon-question-gir.png"/>
+        	<file href="common/images/educator/icon-question-hass.png"/>
+        	<file href="common/images/educator/icon-question-hass-s.png"/>
+        	<file href="common/images/educator/icon-question-iap.png"/>
+        	<file href="common/images/educator/icon-question-lab.png"/>
+        	<file href="common/images/educator/icon-question-urop.png"/>
+        	<file href="common/images/educator/icon-question-active.png"/>
+        	<file href="common/images/educator/icon-question-clickq.png"/>
+        	<file href="common/images/educator/icon-question-conq.png"/>
+        	<file href="common/images/educator/icon-question-flip.png"/>
+        	<file href="common/images/educator/icon-question-form.png"/>
+        	<file href="common/images/educator/icon-question-immed.png"/>
+        	<file href="common/images/educator/icon-question-learn.png"/>
+        	<file href="common/images/educator/icon-question-ped.png"/>
+        	<file href="common/images/educator/icon-question-readq.png"/>
+        	<file href="common/images/educator/icon-question-service.png"/>
+        	<file href="common/images/educator/icon-question-sum.png"/>
+        	<file href="common/images/educator/icon-question-unrestricted-elective-credits.png"/>
+        	<file href="common/webfonts/TitilliumText22L002-webfont.woff"/>
+        	<file href="common/webfonts/TitilliumText22L002-webfont.ttf"/>
+        	<file href="common/webfonts/TitilliumText22L002-webfont.svg"/>
+        	<file href="common/webfonts/TitilliumText22L002-webfont.eot"/>
+        	<file href="common/webfonts/TitilliumText22L003-webfont.woff"/>
+        	<file href="common/webfonts/TitilliumText22L003-webfont.ttf"/>
+        	<file href="common/webfonts/TitilliumText22L003-webfont.eot"/>
+        	<file href="common/webfonts/TitilliumText22L003-webfont.svg"/>
+        	<file href="common/webfonts/TitilliumText22L005-webfont.woff"/>
+        	<file href="common/webfonts/TitilliumText22L005-webfont.ttf"/>
+        	<file href="common/webfonts/TitilliumText22L005-webfont.svg"/>
+        	<file href="common/webfonts/TitilliumText22L005-webfont.eot"/>
+        </resource>        
+  </resources>
+</manifest>

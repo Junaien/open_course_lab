@@ -1,0 +1,15 @@
+import java.util.*;
+
+/*
+CSCI 340 6:30 - 7:45pm 
+Project 1
+By: Yachao Liu
+April 7, 2008
+*/
+
+
+public class Visitor implements Runnable{
+	
+	
+	
+}//Visitor

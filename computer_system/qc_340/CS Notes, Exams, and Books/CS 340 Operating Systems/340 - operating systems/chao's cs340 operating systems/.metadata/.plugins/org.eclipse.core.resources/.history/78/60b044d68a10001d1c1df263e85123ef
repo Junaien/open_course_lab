@@ -1,0 +1,121 @@
+import java.util.*;
+
+/*
+CSCI 340 6:30 - 7:45pm 
+Project 1
+By: Yachao Liu
+April 7, 2008
+*/
+
+public class Project1{
+	
+	int numVisitors;//numVisitors
+	int numCar;//numCars
+	int groupSize;//groupSize
+	int hTime;//time to wait for handicap person
+
+	int visitor;//a counter for visitors
+	int handiVisitor;//a counter for handicap
+	
+	int groupID;//ID to keep track of each group
+	Vector <Group> groups;//store each group in a Vector
+	
+	public Project1(){
+		numVisitors = 0;
+		numCar = 0;
+		groupSize = 0;
+		hTime = 0;
+		visitor = 0;
+		handiVisitor = 0;
+		
+		groupID = 1;
+		groups = new Vector <Group>();
+	}//constructor
+	
+	public static void main(String args[]){
+		
+	try{
+		Project1 main = new Project1();
+			
+		main.numVisitors = Integer.parseInt(args[0]);
+		main.numCar = Integer.parseInt(args[1]);
+		main.groupSize = Integer.parseInt(args[2]);
+		main.hTime = Integer.parseInt(args[3]);
+		
+		main.initVisitors(main.numVisitors, main);
+		main.initCar(main.numCar, main);
+		Thread controller = new Thread(new Controller(main), "Controller");
+		controller.start();
+		
+	}//try
+	catch(Exception e){
+			System.out.println("Must supply argument values");
+	}//catch
+	}//main
+	
+	public synchronized int getTogether(boolean h){
+		//1 = reject
+		//2 = waiting to form group 
+		//3= form a group
+		
+		if(h){
+			if(handiVisitor == 1)//already have a handicap
+				return 1;//reject
+			else if(visitor < 2){
+				handiVisitor++;//handicap visitor forms group
+				return 2;//waiting to form group
+			}//if
+		}//if
+		else{//visior not handicap
+			if(visitor == 2)//seats are filled
+				return 1;//reject
+			else{
+				if(handiVisitor == 0){//there are no handicap present
+					visitor++;//forms group
+					return 2;//waiting to form group
+				}//if
+					else{
+						if(visitor == 0){//if first visior
+							visitor++;//forms group
+							return 2;//waiting to form group
+						}//if
+					}//else
+			}//else
+		}//else			
+			
+		//form a group get groupID
+		Group g = new Group(groupID);//create a new group 
+		groupID++;//increment for next group
+		groups.add(g);//add the group to vector
+		
+		//clear vars counters
+		visitor = 0;
+		handiVisitor = 0;
+		
+		return 3;//group is formed
+	}//getTogether
+	
+	/*
+	public synchronized int getGroup(){
+		return group+handiV;//get current group size
+	}//getGroup
+	*/
+	public void initVisitors(int numVisitors, Project1 p){
+		Thread Visitors[] = new Thread[numVisitors];
+		
+		for(int i = 0; i < numVisitors; i++){
+			Visitors[i] = new Thread(new Visitor(p), "Visitor " + i);
+			Visitors[i].start();
+		}//for
+	}//initVisitors
+	
+	public void initCar(int numCar, Project1 p){
+		Thread Cars[] = new Thread[numCar];
+		
+		for(int i = 0; i < numCar; i++){
+			Cars[i] = new Thread(new Car(p), "Car " + i);
+			Cars[i].start();
+		}//for
+	}//initCar
+		
+}//Project 1

@@ -1,0 +1,4 @@
+#Sat Apr 19 10:22:58 GMT-05:00 2008
+pref_state_memento.org.eclipse.debug.ui.VariableView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="315" org.eclipse.debug.ui.SASH_VIEW_PART\="684"/>
+eclipse.preferences.version=1
+org.eclipse.debug.ui.user_view_bindings=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<viewBindings>\r\n<view id\="org.eclipse.ui.console.ConsoleView">\r\n<perspective id\="org.eclipse.jdt.ui.JavaPerspective" userAction\="opened"/>\r\n</view>\r\n</viewBindings>\r\n

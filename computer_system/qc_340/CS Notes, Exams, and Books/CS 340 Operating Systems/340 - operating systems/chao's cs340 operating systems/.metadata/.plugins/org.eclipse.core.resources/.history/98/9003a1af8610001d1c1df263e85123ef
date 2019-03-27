@@ -1,0 +1,26 @@
+import java.util.*;
+
+/*
+CSCI 340 6:30 - 7:45pm 
+Project 1
+By: Yachao Liu
+April 7, 2008
+*/
+
+public class Group
+{
+	int groupID;
+	Vector <Visitor> visitors;
+		
+	public Group(int id){
+		visitors = new Vector <Visitor> ();
+		groupID = id;
+	}//constructor
+	
+	public void AddToGroup(Visitor v){
+		visitors.addElement(v);
+	}//addtogroup
+		
+	
+}//Group
+

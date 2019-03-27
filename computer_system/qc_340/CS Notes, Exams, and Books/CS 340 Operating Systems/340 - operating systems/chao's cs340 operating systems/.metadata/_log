@@ -1,0 +1,14 @@
+!SESSION 2008-04-21 18:27:47.484 -----------------------------------------------
+eclipse.buildId=I20050627-1435
+java.version=1.6.0_03
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -vmC:\Program Files\Java\jdk1.5.0_10\bin\javaw-vmargs -Xmx256m
+Command-line arguments:  -os win32 -ws win32 -arch x86 -vmC:\Program Files\Java\jdk1.5.0_10\bin\javaw-vmargs -Xmx256m
+
+!ENTRY org.eclipse.core.resources 4 567 2008-04-21 18:28:08.843
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2008-04-21 18:28:08.843
+!MESSAGE The project description file (.project) for Assignment5 is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2008-04-21 18:28:08.843
+!MESSAGE The project description file (.project) for testing is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.

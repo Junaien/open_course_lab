@@ -1,0 +1,17 @@
+import java.util.*;
+public class Group
+{
+	int GroupID;
+	Vector visitors=new Vector();
+	
+	
+	public Group(int ID)
+	{	
+		this.GroupID=ID;
+	}
+	
+	public void AddToGroup(Visitor v)
+	{
+		visitors.add(v);
+	}
+}

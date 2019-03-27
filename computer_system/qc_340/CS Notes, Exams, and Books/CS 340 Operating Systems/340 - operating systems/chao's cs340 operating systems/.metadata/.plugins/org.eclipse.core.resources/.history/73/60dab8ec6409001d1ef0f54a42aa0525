@@ -1,0 +1,64 @@
+import java.util.*;
+
+/*
+CSCI 340 6:30 - 7:45pm 
+Project 1
+By: Yachao Liu
+April 7, 2008
+*/
+
+
+public class Car extends Thread{
+	
+	boolean departure;
+	Project1 main;
+	
+	public Car(Project1 m, String name){
+		departure = false;
+		this.setName(name);
+		main = m;
+	}//constructor
+	
+	public void printMessage(String message){
+		String threadName = Thread.currentThread().getName();
+		startTime();
+		System.out.print(threadName + ":" + message);
+		System.out.println();
+	}//printMessage
+	
+	public static final void startTime(){
+		int hour = 0, minute = 0, second = 0;
+		Calendar current = Calendar.getInstance();
+		current.setTimeInMillis(System.currentTimeMillis());
+		hour = current.get(Calendar.HOUR);
+		minute = current.get(Calendar.MINUTE);
+		second = current.get(Calendar.SECOND);
+		System.out.print(hour + ":" + minute + ":" + second + " -- ");
+	}//startTime
+	
+	public void run(){
+		Random generator = new Random();
+		int sleepTime = 0;//random sleep time
+		
+		sleepTime = generator.nextInt(3000) + 2000;//sleep 2-3 secs
+		
+		try{
+		Thread.sleep(sleepTime);
+		printMessage("Arrives at the depot.");
+		Thread.sleep(sleepTime);
+		printMessage("Lining up for depature...");
+		main.//add in the vector
+		Thread.sleep(1000);//sleep for 1 sec
+		printMessage("Is Ready.");//announces that it is ready
+		departure = true;//set depature = true
+		
+		
+		}//try
+		catch(Exception e){
+			System.out.println("Car thread error");
+			e.printStackTrace();
+		}//catch
+		
+	}//run
+	
+}//Car

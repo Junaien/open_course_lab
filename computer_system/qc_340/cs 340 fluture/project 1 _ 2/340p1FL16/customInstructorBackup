@@ -1,0 +1,92 @@
+
+import java.util.*;
+
+public class Instructor implements Runnable
+{
+    private static long time = System.currentTimeMillis();
+    public boolean classroomOpen = false;
+    public boolean waiting = false;
+    Classroom classroom;
+    boolean assistCustomer = false;
+    boolean examOver = false;
+    Student student;
+    Random rand = new Random(); 
+    ArrayList<Student> students = new ArrayList<>();
+    volatile boolean busywait=true;
+    
+    Instructor(Classroom cla)
+    {
+        classroom = cla;
+    }
+    
+    public void run()
+    {
+        try
+        { 
+              Thread.sleep((long)(Math.random()*4000));   
+              
+        }
+        catch(InterruptedException e){} 
+        
+        //Floor-clerk waits for customer to finally make up their mind
+        sleepingonthejob((long)(Math.random() * 2000));
+        assist();
+        exam1IsOver();//allowStudentToLeave();
+        classroomOpen = true;
+
+        try
+        {
+            //wake me up when my shift is over...
+            Thread.sleep((long)(Math.random() * 2000));
+
+        }
+        catch(InterruptedException e){}
+    }
+    
+    public void msg(String m)
+    {
+        System.out.println("["+ (System.currentTimeMillis()-time) + "]" + "Floor-Clerk:" + m);
+    }
+    
+    
+    public void sleepingonthejob(long l)
+    {
+        try{ 
+              Thread.sleep(l);   
+              waiting = true;
+            
+          }
+        catch(InterruptedException e){}
+      //  waiting = true;
+        
+    }
+    
+    public void exam1IsOver()
+    {
+        examOver = true;
+        msg("----------------Exam 1 over-----------------");
+        msg(" Collecting the exam.");
+        //allow student leave classroom
+        while(!(classroom.orderOfEnterClassroom.isEmpty()))
+        {
+            //students leave in the order which they enter.
+            msg(" Student " + new Integer(classroom.orderOfEnterClassroom.remove().getName()).toString() + " leaving classroom");   
+        }
+        assistCustomer = false;
+    }
+    
+    //busywait does not function
+    public void assist()
+    {   
+      /* while(busywait){Thread.yield();};
+       Thread.yield();
+       try {
+           Thread.sleep(5000);
+       } catch (InterruptedException e1) {}
+               Thread.yield();
+      */
+        msg(" Giving slips to customers in line...");
+        assistCustomer = true;    
+    }
+    
+}

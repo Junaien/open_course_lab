@@ -1,0 +1,101 @@
+import java.util.*;
+
+/*
+CSCI 340 6:30 - 7:45pm 
+Project 1
+By: Yachao Liu
+April 7, 2008
+*/
+
+
+public class Visitor implements Runnable{
+	
+	boolean handicap;
+	Project1 main;
+	
+	public Visitor(Project1 m){
+		handicap = false;
+		main = m;
+	}//default
+	
+	public void printMessage(String message){
+		String threadName = Thread.currentThread().getName();
+		startTime();
+		System.out.print(threadName + ":" + message);
+			if(this.handicap == true){
+				System.out.print(" This visitor is handicapped.");
+			}//if
+		System.out.println();
+	}//printMessage
+	
+	public static final void startTime(){
+		int hour = 0, minute = 0, second = 0;
+		Calendar current = Calendar.getInstance();
+		current.setTimeInMillis(System.currentTimeMillis());
+		hour = current.get(Calendar.HOUR);
+		minute = current.get(Calendar.MINUTE);
+		second = current.get(Calendar.SECOND);
+		System.out.print(hour + ":" + minute + ":" + second + " -- ");
+	}//startTime
+	
+	public void run(){
+		Random generator = new Random();
+		int sleepTime = 0;//random sleep time
+		int detHandicap = 0;//this determines if visitor is handicap or not
+		
+		sleepTime = generator.nextInt(1000) + 500;//sleep 
+		detHandicap = generator.nextInt(10);//generate 0-10
+		
+		if(detHandicap == 5){
+			//visitor is handicap if == 5
+			this.handicap = true;
+		}//if
+		
+		try{
+		Thread.sleep(sleepTime);
+		printMessage("Arrives at the museum.");
+		printMessage("Is wandering around.");
+		Thread.sleep(sleepTime);
+		int b=main.getTogether(this.handicap);
+		while(true){
+			if(b==1)
+			{
+				//reject do something
+				Thread.sleep(5000);
+				//try again
+			}
+			if(b==2)
+			{
+				if(this.handicap)
+				{
+					//wait for visitor				
+				}
+				//sleep fixed interval break
+				boolean bb=false; //ready to form group
+				for(int x=1; x<50; x++)
+				{
+					
+					Thread.sleep(main.hTime/50);
+					//check to see if group is ready to be form
+					
+				}
+			}
+			
+			if(b==3)
+			{
+				break;//
+			}
+				
+
+		}//while	
+		
+		
+		}//try
+		catch(Exception e){
+			System.out.println("Visitor thread error");
+			e.printStackTrace();}
+		
+	}//run
+	
+	
+}//Visitor
