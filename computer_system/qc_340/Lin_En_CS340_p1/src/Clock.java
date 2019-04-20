@@ -2,14 +2,14 @@ import java.util.Random;
 public class Clock extends Thread{
 
   public static  final long time            = System.currentTimeMillis();
-
-  private static final int numOfPresentations = 14;
-  private static final int breakTimeBetweenSessions = 1000;
+  private static final int numOfPresentations = 4;
+  private static final int breakTimeBetweenSessions = 4000;
+  private static final Random randomGenerator = new Random(System.currentTimeMillis());
   private static final Object sessionLock  = new Object();
+  
   private static volatile boolean isMuseumOpen = true;
   private static volatile boolean isSessionOn = false;
   private static volatile boolean isPresentationOver = false;
-  private static Random randomGenerator = new Random(System.currentTimeMillis());
 
   public Clock(String name){
     setName(name);
@@ -21,11 +21,11 @@ public class Clock extends Thread{
           Thread.sleep(breakTimeBetweenSessions);
           msg(">>>>>>>>>>>>>>>>>>>>>>>>> Session " + i + " starts!  >>>>>>>>>>>>>>>>>>>>>>>>>" );
           signalStartOfPresentation(i);
-          Thread.sleep(randomGenerator.nextInt(1000) + 1000);
+          Thread.sleep(randomGenerator.nextInt(2000) + 1000);
           msg("<<<<<<<<<<<<<<<<<<<<<<<<< Session " + i + " is over! <<<<<<<<<<<<<<<<<<<<<<<<<" );
           signalEndOfPresentation(i);
       }
-      Thread.sleep(randomGenerator.nextInt(2000) + 2000);
+      Thread.sleep(randomGenerator.nextInt(2000) + 1000);
       msg("Museum is closed!");
       signalEndOfMuseum();
     }catch(InterruptedException e){
@@ -43,6 +43,7 @@ public class Clock extends Thread{
       Speaker.setIsTimeToWakeVisitors(true);
     }
   }
+  
   private static void signalStartOfPresentation(int i){
     synchronized(sessionLock){
       isSessionOn = true;
@@ -50,6 +51,8 @@ public class Clock extends Thread{
     }
   }
 
+  
+  /* getters and setters */
   public static boolean isMuseumOpen(){return isMuseumOpen;}
   public static boolean isSessionOn(){return isSessionOn;}
   public static boolean isPresentationOver(){return isPresentationOver;};
