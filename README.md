@@ -1,5 +1,5 @@
 # ASSIGNMENTS
-This is the repository for course assignments
+This is a repository for course assignments
 
 
     *******      *       *          *         ***     *       *
