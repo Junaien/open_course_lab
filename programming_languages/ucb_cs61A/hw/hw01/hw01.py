@@ -12,9 +12,9 @@ def a_plus_abs_b(a, b):
     5
     """
     if b < 0:
-        f = _____
+        f = a - b
     else:
-        f = _____
+        f = a + b
     return f(a, b)
 
 # Q2
@@ -31,7 +31,7 @@ def two_of_three(a, b, c):
     >>> two_of_three(5, 5, 5)
     50
     """
-    return _____
+    return a ** 2 + b ** 2 + c ** 2 - min(a,b,c) ** 2
 
 # Q3
 def largest_factor(n):
@@ -45,6 +45,10 @@ def largest_factor(n):
     1
     """
     "*** YOUR CODE HERE ***"
+    for i in range(n - 1, 0, -1):
+        if n % i == 0:
+            return i
+
 
 # Q4
 def if_function(condition, true_result, false_result):
