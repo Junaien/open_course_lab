@@ -15,6 +15,11 @@ def falling(n, k):
     4
     """
     "*** YOUR CODE HERE ***"
+    sum = 1
+    while k > 0:
+        sum *= n
+        n -= 1
+    return sum
 
 def double_eights(n):
     """Return true if n has two eights in a row.
@@ -32,7 +37,17 @@ def double_eights(n):
     False
     """
     "*** YOUR CODE HERE ***"
-
+    flag = False
+    while n > 0:
+        if n % 8 == 0:
+            if flag:
+                return True
+            else:
+                flag = True
+        else:
+            flag = False
+        n //= 10
+    return False
 # Guessing Game
 
 from random import randint

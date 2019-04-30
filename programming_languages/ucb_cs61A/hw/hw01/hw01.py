@@ -12,9 +12,11 @@ def a_plus_abs_b(a, b):
     5
     """
     if b < 0:
-        f = a - b
+        def f(a, b):
+            return a - b
     else:
-        f = a + b
+        def f(a,b):
+            return a + b
     return f(a, b)
 
 # Q2
@@ -94,13 +96,14 @@ def with_if_function():
 
 def c():
     "*** YOUR CODE HERE ***"
-
+    return False
 def t():
     "*** YOUR CODE HERE ***"
-
+    print(1)
 def f():
     "*** YOUR CODE HERE ***"
-
+    print(2)
+    return None
 # Q5
 def hailstone(n):
     """Print the hailstone sequence starting at n and return its
@@ -118,7 +121,16 @@ def hailstone(n):
     7
     """
     "*** YOUR CODE HERE ***"
-
+    i = 1
+    print(n)
+    while n != 1:
+        if (n % 2 == 0):
+            n = (n // 2)
+        else:
+            n = (3 * n + 1)
+        print(n)
+        i = i + 1
+    return i
 # Q6
 quine = """
 "*** YOUR CODE HERE ***"

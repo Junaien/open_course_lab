@@ -26,7 +26,7 @@ def make_adder(n):
     >>> make_adder(1)(2)
     3
     """
-    return 'YOUR EXPRESSION HERE'
+    return lambda x: x + n
 
 # Q2
 def product(n, term):
@@ -51,6 +51,12 @@ def product(n, term):
     True
     """
     "*** YOUR CODE HERE ***"
+    ret , i = 1, 1
+    while i <= n:
+        ret = ret * term(i)
+        i += 1
+    return ret
+
 
 def factorial(n):
     """Return n factorial for n >= 0 by calling product.
@@ -64,7 +70,7 @@ def factorial(n):
     True
     """
     "*** YOUR CODE HERE ***"
-
+    return product(n,identity)
 # Q3
 def accumulate(combiner, base, n, term):
     """Return the result of combining the first n terms in a sequence and base.
@@ -83,6 +89,11 @@ def accumulate(combiner, base, n, term):
     72
     """
     "*** YOUR CODE HERE ***"
+    i = 1
+    while i <= n:
+        base = combiner(base, term(i))
+        i += 1
+    return base
 
 def summation_using_accumulate(n, term):
     """Returns the sum of term(1) + ... + term(n). The implementation
@@ -98,6 +109,7 @@ def summation_using_accumulate(n, term):
     True
     """
     "*** YOUR CODE HERE ***"
+    return accumulate(lambda a,b: a + b,0, n, term)
 
 def product_using_accumulate(n, term):
     """An implementation of product using accumulate.
@@ -112,7 +124,7 @@ def product_using_accumulate(n, term):
     True
     """
     "*** YOUR CODE HERE ***"
-
+    return accumulate(lambda a,b: a * b,1,n,term)
 
 
 ###################
@@ -142,6 +154,20 @@ def make_repeater(f, n):
     5
     """
     "*** YOUR CODE HERE ***"
+    # def repeat(k):
+    #     i,ret = 1,k
+    #     while i <= n:
+    #         ret = f(ret)
+    #         i += 1
+    #     return ret
+    # return repeat
+    i = 1
+    cur_func = lambda x: x
+    while i <= n:
+        cur_func = compose1(f,cur_func)
+        i += 1
+    return cur_func
+
 
 # Q5
 def zero(f):
@@ -153,11 +179,11 @@ def successor(n):
 def one(f):
     """Church numeral 1: same as successor(zero)"""
     "*** YOUR CODE HERE ***"
-
+    return lambda x: f(x)
 def two(f):
     """Church numeral 2: same as successor(successor(zero))"""
     "*** YOUR CODE HERE ***"
-
+    return lambda x: f(f(x))
 three = successor(two)
 
 def church_to_int(n):
@@ -173,7 +199,7 @@ def church_to_int(n):
     3
     """
     "*** YOUR CODE HERE ***"
-
+    return n(lambda x:x+1)(0)
 def add_church(m, n):
     """Return the Church numeral for m + n, for Church numerals m and n.
 
@@ -181,7 +207,11 @@ def add_church(m, n):
     5
     """
     "*** YOUR CODE HERE ***"
-
+    def ret(f):
+        return lambda x: n(f)(m(f)(x))
+    return ret
+    #n(f) -> lambda x: f(f(x))
+    #m(n(f)) -> lambda x: f(f(f(f(x))))
 def mul_church(m, n):
     """Return the Church numeral for m * n, for Church numerals m and n.
 
@@ -192,7 +222,7 @@ def mul_church(m, n):
     12
     """
     "*** YOUR CODE HERE ***"
-
+    return compose1(m,n)
 def pow_church(m, n):
     """Return the Church numeral m ** n, for Church numerals m and n.
 
@@ -202,3 +232,9 @@ def pow_church(m, n):
     9
     """
     "*** YOUR CODE HERE ***"
+    n = church_to_int(n)
+    ret = successor(zero)
+    while n >= 1:
+        ret = compose1(m,ret)
+        n -= 1
+    return ret
