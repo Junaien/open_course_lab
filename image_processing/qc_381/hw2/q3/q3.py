@@ -32,15 +32,23 @@ def exact_histo(img, histo):
   w1_kernel = np.float32([1])
   w2_kernel = np.float32([[0,1/5,0], [1/5,1/5,1/5],[0,1/5,0]])
   w3_kernel = np.float32([[1/9,1/9,1/9], [1/9,1/9,1/9],[1/9,1/9,1/9]])
+
+  #apply three different kernel to img
   img_w1 = cv2.filter2D(ret_img, -1, w1_kernel)
   img_w2 = cv2.filter2D(ret_img, -1, w2_kernel)
   img_w3 = cv2.filter2D(ret_img, -1, w3_kernel)
+
+  #put the result of applying kernel into vector (w1,w2,w3)
   filter_arr = []
   for i in range(rows):
       for j in range(cols):
           filter_arr.append((img_w1[i,j],img_w2[i,j],img_w3[i,j], i, j))
+            
+  #sort the collections in lexical order
   filter_arr = sorted(filter_arr)
-  k = 0
+  
+  #according the sorting result adjust the intensity of pixel
+  k = 0 #already adjusted pixel location
   for i in range(len(histo)):
       while(histo[i] > 0):
           ret_img[filter_arr[k][3],filter_arr[k][4]] = i
