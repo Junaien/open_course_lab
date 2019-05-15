@@ -1,17 +1,31 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+#<input> img:  gray scale image
+#<output>:     normalize gray scale image(int 32)
+def normalize(img):
+    (rows, cols) = (len(img), len(img[0]))
+    flat_img     = np.ravel(img)
+    (low, high) = (min(flat_img),max(flat_img))
+    ret_img = np.zeros((rows,cols),'int32')
+    for i in range(rows):
+        for j in range(cols):
+                ret_img[i,j] = int((img[i,j] - low) / (high - low))
+    return ret_img
+
 #input  <img>:   gray level img
 #input  <c>:     constant of gamma transformation euqation
 #input  <g>:     the power of gamma transformation
 #output :        gray scale img after gamma transformation
 def gamma_trans(img, g, level):
+    normalize(img);
     (rows, cols) = (len(img), len(img[0]))
     ret_img = np.zeros((rows,cols), 'uint8')
     c = (level - 1) / pow(level - 1,g)
     for i in range(rows):
         for j in range(cols):
             ret_img[i,j] = c * pow(img[i,j],g)
+    ret_img = ret_img * 255;
     return ret_img
 
 #input <img>:   gray level img
