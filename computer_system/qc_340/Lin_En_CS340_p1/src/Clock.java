@@ -6,7 +6,7 @@ public class Clock extends Thread{
   private static final int breakTimeBetweenSessions = 4000;
   private static final Random randomGenerator = new Random(System.currentTimeMillis());
   private static final Object sessionLock  = new Object();
-  
+
   private static volatile boolean isMuseumOpen = true;
   private static volatile boolean isSessionOn = false;
   private static volatile boolean isPresentationOver = false;
@@ -43,7 +43,7 @@ public class Clock extends Thread{
       Speaker.setIsTimeToWakeVisitors(true);
     }
   }
-  
+
   private static void signalStartOfPresentation(int i){
     synchronized(sessionLock){
       isSessionOn = true;
@@ -51,7 +51,7 @@ public class Clock extends Thread{
     }
   }
 
-  
+
   /* getters and setters */
   public static boolean isMuseumOpen(){return isMuseumOpen;}
   public static boolean isSessionOn(){return isSessionOn;}

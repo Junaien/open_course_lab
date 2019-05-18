@@ -7,25 +7,25 @@ def normalize(img):
     (rows, cols) = (len(img), len(img[0]))
     flat_img     = np.ravel(img)
     (low, high) = (min(flat_img),max(flat_img))
-    ret_img = np.zeros((rows,cols),'int32')
+    ret_img = np.zeros((rows,cols),'float32')
     for i in range(rows):
         for j in range(cols):
-                ret_img[i,j] = int((img[i,j] - low) / (high - low))
+                ret_img[i,j] = (img[i,j] - low) / (high - low)
+                assert ret_img[i,j] >= 0 and ret_img[i,j] <= 1
     return ret_img
 
 #input  <img>:   gray level img
-#input  <c>:     constant of gamma transformation euqation
 #input  <g>:     the power of gamma transformation
 #output :        gray scale img after gamma transformation
 def gamma_trans(img, g, level):
-    normalize(img);
+    img = normalize(img);
     (rows, cols) = (len(img), len(img[0]))
-    ret_img = np.zeros((rows,cols), 'uint8')
-    c = (level - 1) / pow(level - 1,g)
+    ret_img = np.zeros((rows,cols), 'int32')
+    c = 1;
     for i in range(rows):
         for j in range(cols):
-            ret_img[i,j] = c * pow(img[i,j],g)
-    ret_img = ret_img * 255;
+            ret_img[i,j] = int(c * pow(img[i,j],g) * 255)
+            assert ret_img[i,j] >= 0 and ret_img[i,j] < level, f"invalid value == {ret_img[i,j]}"
     return ret_img
 
 #input <img>:   gray level img

@@ -2,19 +2,24 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 import math
+
+
+#<input>  box_size: the length of one side of kernel box
+#<output> a box kernel according to the box size indicated
 def produce_box_kernel(box_size):
     return np.float32([[1 / (box_size * box_size)] * box_size] * box_size);
 
 #<input> img:  gray scale image
-#<output>:     normalize gray scale image(int 32)
+#<output>:     normalize gray scale image(0 <= pixel <= 1)
 def normalize(img):
     (rows, cols) = (len(img), len(img[0]))
     flat_img     = np.ravel(img)
     (low, high) = (min(flat_img),max(flat_img))
-    ret_img = np.zeros((rows,cols),'int32')
+    ret_img = np.zeros((rows,cols),'float32')
     for i in range(rows):
         for j in range(cols):
-                ret_img[i,j] = int(255 * (img[i,j] - low) / (high - low))
+                ret_img[i,j] = (img[i,j] - low) / (high - low)
+                assert ret_img[i,j] >= 0 and ret_img[i,j] <= 1
     return ret_img
 
 #<input> theta: standard deviation for kernel
@@ -40,7 +45,7 @@ def question1():
     cv2.imwrite("./question1/box_filtered_img.jpg", box);
 
     #apply gaussian kernel
-    gaussian_filter   = produce_gaussian_kernel(7, 0.005)
+    gaussian_filter   = produce_gaussian_kernel(5, 0.005)
     gaussian_over     = cv2.filter2D(img, -1, gaussian_filter)
     cv2.imwrite("./question1/gaussian_filtered_img.jpg", gaussian_over);
 
@@ -61,7 +66,6 @@ def question2():
     cv2.imwrite("./question2/robert_img.jpg", robert_img);
 
 
-
 def question3():
     img  = cv2.cvtColor(cv2.imread('./orig_images/pic.jpg'), cv2.COLOR_BGR2GRAY)
     cv2.imwrite("./question3/orig_img.jpg", img);
@@ -69,16 +73,15 @@ def question3():
     #second order derivative kernel
     second_deri  = np.float32([[0,-1,0],[-1,4,-1],[0,-1,0]])
     second_deri_img = cv2.filter2D(img, -1, second_deri)
-    # print(normalize(second_deri_img))
     cv2.imwrite("./question3/second_derivative_img.jpg", second_deri_img);
 
 def question4():
-    img  = cv2.cvtColor(cv2.imread('./orig_images/pic.jpg'), cv2.COLOR_BGR2GRAY)
+    img  = cv2.cvtColor(cv2.imread('./orig_images/blurred_pic.png'), cv2.COLOR_BGR2GRAY)
 
-    #produce blur image by applying gaussian kernel
-    box_size     = len(img) // 310
+    #produce blur image by applying box kernel
+    box_size     = len(img) // 170
     box_filter   = produce_box_kernel(box_size)
-    subtracted_img  = img - cv2.filter2D(img, -1, box_filter)
+    subtracted_img  = (img - cv2.filter2D(img, -1, box_filter)) / 15
 
     #highboost operation
     highboost         = img + 2 * subtracted_img

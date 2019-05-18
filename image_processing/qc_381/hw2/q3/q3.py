@@ -43,10 +43,10 @@ def exact_histo(img, histo):
   for i in range(rows):
       for j in range(cols):
           filter_arr.append((img_w1[i,j],img_w2[i,j],img_w3[i,j], i, j))
-            
+
   #sort the collections in lexical order
   filter_arr = sorted(filter_arr)
-  
+
   #according the sorting result adjust the intensity of pixel
   k = 0 #already adjusted pixel location
   for i in range(len(histo)):
@@ -81,5 +81,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-#question: what do you mean by comparing (1)(2)(3)
