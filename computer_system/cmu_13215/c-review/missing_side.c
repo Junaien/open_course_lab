@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-	
+
 	extern char *optarg;
 	extern int optind, opterr, optopt;
 
@@ -50,4 +50,3 @@ int main(int argc, char *argv[]) {
 
 	return 0;
 }
-

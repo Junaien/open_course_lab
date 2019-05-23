@@ -3,10 +3,10 @@
 #include <getopt.h>
 
 int main(int argc, char *argv[]) {
-	
+
 	extern char *optarg;
 	extern int optind, opterr, optopt;
-	
+
     int verbose = 0;
     int n = 0;
     char opt;
