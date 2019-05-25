@@ -8,11 +8,11 @@
 #include <time.h>
 
 trans_func_t func_list[MAX_TRANS_FUNCS];
-int func_counter = 0; 
+int func_counter = 0;
 
-/* 
+/*
  * printSummary - Summarize the cache simulation statistics. Student cache simulators
- *                must call this function in order to be properly autograded. 
+ *                must call this function in order to be properly autograded.
  */
 void printSummary(int hits, int misses, int evictions)
 {
@@ -23,8 +23,8 @@ void printSummary(int hits, int misses, int evictions)
     fclose(output_fp);
 }
 
-/* 
- * initMatrix - Initialize the given matrix 
+/*
+ * initMatrix - Initialize the given matrix
  */
 void initMatrix(int M, int N, int A[N][M], int B[M][N])
 {
@@ -50,8 +50,8 @@ void randMatrix(int M, int N, int A[N][M]) {
     }
 }
 
-/* 
- * correctTrans - baseline transpose function used to evaluate correctness 
+/*
+ * correctTrans - baseline transpose function used to evaluate correctness
  */
 void correctTrans(int M, int N, int A[N][M], int B[M][N])
 {
@@ -61,16 +61,16 @@ void correctTrans(int M, int N, int A[N][M], int B[M][N])
             tmp = A[i][j];
             B[j][i] = tmp;
         }
-    }    
+    }
 }
 
 
 
-/* 
+/*
  * registerTransFunction - Add the given trans function into your list
  *     of functions to be tested
  */
-void registerTransFunction(void (*trans)(int M, int N, int[N][M], int[M][N]), 
+void registerTransFunction(void (*trans)(int M, int N, int[N][M], int[M][N]),
                            char* desc)
 {
     func_list[func_counter].func_ptr = trans;

@@ -1,4 +1,4 @@
-/* 
+/*
  * trans.c - Matrix transpose B = A^T
  *
  * Each transpose function must have a prototype of the form:
@@ -6,45 +6,86 @@
  *
  * A transpose function is evaluated by counting the number of misses
  * on a 1KB direct mapped cache with a block size of 32 bytes.
- */ 
+ */
 #include <stdio.h>
 #include "cachelab.h"
-
+#include <assert.h>
+#define MIN(a,b) (a <= b? a:b)
 int is_transpose(int M, int N, int A[N][M], int B[M][N]);
 
-/* 
+
+
+/*
+ * You can define additional transpose functions below. We've defined
+ * a simple one below to help you get started.
+ */
+
+/*
+ * trans - A simple baseline transpose function, not optimized for the cache.
+ */
+char trans_desc[] = "matrix shift tecnique";
+void trans(int M, int N, int A[N][M], int B[M][N], int blk_size)
+{
+
+    int effective_n = blk_size * MIN(N / blk_size, M / blk_size);
+    for(int i = 0; i < effective_n; i+= blk_size){
+        int j = i;
+        //copy to the right block
+        for(int k = i; k < i + blk_size; k++){
+          for(int z = j; z < j + blk_size; z++){
+            B[k][(z + blk_size) % effective_n] = A[k][z];
+          }
+        }
+        //traspose back
+        for(int k = 0; k < blk_size; k++){
+          for(int z = 0; z < blk_size; z++){
+            B[k + i][z + j] = B[i + z][(j + blk_size) % effective_n + k];
+          }
+        }
+        //assert traspose back
+        // for(int k = 0; k < blk_size; k++)
+        //   for(int z = 0; z < blk_size; z++){
+        //     assert(A[i + k][z + j] == B[z+j][i+k]);
+        //   }
+        //tranpose below to right
+        int belw_base_i  = (i + blk_size) % effective_n ;
+        int right_base_j = (blk_size + j) % effective_n;
+        for(int k = 0; k < blk_size; k++){
+          for(int z = 0; z < blk_size; z++){
+             B[k + i][z + right_base_j] = A[z + belw_base_i][k + j];
+          }
+        }
+    }
+    //regular transpose
+    for(int i = 0; i < N; i+= blk_size)
+      for(int j = 0; j < M; j+= blk_size){
+        //transposing blocks
+        if((i == j || (j + blk_size) % effective_n == i) &&
+           (i < effective_n && j < effective_n))continue;
+        for(int k = i; k < N && (k - i) < blk_size; k++){
+          for(int z = j; j < M && (z - j) < blk_size; z++){
+            B[z][k] = A[k][z];
+          }
+        }
+      }
+}
+
+/*
  * transpose_submit - This is the solution transpose function that you
  *     will be graded on for Part B of the assignment. Do not change
  *     the description string "Transpose submission", as the driver
  *     searches for that string to identify the transpose function to
- *     be graded. 
+ *     be graded.
  */
 char transpose_submit_desc[] = "Transpose submission";
 void transpose_submit(int M, int N, int A[N][M], int B[M][N])
 {
+  if(M == 32)trans(M,N,A,B,8);
+  else if(M == 64) trans(M,N,A,B,4);
+  else trans(M,N,A,B,18);
 }
 
-/* 
- * You can define additional transpose functions below. We've defined
- * a simple one below to help you get started. 
- */ 
 
-/* 
- * trans - A simple baseline transpose function, not optimized for the cache.
- */
-char trans_desc[] = "Simple row-wise scan transpose";
-void trans(int M, int N, int A[N][M], int B[M][N])
-{
-    int i, j, tmp;
-
-    for (i = 0; i < N; i++) {
-        for (j = 0; j < M; j++) {
-            tmp = A[i][j];
-            B[j][i] = tmp;
-        }
-    }    
-
-}
 
 /*
  * registerFunctions - This function registers your transpose
@@ -56,14 +97,16 @@ void trans(int M, int N, int A[N][M], int B[M][N])
 void registerFunctions()
 {
     /* Register your solution function */
-    registerTransFunction(transpose_submit, transpose_submit_desc); 
+    registerTransFunction(transpose_submit, transpose_submit_desc);
 
     /* Register any additional transpose functions */
-    registerTransFunction(trans, trans_desc); 
+    // registerTransFunction(trans, trans_desc);
+    // registerTransFunction(trans_col, trans_col_desc);
+    // registerTransFunction(trans_blocking_4, trans_blocking_4_desc);
 
 }
 
-/* 
+/*
  * is_transpose - This helper function checks if B is the transpose of
  *     A. You can check the correctness of your transpose by calling
  *     it before returning from the transpose function.
@@ -81,4 +124,3 @@ int is_transpose(int M, int N, int A[N][M], int B[M][N])
     }
     return 1;
 }
-
