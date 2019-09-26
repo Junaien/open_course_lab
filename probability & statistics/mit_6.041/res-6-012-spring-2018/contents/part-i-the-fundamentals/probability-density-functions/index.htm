@@ -1,0 +1,778 @@
+<!DOCTYPE html><html lang="en">
+      
+      
+        
+    
+    
+    
+    
+
+      
+      
+      <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">  
+        
+        <title>Probability Density Functions | Part I: The Fundamentals | Introduction to Probability | MIT OpenCourseWare</title>
+    <!-- Begin Automatic Metadata Insertion -->
+    <meta content="res-6-012-introduction-to-probability-spring-2018" name="WT.cg_n">
+    <meta content="Probability Density Functions" name="WT.cg_s">
+    <meta content="L08.2 Probability Density Functions" name="Description">
+    <meta content="Tsitsiklis, John" name="Author">
+    <meta content="Jaillet, Patrick" name="Author">
+    <meta content="RES.6-012,RES.6,Probability Density Functions,Systems Engineering,Probability and Statistics" name="keywords">
+    <meta content="RES.6-012 Introduction to Probability | Probability Density Functions" name="Search_Display">
+    <meta content="Systems Engineering" itemprop="about">
+    <meta content="Probability and Statistics" itemprop="about">
+    <!-- End Automatic Metadata Insertion -->
+
+	<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/grid.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/base.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/menu.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/jquery.bubblepopup.css">
+<link title="default" rel="stylesheet" type="text/css" href="https://ocw-origin.odl.mit.edu/styles/search.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/courses.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/courses_new.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/jquery.jscrollpane.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/media_tabs.css">
+	<link href="https://ocw-origin.odl.mit.edu/xml/ocwcc.rdf" type="application/rdf+xml" rel="metadata">
+	<link rel="canonical" href="https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-i-the-fundamentals/probability-density-functions/">
+	<link rel="apple-touch-icon" href="../../../common/images/apple-touch-icon.png">
+	
+	
+      
+	
+	<script type="text/javascript" src="../../../common/scripts/jquery.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/ocw-media-utils-offline.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/ocw-offline.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/jquery.bubblepopup.min.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/expandy.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/bubble-popup-offline.js"></script>
+	
+	
+	
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#tabs").tabs();
+        IpadScroller();
+      });
+    </script>
+    
+    
+    
+    
+    
+    
+      
+       
+		 
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </head>
+    <body itemscope itemtype="http://schema.org/WebPage">
+        
+	
+
+        <header id="top">
+			<div id="grid">
+				
+				
+					
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572">
+<div class="portletStaticText portlet-static-site-header">
+<!--googleoff: index--> <div class="grid_6 alpha" id="banner"><a href="https://ocw-origin.odl.mit.edu/"><img src="../../../common/images/ocw_mast.png" class="logo" alt="MIT OpenCourseWare, Massachusetts Institute of Technology"></a></div> <div class="grid_6 omega" id="subscribe">
+<aside class="module" aria-label="Connect with OCW"> <table class="social">     <tbody>         <tr>             <td class="socialbutton"><a aria-label="Subscribe to the OCW Newsletter" href="https://ocw-origin.odl.mit.edu/subscribe/index.htm?utm_source=header"><img src="../../../common/images/trans.gif" alt="An icon depicting an envelope.">Subscribe to the OCW Newsletter</a></td>             <td>
+<a aria-label="Facebook" href="https://facebook.com/mitocw"><img src="../../../common/images/icon_fb.png" alt="Click to visit our Facebook page."></a>   <a aria-label="Twitter" href="https://twitter.com/mitocw"><img src="https://ocw-origin.odl.mit.edu/images/icon_twitter.png" alt="Click to visit our Twitter feed."></a>   <a aria-label="YouTube" href="https://www.youtube.com/mitocw"><img src="https://ocw-origin.odl.mit.edu/images/icon_yt.png" alt="Click to visit our YouTube page."></a>   <a aria-label="Open Matters blog on WordPress" href="https://mitopencourseware.wordpress.com/"><img src="https://ocw-origin.odl.mit.edu/images/icon_wp.png" alt="Click to visit our blog on WordPress."></a>
+</td>         </tr>     </tbody> </table> </aside><nav aria-label="Help Links" class="helplinks">     <a aria-label="OCW Site Help" href="https://ocw-origin.odl.mit.edu/help">Help</a><span aria-hidden="true">|</span>     <a href="https://ocw-origin.odl.mit.edu/about/contactus">Contact Us</a>   </nav>
+</div> <div class="clear"> </div> <!--googleon: index-->
+</div>
+
+</div>
+
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a6d6567612d6d656e75" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a6d6567612d6d656e75">
+<div class="portletStaticText portlet-static-mega-menu"><div><nav id="mega" class="grid_8 alpha" aria-label="Site"> <ul id="menu" role="presentation">     <li id="menu_home">
+<a href="https://ocw-origin.odl.mit.edu/" aria-label="Homepage"><img src="../../../common/images/top-nav_home.png" class="home_icon" alt="Click for site home page."></a><!-- Begin Home Item -->
+</li>     <!-- End Home Item -->     <li id="drop_1" aria-label="Find Courses">
+<a href="#" aria-hidden="true">FIND COURSES</a><!-- Begin 5 columns Item -->     <div class="dropdown_5columns-a mega-courses"><div class="col_1a">
+<div class="row_1a">
+<nav aria-labelledby="mm-find-courses-by">     <span id="mm-find-courses-by" class="nav" aria-hidden="true">Find courses by:</span>     <ul class="find_by" role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/">Topic</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-number/">MIT Course Number</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-department/">Department</a></li>     </ul>     </nav>     <nav aria-labelledby="mm-collections">     <span id="mm-collections" class="nav" aria-hidden="true">Collections</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/new-courses/">New Courses</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/audio-video-courses/">Audio/Video Lectures</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/resources/">Supplemental Resources</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/high-school/">OCW Highlights for High School</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/mitx-related-courseware/">MITx &amp; Related OCW Courses</a></li>     </ul>     </nav>     <nav class="col_1b" aria-labelledby="mm-translated-courses">     <span id="mm-translated-courses" class="nav" aria-hidden="true" style="line-height: 1.3;">Cross-Disciplinary Topic Lists</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/energy-courses">Energy</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/entrepreneurship">Entrepreneurship</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/environment-courses">Environment</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/intro-programming">Introductory Programming</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/life-sciences">Life Sciences</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/transportation-courses">Transportation</a></li>     </ul>     </nav>
+</div>     <div class="row_1b"><nav aria-labelledby="mm-cross-disciplinary-topic-lists">     <span id="mm-cross-disciplinary-topic-lists" class="nav" aria-hidden="true">Translated Courses</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/traditional-chinese" aria-label="Traditional Chinese">繁體字 / Traditional Chinese</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/spanish" aria-label="Spanish">Español / Spanish</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/turkish" aria-label="Turkish">Türkçe / Turkish</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/korean" aria-label="Korean">(비디오)한국 / Korean</a></li>     </ul>     </nav></div>
+</div></div>
+</li>     <li id="drop_2">
+<a href="#" aria-label="For Educators">For Educators</a>     <div class="dropdown_1column-a" style="width: 270px;"><nav aria-labelledby="mm-find-courses-by">     <span id="mm-find-courses-by" class="nav" aria-hidden="true">OCW Educator Portal</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=instructional&amp;utm_campaign=Educator&amp;utm_source=megamenu&amp;utm_medium=find-courses&amp;utm_content=approaches">Search for Instructor Insights</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=teaching&amp;utm_campaign=Educator&amp;utm_source=megamenu&amp;utm_medium=find-courses&amp;utm_content=materials">Search for Teaching Materials</a></li>     </ul>     <span id="mm-collections" class="nav" aria-hidden="true">OCW Collections</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/#cat=teachingandeducation">MIT Courses about Teaching and Education</a></li>     </ul>     <span id="mm-collections" class="nav" aria-hidden="true">K-12</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/high-school/">OCW Highlights for High School</a></li>         <li><a href="https://www.k12videos.mit.edu/videos" aria-label="External Link: MIT Plus K12 Videos">MIT+K12 Videos</a></li>     </ul>     <span id="mm-higher-ed" class="nav" aria-hidden="true">Higher Ed</span>     <ul>         <li><a href="https://teachingexcellence.mit.edu/" aria-label="External Link: Teaching Excellence at MIT">Teaching Excellence at MIT</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/mit-curriculum-guide/">MIT Undergraduate Curriculum Map</a></li>
+<li><a href="https://openlearning.mit.edu/campus/digital-innovations/">Residential Digital Innovations</a></li>     </ul>     </nav></div>
+</li>     <li id="drop_3">
+<a href="#" aria-hidden="true">Give Now</a>     <div class="dropdown_1column-a"><nav class="col_1" aria-label="Donate">     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/give/">Make a Donation</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/why-give/">Why Give?</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/our-supporters/">Our Supporters</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/shop-ocw">Shop OCW</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/support/">Become a Corporate Sponsor</a></li>     </ul>     </nav></div>
+</li>     <li id="drop_4">
+<a href="#" aria-hidden="true">About</a>     <div class="dropdown_1column-a"><nav class="col_1" aria-label="About">     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/about/">About MIT OpenCourseWare</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/about/site-statistics/">Site Statistics</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/about/ocw-stories/">OCW Stories</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/about/newsletter/">News</a></li>     </ul>     </nav></div>
+</li> </ul> </nav></div></div>
+
+</div>
+
+
+
+
+
+<!--googleoff: index-->
+<script>
+  (function() {
+	var cx = '012626166551961672889:owjdpuboktq';
+	var gcse = document.createElement('script');
+	gcse.type = 'text/javascript';
+	gcse.async = true;
+	gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(gcse, s);
+  })();
+  window.onload = function(){
+	document.getElementById('gsc-i-id1').placeholder = 'Search';	
+  };
+
+$(document).ready(function(){
+
+$('.advanceSearch a').keydown(function(event){showSearchTips($(this),event);})
+$('#searchTipsModal').keydown(function(event){showSearchTips($(this),event);})
+
+function showSearchTips(obj,evt) {
+// if pressed enter key
+	if ( evt.which == 13 || evt.which == 32) {
+		showModal();
+		ga('send', 'pageview', "AdvanceSearch");
+		$(".advanceSearch a").attr('aria-expanded', 'true');
+		$('.searchTipsModal').focus();
+		evt.preventDefault();
+		}
+	if ( evt.which == 27 ) {
+		hideModal();
+		$(".advanceSearch a").attr('aria-expanded', 'false');
+		var modal = document.getElementById('searchTipsModal');
+		modal.style.display = "none";
+		$(".advanceSearch a").focus();
+		evt.preventDefault();
+		}
+}
+
+});
+function showModal(){
+	var modal = document.getElementById('searchTipsModal');
+	modal.style.display = "block";
+	ga('send', 'pageview', "AdvanceSearch");
+	document.getElementById("searchTipsBtn").setAttribute("aria-expanded", true);
+	window.setTimeout(function () {
+    document.getElementById('searchTipsModal').focus(); }, 0);
+}
+
+function hideModal(){
+	var modal = document.getElementById('searchTipsModal');
+	modal.style.display = "none";
+	document.getElementById("searchTipsBtn").setAttribute("aria-expanded", false);
+}
+</script>
+<div id="search" role="search" class="grid_4 omega">
+    	<table class="search">
+				<tbody>
+					<tr>
+						<td><div class="searchboxheader"><searchbox-only resultsurl="/search/ocwsearch.htm"></searchbox-only></div></td>
+						<td>
+							<div class="advanceSearch">
+								<a id="searchTipsBtn" onclick="showModal();" href="#" role="button" aria-label="search tips" aria-expanded="false" aria-describedby="searchtips">Search Tips</a>
+
+								<!-- The Modal -->
+								<div id="searchTipsModal" class="modal" tabindex="-1">
+								  <!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-body">
+											<button class="close" onclick="hideModal();" aria-label="close">X</button>
+											<span>
+												<b>Exclude words from your search</b>
+												<br>Put - in front of a word you want to leave out. For example, jaguar speed -car
+												<br><br>
+												<b>Search for an exact match</b>
+												<br>Put a word or phrase inside quotes. For example, "tallest building".
+												<br><br>
+												<b>Search for wildcards or unknown words</b>
+												<br>Put a * in your word or phrase where you want to leave a placeholder. For example, "largest * in the world".
+												<br><br>
+												<b>Search within a range of numbers</b>
+												<br>Put .. between two numbers. For example, camera $50..$100.
+												<br><br>
+												<b>Combine searches</b>
+												<br>Put "OR" between each search query. For example,  marathon OR race.
+												<br><br>
+											</span>
+										</div>
+								  </div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+		</table>
+</div>
+<div class="clear"></div>
+<!--googleon: index-->
+<!-- *end header* -->
+
+				
+				
+			</div>
+<!-- top grid end -->
+		</header><!-- top end -->
+			
+		<div id="center_media">
+      	<div id="grid">
+      		<div id="left">
+        		<nav id="breadcrumb_media" aria-label="Breadcrumb">
+                	<p>
+
+    <a href="https://ocw-origin.odl.mit.edu/">Home</a>
+    
+        »
+        
+    
+    
+        
+            <a href="https://ocw-origin.odl.mit.edu/resources">Supplemental Resources</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../../contents/index.htm">Introduction to Probability</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../../contents/part-i-the-fundamentals/index.htm">Part I: The Fundamentals</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            
+            
+            Probability Density Functions
+         
+    
+</p>
+
+            	</nav>
+            	<div class="clear"></div>
+        		<div id="media_title">
+        		<h1 class="title" itemprop="name" property="dct:title">
+        <span class="" id="parent-fieldname-title">
+            Probability Density Functions
+        </span>
+    </h1>
+        		</div>
+           		<div class="clear"></div>
+           		<div id="course_wrapper_media">
+           			<nav id="course_nav" aria-label="Course">
+           				<script language="javascript" type="text/javascript">
+function toggleMenu(objID) {
+  if (!document.getElementById) return;
+  var ob = document.getElementById(objID);
+  ob.className = (ob.className == 'selected')?'': 'selected';
+}
+function toggleClass(id)
+{
+  var divtoggleClass= document.getElementById(id);
+  divtoggleClass.className = (divtoggleClass.className == 'mO')?'mC': 'mO';
+  return false;
+}
+function changeAlt(id)
+{
+  id.alt = (id.alt == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+  id.title = (id.title == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+}
+</script>
+<!--Left Nav Starts -->
+
+
+	<ul>			  
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/index.htm">
+		                  Resource Home  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="selected">
+			   			<a href="../../../contents/part-i-the-fundamentals/index.htm">
+		                  Part I: The Fundamentals  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/part-ii-inference-limit-theorems/index.htm">
+		                  Part II: Inference &amp; Limit Theorems  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/part-iii-random-processes/index.htm">
+		                  Part III: Random Processes  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    
+		    
+         	
+	<!--second tal block close-->  
+	
+</ul>
+
+
+<!--Left Nav Ends -->
+
+
+
+
+
+           			</nav>
+           			<main id="course_inner_media" aria-labelledby="media_title">
+      					 
+        <div class="" id="parent-fieldname-text">
+            
+            
+        </div>
+    
+      					     
+    
+    
+
+
+
+<script type="text/javascript">var caption_embed_1 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-i-the-fundamentals/probability-density-functions/8QFpZ3FndBc.srt'}</script>     
+     <div id="media-embed">
+         <div class="attention_message" id="embed_1">
+<p>Flash and JavaScript are required for this feature.</p>
+<p>Download the video from <a href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L08-02_300k.mp4">Internet Archive</a>.</p>
+</div>
+     </div>
+    
+     <script type="text/javascript">ocw_embed_chapter_media('embed_1', 'https://www.youtube.com/v/8QFpZ3FndBc', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-i-the-fundamentals/probability-density-functions', 'https://img.youtube.com/vi/8QFpZ3FndBc/0.jpg',0,0, 'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-i-the-fundamentals/probability-density-functions/8QFpZ3FndBc.srt')</script>
+	 
+	 
+	 		
+	 		<div id="transcript1"></div>
+				 <script type="text/javascript">createThreePlayParams(2, 2382136, "embed_1", 0, 0)</script>
+			 
+	
+
+     
+ 
+
+
+<script type="text/javascript">
+		window.onload=function(){
+		init();
+		
+		}
+		var tabLinks = new Array();
+		var contentDivs = new Array();
+		function init() {
+		  // Grab the tab links and content divs from the page
+		  var tabListItems = document.getElementById('tabs').childNodes;
+		  for ( var i = 0; i < tabListItems.length; i++ ) {
+			if ( tabListItems[i].nodeName == "LI" ) {
+			  var tabLink = getFirstChildWithTagName( tabListItems[i], 'A' );
+			  var id = getHash( tabLink.getAttribute('href') );
+			  tabLinks[id] = tabLink;
+			  contentDivs[id] = document.getElementById( id );
+			}
+		  }
+		  // Assign onclick events to the tab links, and
+		  // highlight the first tab
+		  var i = 0;
+		  for ( var id in tabLinks ) {
+			tabLinks[id].onclick = showTab;
+			tabLinks[id].onfocus = function() { this.blur() };
+			if ( i == 0 ) tabLinks[id].className = 'selected';
+			i++;
+		  }
+		  // Hide all content divs except the first
+		  var i = 0;
+		  for ( var id in contentDivs ) {
+			if ( i != 0 ) contentDivs[id].className = 'tabContent hide';
+			i++;
+		  }
+		}
+		function showTab() {
+		  var selectedId = getHash( this.getAttribute('href') );
+		  // Highlight the selected tab, and dim all others.
+		  // Also show the selected content div, and hide all others.
+		  for ( var id in contentDivs ) {
+			if ( id == selectedId ) {
+			  tabLinks[id].className = 'selected';
+			  contentDivs[id].className = 'tabContent';
+			} else {
+			  tabLinks[id].className = '';
+			  contentDivs[id].className = 'tabContent hide';
+			}
+		  }
+		  // Stop the browser following the link
+		  return false;
+		}
+		function getFirstChildWithTagName( element, tagName ) {
+		  for ( var i = 0; i < element.childNodes.length; i++ ) {
+			if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
+		  }
+		}
+		function getHash( url ) {
+		  var hashPos = url.lastIndexOf ( '#' );
+		  return url.substring( hashPos + 1 );
+		}
+ </script>	
+ 
+
+  <div id="media_tabs">
+     
+        <ul id="tabs">
+            <li class="first">
+                <a href="#vid_about" class="selected">About this Video</a>
+            </li>
+            <li class="">
+                <a href="#vid_index" class="">Transcript</a>
+            </li>
+            <li class="">
+                <a href="#vid_playlist" class="">Download this Video</a>
+            </li>
+        </ul>
+   
+        <div id="vid_about" itemprop="description" class="tabContent"><p><strong>Instructor:</strong> John Tsitsiklis</p></div>
+        <div id="vid_index" itemprop="description" class="tabContent hide">
+<ul><li><a class="transcript-link" title="Open in a new window." alt="Open in a new window." style="text-decoration: none; font-size: 1.0em;" target="_blank" text-decoration: none font-size: href="../../../contents/part-i-the-fundamentals/probability-density-functions/8QFpZ3FndBc.pdf"> Download English-US transcript (PDF)</a></li></ul>
+<p><span m="650">In this segment, we introduce the concept of continuous</span> <span m="3990">random variables and their characterization in terms of</span> <span m="7230">probability density functions, or PDFs for short.</span> </p>
+<p><span m="11100">Let us first go back to discrete random variables.</span> </p>
+<p><span m="13810">A discrete random variable takes values</span> <span m="15800">in a discrete set.</span> </p>
+<p><span m="17130">There is a total of one unit of probability assigned to the</span> <span m="20430">possible values.</span> </p>
+<p><span m="21780">And the PMF tells us exactly how much of this probability</span> <span m="26080">is assigned to each value.</span> </p>
+<p><span m="28100">So we can think of the bars in the PMF as point masses with</span> <span m="33590">positive weight that sit on top of each</span> <span m="37000">possible numerical value.</span> </p>
+<p><span m="38870">And we can calculate the probability that the random</span> <span m="41440">variable falls inside an interval by adding all the</span> <span m="45720">masses that sit on top of that interval.</span> </p>
+<p><span m="49270">So for example, if we're looking at the interval from a</span> <span m="52890">to b, the probability of this interval is equal to the sum</span> <span m="57730">of the probabilities of these three masses that fall inside</span> <span m="61530">this interval.</span> </p>
+<p><span m="62870">On the other hand, a continuous random variable</span> <span m="65690">will be taking values over a continuous range--</span> <span m="68860">for example, the real line or an interval on the real line.</span> </p>
+<p><span m="72800">In this case, we still have one total unit of probability</span> <span m="78000">mass that is assigned to the possible values of the random</span> <span m="81350">variable, except that this unit of mass is spread all</span> <span m="85390">over the real line.</span> </p>
+<p><span m="86860">But it is not spread in a uniform manner.</span> </p>
+<p><span m="89990">Some parts of the real line have more</span> <span m="92210">mass per unit length.</span> </p>
+<p><span m="93880">Some have less.</span> </p>
+<p><span m="95670">How much mass exactly is sitting on top of each part of</span> <span m="99900">the real line is described by the probability density</span> <span m="103090">function, this function plotted here, which we denote</span> <span m="107380">with this notation.</span> </p>
+<p><span m="108840">The letter f will always indicate that we are dealing</span> <span m="112090">with a PDF.</span> </p>
+<p><span m="113440">And the subscript will indicate which random variable</span> <span m="117310">we're talking about.</span> </p>
+<p><span m="120190">We use the probability density function to calculate the</span> <span m="123210">probability that X lies in a certain interval--</span> <span m="127020">let's say the interval from a to b.</span> </p>
+<p><span m="130560">And we calculate it by finding the area under the PDF that</span> <span m="136079">sits on top of that interval.</span> </p>
+<p><span m="139900">So this area here, the shaded area, is the probability that</span> <span m="143300">X stakes values in this interval.</span> </p>
+<p><span m="146100">Think of probability as snow fall.</span> </p>
+<p><span m="148990">There is one pound of snow that has fallen on</span> <span m="151770">top of the real line.</span> </p>
+<p><span m="154500">The PDF tells us the height of the snow accumulated over a</span> <span m="159160">particular point.</span> </p>
+<p><span m="161329">We then find the weight of the overall amount of snow sitting</span> <span m="167190">on top of an interval by calculating the area under</span> <span m="171079">this curve.</span> </p>
+<p><span m="172400">Of course, mathematically, area under the curve is just</span> <span m="176750">an integral.</span> </p>
+<p><span m="177720">So the probability that X takes values in this interval</span> <span m="181320">is the integral of the PDF over this particular interval.</span> </p>
+<p><span m="187790">What properties should the PDF have?</span> </p>
+<p><span m="190320">By analogy with the discrete case, a PDF must be</span> <span m="194780">non-negative, because we do not want to get negative</span> <span m="198060">probabilities.</span> </p>
+<p><span m="200290">In the discrete case, the sum of the PMF entries has to be</span> <span m="204870">equal to 1.</span> </p>
+<p><span m="206680">In the continuous case, X is certain to lie in the interval</span> <span m="211240">between minus infinity and plus infinity.</span> </p>
+<p><span m="214200">So letting a be minus infinity and b plus infinity, we should</span> <span m="219260">get a probability of 1.</span> </p>
+<p><span m="221680">So the total area under the PDF, when we integrate over</span> <span m="226180">the entire real line, should be equal to 1.</span> </p>
+<p><span m="229780">These two conditions are all that we need in order to have</span> <span m="235140">a legitimate PDF.</span> </p>
+<p><span m="238300">We can now give a formal definition of what a</span> <span m="241280">continuous random variable is.</span> </p>
+<p><span m="243770">A continuous random variable is a random variable whose</span> <span m="248270">probabilities can be described by a PDF according to a</span> <span m="254380">formula of this type.</span> </p>
+<p><span m="257209">An important point--</span> <span m="259899">the fact that a random variable takes values on a</span> <span m="262550">continuous set is not enough to make it what we call a</span> <span m="266980">continuous random variable.</span> </p>
+<p><span m="269180">For a continuous random variable, we're</span> <span m="270910">asking for a bit more--</span> <span m="272730">that it can be described by a PDF, that a formula of this</span> <span m="276630">type is valid.</span> </p>
+<p><span m="280760">Now, once we have the probabilities of intervals as</span> <span m="284240">given by a PDF, we can use of additivity to calculate the</span> <span m="288380">probabilities of more complicated sets.</span> </p>
+<p><span m="291340">For example, if you're interested in the probability</span> <span m="294520">that X lies between 1 and 3 or that X lies between 4 and 5--</span> <span m="306050">so this is the probability that X falls in a region that</span> <span m="311250">consists of two disjoint intervals.</span> </p>
+<p><span m="314940">We find the probability of the union of these two intervals,</span> <span m="319790">by additivity, by adding the probabilities of the two</span> <span m="324020">intervals, since these intervals are disjoint.</span> </p>
+<p><span m="329480">And then we can use the PDF to calculate the probabilities of</span> <span m="335840">each one of these intervals according to this formula.</span> </p>
+<p><span m="342570">At this point, you may be wondering what happened to the</span> <span m="345780">sample space in all this discussion.</span> </p>
+<p><span m="349120">Well, there is still an underlying sample space</span> <span m="353070">lurking in the background.</span> </p>
+<p><span m="357800">And different outcomes in the sample space result in</span> <span m="361860">different numerical values for the</span> <span m="365670">random variable of interest.</span> </p>
+<p><span m="369790">And when we talk about the probability that X takes</span> <span m="373650">values between some numbers a and b, what we really mean is</span> <span m="378050">the probability of those outcomes for which the</span> <span m="383780">resulting value of X lies inside</span> <span m="387430">this particular interval.</span> </p>
+<p><span m="389800">So that's what probability means.</span> </p>
+<p><span m="391720">On the other hand, once we have a PDF in our hands, we</span> <span m="395659">can completely forget about the underlying sample space.</span> </p>
+<p><span m="399290">And we can carry out any calculations we may be</span> <span m="402890">interested in by just working with the PDF.</span> </p>
+<p><span m="406680">So as we move on in this course, the sample space will</span> <span m="410600">be moved offstage.</span> </p>
+<p><span m="412400">There will be less and less mention of it.</span> </p>
+<p><span m="414470">And we will be working just directly with PDFs or with</span> <span m="418159">PMFs if we are dealing with discrete random variables.</span> </p>
+<p><span m="423270">Let us now build a little bit on our understanding of what</span> <span m="426470">PDFs really are by looking at</span> <span m="428580">probabilities of small intervals.</span> </p>
+<p><span m="431110">Let us look at an interval that starts at some a and goes</span> <span m="436660">up to some number a plus delta.</span> </p>
+<p><span m="440340">So here, delta is a positive number.</span> </p>
+<p><span m="443410">But we're interested in the case where</span> <span m="445270">delta is very small.</span> </p>
+<p><span m="448150">Let us look at the probability that X falls in this interval.</span> </p>
+<p><span m="453750">The probability that X lies inside this interval is the</span> <span m="460640">area of this region.</span> </p>
+<p><span m="465650">On the other hand, as long as f does not change too much</span> <span m="470630">over this little interval, which will be the case if we</span> <span m="473590">have a continuous density f, then we can approximate the</span> <span m="479520">area we have of this region by the area of a rectangle where</span> <span m="484670">we keep the height constant.</span> </p>
+<p><span m="488130">The area of this rectangle is equal to the height, which is</span> <span m="494800">the value of the PDF at the point a, times the base of the</span> <span m="501360">rectangle, which is equal to delta.</span> </p>
+<p><span m="504360">So this gives us an interpretation of PDFs in</span> <span m="507560">terms of probabilities of small intervals.</span> </p>
+<p><span m="510940">If we take this factor of delta and send it to the other</span> <span m="514370">side in this approximate equality, we see that the</span> <span m="517960">value of the PDF can be interpreted as probability per</span> <span m="523308">unit length.</span> </p>
+<p><span m="524760">So PDFs are not probabilities.</span> </p>
+<p><span m="527350">They are densities.</span> </p>
+<p><span m="528750">Their units are probability per unit length.</span> </p>
+<p><span m="532770">Now, if the probability per unit length is finite and the</span> <span m="537710">length delta is sent to 0, we will get 0 probability.</span> </p>
+<p><span m="544410">More formally, if we look at this integral and we let b to</span> <span m="549690">be the same as a, then we obtain the probability that X</span> <span m="556200">is equal to a.</span> </p>
+<p><span m="559150">And on that side, we get an integral</span> <span m="561620">over a 0 length interval.</span> </p>
+<p><span m="564176">And that integral is going to be 0.</span> </p>
+<p><span m="566800">So we obtain that the probability that X takes a</span> <span m="570960">value equal to a specific, particular point--</span> <span m="575900">that probability is going to be equal to 0.</span> </p>
+<p><span m="579220">So for a continuous random variable, any particular point</span> <span m="582520">has 0 probability.</span> </p>
+<p><span m="584710">Yet somehow, collectively, the infinitely many points in an</span> <span m="590280">interval together will have positive probablility.</span> </p>
+<p><span m="595070">Is this a puzzle?</span> </p>
+<p><span m="596650">Not really.</span> </p>
+<p><span m="597260">That's exactly what happens, also, with the</span> <span m="599890">ordinary notion of length.</span> </p>
+<p><span m="602050">Single points have 0 length, yet by putting together lots</span> <span m="606590">of points, we can create a set that has a positive length.</span> </p>
+<p><span m="614030">And a final consequence of the fact that individual points</span> <span m="617680">have 0 length.</span> </p>
+<p><span m="620650">Using the additivity axiom, the probability that our</span> <span m="624380">random variable takes values inside an interval is equal to</span> <span m="629680">the probability that our random variable takes a value</span> <span m="633150">of a plus the probability that our random variable takes a</span> <span m="637780">value of b plus the probability that our random</span> <span m="642470">variable is strictly between a and b.</span> </p>
+<p><span m="647390">According to our discussion, this term is equal to 0.</span> </p>
+<p><span m="654030">And this term is equal to 0.</span> </p>
+<p><span m="656230">And so we conclude that the probability of a closed</span> <span m="659070">interval is the same as the</span> <span m="660650">probability of an open interval.</span> </p>
+<p><span m="663100">When calculating probabilities, it does not</span> <span m="665340">matter whether we include the endpoints or not.</span> </p>
+<p></p>
+</div>
+        <div id="vid_playlist" itemprop="description" class="tabContent hide">
+<h2 class="subhead">Free Downloads</h2>
+<h3 class="subsubhead">Video</h3>
+<ul>
+<li>Internet Archive (<a href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L08-02_300k.mp4">MP4 - 13MB</a>)</li>
+</ul>
+<br>
+<h3 class="subsubhead">Caption</h3>
+<ul>
+<li>English-US (<a href="../../../contents/part-i-the-fundamentals/probability-density-functions/8QFpZ3FndBc.srt">SRT</a>)</li>
+</ul>
+</div>
+    
+   </div>  
+
+
+
+      					 
+        <div class="" id="parent-fieldname-bottom_html_area">
+            
+            
+        </div>
+    
+               </main><!--Course_inner_media tag close -->
+           		</div>
+<!--Course_wrapper tag close -->
+            </div>
+<!--left tag close -->
+            <aside id="right">
+                <!--Begin Right Portion -->
+                    <div>
+    
+
+
+
+</div>
+
+                	<div>
+    
+
+
+
+</div>
+
+
+        <div class="" id="parent-fieldname-rsi_top_html_area">
+            
+            
+        </div>
+    
+
+<!-- RSI google ad space-->
+
+
+
+<div id="google_ads">    
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script type="text/javascript">var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];</script>
+    <script type="text/javascript">
+googletag.cmd.push(function() {googletag.defineSlot('/1064917/VIDEO_INDIVIDUAL_SLOT_A_DL', [[300, 250], [300, 300], [180, 200], [180, 150], [160, 600]], 'VIDEO_INDIVIDUAL_SLOT_A_DL').addService(googletag.pubads());googletag.defineSlot('/1064917/VIDEO_INDIVIDUAL_SLOT_B_DL', [[300, 250], [300, 300], [180, 200], [180, 150], [160, 600]], 'VIDEO_INDIVIDUAL_SLOT_B_DL').addService(googletag.pubads());googletag.defineSlot('/1064917/VIDEO_INDIVIDUAL_SLOT_C_DL', [[300, 250], [300, 300], [180, 200], [180, 150], [160, 600]], 'VIDEO_INDIVIDUAL_SLOT_C_DL').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+ googletag.enableServices();
+});</script>
+    <script language="javascript" type="text/javascript">
+googletag.cmd.push(function() {googletag.pubads().set("TYPE","HOUSE");googletag.pubads().set("DEPARTMENT","RES");googletag.pubads().set("CRS_BEG2","6-");googletag.pubads().set("CRS_END","012");googletag.pubads().set("SESSION","S");googletag.pubads().set("YEAR","18");})
+</script>
+    
+    <div id="VIDEO_INDIVIDUAL_SLOT_A_DL">
+    	<script>googletag.cmd.push(function() { googletag.display('VIDEO_INDIVIDUAL_SLOT_A_DL'); });</script>
+    </div>
+    <div id="VIDEO_INDIVIDUAL_SLOT_B_DL">
+    	<script>googletag.cmd.push(function() { googletag.display('VIDEO_INDIVIDUAL_SLOT_B_DL'); });</script>
+    </div>
+    <div id="VIDEO_INDIVIDUAL_SLOT_C_DL">
+    	<script>googletag.cmd.push(function() { googletag.display('VIDEO_INDIVIDUAL_SLOT_C_DL'); });</script>
+    </div>
+</div>
+
+<!-- End RSI ads--> 
+
+
+<div>
+    
+
+
+
+</div>
+
+            </aside><!--Right div close -->
+            <div class="clear"></div>
+        </div>
+<!--grid tag close -->
+      </div>
+		
+		<footer id="bottom">
+			<div id="grid">
+				
+<div id="portletwrapper-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572" class="portletWrapper kssattr-portlethash-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572">
+<div class="portletStaticText portlet-static-site-footer"><div id="footer">
+<nav aria-label="Footer">     <nav id="foot-c1" class="grid_2 alpha" aria-labelledby="f-find-courses">       <span class="footer" id="f-find-courses" aria-hidden="true">Find Courses</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/">Find by Topic</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-number/">Find by Course Number</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-department/">Find by Department</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/new-courses/">New Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/audio-video-courses/">Audio/Video Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/instructor-insights/">Instructor Insights</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/resources/">Supplemental Resources</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/mitx-related-courseware/">MITx &amp; Related OCW Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/">Translated Courses</a></li>
+</ul>
+</nav>
+<div id="foot-c2" class="grid_2"><nav aria-labelledby="f-for-educators">         <span id="f-for-educators" class="footer" aria-hidden="true">For Educators</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=instructional&amp;utm_campaign=Educator&amp;utm_source=footer&amp;utm_medium=find-courses&amp;utm_content=approaches">Search for Instructor Insights</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=teaching&amp;utm_campaign=Educator&amp;utm_source=footer&amp;utm_medium=find-courses&amp;utm_content=materials">Search for Teaching Materials</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/#cat=teachingandeducation">MIT Courses about Teaching and Education</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/high-school/">Highlights for High School</a></li>
+    <li><a href="http://k12videos.mit.edu" aria-label="External Link: MIT+K12 Videos">MIT+K12 Videos</a></li>
+    <li><a href="http://teachingexcellence.mit.edu/" aria-label="External Link: Teaching Excellence at MIT">Teaching Excellence at MIT</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/mit-curriculum-guide/">MIT Undergraduate Curriculum Map</a></li>
+</ul>
+</nav></div>
+<nav class="grid_2" id="foot-c3" aria-labelledby="f-donate">       <span id="f-donate" class="footer" aria-hidden="true">Give Now</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/give/">Make a Donation</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/why-give/">Why Give?</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/our-supporters/">Our Supporters</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/shop-ocw/">Shop OCW</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/support/">Become a Corporate Sponsor</a></li>
+</ul>
+</nav>
+<div class="grid_2" id="foot-c4">
+<nav aria-labelledby="f-about">         <span id="f-about" class="footer" aria-hidden="true">About</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/about/">About OpenCourseWare</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/site-statistics/">Site Statistics</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/ocw-stories/">OCW Stories</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/newsletter/">News</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/media-coverage/press-releases/">Press Releases</a></li>
+</ul>
+</nav><!--about-->       <nav aria-labelledby="f-tools">         <span id="f-tools" class="footer" aria-hidden="true">Tools</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/help/">Help &amp; FAQs</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/jsp/feedback.jsp">Contact Us</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/help/site-map/">Site Map</a></li>
+    <li><a href="../../../common/terms/index.htm">Privacy &amp; Terms of Use</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/help/rss/">RSS Feeds</a></li>
+</ul>
+</nav><!--tools-->
+</div>
+</nav> <aside style="min-height: 289px;" aria-labelledby="f-our-corporate-supporters" class="grid_4 omega" id="foot-c5">           <span aria-hidden="true" class="footer" id="f-our-corporate-supporters">Our Corporate Supporters</span>           <!-- HOME_CORP_LOGO_1 -->
+<div id="div-gpt-ad-1388181177156-0" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-0'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_2 -->
+<div id="div-gpt-ad-1388181177156-1" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-1'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_3 -->
+<div id="div-gpt-ad-1388181177156-2" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-2'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_4 -->
+<div id="div-gpt-ad-1388181177156-3" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-3'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_5 -->
+<div id="div-gpt-ad-1388181177156-4" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-4'); });
+              </script></div>
+<!-- HOME_CORP_LOGO_6 -->
+<div id="div-gpt-ad-1388181177156-5" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-5'); });
+              </script></div>
+</aside>
+<div class="grid_12 alpha omega" itemprop="publisher" itemscope="" itemtype="http://schema.org/CollegeOrUniversity">
+<h4 class="footer" style="border-top: thin solid #d5c9ba; padding-top: 10px; margin-bottom: 10px;">About <span itemprop="name">MIT OpenCourseWare</span>
+</h4>
+<p style="color: #999; font-size: 1em; line-height: 1.5em; margin-top: 10px;" itemprop="description">MIT OpenCourseWare makes the materials used in the teaching of almost all of MIT's subjects available on the Web, free of charge. With more than 2,400 courses available, OCW is delivering on the promise of open sharing of knowledge. <a href="http://ocw.mit.edu/about/">Learn more »</a></p>
+</div>
+<div id="foot-copy" class="grid_12 alpha omega" style="border-top: none;">
+<a href="http://web.mit.edu"><img src="../../../common/images/logo_mit.png" alt="Massachusetts Institute of Technology logo and name." style="width: 195; height: 44;"></a><a href="http://odl.mit.edu"><img src="https://ocw-origin.odl.mit.edu/images/logo_odl.png" alt="MIT Office of Digital Learning logo and name." style="width: 289; height: 54; vertical-align: top;"></a><a href="http://www.oeconsortium.org/"><img src="https://ocw-origin.odl.mit.edu/images/logo_oec.png" alt="Open Education Consortium logo." style="width: 219px; height: 59px; vertical-align: top;"></a><a rel="license" itemprop="useRightsUrl" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="../../../common/images/cc_by-nc-sa.png" alt="Creative Commons logo with terms BY-NC-SA." style="width: 126px; height: 44px; margin-right: 0; margin-left: 13px;"></a>
+<p class="copyright">© 2001–2018<br>
+Massachusetts Institute of Technology</p>
+<p style="font-size: 0.9em; margin-bottom: 15px;">Your use of the MIT OpenCourseWare site and materials is subject to our <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">Creative Commons License</a> and other <a href="../../../common/terms/index.htm" rel="cc:morePermissions">terms of use</a>.</p>
+</div>
+</div></div>
+
+</div>
+
+
+
+
+
+                
+			</div> <!-- bottom grid end -->
+		</footer><!-- footer bottom end -->
+
+
+   </body>
+ </html>

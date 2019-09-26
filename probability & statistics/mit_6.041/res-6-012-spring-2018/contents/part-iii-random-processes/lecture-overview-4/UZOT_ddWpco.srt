@@ -1,0 +1,61 @@
+1
+00:00:01,100 --> 00:00:02,890
+So we have reached
+the final lecture
+
+2
+00:00:02,890 --> 00:00:05,860
+of this class which
+will also conclude
+
+3
+00:00:05,860 --> 00:00:08,810
+our study of discrete
+time, finite state space
+
+4
+00:00:08,810 --> 00:00:10,640
+Markov chains.
+
+5
+00:00:10,640 --> 00:00:13,490
+We will first review the
+steady-state behavior
+
+6
+00:00:13,490 --> 00:00:15,720
+of Markov chains.
+
+7
+00:00:15,720 --> 00:00:18,562
+Then, we are going to talk
+about a classical application
+
+8
+00:00:18,562 --> 00:00:23,620
+of Markov chains to analyze
+the design of a phone system.
+
+9
+00:00:23,620 --> 00:00:26,670
+And finally, we will
+see how we can calculate
+
+10
+00:00:26,670 --> 00:00:30,930
+some interesting
+quantities that have
+
+11
+00:00:30,930 --> 00:00:33,300
+to do with the behavior
+of Markov chains
+
+12
+00:00:33,300 --> 00:00:37,790
+over a finite time horizon as
+opposed to in the long run.
+
+13
+00:00:37,790 --> 00:00:39,770
+So let us start.

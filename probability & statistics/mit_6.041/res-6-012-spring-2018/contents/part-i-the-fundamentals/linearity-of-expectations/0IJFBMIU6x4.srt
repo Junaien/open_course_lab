@@ -1,0 +1,266 @@
+1
+00:00:00,550 --> 00:00:03,490
+We end this lecture sequence
+with the most important
+
+2
+00:00:03,490 --> 00:00:07,090
+property of expectations,
+namely linearity.
+
+3
+00:00:07,090 --> 00:00:09,100
+The idea is pretty simple.
+
+4
+00:00:09,100 --> 00:00:13,780
+Suppose that our random
+variable, X, is the salary of
+
+5
+00:00:13,780 --> 00:00:16,800
+a random person out of
+some population.
+
+6
+00:00:16,800 --> 00:00:20,680
+So that we can think of the
+expected value of X as the
+
+7
+00:00:20,680 --> 00:00:25,440
+average salary within
+that population.
+
+8
+00:00:25,440 --> 00:00:30,380
+And now suppose that everyone
+gets a raise, and
+
+9
+00:00:30,380 --> 00:00:34,530
+Y is the new salary.
+
+10
+00:00:34,530 --> 00:00:41,510
+And generously, the new salary
+is twice the old salary plus a
+
+11
+00:00:41,510 --> 00:00:46,170
+bonus of $100.
+
+12
+00:00:46,170 --> 00:00:50,140
+What happens to the expected
+value of the salary, or the
+
+13
+00:00:50,140 --> 00:00:51,770
+average salary?
+
+14
+00:00:51,770 --> 00:00:57,640
+Well the new average salary,
+which is the expected value of
+
+15
+00:00:57,640 --> 00:01:06,250
+2X plus 100, is twice the
+old average plus 100.
+
+16
+00:01:06,250 --> 00:01:09,870
+So doubling everyone's salary
+and giving to everyone an
+
+17
+00:01:09,870 --> 00:01:14,060
+additional $100, what it does
+to the average is that it
+
+18
+00:01:14,060 --> 00:01:17,950
+doubles the average and
+adds 100 to it.
+
+19
+00:01:17,950 --> 00:01:20,900
+This is the linearity property
+of expectation in one
+
+20
+00:01:20,900 --> 00:01:22,670
+particular example.
+
+21
+00:01:22,670 --> 00:01:26,550
+It's a most intuitive property,
+but it's worth also
+
+22
+00:01:26,550 --> 00:01:29,130
+deriving it in a formal way.
+
+23
+00:01:29,130 --> 00:01:31,420
+And the derivation proceeds
+through the
+
+24
+00:01:31,420 --> 00:01:33,550
+expected value rule.
+
+25
+00:01:33,550 --> 00:01:37,590
+We're dealing here with a
+particular function, g, which
+
+26
+00:01:37,590 --> 00:01:39,580
+is a linear function.
+
+27
+00:01:39,580 --> 00:01:43,570
+So we're dealing with a linear
+function, ax plus b.
+
+28
+00:01:43,570 --> 00:01:47,720
+And we're dealing with a random
+variable, Y, which is g
+
+29
+00:01:47,720 --> 00:01:53,060
+applied to an original
+random variable, X.
+
+30
+00:01:53,060 --> 00:01:58,090
+So the expected value of Y can
+be calculated according to the
+
+31
+00:01:58,090 --> 00:01:59,580
+expected value rule.
+
+32
+00:01:59,580 --> 00:02:05,570
+It's the sum over all x's of g
+of x times the probability of
+
+33
+00:02:05,570 --> 00:02:08,788
+that particular x.
+
+34
+00:02:08,788 --> 00:02:14,290
+And we plug-in the specific form
+of the function, g, which
+
+35
+00:02:14,290 --> 00:02:18,390
+is ax plus b.
+
+36
+00:02:18,390 --> 00:02:22,710
+And then we separate the
+sum into two sums.
+
+37
+00:02:22,710 --> 00:02:26,730
+The first sum, after pulling
+out a constant of
+
+38
+00:02:26,730 --> 00:02:28,975
+a, takes this form.
+
+39
+00:02:32,840 --> 00:02:36,860
+And the second sum, after
+pulling out the constant, b,
+
+40
+00:02:36,860 --> 00:02:38,110
+takes this form.
+
+41
+00:02:40,970 --> 00:02:46,460
+Now, the first sum is a times
+the expected value of X. This
+
+42
+00:02:46,460 --> 00:02:49,560
+is just the definition of
+the expected value.
+
+43
+00:02:49,560 --> 00:02:54,470
+As, for the second sum, we
+realize that this quantity is
+
+44
+00:02:54,470 --> 00:02:58,430
+equal to 1 because it is the
+sum of the probabilities of
+
+45
+00:02:58,430 --> 00:03:03,460
+all the different values of X.
+And this concludes the proof
+
+46
+00:03:03,460 --> 00:03:08,050
+of the linearity of
+expected values.
+
+47
+00:03:08,050 --> 00:03:13,580
+Notice that for expected values,
+what we have is that
+
+48
+00:03:13,580 --> 00:03:22,150
+the expected value of Y, which
+is expected value of g of X,
+
+49
+00:03:22,150 --> 00:03:29,930
+is this same as g of the
+expected value of X. The
+
+50
+00:03:29,930 --> 00:03:34,740
+expected value of a linear
+function is the same linear
+
+51
+00:03:34,740 --> 00:03:37,829
+function applied to the
+expected value.
+
+52
+00:03:37,829 --> 00:03:41,180
+But this is an exceptional
+case.
+
+53
+00:03:41,180 --> 00:03:45,380
+This does not happen
+in general.
+
+54
+00:03:45,380 --> 00:03:49,470
+It's an exceptional function
+g that makes this happen.
+
+55
+00:03:49,470 --> 00:03:52,630
+This property is true for
+linear functions.
+
+56
+00:03:52,630 --> 00:03:56,040
+But for non-linear functions,
+it is generally false.

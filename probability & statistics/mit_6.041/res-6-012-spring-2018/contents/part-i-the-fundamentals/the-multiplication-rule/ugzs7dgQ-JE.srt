@@ -1,0 +1,483 @@
+1
+00:00:00,680 --> 00:00:04,310
+As promised, we will now start
+developing generalizations of
+
+2
+00:00:04,310 --> 00:00:06,840
+the different calculations that
+we carried out in the
+
+3
+00:00:06,840 --> 00:00:09,000
+context of the radar example.
+
+4
+00:00:09,000 --> 00:00:11,920
+The first kind of calculation
+that we carried out goes under
+
+5
+00:00:11,920 --> 00:00:14,380
+the name of the multiplication
+rule.
+
+6
+00:00:14,380 --> 00:00:16,129
+And it goes as follows.
+
+7
+00:00:16,129 --> 00:00:18,650
+Our starting point is the
+definition of conditional
+
+8
+00:00:18,650 --> 00:00:19,950
+probabilities.
+
+9
+00:00:19,950 --> 00:00:23,470
+The conditional probability of
+A given another event, B, is
+
+10
+00:00:23,470 --> 00:00:26,720
+the probability that both events
+have occurred divided
+
+11
+00:00:26,720 --> 00:00:29,590
+by the probability of the
+conditioning event.
+
+12
+00:00:29,590 --> 00:00:32,940
+We now take the denominator term
+and send it to the other
+
+13
+00:00:32,940 --> 00:00:36,850
+side of this equality to obtain
+this relation, which we
+
+14
+00:00:36,850 --> 00:00:38,650
+can interpret as follows.
+
+15
+00:00:38,650 --> 00:00:42,760
+The probability that two events
+occur is equal to the
+
+16
+00:00:42,760 --> 00:00:47,450
+probability that a first event
+occurs, event B in this case,
+
+17
+00:00:47,450 --> 00:00:49,940
+times the conditional
+probability that the second
+
+18
+00:00:49,940 --> 00:00:55,360
+event, event A, occurs, given
+that event B has occurred.
+
+19
+00:00:55,360 --> 00:00:59,310
+Now, out of the two events, A
+and B, we're of course free to
+
+20
+00:00:59,310 --> 00:01:02,320
+choose which one we call the
+first event and which one we
+
+21
+00:01:02,320 --> 00:01:03,810
+call the second event.
+
+22
+00:01:03,810 --> 00:01:08,100
+So the probability of the two
+events happening is also equal
+
+23
+00:01:08,100 --> 00:01:11,840
+to an expression of this form,
+the probability that A occurs
+
+24
+00:01:11,840 --> 00:01:14,380
+times the conditional
+probability that B occurs,
+
+25
+00:01:14,380 --> 00:01:17,600
+given that A has occurred.
+
+26
+00:01:17,600 --> 00:01:21,789
+We used this formula in the
+context of a tree diagram.
+
+27
+00:01:21,789 --> 00:01:26,000
+And we used it to calculate the
+probability of a leaf of
+
+28
+00:01:26,000 --> 00:01:30,480
+this tree by multiplying the
+probability of taking this
+
+29
+00:01:30,480 --> 00:01:34,820
+branch, the probability that A
+occurs, times the conditional
+
+30
+00:01:34,820 --> 00:01:38,400
+probability of taking this
+branch, the probability that
+
+31
+00:01:38,400 --> 00:01:44,180
+event B also occurs given that
+event A has occurred.
+
+32
+00:01:44,180 --> 00:01:46,810
+How do we generalize
+this calculation?
+
+33
+00:01:46,810 --> 00:01:49,570
+Consider a situation in which
+the experiment has an
+
+34
+00:01:49,570 --> 00:01:53,680
+additional third stage that has
+to do with another event,
+
+35
+00:01:53,680 --> 00:01:57,400
+C, that may or may not occur.
+
+36
+00:01:57,400 --> 00:02:01,020
+For example, if we have arrived
+here, A and B have
+
+37
+00:02:01,020 --> 00:02:02,110
+both occurred.
+
+38
+00:02:02,110 --> 00:02:07,080
+And then C also occurs, then we
+reach this particular leaf
+
+39
+00:02:07,080 --> 00:02:08,199
+of the tree.
+
+40
+00:02:08,199 --> 00:02:10,220
+Or there could be
+other scenarios.
+
+41
+00:02:10,220 --> 00:02:14,910
+For example, it could be the
+case that A did not occur.
+
+42
+00:02:14,910 --> 00:02:20,510
+Then event B occurred, and
+finally, event C did not
+
+43
+00:02:20,510 --> 00:02:24,880
+occur, in which case we end up
+at this particular leaf.
+
+44
+00:02:24,880 --> 00:02:29,370
+What is the probability of
+this scenario happening?
+
+45
+00:02:29,370 --> 00:02:32,590
+Let us try to do a calculation
+similar to the one that we
+
+46
+00:02:32,590 --> 00:02:35,990
+used for the case
+of two events.
+
+47
+00:02:35,990 --> 00:02:40,220
+However, we need to deal
+here with three events.
+
+48
+00:02:40,220 --> 00:02:42,010
+What should we do?
+
+49
+00:02:42,010 --> 00:02:44,400
+Well, we look at the
+intersection of these three
+
+50
+00:02:44,400 --> 00:02:48,890
+events and think of it as the
+intersection of a composite
+
+51
+00:02:48,890 --> 00:02:53,390
+event, A complement intersection
+B, then
+
+52
+00:02:53,390 --> 00:02:58,230
+intersected with the
+event C complement.
+
+53
+00:02:58,230 --> 00:03:01,280
+Clearly, you can form the
+intersection of three events
+
+54
+00:03:01,280 --> 00:03:04,370
+by first taking the intersection
+of two of them
+
+55
+00:03:04,370 --> 00:03:06,900
+and then intersecting
+with a third.
+
+56
+00:03:06,900 --> 00:03:09,420
+After we group things this way,
+we're dealing with the
+
+57
+00:03:09,420 --> 00:03:13,140
+probability of two events
+happening, this composite
+
+58
+00:03:13,140 --> 00:03:15,730
+event and this ordinary event.
+
+59
+00:03:15,730 --> 00:03:20,230
+And the probability of two
+events happening is equal to
+
+60
+00:03:20,230 --> 00:03:27,630
+the probability that the first
+event happens, and then the
+
+61
+00:03:27,630 --> 00:03:32,070
+probability that the second
+event happens, given that the
+
+62
+00:03:32,070 --> 00:03:33,665
+first one has happened.
+
+63
+00:03:37,750 --> 00:03:40,310
+Can we simplify this
+even further?
+
+64
+00:03:40,310 --> 00:03:40,900
+Yes.
+
+65
+00:03:40,900 --> 00:03:42,780
+The first term is
+the probability
+
+66
+00:03:42,780 --> 00:03:44,400
+of two events happening.
+
+67
+00:03:44,400 --> 00:03:48,130
+So it can be simplified further
+as the probability
+
+68
+00:03:48,130 --> 00:03:52,740
+that A complement occurs times
+the conditional probability
+
+69
+00:03:52,740 --> 00:03:57,310
+that B occurs, given that A
+complement has occurred.
+
+70
+00:03:57,310 --> 00:03:59,810
+And then we carry over
+the last term
+
+71
+00:03:59,810 --> 00:04:01,660
+exactly the way it is.
+
+72
+00:04:06,230 --> 00:04:09,400
+The conclusion is that we can
+calculate the probability of
+
+73
+00:04:09,400 --> 00:04:13,190
+this leaf by multiplying the
+probability of the first
+
+74
+00:04:13,190 --> 00:04:17,649
+branch times the conditional
+probability of the second
+
+75
+00:04:17,649 --> 00:04:24,070
+branch, given that the first
+branch was taken, and then
+
+76
+00:04:24,070 --> 00:04:28,710
+finally multiply with the
+probability of the third
+
+77
+00:04:28,710 --> 00:04:31,480
+branch, which is the probability
+that C complement
+
+78
+00:04:31,480 --> 00:04:35,110
+occurs, given that A
+complement and B
+
+79
+00:04:35,110 --> 00:04:38,250
+have already occurred.
+
+80
+00:04:38,250 --> 00:04:41,192
+In other words, we can calculate
+the probability of a
+
+81
+00:04:41,192 --> 00:04:45,800
+leaf by just multiplying the
+probabilities of the different
+
+82
+00:04:45,800 --> 00:04:49,909
+branches involved and where we
+use conditional probabilities
+
+83
+00:04:49,909 --> 00:04:51,970
+for the intermediate branches.
+
+84
+00:04:51,970 --> 00:04:55,490
+At this point, you can use your
+imagination to see that
+
+85
+00:04:55,490 --> 00:04:58,950
+such a formula should also be
+valid for the case of more
+
+86
+00:04:58,950 --> 00:05:00,610
+than three events.
+
+87
+00:05:00,610 --> 00:05:04,950
+The probability that a bunch of
+events all occur should be
+
+88
+00:05:04,950 --> 00:05:09,180
+the probability of the first
+event times a number of
+
+89
+00:05:09,180 --> 00:05:12,390
+factors, each corresponding
+to a branch in a
+
+90
+00:05:12,390 --> 00:05:14,500
+tree of this kind.
+
+91
+00:05:14,500 --> 00:05:25,220
+In particular, the probability
+that events A1, A2, up to An
+
+92
+00:05:25,220 --> 00:05:30,520
+all occur is going to be the
+probability that the first
+
+93
+00:05:30,520 --> 00:05:37,880
+event occurs times a product of
+conditional probabilities
+
+94
+00:05:37,880 --> 00:05:43,380
+that the i-th event occurs,
+given that all of the previous
+
+95
+00:05:43,380 --> 00:05:46,165
+events have already occurred.
+
+96
+00:05:50,710 --> 00:05:54,980
+And we obtain a term of this
+kind for every event, Ai,
+
+97
+00:05:54,980 --> 00:06:02,860
+after the first one, so this
+product ranges from 2 up to n.
+
+98
+00:06:02,860 --> 00:06:05,730
+And this is the most general
+version of the multiplication
+
+99
+00:06:05,730 --> 00:06:08,970
+rule and allows you to calculate
+the probability of
+
+100
+00:06:08,970 --> 00:06:13,590
+several events happening by
+multiplying probabilities and
+
+101
+00:06:13,590 --> 00:06:14,840
+conditional probabilities.

@@ -1,0 +1,685 @@
+1
+00:00:00,690 --> 00:00:03,650
+We will now take a step towards
+abstraction, and
+
+2
+00:00:03,650 --> 00:00:05,300
+discuss the issue of
+
+3
+00:00:05,300 --> 00:00:07,720
+convergence of random variables.
+
+4
+00:00:07,720 --> 00:00:10,430
+Let us look at the weak
+law of large numbers.
+
+5
+00:00:10,430 --> 00:00:14,820
+It tells us that with high
+probability, the sample mean
+
+6
+00:00:14,820 --> 00:00:19,230
+falls close to the true mean
+as n goes to infinity.
+
+7
+00:00:19,230 --> 00:00:22,250
+We would like to interpret this
+statement by saying that
+
+8
+00:00:22,250 --> 00:00:25,190
+the sample mean converges
+to the true mean.
+
+9
+00:00:25,190 --> 00:00:28,840
+However, before we can make such
+a statement, we should
+
+10
+00:00:28,840 --> 00:00:34,050
+first define carefully the word
+"converges." And we need
+
+11
+00:00:34,050 --> 00:00:37,360
+a notion of convergence that
+refers to convergence of
+
+12
+00:00:37,360 --> 00:00:39,960
+random variables.
+
+13
+00:00:39,960 --> 00:00:41,680
+Here's a definition.
+
+14
+00:00:41,680 --> 00:00:44,980
+Suppose that we have a sequence
+of random variables
+
+15
+00:00:44,980 --> 00:00:47,560
+that are not necessarily
+independent.
+
+16
+00:00:47,560 --> 00:00:51,870
+We say that this sequence of
+random variables converges in
+
+17
+00:00:51,870 --> 00:00:53,400
+probability--
+
+18
+00:00:53,400 --> 00:00:56,580
+that's a particular notion of
+convergence we're defining.
+
+19
+00:00:56,580 --> 00:00:59,220
+It converges to a certain
+number if the
+
+20
+00:00:59,220 --> 00:01:02,100
+following is true--
+
+21
+00:01:02,100 --> 00:01:06,130
+no matter what epsilon is, as
+long as it is a positive
+
+22
+00:01:06,130 --> 00:01:10,440
+number, the probability that the
+random variable falls far
+
+23
+00:01:10,440 --> 00:01:11,600
+from this number--
+
+24
+00:01:11,600 --> 00:01:16,100
+that is, epsilon or further
+away from that number--
+
+25
+00:01:16,100 --> 00:01:21,310
+that probability converges
+to 0 as n increases.
+
+26
+00:01:21,310 --> 00:01:25,470
+That is, as n increases, there
+is higher and higher
+
+27
+00:01:25,470 --> 00:01:29,060
+probability that Yn will
+be close to this
+
+28
+00:01:29,060 --> 00:01:31,150
+particular number a.
+
+29
+00:01:31,150 --> 00:01:32,910
+This is the notion
+of convergence
+
+30
+00:01:32,910 --> 00:01:34,350
+that we have defined.
+
+31
+00:01:34,350 --> 00:01:37,229
+And notice that this notion
+of convergence corresponds
+
+32
+00:01:37,229 --> 00:01:39,700
+exactly to what is happening
+in the weak
+
+33
+00:01:39,700 --> 00:01:41,370
+law of large numbers.
+
+34
+00:01:41,370 --> 00:01:45,190
+And so in particular, we can
+describe the weak law of large
+
+35
+00:01:45,190 --> 00:01:51,710
+numbers as saying that Mn, the
+sample mean, converges to mu
+
+36
+00:01:51,710 --> 00:01:55,820
+as n goes to infinity, but
+in a particular sense--
+
+37
+00:01:55,820 --> 00:02:00,370
+in the sense of convergence
+in probability.
+
+38
+00:02:00,370 --> 00:02:04,030
+Let us now try to understand a
+little better what convergence
+
+39
+00:02:04,030 --> 00:02:07,080
+in probability really
+amounts to.
+
+40
+00:02:07,080 --> 00:02:10,690
+And we will do that by making a
+comparison with the ordinary
+
+41
+00:02:10,690 --> 00:02:13,900
+notion of convergence
+of real numbers.
+
+42
+00:02:13,900 --> 00:02:16,980
+When we're dealing with
+convergence of numbers, we
+
+43
+00:02:16,980 --> 00:02:21,270
+start with a sequence of
+numbers, and we are interested
+
+44
+00:02:21,270 --> 00:02:24,570
+in the statement that this
+sequence converges to a
+
+45
+00:02:24,570 --> 00:02:25,850
+certain limit.
+
+46
+00:02:25,850 --> 00:02:27,380
+What does that mean?
+
+47
+00:02:27,380 --> 00:02:32,410
+What we mean is that the
+elements of the sequence
+
+48
+00:02:32,410 --> 00:02:33,579
+eventually--
+
+49
+00:02:33,579 --> 00:02:36,130
+that is, when n is
+large enough--
+
+50
+00:02:36,130 --> 00:02:40,230
+will get and stay arbitrarily
+close to this particular
+
+51
+00:02:40,230 --> 00:02:43,680
+number a, which is the limit.
+
+52
+00:02:43,680 --> 00:02:50,020
+In terms of a picture,
+here is a, the limit.
+
+53
+00:02:50,020 --> 00:02:53,120
+Here is n.
+
+54
+00:02:53,120 --> 00:02:58,930
+We take a small band around
+this number a.
+
+55
+00:02:58,930 --> 00:03:03,810
+And what we require is that the
+elements of the sequence
+
+56
+00:03:03,810 --> 00:03:09,790
+eventually get within this
+band around the number a.
+
+57
+00:03:09,790 --> 00:03:13,820
+They might get outside the
+band, get inside again.
+
+58
+00:03:13,820 --> 00:03:15,250
+But eventually--
+
+59
+00:03:15,250 --> 00:03:17,070
+that is, after some time--
+
+60
+00:03:17,070 --> 00:03:19,310
+the elements of the
+sequence will only
+
+61
+00:03:19,310 --> 00:03:21,750
+stay inside this band.
+
+62
+00:03:21,750 --> 00:03:24,590
+Now to translate this into a
+more formal mathematical
+
+63
+00:03:24,590 --> 00:03:28,350
+statement, which is the
+mathematical definition of the
+
+64
+00:03:28,350 --> 00:03:31,430
+notion of convergence, we
+have the following--
+
+65
+00:03:31,430 --> 00:03:35,680
+if I give you some epsilon,
+epsilon could be
+
+66
+00:03:35,680 --> 00:03:37,860
+a very small number.
+
+67
+00:03:37,860 --> 00:03:44,230
+I form a band around a that goes
+from a minus epsilon to a
+
+68
+00:03:44,230 --> 00:03:45,740
+plus epsilon.
+
+69
+00:03:45,740 --> 00:03:50,770
+What I want is that there exists
+a certain time, n0--
+
+70
+00:03:50,770 --> 00:03:53,900
+in this picture, n0
+would be here--
+
+71
+00:03:53,900 --> 00:04:02,320
+such that for all times after
+n0, our sequence stays within
+
+72
+00:04:02,320 --> 00:04:03,840
+epsilon from a.
+
+73
+00:04:03,840 --> 00:04:08,080
+That is, our sequence stays
+inside this band.
+
+74
+00:04:08,080 --> 00:04:12,280
+Now let us move to the case of
+random variables, and see what
+
+75
+00:04:12,280 --> 00:04:16,480
+convergence in probability
+is talking about.
+
+76
+00:04:16,480 --> 00:04:20,480
+Here, instead of a sequence of
+numbers, we have a sequence of
+
+77
+00:04:20,480 --> 00:04:22,720
+random variables.
+
+78
+00:04:22,720 --> 00:04:26,040
+And we're interested in the
+meaning of the convergence of
+
+79
+00:04:26,040 --> 00:04:28,280
+the sequence of random
+variables to
+
+80
+00:04:28,280 --> 00:04:30,070
+a particular number.
+
+81
+00:04:30,070 --> 00:04:35,110
+In words, what this means is
+that if I fix a certain
+
+82
+00:04:35,110 --> 00:04:39,730
+epsilon, as in this picture,
+then the probability that the
+
+83
+00:04:39,730 --> 00:04:44,240
+random variable falls outside
+this band converges to 0.
+
+84
+00:04:44,240 --> 00:04:46,605
+So the picture would
+be as follows.
+
+85
+00:04:51,010 --> 00:04:53,640
+We have, again, our limit.
+
+86
+00:04:53,640 --> 00:04:56,750
+We fix some epsilon,
+which could be an
+
+87
+00:04:56,750 --> 00:04:58,980
+arbitrarily small number.
+
+88
+00:04:58,980 --> 00:05:03,800
+For any fixed choice of epsilon,
+we take this band,
+
+89
+00:05:03,800 --> 00:05:08,400
+and for any given n, we look
+into the probability that our
+
+90
+00:05:08,400 --> 00:05:11,430
+random variable falls
+inside that band.
+
+91
+00:05:11,430 --> 00:05:15,570
+So if I am to draw the
+distribution of our random
+
+92
+00:05:15,570 --> 00:05:20,570
+variable, a distribution might
+be something like this--
+
+93
+00:05:20,570 --> 00:05:23,250
+so there is a certain
+probability that it falls
+
+94
+00:05:23,250 --> 00:05:25,350
+outside this band.
+
+95
+00:05:25,350 --> 00:05:31,410
+But when n becomes large, this
+probability of falling outside
+
+96
+00:05:31,410 --> 00:05:35,880
+this band becomes very small.
+
+97
+00:05:35,880 --> 00:05:40,800
+So the probability of falling
+outside the band becomes tiny.
+
+98
+00:05:40,800 --> 00:05:43,300
+So the bulk of the
+distribution--
+
+99
+00:05:43,300 --> 00:05:45,132
+that is, most of the
+probability--
+
+100
+00:05:45,132 --> 00:05:48,140
+is concentrated inside
+this band.
+
+101
+00:05:48,140 --> 00:05:52,300
+And this is true, no matter
+how small epsilon is.
+
+102
+00:05:52,300 --> 00:05:59,430
+If I take a much narrower band
+around a, I still want all of
+
+103
+00:05:59,430 --> 00:06:01,700
+the probability to
+be eventually
+
+104
+00:06:01,700 --> 00:06:04,070
+concentrated inside that band.
+
+105
+00:06:04,070 --> 00:06:05,850
+Of course, it might
+take longer.
+
+106
+00:06:05,850 --> 00:06:10,580
+It might take a larger value of
+n, but I want that when n
+
+107
+00:06:10,580 --> 00:06:15,160
+is very large, the bulk of the
+distribution is, again,
+
+108
+00:06:15,160 --> 00:06:19,660
+concentrated inside
+this narrow band.
+
+109
+00:06:19,660 --> 00:06:24,480
+So in words, convergence in
+probability means that almost
+
+110
+00:06:24,480 --> 00:06:30,590
+all of the probability mass of
+the random variable Yn, when n
+
+111
+00:06:30,590 --> 00:06:36,020
+is large, that probability mass
+get concentrated within a
+
+112
+00:06:36,020 --> 00:06:41,890
+narrow band around the limit
+of the random variable.
+
+113
+00:06:41,890 --> 00:06:45,090
+We finally point out a few
+useful properties of
+
+114
+00:06:45,090 --> 00:06:48,700
+convergence in probability
+that parallel well-known
+
+115
+00:06:48,700 --> 00:06:51,470
+properties of convergence
+of sequences.
+
+116
+00:06:51,470 --> 00:06:53,870
+Suppose that we have a sequence
+of random variables
+
+117
+00:06:53,870 --> 00:06:57,850
+that converges in probability
+to a certain number a, and
+
+118
+00:06:57,850 --> 00:07:00,400
+another sequence that converges
+in probability to
+
+119
+00:07:00,400 --> 00:07:02,400
+some other number b.
+
+120
+00:07:02,400 --> 00:07:05,690
+We do not make any assumptions
+about independence.
+
+121
+00:07:05,690 --> 00:07:09,640
+We do not assume the Xn's are
+independent of each other.
+
+122
+00:07:09,640 --> 00:07:12,710
+We do not assume that the
+sequence of Xn's is
+
+123
+00:07:12,710 --> 00:07:15,640
+independent of Yn.
+
+124
+00:07:15,640 --> 00:07:19,190
+We then have the following
+properties--
+
+125
+00:07:19,190 --> 00:07:23,260
+if g is a continuous function,
+then the function of the
+
+126
+00:07:23,260 --> 00:07:26,770
+random variables converges to
+the function of the number.
+
+127
+00:07:26,770 --> 00:07:30,990
+So for example, the sequence of
+random variables Xn squared
+
+128
+00:07:30,990 --> 00:07:34,790
+is going to converge
+to a squared.
+
+129
+00:07:34,790 --> 00:07:40,300
+Another fact is that the sum of
+these two random variables
+
+130
+00:07:40,300 --> 00:07:44,440
+converges to the sum
+of their limits.
+
+131
+00:07:44,440 --> 00:07:48,080
+Both of these properties are
+analogous to what happens with
+
+132
+00:07:48,080 --> 00:07:50,760
+ordinary convergence
+of numbers.
+
+133
+00:07:50,760 --> 00:07:53,400
+And they tell us that, in some
+sense, convergence in
+
+134
+00:07:53,400 --> 00:07:56,640
+probability is not a very
+different notion.
+
+135
+00:07:56,640 --> 00:08:00,260
+We will not prove those
+properties at this point, but
+
+136
+00:08:00,260 --> 00:08:01,950
+they're useful to know.
+
+137
+00:08:01,950 --> 00:08:05,100
+However, there's an
+important caveat.
+
+138
+00:08:05,100 --> 00:08:09,590
+Xn might converge to a certain
+number in probability.
+
+139
+00:08:09,590 --> 00:08:14,350
+However, the expected value
+of Xn does not necessarily
+
+140
+00:08:14,350 --> 00:08:16,630
+converge to that same limit.
+
+141
+00:08:16,630 --> 00:08:19,370
+So convergence of random
+variables does not imply
+
+142
+00:08:19,370 --> 00:08:21,370
+convergence of expectations.
+
+143
+00:08:21,370 --> 00:08:25,310
+And we will be seeing an example
+where this convergence
+
+144
+00:08:25,310 --> 00:08:26,560
+does not take place.

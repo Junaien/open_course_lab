@@ -1,0 +1,1299 @@
+1
+00:00:00,292 --> 00:00:01,750
+PROFESSOR: In this
+segment, we will
+
+2
+00:00:01,750 --> 00:00:04,000
+look at the famous
+example, which
+
+3
+00:00:04,000 --> 00:00:06,530
+was posed by Comte de Buffon--
+
+4
+00:00:06,530 --> 00:00:11,720
+a French naturalist--
+back in the 18th century.
+
+5
+00:00:11,720 --> 00:00:13,750
+And it marks the
+beginning of a subject
+
+6
+00:00:13,750 --> 00:00:18,280
+that is known as the subject
+of geometric probability.
+
+7
+00:00:18,280 --> 00:00:20,600
+The problem is pretty simple.
+
+8
+00:00:20,600 --> 00:00:22,990
+We have the infinite
+plane, and we
+
+9
+00:00:22,990 --> 00:00:26,830
+draw lines that are
+parallel to each other.
+
+10
+00:00:26,830 --> 00:00:31,190
+And they're spaced
+apart d units.
+
+11
+00:00:31,190 --> 00:00:33,790
+So this distance here is d.
+
+12
+00:00:33,790 --> 00:00:37,270
+And the same for
+all the other lines.
+
+13
+00:00:37,270 --> 00:00:41,110
+We take a needle that has
+a certain length-- l--
+
+14
+00:00:41,110 --> 00:00:44,290
+and we throw it at
+random on the plane.
+
+15
+00:00:44,290 --> 00:00:47,890
+So the needle might
+fall this way, so
+
+16
+00:00:47,890 --> 00:00:51,220
+that it doesn't cross any line,
+or it might fall this way,
+
+17
+00:00:51,220 --> 00:00:55,880
+so that it ends up
+crossing one of the lines.
+
+18
+00:00:55,880 --> 00:00:59,620
+If the needle is long enough,
+it might actually even end up
+
+19
+00:00:59,620 --> 00:01:01,870
+crossing two of the lines.
+
+20
+00:01:01,870 --> 00:01:05,830
+But we will make the assumption
+that the length of the needle
+
+21
+00:01:05,830 --> 00:01:08,350
+is less than the distance
+between the two--
+
+22
+00:01:08,350 --> 00:01:11,620
+between two adjacent
+lines, so that we're
+
+23
+00:01:11,620 --> 00:01:13,720
+going to have either
+this configuration,
+
+24
+00:01:13,720 --> 00:01:16,130
+or that configuration.
+
+25
+00:01:16,130 --> 00:01:19,240
+So in this setting, we're
+interested in the question
+
+26
+00:01:19,240 --> 00:01:22,720
+of how likely is it that the
+needle is going to intersect
+
+27
+00:01:22,720 --> 00:01:28,070
+one of the lines if the needle
+is thrown completely at random?
+
+28
+00:01:28,070 --> 00:01:31,670
+We will answer this question,
+and we will proceed as follows.
+
+29
+00:01:31,670 --> 00:01:34,510
+First, we need to
+model the experiment--
+
+30
+00:01:34,510 --> 00:01:37,450
+the probabilistic
+experiment-- mathematically.
+
+31
+00:01:37,450 --> 00:01:40,930
+That is, we need to define
+an appropriate sample space,
+
+32
+00:01:40,930 --> 00:01:43,780
+define some relevant
+random variables,
+
+33
+00:01:43,780 --> 00:01:46,240
+choose an appropriate
+probability law,
+
+34
+00:01:46,240 --> 00:01:50,740
+identify the event of
+interest, and then calculate.
+
+35
+00:01:50,740 --> 00:01:54,100
+Let us see what it takes to
+describe a typical outcome
+
+36
+00:01:54,100 --> 00:01:55,670
+of the experiment.
+
+37
+00:01:55,670 --> 00:02:01,240
+Suppose that the needle fell
+this way, so that the nearest
+
+38
+00:02:01,240 --> 00:02:03,790
+line is the one above.
+
+39
+00:02:03,790 --> 00:02:07,650
+And let us mark here the
+center of the needle.
+
+40
+00:02:07,650 --> 00:02:12,340
+One quantity of interest
+is this vertical distance
+
+41
+00:02:12,340 --> 00:02:15,920
+between the needle
+and the nearest line.
+
+42
+00:02:15,920 --> 00:02:18,265
+Let us call this quantity x.
+
+43
+00:02:21,030 --> 00:02:23,820
+We're using here a
+lowercase x, because we're
+
+44
+00:02:23,820 --> 00:02:27,990
+dealing with a numerical value
+in one particular outcome
+
+45
+00:02:27,990 --> 00:02:29,560
+of the experiment.
+
+46
+00:02:29,560 --> 00:02:32,490
+But we think of this x
+as being the realization
+
+47
+00:02:32,490 --> 00:02:34,830
+of a certain random
+variable that we
+
+48
+00:02:34,830 --> 00:02:37,560
+will denote by capital X.
+
+49
+00:02:37,560 --> 00:02:40,740
+What else does it take
+to describe the needle?
+
+50
+00:02:40,740 --> 00:02:42,990
+Suppose that the
+needle had fallen
+
+51
+00:02:42,990 --> 00:02:46,140
+somewhere so that it is at
+the same vertical distance
+
+52
+00:02:46,140 --> 00:02:50,340
+from the nearest
+line, but it has
+
+53
+00:02:50,340 --> 00:02:53,910
+an orientation of this kind.
+
+54
+00:02:53,910 --> 00:02:57,390
+This orientation
+compared to that one
+
+55
+00:02:57,390 --> 00:02:59,220
+should make a difference.
+
+56
+00:02:59,220 --> 00:03:02,340
+Because when it falls
+that way, it's more likely
+
+57
+00:03:02,340 --> 00:03:07,050
+that it's going to cut the next
+line as opposed to this case.
+
+58
+00:03:07,050 --> 00:03:12,660
+So the angle that the needle is
+making with the parallel lines
+
+59
+00:03:12,660 --> 00:03:14,500
+should also be relevant.
+
+60
+00:03:14,500 --> 00:03:17,950
+So let us give a name to
+that particular angle.
+
+61
+00:03:17,950 --> 00:03:24,660
+So let's extend that line until
+it crosses one of the lines.
+
+62
+00:03:24,660 --> 00:03:30,720
+And let us give a name to
+this angle, and call it theta.
+
+63
+00:03:30,720 --> 00:03:32,850
+So if I tell you
+x and theta, you
+
+64
+00:03:32,850 --> 00:03:36,840
+know how far away the needle
+is from the nearest line,
+
+65
+00:03:36,840 --> 00:03:39,510
+and at what angle it is.
+
+66
+00:03:39,510 --> 00:03:42,240
+It looks like these are
+two useful variables
+
+67
+00:03:42,240 --> 00:03:44,520
+to describe the outcome
+of the experiment, so let
+
+68
+00:03:44,520 --> 00:03:46,620
+us try working with these.
+
+69
+00:03:46,620 --> 00:03:50,610
+So our model is going to involve
+two random variables defined
+
+70
+00:03:50,610 --> 00:03:54,690
+the way we discussed
+it just now.
+
+71
+00:03:54,690 --> 00:03:59,340
+What is the range of
+these random variables?
+
+72
+00:03:59,340 --> 00:04:06,570
+Since we took x to be the
+distance from the nearest line,
+
+73
+00:04:06,570 --> 00:04:09,300
+and the lines are
+d units apart, this
+
+74
+00:04:09,300 --> 00:04:14,250
+means that x is going to
+be somewhere between 0
+
+75
+00:04:14,250 --> 00:04:18,260
+and d over 2.
+
+76
+00:04:18,260 --> 00:04:20,500
+How about theta?
+
+77
+00:04:20,500 --> 00:04:24,640
+So the needle makes two angles
+with the part of the line.
+
+78
+00:04:24,640 --> 00:04:27,790
+It's this angle, and
+the complimentary one.
+
+79
+00:04:27,790 --> 00:04:29,150
+Which one do we take?
+
+80
+00:04:29,150 --> 00:04:30,940
+Well, we use a
+convention that theta
+
+81
+00:04:30,940 --> 00:04:34,690
+is defined as the acute
+angle that the direction
+
+82
+00:04:34,690 --> 00:04:37,210
+of the needle is
+making with the lines,
+
+83
+00:04:37,210 --> 00:04:44,740
+so that theta will vary over
+a range from 0 to pi over 2.
+
+84
+00:04:48,080 --> 00:04:50,630
+And our sample space
+for the experiments
+
+85
+00:04:50,630 --> 00:04:55,370
+who will be the set of
+all pairs of x and theta,
+
+86
+00:04:55,370 --> 00:04:58,220
+that satisfy these
+two conditions.
+
+87
+00:04:58,220 --> 00:05:01,820
+These will be the
+possible x's and thetas.
+
+88
+00:05:01,820 --> 00:05:05,060
+Having defined the
+sample space, next we
+
+89
+00:05:05,060 --> 00:05:08,240
+need to define a
+probability law.
+
+90
+00:05:08,240 --> 00:05:11,960
+At this point, we do not want to
+make any arbitrary assumptions.
+
+91
+00:05:11,960 --> 00:05:16,970
+We only have the words
+completely at random to go by.
+
+92
+00:05:16,970 --> 00:05:19,310
+But what do these words mean?
+
+93
+00:05:19,310 --> 00:05:24,080
+We will interpret them to mean
+that there are no preferred x
+
+94
+00:05:24,080 --> 00:05:27,660
+values, so that all x
+values are- in some sense--
+
+95
+00:05:27,660 --> 00:05:28,950
+equally likely.
+
+96
+00:05:28,950 --> 00:05:33,800
+So we're going to assume that
+x is a uniform random variable.
+
+97
+00:05:33,800 --> 00:05:35,780
+Since it is uniform,
+it's going to be
+
+98
+00:05:35,780 --> 00:05:37,640
+a constant over this range.
+
+99
+00:05:37,640 --> 00:05:40,280
+And in order to integrate
+to 1, that constant
+
+100
+00:05:40,280 --> 00:05:42,620
+will have to be 2 over d.
+
+101
+00:05:42,620 --> 00:05:47,180
+And we understand that the PDF
+of x is 0 outside that range.
+
+102
+00:05:47,180 --> 00:05:49,280
+Similarly for theta,
+we do not want
+
+103
+00:05:49,280 --> 00:05:51,560
+to assume that some
+orientations are more
+
+104
+00:05:51,560 --> 00:05:54,090
+likely than other orientations.
+
+105
+00:05:54,090 --> 00:05:57,320
+So we will again assume
+a uniform probability
+
+106
+00:05:57,320 --> 00:05:59,630
+distribution.
+
+107
+00:05:59,630 --> 00:06:04,850
+And therefore, that PDF
+must be equal to 2 over pi
+
+108
+00:06:04,850 --> 00:06:08,460
+for theta's over this
+particular range.
+
+109
+00:06:08,460 --> 00:06:11,750
+So far, we have specified
+the marginal PDFs of each one
+
+110
+00:06:11,750 --> 00:06:13,710
+of the two random variables.
+
+111
+00:06:13,710 --> 00:06:15,800
+How about the adjoined PDF?
+
+112
+00:06:15,800 --> 00:06:17,540
+In order to have
+a complete model,
+
+113
+00:06:17,540 --> 00:06:20,540
+we need to have a
+joint PDF in our hands.
+
+114
+00:06:20,540 --> 00:06:24,620
+Here, we're going to make the
+assumption that x and theta are
+
+115
+00:06:24,620 --> 00:06:26,820
+independent of each other.
+
+116
+00:06:26,820 --> 00:06:29,510
+And in that case,
+the joint PDF is
+
+117
+00:06:29,510 --> 00:06:34,460
+determined by just taking the
+product of the marginal PDFs.
+
+118
+00:06:34,460 --> 00:06:38,120
+So the joint PDF is
+going to be equal to 4
+
+119
+00:06:38,120 --> 00:06:42,110
+divided by pi times d.
+
+120
+00:06:42,110 --> 00:06:43,700
+By this point, we
+have completely
+
+121
+00:06:43,700 --> 00:06:47,740
+specified a probabilistic model.
+
+122
+00:06:47,740 --> 00:06:51,370
+We have made some assumptions,
+which you might even
+
+123
+00:06:51,370 --> 00:06:52,990
+consider arbitrary.
+
+124
+00:06:52,990 --> 00:06:56,860
+But these assumptions
+are a reasonable attempt
+
+125
+00:06:56,860 --> 00:06:59,350
+at capturing the idea
+that the needle is
+
+126
+00:06:59,350 --> 00:07:02,840
+thrown completely at random.
+
+127
+00:07:02,840 --> 00:07:05,170
+This completes the
+subjective part--
+
+128
+00:07:05,170 --> 00:07:07,270
+the modeling part.
+
+129
+00:07:07,270 --> 00:07:11,440
+The next step is much
+more streamlined.
+
+130
+00:07:11,440 --> 00:07:14,050
+There's not going
+to be any choices.
+
+131
+00:07:14,050 --> 00:07:17,700
+We just need to consider
+the event of interest,
+
+132
+00:07:17,700 --> 00:07:20,140
+express it in terms of
+the random variables
+
+133
+00:07:20,140 --> 00:07:24,610
+that we have in our hands, and
+then use the probability model
+
+134
+00:07:24,610 --> 00:07:26,950
+that we have to
+calculate the probability
+
+135
+00:07:26,950 --> 00:07:29,000
+of this particular event.
+
+136
+00:07:29,000 --> 00:07:32,920
+So let us identify
+the event of interest.
+
+137
+00:07:32,920 --> 00:07:39,040
+When will the needle
+intersect the nearest line?
+
+138
+00:07:39,040 --> 00:07:43,010
+This will depend
+on the following.
+
+139
+00:07:43,010 --> 00:07:48,190
+We can look at the vertical
+extent of the needle.
+
+140
+00:07:48,190 --> 00:07:51,770
+By vertical extent,
+I mean the following.
+
+141
+00:07:51,770 --> 00:07:54,700
+Let's see how far
+the needle goes
+
+142
+00:07:54,700 --> 00:07:59,680
+in the vertical direction,
+which is the length
+
+143
+00:07:59,680 --> 00:08:04,860
+of this green segment here.
+
+144
+00:08:04,860 --> 00:08:08,520
+In this example, the
+vertical extent of the needle
+
+145
+00:08:08,520 --> 00:08:13,740
+is less than the distance
+from the next line.
+
+146
+00:08:13,740 --> 00:08:16,840
+And we do not have
+an intersection.
+
+147
+00:08:16,840 --> 00:08:22,390
+If the figure was
+something like this,
+
+148
+00:08:22,390 --> 00:08:27,700
+the vertical extent of the
+needle would have been that,
+
+149
+00:08:27,700 --> 00:08:32,770
+but x would have been
+just this little segment.
+
+150
+00:08:32,770 --> 00:08:36,669
+The vertical extent is
+bigger than x and the needle
+
+151
+00:08:36,669 --> 00:08:38,559
+intersects the line.
+
+152
+00:08:38,559 --> 00:08:42,070
+So we have an
+intersection if and only
+
+153
+00:08:42,070 --> 00:08:44,500
+if the vertical extent--
+
+154
+00:08:44,500 --> 00:08:47,950
+which is this vertical
+green segment--
+
+155
+00:08:47,950 --> 00:08:51,520
+is larger than the distance x.
+
+156
+00:08:51,520 --> 00:08:56,120
+Or equivalently, if x is less
+than the vertical extent.
+
+157
+00:08:56,120 --> 00:09:02,650
+So we will have an
+intersection if x is less than
+
+158
+00:09:02,650 --> 00:09:06,850
+or equal to the vertical
+extent of the needle.
+
+159
+00:09:06,850 --> 00:09:10,210
+Now, how big is this
+vertical extent?
+
+160
+00:09:10,210 --> 00:09:12,400
+Let's use some
+trigonometry here.
+
+161
+00:09:12,400 --> 00:09:17,530
+This angle here is theta, so
+this angle here is also theta.
+
+162
+00:09:20,090 --> 00:09:23,840
+Here, we have a right
+triangle and the hypotenuse
+
+163
+00:09:23,840 --> 00:09:29,330
+of this triangle is l over 2.
+
+164
+00:09:29,330 --> 00:09:34,100
+This angle is theta, therefore
+this vertical segment
+
+165
+00:09:34,100 --> 00:09:41,880
+is equal to l over
+2 times sine theta.
+
+166
+00:09:41,880 --> 00:09:43,820
+So this is the
+geometrical condition
+
+167
+00:09:43,820 --> 00:09:49,380
+that describes the event
+that the needle intersects
+
+168
+00:09:49,380 --> 00:09:50,820
+the nearest line.
+
+169
+00:09:50,820 --> 00:09:53,190
+And all we need to do
+now is to calculate
+
+170
+00:09:53,190 --> 00:09:54,700
+the probability of this event.
+
+171
+00:09:59,330 --> 00:10:01,930
+So here is what we have so far.
+
+172
+00:10:01,930 --> 00:10:04,990
+This is the picture that
+we had before, but drawn
+
+173
+00:10:04,990 --> 00:10:07,120
+in a somewhat nicer way.
+
+174
+00:10:07,120 --> 00:10:11,020
+This is the joint PDF
+that we decided upon.
+
+175
+00:10:11,020 --> 00:10:13,270
+And we wish to calculate
+the probability
+
+176
+00:10:13,270 --> 00:10:15,460
+of this particular event--
+
+177
+00:10:15,460 --> 00:10:20,460
+that x is less than or equal
+to l over 2 sine theta.
+
+178
+00:10:23,470 --> 00:10:26,400
+How do we calculate
+the probability
+
+179
+00:10:26,400 --> 00:10:29,740
+of an event that has to do
+with two random variables?
+
+180
+00:10:29,740 --> 00:10:34,980
+What we do is we
+take the joint PDF--
+
+181
+00:10:34,980 --> 00:10:39,390
+which in our case
+is four over pi d--
+
+182
+00:10:39,390 --> 00:10:49,140
+and integrate it over the set
+of x's and theta's for which
+
+183
+00:10:49,140 --> 00:10:51,180
+the PDF is non-zero.
+
+184
+00:10:51,180 --> 00:10:55,380
+So it's only going to be over
+x's and theta's in those ranges
+
+185
+00:10:55,380 --> 00:10:58,920
+and also, only for
+those x theta pairs
+
+186
+00:10:58,920 --> 00:11:01,540
+for which the event occurs.
+
+187
+00:11:01,540 --> 00:11:03,840
+So what are these pairs?
+
+188
+00:11:03,840 --> 00:11:08,410
+This event can occur
+with any choice of theta.
+
+189
+00:11:08,410 --> 00:11:16,050
+So theta is free to vary
+from 0 up to pi over 2.
+
+190
+00:11:16,050 --> 00:11:17,610
+How about x?
+
+191
+00:11:17,610 --> 00:11:22,380
+For this event to
+occur, x can be
+
+192
+00:11:22,380 --> 00:11:26,970
+anything that is non-negative
+as long as it is less than
+
+193
+00:11:26,970 --> 00:11:29,490
+or equal to this number.
+
+194
+00:11:29,490 --> 00:11:32,220
+So the upper limit
+of this integration
+
+195
+00:11:32,220 --> 00:11:38,630
+is going to be l over
+2 times sine theta.
+
+196
+00:11:38,630 --> 00:11:42,710
+And all we need to do now is to
+evaluate this double integral.
+
+197
+00:11:42,710 --> 00:11:45,560
+Let's start with
+the inner integral.
+
+198
+00:11:45,560 --> 00:11:48,440
+Because we're just
+integrating a constant,
+
+199
+00:11:48,440 --> 00:11:56,520
+the inner integral
+evaluates to the quantity
+
+200
+00:11:56,520 --> 00:11:58,920
+that we're integrating--
+the constant that we're
+
+201
+00:11:58,920 --> 00:12:02,580
+integrating-- which is 4
+times pi d times the length
+
+202
+00:12:02,580 --> 00:12:05,430
+of the interval over
+which we're integrating,
+
+203
+00:12:05,430 --> 00:12:07,855
+which is l over 2 sine theta.
+
+204
+00:12:12,520 --> 00:12:15,860
+And now we need to carry
+out the outer integral.
+
+205
+00:12:15,860 --> 00:12:20,490
+Let us pull out the constants,
+which is this 4 with this 2
+
+206
+00:12:20,490 --> 00:12:22,290
+give us a 2.
+
+207
+00:12:22,290 --> 00:12:27,220
+We have 2l over pi d.
+
+208
+00:12:27,220 --> 00:12:31,280
+And then the integral from 0
+to pi over 2 of sine theta.
+
+209
+00:12:31,280 --> 00:12:35,500
+Now the integral of sine
+theta is minus cosine theta.
+
+210
+00:12:35,500 --> 00:12:39,250
+And we need to evaluate
+this at 0 and pi over 2.
+
+211
+00:12:39,250 --> 00:12:41,660
+This turns out to be equal to 1.
+
+212
+00:12:41,660 --> 00:12:47,400
+So the final result
+is 2 l over pi d.
+
+213
+00:12:47,400 --> 00:12:49,890
+And this is the final
+answer to the problem
+
+214
+00:12:49,890 --> 00:12:53,710
+that we have been considering.
+
+215
+00:12:53,710 --> 00:12:57,700
+And now, a curious thought.
+
+216
+00:12:57,700 --> 00:13:03,310
+Suppose that you do not
+know what the number pi is
+
+217
+00:13:03,310 --> 00:13:05,950
+and all you have
+in your hands is
+
+218
+00:13:05,950 --> 00:13:11,500
+your floor, lines drawn on
+your floor, and the needle.
+
+219
+00:13:11,500 --> 00:13:14,320
+And you do know the length
+between adjacent lines
+
+220
+00:13:14,320 --> 00:13:15,490
+on your floor.
+
+221
+00:13:15,490 --> 00:13:18,140
+And you do know your
+length of your needle.
+
+222
+00:13:18,140 --> 00:13:21,070
+How can you figure
+out the number pi?
+
+223
+00:13:21,070 --> 00:13:25,120
+Take your needle, throw it
+at random a million times,
+
+224
+00:13:25,120 --> 00:13:29,080
+and count the frequency with
+which the needle ends up
+
+225
+00:13:29,080 --> 00:13:30,730
+crossing the line.
+
+226
+00:13:30,730 --> 00:13:32,230
+If you believe
+that probabilities
+
+227
+00:13:32,230 --> 00:13:35,200
+can be interpreted
+as frequencies,
+
+228
+00:13:35,200 --> 00:13:39,250
+the frequency that you observe
+gives you a good estimate
+
+229
+00:13:39,250 --> 00:13:40,600
+of this probability.
+
+230
+00:13:40,600 --> 00:13:44,560
+So it gives you a good estimate
+of this particular number.
+
+231
+00:13:44,560 --> 00:13:47,800
+And if you know the length of
+your needle and of the distance
+
+232
+00:13:47,800 --> 00:13:50,530
+between the different
+lines, you can
+
+233
+00:13:50,530 --> 00:13:55,660
+use the estimate of that number
+to determine the value of pi.
+
+234
+00:13:55,660 --> 00:13:59,530
+This is a so-called
+Monte Carlo method,
+
+235
+00:13:59,530 --> 00:14:03,430
+which uses simulation to
+evaluate experimentally
+
+236
+00:14:03,430 --> 00:14:07,690
+the value, in this case,
+of the constant pi.
+
+237
+00:14:07,690 --> 00:14:12,250
+Of course, for pi, we have much
+better ways of calculating it.
+
+238
+00:14:12,250 --> 00:14:15,660
+But there are many applications
+in engineering and in physics
+
+239
+00:14:15,660 --> 00:14:18,430
+where certain quantities
+are hard to calculate,
+
+240
+00:14:18,430 --> 00:14:22,960
+but they can be calculated
+using a trick of this kind
+
+241
+00:14:22,960 --> 00:14:24,700
+by simulation.
+
+242
+00:14:24,700 --> 00:14:26,990
+Here's a typical situation.
+
+243
+00:14:26,990 --> 00:14:29,500
+Consider the unit cube.
+
+244
+00:14:29,500 --> 00:14:31,810
+And for simplicity,
+I'm only taking
+
+245
+00:14:31,810 --> 00:14:33,710
+a cube in two dimensions.
+
+246
+00:14:33,710 --> 00:14:35,710
+But in general, think
+of the unit cube
+
+247
+00:14:35,710 --> 00:14:40,390
+in n dimensions, which is an
+object that has unit volume.
+
+248
+00:14:40,390 --> 00:14:46,590
+Inside that unit cube, there
+is a complicated subset
+
+249
+00:14:46,590 --> 00:14:51,000
+which is described maybe by
+some very complicated formulas.
+
+250
+00:14:51,000 --> 00:14:52,920
+And you want to
+calculate the volume
+
+251
+00:14:52,920 --> 00:14:56,070
+of this complicated subset.
+
+252
+00:14:56,070 --> 00:14:58,630
+The description of the
+subset is so complicated
+
+253
+00:14:58,630 --> 00:15:03,280
+that using integration,
+multiple integrals, and calculus
+
+254
+00:15:03,280 --> 00:15:05,290
+is practically impossible.
+
+255
+00:15:05,290 --> 00:15:06,700
+What can you do?
+
+256
+00:15:06,700 --> 00:15:11,080
+What you can do is to start
+throwing at random points
+
+257
+00:15:11,080 --> 00:15:13,330
+inside that unit cube.
+
+258
+00:15:13,330 --> 00:15:14,470
+So you throw points.
+
+259
+00:15:14,470 --> 00:15:15,640
+Some fault inside.
+
+260
+00:15:15,640 --> 00:15:18,070
+Some fall outside.
+
+261
+00:15:18,070 --> 00:15:21,070
+You count the frequency
+with which the points
+
+262
+00:15:21,070 --> 00:15:24,520
+happen to be inside your set.
+
+263
+00:15:24,520 --> 00:15:29,620
+And as long as you're
+throwing the points uniformly
+
+264
+00:15:29,620 --> 00:15:34,150
+over the cube, then
+the probability
+
+265
+00:15:34,150 --> 00:15:39,970
+of your complicated set is going
+to be the volume of that set.
+
+266
+00:15:39,970 --> 00:15:42,190
+You estimate the
+probability by counting
+
+267
+00:15:42,190 --> 00:15:46,930
+the frequency with which
+you get points in that set.
+
+268
+00:15:46,930 --> 00:15:50,830
+And so, by using these
+observed frequencies,
+
+269
+00:15:50,830 --> 00:15:55,210
+you can estimate the
+volume of a set--
+
+270
+00:15:55,210 --> 00:15:57,670
+something that might
+be very difficult to do
+
+271
+00:15:57,670 --> 00:16:00,100
+through other numerical methods.
+
+272
+00:16:00,100 --> 00:16:04,840
+It turns out that these days,
+physicists and many engineers
+
+273
+00:16:04,840 --> 00:16:07,885
+use methods of this
+kind quite often
+
+274
+00:16:07,885 --> 00:16:11,610
+and in many important
+applications.

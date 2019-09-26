@@ -1,0 +1,383 @@
+1
+00:00:01,230 --> 00:00:03,780
+We will now discuss De Morgan's
+laws that are some
+
+2
+00:00:03,780 --> 00:00:08,109
+very useful relations between
+sets and their complements.
+
+3
+00:00:08,109 --> 00:00:11,500
+One of the De Morgan's
+laws takes this form.
+
+4
+00:00:11,500 --> 00:00:14,360
+If we take the intersection of
+two sets and then take the
+
+5
+00:00:14,360 --> 00:00:17,500
+complement of this intersection,
+what we obtain
+
+6
+00:00:17,500 --> 00:00:21,070
+is the union of the complements
+of the two sets.
+
+7
+00:00:21,070 --> 00:00:23,840
+Pictorially, here is
+the situation.
+
+8
+00:00:23,840 --> 00:00:26,680
+We have our universal set.
+
+9
+00:00:26,680 --> 00:00:34,210
+Inside that set, we have a set,
+S, which is this one.
+
+10
+00:00:34,210 --> 00:00:40,340
+And we have another set,
+T, which is this one.
+
+11
+00:00:40,340 --> 00:00:42,840
+Let us look at this side.
+
+12
+00:00:42,840 --> 00:00:47,950
+The complement of S is this
+part of the diagram.
+
+13
+00:00:47,950 --> 00:00:52,950
+The complement of T is this
+part of the diagram.
+
+14
+00:00:52,950 --> 00:00:54,450
+What is left?
+
+15
+00:00:54,450 --> 00:00:57,680
+What is left is just this region
+here, which is the
+
+16
+00:00:57,680 --> 00:01:03,740
+intersection of S with T. So
+anything that does not belong
+
+17
+00:01:03,740 --> 00:01:07,010
+here belongs to the
+intersection.
+
+18
+00:01:07,010 --> 00:01:10,950
+This means that the complement
+of the intersection is
+
+19
+00:01:10,950 --> 00:01:14,570
+everything out there,
+which is the set.
+
+20
+00:01:14,570 --> 00:01:18,180
+If you're not convinced by this
+pictorial proof, let us
+
+21
+00:01:18,180 --> 00:01:22,470
+go through an argument that
+is a little more formal.
+
+22
+00:01:22,470 --> 00:01:26,360
+What does it take for
+an element to belong
+
+23
+00:01:26,360 --> 00:01:29,870
+to the first set?
+
+24
+00:01:29,870 --> 00:01:32,729
+In order to belong to that
+set, x belongs to the
+
+25
+00:01:32,729 --> 00:01:37,539
+complement of S intersection T.
+This is the same as saying
+
+26
+00:01:37,539 --> 00:01:42,020
+that x does not belong to
+the intersection [of]
+
+27
+00:01:42,020 --> 00:01:44,450
+S with T.
+
+28
+00:01:44,450 --> 00:01:46,370
+What does that mean?
+
+29
+00:01:46,370 --> 00:01:49,500
+Since it is not in the
+intersection, this is the same
+
+30
+00:01:49,500 --> 00:01:56,940
+as saying that x does not belong
+to S or x does not
+
+31
+00:01:56,940 --> 00:02:04,640
+belong to T. But this is the
+same as saying that x belongs
+
+32
+00:02:04,640 --> 00:02:10,580
+to the complement of S or x
+belongs to the complement of
+
+33
+00:02:10,580 --> 00:02:17,650
+T. And this is equivalent to
+saying that x belongs to the
+
+34
+00:02:17,650 --> 00:02:23,310
+union of the complement of S
+with the complement of T.
+
+35
+00:02:23,310 --> 00:02:26,610
+So this establishes this
+first De Morgan's law.
+
+36
+00:02:29,750 --> 00:02:33,350
+There's another De Morgan's law,
+which is obtained from
+
+37
+00:02:33,350 --> 00:02:36,110
+this one by a syntactic
+substitution.
+
+38
+00:02:36,110 --> 00:02:38,450
+We're going to play the
+following trick.
+
+39
+00:02:38,450 --> 00:02:42,520
+Wherever we see an S, we're
+going to replace it by S
+
+40
+00:02:42,520 --> 00:02:43,410
+complement.
+
+41
+00:02:43,410 --> 00:02:47,290
+And wherever we see an S
+complement, we will replace it
+
+42
+00:02:47,290 --> 00:02:48,620
+with an S.
+
+43
+00:02:48,620 --> 00:02:52,440
+And similarly, whenever we see
+a T, we'll replace it by T
+
+44
+00:02:52,440 --> 00:02:53,150
+complement.
+
+45
+00:02:53,150 --> 00:02:56,470
+And when we see a T complement,
+we will replace it
+
+46
+00:02:56,470 --> 00:03:01,770
+by T. So doing this syntactic
+substitution, what we obtain
+
+47
+00:03:01,770 --> 00:03:06,100
+is S complement intersection
+with T complement--
+
+48
+00:03:06,100 --> 00:03:08,280
+everything gets complemented--
+
+49
+00:03:08,280 --> 00:03:14,200
+is the same as S union T.
+
+50
+00:03:14,200 --> 00:03:16,560
+Now, let us take complements
+of both sides.
+
+51
+00:03:16,560 --> 00:03:19,760
+The complement of a complement
+is the set itself.
+
+52
+00:03:19,760 --> 00:03:22,690
+So we obtain this.
+
+53
+00:03:22,690 --> 00:03:25,880
+And now, we take the complement
+of the other side,
+
+54
+00:03:25,880 --> 00:03:27,970
+which is this one.
+
+55
+00:03:27,970 --> 00:03:31,640
+And this is the second
+De Morgan's law.
+
+56
+00:03:31,640 --> 00:03:35,930
+It tells us that the complement
+of a union is the
+
+57
+00:03:35,930 --> 00:03:39,270
+same as the intersection
+of the complements.
+
+58
+00:03:39,270 --> 00:03:43,010
+We derived it from the first De
+Morgan's law by a syntactic
+
+59
+00:03:43,010 --> 00:03:43,980
+substitution.
+
+60
+00:03:43,980 --> 00:03:47,630
+If you're not convinced, it
+would be useful for you to go
+
+61
+00:03:47,630 --> 00:03:52,040
+through an argument of this kind
+to show that something is
+
+62
+00:03:52,040 --> 00:03:55,400
+an element of this set if and
+only if it is an element of
+
+63
+00:03:55,400 --> 00:03:57,870
+that set as well.
+
+64
+00:03:57,870 --> 00:04:02,000
+Finally, it turns out that De
+Morgan's laws are valid when
+
+65
+00:04:02,000 --> 00:04:04,530
+we take unions or
+intersections of
+
+66
+00:04:04,530 --> 00:04:06,480
+more than two sets.
+
+67
+00:04:06,480 --> 00:04:08,390
+There is a more general form.
+
+68
+00:04:08,390 --> 00:04:11,390
+And the general form
+is as follows--
+
+69
+00:04:11,390 --> 00:04:13,370
+an analogy with this one.
+
+70
+00:04:13,370 --> 00:04:17,089
+If we have a collection of sets,
+Sn, perhaps an infinite
+
+71
+00:04:17,089 --> 00:04:20,160
+collection, we take the
+intersection of those sets and
+
+72
+00:04:20,160 --> 00:04:24,580
+then the complement, what that
+is is the union of the
+
+73
+00:04:24,580 --> 00:04:26,350
+complements.
+
+74
+00:04:26,350 --> 00:04:28,540
+So this is analygous
+to this law.
+
+75
+00:04:28,540 --> 00:04:32,840
+And this law extends to this
+one: if we have the union of
+
+76
+00:04:32,840 --> 00:04:36,455
+certain sets and we take the
+complement of the union, what
+
+77
+00:04:36,455 --> 00:04:41,220
+we obtain is the intersection
+of the complements.
+
+78
+00:04:41,220 --> 00:04:44,409
+We will have many occasions
+to use De Morgan's laws.
+
+79
+00:04:44,409 --> 00:04:46,370
+They're actually very useful.
+
+80
+00:04:46,370 --> 00:04:50,230
+They allow us, in general, to
+go back and forth between
+
+81
+00:04:50,230 --> 00:04:51,560
+unions and intersections.

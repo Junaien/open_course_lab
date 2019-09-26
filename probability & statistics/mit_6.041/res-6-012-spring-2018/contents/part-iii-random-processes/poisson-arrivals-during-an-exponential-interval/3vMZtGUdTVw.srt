@@ -1,0 +1,682 @@
+1
+00:00:01,860 --> 00:00:03,680
+In this video, we're
+going to establish
+
+2
+00:00:03,680 --> 00:00:06,400
+a nice property of
+the Poisson process.
+
+3
+00:00:06,400 --> 00:00:07,860
+Here is our setting.
+
+4
+00:00:07,860 --> 00:00:12,920
+We have a Poisson process
+with arrival rate, lambda,
+
+5
+00:00:12,920 --> 00:00:15,360
+and so arrivals keep coming.
+
+6
+00:00:15,360 --> 00:00:21,530
+And we watch this process
+until a certain random time, T.
+
+7
+00:00:21,530 --> 00:00:24,770
+So T is this time here.
+
+8
+00:00:24,770 --> 00:00:29,190
+Now, T is an exponential random
+variable with some parameter,
+
+9
+00:00:29,190 --> 00:00:32,800
+and T is independent from
+the Poisson arrival process.
+
+10
+00:00:32,800 --> 00:00:35,350
+What we're interested
+in is the number
+
+11
+00:00:35,350 --> 00:00:39,240
+of arrivals that happened
+during this time.
+
+12
+00:00:39,240 --> 00:00:41,270
+How can we answer this question?
+
+13
+00:00:41,270 --> 00:00:42,250
+There are two ways.
+
+14
+00:00:42,250 --> 00:00:44,810
+One is using mathematical
+manipulations.
+
+15
+00:00:44,810 --> 00:00:47,190
+The other is using intuition.
+
+16
+00:00:47,190 --> 00:00:49,750
+Let's see what it
+would take if we wanted
+
+17
+00:00:49,750 --> 00:00:52,760
+to solve the problem
+using formulas.
+
+18
+00:00:52,760 --> 00:00:59,770
+So let's call N-T, with capital
+T, the number of arrivals
+
+19
+00:00:59,770 --> 00:01:02,800
+until time T in our
+Poisson process.
+
+20
+00:01:02,800 --> 00:01:06,490
+And we wish to find the
+distribution of N-T. So we
+
+21
+00:01:06,490 --> 00:01:08,690
+want to calculate, for
+example, the probability
+
+22
+00:01:08,690 --> 00:01:11,455
+that N-T is equal to
+a specific number, k.
+
+23
+00:01:14,110 --> 00:01:18,330
+Now, we do not know very much
+about this random variable,
+
+24
+00:01:18,330 --> 00:01:24,170
+but we do know the probability
+of the random variable, N-T,
+
+25
+00:01:24,170 --> 00:01:27,130
+If we have a deterministic time.
+
+26
+00:01:27,130 --> 00:01:30,490
+So perhaps we can
+condition by fixing
+
+27
+00:01:30,490 --> 00:01:34,450
+the value of the random
+variable, capital T-- that
+
+28
+00:01:34,450 --> 00:01:37,350
+is, to condition on
+that random variable,
+
+29
+00:01:37,350 --> 00:01:41,530
+taking on a specific value.
+
+30
+00:01:41,530 --> 00:01:43,220
+What happens in this case?
+
+31
+00:01:43,220 --> 00:01:46,520
+Well, if I tell you that
+capital T is equal to little t,
+
+32
+00:01:46,520 --> 00:01:50,729
+this probability is going to
+be the same as the probability
+
+33
+00:01:50,729 --> 00:01:57,570
+that N with little t is equal
+to k, where N with little t
+
+34
+00:01:57,570 --> 00:02:01,040
+is the number of arrivals
+until time, little t.
+
+35
+00:02:01,040 --> 00:02:03,770
+But the number of arrivals,
+until a certain time,
+
+36
+00:02:03,770 --> 00:02:05,730
+is a Poisson random variable.
+
+37
+00:02:05,730 --> 00:02:09,949
+So we do know what
+this probability is.
+
+38
+00:02:09,949 --> 00:02:13,470
+It is lambda to the k, e
+to the [minus] lambda t,
+
+39
+00:02:13,470 --> 00:02:17,180
+divided by k factorial.
+
+40
+00:02:17,180 --> 00:02:19,670
+Now, if we have this
+conditional probability, how can
+
+41
+00:02:19,670 --> 00:02:23,150
+we get the unconditional
+probability?
+
+42
+00:02:23,150 --> 00:02:26,540
+This is done by using the
+total probability theorem.
+
+43
+00:02:26,540 --> 00:02:30,260
+We consider all possible
+values of little t, which
+
+44
+00:02:30,260 --> 00:02:33,440
+are all the numbers
+from 0 to infinity.
+
+45
+00:02:33,440 --> 00:02:38,070
+We weigh each possible
+value of little t
+
+46
+00:02:38,070 --> 00:02:43,130
+according to the corresponding
+PDF of the random variable, T.
+
+47
+00:02:43,130 --> 00:02:46,900
+And we have this equality.
+
+48
+00:02:46,900 --> 00:02:48,640
+We know what this term is.
+
+49
+00:02:48,640 --> 00:02:49,565
+It is this expression.
+
+50
+00:02:53,130 --> 00:02:56,320
+And the density of
+capital T, since it
+
+51
+00:02:56,320 --> 00:03:01,260
+is an exponential variable,
+the density takes this form.
+
+52
+00:03:01,260 --> 00:03:03,550
+And so, in order to
+find the distribution
+
+53
+00:03:03,550 --> 00:03:05,640
+of the random
+variable, N capital T,
+
+54
+00:03:05,640 --> 00:03:09,230
+all that we need to do is
+to calculate this integral.
+
+55
+00:03:09,230 --> 00:03:12,090
+But this is a rather
+messy integral.
+
+56
+00:03:12,090 --> 00:03:14,410
+So let us try to
+see if we can find
+
+57
+00:03:14,410 --> 00:03:16,250
+a shortcut to this problem.
+
+58
+00:03:19,590 --> 00:03:22,570
+So here is what we have.
+
+59
+00:03:22,570 --> 00:03:26,960
+We have a Poisson process.
+
+60
+00:03:26,960 --> 00:03:29,770
+Let's call it the
+first Poisson process,
+
+61
+00:03:29,770 --> 00:03:32,470
+that has a certain rate, lambda.
+
+62
+00:03:32,470 --> 00:03:36,620
+And this Poisson process has
+arrivals at various times.
+
+63
+00:03:40,310 --> 00:03:45,340
+And then we have a random
+variable, capital T,
+
+64
+00:03:45,340 --> 00:03:47,860
+which is exponential.
+
+65
+00:03:47,860 --> 00:03:52,460
+How should we think about an
+exponential random variable?
+
+66
+00:03:52,460 --> 00:03:54,970
+We can think of an
+exponential random variable
+
+67
+00:03:54,970 --> 00:03:59,560
+as being the first arrival
+in some Poisson process.
+
+68
+00:03:59,560 --> 00:04:04,120
+So let us put down a second
+Poisson process with rate mu.
+
+69
+00:04:04,120 --> 00:04:06,480
+Since we have assumed
+that capital T is
+
+70
+00:04:06,480 --> 00:04:09,530
+independent from the
+red Poisson process,
+
+71
+00:04:09,530 --> 00:04:11,920
+we can just assume
+that this blue Poisson
+
+72
+00:04:11,920 --> 00:04:13,925
+process is independent
+from the first.
+
+73
+00:04:17,649 --> 00:04:23,020
+Now, let us merge
+the two processes.
+
+74
+00:04:23,020 --> 00:04:27,070
+And we're going to form
+a merged process that
+
+75
+00:04:27,070 --> 00:04:31,660
+records an arrival at
+those times at which either
+
+76
+00:04:31,660 --> 00:04:33,650
+of the two processes
+have an arrival.
+
+77
+00:04:37,500 --> 00:04:39,040
+This is the time of interest.
+
+78
+00:04:41,950 --> 00:04:44,320
+And the random variable
+that we're interested in
+
+79
+00:04:44,320 --> 00:04:47,430
+is the number of red
+arrivals until that time.
+
+80
+00:04:47,430 --> 00:04:53,010
+That random variable we call
+N capital T. The discussion
+
+81
+00:04:53,010 --> 00:04:56,800
+will be a little simpler if we
+define another random variable,
+
+82
+00:04:56,800 --> 00:05:02,500
+K, which is N capital T plus 1.
+
+83
+00:05:02,500 --> 00:05:07,360
+So K is the number of
+arrivals in the merged process
+
+84
+00:05:07,360 --> 00:05:08,760
+until this time.
+
+85
+00:05:08,760 --> 00:05:11,320
+That is, we take those
+arrivals of the red process,
+
+86
+00:05:11,320 --> 00:05:14,660
+and we also include
+that arrival here.
+
+87
+00:05:14,660 --> 00:05:18,240
+So if the number of
+arrivals that we got here
+
+88
+00:05:18,240 --> 00:05:26,290
+was N capital T, here we have
+arrivals 1, 2, and so on.
+
+89
+00:05:26,290 --> 00:05:30,930
+And this is arrival number
+K. So K is a random variable,
+
+90
+00:05:30,930 --> 00:05:33,260
+and we want to find what it is.
+
+91
+00:05:33,260 --> 00:05:36,230
+So what are we asking?
+
+92
+00:05:36,230 --> 00:05:39,000
+What is K?
+
+93
+00:05:39,000 --> 00:05:53,580
+K is the number of arrivals
+in the merged process
+
+94
+00:05:53,580 --> 00:05:58,320
+until you get an arrival
+in the merged process which
+
+95
+00:05:58,320 --> 00:06:00,195
+is coming from the blue process.
+
+96
+00:06:13,870 --> 00:06:18,460
+And now, here is how we can
+think of this situation.
+
+97
+00:06:18,460 --> 00:06:29,335
+Think of each arrival in the
+merged process as a trial.
+
+98
+00:06:35,860 --> 00:06:38,130
+Each one of these
+arrivals is coming
+
+99
+00:06:38,130 --> 00:06:41,950
+either from the red process
+or from the blue process.
+
+100
+00:06:41,950 --> 00:06:49,710
+Let us call it a success if it
+comes from the blue process.
+
+101
+00:06:58,190 --> 00:07:08,000
+So in that case, K is
+the number of trials
+
+102
+00:07:08,000 --> 00:07:09,935
+until we have a success.
+
+103
+00:07:14,220 --> 00:07:17,930
+K is the number of arrivals
+in the merged process
+
+104
+00:07:17,930 --> 00:07:19,910
+until we have a
+successful arrival,
+
+105
+00:07:19,910 --> 00:07:24,290
+meaning one that came
+out of the blue process.
+
+106
+00:07:24,290 --> 00:07:27,070
+So what do we know
+about those trials?
+
+107
+00:07:27,070 --> 00:07:30,270
+What are their
+statistical properties?
+
+108
+00:07:30,270 --> 00:07:32,830
+First, what is the
+probability of success?
+
+109
+00:07:37,580 --> 00:07:40,050
+The probability of
+success is the probability
+
+110
+00:07:40,050 --> 00:07:43,060
+that when you get an arrival
+in the merged process,
+
+111
+00:07:43,060 --> 00:07:49,580
+it is coming from
+the blue process.
+
+112
+00:07:49,580 --> 00:07:54,460
+And as we have seen, given an
+arrival in the merged process,
+
+113
+00:07:54,460 --> 00:07:56,450
+there is probability
+that it's coming
+
+114
+00:07:56,450 --> 00:07:58,150
+from this particular
+process that's
+
+115
+00:07:58,150 --> 00:08:02,050
+proportional to the arrival
+rate of that particular process.
+
+116
+00:08:02,050 --> 00:08:05,420
+And it is equal, as
+we have discussed
+
+117
+00:08:05,420 --> 00:08:09,560
+before, it is equal to this.
+
+118
+00:08:09,560 --> 00:08:11,890
+In addition, we have
+discussed that when
+
+119
+00:08:11,890 --> 00:08:13,720
+you look at the merged
+process, and you
+
+120
+00:08:13,720 --> 00:08:16,390
+ask, what was the
+origin of that arrival,
+
+121
+00:08:16,390 --> 00:08:19,540
+and you ask, what was the
+origin of that arrival,
+
+122
+00:08:19,540 --> 00:08:21,750
+the answers to
+these two questions
+
+123
+00:08:21,750 --> 00:08:24,360
+are independent of each other.
+
+124
+00:08:24,360 --> 00:08:26,470
+In other words, the
+origin of this arrival
+
+125
+00:08:26,470 --> 00:08:29,060
+is statistically
+independent from the origin
+
+126
+00:08:29,060 --> 00:08:30,710
+of that arrival.
+
+127
+00:08:30,710 --> 00:08:35,924
+So this means that these
+trials are independent.
+
+128
+00:08:39,760 --> 00:08:44,560
+So what we're looking
+at is a random variable,
+
+129
+00:08:44,560 --> 00:08:48,330
+which is the number of trials
+until the first success,
+
+130
+00:08:48,330 --> 00:08:51,070
+in a sequence of
+independent trials,
+
+131
+00:08:51,070 --> 00:08:54,090
+where each trial has
+a success probability
+
+132
+00:08:54,090 --> 00:08:55,800
+equal to that value.
+
+133
+00:08:55,800 --> 00:08:59,065
+And we know what
+that distribution is.
+
+134
+00:08:59,065 --> 00:09:04,000
+It is a geometric with
+this particular parameter.
+
+135
+00:09:04,000 --> 00:09:05,900
+This gives us the
+probability distribution
+
+136
+00:09:05,900 --> 00:09:09,970
+of the random variable, K, and
+once you have the PMF of K,
+
+137
+00:09:09,970 --> 00:09:13,890
+you just shift it by
+1 to the left in order
+
+138
+00:09:13,890 --> 00:09:16,380
+to get the probability
+distribution, the PMF,
+
+139
+00:09:16,380 --> 00:09:19,960
+of the random
+variable, N capital T.
+
+140
+00:09:19,960 --> 00:09:22,770
+And so this is the
+answer to this problem.
+
+141
+00:09:22,770 --> 00:09:28,520
+The number of arrivals during an
+exponentially distributed time
+
+142
+00:09:28,520 --> 00:09:32,030
+interval [has] a
+geometric distribution
+
+143
+00:09:32,030 --> 00:09:35,640
+that's shifted by 1 to the left.

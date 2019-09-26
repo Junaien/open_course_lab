@@ -1,0 +1,437 @@
+1
+00:00:00,390 --> 00:00:03,920
+Just in order to get some more
+familiarity with joint PDFs,
+
+2
+00:00:03,920 --> 00:00:06,770
+let us look at independent
+normals.
+
+3
+00:00:06,770 --> 00:00:10,330
+Actually, this is an important
+example because noise is often
+
+4
+00:00:10,330 --> 00:00:13,580
+modeled by normal random
+variables, and noise terms
+
+5
+00:00:13,580 --> 00:00:16,870
+that show up at different
+parts of a system, or at
+
+6
+00:00:16,870 --> 00:00:20,300
+different times, are often
+assumed to be independent.
+
+7
+00:00:20,300 --> 00:00:22,570
+Suppose that we have two
+standard normal random
+
+8
+00:00:22,570 --> 00:00:26,510
+variables, X and Y, with zero
+means and unit variances.
+
+9
+00:00:26,510 --> 00:00:29,700
+If their independent, their
+joint PDF is the product of
+
+10
+00:00:29,700 --> 00:00:32,980
+the marginal PDFs and
+takes this form.
+
+11
+00:00:32,980 --> 00:00:37,640
+This is just the PDF of a
+standard normal X and the PDF
+
+12
+00:00:37,640 --> 00:00:40,830
+of a standard normal Y
+and we multiply them.
+
+13
+00:00:40,830 --> 00:00:45,400
+If we are to plot this joint
+PDF we obtain this figure.
+
+14
+00:00:45,400 --> 00:00:50,070
+It looks like a bell which is
+centered at the origin--
+
+15
+00:00:50,070 --> 00:00:53,500
+at the point with coordinates
+zero, zero.
+
+16
+00:00:53,500 --> 00:00:58,150
+One way to think about what is
+going on here is to rewrite
+
+17
+00:00:58,150 --> 00:01:05,980
+this expression as 1 over 2pi,
+and then the exponential of
+
+18
+00:01:05,980 --> 00:01:10,830
+minus 1/2 x squared
+plus y squared.
+
+19
+00:01:14,900 --> 00:01:22,250
+If we look at the unit circle in
+xy space, which is the set
+
+20
+00:01:22,250 --> 00:01:28,210
+of points at which x squared
+plus y squared is equal to 1,
+
+21
+00:01:28,210 --> 00:01:34,150
+then, on that circle, the PDF
+takes a constant value because
+
+22
+00:01:34,150 --> 00:01:37,370
+this quantity is constant
+on that circle.
+
+23
+00:01:37,370 --> 00:01:40,789
+And the same is true for
+any other circle.
+
+24
+00:01:40,789 --> 00:01:44,870
+On any circle the PDF takes a
+constant value, of course, a
+
+25
+00:01:44,870 --> 00:01:46,450
+different constant.
+
+26
+00:01:46,450 --> 00:01:49,991
+So the circles centered at the
+origin are the so-called
+
+27
+00:01:49,991 --> 00:01:52,259
+contours of the joint PDF.
+
+28
+00:01:52,259 --> 00:01:57,780
+On each contour the joint
+PDF is a constant.
+
+29
+00:01:57,780 --> 00:01:59,830
+Let us now generalize.
+
+30
+00:01:59,830 --> 00:02:03,110
+Consider two independent normal
+random variables, but
+
+31
+00:02:03,110 --> 00:02:09,340
+with general means mu x and mu
+y, and variances sigma x
+
+32
+00:02:09,340 --> 00:02:12,660
+squared and sigma y squared.
+
+33
+00:02:12,660 --> 00:02:16,870
+The joint is, again, the product
+of the marginal PDFs
+
+34
+00:02:16,870 --> 00:02:19,760
+and, therefore, takes
+this form.
+
+35
+00:02:19,760 --> 00:02:24,410
+This looks intimidating but, in
+fact, it is pretty simple.
+
+36
+00:02:24,410 --> 00:02:28,060
+This part is just a normalizing
+constant.
+
+37
+00:02:28,060 --> 00:02:30,770
+It is the constant that's needed
+so that the joint PDF
+
+38
+00:02:30,770 --> 00:02:33,500
+integrates to 1.
+
+39
+00:02:33,500 --> 00:02:37,460
+What we have here is the
+negative exponential of a
+
+40
+00:02:37,460 --> 00:02:40,680
+quadratic function of x and y.
+
+41
+00:02:40,680 --> 00:02:43,710
+Let us plot the contours
+of this quadratic.
+
+42
+00:02:43,710 --> 00:02:46,600
+Remember that contour is the
+set of points where the
+
+43
+00:02:46,600 --> 00:02:49,610
+quadratic takes a
+constant value.
+
+44
+00:02:49,610 --> 00:02:52,480
+And by consequence,
+the joint PDF also
+
+45
+00:02:52,480 --> 00:02:54,910
+takes a constant value.
+
+46
+00:02:54,910 --> 00:02:58,740
+If you have set this quadratic
+to a constant, what you have
+
+47
+00:02:58,740 --> 00:03:01,320
+is the equation that describes
+an ellipse.
+
+48
+00:03:01,320 --> 00:03:05,300
+And it is an ellipse whose
+principal axes run along the x
+
+49
+00:03:05,300 --> 00:03:09,490
+and y directions, and those
+ellipses are all centered at
+
+50
+00:03:09,490 --> 00:03:13,590
+this particular point,
+mu x, mu y.
+
+51
+00:03:13,590 --> 00:03:19,390
+The joint PDF is largest when
+the exponent is equal to zero.
+
+52
+00:03:19,390 --> 00:03:23,270
+And this happens when x is
+equal to mu x, and y
+
+53
+00:03:23,270 --> 00:03:24,760
+is equal to mu y.
+
+54
+00:03:24,760 --> 00:03:27,450
+That is, right at the center
+of the ellipse.
+
+55
+00:03:27,450 --> 00:03:31,150
+That's where the joint
+PDF is largest.
+
+56
+00:03:31,150 --> 00:03:35,470
+As you move to ellipses that are
+further out on this outer
+
+57
+00:03:35,470 --> 00:03:38,329
+ellipse, this expression
+is a constant.
+
+58
+00:03:38,329 --> 00:03:41,100
+It's the exponential
+of the negative of
+
+59
+00:03:41,100 --> 00:03:43,260
+some positive numbers.
+
+60
+00:03:43,260 --> 00:03:47,540
+So you get a smaller value
+for the joint PDF.
+
+61
+00:03:47,540 --> 00:03:50,860
+If you move to a further ellipse
+further out, then
+
+62
+00:03:50,860 --> 00:03:54,030
+again, the joint PDF will be a
+constant, but it's going to be
+
+63
+00:03:54,030 --> 00:03:56,770
+a smaller constant.
+
+64
+00:03:56,770 --> 00:04:00,240
+Now, for the case of standard
+normals, the joint PDF was
+
+65
+00:04:00,240 --> 00:04:02,300
+circularly symmetric.
+
+66
+00:04:02,300 --> 00:04:06,300
+The contours were actually
+circles, instead of ellipses.
+
+67
+00:04:06,300 --> 00:04:08,600
+But this is not the
+case in general.
+
+68
+00:04:08,600 --> 00:04:13,390
+For example, suppose that the
+variance of Y is bigger than
+
+69
+00:04:13,390 --> 00:04:18,100
+the variance of X. Then you get
+a shape as the one shown
+
+70
+00:04:18,100 --> 00:04:19,700
+in this figure.
+
+71
+00:04:19,700 --> 00:04:24,070
+Since the variance of Y is
+larger, we expect Y to take
+
+72
+00:04:24,070 --> 00:04:29,300
+values over a bigger range,
+and to be larger typically
+
+73
+00:04:29,300 --> 00:04:33,630
+than the values of X. And so
+the bell shape that we have
+
+74
+00:04:33,630 --> 00:04:37,490
+for the joint PDF is stretched
+in the y direction.
+
+75
+00:04:37,490 --> 00:04:41,120
+It extends further out in the
+y direction than it does in
+
+76
+00:04:41,120 --> 00:04:43,159
+the x direction.
+
+77
+00:04:43,159 --> 00:04:47,290
+To conclude, the joint PDF of
+two independent normals has
+
+78
+00:04:47,290 --> 00:04:49,240
+the shape of a bell.
+
+79
+00:04:49,240 --> 00:04:53,130
+The center of the bell is
+determined by the means.
+
+80
+00:04:53,130 --> 00:04:56,300
+Furthermore, the bell is
+stretched in the x and y
+
+81
+00:04:56,300 --> 00:05:00,150
+directions by an amount that is
+determined by the variances
+
+82
+00:05:00,150 --> 00:05:02,310
+of x and y.
+
+83
+00:05:02,310 --> 00:05:05,580
+However, the stretching
+is always along
+
+84
+00:05:05,580 --> 00:05:07,960
+the coordinate axes.
+
+85
+00:05:07,960 --> 00:05:11,610
+If you wanted a bell that
+stretches in some diagonal
+
+86
+00:05:11,610 --> 00:05:15,880
+direction, or if you have
+contours that are ellipses but
+
+87
+00:05:15,880 --> 00:05:20,790
+with some different kinds of
+axes, then you will have
+
+88
+00:05:20,790 --> 00:05:23,740
+dependence between the
+two random variables.
+
+89
+00:05:23,740 --> 00:05:26,710
+In that case, we will be dealing
+with a so-called
+
+90
+00:05:26,710 --> 00:05:31,470
+bivariate normal distribution,
+but we will not pursue this
+
+91
+00:05:31,470 --> 00:05:33,130
+any further at this point.

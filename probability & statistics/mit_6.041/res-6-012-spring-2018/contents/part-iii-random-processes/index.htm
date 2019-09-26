@@ -1,0 +1,1662 @@
+<!DOCTYPE html><html lang="en">
+      
+      
+        
+    
+    
+    
+    
+
+      
+      
+      <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">  
+        
+        <title>Part III: Random Processes | Introduction to Probability | MIT OpenCourseWare</title>
+    <!-- Begin Automatic Metadata Insertion -->
+    <meta content="res-6-012-introduction-to-probability-spring-2018" name="WT.cg_n">
+    <meta content="Part III: Random Processes" name="WT.cg_s">
+    <meta content="The videos in this part of the course cover random processes." name="Description">
+    <meta content="Tsitsiklis, John" name="Author">
+    <meta content="Jaillet, Patrick" name="Author">
+    <meta content="RES.6-012,RES.6,probability,probability models,bayes rule,discrete random variables,continuous random variables,bernoulli process,poisson process,markov chains,central limit theorem,statistical inference,Systems Engineering,Probability and Statistics" name="keywords">
+    <meta content="RES.6-012 Introduction to Probability | Part III: Random Processes" name="Search_Display">
+    <meta content="Systems Engineering" itemprop="about">
+    <meta content="Probability and Statistics" itemprop="about">
+    <!-- End Automatic Metadata Insertion -->
+
+	<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/grid.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/base.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/menu.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/jquery.bubblepopup.css">
+<link title="default" rel="stylesheet" type="text/css" href="https://ocw-origin.odl.mit.edu/styles/search.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/courses.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/courses_new.css">
+	<link href="https://ocw-origin.odl.mit.edu/xml/ocwcc.rdf" type="application/rdf+xml" rel="metadata">
+	<link rel="canonical" href="https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/">
+	<link rel="apple-touch-icon" href="../../common/images/apple-touch-icon.png">
+	
+	
+      
+	
+	<script type="text/javascript" src="../../common/scripts/jquery.js"></script>
+	<script type="text/javascript" src="../../common/scripts/ocw-media-utils-offline.js"></script>
+	<script type="text/javascript" src="../../common/scripts/ocw-offline.js"></script>
+	<script type="text/javascript" src="../../common/scripts/jquery.bubblepopup.min.js"></script>
+	<script type="text/javascript" src="../../common/scripts/expandy.js"></script>
+	<script type="text/javascript" src="https://ocw-origin.odl.mit.edu//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=70ac07d7-b28f-4071-816f-d292aba4849f"></script>
+	<script type="text/javascript" src="../../common/scripts/bubble-popup-offline.js"></script>
+	
+	
+	
+    
+    
+    
+    
+    
+    
+    
+      
+       
+		 
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </head>
+    <body itemscope itemtype="http://schema.org/WebPage">
+        
+	
+
+        <header id="top">
+			<div id="grid">
+				
+				
+					
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572">
+<div class="portletStaticText portlet-static-site-header">
+<!--googleoff: index--> <div class="grid_6 alpha" id="banner"><a href="https://ocw-origin.odl.mit.edu/"><img src="../../common/images/ocw_mast.png" class="logo" alt="MIT OpenCourseWare, Massachusetts Institute of Technology"></a></div> <div class="grid_6 omega" id="subscribe">
+<aside class="module" aria-label="Connect with OCW"> <table class="social">     <tbody>         <tr>             <td class="socialbutton"><a aria-label="Subscribe to the OCW Newsletter" href="https://ocw-origin.odl.mit.edu/subscribe/index.htm?utm_source=header"><img src="../../common/images/trans.gif" alt="An icon depicting an envelope.">Subscribe to the OCW Newsletter</a></td>             <td>
+<a aria-label="Facebook" href="https://facebook.com/mitocw"><img src="../../common/images/icon_fb.png" alt="Click to visit our Facebook page."></a>   <a aria-label="Twitter" href="https://twitter.com/mitocw"><img src="https://ocw-origin.odl.mit.edu/images/icon_twitter.png" alt="Click to visit our Twitter feed."></a>   <a aria-label="YouTube" href="https://www.youtube.com/mitocw"><img src="https://ocw-origin.odl.mit.edu/images/icon_yt.png" alt="Click to visit our YouTube page."></a>   <a aria-label="Open Matters blog on WordPress" href="https://mitopencourseware.wordpress.com/"><img src="https://ocw-origin.odl.mit.edu/images/icon_wp.png" alt="Click to visit our blog on WordPress."></a>
+</td>         </tr>     </tbody> </table> </aside><nav aria-label="Help Links" class="helplinks">     <a aria-label="OCW Site Help" href="https://ocw-origin.odl.mit.edu/help">Help</a><span aria-hidden="true">|</span>     <a href="https://ocw-origin.odl.mit.edu/about/contactus">Contact Us</a>   </nav>
+</div> <div class="clear"> </div> <!--googleon: index-->
+</div>
+
+</div>
+
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a6d6567612d6d656e75" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a6d6567612d6d656e75">
+<div class="portletStaticText portlet-static-mega-menu"><div><nav id="mega" class="grid_8 alpha" aria-label="Site"> <ul id="menu" role="presentation">     <li id="menu_home">
+<a href="https://ocw-origin.odl.mit.edu/" aria-label="Homepage"><img src="../../common/images/top-nav_home.png" class="home_icon" alt="Click for site home page."></a><!-- Begin Home Item -->
+</li>     <!-- End Home Item -->     <li id="drop_1" aria-label="Find Courses">
+<a href="#" aria-hidden="true">FIND COURSES</a><!-- Begin 5 columns Item -->     <div class="dropdown_5columns-a mega-courses"><div class="col_1a">
+<div class="row_1a">
+<nav aria-labelledby="mm-find-courses-by">     <span id="mm-find-courses-by" class="nav" aria-hidden="true">Find courses by:</span>     <ul class="find_by" role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/">Topic</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-number/">MIT Course Number</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-department/">Department</a></li>     </ul>     </nav>     <nav aria-labelledby="mm-collections">     <span id="mm-collections" class="nav" aria-hidden="true">Collections</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/new-courses/">New Courses</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/audio-video-courses/">Audio/Video Lectures</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/resources/">Supplemental Resources</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/high-school/">OCW Highlights for High School</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/mitx-related-courseware/">MITx &amp; Related OCW Courses</a></li>     </ul>     </nav>     <nav class="col_1b" aria-labelledby="mm-translated-courses">     <span id="mm-translated-courses" class="nav" aria-hidden="true" style="line-height: 1.3;">Cross-Disciplinary Topic Lists</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/energy-courses">Energy</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/entrepreneurship">Entrepreneurship</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/environment-courses">Environment</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/intro-programming">Introductory Programming</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/life-sciences">Life Sciences</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/transportation-courses">Transportation</a></li>     </ul>     </nav>
+</div>     <div class="row_1b"><nav aria-labelledby="mm-cross-disciplinary-topic-lists">     <span id="mm-cross-disciplinary-topic-lists" class="nav" aria-hidden="true">Translated Courses</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/traditional-chinese" aria-label="Traditional Chinese">繁體字 / Traditional Chinese</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/spanish" aria-label="Spanish">Español / Spanish</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/turkish" aria-label="Turkish">Türkçe / Turkish</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/korean" aria-label="Korean">(비디오)한국 / Korean</a></li>     </ul>     </nav></div>
+</div></div>
+</li>     <li id="drop_2">
+<a href="#" aria-label="For Educators">For Educators</a>     <div class="dropdown_1column-a" style="width: 270px;"><nav aria-labelledby="mm-find-courses-by">     <span id="mm-find-courses-by" class="nav" aria-hidden="true">OCW Educator Portal</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=instructional&amp;utm_campaign=Educator&amp;utm_source=megamenu&amp;utm_medium=find-courses&amp;utm_content=approaches">Search for Instructor Insights</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=teaching&amp;utm_campaign=Educator&amp;utm_source=megamenu&amp;utm_medium=find-courses&amp;utm_content=materials">Search for Teaching Materials</a></li>     </ul>     <span id="mm-collections" class="nav" aria-hidden="true">OCW Collections</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/#cat=teachingandeducation">MIT Courses about Teaching and Education</a></li>     </ul>     <span id="mm-collections" class="nav" aria-hidden="true">K-12</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/high-school/">OCW Highlights for High School</a></li>         <li><a href="https://www.k12videos.mit.edu/videos" aria-label="External Link: MIT Plus K12 Videos">MIT+K12 Videos</a></li>     </ul>     <span id="mm-higher-ed" class="nav" aria-hidden="true">Higher Ed</span>     <ul>         <li><a href="https://teachingexcellence.mit.edu/" aria-label="External Link: Teaching Excellence at MIT">Teaching Excellence at MIT</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/mit-curriculum-guide/">MIT Undergraduate Curriculum Map</a></li>
+<li><a href="https://openlearning.mit.edu/campus/digital-innovations/">Residential Digital Innovations</a></li>     </ul>     </nav></div>
+</li>     <li id="drop_3">
+<a href="#" aria-hidden="true">Give Now</a>     <div class="dropdown_1column-a"><nav class="col_1" aria-label="Donate">     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/give/">Make a Donation</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/why-give/">Why Give?</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/our-supporters/">Our Supporters</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/shop-ocw">Shop OCW</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/support/">Become a Corporate Sponsor</a></li>     </ul>     </nav></div>
+</li>     <li id="drop_4">
+<a href="#" aria-hidden="true">About</a>     <div class="dropdown_1column-a"><nav class="col_1" aria-label="About">     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/about/">About MIT OpenCourseWare</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/about/site-statistics/">Site Statistics</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/about/ocw-stories/">OCW Stories</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/about/newsletter/">News</a></li>     </ul>     </nav></div>
+</li> </ul> </nav></div></div>
+
+</div>
+
+
+
+
+
+<!--googleoff: index-->
+<script>
+  (function() {
+	var cx = '012626166551961672889:owjdpuboktq';
+	var gcse = document.createElement('script');
+	gcse.type = 'text/javascript';
+	gcse.async = true;
+	gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(gcse, s);
+  })();
+  window.onload = function(){
+	document.getElementById('gsc-i-id1').placeholder = 'Search';	
+  };
+
+$(document).ready(function(){
+
+$('.advanceSearch a').keydown(function(event){showSearchTips($(this),event);})
+$('#searchTipsModal').keydown(function(event){showSearchTips($(this),event);})
+
+function showSearchTips(obj,evt) {
+// if pressed enter key
+	if ( evt.which == 13 || evt.which == 32) {
+		showModal();
+		ga('send', 'pageview', "AdvanceSearch");
+		$(".advanceSearch a").attr('aria-expanded', 'true');
+		$('.searchTipsModal').focus();
+		evt.preventDefault();
+		}
+	if ( evt.which == 27 ) {
+		hideModal();
+		$(".advanceSearch a").attr('aria-expanded', 'false');
+		var modal = document.getElementById('searchTipsModal');
+		modal.style.display = "none";
+		$(".advanceSearch a").focus();
+		evt.preventDefault();
+		}
+}
+
+});
+function showModal(){
+	var modal = document.getElementById('searchTipsModal');
+	modal.style.display = "block";
+	ga('send', 'pageview', "AdvanceSearch");
+	document.getElementById("searchTipsBtn").setAttribute("aria-expanded", true);
+	window.setTimeout(function () {
+    document.getElementById('searchTipsModal').focus(); }, 0);
+}
+
+function hideModal(){
+	var modal = document.getElementById('searchTipsModal');
+	modal.style.display = "none";
+	document.getElementById("searchTipsBtn").setAttribute("aria-expanded", false);
+}
+</script>
+<div id="search" role="search" class="grid_4 omega">
+    	<table class="search">
+				<tbody>
+					<tr>
+						<td><div class="searchboxheader"><searchbox-only resultsurl="/search/ocwsearch.htm"></searchbox-only></div></td>
+						<td>
+							<div class="advanceSearch">
+								<a id="searchTipsBtn" onclick="showModal();" href="#" role="button" aria-label="search tips" aria-expanded="false" aria-describedby="searchtips">Search Tips</a>
+
+								<!-- The Modal -->
+								<div id="searchTipsModal" class="modal" tabindex="-1">
+								  <!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-body">
+											<button class="close" onclick="hideModal();" aria-label="close">X</button>
+											<span>
+												<b>Exclude words from your search</b>
+												<br>Put - in front of a word you want to leave out. For example, jaguar speed -car
+												<br><br>
+												<b>Search for an exact match</b>
+												<br>Put a word or phrase inside quotes. For example, "tallest building".
+												<br><br>
+												<b>Search for wildcards or unknown words</b>
+												<br>Put a * in your word or phrase where you want to leave a placeholder. For example, "largest * in the world".
+												<br><br>
+												<b>Search within a range of numbers</b>
+												<br>Put .. between two numbers. For example, camera $50..$100.
+												<br><br>
+												<b>Combine searches</b>
+												<br>Put "OR" between each search query. For example,  marathon OR race.
+												<br><br>
+											</span>
+										</div>
+								  </div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+		</table>
+</div>
+<div class="clear"></div>
+<!--googleon: index-->
+<!-- *end header* -->
+
+				
+				
+			</div>
+<!-- top grid end -->
+		</header><!-- top end -->
+			
+		<div id="center">
+         <div id="grid">
+		     <div id="left-section">
+                 <nav id="breadcrumb" aria-label="Breadcrumb">
+                      <p>
+
+    <a href="https://ocw-origin.odl.mit.edu/">Home</a>
+    
+        »
+        
+    
+    
+        
+            <a href="https://ocw-origin.odl.mit.edu/resources">Supplemental Resources</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../contents/index.htm">Introduction to Probability</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            
+            
+            Part III: Random Processes
+         
+    
+</p>
+
+                 </nav>
+                 <div class="clear"></div>
+                 <div id="section_title">
+           			<h1 class="title" itemprop="name" property="dct:title">
+        <span class="" id="parent-fieldname-title">
+            Part III: Random Processes
+        </span>
+    </h1>
+           	     </div>
+           	     <div class="clear"></div>
+           	     <div id="course_wrapper_section">
+           	     	 <nav id="course_nav" aria-label="Course">
+             			 	
+<div id="portletwrapper-6f63772e636f757273656c656674746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e652f7265736f75726365732f7265732d362d3031322d696e74726f64756374696f6e2d746f2d70726f626162696c6974792d737072696e672d323031380a657870616e64792d706c7573" class="portletWrapper kssattr-portlethash-6f63772e636f757273656c656674746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e652f7265736f75726365732f7265732d362d3031322d696e74726f64756374696f6e2d746f2d70726f626162696c6974792d737072696e672d323031380a657870616e64792d706c7573">
+<div class="portletStaticText portlet-static-expandy-plus">
+<p> </p>
+<script type="text/javascript">
+	$(document).ready(function() { 
+
+		$('div.toggle11').hide(); 
+		$('div.reveal11').click(function() { 
+			$('div.toggle11').slideToggle(400);
+			return false; 
+		});
+
+		$('div.toggle12').hide(); 
+		$('div.reveal12').click(function() { 
+			$('div.toggle12').slideToggle(400);
+			return false; 
+		});	
+
+		$('div.toggle13').hide(); 
+		$('div.reveal13').click(function() { 
+			$('div.toggle13').slideToggle(400);
+			return false; 
+		});	
+
+		$('div.toggle14').hide(); 
+		$('div.reveal14').click(function() { 
+			$('div.toggle14').slideToggle(400);
+			return false; 
+		});	
+});
+</script>
+</div>
+
+</div>
+
+
+
+
+<script language="javascript" type="text/javascript">
+function toggleMenu(objID) {
+  if (!document.getElementById) return;
+  var ob = document.getElementById(objID);
+  ob.className = (ob.className == 'selected')?'': 'selected';
+}
+function toggleClass(id)
+{
+  var divtoggleClass= document.getElementById(id);
+  divtoggleClass.className = (divtoggleClass.className == 'mO')?'mC': 'mO';
+  return false;
+}
+function changeAlt(id)
+{
+  id.alt = (id.alt == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+  id.title = (id.title == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+}
+</script>
+<!--Left Nav Starts -->
+
+
+	<ul>			  
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../contents/index.htm">
+		                  Resource Home  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../contents/part-i-the-fundamentals/index.htm">
+		                  Part I: The Fundamentals  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../contents/part-ii-inference-limit-theorems/index.htm">
+		                  Part II: Inference &amp; Limit Theorems  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="selected">
+			   			<a href="../../contents/part-iii-random-processes/index.htm">
+		                  Part III: Random Processes  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    
+		    
+         	
+	<!--second tal block close-->  
+	
+</ul>
+
+
+<!--Left Nav Ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </nav>
+           		     <main id="course_inner_section" aria-labelledby="section_title">
+           		     	
+	                    <p>The videos in Part III provide an introduction to both classical statistical methods and to random processes (Poisson processes and Markov chains).</p>
+<p>The textbook for this subject is <a href="http://www.amazon.com/exec/obidos/ASIN/188652923X/ref=nosim/mitopencourse-20"><img alt="Buy at Amazon" src="http://ocw.mit.edu/images/a_logo_17.gif" border="0" align="absMiddle"></a> Bertsekas, Dimitri, and John Tsitsiklis. <em>Introduction to Probability. </em>2nd ed. <a href="http://www.athenasc.com/">Athena Scientific</a>, 2008. ISBN: 9781886529236.</p>
+<p>The authors have made this <a href="../../contents/part-i-the-fundamentals/MITRES_6_012S18_Textbook.pdf">Selected Summary Material (PDF)</a> available for OCW users.</p>
+<p>L = Lecture Content</p>
+<p>S = Supplemental Content</p>
+<div class="maintabletemplate">
+<table class="tablewidth100" summary="See table caption for summary.">
+    <caption class="invisible">Course videos.</caption>  
+    <thead>
+        <tr>
+            <th scope="col" width="470">SES # &amp; TOPICS</th>
+            <th scope="col" width="315">SLIDES</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr class="row">
+            <td colspan="2"><strong>Lecture 21: The Bernoulli Process</strong></td>
+        </tr>
+        <tr class="alt-row">
+            <td>
+            <div class="reveal1">
+            <p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p>
+            </div>
+            <div style="display: none;" class="toggle1">
+            <p>L21.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed1 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/lecture-overview/HDvYPl8D8Bs.srt'}</script><a rel="popup_name1" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video1', 'embed1', 'player1','https://www.youtube.com/v/HDvYPl8D8Bs', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/HDvYPl8D8Bs/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/lecture-overview/HDvYPl8D8Bs.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name1">
+<div class="inline-video" id="video1"><div id="embed1" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed1transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382261, "embed1", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L21-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 5MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/lecture-overview/HDvYPl8D8Bs.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/lecture-overview/HDvYPl8D8Bs.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L21.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed2 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-bernoulli-process/lmHjUxi2EH4.srt'}</script><a rel="popup_name2" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video2', 'embed2', 'player2','https://www.youtube.com/v/lmHjUxi2EH4', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/lmHjUxi2EH4/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-bernoulli-process/lmHjUxi2EH4.srt', '');">The Bernoulli Process</a><div class="popup_block" id="popup_name2">
+<div class="inline-video" id="video2"><div id="embed2" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed2transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382264, "embed2", 0, 0)</script><p class="pop_margin_title">The Bernoulli Process</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L21-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 5MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-bernoulli-process/lmHjUxi2EH4.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-bernoulli-process/lmHjUxi2EH4.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L21.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed3 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/stochastic-processes/JYI5xKlH_MU.srt'}</script><a rel="popup_name3" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video3', 'embed3', 'player3','https://www.youtube.com/v/JYI5xKlH_MU', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/JYI5xKlH_MU/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/stochastic-processes/JYI5xKlH_MU.srt', '');">Stochastic Processes</a><div class="popup_block" id="popup_name3">
+<div class="inline-video" id="video3"><div id="embed3" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed3transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382266, "embed3", 0, 0)</script><p class="pop_margin_title">Stochastic Processes</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L21-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 8MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/stochastic-processes/JYI5xKlH_MU.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/stochastic-processes/JYI5xKlH_MU.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L21.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed4 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/review-of-known-properties-of-the-bernoulli-process/GwOklYjwHDI.srt'}</script><a rel="popup_name4" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video4', 'embed4', 'player4','https://www.youtube.com/v/GwOklYjwHDI', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/GwOklYjwHDI/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/review-of-known-properties-of-the-bernoulli-process/GwOklYjwHDI.srt', '');"> 	Review of Known Properties of the Bernoulli Process</a><div class="popup_block" id="popup_name4">
+<div class="inline-video" id="video4"><div id="embed4" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed4transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382265, "embed4", 0, 0)</script><p class="pop_margin_title"> 	Review of Known Properties of the Bernoulli Process</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L21-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 3MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/review-of-known-properties-of-the-bernoulli-process/GwOklYjwHDI.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/review-of-known-properties-of-the-bernoulli-process/GwOklYjwHDI.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L21.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed5 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-fresh-start-property/xi_iT9Rh434.srt'}</script><a rel="popup_name5" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video5', 'embed5', 'player5','https://www.youtube.com/v/xi_iT9Rh434', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/xi_iT9Rh434/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-fresh-start-property/xi_iT9Rh434.srt', '');">The Fresh Start Property</a><div class="popup_block" id="popup_name5">
+<div class="inline-video" id="video5"><div id="embed5" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed5transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382267, "embed5", 0, 0)</script><p class="pop_margin_title">The Fresh Start Property</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L21-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 18MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-fresh-start-property/xi_iT9Rh434.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-fresh-start-property/xi_iT9Rh434.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L21.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed6 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/example-the-distribution-of-a-busy-period/5kdv3r-YgK0.srt'}</script><a rel="popup_name6" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video6', 'embed6', 'player6','https://www.youtube.com/v/5kdv3r-YgK0', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/5kdv3r-YgK0/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/example-the-distribution-of-a-busy-period/5kdv3r-YgK0.srt', '');">Example: The Distribution of a Busy Period</a><div class="popup_block" id="popup_name6">
+<div class="inline-video" id="video6"><div id="embed6" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed6transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382268, "embed6", 0, 0)</script><p class="pop_margin_title">Example: The Distribution of a Busy Period</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L21-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 5MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/example-the-distribution-of-a-busy-period/5kdv3r-YgK0.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/example-the-distribution-of-a-busy-period/5kdv3r-YgK0.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L21.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed7 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-time-of-the-k-th-arrival/m-enGdJ-j8s.srt'}</script><a rel="popup_name7" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video7', 'embed7', 'player7','https://www.youtube.com/v/m-enGdJ-j8s', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/m-enGdJ-j8s/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-time-of-the-k-th-arrival/m-enGdJ-j8s.srt', '');">The Time of the K-th Arrival</a><div class="popup_block" id="popup_name7">
+<div class="inline-video" id="video7"><div id="embed7" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed7transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382269, "embed7", 0, 0)</script><p class="pop_margin_title">The Time of the K-th Arrival</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L21-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 9MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-time-of-the-k-th-arrival/m-enGdJ-j8s.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-time-of-the-k-th-arrival/m-enGdJ-j8s.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L21.8 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed8 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/merging-of-bernoulli-processes/AyCLokHV774.srt'}</script><a rel="popup_name8" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video8', 'embed8', 'player8','https://www.youtube.com/v/AyCLokHV774', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/AyCLokHV774/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/merging-of-bernoulli-processes/AyCLokHV774.srt', '');">Merging of Bernoulli Processes</a><div class="popup_block" id="popup_name8">
+<div class="inline-video" id="video8"><div id="embed8" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed8transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382270, "embed8", 0, 0)</script><p class="pop_margin_title">Merging of Bernoulli Processes</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L21-08_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 11MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/merging-of-bernoulli-processes/AyCLokHV774.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/merging-of-bernoulli-processes/AyCLokHV774.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L21.9 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed9 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/splitting-a-bernoulli-process/ozbtgvLKAqE.srt'}</script><a rel="popup_name9" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video9', 'embed9', 'player9','https://www.youtube.com/v/ozbtgvLKAqE', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/ozbtgvLKAqE/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/splitting-a-bernoulli-process/ozbtgvLKAqE.srt', '');">Splitting a Bernoulli Process</a><div class="popup_block" id="popup_name9">
+<div class="inline-video" id="video9"><div id="embed9" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed9transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382271, "embed9", 0, 0)</script><p class="pop_margin_title">Splitting a Bernoulli Process</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L21-09_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/splitting-a-bernoulli-process/ozbtgvLKAqE.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/splitting-a-bernoulli-process/ozbtgvLKAqE.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L21.10 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed10 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-poisson-approximation-to-the-binomial/fZ0bbrbNq58.srt'}</script><a rel="popup_name10" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video10', 'embed10', 'player10','https://www.youtube.com/v/fZ0bbrbNq58', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/fZ0bbrbNq58/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-poisson-approximation-to-the-binomial/fZ0bbrbNq58.srt', '');">The Poisson Approximation to the Binomial</a><div class="popup_block" id="popup_name10">
+<div class="inline-video" id="video10"><div id="embed10" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed10transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382272, "embed10", 0, 0)</script><p class="pop_margin_title">The Poisson Approximation to the Binomial</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L21-10_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 8MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-poisson-approximation-to-the-binomial/fZ0bbrbNq58.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-poisson-approximation-to-the-binomial/fZ0bbrbNq58.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            </div>
+            </td>
+            <td>
+            <p><a href="../../contents/part-iii-random-processes/MITRES_6_012S18_L21.pdf">Lecture 21 Slides (PDF - 1.7MB)</a></p>
+            <p><a href="../../contents/part-iii-random-processes/MITRES_6_012S18_L21AS.pdf">Lecture 21 Slides Annotated (PDF - 1.3MB)</a></p>
+            </td>
+        </tr>
+        <tr class="row">
+            <td colspan="2"><strong>Lecture 22: The Poisson Process Part I</strong></td>
+        </tr>
+        <tr class="alt-row">
+            <td>
+            <div class="reveal2">
+            <p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p>
+            </div>
+            <div style="display: none;" class="toggle2">
+            <p>L22.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed11 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/lecture-overview-1/RVc5hXzVFc4.srt'}</script><a rel="popup_name11" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video11', 'embed11', 'player11','https://www.youtube.com/v/RVc5hXzVFc4', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/RVc5hXzVFc4/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/lecture-overview-1/RVc5hXzVFc4.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name11">
+<div class="inline-video" id="video11"><div id="embed11" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed11transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382273, "embed11", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L22-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 4MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/lecture-overview-1/RVc5hXzVFc4.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/lecture-overview-1/RVc5hXzVFc4.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L22.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed12 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/definition-of-the-poisson-process/D_EGYzqmapc.srt'}</script><a rel="popup_name12" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video12', 'embed12', 'player12','https://www.youtube.com/v/D_EGYzqmapc', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/D_EGYzqmapc/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/definition-of-the-poisson-process/D_EGYzqmapc.srt', '');">Definition of the Poisson Process</a><div class="popup_block" id="popup_name12">
+<div class="inline-video" id="video12"><div id="embed12" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed12transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382274, "embed12", 0, 0)</script><p class="pop_margin_title">Definition of the Poisson Process</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L22-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/definition-of-the-poisson-process/D_EGYzqmapc.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/definition-of-the-poisson-process/D_EGYzqmapc.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L22.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed13 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/applications-of-the-poisson-process/PJExYLw0qtc.srt'}</script><a rel="popup_name13" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video13', 'embed13', 'player13','https://www.youtube.com/v/PJExYLw0qtc', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/PJExYLw0qtc/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/applications-of-the-poisson-process/PJExYLw0qtc.srt', '');">Applications of the Poisson Process</a><div class="popup_block" id="popup_name13">
+<div class="inline-video" id="video13"><div id="embed13" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed13transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382275, "embed13", 0, 0)</script><p class="pop_margin_title">Applications of the Poisson Process</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L22-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 4MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/applications-of-the-poisson-process/PJExYLw0qtc.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/applications-of-the-poisson-process/PJExYLw0qtc.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L22.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed14 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-poisson-pmf-for-the-number-of-arrivals/tzW5jlfEvwU.srt'}</script><a rel="popup_name14" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video14', 'embed14', 'player14','https://www.youtube.com/v/tzW5jlfEvwU', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/tzW5jlfEvwU/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-poisson-pmf-for-the-number-of-arrivals/tzW5jlfEvwU.srt', '');">The Poisson PMF for the Number of Arrivals</a><div class="popup_block" id="popup_name14">
+<div class="inline-video" id="video14"><div id="embed14" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed14transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382277, "embed14", 0, 0)</script><p class="pop_margin_title">The Poisson PMF for the Number of Arrivals</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L22-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 11MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-poisson-pmf-for-the-number-of-arrivals/tzW5jlfEvwU.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-poisson-pmf-for-the-number-of-arrivals/tzW5jlfEvwU.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L22.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed15 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-mean-and-variance-of-the-number-of-arrivals/2JoRO8Cydtc.srt'}</script><a rel="popup_name15" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video15', 'embed15', 'player15','https://www.youtube.com/v/2JoRO8Cydtc', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/2JoRO8Cydtc/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-mean-and-variance-of-the-number-of-arrivals/2JoRO8Cydtc.srt', '');">The Mean and Variance of the Number of Arrivals</a><div class="popup_block" id="popup_name15">
+<div class="inline-video" id="video15"><div id="embed15" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed15transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382276, "embed15", 0, 0)</script><p class="pop_margin_title">The Mean and Variance of the Number of Arrivals</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L22-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 6MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-mean-and-variance-of-the-number-of-arrivals/2JoRO8Cydtc.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-mean-and-variance-of-the-number-of-arrivals/2JoRO8Cydtc.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L22.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed16 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/a-simple-example/LJuVb-sxzoo.srt'}</script><a rel="popup_name16" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video16', 'embed16', 'player16','https://www.youtube.com/v/LJuVb-sxzoo', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/LJuVb-sxzoo/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/a-simple-example/LJuVb-sxzoo.srt', '');">A Simple Example</a><div class="popup_block" id="popup_name16">
+<div class="inline-video" id="video16"><div id="embed16" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed16transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382278, "embed16", 0, 0)</script><p class="pop_margin_title">A Simple Example</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L22-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 5MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/a-simple-example/LJuVb-sxzoo.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/a-simple-example/LJuVb-sxzoo.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L22.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed17 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/time-of-the-k2013th-arrival/6stYmO_N7LI.srt'}</script><a rel="popup_name17" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video17', 'embed17', 'player17','https://www.youtube.com/v/6stYmO_N7LI', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/6stYmO_N7LI/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/time-of-the-k2013th-arrival/6stYmO_N7LI.srt', '');">Time of the K–th Arrival</a><div class="popup_block" id="popup_name17">
+<div class="inline-video" id="video17"><div id="embed17" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed17transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382279, "embed17", 0, 0)</script><p class="pop_margin_title">Time of the K–th Arrival</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L22-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 14MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/time-of-the-k2013th-arrival/6stYmO_N7LI.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/time-of-the-k2013th-arrival/6stYmO_N7LI.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L22.8 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed18 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-fresh-start-property-and-its-implications/r_rzDNLODQw.srt'}</script><a rel="popup_name18" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video18', 'embed18', 'player18','https://www.youtube.com/v/r_rzDNLODQw', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/r_rzDNLODQw/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-fresh-start-property-and-its-implications/r_rzDNLODQw.srt', '');">The Fresh Start Property and Its Implications</a><div class="popup_block" id="popup_name18">
+<div class="inline-video" id="video18"><div id="embed18" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed18transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382281, "embed18", 0, 0)</script><p class="pop_margin_title">The Fresh Start Property and Its Implications</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L22-08_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 13MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-fresh-start-property-and-its-implications/r_rzDNLODQw.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-fresh-start-property-and-its-implications/r_rzDNLODQw.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L22.9 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed19 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/summary-of-results/jXf5Sz7V87I.srt'}</script><a rel="popup_name19" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video19', 'embed19', 'player19','https://www.youtube.com/v/jXf5Sz7V87I', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/jXf5Sz7V87I/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/summary-of-results/jXf5Sz7V87I.srt', '');">Summary of Results</a><div class="popup_block" id="popup_name19">
+<div class="inline-video" id="video19"><div id="embed19" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed19transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382280, "embed19", 0, 0)</script><p class="pop_margin_title">Summary of Results</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L22-09_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 3MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/summary-of-results/jXf5Sz7V87I.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/summary-of-results/jXf5Sz7V87I.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L22.10 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed20 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/an-example/MvGuBQZZuLM.srt'}</script><a rel="popup_name20" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video20', 'embed20', 'player20','https://www.youtube.com/v/MvGuBQZZuLM', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/MvGuBQZZuLM/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/an-example/MvGuBQZZuLM.srt', '');">An Example</a><div class="popup_block" id="popup_name20">
+<div class="inline-video" id="video20"><div id="embed20" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed20transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382283, "embed20", 0, 0)</script><p class="pop_margin_title">An Example</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L22-10_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 21MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/an-example/MvGuBQZZuLM.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/an-example/MvGuBQZZuLM.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            </div>
+            </td>
+            <td>
+            <p><img alt="This resource may not render correctly in a screen reader." src="../../common/images/inacessible.gif"><a href="../../contents/part-iii-random-processes/MITRES_6_012S18_L22.pdf">Lecture 22 Slides (PDF - 4.6MB)</a></p>
+            <p><a href="../../contents/part-iii-random-processes/MITRES_6_012S18_L22AS.pdf">Lecture 22 Slides Annotated (PDF - 1.5MB)</a></p>
+            </td>
+        </tr>
+        <tr class="row">
+            <td colspan="2"><strong>Lecture 23: The Poisson Process Part II</strong></td>
+        </tr>
+        <tr class="alt-row">
+            <td>
+            <div class="reveal3">
+            <p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p>
+            </div>
+            <div style="display: none;" class="toggle3">
+            <p>L23.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed21 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/lecture-overview-2/7wqaa4uqwao.srt'}</script><a rel="popup_name21" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video21', 'embed21', 'player21','https://www.youtube.com/v/7wqaa4uqwao', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/7wqaa4uqwao/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/lecture-overview-2/7wqaa4uqwao.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name21">
+<div class="inline-video" id="video21"><div id="embed21" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed21transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382282, "embed21", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L23-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 4MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/lecture-overview-2/7wqaa4uqwao.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/lecture-overview-2/7wqaa4uqwao.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L23.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed22 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-sum-of-independent-poisson-random-variables/IX9ajyOxI.srt'}</script><a rel="popup_name22" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video22', 'embed22', 'player22','https://www.youtube.com/v/_IX_9ajyOxI', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/_IX_9ajyOxI/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-sum-of-independent-poisson-random-variables/IX9ajyOxI.srt', '');">The Sum of Independent Poisson Random Variables</a><div class="popup_block" id="popup_name22">
+<div class="inline-video" id="video22"><div id="embed22" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed22transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382284, "embed22", 0, 0)</script><p class="pop_margin_title">The Sum of Independent Poisson Random Variables</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L23-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-sum-of-independent-poisson-random-variables/IX9ajyOxI.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-sum-of-independent-poisson-random-variables/IX9ajyOxI.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L23.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed23 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/merging-independent-poisson-processes/XWKXOUvqC-U.srt'}</script><a rel="popup_name23" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video23', 'embed23', 'player23','https://www.youtube.com/v/XWKXOUvqC-U', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/XWKXOUvqC-U/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/merging-independent-poisson-processes/XWKXOUvqC-U.srt', '');">Merging Independent Poisson Processes</a><div class="popup_block" id="popup_name23">
+<div class="inline-video" id="video23"><div id="embed23" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed23transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382285, "embed23", 0, 0)</script><p class="pop_margin_title">Merging Independent Poisson Processes</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L23-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 10MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/merging-independent-poisson-processes/XWKXOUvqC-U.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/merging-independent-poisson-processes/XWKXOUvqC-U.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L23.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed24 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/where-is-an-arrival-of-the-merged-process-coming-from/mgAhDIdbUK8.srt'}</script><a rel="popup_name24" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video24', 'embed24', 'player24','https://www.youtube.com/v/mgAhDIdbUK8', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/mgAhDIdbUK8/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/where-is-an-arrival-of-the-merged-process-coming-from/mgAhDIdbUK8.srt', '');">Where is an Arrival of the Merged Process Coming From?</a><div class="popup_block" id="popup_name24">
+<div class="inline-video" id="video24"><div id="embed24" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed24transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382286, "embed24", 0, 0)</script><p class="pop_margin_title">Where is an Arrival of the Merged Process Coming From?</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L23-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 6MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/where-is-an-arrival-of-the-merged-process-coming-from/mgAhDIdbUK8.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/where-is-an-arrival-of-the-merged-process-coming-from/mgAhDIdbUK8.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L23.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed25 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-time-until-the-first-or-last-lightbulb-burns-out/xDN5Onmu0mk.srt'}</script><a rel="popup_name25" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video25', 'embed25', 'player25','https://www.youtube.com/v/xDN5Onmu0mk', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/xDN5Onmu0mk/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-time-until-the-first-or-last-lightbulb-burns-out/xDN5Onmu0mk.srt', '');">The Time Until the First (or Last) Lightbulb Burns Out</a><div class="popup_block" id="popup_name25">
+<div class="inline-video" id="video25"><div id="embed25" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed25transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382289, "embed25", 0, 0)</script><p class="pop_margin_title">The Time Until the First (or Last) Lightbulb Burns Out</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L23-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 16MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-time-until-the-first-or-last-lightbulb-burns-out/xDN5Onmu0mk.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-time-until-the-first-or-last-lightbulb-burns-out/xDN5Onmu0mk.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L23.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed26 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/splitting-a-poisson-process/eV0kTm1h7mQ.srt'}</script><a rel="popup_name26" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video26', 'embed26', 'player26','https://www.youtube.com/v/eV0kTm1h7mQ', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/eV0kTm1h7mQ/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/splitting-a-poisson-process/eV0kTm1h7mQ.srt', '');">Splitting a Poisson Process</a><div class="popup_block" id="popup_name26">
+<div class="inline-video" id="video26"><div id="embed26" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed26transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382287, "embed26", 0, 0)</script><p class="pop_margin_title">Splitting a Poisson Process</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L23-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 6MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/splitting-a-poisson-process/eV0kTm1h7mQ.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/splitting-a-poisson-process/eV0kTm1h7mQ.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L23.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed27 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/random-incidence-in-the-poisson-process/sG3_Bveu_cA.srt'}</script><a rel="popup_name27" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video27', 'embed27', 'player27','https://www.youtube.com/v/sG3_Bveu_cA', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/sG3_Bveu_cA/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/random-incidence-in-the-poisson-process/sG3_Bveu_cA.srt', '');">Random Incidence in the Poisson Process</a><div class="popup_block" id="popup_name27">
+<div class="inline-video" id="video27"><div id="embed27" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed27transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382296, "embed27", 0, 0)</script><p class="pop_margin_title">Random Incidence in the Poisson Process</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L23-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 16MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/random-incidence-in-the-poisson-process/sG3_Bveu_cA.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/random-incidence-in-the-poisson-process/sG3_Bveu_cA.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L23.8 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed28 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/random-incidence-in-a-non2013poisson-process/aS1o7uTaLF0.srt'}</script><a rel="popup_name28" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video28', 'embed28', 'player28','https://www.youtube.com/v/aS1o7uTaLF0', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/aS1o7uTaLF0/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/random-incidence-in-a-non2013poisson-process/aS1o7uTaLF0.srt', '');">Random Incidence in a Non–Poisson Process</a><div class="popup_block" id="popup_name28">
+<div class="inline-video" id="video28"><div id="embed28" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed28transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382288, "embed28", 0, 0)</script><p class="pop_margin_title">Random Incidence in a Non–Poisson Process</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L23-08_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/random-incidence-in-a-non2013poisson-process/aS1o7uTaLF0.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/random-incidence-in-a-non2013poisson-process/aS1o7uTaLF0.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L23.9 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed29 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/different-sampling-methods-can-give-different-results/GkD5tIgc-Bo.srt'}</script><a rel="popup_name29" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video29', 'embed29', 'player29','https://www.youtube.com/v/GkD5tIgc-Bo', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/GkD5tIgc-Bo/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/different-sampling-methods-can-give-different-results/GkD5tIgc-Bo.srt', '');">Different Sampling Methods Can Give Different Results</a><div class="popup_block" id="popup_name29">
+<div class="inline-video" id="video29"><div id="embed29" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed29transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382290, "embed29", 0, 0)</script><p class="pop_margin_title">Different Sampling Methods Can Give Different Results</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L23-09_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 6MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/different-sampling-methods-can-give-different-results/GkD5tIgc-Bo.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/different-sampling-methods-can-give-different-results/GkD5tIgc-Bo.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>S23.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed30 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/poisson-versus-normal-approximations-to-the-binomial/t_EcSVTWmwk.srt'}</script><a rel="popup_name30" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video30', 'embed30', 'player30','https://www.youtube.com/v/t_EcSVTWmwk', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/t_EcSVTWmwk/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/poisson-versus-normal-approximations-to-the-binomial/t_EcSVTWmwk.srt', '');">Poisson Versus Normal Approximations to the Binomial</a><div class="popup_block" id="popup_name30">
+<div class="inline-video" id="video30"><div id="embed30" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed30transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382338, "embed30", 0, 0)</script><p class="pop_margin_title">Poisson Versus Normal Approximations to the Binomial</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_S23-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 11MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/poisson-versus-normal-approximations-to-the-binomial/t_EcSVTWmwk.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/poisson-versus-normal-approximations-to-the-binomial/t_EcSVTWmwk.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>S23.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed31 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/poisson-arrivals-during-an-exponential-interval/3vMZtGUdTVw.srt'}</script><a rel="popup_name31" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video31', 'embed31', 'player31','https://www.youtube.com/v/3vMZtGUdTVw', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/3vMZtGUdTVw/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/poisson-arrivals-during-an-exponential-interval/3vMZtGUdTVw.srt', '');">Poisson Arrivals During an Exponential Interval</a><div class="popup_block" id="popup_name31">
+<div class="inline-video" id="video31"><div id="embed31" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed31transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382342, "embed31", 0, 0)</script><p class="pop_margin_title">Poisson Arrivals During an Exponential Interval</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_S23-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 13MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/poisson-arrivals-during-an-exponential-interval/3vMZtGUdTVw.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/poisson-arrivals-during-an-exponential-interval/3vMZtGUdTVw.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            </div>
+            </td>
+            <td>
+            <p><img alt="This resource may not render correctly in a screen reader." src="../../common/images/inacessible.gif"><a href="../../contents/part-iii-random-processes/MITRES_6_012S18_L23.pdf">Lecture 23 Slides (PDF - 3.0MB)</a></p>
+            <p><a href="../../contents/part-iii-random-processes/MITRES_6_012S18_L23AS.pdf">Lecture 23 Slides Annotated (PDF - 1.2MB)</a></p>
+            </td>
+        </tr>
+        <tr class="row">
+            <td colspan="2"><strong>Lecture 24: Finite-State Markov Chains</strong></td>
+        </tr>
+        <tr class="alt-row">
+            <td>
+            <div class="reveal4">
+            <p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p>
+            </div>
+            <div style="display: none;" class="toggle4">
+            <p>L24.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed32 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/lecture-overview-3/LBiYeL4qD2M.srt'}</script><a rel="popup_name32" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video32', 'embed32', 'player32','https://www.youtube.com/v/LBiYeL4qD2M', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/LBiYeL4qD2M/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/lecture-overview-3/LBiYeL4qD2M.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name32">
+<div class="inline-video" id="video32"><div id="embed32" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed32transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382291, "embed32", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L24-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 5MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/lecture-overview-3/LBiYeL4qD2M.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/lecture-overview-3/LBiYeL4qD2M.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L24.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed33 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/introduction-to-markov-processes/K-ck5dOsPgQ.srt'}</script><a rel="popup_name33" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video33', 'embed33', 'player33','https://www.youtube.com/v/K-ck5dOsPgQ', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/K-ck5dOsPgQ/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/introduction-to-markov-processes/K-ck5dOsPgQ.srt', '');">Introduction to Markov Processes</a><div class="popup_block" id="popup_name33">
+<div class="inline-video" id="video33"><div id="embed33" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed33transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382292, "embed33", 0, 0)</script><p class="pop_margin_title">Introduction to Markov Processes</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L24-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 2MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/introduction-to-markov-processes/K-ck5dOsPgQ.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/introduction-to-markov-processes/K-ck5dOsPgQ.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L24.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed34 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/checkout-counter-example/VCyJGp6Enxg.srt'}</script><a rel="popup_name34" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video34', 'embed34', 'player34','https://www.youtube.com/v/VCyJGp6Enxg', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/VCyJGp6Enxg/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/checkout-counter-example/VCyJGp6Enxg.srt', '');">Checkout Counter Example</a><div class="popup_block" id="popup_name34">
+<div class="inline-video" id="video34"><div id="embed34" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed34transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382294, "embed34", 0, 0)</script><p class="pop_margin_title">Checkout Counter Example</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L24-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 16MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/checkout-counter-example/VCyJGp6Enxg.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/checkout-counter-example/VCyJGp6Enxg.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L24.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed59 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/discrete-time-finite-state-marko-chains/hsQnmrHbbms.srt'}</script><a rel="popup_name59" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video59', 'embed59', 'player59','https://www.youtube.com/v/hsQnmrHbbms', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/hsQnmrHbbms/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/discrete-time-finite-state-marko-chains/hsQnmrHbbms.srt', '');">Discrete-Time Finite-State Markov Chains</a><div class="popup_block" id="popup_name59">
+<div class="inline-video" id="video59"><div id="embed59" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed59transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382295, "embed59", 0, 0)</script><p class="pop_margin_title">Discrete-Time Finite-State Markov Chains</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L24-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 10MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/discrete-time-finite-state-marko-chains/hsQnmrHbbms.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/discrete-time-finite-state-marko-chains/hsQnmrHbbms.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L24.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed35 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/n2013step-transition-probabilities/UwwqPwp16_0.srt'}</script><a rel="popup_name35" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video35', 'embed35', 'player35','https://www.youtube.com/v/UwwqPwp16_0', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/UwwqPwp16_0/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/n2013step-transition-probabilities/UwwqPwp16_0.srt', '');">N–Step Transition Probabilities</a><div class="popup_block" id="popup_name35">
+<div class="inline-video" id="video35"><div id="embed35" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed35transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382293, "embed35", 0, 0)</script><p class="pop_margin_title">N–Step Transition Probabilities</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L24-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 15MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/n2013step-transition-probabilities/UwwqPwp16_0.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/n2013step-transition-probabilities/UwwqPwp16_0.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L24.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed36 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/a-numerical-example-2014-part-i/l6YYHaV1aGc.srt'}</script><a rel="popup_name36" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video36', 'embed36', 'player36','https://www.youtube.com/v/l6YYHaV1aGc', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/l6YYHaV1aGc/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/a-numerical-example-2014-part-i/l6YYHaV1aGc.srt', '');">A Numerical Example — Part I</a><div class="popup_block" id="popup_name36">
+<div class="inline-video" id="video36"><div id="embed36" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed36transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382298, "embed36", 0, 0)</script><p class="pop_margin_title">A Numerical Example — Part I</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L24-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 14MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/a-numerical-example-2014-part-i/l6YYHaV1aGc.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/a-numerical-example-2014-part-i/l6YYHaV1aGc.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L24.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed38 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/generic-convergenc-questions/h2w1tTTltrU.srt'}</script><a rel="popup_name38" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video38', 'embed38', 'player38','https://www.youtube.com/v/h2w1tTTltrU', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/h2w1tTTltrU/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/generic-convergenc-questions/h2w1tTTltrU.srt', '');">Generic Convergence Questions</a><div class="popup_block" id="popup_name38">
+<div class="inline-video" id="video38"><div id="embed38" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed38transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382300, "embed38", 0, 0)</script><p class="pop_margin_title">Generic Convergence Questions</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L24-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 8MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/generic-convergenc-questions/h2w1tTTltrU.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/generic-convergenc-questions/h2w1tTTltrU.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L24.8 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed37 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/recurrent-and-transient-states/wSQaYn2h-e8.srt'}</script><a rel="popup_name37" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video37', 'embed37', 'player37','https://www.youtube.com/v/wSQaYn2h-e8', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/wSQaYn2h-e8/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/recurrent-and-transient-states/wSQaYn2h-e8.srt', '');">Recurrent and Transient States</a><div class="popup_block" id="popup_name37">
+<div class="inline-video" id="video37"><div id="embed37" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed37transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382297, "embed37", 0, 0)</script><p class="pop_margin_title">Recurrent and Transient States</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L24-08_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/recurrent-and-transient-states/wSQaYn2h-e8.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/recurrent-and-transient-states/wSQaYn2h-e8.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            </div>
+            </td>
+            <td>
+            <p><a href="../../contents/part-iii-random-processes/MITRES_6_012S18_L24.pdf">Lecture 24 Slides (PDF)</a></p>
+            <p><a href="../../contents/part-iii-random-processes/MITRES_6_012S18_L24AS.pdf">Lecture 24 Slides Annotated (PDF)</a></p>
+            </td>
+        </tr>
+        <tr class="row">
+            <td colspan="2"><strong>Lecture 25: Steady–State Behavior of Markov Chains</strong></td>
+        </tr>
+        <tr class="alt-row">
+            <td>
+            <div class="reveal5">
+            <p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p>
+            </div>
+            <div style="display: none;" class="toggle5">
+            <p>L25.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed48 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/brief-introduction-1/N61FzRr2so0.srt'}</script><a rel="popup_name48" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video48', 'embed48', 'player48','https://www.youtube.com/v/N61FzRr2so0', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/N61FzRr2so0/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/brief-introduction-1/N61FzRr2so0.srt', '');">Brief Introduction</a><div class="popup_block" id="popup_name48">
+<div class="inline-video" id="video48"><div id="embed48" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed48transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382299, "embed48", 0, 0)</script><p class="pop_margin_title">Brief Introduction</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L25-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 4MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/brief-introduction-1/N61FzRr2so0.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/brief-introduction-1/N61FzRr2so0.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L25.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed49 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/lecture-overview-5/uviHu6m_YnM.srt'}</script><a rel="popup_name49" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video49', 'embed49', 'player49','https://www.youtube.com/v/uviHu6m_YnM', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/uviHu6m_YnM/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/lecture-overview-5/uviHu6m_YnM.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name49">
+<div class="inline-video" id="video49"><div id="embed49" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed49transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382301, "embed49", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L25-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 2MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/lecture-overview-5/uviHu6m_YnM.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/lecture-overview-5/uviHu6m_YnM.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L25.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed50 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/markov-chain-review/cph71QcwHeQ.srt'}</script><a rel="popup_name50" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video50', 'embed50', 'player50','https://www.youtube.com/v/cph71QcwHeQ', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/cph71QcwHeQ/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/markov-chain-review/cph71QcwHeQ.srt', '');">Markov Chain Review</a><div class="popup_block" id="popup_name50">
+<div class="inline-video" id="video50"><div id="embed50" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed50transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382302, "embed50", 0, 0)</script><p class="pop_margin_title">Markov Chain Review</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L25-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 12MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/markov-chain-review/cph71QcwHeQ.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/markov-chain-review/cph71QcwHeQ.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L25.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed51 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-probability-of-a-path/8QyQSZQ4uKQ.srt'}</script><a rel="popup_name51" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video51', 'embed51', 'player51','https://www.youtube.com/v/8QyQSZQ4uKQ', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/8QyQSZQ4uKQ/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/the-probability-of-a-path/8QyQSZQ4uKQ.srt', '');">The Probability of a Path</a><div class="popup_block" id="popup_name51">
+<div class="inline-video" id="video51"><div id="embed51" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed51transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382303, "embed51", 0, 0)</script><p class="pop_margin_title">The Probability of a Path</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L25-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 13MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-probability-of-a-path/8QyQSZQ4uKQ.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/the-probability-of-a-path/8QyQSZQ4uKQ.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L25.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed52 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/recurrent-and-transient-states-review/UcKhhEc_LyQ.srt'}</script><a rel="popup_name52" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video52', 'embed52', 'player52','https://www.youtube.com/v/UcKhhEc_LyQ', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/UcKhhEc_LyQ/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/recurrent-and-transient-states-review/UcKhhEc_LyQ.srt', '');">Recurrent and Transient States: Review</a><div class="popup_block" id="popup_name52">
+<div class="inline-video" id="video52"><div id="embed52" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed52transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382305, "embed52", 0, 0)</script><p class="pop_margin_title">Recurrent and Transient States: Review</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L25-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 6MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/recurrent-and-transient-states-review/UcKhhEc_LyQ.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/recurrent-and-transient-states-review/UcKhhEc_LyQ.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L25.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed53 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/periodic-states/TWedESDFcLQ.srt'}</script><a rel="popup_name53" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video53', 'embed53', 'player53','https://www.youtube.com/v/TWedESDFcLQ', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/TWedESDFcLQ/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/periodic-states/TWedESDFcLQ.srt', '');">Periodic States</a><div class="popup_block" id="popup_name53">
+<div class="inline-video" id="video53"><div id="embed53" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed53transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382304, "embed53", 0, 0)</script><p class="pop_margin_title">Periodic States</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L25-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 10MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/periodic-states/TWedESDFcLQ.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/periodic-states/TWedESDFcLQ.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L25.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed54 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/steady-state-probabilities-and-convergence/99yuPxvdfP8.srt'}</script><a rel="popup_name54" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video54', 'embed54', 'player54','https://www.youtube.com/v/99yuPxvdfP8', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/99yuPxvdfP8/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/steady-state-probabilities-and-convergence/99yuPxvdfP8.srt', '');">Steady-State Probabilities and Convergence</a><div class="popup_block" id="popup_name54">
+<div class="inline-video" id="video54"><div id="embed54" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed54transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382308, "embed54", 0, 0)</script><p class="pop_margin_title">Steady-State Probabilities and Convergence</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L25-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 19MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/steady-state-probabilities-and-convergence/99yuPxvdfP8.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/steady-state-probabilities-and-convergence/99yuPxvdfP8.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L25.8 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed55 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/a-numerical-example-2014-part-ii/cQtCpJyl77o.srt'}</script><a rel="popup_name55" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video55', 'embed55', 'player55','https://www.youtube.com/v/cQtCpJyl77o', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/cQtCpJyl77o/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/a-numerical-example-2014-part-ii/cQtCpJyl77o.srt', '');">A Numerical Example — Part II</a><div class="popup_block" id="popup_name55">
+<div class="inline-video" id="video55"><div id="embed55" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed55transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382307, "embed55", 0, 0)</script><p class="pop_margin_title">A Numerical Example — Part II</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L25-08_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/a-numerical-example-2014-part-ii/cQtCpJyl77o.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/a-numerical-example-2014-part-ii/cQtCpJyl77o.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L25.9 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed56 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/visit-frequency-interpretation-of-steady-state-probabilities/c-BLp-585aU.srt'}</script><a rel="popup_name56" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video56', 'embed56', 'player56','https://www.youtube.com/v/c-BLp-585aU', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/c-BLp-585aU/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/visit-frequency-interpretation-of-steady-state-probabilities/c-BLp-585aU.srt', '');">Visit Frequency Interpretation of Steady-State Probabilities</a><div class="popup_block" id="popup_name56">
+<div class="inline-video" id="video56"><div id="embed56" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed56transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382306, "embed56", 0, 0)</script><p class="pop_margin_title">Visit Frequency Interpretation of Steady-State Probabilities</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L25-09_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 9MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/visit-frequency-interpretation-of-steady-state-probabilities/c-BLp-585aU.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/visit-frequency-interpretation-of-steady-state-probabilities/c-BLp-585aU.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L25.10 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed57 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/birth-death-processes-2014-part-i/XKYpKYspe1w.srt'}</script><a rel="popup_name57" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video57', 'embed57', 'player57','https://www.youtube.com/v/XKYpKYspe1w', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/XKYpKYspe1w/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/birth-death-processes-2014-part-i/XKYpKYspe1w.srt', '');">Birth-Death Processes — Part I</a><div class="popup_block" id="popup_name57">
+<div class="inline-video" id="video57"><div id="embed57" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed57transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382309, "embed57", 0, 0)</script><p class="pop_margin_title">Birth-Death Processes — Part I</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L25-10_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 15MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/birth-death-processes-2014-part-i/XKYpKYspe1w.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/birth-death-processes-2014-part-i/XKYpKYspe1w.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L25.11 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed58 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/birth-death-processes-2014-part-ii/KdAsNQVdaNk.srt'}</script><a rel="popup_name58" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video58', 'embed58', 'player58','https://www.youtube.com/v/KdAsNQVdaNk', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/KdAsNQVdaNk/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/birth-death-processes-2014-part-ii/KdAsNQVdaNk.srt', '');">Birth-Death Processes — Part II</a><div class="popup_block" id="popup_name58">
+<div class="inline-video" id="video58"><div id="embed58" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed58transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382310, "embed58", 0, 0)</script><p class="pop_margin_title">Birth-Death Processes — Part II</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L25-11_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 12MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/birth-death-processes-2014-part-ii/KdAsNQVdaNk.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/birth-death-processes-2014-part-ii/KdAsNQVdaNk.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            </div>
+            </td>
+            <td>
+            <p><a href="../../contents/part-iii-random-processes/MITRES_6_012S18_L25.pdf">Lecture 25 Slides (PDF)</a></p>
+            <p><a href="../../contents/part-iii-random-processes/MITRES_6_012S18_L25AS.pdf">Lecture 25 Slides Annotated (PDF - 1.2MB)</a></p>
+            </td>
+        </tr>
+        <tr class="row">
+            <td colspan="2"><strong>Lecture 26: Absorption Probabilities and Expected Time to Absorption</strong></td>
+        </tr>
+        <tr class="alt-row">
+            <td>
+            <div class="reveal6">
+            <p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p>
+            </div>
+            <div style="display: none;" class="toggle6">
+            <p>L26.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed39 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/brief-introduction/Xa6-qJvZkUg.srt'}</script><a rel="popup_name39" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video39', 'embed39', 'player39','https://www.youtube.com/v/Xa6-qJvZkUg', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/Xa6-qJvZkUg/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/brief-introduction/Xa6-qJvZkUg.srt', '');">Brief Introduction</a><div class="popup_block" id="popup_name39">
+<div class="inline-video" id="video39"><div id="embed39" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed39transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382312, "embed39", 0, 0)</script><p class="pop_margin_title">Brief Introduction</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L26-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 4MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/brief-introduction/Xa6-qJvZkUg.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/brief-introduction/Xa6-qJvZkUg.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L26.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed40 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/lecture-overview-4/UZOT_ddWpco.srt'}</script><a rel="popup_name40" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video40', 'embed40', 'player40','https://www.youtube.com/v/UZOT_ddWpco', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/UZOT_ddWpco/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/lecture-overview-4/UZOT_ddWpco.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name40">
+<div class="inline-video" id="video40"><div id="embed40" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed40transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382313, "embed40", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L26-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 1MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/lecture-overview-4/UZOT_ddWpco.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/lecture-overview-4/UZOT_ddWpco.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L26.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed41 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/review-of-steady-state-behavior/rRwWYRh8Ypg.srt'}</script><a rel="popup_name41" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video41', 'embed41', 'player41','https://www.youtube.com/v/rRwWYRh8Ypg', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/rRwWYRh8Ypg/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/review-of-steady-state-behavior/rRwWYRh8Ypg.srt', '');">Review of Steady-State Behavior</a><div class="popup_block" id="popup_name41">
+<div class="inline-video" id="video41"><div id="embed41" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed41transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382311, "embed41", 0, 0)</script><p class="pop_margin_title">Review of Steady-State Behavior</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L26-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 18MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/review-of-steady-state-behavior/rRwWYRh8Ypg.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/review-of-steady-state-behavior/rRwWYRh8Ypg.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L26.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed42 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/a-numerical-example-2014-part-iii/XsowwurOvH0.srt'}</script><a rel="popup_name42" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video42', 'embed42', 'player42','https://www.youtube.com/v/XsowwurOvH0', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/XsowwurOvH0/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/a-numerical-example-2014-part-iii/XsowwurOvH0.srt', '');">A Numerical Example — Part III</a><div class="popup_block" id="popup_name42">
+<div class="inline-video" id="video42"><div id="embed42" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed42transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382316, "embed42", 0, 0)</script><p class="pop_margin_title">A Numerical Example — Part III</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L26-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 17MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/a-numerical-example-2014-part-iii/XsowwurOvH0.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/a-numerical-example-2014-part-iii/XsowwurOvH0.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L26.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed43 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/design-of-a-phone-system/85le_VkEK5A.srt'}</script><a rel="popup_name43" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video43', 'embed43', 'player43','https://www.youtube.com/v/85le_VkEK5A', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/85le_VkEK5A/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/design-of-a-phone-system/85le_VkEK5A.srt', '');">Design of a Phone System</a><div class="popup_block" id="popup_name43">
+<div class="inline-video" id="video43"><div id="embed43" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed43transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382314, "embed43", 0, 0)</script><p class="pop_margin_title">Design of a Phone System</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L26-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 26MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/design-of-a-phone-system/85le_VkEK5A.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/design-of-a-phone-system/85le_VkEK5A.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L26.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed44 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/absorption-probabilities/vEsUsaK1HBk.srt'}</script><a rel="popup_name44" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video44', 'embed44', 'player44','https://www.youtube.com/v/vEsUsaK1HBk', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/vEsUsaK1HBk/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/absorption-probabilities/vEsUsaK1HBk.srt', '');">Absorption Probabilities</a><div class="popup_block" id="popup_name44">
+<div class="inline-video" id="video44"><div id="embed44" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed44transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382315, "embed44", 0, 0)</script><p class="pop_margin_title">Absorption Probabilities</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L26-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 17MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/absorption-probabilities/vEsUsaK1HBk.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/absorption-probabilities/vEsUsaK1HBk.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L26.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed45 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/expected-time-to-absorption/iUF135CGTeI.srt'}</script><a rel="popup_name45" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video45', 'embed45', 'player45','https://www.youtube.com/v/iUF135CGTeI', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/iUF135CGTeI/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/expected-time-to-absorption/iUF135CGTeI.srt', '');">Expected Time to Absorption</a><div class="popup_block" id="popup_name45">
+<div class="inline-video" id="video45"><div id="embed45" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed45transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382318, "embed45", 0, 0)</script><p class="pop_margin_title">Expected Time to Absorption</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L26-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 17MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/expected-time-to-absorption/iUF135CGTeI.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/expected-time-to-absorption/iUF135CGTeI.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L26.8 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed46 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/mean-first-passage-time/BW_EHmZf2pM.srt'}</script><a rel="popup_name46" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video46', 'embed46', 'player46','https://www.youtube.com/v/BW_EHmZf2pM', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/BW_EHmZf2pM/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/mean-first-passage-time/BW_EHmZf2pM.srt', '');">Mean First Passage Time</a><div class="popup_block" id="popup_name46">
+<div class="inline-video" id="video46"><div id="embed46" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed46transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382317, "embed46", 0, 0)</script><p class="pop_margin_title">Mean First Passage Time</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L26-08_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 12MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/mean-first-passage-time/BW_EHmZf2pM.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/mean-first-passage-time/BW_EHmZf2pM.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            <p>L26.9 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed47 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/gamblers-ruin/Ne2lmAZI4-I.srt'}</script><a rel="popup_name47" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video47', 'embed47', 'player47','https://www.youtube.com/v/Ne2lmAZI4-I', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes', 'https://img.youtube.com/vi/Ne2lmAZI4-I/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-iii-random-processes/gamblers-ruin/Ne2lmAZI4-I.srt', '');">Gambler's Ruin</a><div class="popup_block" id="popup_name47">
+<div class="inline-video" id="video47"><div id="embed47" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed47transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382321, "embed47", 0, 0)</script><p class="pop_margin_title">Gambler's Ruin</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L26-09_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 17MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/gamblers-ruin/Ne2lmAZI4-I.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-iii-random-processes/gamblers-ruin/Ne2lmAZI4-I.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+            </div>
+            </td>
+            <td>
+            <p><a href="../../contents/part-iii-random-processes/MITRES_6_012S18_L26.pdf">Lecture 26 Slides (PDF - 1.1MB)</a></p>
+            <p><a href="../../contents/part-iii-random-processes/MITRES_6_012S18_L26AS.pdf">Lecture 26 Slides Annotated (PDF - 1.2MB)</a></p>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+</div>    
+	                    
+    
+    
+    
+
+
+	        			
+	                    
+	                    
+	                    
+	                    
+
+    			    </main><!--Course_inner_section tag close -->
+           		     <div class="clear"></div>
+ 				 </div>
+<!--Course_wrapper tag close -->             
+ 			 </div>
+<!--left tag close -->
+ 			                 
+         </div>
+<!--grid tag close --> 
+      </div>
+		
+		<footer id="bottom">
+			<div id="grid">
+				
+<div id="portletwrapper-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572" class="portletWrapper kssattr-portlethash-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572">
+<div class="portletStaticText portlet-static-site-footer"><div id="footer">
+<nav aria-label="Footer">     <nav id="foot-c1" class="grid_2 alpha" aria-labelledby="f-find-courses">       <span class="footer" id="f-find-courses" aria-hidden="true">Find Courses</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/">Find by Topic</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-number/">Find by Course Number</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-department/">Find by Department</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/new-courses/">New Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/audio-video-courses/">Audio/Video Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/instructor-insights/">Instructor Insights</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/resources/">Supplemental Resources</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/mitx-related-courseware/">MITx &amp; Related OCW Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/">Translated Courses</a></li>
+</ul>
+</nav>
+<div id="foot-c2" class="grid_2"><nav aria-labelledby="f-for-educators">         <span id="f-for-educators" class="footer" aria-hidden="true">For Educators</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=instructional&amp;utm_campaign=Educator&amp;utm_source=footer&amp;utm_medium=find-courses&amp;utm_content=approaches">Search for Instructor Insights</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=teaching&amp;utm_campaign=Educator&amp;utm_source=footer&amp;utm_medium=find-courses&amp;utm_content=materials">Search for Teaching Materials</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/#cat=teachingandeducation">MIT Courses about Teaching and Education</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/high-school/">Highlights for High School</a></li>
+    <li><a href="http://k12videos.mit.edu" aria-label="External Link: MIT+K12 Videos">MIT+K12 Videos</a></li>
+    <li><a href="http://teachingexcellence.mit.edu/" aria-label="External Link: Teaching Excellence at MIT">Teaching Excellence at MIT</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/mit-curriculum-guide/">MIT Undergraduate Curriculum Map</a></li>
+</ul>
+</nav></div>
+<nav class="grid_2" id="foot-c3" aria-labelledby="f-donate">       <span id="f-donate" class="footer" aria-hidden="true">Give Now</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/give/">Make a Donation</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/why-give/">Why Give?</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/our-supporters/">Our Supporters</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/shop-ocw/">Shop OCW</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/support/">Become a Corporate Sponsor</a></li>
+</ul>
+</nav>
+<div class="grid_2" id="foot-c4">
+<nav aria-labelledby="f-about">         <span id="f-about" class="footer" aria-hidden="true">About</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/about/">About OpenCourseWare</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/site-statistics/">Site Statistics</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/ocw-stories/">OCW Stories</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/newsletter/">News</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/media-coverage/press-releases/">Press Releases</a></li>
+</ul>
+</nav><!--about-->       <nav aria-labelledby="f-tools">         <span id="f-tools" class="footer" aria-hidden="true">Tools</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/help/">Help &amp; FAQs</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/jsp/feedback.jsp">Contact Us</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/help/site-map/">Site Map</a></li>
+    <li><a href="../../common/terms/index.htm">Privacy &amp; Terms of Use</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/help/rss/">RSS Feeds</a></li>
+</ul>
+</nav><!--tools-->
+</div>
+</nav> <aside style="min-height: 289px;" aria-labelledby="f-our-corporate-supporters" class="grid_4 omega" id="foot-c5">           <span aria-hidden="true" class="footer" id="f-our-corporate-supporters">Our Corporate Supporters</span>           <!-- HOME_CORP_LOGO_1 -->
+<div id="div-gpt-ad-1388181177156-0" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-0'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_2 -->
+<div id="div-gpt-ad-1388181177156-1" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-1'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_3 -->
+<div id="div-gpt-ad-1388181177156-2" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-2'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_4 -->
+<div id="div-gpt-ad-1388181177156-3" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-3'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_5 -->
+<div id="div-gpt-ad-1388181177156-4" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-4'); });
+              </script></div>
+<!-- HOME_CORP_LOGO_6 -->
+<div id="div-gpt-ad-1388181177156-5" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-5'); });
+              </script></div>
+</aside>
+<div class="grid_12 alpha omega" itemprop="publisher" itemscope="" itemtype="http://schema.org/CollegeOrUniversity">
+<h4 class="footer" style="border-top: thin solid #d5c9ba; padding-top: 10px; margin-bottom: 10px;">About <span itemprop="name">MIT OpenCourseWare</span>
+</h4>
+<p style="color: #999; font-size: 1em; line-height: 1.5em; margin-top: 10px;" itemprop="description">MIT OpenCourseWare makes the materials used in the teaching of almost all of MIT's subjects available on the Web, free of charge. With more than 2,400 courses available, OCW is delivering on the promise of open sharing of knowledge. <a href="http://ocw.mit.edu/about/">Learn more »</a></p>
+</div>
+<div id="foot-copy" class="grid_12 alpha omega" style="border-top: none;">
+<a href="http://web.mit.edu"><img src="../../common/images/logo_mit.png" alt="Massachusetts Institute of Technology logo and name." style="width: 195; height: 44;"></a><a href="http://odl.mit.edu"><img src="https://ocw-origin.odl.mit.edu/images/logo_odl.png" alt="MIT Office of Digital Learning logo and name." style="width: 289; height: 54; vertical-align: top;"></a><a href="http://www.oeconsortium.org/"><img src="https://ocw-origin.odl.mit.edu/images/logo_oec.png" alt="Open Education Consortium logo." style="width: 219px; height: 59px; vertical-align: top;"></a><a rel="license" itemprop="useRightsUrl" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="../../common/images/cc_by-nc-sa.png" alt="Creative Commons logo with terms BY-NC-SA." style="width: 126px; height: 44px; margin-right: 0; margin-left: 13px;"></a>
+<p class="copyright">© 2001–2018<br>
+Massachusetts Institute of Technology</p>
+<p style="font-size: 0.9em; margin-bottom: 15px;">Your use of the MIT OpenCourseWare site and materials is subject to our <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">Creative Commons License</a> and other <a href="../../common/terms/index.htm" rel="cc:morePermissions">terms of use</a>.</p>
+</div>
+</div></div>
+
+</div>
+
+
+
+
+
+                
+			</div> <!-- bottom grid end -->
+		</footer><!-- footer bottom end -->
+
+
+   </body>
+ </html>

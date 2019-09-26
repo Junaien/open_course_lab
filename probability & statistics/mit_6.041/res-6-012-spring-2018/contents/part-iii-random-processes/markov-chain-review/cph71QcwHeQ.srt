@@ -1,0 +1,568 @@
+1
+00:00:01,030 --> 00:00:03,580
+Markov processes
+can be very general.
+
+2
+00:00:03,580 --> 00:00:06,330
+They can run in continuous
+or discrete time,
+
+3
+00:00:06,330 --> 00:00:10,250
+can have a discrete or a
+continuous state space.
+
+4
+00:00:10,250 --> 00:00:12,340
+In this class, we'll
+restrict ourselves
+
+5
+00:00:12,340 --> 00:00:15,670
+to discrete time discrete
+state Markov chains.
+
+6
+00:00:15,670 --> 00:00:17,480
+These are the
+simplest cases and are
+
+7
+00:00:17,480 --> 00:00:19,380
+the best to build our intuition.
+
+8
+00:00:19,380 --> 00:00:26,360
+So the state space is discrete,
+here, finite with m states,
+
+9
+00:00:26,360 --> 00:00:29,160
+and time is discrete.
+
+10
+00:00:29,160 --> 00:00:31,890
+That is, at any
+discrete point in time,
+
+11
+00:00:31,890 --> 00:00:34,280
+the process is in
+one of these m states
+
+12
+00:00:34,280 --> 00:00:39,770
+and let's say here,
+at any given time s.
+
+13
+00:00:39,770 --> 00:00:42,520
+And again, time is
+discrete, so think
+
+14
+00:00:42,520 --> 00:00:44,680
+about the following process.
+
+15
+00:00:44,680 --> 00:00:48,660
+You have someone hitting
+a drum, indicating
+
+16
+00:00:48,660 --> 00:00:50,730
+that a transition occurs.
+
+17
+00:00:50,730 --> 00:00:53,510
+And what it means is that
+the chain that was here
+
+18
+00:00:53,510 --> 00:00:55,380
+will then jump.
+
+19
+00:00:55,380 --> 00:01:00,220
+Let's say to another
+state j at the next time.
+
+20
+00:01:00,220 --> 00:01:05,190
+So when the Markov chain
+jumps it can jump on itself
+
+21
+00:01:05,190 --> 00:01:08,690
+or jump to another
+state like here or here.
+
+22
+00:01:11,780 --> 00:01:15,660
+And then at time s plus
+1 someone hit the drum
+
+23
+00:01:15,660 --> 00:01:19,170
+and you jump again,
+and so on and so forth.
+
+24
+00:01:19,170 --> 00:01:22,620
+You can think of a very active
+frog jumping from lilies
+
+25
+00:01:22,620 --> 00:01:26,445
+to lilies on the pond and
+following a regular drumbeat.
+
+26
+00:01:29,450 --> 00:01:32,570
+So what is left to define
+are the various probabilities
+
+27
+00:01:32,570 --> 00:01:36,300
+of transitions, such as
+the transition from i to j,
+
+28
+00:01:36,300 --> 00:01:39,039
+and the notation
+we're going to use
+
+29
+00:01:39,039 --> 00:01:43,890
+is pij, which by definition
+is that transition probability
+
+30
+00:01:43,890 --> 00:01:44,390
+here.
+
+31
+00:01:50,509 --> 00:01:54,940
+So given that you are in
+state i at time s, what
+
+32
+00:01:54,940 --> 00:01:59,060
+is the probability that you end
+up in state j at time s plus 1.
+
+33
+00:01:59,060 --> 00:02:03,120
+Notice that these transition
+priorities here, pij,
+
+34
+00:02:03,120 --> 00:02:04,880
+are not function of s.
+
+35
+00:02:04,880 --> 00:02:09,280
+So irrespective of what the
+time s that we're talking about,
+
+36
+00:02:09,280 --> 00:02:11,770
+these transitions
+priorities are the same.
+
+37
+00:02:11,770 --> 00:02:16,710
+So this is what we mean by a
+time-homogeneous Markov chain.
+
+38
+00:02:16,710 --> 00:02:23,490
+In other words, these are
+valid for s equal 0, 1, 2,
+
+39
+00:02:23,490 --> 00:02:25,630
+and so on and so forth.
+
+40
+00:02:25,630 --> 00:02:28,415
+So the defining feature
+of a Markov chain
+
+41
+00:02:28,415 --> 00:02:30,730
+is the Markov property.
+
+42
+00:02:30,730 --> 00:02:32,200
+And the Markov
+property essentially
+
+43
+00:02:32,200 --> 00:02:35,990
+says that the past is not
+really important in order
+
+44
+00:02:35,990 --> 00:02:39,590
+to predict the future, as long
+as you know where you are now.
+
+45
+00:02:39,590 --> 00:02:42,540
+Another way of saying
+it is that if you
+
+46
+00:02:42,540 --> 00:02:47,329
+look at the probability
+of going next in state j
+
+47
+00:02:47,329 --> 00:02:51,360
+given that you
+are now in state i
+
+48
+00:02:51,360 --> 00:02:54,130
+and that I give
+you, in addition,
+
+49
+00:02:54,130 --> 00:02:55,480
+the entire trajectories.
+
+50
+00:02:55,480 --> 00:03:00,340
+So I tell you that it was in i0
+at that time, and so on and so
+
+51
+00:03:00,340 --> 00:03:04,460
+forth, all the way
+up to time s minus 1,
+
+52
+00:03:04,460 --> 00:03:06,850
+where it was in is minus 1.
+
+53
+00:03:06,850 --> 00:03:09,605
+So it gives you the
+entire trajectory
+
+54
+00:03:09,605 --> 00:03:12,940
+of the chain up to s,
+and now I'm asking you,
+
+55
+00:03:12,940 --> 00:03:16,170
+what is the probability that
+you're going to go to s plus 1?
+
+56
+00:03:16,170 --> 00:03:21,079
+The Markov property here simply
+says that that probability here
+
+57
+00:03:21,079 --> 00:03:24,260
+is again, pij.
+
+58
+00:03:24,260 --> 00:03:25,990
+So in other words,
+all this information
+
+59
+00:03:25,990 --> 00:03:30,460
+here is of no use to
+compute this probability.
+
+60
+00:03:30,460 --> 00:03:33,610
+Now, note that these transition
+probabilities are really
+
+61
+00:03:33,610 --> 00:03:35,240
+probabilities, in
+the following sense.
+
+62
+00:03:35,240 --> 00:03:35,740
+Right?
+
+63
+00:03:35,740 --> 00:03:40,270
+So you are in i and then
+at the next time step,
+
+64
+00:03:40,270 --> 00:03:42,560
+you will definitely
+jump with probability 1.
+
+65
+00:03:42,560 --> 00:03:44,570
+And where you're going
+to jump will depend,
+
+66
+00:03:44,570 --> 00:03:47,829
+but the summation
+of all possibilities
+
+67
+00:03:47,829 --> 00:03:49,950
+have to sum up to 1.
+
+68
+00:03:49,950 --> 00:03:54,520
+So from j equals 1
+to n has to be 1.
+
+69
+00:03:54,520 --> 00:03:57,740
+So now that we have introduced
+the main ingredients,
+
+70
+00:03:57,740 --> 00:04:01,140
+usually we are very interested
+in knowing what a Markov
+
+71
+00:04:01,140 --> 00:04:03,440
+chain is going to
+do in the long run.
+
+72
+00:04:03,440 --> 00:04:05,390
+We are interested in
+finding the probability
+
+73
+00:04:05,390 --> 00:04:09,680
+that the chain is in a state
+j after n transitions, given
+
+74
+00:04:09,680 --> 00:04:11,690
+that it is now in state i.
+
+75
+00:04:11,690 --> 00:04:13,830
+Now because of the
+time-homogeneous,
+
+76
+00:04:13,830 --> 00:04:15,200
+this is the same thing as that.
+
+77
+00:04:15,200 --> 00:04:18,490
+In other words, the current
+time could be in any time s,
+
+78
+00:04:18,490 --> 00:04:20,480
+we just have to add s here.
+
+79
+00:04:20,480 --> 00:04:24,490
+And again, that is nothing
+else than this property.
+
+80
+00:04:24,490 --> 00:04:30,544
+So we are interested in
+calculating rij of n for any n.
+
+81
+00:04:30,544 --> 00:04:35,560
+For n equals 1, this is
+nothing else than rij of 1
+
+82
+00:04:35,560 --> 00:04:38,800
+is the same as this
+transition probabilities
+
+83
+00:04:38,800 --> 00:04:40,280
+that we have defined.
+
+84
+00:04:40,280 --> 00:04:43,490
+But for n greater than or
+equals to 2, what we are seeing
+
+85
+00:04:43,490 --> 00:04:46,520
+is the introduction of
+a key recursion here.
+
+86
+00:04:46,520 --> 00:04:49,380
+And this is how you would
+be able to calculate
+
+87
+00:04:49,380 --> 00:04:50,980
+these probabilities.
+
+88
+00:04:50,980 --> 00:04:53,805
+Now, how did we come
+up with this recursion?
+
+89
+00:04:53,805 --> 00:04:56,860
+Well, it's based on a
+classical divide and conquer
+
+90
+00:04:56,860 --> 00:05:00,210
+and essentially, the use of
+the total property theorem.
+
+91
+00:05:00,210 --> 00:05:02,720
+Essentially, you have
+the time step here.
+
+92
+00:05:02,720 --> 00:05:04,544
+This is the current time s.
+
+93
+00:05:04,544 --> 00:05:05,960
+You are interested
+in what's going
+
+94
+00:05:05,960 --> 00:05:09,350
+to happen at n plus
+s and n steps later.
+
+95
+00:05:09,350 --> 00:05:11,354
+Here you are in state i.
+
+96
+00:05:11,354 --> 00:05:12,770
+You are interested
+in knowing what
+
+97
+00:05:12,770 --> 00:05:15,650
+is the probability of being
+in state j at that time.
+
+98
+00:05:15,650 --> 00:05:18,970
+And what you simply do
+is you look at the step n
+
+99
+00:05:18,970 --> 00:05:21,840
+plus s minus 1, just
+before the last one.
+
+100
+00:05:21,840 --> 00:05:24,960
+And then you say, well, let
+me do a divide and conquer.
+
+101
+00:05:24,960 --> 00:05:27,450
+This is k here, and
+I'm going to look
+
+102
+00:05:27,450 --> 00:05:30,360
+at evaluating that probability.
+
+103
+00:05:30,360 --> 00:05:32,860
+And then once I have
+that, I will simply
+
+104
+00:05:32,860 --> 00:05:35,290
+multiply it by this
+transition here.
+
+105
+00:05:35,290 --> 00:05:37,610
+And what happened
+is that this here
+
+106
+00:05:37,610 --> 00:05:40,730
+is nothing else than this
+calculation that we have here.
+
+107
+00:05:40,730 --> 00:05:42,310
+And that's the same thing.
+
+108
+00:05:42,310 --> 00:05:44,850
+And here, this is
+the probability
+
+109
+00:05:44,850 --> 00:05:48,450
+of one step transition.
+
+110
+00:05:48,450 --> 00:05:51,090
+And, of course, we have
+conditioned on the fact
+
+111
+00:05:51,090 --> 00:05:52,670
+that we would be
+in a state k here,
+
+112
+00:05:52,670 --> 00:05:55,620
+but k could be any of
+these states, right?
+
+113
+00:05:55,620 --> 00:05:57,960
+And they are m of
+them, and this is
+
+114
+00:05:57,960 --> 00:06:01,560
+why we saw from k equals 1 to m.
+
+115
+00:06:01,560 --> 00:06:04,610
+So essentially this is
+how this key recursion has
+
+116
+00:06:04,610 --> 00:06:06,440
+been put together,
+and we have used,
+
+117
+00:06:06,440 --> 00:06:09,790
+of course, the Markov
+property in order to do that.
+
+118
+00:06:09,790 --> 00:06:12,650
+Let's do now a little bit of
+warm up in terms of calculation
+
+119
+00:06:12,650 --> 00:06:14,940
+and apply these concepts.

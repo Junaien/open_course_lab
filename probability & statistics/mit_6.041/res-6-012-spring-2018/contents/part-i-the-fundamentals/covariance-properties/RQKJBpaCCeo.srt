@@ -1,0 +1,451 @@
+1
+00:00:00,640 --> 00:00:04,260
+In this segment, we discuss a
+few algebraic properties of
+
+2
+00:00:04,260 --> 00:00:05,770
+the covariance.
+
+3
+00:00:05,770 --> 00:00:08,710
+There is nothing deep here, only
+some observations that
+
+4
+00:00:08,710 --> 00:00:12,060
+can be useful if we want
+to carry out covariance
+
+5
+00:00:12,060 --> 00:00:13,520
+calculations.
+
+6
+00:00:13,520 --> 00:00:16,040
+We start by looking at this
+quantity, the covariance of a
+
+7
+00:00:16,040 --> 00:00:17,940
+random variable with itself.
+
+8
+00:00:17,940 --> 00:00:21,150
+So it's a special case of this
+definition but where Y is the
+
+9
+00:00:21,150 --> 00:00:25,090
+same as X. And therefore, this
+second term here is the same
+
+10
+00:00:25,090 --> 00:00:26,350
+as the first term.
+
+11
+00:00:26,350 --> 00:00:30,620
+And so what we're left with is
+the expected value of the
+
+12
+00:00:30,620 --> 00:00:35,150
+square deviation of the random
+variable from its mean.
+
+13
+00:00:35,150 --> 00:00:39,130
+And we recognize that this is
+the same as the variance of X.
+
+14
+00:00:39,130 --> 00:00:41,410
+So we conclude that the
+covariance of a random
+
+15
+00:00:41,410 --> 00:00:44,780
+variable with itself is the
+same as the variance.
+
+16
+00:00:44,780 --> 00:00:48,560
+Now, for the variance, we had an
+alternative formula, which
+
+17
+00:00:48,560 --> 00:00:51,980
+was often convenient in
+simplifying variance
+
+18
+00:00:51,980 --> 00:00:53,370
+calculations.
+
+19
+00:00:53,370 --> 00:00:58,260
+Is there a similar formula for
+the case of the covariance?
+
+20
+00:00:58,260 --> 00:01:01,860
+Let us start from the definition
+and use linearity.
+
+21
+00:01:01,860 --> 00:01:05,730
+We have a product here of two
+terms, and we expand that
+
+22
+00:01:05,730 --> 00:01:08,800
+product to obtain four
+different terms.
+
+23
+00:01:08,800 --> 00:01:11,850
+The expected value of the sum
+of these four terms is going
+
+24
+00:01:11,850 --> 00:01:14,770
+to be the sum of their
+expectations.
+
+25
+00:01:14,770 --> 00:01:17,520
+So let us go through
+the steps involved.
+
+26
+00:01:17,520 --> 00:01:20,780
+We have the expected value
+of the product of this
+
+27
+00:01:20,780 --> 00:01:22,260
+term with that term.
+
+28
+00:01:22,260 --> 00:01:26,180
+Gives us expected value of X
+times Y. Then we take the
+
+29
+00:01:26,180 --> 00:01:30,520
+expected value of the product
+of this term with that term.
+
+30
+00:01:30,520 --> 00:01:33,930
+And because we have a minus
+sign, we put it out here.
+
+31
+00:01:33,930 --> 00:01:38,479
+And we have the expected value
+of X times the expected value
+
+32
+00:01:38,479 --> 00:01:41,770
+of Y inside the expectation.
+
+33
+00:01:41,770 --> 00:01:46,530
+The next term is going to be the
+product of this expected
+
+34
+00:01:46,530 --> 00:01:53,610
+value with Y. And that gives us
+minus the expected value of
+
+35
+00:01:53,610 --> 00:02:00,320
+X times Y. And finally, the last
+term comes by multiplying
+
+36
+00:02:00,320 --> 00:02:02,870
+this quantity with
+that quantity.
+
+37
+00:02:07,110 --> 00:02:10,940
+And this is what we have by
+applying linearity to the
+
+38
+00:02:10,940 --> 00:02:13,630
+definition of the covariance.
+
+39
+00:02:13,630 --> 00:02:16,350
+Now, remember that the expected
+value of a random
+
+40
+00:02:16,350 --> 00:02:19,090
+variable is a number,
+it's a constant.
+
+41
+00:02:19,090 --> 00:02:22,870
+And constants can be pulled
+outside expectations.
+
+42
+00:02:22,870 --> 00:02:28,520
+So if we do that, what we
+obtain is the following.
+
+43
+00:02:28,520 --> 00:02:31,310
+We pull this constant outside
+the expectation, and we're
+
+44
+00:02:31,310 --> 00:02:34,405
+left with the expected value of
+X times the expected value
+
+45
+00:02:34,405 --> 00:02:39,770
+of Y. Similarly, for the next
+term, by pulling a constant
+
+46
+00:02:39,770 --> 00:02:44,000
+outside the expectation, we
+obtain this expression.
+
+47
+00:02:44,000 --> 00:02:46,900
+And finally, for the last term,
+we have the expected
+
+48
+00:02:46,900 --> 00:02:49,900
+value of a constant, and
+this is the same as
+
+49
+00:02:49,900 --> 00:02:52,460
+the constant itself.
+
+50
+00:02:52,460 --> 00:02:54,930
+We recognize here that
+the same term gets
+
+51
+00:02:54,930 --> 00:02:56,640
+repeated three times.
+
+52
+00:02:56,640 --> 00:03:00,120
+And because here we have a minus
+sign, we can cancel this
+
+53
+00:03:00,120 --> 00:03:02,000
+term with that term.
+
+54
+00:03:02,000 --> 00:03:05,670
+And what we're left with is just
+the difference of these
+
+55
+00:03:05,670 --> 00:03:08,620
+two terms, and this is an
+alternative form for the
+
+56
+00:03:08,620 --> 00:03:10,900
+covariance of two random
+variables.
+
+57
+00:03:10,900 --> 00:03:15,630
+And this form is often easier
+to work with to calculate
+
+58
+00:03:15,630 --> 00:03:18,105
+covariances compared with
+the original definition.
+
+59
+00:03:21,160 --> 00:03:23,630
+Let us now continue with some
+additional algebraic
+
+60
+00:03:23,630 --> 00:03:25,070
+properties.
+
+61
+00:03:25,070 --> 00:03:28,550
+Suppose that we know the
+covariance of X with Y, and
+
+62
+00:03:28,550 --> 00:03:31,570
+we're interested in the
+covariance of this linear
+
+63
+00:03:31,570 --> 00:03:36,490
+function of X with Y. What is
+the covariance going to be?
+
+64
+00:03:36,490 --> 00:03:40,340
+To simplify the calculations,
+let us just assume zero means.
+
+65
+00:03:42,890 --> 00:03:48,710
+Although, the final conclusion
+will be the same as in the
+
+66
+00:03:48,710 --> 00:03:51,230
+case of non-zero means.
+
+67
+00:03:51,230 --> 00:03:55,340
+So in the case of zero means,
+the covariance of two random
+
+68
+00:03:55,340 --> 00:03:59,000
+variables is just the same as
+the expected value of the
+
+69
+00:03:59,000 --> 00:04:01,550
+product of the two
+random variables.
+
+70
+00:04:05,370 --> 00:04:11,770
+And using linearity, this is the
+expected value times a of
+
+71
+00:04:11,770 --> 00:04:19,300
+X times Y plus b times the
+expected value of Y. Now, we
+
+72
+00:04:19,300 --> 00:04:22,800
+assumed zero means, so
+this term goes away.
+
+73
+00:04:22,800 --> 00:04:29,790
+And what we're left with is a
+times the covariance of X with
+
+74
+00:04:29,790 --> 00:04:35,280
+Y. So we see that multiplying
+X by a increases the
+
+75
+00:04:35,280 --> 00:04:37,600
+covariance by a factor of a.
+
+76
+00:04:37,600 --> 00:04:40,530
+But adding a constant
+has no effect.
+
+77
+00:04:40,530 --> 00:04:43,120
+The reason that it has no effect
+is that if we take a
+
+78
+00:04:43,120 --> 00:04:46,030
+random variable and add the
+constant to it, the same
+
+79
+00:04:46,030 --> 00:04:48,270
+constant gets added
+to its mean.
+
+80
+00:04:48,270 --> 00:04:50,385
+And so this difference
+is not affected.
+
+81
+00:04:54,250 --> 00:04:57,830
+As our final calculation, let us
+look at the covariance of a
+
+82
+00:04:57,830 --> 00:05:02,370
+random variable with the sum of
+two other random variables.
+
+83
+00:05:02,370 --> 00:05:04,690
+Again, we assume zero means.
+
+84
+00:05:04,690 --> 00:05:08,860
+And so the calculation
+is as follows.
+
+85
+00:05:08,860 --> 00:05:11,130
+The covariance is the
+product of the two
+
+86
+00:05:11,130 --> 00:05:13,390
+random variables involved.
+
+87
+00:05:13,390 --> 00:05:17,030
+And then we use linearity of
+expectations to write this as
+
+88
+00:05:17,030 --> 00:05:22,270
+the expected value of X times Y
+plus the expected value of X
+
+89
+00:05:22,270 --> 00:05:23,790
+times Z.
+
+90
+00:05:23,790 --> 00:05:27,320
+And we recognize that this is
+the same as the covariance of
+
+91
+00:05:27,320 --> 00:05:37,380
+X with Y plus the covariance
+of X with Z. So in this
+
+92
+00:05:37,380 --> 00:05:40,800
+respect, covariances
+behave linearly.
+
+93
+00:05:40,800 --> 00:05:44,490
+They behave linearly with
+respect to one of the
+
+94
+00:05:44,490 --> 00:05:45,740
+arguments involved.

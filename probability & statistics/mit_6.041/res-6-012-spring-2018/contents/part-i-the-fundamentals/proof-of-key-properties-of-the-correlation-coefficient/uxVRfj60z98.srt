@@ -1,0 +1,306 @@
+1
+00:00:00,570 --> 00:00:03,350
+In this segment, we justify some
+of the property is that
+
+2
+00:00:03,350 --> 00:00:05,230
+the correlation coefficient
+that we
+
+3
+00:00:05,230 --> 00:00:07,780
+claimed a little earlier.
+
+4
+00:00:07,780 --> 00:00:10,560
+The most important properties of
+the correlation coefficient
+
+5
+00:00:10,560 --> 00:00:13,780
+lies between minus
+1 and plus 1.
+
+6
+00:00:13,780 --> 00:00:16,950
+We will prove this property for
+the special case where we
+
+7
+00:00:16,950 --> 00:00:20,950
+have random variables with zero
+means and unit variances.
+
+8
+00:00:20,950 --> 00:00:24,670
+So standard deviations are also
+1, so most of the terms
+
+9
+00:00:24,670 --> 00:00:27,560
+here disappear and the
+correlation coefficient is
+
+10
+00:00:27,560 --> 00:00:30,690
+simply the expected value
+of X times Y.
+
+11
+00:00:30,690 --> 00:00:33,280
+We will show that in this
+special case the expected
+
+12
+00:00:33,280 --> 00:00:37,370
+value of X times Y lies
+between minus 1 and 1.
+
+13
+00:00:37,370 --> 00:00:42,630
+But the proof of this fact
+remains valid with a little
+
+14
+00:00:42,630 --> 00:00:45,790
+bit of more algebra along
+similar lines
+
+15
+00:00:45,790 --> 00:00:48,501
+for the general case.
+
+16
+00:00:48,501 --> 00:00:53,350
+What we will do is we will
+consider this quantity here
+
+17
+00:00:53,350 --> 00:00:57,200
+and expand this quadratic
+and write it as
+
+18
+00:00:57,200 --> 00:00:59,790
+expected value of X squared.
+
+19
+00:00:59,790 --> 00:01:03,160
+Then there's a cross term,
+which is minus 2 rho, the
+
+20
+00:01:03,160 --> 00:01:10,070
+expected value of X times Y,
+plus rho squared, expected
+
+21
+00:01:10,070 --> 00:01:13,560
+value of Y squared.
+
+22
+00:01:13,560 --> 00:01:17,840
+Now since we assume that the
+random variables have 0 mean,
+
+23
+00:01:17,840 --> 00:01:20,370
+this is the same as the variance
+and we assume that
+
+24
+00:01:20,370 --> 00:01:25,100
+the variance is 1, so this
+term here is equal to 1.
+
+25
+00:01:25,100 --> 00:01:29,050
+Now, the expected value of X
+times Y is the same as the
+
+26
+00:01:29,050 --> 00:01:31,170
+correlation coefficient
+in this case.
+
+27
+00:01:31,170 --> 00:01:35,190
+So we have minus 2 rho
+squared and from
+
+28
+00:01:35,190 --> 00:01:36,870
+here we have rho squared.
+
+29
+00:01:36,870 --> 00:01:40,030
+And by the previous argument,
+again this quantity, according
+
+30
+00:01:40,030 --> 00:01:43,740
+to our assumptions, is equal to
+1 so we're left with this
+
+31
+00:01:43,740 --> 00:01:49,830
+expression, which is 1
+minus rho squared.
+
+32
+00:01:49,830 --> 00:01:52,979
+Now, notice that this is the
+expectation of a non-negative
+
+33
+00:01:52,979 --> 00:01:57,210
+random variable so this
+quantity here must be
+
+34
+00:01:57,210 --> 00:01:58,560
+non-negative.
+
+35
+00:01:58,560 --> 00:02:06,470
+Therefore, 1 minus rho squared
+is non-negative, which means
+
+36
+00:02:06,470 --> 00:02:11,850
+that rho squared is less
+than or equal to 1.
+
+37
+00:02:11,850 --> 00:02:15,230
+And that's the same as requiring
+that rho lie between
+
+38
+00:02:15,230 --> 00:02:17,820
+minus 1 and plus 1.
+
+39
+00:02:17,820 --> 00:02:21,310
+And so we have established this
+important property, at
+
+40
+00:02:21,310 --> 00:02:24,150
+least for the special case of
+0 means and unit variances.
+
+41
+00:02:24,150 --> 00:02:28,250
+But as I mentioned, it remains
+valid more generally.
+
+42
+00:02:28,250 --> 00:02:32,920
+Now let us look at an extreme
+case, when the absolute value
+
+43
+00:02:32,920 --> 00:02:35,410
+of rho is equal to 1.
+
+44
+00:02:35,410 --> 00:02:36,986
+What happens in this case?
+
+45
+00:02:36,986 --> 00:02:43,410
+In that case, this term is 0
+and this implies that the
+
+46
+00:02:43,410 --> 00:02:46,870
+expected value of the square
+of this random variable is
+
+47
+00:02:46,870 --> 00:02:48,250
+equal to 0.
+
+48
+00:02:48,250 --> 00:02:51,770
+Now here we have a non-negative
+random variable,
+
+49
+00:02:51,770 --> 00:02:55,390
+and its expected value is 0,
+which means that when we
+
+50
+00:02:55,390 --> 00:02:58,470
+calculate the expected value
+of this there will be no
+
+51
+00:02:58,470 --> 00:03:02,710
+positive contributions and so
+the only contributions must be
+
+52
+00:03:02,710 --> 00:03:04,000
+equal to 0.
+
+53
+00:03:04,000 --> 00:03:09,100
+This means that X minus rho Y
+has to be equal to 0 with
+
+54
+00:03:09,100 --> 00:03:11,860
+probability 1.
+
+55
+00:03:11,860 --> 00:03:17,260
+So X is going to be equal to
+rho times Y and this will
+
+56
+00:03:17,260 --> 00:03:19,700
+happen with essential
+certainty.
+
+57
+00:03:19,700 --> 00:03:23,250
+Now also because the absolute
+value overall is equal to 1,
+
+58
+00:03:23,250 --> 00:03:30,490
+this means that we have either
+X equal to Y or X equals to
+
+59
+00:03:30,490 --> 00:03:35,210
+minus Y, in case rho is
+equal to minus 1.
+
+60
+00:03:35,210 --> 00:03:38,100
+So we see that if the
+correlation coefficient has an
+
+61
+00:03:38,100 --> 00:03:42,280
+absolute value of 1, then X
+and Y are related to each
+
+62
+00:03:42,280 --> 00:03:47,620
+other according to a simple
+linear relation, and it's an
+
+63
+00:03:47,620 --> 00:03:49,579
+extreme form of dependence
+between
+
+64
+00:03:49,579 --> 00:03:50,829
+the two random variables.

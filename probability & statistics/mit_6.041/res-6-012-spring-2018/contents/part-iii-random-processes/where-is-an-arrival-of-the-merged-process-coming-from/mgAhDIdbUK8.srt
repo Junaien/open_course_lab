@@ -1,0 +1,412 @@
+1
+00:00:00,540 --> 00:00:06,060
+As before, we have a red Poisson
+process and a green Poisson
+
+2
+00:00:06,060 --> 00:00:07,730
+process.
+
+3
+00:00:07,730 --> 00:00:10,410
+We merge these two
+processes, and we only
+
+4
+00:00:10,410 --> 00:00:13,090
+observe the merged process.
+
+5
+00:00:13,090 --> 00:00:14,830
+Here's an interesting question.
+
+6
+00:00:14,830 --> 00:00:17,320
+This is an arrival of
+the merged process.
+
+7
+00:00:17,320 --> 00:00:18,880
+Where did it come from?
+
+8
+00:00:18,880 --> 00:00:22,170
+Is it red, or is it green?
+
+9
+00:00:22,170 --> 00:00:26,020
+We cannot know, but can we tell
+what is the probability that it
+
+10
+00:00:26,020 --> 00:00:28,990
+came from the red stream?
+
+11
+00:00:28,990 --> 00:00:31,350
+The way to answer
+this question is
+
+12
+00:00:31,350 --> 00:00:34,340
+to look at the table
+of all the things
+
+13
+00:00:34,340 --> 00:00:37,810
+that can happen during
+a little interval
+
+14
+00:00:37,810 --> 00:00:42,640
+around that particular time
+in which we had an arrival.
+
+15
+00:00:42,640 --> 00:00:47,390
+We are told that there was an
+arrival at time t or an arrival
+
+16
+00:00:47,390 --> 00:00:51,760
+during an interval, a small
+interval around time t.
+
+17
+00:00:51,760 --> 00:00:58,270
+This means that we're told that
+this event here has happened.
+
+18
+00:00:58,270 --> 00:01:02,520
+Given this information, what
+is the conditional probability
+
+19
+00:01:02,520 --> 00:01:07,340
+that actually this
+event here occurred?
+
+20
+00:01:07,340 --> 00:01:12,080
+This is just the fraction
+of this probability divided
+
+21
+00:01:12,080 --> 00:01:15,370
+by the total probability
+of the conditioning event.
+
+22
+00:01:15,370 --> 00:01:18,270
+So the answer is
+lambda 1 divided
+
+23
+00:01:18,270 --> 00:01:21,789
+by lambda 1 plus lambda 2.
+
+24
+00:01:21,789 --> 00:01:23,730
+Does this answer make sense?
+
+25
+00:01:23,730 --> 00:01:27,310
+Well, suppose that lambda
+1 and lambda 2 were equal.
+
+26
+00:01:27,310 --> 00:01:31,070
+In that case, by symmetry,
+when an arrival comes,
+
+27
+00:01:31,070 --> 00:01:34,530
+it should be equally likely to
+have come either from the red
+
+28
+00:01:34,530 --> 00:01:36,580
+or from the green stream.
+
+29
+00:01:36,580 --> 00:01:40,650
+And this is consistent
+with this answer.
+
+30
+00:01:40,650 --> 00:01:45,080
+We can reason similarly for a
+slightly different question.
+
+31
+00:01:45,080 --> 00:01:49,620
+You wait until the kth arrival,
+let's say the third arrival.
+
+32
+00:01:49,620 --> 00:01:52,140
+Where did that
+arrival come from?
+
+33
+00:01:52,140 --> 00:01:55,000
+Well, that case,
+arrival occurred
+
+34
+00:01:55,000 --> 00:01:59,700
+during a specific little time
+interval and conditioning
+
+35
+00:01:59,700 --> 00:02:03,170
+on it having occurred during
+that particular time interval,
+
+36
+00:02:03,170 --> 00:02:08,190
+we can then repeat the reasoning
+that we had here and argue
+
+37
+00:02:08,190 --> 00:02:11,370
+that given that we had an
+arrival-- it just happens
+
+38
+00:02:11,370 --> 00:02:14,270
+to be the third arrival
+during that time interval--
+
+39
+00:02:14,270 --> 00:02:16,680
+there's going to be this
+particular conditional
+
+40
+00:02:16,680 --> 00:02:20,050
+probability that it came
+from the red stream.
+
+41
+00:02:20,050 --> 00:02:24,730
+So we obtained the
+same answer once more.
+
+42
+00:02:24,730 --> 00:02:29,650
+Now, this arrival came
+from one of the two streams
+
+43
+00:02:29,650 --> 00:02:31,079
+with some probabilities.
+
+44
+00:02:31,079 --> 00:02:33,420
+This arrival came from
+one of the two streams
+
+45
+00:02:33,420 --> 00:02:34,930
+with some probabilities.
+
+46
+00:02:34,930 --> 00:02:39,140
+Does the origin of this
+arrival affect or depend
+
+47
+00:02:39,140 --> 00:02:41,790
+on the origin of that arrival?
+
+48
+00:02:41,790 --> 00:02:44,220
+Because we have
+assumed independence
+
+49
+00:02:44,220 --> 00:02:46,710
+across time for each
+one of the processes
+
+50
+00:02:46,710 --> 00:02:48,780
+that we started with--
+and therefore, we also
+
+51
+00:02:48,780 --> 00:02:52,010
+have the same thing for the
+merged process-- whatever
+
+52
+00:02:52,010 --> 00:02:56,630
+has to do with events
+during this interval
+
+53
+00:02:56,630 --> 00:02:58,710
+is independent
+from anything that
+
+54
+00:02:58,710 --> 00:03:01,500
+has to do with events
+in that interval.
+
+55
+00:03:01,500 --> 00:03:04,670
+And because of this, one
+could argue formally--
+
+56
+00:03:04,670 --> 00:03:07,250
+but hopefully, this
+is intuitive enough--
+
+57
+00:03:07,250 --> 00:03:12,310
+that the origin of this arrival
+and the origin of that arrival
+
+58
+00:03:12,310 --> 00:03:15,690
+are independent events.
+
+59
+00:03:15,690 --> 00:03:18,600
+And now that we
+have this property,
+
+60
+00:03:18,600 --> 00:03:22,390
+we can answer questions
+such as the following.
+
+61
+00:03:22,390 --> 00:03:25,060
+We've had 10 arrivals so far.
+
+62
+00:03:25,060 --> 00:03:28,930
+What is the probability that
+exactly four out of these 10
+
+63
+00:03:28,930 --> 00:03:29,845
+are red?
+
+64
+00:03:32,610 --> 00:03:38,750
+Each one of those arrivals has
+this probability of being red.
+
+65
+00:03:38,750 --> 00:03:43,130
+The origin of different arrivals
+are independent of each other.
+
+66
+00:03:43,130 --> 00:03:47,240
+So essentially, we're dealing
+with 10 Bernoulli trials,
+
+67
+00:03:47,240 --> 00:03:52,370
+each of which has two possible
+outcomes, red or green,
+
+68
+00:03:52,370 --> 00:03:55,160
+and is red with this
+particular probability.
+
+69
+00:03:55,160 --> 00:03:57,910
+Therefore, the
+answer is going to be
+
+70
+00:03:57,910 --> 00:04:01,090
+given by the binomial
+probabilities, which
+
+71
+00:04:01,090 --> 00:04:06,780
+is the probability of having
+four successes in 10 trials.
+
+72
+00:04:06,780 --> 00:04:11,580
+And we obtain lambda 1 over
+lambda 1 plus lambda 2.
+
+73
+00:04:11,580 --> 00:04:16,810
+That's the probability of a red
+to the number of red arrivals.
+
+74
+00:04:16,810 --> 00:04:18,730
+And then the
+remaining probability,
+
+75
+00:04:18,730 --> 00:04:24,160
+1 minus that, which is
+lambda 2 over lambda 1
+
+76
+00:04:24,160 --> 00:04:30,270
+plus lambda 2 to the remaining
+power, which is equal to 6.
+
+77
+00:04:30,270 --> 00:04:32,110
+So to summarize.
+
+78
+00:04:32,110 --> 00:04:35,140
+Each one of the arrivals
+in the merged process
+
+79
+00:04:35,140 --> 00:04:37,680
+has a certain
+probability of being
+
+80
+00:04:37,680 --> 00:04:41,750
+a red arrival or
+a green arrival.
+
+81
+00:04:41,750 --> 00:04:43,940
+Which one of the
+two is the case?
+
+82
+00:04:43,940 --> 00:04:47,130
+We can think of it as an
+outcome of Bernoulli trial,
+
+83
+00:04:47,130 --> 00:04:49,580
+and the Bernoulli
+trials associated
+
+84
+00:04:49,580 --> 00:04:53,670
+with different arrivals are
+independent of each other
+
+85
+00:04:53,670 --> 00:04:56,880
+as a consequence of the
+independence of Poisson
+
+86
+00:04:56,880 --> 00:04:59,750
+processes across time.

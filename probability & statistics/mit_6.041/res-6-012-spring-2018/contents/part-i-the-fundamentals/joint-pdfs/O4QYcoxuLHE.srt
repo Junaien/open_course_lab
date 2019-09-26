@@ -1,0 +1,702 @@
+1
+00:00:00,750 --> 00:00:03,290
+In this segment, we start
+a discussion of multiple
+
+2
+00:00:03,290 --> 00:00:05,710
+continuous random variables.
+
+3
+00:00:05,710 --> 00:00:09,760
+Here are some objects that we're
+already familiar with.
+
+4
+00:00:09,760 --> 00:00:14,090
+But exactly as in the discrete
+case, if we are dealing with
+
+5
+00:00:14,090 --> 00:00:17,930
+two random variables, it is
+not enough to know their
+
+6
+00:00:17,930 --> 00:00:20,250
+individual PDFs.
+
+7
+00:00:20,250 --> 00:00:23,230
+We also need to model the
+relation between the two
+
+8
+00:00:23,230 --> 00:00:27,780
+random variables, and this is
+done through a joint PDF,
+
+9
+00:00:27,780 --> 00:00:32,800
+which is the continuous analog
+of the joint PMF.
+
+10
+00:00:32,800 --> 00:00:37,180
+We will use this notation to
+indicate joint PDFs where we
+
+11
+00:00:37,180 --> 00:00:41,650
+use f to indicate that we're
+dealing with a density.
+
+12
+00:00:41,650 --> 00:00:45,520
+So what remains to be done is to
+actually define this object
+
+13
+00:00:45,520 --> 00:00:47,800
+and see how we use it.
+
+14
+00:00:47,800 --> 00:00:52,440
+Let us start by recalling that
+joint PMFs were defined in
+
+15
+00:00:52,440 --> 00:00:55,910
+terms of the probability that
+the pair of random variables X
+
+16
+00:00:55,910 --> 00:01:01,350
+and Y take certain specific
+values little x and little y.
+
+17
+00:01:01,350 --> 00:01:05,970
+Regarding joint PDFs, we start
+by saying that it has to be
+
+18
+00:01:05,970 --> 00:01:08,050
+non-negative.
+
+19
+00:01:08,050 --> 00:01:10,880
+However, a more precise
+interpretation in terms of
+
+20
+00:01:10,880 --> 00:01:14,490
+probabilities has to
+wait a little bit.
+
+21
+00:01:14,490 --> 00:01:19,270
+Joint PDFs will be used to
+calculate probabilities.
+
+22
+00:01:19,270 --> 00:01:21,300
+And this will be done
+in analogy with
+
+23
+00:01:21,300 --> 00:01:22,740
+the discrete setting.
+
+24
+00:01:22,740 --> 00:01:25,820
+In the discrete setting, the
+probability that the pair of
+
+25
+00:01:25,820 --> 00:01:30,660
+random variables falls inside a
+certain set is just the sum
+
+26
+00:01:30,660 --> 00:01:35,390
+of the probabilities of all of
+the possible pairs inside that
+
+27
+00:01:35,390 --> 00:01:37,310
+particular set.
+
+28
+00:01:37,310 --> 00:01:39,880
+For the continuous case,
+we introduce
+
+29
+00:01:39,880 --> 00:01:41,990
+an analogous formula.
+
+30
+00:01:41,990 --> 00:01:46,120
+We use the joint density instead
+of the joint PMF.
+
+31
+00:01:46,120 --> 00:01:50,700
+And instead of having a
+summation, we now integrate.
+
+32
+00:01:50,700 --> 00:01:55,450
+As in the discrete setting,
+we have one total unit of
+
+33
+00:01:55,450 --> 00:01:56,700
+probability.
+
+34
+00:01:58,630 --> 00:02:04,090
+The joint PDF tells us how this
+unit of probability is
+
+35
+00:02:04,090 --> 00:02:06,460
+spread over the entire
+continuous
+
+36
+00:02:06,460 --> 00:02:08,360
+two-dimensional plane.
+
+37
+00:02:08,360 --> 00:02:13,080
+And we use it, we use the joint
+PDF, to calculate the
+
+38
+00:02:13,080 --> 00:02:19,180
+probability of a certain set
+by finding the volume under
+
+39
+00:02:19,180 --> 00:02:24,270
+the joint PDF that lies
+on top of that set.
+
+40
+00:02:24,270 --> 00:02:27,490
+This is what this integral
+really represents.
+
+41
+00:02:27,490 --> 00:02:32,170
+We integrate over a particular
+two-dimensional set, and we
+
+42
+00:02:32,170 --> 00:02:36,510
+take this value that
+we integrate.
+
+43
+00:02:36,510 --> 00:02:40,360
+And we can think of this as the
+height of an object that's
+
+44
+00:02:40,360 --> 00:02:43,400
+sitting on top of that set.
+
+45
+00:02:43,400 --> 00:02:46,990
+Now, this relation here, this
+calculation of probabilities,
+
+46
+00:02:46,990 --> 00:02:51,140
+is not something that we
+are supposed to prove.
+
+47
+00:02:51,140 --> 00:02:54,160
+This is, rather, the
+definition of
+
+48
+00:02:54,160 --> 00:02:57,450
+what a joint PDF does.
+
+49
+00:02:57,450 --> 00:03:01,920
+A legitimate joint PDF is any
+function of two variables,
+
+50
+00:03:01,920 --> 00:03:06,820
+which is non-negative and
+which integrates to 1.
+
+51
+00:03:06,820 --> 00:03:11,670
+And we will say that two random
+variables are jointly
+
+52
+00:03:11,670 --> 00:03:18,420
+continuous if there is a
+legitimate joint PDF that can
+
+53
+00:03:18,420 --> 00:03:21,890
+be used to calculate the
+associated probabilities
+
+54
+00:03:21,890 --> 00:03:24,710
+through this particular
+formula.
+
+55
+00:03:24,710 --> 00:03:27,770
+So we have really an indirect
+definition.
+
+56
+00:03:27,770 --> 00:03:32,290
+Instead of defining the joint
+PDF as a probability, we
+
+57
+00:03:32,290 --> 00:03:37,610
+actually define it indirectly by
+saying what it does, how it
+
+58
+00:03:37,610 --> 00:03:42,220
+will be used to calculate
+probabilities.
+
+59
+00:03:42,220 --> 00:03:44,780
+A picture will be
+helpful here.
+
+60
+00:03:44,780 --> 00:03:48,200
+Here's a plot of a possible
+joint PDF.
+
+61
+00:03:48,200 --> 00:03:53,000
+These are the x and y-axes.
+
+62
+00:03:53,000 --> 00:03:58,990
+And the function being plotted
+is the joint PDF of these two
+
+63
+00:03:58,990 --> 00:04:01,580
+random variables.
+
+64
+00:04:01,580 --> 00:04:05,730
+This joint PDF is higher at
+some places and lower at
+
+65
+00:04:05,730 --> 00:04:08,800
+others, indicating that certain
+regions of the x,y
+
+66
+00:04:08,800 --> 00:04:11,480
+plane are more likely
+than others.
+
+67
+00:04:11,480 --> 00:04:15,630
+The joint PDF determines the
+probability of a set B by
+
+68
+00:04:15,630 --> 00:04:21,470
+integrating over that set B.
+Let's say it's this set.
+
+69
+00:04:21,470 --> 00:04:24,940
+Integrating the PDF
+over that set.
+
+70
+00:04:24,940 --> 00:04:30,190
+Pictorially, what this means is
+that we look at the volume
+
+71
+00:04:30,190 --> 00:04:36,790
+that sits on top of that set,
+but below the PDF, below the
+
+72
+00:04:36,790 --> 00:04:41,780
+joint PDF, and so we obtain some
+three-dimensional object
+
+73
+00:04:41,780 --> 00:04:43,100
+of this kind.
+
+74
+00:04:43,100 --> 00:04:47,940
+And this integral corresponds
+to actually finding this
+
+75
+00:04:47,940 --> 00:04:52,740
+volume here, the volume that
+sits on top of the set B but
+
+76
+00:04:52,740 --> 00:04:55,060
+which is below the joint PDF.
+
+77
+00:04:58,080 --> 00:05:01,410
+Let us now develop some
+additional understanding of
+
+78
+00:05:01,410 --> 00:05:03,680
+joint PDFs.
+
+79
+00:05:03,680 --> 00:05:12,430
+As we just discussed, for any
+given set B, we can integrate
+
+80
+00:05:12,430 --> 00:05:15,890
+the joint PDF over that set.
+
+81
+00:05:15,890 --> 00:05:18,770
+And this will give us
+the probability of
+
+82
+00:05:18,770 --> 00:05:21,120
+that particular set.
+
+83
+00:05:21,120 --> 00:05:24,460
+Of particular interest is the
+case where we're dealing with
+
+84
+00:05:24,460 --> 00:05:29,420
+a set which is a rectangle, in
+which case the situation is a
+
+85
+00:05:29,420 --> 00:05:30,750
+little simpler.
+
+86
+00:05:30,750 --> 00:05:33,380
+So suppose that we have
+a rectangle where the
+
+87
+00:05:33,380 --> 00:05:38,460
+x-coordinate ranges from A to B
+and the y-coordinate ranges
+
+88
+00:05:38,460 --> 00:05:44,420
+from some C to some D. Then, the
+double integral over this
+
+89
+00:05:44,420 --> 00:05:48,520
+particular rectangle can be
+written in a form where we
+
+90
+00:05:48,520 --> 00:05:52,620
+first integrate with respect to
+one of the variables that
+
+91
+00:05:52,620 --> 00:05:57,950
+ranges from A to B. And then, we
+integrate over all possible
+
+92
+00:05:57,950 --> 00:06:01,480
+values of y as they
+range from C to D.
+
+93
+00:06:01,480 --> 00:06:05,270
+Of particular interest is the
+special case where we're
+
+94
+00:06:05,270 --> 00:06:10,290
+dealing with a small rectangle
+such as this one.
+
+95
+00:06:10,290 --> 00:06:15,990
+A rectangle with sizes equal to
+some delta where delta is a
+
+96
+00:06:15,990 --> 00:06:19,000
+small number.
+
+97
+00:06:19,000 --> 00:06:22,920
+In that case, the double
+integral, which is the volume
+
+98
+00:06:22,920 --> 00:06:28,810
+on top of that rectangle,
+is simpler to evaluate.
+
+99
+00:06:28,810 --> 00:06:33,010
+It is equal to the value of
+the function that we're
+
+100
+00:06:33,010 --> 00:06:36,640
+integrating at some point in the
+rectangle --- let's take
+
+101
+00:06:36,640 --> 00:06:37,940
+that corner ---
+
+102
+00:06:37,940 --> 00:06:42,640
+times the area of that little
+rectangle, which is equal to
+
+103
+00:06:42,640 --> 00:06:44,390
+delta square.
+
+104
+00:06:44,390 --> 00:06:47,820
+So we have an interpretation of
+the joint PDF in terms of
+
+105
+00:06:47,820 --> 00:06:50,820
+probabilities of small
+rectangles.
+
+106
+00:06:50,820 --> 00:06:54,140
+Joint PDFs are not
+probabilities.
+
+107
+00:06:54,140 --> 00:06:57,560
+But rather, they are probability
+densities.
+
+108
+00:06:57,560 --> 00:07:03,020
+They tell us the probability
+per unit area.
+
+109
+00:07:03,020 --> 00:07:05,190
+And one more important
+comment.
+
+110
+00:07:05,190 --> 00:07:08,450
+For the case of a single
+continuous random variable, we
+
+111
+00:07:08,450 --> 00:07:12,750
+know that any single point
+has 0 probability.
+
+112
+00:07:12,750 --> 00:07:16,620
+This is again, true for the case
+of two jointly continuous
+
+113
+00:07:16,620 --> 00:07:17,440
+random variables.
+
+114
+00:07:17,440 --> 00:07:19,460
+But more is true.
+
+115
+00:07:19,460 --> 00:07:24,350
+If you take a set B
+that has 0 area.
+
+116
+00:07:24,350 --> 00:07:26,890
+For example, a certain curve.
+
+117
+00:07:26,890 --> 00:07:34,890
+Suppose that this curve is the
+entire set B. Then, the volume
+
+118
+00:07:34,890 --> 00:07:40,320
+under the joint PDF that's
+sitting on top of that curve
+
+119
+00:07:40,320 --> 00:07:43,570
+is going to be equal to 0.
+
+120
+00:07:43,570 --> 00:07:48,460
+So 0 area sets have
+0 probability.
+
+121
+00:07:48,460 --> 00:07:50,930
+And this is one of the
+characteristic features of
+
+122
+00:07:50,930 --> 00:07:54,590
+jointly continuous
+random variables.
+
+123
+00:07:54,590 --> 00:07:57,920
+Now, let's think of a particular
+situation.
+
+124
+00:07:57,920 --> 00:08:04,160
+Suppose that X is a continuous
+random variable, and let Y be
+
+125
+00:08:04,160 --> 00:08:08,160
+another random variable, which
+is identically equal to X.
+
+126
+00:08:08,160 --> 00:08:11,730
+Since X is a continuous random
+variable, Y is also a
+
+127
+00:08:11,730 --> 00:08:13,690
+continuous random variable.
+
+128
+00:08:13,690 --> 00:08:17,480
+However, in this situation, we
+are certain that the outcome
+
+129
+00:08:17,480 --> 00:08:20,890
+of the experiment is going
+to fall on the line
+
+130
+00:08:20,890 --> 00:08:23,080
+where x equals y.
+
+131
+00:08:23,080 --> 00:08:26,910
+All the probability lies
+on top of a line, and
+
+132
+00:08:26,910 --> 00:08:30,140
+a line has 0 area.
+
+133
+00:08:30,140 --> 00:08:33,840
+So we have positive probability
+on the set of 0
+
+134
+00:08:33,840 --> 00:08:37,159
+area, which contradicts what
+we discussed before.
+
+135
+00:08:37,159 --> 00:08:41,100
+Well, this simply means that
+X and Y are not jointly
+
+136
+00:08:41,100 --> 00:08:42,230
+continuous.
+
+137
+00:08:42,230 --> 00:08:44,420
+Each one of them is continuous,
+but together
+
+138
+00:08:44,420 --> 00:08:47,840
+they're not jointly
+continuous.
+
+139
+00:08:47,840 --> 00:08:52,230
+Essentially, joint continuity
+is something more than
+
+140
+00:08:52,230 --> 00:08:56,370
+requiring each random variable
+to be continuous by itself.
+
+141
+00:08:56,370 --> 00:09:01,010
+For joint continuity, we want
+the probability to be really
+
+142
+00:09:01,010 --> 00:09:03,820
+spread over two dimensions.
+
+143
+00:09:03,820 --> 00:09:07,630
+Probability is not allowed
+to be concentrated on a
+
+144
+00:09:07,630 --> 00:09:09,140
+one-dimensional set.
+
+145
+00:09:09,140 --> 00:09:11,850
+On the other hand, in this
+example, the probability is
+
+146
+00:09:11,850 --> 00:09:14,450
+concentrated on a
+one-dimensional set.
+
+147
+00:09:14,450 --> 00:09:16,220
+And we do not have
+joint continuity.

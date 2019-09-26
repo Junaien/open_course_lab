@@ -1,0 +1,958 @@
+1
+00:00:01,080 --> 00:00:03,700
+We will now go through a
+sequence of examples that
+
+2
+00:00:03,700 --> 00:00:07,880
+illustrate the different types
+of questions that we usually
+
+3
+00:00:07,880 --> 00:00:11,130
+answer using a normal
+approximation based on the
+
+4
+00:00:11,130 --> 00:00:13,060
+central limit theorem.
+
+5
+00:00:13,060 --> 00:00:17,000
+In general, one uses these
+approximations to make
+
+6
+00:00:17,000 --> 00:00:19,820
+statements of this type.
+
+7
+00:00:19,820 --> 00:00:23,400
+That the probability of
+the sum of n, i.i.d.
+
+8
+00:00:23,400 --> 00:00:26,900
+random variables being less than
+a certain number, that
+
+9
+00:00:26,900 --> 00:00:29,370
+this probability is
+approximately equal to some
+
+10
+00:00:29,370 --> 00:00:30,630
+other number.
+
+11
+00:00:30,630 --> 00:00:34,770
+Notice that this statement
+involves three parameters, a,
+
+12
+00:00:34,770 --> 00:00:39,000
+b, and n, and you can imagine
+problems where you are given
+
+13
+00:00:39,000 --> 00:00:41,040
+two of these parameters,
+and you're
+
+14
+00:00:41,040 --> 00:00:42,920
+asked to find the third.
+
+15
+00:00:42,920 --> 00:00:45,990
+And this gives us the different
+variations of the
+
+16
+00:00:45,990 --> 00:00:49,340
+questions that we might
+be able to answer.
+
+17
+00:00:49,340 --> 00:00:52,350
+So we will go through examples
+of each one of these
+
+18
+00:00:52,350 --> 00:00:55,210
+variations.
+
+19
+00:00:55,210 --> 00:00:57,890
+Our setting will
+be as follows.
+
+20
+00:00:57,890 --> 00:01:02,420
+We have a container, and the
+container receives packages.
+
+21
+00:01:02,420 --> 00:01:05,300
+Each package has a random
+weight, which is an
+
+22
+00:01:05,300 --> 00:01:08,050
+independent random variable
+that's drawn from an
+
+23
+00:01:08,050 --> 00:01:12,590
+exponential distribution
+with a parameter 1/2.
+
+24
+00:01:12,590 --> 00:01:17,289
+And we load the container
+with 100 packages.
+
+25
+00:01:17,289 --> 00:01:21,260
+We would like to calculate the
+probability that the total
+
+26
+00:01:21,260 --> 00:01:25,230
+weight of the 100 packages
+exceeds 210.
+
+27
+00:01:25,230 --> 00:01:29,680
+For example, 210 might be the
+capacity of the container.
+
+28
+00:01:29,680 --> 00:01:33,160
+Since we will be using the
+central limit theorem, we will
+
+29
+00:01:33,160 --> 00:01:37,900
+have to work with the
+standardized version of Sn in
+
+30
+00:01:37,900 --> 00:01:42,410
+which we subtract the mean of Sn
+and divide by the standard
+
+31
+00:01:42,410 --> 00:01:44,976
+deviation of Sn.
+
+32
+00:01:44,976 --> 00:01:48,390
+And to do that, we will need
+to know the mean and the
+
+33
+00:01:48,390 --> 00:01:49,910
+standard deviation.
+
+34
+00:01:49,910 --> 00:01:53,950
+Now for an exponential, the mean
+is the inverse of lambda
+
+35
+00:01:53,950 --> 00:01:58,660
+and the standard deviation is
+also the inverse of lambda and
+
+36
+00:01:58,660 --> 00:02:02,090
+so we know what these
+quantities are.
+
+37
+00:02:02,090 --> 00:02:08,750
+Then, the next step is to take
+this event here and rewrite it
+
+38
+00:02:08,750 --> 00:02:13,270
+in a way that involves
+this random variable.
+
+39
+00:02:13,270 --> 00:02:18,530
+So what we would do is that we
+take the original description
+
+40
+00:02:18,530 --> 00:02:24,590
+of the event, subtract from both
+sides of this inequality
+
+41
+00:02:24,590 --> 00:02:26,640
+this number n times mu.
+
+42
+00:02:26,640 --> 00:02:29,600
+In this case, n is
+100, mu is 2.
+
+43
+00:02:29,600 --> 00:02:35,079
+So we subtract 200, divide by
+this quantity, square root of
+
+44
+00:02:35,079 --> 00:02:39,090
+100 is 10 times sigma,
+this gives us 20.
+
+45
+00:02:39,090 --> 00:02:44,750
+And we do the same on the other
+side of the inequality.
+
+46
+00:02:44,750 --> 00:02:48,250
+This is just an equivalent
+representation of the original
+
+47
+00:02:48,250 --> 00:02:52,670
+event, but we have here is
+the probability that this
+
+48
+00:02:52,670 --> 00:02:58,660
+standardized version of Sn is
+larger than or equal to this
+
+49
+00:02:58,660 --> 00:03:01,580
+number, which is 0.5.
+
+50
+00:03:01,580 --> 00:03:04,880
+And at this point, we can use
+the central limit theorem
+
+51
+00:03:04,880 --> 00:03:08,320
+approximation to say that this
+probability is approximately
+
+52
+00:03:08,320 --> 00:03:12,925
+the same if we use a standard
+normal instead of Zn.
+
+53
+00:03:15,570 --> 00:03:18,900
+Now for a standard normal, we
+can calculate probabilities in
+
+54
+00:03:18,900 --> 00:03:21,650
+terms of the CDF that's
+given in the table.
+
+55
+00:03:21,650 --> 00:03:24,010
+But here, we have the
+probability that Z is larger
+
+56
+00:03:24,010 --> 00:03:27,740
+than something, not smaller
+than something.
+
+57
+00:03:27,740 --> 00:03:30,810
+The CDF gives us the probability
+that Z is less
+
+58
+00:03:30,810 --> 00:03:31,790
+than something.
+
+59
+00:03:31,790 --> 00:03:33,160
+This is easy to handle.
+
+60
+00:03:33,160 --> 00:03:40,380
+This probability is 1 minus the
+probability that Z is less
+
+61
+00:03:40,380 --> 00:03:48,140
+than 0.5, which is 1 minus the
+CDF of the standard normal
+
+62
+00:03:48,140 --> 00:03:51,430
+evaluated at 0.5.
+
+63
+00:03:51,430 --> 00:03:56,610
+And at this point, we look up
+the normal table, the standard
+
+64
+00:03:56,610 --> 00:04:04,070
+normal table, and value for
+an argument of 0.5.
+
+65
+00:04:04,070 --> 00:04:09,600
+The corresponding value is this
+one, so we obtain 1 minus
+
+66
+00:04:09,600 --> 00:04:17,339
+0.6915, which evaluates
+to 0.3085.
+
+67
+00:04:17,339 --> 00:04:22,560
+And this is the answer to
+this particular problem.
+
+68
+00:04:22,560 --> 00:04:27,280
+In the next example, we ask a
+somewhat different question.
+
+69
+00:04:27,280 --> 00:04:32,620
+We fix again the number of
+packages to be 100, but we're
+
+70
+00:04:32,620 --> 00:04:37,330
+given some probabilistic
+tolerance.
+
+71
+00:04:37,330 --> 00:04:42,360
+We allow the packages, their
+total weight, to exceed the
+
+72
+00:04:42,360 --> 00:04:44,790
+capacity of the container.
+
+73
+00:04:44,790 --> 00:04:47,970
+But we don't want that to happen
+too often, we want to
+
+74
+00:04:47,970 --> 00:04:52,560
+have only 5% probability of
+exceeding that capacity.
+
+75
+00:04:52,560 --> 00:04:55,820
+How should we choose the
+capacity of the container if
+
+76
+00:04:55,820 --> 00:05:00,080
+we want to have this kind
+of a specification?
+
+77
+00:05:00,080 --> 00:05:02,220
+So we proceed as follows.
+
+78
+00:05:02,220 --> 00:05:08,040
+We want this number, 0.05, to be
+approximately equal to this
+
+79
+00:05:08,040 --> 00:05:09,250
+probability.
+
+80
+00:05:09,250 --> 00:05:15,100
+But now, we take this event and
+rewrite it in terms of the
+
+81
+00:05:15,100 --> 00:05:18,250
+standardized random variable.
+
+82
+00:05:18,250 --> 00:05:24,460
+That is, we start from both
+sides of the inequality and
+
+83
+00:05:24,460 --> 00:05:32,680
+subtract n times mu, which is
+200, and then divide by the
+
+84
+00:05:32,680 --> 00:05:37,490
+standard deviation of Sn, which
+is this quantity and
+
+85
+00:05:37,490 --> 00:05:40,715
+which is 20, exactly as in
+the previous example.
+
+86
+00:05:45,540 --> 00:05:51,990
+And now, this random variable,
+Zn, is approximately a
+
+87
+00:05:51,990 --> 00:05:53,460
+standard normal.
+
+88
+00:05:53,460 --> 00:05:55,600
+So we're asking for the
+probability of the standard
+
+89
+00:05:55,600 --> 00:05:59,680
+normal is larger than or equal
+to something which, using the
+
+90
+00:05:59,680 --> 00:06:05,230
+argument as in the previous
+example, is 1 minus the CDF of
+
+91
+00:06:05,230 --> 00:06:09,670
+the standard normal, evaluated
+at this particular value.
+
+92
+00:06:12,550 --> 00:06:19,770
+Now, what this tells us is that
+this quantity here, the
+
+93
+00:06:19,770 --> 00:06:25,940
+value of the CDF, should be
+equal to 1 minus 0.05.
+
+94
+00:06:25,940 --> 00:06:30,940
+So this quantity here
+should be 0.95.
+
+95
+00:06:30,940 --> 00:06:34,200
+What does this tell us about
+the argument of the CDF?
+
+96
+00:06:34,200 --> 00:06:37,050
+We can look at the table
+and try to find
+
+97
+00:06:37,050 --> 00:06:41,120
+somewhere an entry of 0.95.
+
+98
+00:06:41,120 --> 00:06:48,159
+And we find it either
+here or there.
+
+99
+00:06:48,159 --> 00:06:51,940
+We could choose either one, or
+we might decide to split the
+
+100
+00:06:51,940 --> 00:06:58,310
+difference and say that we get
+the value of 0.95 when the
+
+101
+00:06:58,310 --> 00:07:04,450
+argument is 1.645.
+
+102
+00:07:04,450 --> 00:07:11,590
+And so we conclude that in order
+for this to be 0.95, we
+
+103
+00:07:11,590 --> 00:07:20,390
+need a minus 200 divided by
+20 to be equal to 1.645.
+
+104
+00:07:20,390 --> 00:07:28,310
+And then we solve for a and we
+find that a should be 232.9.
+
+105
+00:07:28,310 --> 00:07:33,390
+And we can choose the capacity
+of our container this way.
+
+106
+00:07:33,390 --> 00:07:37,310
+Our next example is a little
+more challenging.
+
+107
+00:07:37,310 --> 00:07:40,390
+Here, we will fix a and
+b and we will ask for
+
+108
+00:07:40,390 --> 00:07:42,430
+the value of n.
+
+109
+00:07:42,430 --> 00:07:48,310
+Here's a type of question
+that has this flavor.
+
+110
+00:07:48,310 --> 00:07:52,120
+We are given the capacity
+of our container.
+
+111
+00:07:52,120 --> 00:07:54,840
+We want to have small
+probability of
+
+112
+00:07:54,840 --> 00:07:57,070
+exceeding that capacity.
+
+113
+00:07:57,070 --> 00:08:01,880
+How many packages should
+you try to load?
+
+114
+00:08:01,880 --> 00:08:05,550
+What is the value of
+n for which this
+
+115
+00:08:05,550 --> 00:08:08,360
+relation will be true?
+
+116
+00:08:08,360 --> 00:08:13,650
+So we proceed, as usual, by
+taking this event and
+
+117
+00:08:13,650 --> 00:08:18,710
+rewriting it in a way that
+involves the standardized
+
+118
+00:08:18,710 --> 00:08:21,430
+version of Sn.
+
+119
+00:08:21,430 --> 00:08:25,680
+So we need to subtract n
+times mu, which in this
+
+120
+00:08:25,680 --> 00:08:27,680
+problem is 2 times n.
+
+121
+00:08:27,680 --> 00:08:30,960
+We subtract it from both sides
+of the inequality.
+
+122
+00:08:30,960 --> 00:08:34,909
+And then we divide by the square
+root of n times sigma,
+
+123
+00:08:34,909 --> 00:08:36,150
+which is 2.
+
+124
+00:08:36,150 --> 00:08:41,929
+So we divide both sides of the
+inequality by this number.
+
+125
+00:08:41,929 --> 00:08:45,970
+Once more, this event here is
+identical to the original
+
+126
+00:08:45,970 --> 00:08:50,970
+event, but now it is expressed
+in terms of the standardized
+
+127
+00:08:50,970 --> 00:08:52,620
+version of Sn.
+
+128
+00:08:52,620 --> 00:08:55,300
+This is a random variable
+that's approximately a
+
+129
+00:08:55,300 --> 00:08:59,010
+standard normal, so once more,
+we're talking about the
+
+130
+00:08:59,010 --> 00:09:02,070
+probability that the standard
+normal exceeds a certain
+
+131
+00:09:02,070 --> 00:09:05,420
+value, and by the central
+limit theorem, this is
+
+132
+00:09:05,420 --> 00:09:11,000
+approximately equal to 1 minus
+the standard normal CDF,
+
+133
+00:09:11,000 --> 00:09:17,010
+evaluated at this particular
+value here.
+
+134
+00:09:17,010 --> 00:09:21,870
+Now we want this quantity to
+be approximately equal to
+
+135
+00:09:21,870 --> 00:09:28,770
+0.05, which, once more, means
+that this quantity should be
+
+136
+00:09:28,770 --> 00:09:37,310
+0.95 and arguing as before that
+we try to find 0.95 in
+
+137
+00:09:37,310 --> 00:09:39,320
+the standard normal table.
+
+138
+00:09:39,320 --> 00:09:43,850
+And this tells us that the
+argument of the normal CDF
+
+139
+00:09:43,850 --> 00:09:56,050
+should be equal to 1.645.
+
+140
+00:09:56,050 --> 00:09:58,620
+Here, we get an equation
+for n.
+
+141
+00:09:58,620 --> 00:10:01,190
+Unfortunately, it is a
+quadratic equation.
+
+142
+00:10:01,190 --> 00:10:03,410
+However, we can solve it.
+
+143
+00:10:03,410 --> 00:10:07,240
+And after you solve it,
+numerically or using the
+
+144
+00:10:07,240 --> 00:10:11,360
+formula for the solution of
+quadratic equations, you find
+
+145
+00:10:11,360 --> 00:10:17,220
+the value of n that's somewhere
+between 89 and 90.
+
+146
+00:10:17,220 --> 00:10:23,420
+Now, n is an integer, so you
+could choose either 89 or 90.
+
+147
+00:10:23,420 --> 00:10:26,960
+If you want to be conservative,
+then you would
+
+148
+00:10:26,960 --> 00:10:32,150
+set n to the smaller value of
+the two and set n to be 89.
+
+149
+00:10:35,930 --> 00:10:40,920
+Our last example is going to
+be a little different.
+
+150
+00:10:40,920 --> 00:10:43,240
+Here's what happens.
+
+151
+00:10:43,240 --> 00:10:46,050
+We start loading the container,
+and the container
+
+152
+00:10:46,050 --> 00:10:48,780
+has a capacity of 210.
+
+153
+00:10:48,780 --> 00:10:52,110
+Once we load the package and
+we see that the weight has
+
+154
+00:10:52,110 --> 00:10:55,630
+exceeded 210, we stop.
+
+155
+00:10:55,630 --> 00:10:58,900
+Let N be the number of packages
+that have been
+
+156
+00:10:58,900 --> 00:11:01,990
+loaded, and this number
+is random.
+
+157
+00:11:01,990 --> 00:11:05,220
+If you're unlucky and you happen
+to get lots of heavy
+
+158
+00:11:05,220 --> 00:11:08,980
+packages, then you will
+stop earlier.
+
+159
+00:11:08,980 --> 00:11:12,560
+We would like to calculate,
+approximately, the probability
+
+160
+00:11:12,560 --> 00:11:15,760
+that the number of packages
+that have been loaded is
+
+161
+00:11:15,760 --> 00:11:18,630
+larger than 100.
+
+162
+00:11:18,630 --> 00:11:22,440
+Now, this problem feels
+a little different.
+
+163
+00:11:22,440 --> 00:11:27,590
+The reason is that N is not the
+sum of independent random
+
+164
+00:11:27,590 --> 00:11:31,390
+variables and so we do not have
+a version of the central
+
+165
+00:11:31,390 --> 00:11:37,110
+limit theorem that we could
+apply to N. What can we do?
+
+166
+00:11:37,110 --> 00:11:41,860
+Well, we try to take this event
+and express it in terms
+
+167
+00:11:41,860 --> 00:11:43,720
+of the Xi's.
+
+168
+00:11:43,720 --> 00:11:45,820
+And here's how we go about it.
+
+169
+00:11:45,820 --> 00:11:50,200
+What does it mean that we loaded
+more than 100 packages?
+
+170
+00:11:50,200 --> 00:11:53,860
+This means that at the time
+we were loading the 100th
+
+171
+00:11:53,860 --> 00:11:56,740
+package, we didn't stop.
+
+172
+00:11:56,740 --> 00:12:02,000
+And this means that at that
+time, after we loaded the
+
+173
+00:12:02,000 --> 00:12:07,800
+100th package, the weight
+had not exceeded 210.
+
+174
+00:12:07,800 --> 00:12:11,420
+So the event that we're dealing
+with here is the same
+
+175
+00:12:11,420 --> 00:12:18,070
+as the event that the first
+100 packages have a total
+
+176
+00:12:18,070 --> 00:12:25,350
+weight which is less than
+or equal to 210.
+
+177
+00:12:25,350 --> 00:12:27,675
+But now we're back into
+a problem that
+
+178
+00:12:27,675 --> 00:12:29,350
+we know how to solve.
+
+179
+00:12:29,350 --> 00:12:33,270
+And the way to solve it is to
+take this random variable,
+
+180
+00:12:33,270 --> 00:12:34,850
+standardize it--
+
+181
+00:12:34,850 --> 00:12:38,780
+this actually is essentially the
+same calculation as in our
+
+182
+00:12:38,780 --> 00:12:40,720
+very first example--
+
+183
+00:12:40,720 --> 00:12:46,450
+and we will get the standard
+normal CDF evaluated at 210
+
+184
+00:12:46,450 --> 00:12:51,120
+minus the mean of this random
+variable, which is 200,
+
+185
+00:12:51,120 --> 00:12:53,610
+divided by the standard
+deviation of this random
+
+186
+00:12:53,610 --> 00:12:55,920
+variable, which is 20.
+
+187
+00:12:55,920 --> 00:13:04,400
+So we're looking at phi of 0.5,
+which we look up at the
+
+188
+00:13:04,400 --> 00:13:14,900
+standard normal table, and
+has a value of 0.6915.
+
+189
+00:13:14,900 --> 00:13:19,480
+So this was our last example,
+and these four examples that
+
+190
+00:13:19,480 --> 00:13:24,330
+we worked through cover pretty
+much all of the types of
+
+191
+00:13:24,330 --> 00:13:27,410
+problems that you
+might encounter.
+
+192
+00:13:27,410 --> 00:13:31,110
+Of course, sometimes it might
+not be entirely obvious what
+
+193
+00:13:31,110 --> 00:13:33,370
+kind of problem you
+are dealing with.
+
+194
+00:13:33,370 --> 00:13:36,310
+You may have to do some
+translation from a problem
+
+195
+00:13:36,310 --> 00:13:40,100
+statement to bring it in the
+form that we dealt with at
+
+196
+00:13:40,100 --> 00:13:41,080
+this point.
+
+197
+00:13:41,080 --> 00:13:46,120
+But once you bring it into a
+form where you can get close
+
+198
+00:13:46,120 --> 00:13:49,480
+to applying the central limit
+theorem, then the steps are
+
+199
+00:13:49,480 --> 00:13:53,340
+pretty much routine, as long
+as you carry them out in a
+
+200
+00:13:53,340 --> 00:13:54,990
+systematic and organized
+manner.

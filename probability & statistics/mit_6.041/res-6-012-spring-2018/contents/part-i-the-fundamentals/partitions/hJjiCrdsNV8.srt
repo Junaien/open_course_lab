@@ -1,0 +1,377 @@
+1
+00:00:00,780 --> 00:00:04,520
+We now come to our last major
+class of counting problems.
+
+2
+00:00:04,520 --> 00:00:07,170
+We will count the number of ways
+that a given set can be
+
+3
+00:00:07,170 --> 00:00:10,760
+partitioned into pieces
+of given sizes.
+
+4
+00:00:10,760 --> 00:00:13,770
+We start with a set
+that consists
+
+5
+00:00:13,770 --> 00:00:17,540
+of n different elements.
+
+6
+00:00:17,540 --> 00:00:20,300
+And we have r persons.
+
+7
+00:00:20,300 --> 00:00:28,960
+We want to give n1 items to
+the first person, give n2
+
+8
+00:00:28,960 --> 00:00:34,780
+items to the second
+person, and so on.
+
+9
+00:00:34,780 --> 00:00:38,310
+And finally, we want
+to give n-sub-r
+
+10
+00:00:38,310 --> 00:00:42,230
+items to the rth person.
+
+11
+00:00:42,230 --> 00:00:47,510
+These numbers, n1, n2, up to nr
+are given to us, how many
+
+12
+00:00:47,510 --> 00:00:49,920
+items each person should get.
+
+13
+00:00:49,920 --> 00:00:56,140
+And these numbers must add to
+n so that every item in the
+
+14
+00:00:56,140 --> 00:00:59,380
+original set is given
+to some person.
+
+15
+00:00:59,380 --> 00:01:04,629
+We want to count to the number
+of ways that this can be done.
+
+16
+00:01:04,629 --> 00:01:08,150
+This is the number of ways that
+we can partition a given
+
+17
+00:01:08,150 --> 00:01:12,650
+set into subsets of
+prescribed sizes.
+
+18
+00:01:12,650 --> 00:01:15,160
+Let's use c to denote
+the number of
+
+19
+00:01:15,160 --> 00:01:16,910
+ways this can be done.
+
+20
+00:01:16,910 --> 00:01:19,620
+We want to calculate
+this number c.
+
+21
+00:01:19,620 --> 00:01:22,730
+Instead of calculating directly,
+we're going to use
+
+22
+00:01:22,730 --> 00:01:26,400
+the same trick that we employed
+when we counted
+
+23
+00:01:26,400 --> 00:01:30,170
+combinations and derived the
+binomial coefficient.
+
+24
+00:01:30,170 --> 00:01:33,229
+That is, we're going to
+consider, in a much simpler
+
+25
+00:01:33,229 --> 00:01:37,840
+counting problem, the problem
+of ordering n items, taking
+
+26
+00:01:37,840 --> 00:01:42,289
+the n items in our original
+set and putting them in an
+
+27
+00:01:42,289 --> 00:01:44,380
+ordered list.
+
+28
+00:01:44,380 --> 00:01:48,560
+Of course, we know in how many
+ways this can be done.
+
+29
+00:01:48,560 --> 00:01:54,170
+Ordering n items can be done
+in n factorial ways.
+
+30
+00:01:54,170 --> 00:01:55,590
+This is the count
+of the number of
+
+31
+00:01:55,590 --> 00:01:57,960
+permutations of n items.
+
+32
+00:01:57,960 --> 00:02:00,990
+But now let us think of a
+different way of ordering the
+
+33
+00:02:00,990 --> 00:02:03,150
+n items, an indirect way.
+
+34
+00:02:03,150 --> 00:02:06,250
+It proceeds according to
+the following stages.
+
+35
+00:02:06,250 --> 00:02:08,340
+We start with the n items.
+
+36
+00:02:08,340 --> 00:02:14,410
+And we first distribute them
+to the different persons.
+
+37
+00:02:14,410 --> 00:02:19,993
+Having done that, then we ask
+person one to take their
+
+38
+00:02:19,993 --> 00:02:25,079
+items, order them, and put
+them in the first n1
+
+39
+00:02:25,079 --> 00:02:28,390
+slots of our list.
+
+40
+00:02:28,390 --> 00:02:33,950
+Then person two takes their
+items and puts them into the
+
+41
+00:02:33,950 --> 00:02:37,430
+next n2 slots in our list.
+
+42
+00:02:37,430 --> 00:02:38,920
+We continue this way.
+
+43
+00:02:38,920 --> 00:02:41,970
+And finally, the last person
+takes the items that they
+
+44
+00:02:41,970 --> 00:02:45,890
+possess and puts them
+in the last n-sub-r
+
+45
+00:02:45,890 --> 00:02:48,685
+slots in this list.
+
+46
+00:02:51,810 --> 00:02:56,050
+In how many ways can this
+process be carried out?
+
+47
+00:02:56,050 --> 00:03:01,060
+We have c choices on how
+to partition the
+
+48
+00:03:01,060 --> 00:03:04,200
+given set into subsets.
+
+49
+00:03:04,200 --> 00:03:12,170
+Then person one has n1 factorial
+choices on how to
+
+50
+00:03:12,170 --> 00:03:16,570
+order the n1 items that
+that person processes.
+
+51
+00:03:16,570 --> 00:03:21,140
+Person two has n2 factorial
+choices for how to order the
+
+52
+00:03:21,140 --> 00:03:25,410
+n2 items that it possesses,
+and so on until the last
+
+53
+00:03:25,410 --> 00:03:30,200
+person, who has nr factorial
+choices for
+
+54
+00:03:30,200 --> 00:03:33,230
+ordering their elements.
+
+55
+00:03:33,230 --> 00:03:37,680
+This multi-stage process results
+in an ordered list of
+
+56
+00:03:37,680 --> 00:03:39,860
+the n terms.
+
+57
+00:03:39,860 --> 00:03:42,780
+This is the number of ways these
+multi-stage process can
+
+58
+00:03:42,780 --> 00:03:44,770
+be carried out.
+
+59
+00:03:44,770 --> 00:03:48,250
+On the other hand, we know that
+the number of possible
+
+60
+00:03:48,250 --> 00:03:51,520
+orderings of the items
+is n factorial.
+
+61
+00:03:51,520 --> 00:03:55,130
+So we have this equality.
+
+62
+00:03:55,130 --> 00:03:57,820
+We can solve this for c.
+
+63
+00:03:57,820 --> 00:04:02,600
+And we find the answer, that the
+number of ways that the n
+
+64
+00:04:02,600 --> 00:04:07,090
+items can be partitioned into
+subsets of the given sizes is
+
+65
+00:04:07,090 --> 00:04:11,170
+n factorial divided by the
+product of the factorials of
+
+66
+00:04:11,170 --> 00:04:13,710
+the different ni's.
+
+67
+00:04:13,710 --> 00:04:17,399
+This particular expression
+is called the multinomial
+
+68
+00:04:17,399 --> 00:04:20,920
+coefficient, and it generalizes
+the binomial
+
+69
+00:04:20,920 --> 00:04:21,970
+coefficient.
+
+70
+00:04:21,970 --> 00:04:26,690
+The binomial coefficient was
+referring to the case where we
+
+71
+00:04:26,690 --> 00:04:34,870
+essentially split our set into
+one subset with k elements,
+
+72
+00:04:34,870 --> 00:04:40,850
+and then the second subset gets
+the remaining elements.
+
+73
+00:04:40,850 --> 00:04:47,600
+So the special case where r is
+equal to 2, and n1 is equal to
+
+74
+00:04:47,600 --> 00:04:51,940
+k, n2 equals to n minus k,
+this corresponds to a
+
+75
+00:04:51,940 --> 00:04:56,210
+partition of a set into two
+subsets, or what is the same
+
+76
+00:04:56,210 --> 00:05:00,910
+just selecting the first subset
+and putting everything
+
+77
+00:05:00,910 --> 00:05:03,260
+else in the second subset.
+
+78
+00:05:03,260 --> 00:05:07,490
+And you can check that in this
+particular case, the
+
+79
+00:05:07,490 --> 00:05:10,480
+expression for the multinomial
+coefficient agrees with the
+
+80
+00:05:10,480 --> 00:05:13,500
+expression that we had derived
+for the binomial coefficient.

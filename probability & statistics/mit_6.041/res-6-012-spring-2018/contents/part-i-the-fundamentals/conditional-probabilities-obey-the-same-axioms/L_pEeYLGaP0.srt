@@ -1,0 +1,585 @@
+1
+00:00:01,500 --> 00:00:04,860
+I now want to emphasize
+an important point.
+
+2
+00:00:04,860 --> 00:00:08,200
+Conditional probabilities are
+just the same as ordinary
+
+3
+00:00:08,200 --> 00:00:12,020
+probabilities applied to
+a different situation.
+
+4
+00:00:12,020 --> 00:00:16,700
+They do not taste or smell or
+behave any differently than
+
+5
+00:00:16,700 --> 00:00:18,680
+ordinary probabilities.
+
+6
+00:00:18,680 --> 00:00:20,260
+What do I mean by that?
+
+7
+00:00:20,260 --> 00:00:24,770
+I mean that they satisfy the
+usual probability axioms.
+
+8
+00:00:24,770 --> 00:00:28,830
+For example, ordinary
+probabilities must also be
+
+9
+00:00:28,830 --> 00:00:29,560
+non-negative.
+
+10
+00:00:29,560 --> 00:00:32,420
+Is this true for conditional
+probabilities?
+
+11
+00:00:32,420 --> 00:00:35,250
+Of course it is true, because
+conditional probabilities are
+
+12
+00:00:35,250 --> 00:00:38,460
+defined as a ratio of
+two probabilities.
+
+13
+00:00:38,460 --> 00:00:40,150
+Probabilities are
+non-negative.
+
+14
+00:00:40,150 --> 00:00:43,950
+So the ratio will also be
+non-negative, of course as
+
+15
+00:00:43,950 --> 00:00:45,600
+long as it is well-defined.
+
+16
+00:00:45,600 --> 00:00:49,460
+And here we need to remember
+that we only talk about
+
+17
+00:00:49,460 --> 00:00:53,370
+conditional probabilities when
+we condition on an event that
+
+18
+00:00:53,370 --> 00:00:56,590
+itself has positive
+probability.
+
+19
+00:00:56,590 --> 00:00:59,170
+How about another axiom?
+
+20
+00:00:59,170 --> 00:01:03,540
+What is the probability of
+the entire sample space,
+
+21
+00:01:03,540 --> 00:01:05,400
+given the event B?
+
+22
+00:01:05,400 --> 00:01:06,940
+Let's check it out.
+
+23
+00:01:06,940 --> 00:01:11,950
+By definition, the conditional
+probability is the probability
+
+24
+00:01:11,950 --> 00:01:17,200
+of the intersection of the two
+events involved divided by the
+
+25
+00:01:17,200 --> 00:01:21,380
+probability of the conditioning
+event.
+
+26
+00:01:21,380 --> 00:01:24,545
+Now, what is the intersection
+of omega with B?
+
+27
+00:01:24,545 --> 00:01:26,400
+B is a subset of omega.
+
+28
+00:01:26,400 --> 00:01:29,880
+So when we intersect
+the two sets, we're
+
+29
+00:01:29,880 --> 00:01:32,740
+left just with B itself.
+
+30
+00:01:32,740 --> 00:01:36,810
+So the numerator becomes the
+probability of B. We're
+
+31
+00:01:36,810 --> 00:01:39,570
+dividing by the probability
+of B, and so the
+
+32
+00:01:39,570 --> 00:01:41,330
+answer is equal to 1.
+
+33
+00:01:41,330 --> 00:01:46,610
+So indeed, the sample space
+has unit probability, even
+
+34
+00:01:46,610 --> 00:01:49,229
+under the conditional model.
+
+35
+00:01:49,229 --> 00:01:53,390
+Now, remember that when we
+condition on an event B, we
+
+36
+00:01:53,390 --> 00:01:56,320
+could still work with the
+original sample space.
+
+37
+00:01:56,320 --> 00:02:00,230
+However, possible outcomes that
+do not belong to B are
+
+38
+00:02:00,230 --> 00:02:04,140
+considered impossible, so we
+might as well think of B
+
+39
+00:02:04,140 --> 00:02:07,170
+itself as being our
+sample space.
+
+40
+00:02:07,170 --> 00:02:10,949
+If we proceed like that and
+think now of B as being our
+
+41
+00:02:10,949 --> 00:02:15,980
+new sample space, what is the
+probability of this new sample
+
+42
+00:02:15,980 --> 00:02:18,180
+space in the conditional
+model?
+
+43
+00:02:18,180 --> 00:02:20,960
+Let's apply the definition
+once more.
+
+44
+00:02:20,960 --> 00:02:25,490
+It's the probability of the
+intersection of the two events
+
+45
+00:02:25,490 --> 00:02:30,450
+involved, B intersection B,
+divided by the probability of
+
+46
+00:02:30,450 --> 00:02:32,980
+the conditioning event.
+
+47
+00:02:32,980 --> 00:02:34,360
+What is the numerator?
+
+48
+00:02:34,360 --> 00:02:38,490
+The intersection of B with
+itself is just B, so the
+
+49
+00:02:38,490 --> 00:02:42,290
+numerator is the probability
+of B. We're dividing by the
+
+50
+00:02:42,290 --> 00:02:47,370
+probability of B. So the
+answer is, again, 1.
+
+51
+00:02:47,370 --> 00:02:52,130
+Finally, we need to check
+the additivity axiom.
+
+52
+00:02:52,130 --> 00:02:55,210
+Recall what the additivity
+axiom says.
+
+53
+00:02:55,210 --> 00:02:59,070
+If we have two events, two
+subsets of the sample space
+
+54
+00:02:59,070 --> 00:03:03,140
+that are disjoint, then the
+probability of their union is
+
+55
+00:03:03,140 --> 00:03:07,250
+equal to the sum of their
+individual probabilities.
+
+56
+00:03:07,250 --> 00:03:10,950
+Is this going to be the case
+if we now condition on a
+
+57
+00:03:10,950 --> 00:03:13,290
+certain event?
+
+58
+00:03:13,290 --> 00:03:17,430
+What we want to prove is the
+following statement.
+
+59
+00:03:17,430 --> 00:03:21,870
+If we take two events that are
+disjoint, they have empty
+
+60
+00:03:21,870 --> 00:03:26,210
+intersection, then the
+probability of the union is
+
+61
+00:03:26,210 --> 00:03:30,680
+the sum of their individual
+probabilities, but where now
+
+62
+00:03:30,680 --> 00:03:33,420
+the probabilities that we're
+employing are the conditional
+
+63
+00:03:33,420 --> 00:03:38,329
+probabilities, given the event
+B. So let us verify whether
+
+64
+00:03:38,329 --> 00:03:43,579
+this relation, this fact
+is correct or not.
+
+65
+00:03:43,579 --> 00:03:46,590
+Let us take this quantity
+and use the
+
+66
+00:03:46,590 --> 00:03:49,510
+definition to write it out.
+
+67
+00:03:49,510 --> 00:03:52,630
+By definition, this conditional
+probability is the
+
+68
+00:03:52,630 --> 00:03:56,730
+probability of the intersection
+of the first
+
+69
+00:03:56,730 --> 00:04:01,040
+event of interest, the one that
+appears on this side of
+
+70
+00:04:01,040 --> 00:04:05,420
+the conditioning, intersection
+with the event on which we are
+
+71
+00:04:05,420 --> 00:04:07,580
+conditioning.
+
+72
+00:04:07,580 --> 00:04:11,080
+And then we divide by the
+probability of the
+
+73
+00:04:11,080 --> 00:04:15,980
+conditioning event, B. Now,
+let's look at this quantity,
+
+74
+00:04:15,980 --> 00:04:16,820
+what is it?
+
+75
+00:04:16,820 --> 00:04:20,990
+We're taking the union of A with
+C, and then intersect it
+
+76
+00:04:20,990 --> 00:04:26,930
+with B. This union consists
+of these two pieces.
+
+77
+00:04:26,930 --> 00:04:30,130
+When we intersect with
+B, what is left is
+
+78
+00:04:30,130 --> 00:04:32,025
+these two pieces here.
+
+79
+00:04:34,940 --> 00:04:42,770
+So A union C intersected with B
+is the union of two pieces.
+
+80
+00:04:42,770 --> 00:04:48,870
+One piece is A intersection
+B, this piece here.
+
+81
+00:04:48,870 --> 00:04:55,510
+And another piece, which is C
+intersection B, this is the
+
+82
+00:04:55,510 --> 00:04:56,980
+second piece here.
+
+83
+00:04:56,980 --> 00:05:02,200
+So here we basically used a
+set theoretic identity.
+
+84
+00:05:02,200 --> 00:05:05,640
+And now we divide by the
+same [denominator]
+
+85
+00:05:05,640 --> 00:05:07,780
+as before.
+
+86
+00:05:07,780 --> 00:05:10,330
+And now let us continue.
+
+87
+00:05:10,330 --> 00:05:11,920
+Here's an interesting
+observation.
+
+88
+00:05:14,460 --> 00:05:18,180
+The events A and
+C are disjoint.
+
+89
+00:05:18,180 --> 00:05:22,870
+The piece of A that also belongs
+in B, therefore, is
+
+90
+00:05:22,870 --> 00:05:27,920
+disjoint from the piece of
+C that also belongs to B.
+
+91
+00:05:27,920 --> 00:05:35,400
+Therefore, this set here and
+that set here are disjoint.
+
+92
+00:05:35,400 --> 00:05:39,530
+Since they are disjoint, the
+probability of their union has
+
+93
+00:05:39,530 --> 00:05:42,850
+to be equal to the sum
+of their individual
+
+94
+00:05:42,850 --> 00:05:45,070
+probabilities.
+
+95
+00:05:45,070 --> 00:05:49,040
+So here we're using the
+additivity axiom on the
+
+96
+00:05:49,040 --> 00:05:54,260
+original probabilities to break
+this probability up into
+
+97
+00:05:54,260 --> 00:05:55,510
+two pieces.
+
+98
+00:05:59,770 --> 00:06:05,870
+And now we observe that here
+we have the ratio of an
+
+99
+00:06:05,870 --> 00:06:09,560
+intersection by the probability
+of B. This is just
+
+100
+00:06:09,560 --> 00:06:14,270
+the conditional probability of A
+given B using the definition
+
+101
+00:06:14,270 --> 00:06:16,860
+of conditional probabilities.
+
+102
+00:06:16,860 --> 00:06:21,750
+And the second part is the
+conditional probability of C
+
+103
+00:06:21,750 --> 00:06:25,240
+given B, where, again, we're
+using the definition of
+
+104
+00:06:25,240 --> 00:06:27,370
+conditional probabilities.
+
+105
+00:06:27,370 --> 00:06:32,490
+So we have indeed checked that
+this additivity property is
+
+106
+00:06:32,490 --> 00:06:37,450
+true for the case of conditional
+probabilities when
+
+107
+00:06:37,450 --> 00:06:40,530
+we consider two disjoint
+events.
+
+108
+00:06:40,530 --> 00:06:45,340
+Now, we could repeat the same
+derivation and verify that it
+
+109
+00:06:45,340 --> 00:06:52,810
+is also true for the case of a
+disjoint union, of finitely
+
+110
+00:06:52,810 --> 00:06:57,260
+many events, or even
+for countably
+
+111
+00:06:57,260 --> 00:07:00,120
+many disjoint events.
+
+112
+00:07:00,120 --> 00:07:05,720
+So we do have finite and
+countable additivity.
+
+113
+00:07:05,720 --> 00:07:10,240
+We're not proving it, but the
+argument is exactly the same
+
+114
+00:07:10,240 --> 00:07:13,010
+as for the case of two events.
+
+115
+00:07:13,010 --> 00:07:18,510
+So conditional probabilities do
+satisfy all of the standard
+
+116
+00:07:18,510 --> 00:07:20,840
+axioms of probability theory.
+
+117
+00:07:20,840 --> 00:07:23,700
+So conditional probabilities
+are just like ordinary
+
+118
+00:07:23,700 --> 00:07:24,970
+probabilities.
+
+119
+00:07:24,970 --> 00:07:28,460
+This actually has a very
+important implication.
+
+120
+00:07:28,460 --> 00:07:30,800
+Since conditional probabilities
+satisfy all of
+
+121
+00:07:30,800 --> 00:07:34,710
+the probability axioms, any
+formula or theorem that we
+
+122
+00:07:34,710 --> 00:07:39,880
+ever derive for ordinary
+probabilities will remain true
+
+123
+00:07:39,880 --> 00:07:42,570
+for conditional probabilities
+as well.

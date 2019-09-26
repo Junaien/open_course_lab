@@ -1,0 +1,129 @@
+1
+00:00:00,210 --> 00:00:03,360
+In this lecture, we introduce
+and develop the concept of
+
+2
+00:00:03,360 --> 00:00:05,940
+independence between events.
+
+3
+00:00:05,940 --> 00:00:08,630
+The general idea is
+the following.
+
+4
+00:00:08,630 --> 00:00:12,190
+If I tell you that a certain
+event A has occurred, this
+
+5
+00:00:12,190 --> 00:00:15,400
+will generally change the
+probability of some other
+
+6
+00:00:15,400 --> 00:00:18,760
+event B. Probabilities will
+have to be replaced by
+
+7
+00:00:18,760 --> 00:00:21,210
+conditional probabilities.
+
+8
+00:00:21,210 --> 00:00:24,170
+But if the conditional
+probability turns out to be
+
+9
+00:00:24,170 --> 00:00:27,890
+the same as the unconditional
+probability, then the
+
+10
+00:00:27,890 --> 00:00:31,840
+occurrence of event A does not
+carry any useful information
+
+11
+00:00:31,840 --> 00:00:34,530
+on whether event B will occur.
+
+12
+00:00:34,530 --> 00:00:37,970
+In such a case, we say that
+events A and B are
+
+13
+00:00:37,970 --> 00:00:40,140
+independent.
+
+14
+00:00:40,140 --> 00:00:43,320
+We will develop some intuition
+about the meaning of
+
+15
+00:00:43,320 --> 00:00:47,780
+independence of two events and
+introduce an extension, the
+
+16
+00:00:47,780 --> 00:00:50,890
+concept of conditional
+independence.
+
+17
+00:00:50,890 --> 00:00:54,180
+We will then proceed to define
+the independence of a
+
+18
+00:00:54,180 --> 00:00:57,470
+collection of more
+than two events.
+
+19
+00:00:57,470 --> 00:01:00,620
+If, for any two of the events
+in the collection we have
+
+20
+00:01:00,620 --> 00:01:04,610
+independence between them, we
+will say that we have pairwise
+
+21
+00:01:04,610 --> 00:01:05,910
+independence.
+
+22
+00:01:05,910 --> 00:01:08,750
+But we will see that
+independence of the entire
+
+23
+00:01:08,750 --> 00:01:11,230
+collection is something
+different.
+
+24
+00:01:11,230 --> 00:01:14,470
+It involves additional
+conditions.
+
+25
+00:01:14,470 --> 00:01:17,910
+Finally, we will close with an
+application in reliability
+
+26
+00:01:17,910 --> 00:01:21,650
+analysis and with a nice puzzle
+that will serve as a
+
+27
+00:01:21,650 --> 00:01:25,130
+word of caution about putting
+together probabilistic models.

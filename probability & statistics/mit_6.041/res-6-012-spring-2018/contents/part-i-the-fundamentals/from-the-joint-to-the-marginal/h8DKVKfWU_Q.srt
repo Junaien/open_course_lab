@@ -1,0 +1,501 @@
+1
+00:00:02,880 --> 00:00:07,590
+In the discrete case, we saw
+that we could recover the PMF
+
+2
+00:00:07,590 --> 00:00:12,370
+of X and the PMF of Y
+from the joint PMF.
+
+3
+00:00:12,370 --> 00:00:15,580
+Indeed, the joint PMF is
+supposed to contain a complete
+
+4
+00:00:15,580 --> 00:00:18,740
+probabilistic description of
+the two random variables.
+
+5
+00:00:18,740 --> 00:00:22,070
+It is their probability law, and
+any quantity of interest
+
+6
+00:00:22,070 --> 00:00:25,280
+can be computed if we
+know the joint.
+
+7
+00:00:25,280 --> 00:00:28,120
+Things are similar in the
+continuous setting.
+
+8
+00:00:28,120 --> 00:00:30,730
+You can easily guess
+the formula through
+
+9
+00:00:30,730 --> 00:00:32,900
+the standard recipe.
+
+10
+00:00:32,900 --> 00:00:41,550
+Replace sums by integrals,
+and replace PMFs by PDFs.
+
+11
+00:00:41,550 --> 00:00:46,230
+But a proof of this formula
+is actually instructive.
+
+12
+00:00:46,230 --> 00:00:51,550
+So let us start by first
+finding the CDF of X.
+
+13
+00:00:51,550 --> 00:00:55,640
+The CDF of X is, by definition,
+the probability
+
+14
+00:00:55,640 --> 00:00:59,470
+that the random variable X takes
+a value less than or
+
+15
+00:00:59,470 --> 00:01:03,120
+equal to a certain
+number little x.
+
+16
+00:01:03,120 --> 00:01:07,540
+And this is the probability of
+a particular set that we can
+
+17
+00:01:07,540 --> 00:01:10,450
+visualize on the two
+dimensional plane.
+
+18
+00:01:10,450 --> 00:01:15,510
+If here is the value of little
+x, then we're talking about
+
+19
+00:01:15,510 --> 00:01:22,020
+the set of all pairs x, y, for
+which the x component is less
+
+20
+00:01:22,020 --> 00:01:24,530
+than or equal to a
+certain number.
+
+21
+00:01:24,530 --> 00:01:29,220
+So we need to integrate over
+this two-dimensional set the
+
+22
+00:01:29,220 --> 00:01:31,700
+joint density.
+
+23
+00:01:31,700 --> 00:01:37,640
+So it will be a double integral
+of the joint density
+
+24
+00:01:37,640 --> 00:01:40,940
+over this particular
+two-dimensional set.
+
+25
+00:01:40,940 --> 00:01:43,509
+Now, since we've used the
+symbol x here to mean
+
+26
+00:01:43,509 --> 00:01:46,700
+something specific, let us use
+different symbols for the
+
+27
+00:01:46,700 --> 00:01:51,280
+dummy variables that we will
+use in the integration.
+
+28
+00:01:51,280 --> 00:01:55,180
+And we need to integrate with
+respect to the two variables,
+
+29
+00:01:55,180 --> 00:01:59,380
+let's say with respect to
+t and with respect to s.
+
+30
+00:01:59,380 --> 00:02:03,320
+The variable t can
+be anything.
+
+31
+00:02:03,320 --> 00:02:07,190
+So it ranges from minus
+infinity to infinity.
+
+32
+00:02:07,190 --> 00:02:11,720
+But the variable s, the first
+argument, ranges from minus
+
+33
+00:02:11,720 --> 00:02:14,670
+infinity up to this
+point, which is x.
+
+34
+00:02:17,680 --> 00:02:22,530
+Think of this double integral as
+an integral with respect to
+
+35
+00:02:22,530 --> 00:02:27,380
+the variable s of this
+complicated function inside
+
+36
+00:02:27,380 --> 00:02:28,900
+the brackets.
+
+37
+00:02:28,900 --> 00:02:35,130
+Now, to find the density of
+X, all we need to do is to
+
+38
+00:02:35,130 --> 00:02:45,450
+differentiate the CDF of X. And
+when we have an integral
+
+39
+00:02:45,450 --> 00:02:48,220
+of this kind and we
+differentiate with respect to
+
+40
+00:02:48,220 --> 00:02:51,560
+the upper limit of the
+integration, what we are left
+
+41
+00:02:51,560 --> 00:02:54,630
+with is the integrand.
+
+42
+00:02:54,630 --> 00:02:59,020
+That is this expression here.
+
+43
+00:02:59,020 --> 00:03:04,550
+It is an integral with respect
+to the second variable.
+
+44
+00:03:04,550 --> 00:03:07,910
+And it's an integral over the
+entire space, from minus
+
+45
+00:03:07,910 --> 00:03:09,765
+infinity to plus infinity.
+
+46
+00:03:12,330 --> 00:03:14,360
+Here is an example.
+
+47
+00:03:14,360 --> 00:03:18,060
+The simplest kind of a joint
+PDF is a PDF of that is
+
+48
+00:03:18,060 --> 00:03:26,670
+constant on a certain set, S,
+and is 0 outside that set.
+
+49
+00:03:26,670 --> 00:03:30,020
+So the overall probability, one
+unit of probability, is
+
+50
+00:03:30,020 --> 00:03:33,010
+spread uniformly
+over that set.
+
+51
+00:03:33,010 --> 00:03:36,680
+Because the total volume under
+the joint PDF must be equal to
+
+52
+00:03:36,680 --> 00:03:43,790
+1, the height of the PDF must
+be equal to 1 over the area.
+
+53
+00:03:43,790 --> 00:03:50,690
+To calculate the probability of
+a certain set A, we want to
+
+54
+00:03:50,690 --> 00:03:55,700
+ask how much volume is sitting
+on top of that set.
+
+55
+00:03:55,700 --> 00:04:00,310
+And because in this case, the
+PDF is constant, we need to
+
+56
+00:04:00,310 --> 00:04:04,060
+take the height of the PDF
+times the relevant area.
+
+57
+00:04:04,060 --> 00:04:05,760
+What is the relevant area?
+
+58
+00:04:05,760 --> 00:04:10,570
+Well, actually, the PDF is 0
+outside the set S. So the
+
+59
+00:04:10,570 --> 00:04:14,510
+relevant area is only this
+part here, which is the
+
+60
+00:04:14,510 --> 00:04:19,050
+intersection of the
+two sets, S and A.
+
+61
+00:04:19,050 --> 00:04:24,810
+So the total volume sitting on
+top of this little set is
+
+62
+00:04:24,810 --> 00:04:29,860
+going to be the base, the area
+of the base, which is the area
+
+63
+00:04:29,860 --> 00:04:35,159
+of A intersection S times
+the height of the
+
+64
+00:04:35,159 --> 00:04:38,170
+PDF at those places.
+
+65
+00:04:38,170 --> 00:04:44,020
+Now, the height of the PDF is 1
+over the area of S. So this
+
+66
+00:04:44,020 --> 00:04:49,510
+is the formula for calculating
+the probability of a certain
+
+67
+00:04:49,510 --> 00:04:57,590
+set, A.
+
+68
+00:04:57,590 --> 00:05:00,530
+Let's now look at a
+specific example.
+
+69
+00:05:00,530 --> 00:05:06,050
+Suppose that we have a uniform
+PDF over this particular set,
+
+70
+00:05:06,050 --> 00:05:11,500
+S. This set has an area
+that is equal to 4.
+
+71
+00:05:11,500 --> 00:05:15,500
+It consists of four units
+rectangles arranged next to
+
+72
+00:05:15,500 --> 00:05:16,470
+each other.
+
+73
+00:05:16,470 --> 00:05:20,490
+So the height of the joint
+PDF in this example
+
+74
+00:05:20,490 --> 00:05:22,140
+is going to be 1/4.
+
+75
+00:05:24,700 --> 00:05:28,790
+It is one 1/4 on that set, but
+of course, it's going to be 0
+
+76
+00:05:28,790 --> 00:05:30,910
+outside that set.
+
+77
+00:05:30,910 --> 00:05:36,460
+We can now find the marginal
+PDF at some particular x.
+
+78
+00:05:36,460 --> 00:05:39,490
+So we can fix a particular
+value of x,
+
+79
+00:05:39,490 --> 00:05:41,060
+let's say this one.
+
+80
+00:05:41,060 --> 00:05:44,070
+To find the value of the
+marginal PDF, we need to
+
+81
+00:05:44,070 --> 00:05:49,550
+integrate over y along
+that particular line.
+
+82
+00:05:49,550 --> 00:05:53,380
+And the integral is going to
+have a contribution only on
+
+83
+00:05:53,380 --> 00:05:54,900
+that segment.
+
+84
+00:05:54,900 --> 00:05:59,320
+On that segment, the value
+of the joint PDF is 1/4.
+
+85
+00:05:59,320 --> 00:06:02,600
+And we're integrating over
+an interval that
+
+86
+00:06:02,600 --> 00:06:04,650
+has a length of one.
+
+87
+00:06:04,650 --> 00:06:08,230
+So the integral is going
+to be equal to 1/4.
+
+88
+00:06:08,230 --> 00:06:12,760
+But if x is somewhere around
+here, as we integrate over
+
+89
+00:06:12,760 --> 00:06:17,640
+that line, we integrate the
+value of 1/4, the value of the
+
+90
+00:06:17,640 --> 00:06:23,190
+PDF, over an interval that
+has a length equal to 3.
+
+91
+00:06:23,190 --> 00:06:27,780
+And so the result turns
+out to be 3/4.
+
+92
+00:06:27,780 --> 00:06:32,220
+There's a similar calculation
+for the marginal PDF of y.
+
+93
+00:06:32,220 --> 00:06:38,010
+For any particular value of
+little y, to find the marginal
+
+94
+00:06:38,010 --> 00:06:44,460
+PDF, we integrate along this
+line the joint PDF.
+
+95
+00:06:44,460 --> 00:06:47,659
+The joint PDF is 0 out here.
+
+96
+00:06:47,659 --> 00:06:52,030
+It's nonzero only on
+that interval.
+
+97
+00:06:52,030 --> 00:06:55,690
+And on that interval, it
+has a value of 1/4.
+
+98
+00:06:55,690 --> 00:06:59,909
+And the interval has a length of
+1, so the integral is going
+
+99
+00:06:59,909 --> 00:07:02,190
+to end up equal to 1/4.
+
+100
+00:07:02,190 --> 00:07:06,250
+But if we were to take a line
+somewhere here, we integrate
+
+101
+00:07:06,250 --> 00:07:10,460
+the value of 1/4 over an
+interval of length 2.
+
+102
+00:07:10,460 --> 00:07:13,060
+And so the result
+would be 1/2.
+
+103
+00:07:13,060 --> 00:07:18,880
+So we have recovered from the
+joint PDF the marginal PDF of
+
+104
+00:07:18,880 --> 00:07:22,730
+X and also the marginal
+PDF of Y.

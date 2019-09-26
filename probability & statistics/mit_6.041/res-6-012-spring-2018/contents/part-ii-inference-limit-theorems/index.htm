@@ -1,0 +1,1610 @@
+<!DOCTYPE html><html lang="en">
+      
+      
+        
+    
+    
+    
+    
+
+      
+      
+      <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">  
+        
+        <title>Part II: Inference &amp; Limit Theorems | Introduction to Probability | MIT OpenCourseWare</title>
+    <!-- Begin Automatic Metadata Insertion -->
+    <meta content="res-6-012-introduction-to-probability-spring-2018" name="WT.cg_n">
+    <meta content="Part II: Inference &amp; Limit Theorems" name="WT.cg_s">
+    <meta content="The videos in this part of the course cover inference and limit theorems." name="Description">
+    <meta content="Tsitsiklis, John" name="Author">
+    <meta content="Jaillet, Patrick" name="Author">
+    <meta content="RES.6-012,RES.6,probability,probability models,bayes rule,discrete random variables,continuous random variables,bernoulli process,poisson process,markov chains,central limit theorem,statistical inference,Systems Engineering,Probability and Statistics" name="keywords">
+    <meta content="RES.6-012 Introduction to Probability | Part II: Inference &amp; Limit Theorems" name="Search_Display">
+    <meta content="Systems Engineering" itemprop="about">
+    <meta content="Probability and Statistics" itemprop="about">
+    <!-- End Automatic Metadata Insertion -->
+
+	<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/grid.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/base.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/menu.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/jquery.bubblepopup.css">
+<link title="default" rel="stylesheet" type="text/css" href="https://ocw-origin.odl.mit.edu/styles/search.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/courses.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/courses_new.css">
+	<link href="https://ocw-origin.odl.mit.edu/xml/ocwcc.rdf" type="application/rdf+xml" rel="metadata">
+	<link rel="canonical" href="https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/">
+	<link rel="apple-touch-icon" href="../../common/images/apple-touch-icon.png">
+	
+	
+      
+	
+	<script type="text/javascript" src="../../common/scripts/jquery.js"></script>
+	<script type="text/javascript" src="../../common/scripts/ocw-media-utils-offline.js"></script>
+	<script type="text/javascript" src="../../common/scripts/ocw-offline.js"></script>
+	<script type="text/javascript" src="../../common/scripts/jquery.bubblepopup.min.js"></script>
+	<script type="text/javascript" src="../../common/scripts/expandy.js"></script>
+	<script type="text/javascript" src="https://ocw-origin.odl.mit.edu//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=70ac07d7-b28f-4071-816f-d292aba4849f"></script>
+	<script type="text/javascript" src="../../common/scripts/bubble-popup-offline.js"></script>
+	
+	
+	
+    
+    
+    
+    
+    
+    
+    
+      
+       
+		 
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </head>
+    <body itemscope itemtype="http://schema.org/WebPage">
+        
+	
+
+        <header id="top">
+			<div id="grid">
+				
+				
+					
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572">
+<div class="portletStaticText portlet-static-site-header">
+<!--googleoff: index--> <div class="grid_6 alpha" id="banner"><a href="https://ocw-origin.odl.mit.edu/"><img src="../../common/images/ocw_mast.png" class="logo" alt="MIT OpenCourseWare, Massachusetts Institute of Technology"></a></div> <div class="grid_6 omega" id="subscribe">
+<aside class="module" aria-label="Connect with OCW"> <table class="social">     <tbody>         <tr>             <td class="socialbutton"><a aria-label="Subscribe to the OCW Newsletter" href="https://ocw-origin.odl.mit.edu/subscribe/index.htm?utm_source=header"><img src="../../common/images/trans.gif" alt="An icon depicting an envelope.">Subscribe to the OCW Newsletter</a></td>             <td>
+<a aria-label="Facebook" href="https://facebook.com/mitocw"><img src="../../common/images/icon_fb.png" alt="Click to visit our Facebook page."></a>   <a aria-label="Twitter" href="https://twitter.com/mitocw"><img src="https://ocw-origin.odl.mit.edu/images/icon_twitter.png" alt="Click to visit our Twitter feed."></a>   <a aria-label="YouTube" href="https://www.youtube.com/mitocw"><img src="https://ocw-origin.odl.mit.edu/images/icon_yt.png" alt="Click to visit our YouTube page."></a>   <a aria-label="Open Matters blog on WordPress" href="https://mitopencourseware.wordpress.com/"><img src="https://ocw-origin.odl.mit.edu/images/icon_wp.png" alt="Click to visit our blog on WordPress."></a>
+</td>         </tr>     </tbody> </table> </aside><nav aria-label="Help Links" class="helplinks">     <a aria-label="OCW Site Help" href="https://ocw-origin.odl.mit.edu/help">Help</a><span aria-hidden="true">|</span>     <a href="https://ocw-origin.odl.mit.edu/about/contactus">Contact Us</a>   </nav>
+</div> <div class="clear"> </div> <!--googleon: index-->
+</div>
+
+</div>
+
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a6d6567612d6d656e75" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a6d6567612d6d656e75">
+<div class="portletStaticText portlet-static-mega-menu"><div><nav id="mega" class="grid_8 alpha" aria-label="Site"> <ul id="menu" role="presentation">     <li id="menu_home">
+<a href="https://ocw-origin.odl.mit.edu/" aria-label="Homepage"><img src="../../common/images/top-nav_home.png" class="home_icon" alt="Click for site home page."></a><!-- Begin Home Item -->
+</li>     <!-- End Home Item -->     <li id="drop_1" aria-label="Find Courses">
+<a href="#" aria-hidden="true">FIND COURSES</a><!-- Begin 5 columns Item -->     <div class="dropdown_5columns-a mega-courses"><div class="col_1a">
+<div class="row_1a">
+<nav aria-labelledby="mm-find-courses-by">     <span id="mm-find-courses-by" class="nav" aria-hidden="true">Find courses by:</span>     <ul class="find_by" role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/">Topic</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-number/">MIT Course Number</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-department/">Department</a></li>     </ul>     </nav>     <nav aria-labelledby="mm-collections">     <span id="mm-collections" class="nav" aria-hidden="true">Collections</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/new-courses/">New Courses</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/audio-video-courses/">Audio/Video Lectures</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/resources/">Supplemental Resources</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/high-school/">OCW Highlights for High School</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/mitx-related-courseware/">MITx &amp; Related OCW Courses</a></li>     </ul>     </nav>     <nav class="col_1b" aria-labelledby="mm-translated-courses">     <span id="mm-translated-courses" class="nav" aria-hidden="true" style="line-height: 1.3;">Cross-Disciplinary Topic Lists</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/energy-courses">Energy</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/entrepreneurship">Entrepreneurship</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/environment-courses">Environment</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/intro-programming">Introductory Programming</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/life-sciences">Life Sciences</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/transportation-courses">Transportation</a></li>     </ul>     </nav>
+</div>     <div class="row_1b"><nav aria-labelledby="mm-cross-disciplinary-topic-lists">     <span id="mm-cross-disciplinary-topic-lists" class="nav" aria-hidden="true">Translated Courses</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/traditional-chinese" aria-label="Traditional Chinese">繁體字 / Traditional Chinese</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/spanish" aria-label="Spanish">Español / Spanish</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/turkish" aria-label="Turkish">Türkçe / Turkish</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/korean" aria-label="Korean">(비디오)한국 / Korean</a></li>     </ul>     </nav></div>
+</div></div>
+</li>     <li id="drop_2">
+<a href="#" aria-label="For Educators">For Educators</a>     <div class="dropdown_1column-a" style="width: 270px;"><nav aria-labelledby="mm-find-courses-by">     <span id="mm-find-courses-by" class="nav" aria-hidden="true">OCW Educator Portal</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=instructional&amp;utm_campaign=Educator&amp;utm_source=megamenu&amp;utm_medium=find-courses&amp;utm_content=approaches">Search for Instructor Insights</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=teaching&amp;utm_campaign=Educator&amp;utm_source=megamenu&amp;utm_medium=find-courses&amp;utm_content=materials">Search for Teaching Materials</a></li>     </ul>     <span id="mm-collections" class="nav" aria-hidden="true">OCW Collections</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/#cat=teachingandeducation">MIT Courses about Teaching and Education</a></li>     </ul>     <span id="mm-collections" class="nav" aria-hidden="true">K-12</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/high-school/">OCW Highlights for High School</a></li>         <li><a href="https://www.k12videos.mit.edu/videos" aria-label="External Link: MIT Plus K12 Videos">MIT+K12 Videos</a></li>     </ul>     <span id="mm-higher-ed" class="nav" aria-hidden="true">Higher Ed</span>     <ul>         <li><a href="https://teachingexcellence.mit.edu/" aria-label="External Link: Teaching Excellence at MIT">Teaching Excellence at MIT</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/mit-curriculum-guide/">MIT Undergraduate Curriculum Map</a></li>
+<li><a href="https://openlearning.mit.edu/campus/digital-innovations/">Residential Digital Innovations</a></li>     </ul>     </nav></div>
+</li>     <li id="drop_3">
+<a href="#" aria-hidden="true">Give Now</a>     <div class="dropdown_1column-a"><nav class="col_1" aria-label="Donate">     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/give/">Make a Donation</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/why-give/">Why Give?</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/our-supporters/">Our Supporters</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/shop-ocw">Shop OCW</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/support/">Become a Corporate Sponsor</a></li>     </ul>     </nav></div>
+</li>     <li id="drop_4">
+<a href="#" aria-hidden="true">About</a>     <div class="dropdown_1column-a"><nav class="col_1" aria-label="About">     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/about/">About MIT OpenCourseWare</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/about/site-statistics/">Site Statistics</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/about/ocw-stories/">OCW Stories</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/about/newsletter/">News</a></li>     </ul>     </nav></div>
+</li> </ul> </nav></div></div>
+
+</div>
+
+
+
+
+
+<!--googleoff: index-->
+<script>
+  (function() {
+	var cx = '012626166551961672889:owjdpuboktq';
+	var gcse = document.createElement('script');
+	gcse.type = 'text/javascript';
+	gcse.async = true;
+	gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(gcse, s);
+  })();
+  window.onload = function(){
+	document.getElementById('gsc-i-id1').placeholder = 'Search';	
+  };
+
+$(document).ready(function(){
+
+$('.advanceSearch a').keydown(function(event){showSearchTips($(this),event);})
+$('#searchTipsModal').keydown(function(event){showSearchTips($(this),event);})
+
+function showSearchTips(obj,evt) {
+// if pressed enter key
+	if ( evt.which == 13 || evt.which == 32) {
+		showModal();
+		ga('send', 'pageview', "AdvanceSearch");
+		$(".advanceSearch a").attr('aria-expanded', 'true');
+		$('.searchTipsModal').focus();
+		evt.preventDefault();
+		}
+	if ( evt.which == 27 ) {
+		hideModal();
+		$(".advanceSearch a").attr('aria-expanded', 'false');
+		var modal = document.getElementById('searchTipsModal');
+		modal.style.display = "none";
+		$(".advanceSearch a").focus();
+		evt.preventDefault();
+		}
+}
+
+});
+function showModal(){
+	var modal = document.getElementById('searchTipsModal');
+	modal.style.display = "block";
+	ga('send', 'pageview', "AdvanceSearch");
+	document.getElementById("searchTipsBtn").setAttribute("aria-expanded", true);
+	window.setTimeout(function () {
+    document.getElementById('searchTipsModal').focus(); }, 0);
+}
+
+function hideModal(){
+	var modal = document.getElementById('searchTipsModal');
+	modal.style.display = "none";
+	document.getElementById("searchTipsBtn").setAttribute("aria-expanded", false);
+}
+</script>
+<div id="search" role="search" class="grid_4 omega">
+    	<table class="search">
+				<tbody>
+					<tr>
+						<td><div class="searchboxheader"><searchbox-only resultsurl="/search/ocwsearch.htm"></searchbox-only></div></td>
+						<td>
+							<div class="advanceSearch">
+								<a id="searchTipsBtn" onclick="showModal();" href="#" role="button" aria-label="search tips" aria-expanded="false" aria-describedby="searchtips">Search Tips</a>
+
+								<!-- The Modal -->
+								<div id="searchTipsModal" class="modal" tabindex="-1">
+								  <!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-body">
+											<button class="close" onclick="hideModal();" aria-label="close">X</button>
+											<span>
+												<b>Exclude words from your search</b>
+												<br>Put - in front of a word you want to leave out. For example, jaguar speed -car
+												<br><br>
+												<b>Search for an exact match</b>
+												<br>Put a word or phrase inside quotes. For example, "tallest building".
+												<br><br>
+												<b>Search for wildcards or unknown words</b>
+												<br>Put a * in your word or phrase where you want to leave a placeholder. For example, "largest * in the world".
+												<br><br>
+												<b>Search within a range of numbers</b>
+												<br>Put .. between two numbers. For example, camera $50..$100.
+												<br><br>
+												<b>Combine searches</b>
+												<br>Put "OR" between each search query. For example,  marathon OR race.
+												<br><br>
+											</span>
+										</div>
+								  </div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+		</table>
+</div>
+<div class="clear"></div>
+<!--googleon: index-->
+<!-- *end header* -->
+
+				
+				
+			</div>
+<!-- top grid end -->
+		</header><!-- top end -->
+			
+		<div id="center">
+         <div id="grid">
+		     <div id="left-section">
+                 <nav id="breadcrumb" aria-label="Breadcrumb">
+                      <p>
+
+    <a href="https://ocw-origin.odl.mit.edu/">Home</a>
+    
+        »
+        
+    
+    
+        
+            <a href="https://ocw-origin.odl.mit.edu/resources">Supplemental Resources</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../contents/index.htm">Introduction to Probability</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            
+            
+            Part II: Inference &amp; Limit Theorems
+         
+    
+</p>
+
+                 </nav>
+                 <div class="clear"></div>
+                 <div id="section_title">
+           			<h1 class="title" itemprop="name" property="dct:title">
+        <span class="" id="parent-fieldname-title">
+            Part II: Inference &amp; Limit Theorems
+        </span>
+    </h1>
+           	     </div>
+           	     <div class="clear"></div>
+           	     <div id="course_wrapper_section">
+           	     	 <nav id="course_nav" aria-label="Course">
+             			 	
+<div id="portletwrapper-6f63772e636f757273656c656674746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e652f7265736f75726365732f7265732d362d3031322d696e74726f64756374696f6e2d746f2d70726f626162696c6974792d737072696e672d323031380a657870616e64792d706c7573" class="portletWrapper kssattr-portlethash-6f63772e636f757273656c656674746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e652f7265736f75726365732f7265732d362d3031322d696e74726f64756374696f6e2d746f2d70726f626162696c6974792d737072696e672d323031380a657870616e64792d706c7573">
+<div class="portletStaticText portlet-static-expandy-plus">
+<p> </p>
+<script type="text/javascript">
+	$(document).ready(function() { 
+
+		$('div.toggle11').hide(); 
+		$('div.reveal11').click(function() { 
+			$('div.toggle11').slideToggle(400);
+			return false; 
+		});
+
+		$('div.toggle12').hide(); 
+		$('div.reveal12').click(function() { 
+			$('div.toggle12').slideToggle(400);
+			return false; 
+		});	
+
+		$('div.toggle13').hide(); 
+		$('div.reveal13').click(function() { 
+			$('div.toggle13').slideToggle(400);
+			return false; 
+		});	
+
+		$('div.toggle14').hide(); 
+		$('div.reveal14').click(function() { 
+			$('div.toggle14').slideToggle(400);
+			return false; 
+		});	
+});
+</script>
+</div>
+
+</div>
+
+
+
+
+<script language="javascript" type="text/javascript">
+function toggleMenu(objID) {
+  if (!document.getElementById) return;
+  var ob = document.getElementById(objID);
+  ob.className = (ob.className == 'selected')?'': 'selected';
+}
+function toggleClass(id)
+{
+  var divtoggleClass= document.getElementById(id);
+  divtoggleClass.className = (divtoggleClass.className == 'mO')?'mC': 'mO';
+  return false;
+}
+function changeAlt(id)
+{
+  id.alt = (id.alt == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+  id.title = (id.title == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+}
+</script>
+<!--Left Nav Starts -->
+
+
+	<ul>			  
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../contents/index.htm">
+		                  Resource Home  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../contents/part-i-the-fundamentals/index.htm">
+		                  Part I: The Fundamentals  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="selected">
+			   			<a href="../../contents/part-ii-inference-limit-theorems/index.htm">
+		                  Part II: Inference &amp; Limit Theorems  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../contents/part-iii-random-processes/index.htm">
+		                  Part III: Random Processes  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    
+		    
+         	
+	<!--second tal block close-->  
+	
+</ul>
+
+
+<!--Left Nav Ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </nav>
+           		     <main id="course_inner_section" aria-labelledby="section_title">
+           		     	
+	                    <p>The videos in Part II describe the laws of large numbers and introduce the main tools of Bayesian inference methods.</p> <p>The textbook for this subject is <a href="http://www.amazon.com/exec/obidos/ASIN/188652923X/ref=nosim/mitopencourse-20"><img alt="Buy at Amazon" src="http://ocw.mit.edu/images/a_logo_17.gif" align="absMiddle" border="0"></a> Bertsekas, Dimitri, and John Tsitsiklis. <em>Introduction to Probability. </em>2nd ed. <a href="http://www.athenasc.com/">Athena Scientific</a>, 2008. ISBN: 9781886529236.</p> <p>The authors have made this <a href="../../contents/part-i-the-fundamentals/MITRES_6_012S18_Textbook.pdf">Selected Summary Material (PDF)</a> available for OCW users.</p> <p>L = Lecture Content</p> <p>S = Supplemental Content</p> <div class="maintabletemplate"><table class="tablewidth100" summary="See table caption for summary.">     <caption class="invisible">Course videos.</caption>       <thead>         <tr>             <th scope="col" width="470">SES # &amp; TOPICS</th>             <th scope="col" width="315">SLIDES</th>         </tr>     </thead>          <tbody>         <tr class="row">             <td colspan="2"><strong>Lecture 14: Introduction to Bayesian Inference</strong></td>         </tr>         <tr class="alt-row">             <td>
+<div class="reveal1"><p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p></div>             <div style="display: none;" class="toggle1">
+<p>L14.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed1 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview/aNLEnFtWwhg.srt'}</script><a rel="popup_name1" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video1', 'embed1', 'player1','https://www.youtube.com/v/aNLEnFtWwhg', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/aNLEnFtWwhg/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview/aNLEnFtWwhg.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name1">
+<div class="inline-video" id="video1"><div id="embed1" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed1transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382202, "embed1", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L14-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 5MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview/aNLEnFtWwhg.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview/aNLEnFtWwhg.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L14.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed2 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/overview-of-some-application-domains/z1lAn4GMaFs.srt'}</script><a rel="popup_name2" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video2', 'embed2', 'player2','https://www.youtube.com/v/z1lAn4GMaFs', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/z1lAn4GMaFs/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/overview-of-some-application-domains/z1lAn4GMaFs.srt', '');">Overview of some Application Domains</a><div class="popup_block" id="popup_name2">
+<div class="inline-video" id="video2"><div id="embed2" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed2transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382200, "embed2", 0, 0)</script><p class="pop_margin_title">Overview of some Application Domains</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L14-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 10MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/overview-of-some-application-domains/z1lAn4GMaFs.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/overview-of-some-application-domains/z1lAn4GMaFs.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L14.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed3 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/types-of-inference-problems/v5fOm80VAnc.srt'}</script><a rel="popup_name3" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video3', 'embed3', 'player3','https://www.youtube.com/v/v5fOm80VAnc', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/v5fOm80VAnc/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/types-of-inference-problems/v5fOm80VAnc.srt', '');">Types of Inference Problems</a><div class="popup_block" id="popup_name3">
+<div class="inline-video" id="video3"><div id="embed3" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed3transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382201, "embed3", 0, 0)</script><p class="pop_margin_title">Types of Inference Problems</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L14-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 5MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/types-of-inference-problems/v5fOm80VAnc.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/types-of-inference-problems/v5fOm80VAnc.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L14.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed4 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-bayesian-inference-framework/0w_4QcvBYII.srt'}</script><a rel="popup_name4" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video4', 'embed4', 'player4','https://www.youtube.com/v/0w_4QcvBYII', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/0w_4QcvBYII/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-bayesian-inference-framework/0w_4QcvBYII.srt', '');">The Bayesian Inference Framework</a><div class="popup_block" id="popup_name4">
+<div class="inline-video" id="video4"><div id="embed4" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed4transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382204, "embed4", 0, 0)</script><p class="pop_margin_title">The Bayesian Inference Framework</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L14-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 11MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-bayesian-inference-framework/0w_4QcvBYII.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-bayesian-inference-framework/0w_4QcvBYII.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L14.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed5 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/discrete-parameter-discrete-observation/aYg2je06Cpg.srt'}</script><a rel="popup_name5" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video5', 'embed5', 'player5','https://www.youtube.com/v/aYg2je06Cpg', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/aYg2je06Cpg/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/discrete-parameter-discrete-observation/aYg2je06Cpg.srt', '');">Discrete Parameter, Discrete Observation</a><div class="popup_block" id="popup_name5">
+<div class="inline-video" id="video5"><div id="embed5" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed5transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382203, "embed5", 0, 0)</script><p class="pop_margin_title">Discrete Parameter, Discrete Observation</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L14-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 10MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/discrete-parameter-discrete-observation/aYg2je06Cpg.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/discrete-parameter-discrete-observation/aYg2je06Cpg.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L14.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed6 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/discrete-parameter-continuous-observation/OlKmZj2TKnk.srt'}</script><a rel="popup_name6" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video6', 'embed6', 'player6','https://www.youtube.com/v/OlKmZj2TKnk', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/OlKmZj2TKnk/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/discrete-parameter-continuous-observation/OlKmZj2TKnk.srt', '');">Discrete Parameter, Continuous Observation</a><div class="popup_block" id="popup_name6">
+<div class="inline-video" id="video6"><div id="embed6" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed6transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382206, "embed6", 0, 0)</script><p class="pop_margin_title">Discrete Parameter, Continuous Observation</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L14-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 6MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/discrete-parameter-continuous-observation/OlKmZj2TKnk.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/discrete-parameter-continuous-observation/OlKmZj2TKnk.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L14.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed7 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/continuous-parameter-continuous-observation/CN_TJBPv2Qs.srt'}</script><a rel="popup_name7" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video7', 'embed7', 'player7','https://www.youtube.com/v/CN_TJBPv2Qs', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/CN_TJBPv2Qs/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/continuous-parameter-continuous-observation/CN_TJBPv2Qs.srt', '');">Continuous Parameter, Continuous Observation</a><div class="popup_block" id="popup_name7">
+<div class="inline-video" id="video7"><div id="embed7" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed7transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382205, "embed7", 0, 0)</script><p class="pop_margin_title">Continuous Parameter, Continuous Observation</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L14-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 4MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/continuous-parameter-continuous-observation/CN_TJBPv2Qs.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/continuous-parameter-continuous-observation/CN_TJBPv2Qs.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L14.8 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed8 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/inferring-the-unknown-bias-of-a-coin-and-the-beta-distribution/46Ym07yKf4A.srt'}</script><a rel="popup_name8" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video8', 'embed8', 'player8','https://www.youtube.com/v/46Ym07yKf4A', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/46Ym07yKf4A/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/inferring-the-unknown-bias-of-a-coin-and-the-beta-distribution/46Ym07yKf4A.srt', '');">Inferring the Unknown Bias of a Coin and the Beta Distribution</a><div class="popup_block" id="popup_name8">
+<div class="inline-video" id="video8"><div id="embed8" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed8transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382209, "embed8", 0, 0)</script><p class="pop_margin_title">Inferring the Unknown Bias of a Coin and the Beta Distribution</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L14-08_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 13MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/inferring-the-unknown-bias-of-a-coin-and-the-beta-distribution/46Ym07yKf4A.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/inferring-the-unknown-bias-of-a-coin-and-the-beta-distribution/46Ym07yKf4A.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L14.9 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed9 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/inferring-the-unknown-bias-of-a-coin2014point-estimates/gJSPef9zC0c.srt'}</script><a rel="popup_name9" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video9', 'embed9', 'player9','https://www.youtube.com/v/gJSPef9zC0c', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/gJSPef9zC0c/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/inferring-the-unknown-bias-of-a-coin2014point-estimates/gJSPef9zC0c.srt', '');">Inferring the Unknown Bias of a Coin—Point Estimates</a><div class="popup_block" id="popup_name9">
+<div class="inline-video" id="video9"><div id="embed9" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed9transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382208, "embed9", 0, 0)</script><p class="pop_margin_title">Inferring the Unknown Bias of a Coin—Point Estimates</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L14-09_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 17MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/inferring-the-unknown-bias-of-a-coin2014point-estimates/gJSPef9zC0c.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/inferring-the-unknown-bias-of-a-coin2014point-estimates/gJSPef9zC0c.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L14.10 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed10 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/summary/hDfZF64wic.srt'}</script><a rel="popup_name10" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video10', 'embed10', 'player10','https://www.youtube.com/v/_hDfZF64wic', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/_hDfZF64wic/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/summary/hDfZF64wic.srt', '');">Summary</a><div class="popup_block" id="popup_name10">
+<div class="inline-video" id="video10"><div id="embed10" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed10transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382207, "embed10", 0, 0)</script><p class="pop_margin_title">Summary</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L14-10_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/summary/hDfZF64wic.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/summary/hDfZF64wic.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>S14.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed11 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-beta-formula/8yaRt24qA1M.srt'}</script><a rel="popup_name11" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video11', 'embed11', 'player11','https://www.youtube.com/v/8yaRt24qA1M', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/8yaRt24qA1M/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-beta-formula/8yaRt24qA1M.srt', '');">The Beta Formula</a><div class="popup_block" id="popup_name11">
+<div class="inline-video" id="video11"><div id="embed11" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed11transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382335, "embed11", 0, 0)</script><p class="pop_margin_title">The Beta Formula</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_S14-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 15MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-beta-formula/8yaRt24qA1M.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-beta-formula/8yaRt24qA1M.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+</div>
+</td>             <td>
+<p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L14.pdf">Lecture 14 Slides (PDF - 2.2MB)</a></p>             <p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L14AS.pdf">Lecture 14 Slides Annotated (PDF - 1.3MB)</a></p>
+</td>         </tr>         <tr class="row">             <td colspan="2"><strong>Lecture 15: Linear Models With Normal Noise</strong></td>         </tr>         <tr class="alt-row">             <td>
+<div class="reveal2"><p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p></div>             <div style="display: none;" class="toggle2">
+<p>L15.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed12 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview-1/FMrYw7sgyxQ.srt'}</script><a rel="popup_name12" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video12', 'embed12', 'player12','https://www.youtube.com/v/FMrYw7sgyxQ', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/FMrYw7sgyxQ/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview-1/FMrYw7sgyxQ.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name12">
+<div class="inline-video" id="video12"><div id="embed12" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed12transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382211, "embed12", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L15-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 5MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview-1/FMrYw7sgyxQ.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview-1/FMrYw7sgyxQ.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L15.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed13 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/recognizing-normal-pdfs/RgGFvOpcQXY.srt'}</script><a rel="popup_name13" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video13', 'embed13', 'player13','https://www.youtube.com/v/RgGFvOpcQXY', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/RgGFvOpcQXY/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/recognizing-normal-pdfs/RgGFvOpcQXY.srt', '');">Recognizing Normal PDFs</a><div class="popup_block" id="popup_name13">
+<div class="inline-video" id="video13"><div id="embed13" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed13transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382210, "embed13", 0, 0)</script><p class="pop_margin_title">Recognizing Normal PDFs</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L15-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 11MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/recognizing-normal-pdfs/RgGFvOpcQXY.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/recognizing-normal-pdfs/RgGFvOpcQXY.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L15.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed14 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/estimating-a-normal-random-variable-in-the-presence-of-additive-noise/qgICsL7ybWc.srt'}</script><a rel="popup_name14" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video14', 'embed14', 'player14','https://www.youtube.com/v/qgICsL7ybWc', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/qgICsL7ybWc/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/estimating-a-normal-random-variable-in-the-presence-of-additive-noise/qgICsL7ybWc.srt', '');">Estimating a Normal Random Variable in the Presence of Additive Noise</a><div class="popup_block" id="popup_name14">
+<div class="inline-video" id="video14"><div id="embed14" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed14transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382212, "embed14", 0, 0)</script><p class="pop_margin_title">Estimating a Normal Random Variable in the Presence of Additive Noise</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L15-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 11MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/estimating-a-normal-random-variable-in-the-presence-of-additive-noise/qgICsL7ybWc.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/estimating-a-normal-random-variable-in-the-presence-of-additive-noise/qgICsL7ybWc.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L15.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed15 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-case-of-multiple-observations/FT0ptFu6dVA.srt'}</script><a rel="popup_name15" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video15', 'embed15', 'player15','https://www.youtube.com/v/FT0ptFu6dVA', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/FT0ptFu6dVA/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-case-of-multiple-observations/FT0ptFu6dVA.srt', '');">The Case of Multiple Observations</a><div class="popup_block" id="popup_name15">
+<div class="inline-video" id="video15"><div id="embed15" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed15transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382214, "embed15", 0, 0)</script><p class="pop_margin_title">The Case of Multiple Observations</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L15-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 21MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-case-of-multiple-observations/FT0ptFu6dVA.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-case-of-multiple-observations/FT0ptFu6dVA.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L15.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed16 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-mean-squared-error/CipR1Jypkz0.srt'}</script><a rel="popup_name16" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video16', 'embed16', 'player16','https://www.youtube.com/v/CipR1Jypkz0', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/CipR1Jypkz0/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-mean-squared-error/CipR1Jypkz0.srt', '');">The Mean Squared Error</a><div class="popup_block" id="popup_name16">
+<div class="inline-video" id="video16"><div id="embed16" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed16transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382215, "embed16", 0, 0)</script><p class="pop_margin_title">The Mean Squared Error</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L15-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 21MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-mean-squared-error/CipR1Jypkz0.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-mean-squared-error/CipR1Jypkz0.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L15.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed17 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/multiple-parameters-trajectory-estimation/rFUb1nvh3CQ.srt'}</script><a rel="popup_name17" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video17', 'embed17', 'player17','https://www.youtube.com/v/rFUb1nvh3CQ', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/rFUb1nvh3CQ/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/multiple-parameters-trajectory-estimation/rFUb1nvh3CQ.srt', '');">Multiple Parameters; Trajectory Estimation</a><div class="popup_block" id="popup_name17">
+<div class="inline-video" id="video17"><div id="embed17" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed17transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382216, "embed17", 0, 0)</script><p class="pop_margin_title">Multiple Parameters; Trajectory Estimation</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L15-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 13MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/multiple-parameters-trajectory-estimation/rFUb1nvh3CQ.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/multiple-parameters-trajectory-estimation/rFUb1nvh3CQ.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L15.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed18 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/linear-normal-models/qinepPxDUcY.srt'}</script><a rel="popup_name18" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video18', 'embed18', 'player18','https://www.youtube.com/v/qinepPxDUcY', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/qinepPxDUcY/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/linear-normal-models/qinepPxDUcY.srt', '');">Linear Normal Models</a><div class="popup_block" id="popup_name18">
+<div class="inline-video" id="video18"><div id="embed18" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed18transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382213, "embed18", 0, 0)</script><p class="pop_margin_title">Linear Normal Models</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L15-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/linear-normal-models/qinepPxDUcY.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/linear-normal-models/qinepPxDUcY.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L15.8 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed19 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/trajectory-estimation-illustration/wTKRruMNOHw.srt'}</script><a rel="popup_name19" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video19', 'embed19', 'player19','https://www.youtube.com/v/wTKRruMNOHw', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/wTKRruMNOHw/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/trajectory-estimation-illustration/wTKRruMNOHw.srt', '');">Trajectory Estimation Illustration</a><div class="popup_block" id="popup_name19">
+<div class="inline-video" id="video19"><div id="embed19" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed19transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382219, "embed19", 0, 0)</script><p class="pop_margin_title">Trajectory Estimation Illustration</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L15-08_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 14MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/trajectory-estimation-illustration/wTKRruMNOHw.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/trajectory-estimation-illustration/wTKRruMNOHw.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+</div>
+</td>             <td>
+<p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L15.pdf">Lecture 15 Slides (PDF - 1.8MB)</a></p>             <p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L15AS.pdf">Lecture 15 Slides Annotated (PDF - 1.8MB)</a></p>
+</td>         </tr>         <tr class="row">             <td colspan="2"><strong>Lecture 16: Least Mean Squares (LMS) Estimation</strong></td>         </tr>         <tr class="alt-row">             <td>
+<div class="reveal3"><p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p></div>             <div style="display: none;" class="toggle3">
+<p>L16.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed20 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview-2/MlsVWPWIxHI.srt'}</script><a rel="popup_name20" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video20', 'embed20', 'player20','https://www.youtube.com/v/MlsVWPWIxHI', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/MlsVWPWIxHI/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview-2/MlsVWPWIxHI.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name20">
+<div class="inline-video" id="video20"><div id="embed20" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed20transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382218, "embed20", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L16-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 3MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview-2/MlsVWPWIxHI.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview-2/MlsVWPWIxHI.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L16.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed21 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lms-estimation-in-the-absence-of-observations/gH_OmTJ9vQs.srt'}</script><a rel="popup_name21" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video21', 'embed21', 'player21','https://www.youtube.com/v/gH_OmTJ9vQs', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/gH_OmTJ9vQs/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lms-estimation-in-the-absence-of-observations/gH_OmTJ9vQs.srt', '');">LMS Estimation in the Absence of Observations</a><div class="popup_block" id="popup_name21">
+<div class="inline-video" id="video21"><div id="embed21" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed21transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382217, "embed21", 0, 0)</script><p class="pop_margin_title">LMS Estimation in the Absence of Observations</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L16-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 8MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lms-estimation-in-the-absence-of-observations/gH_OmTJ9vQs.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lms-estimation-in-the-absence-of-observations/gH_OmTJ9vQs.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L16.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed22 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lms-estimation-of-one-random-variable-based-on-another/1R4IzkWSNgI.srt'}</script><a rel="popup_name22" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video22', 'embed22', 'player22','https://www.youtube.com/v/1R4IzkWSNgI', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/1R4IzkWSNgI/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lms-estimation-of-one-random-variable-based-on-another/1R4IzkWSNgI.srt', '');">LMS Estimation of One Random Variable Based on Another</a><div class="popup_block" id="popup_name22">
+<div class="inline-video" id="video22"><div id="embed22" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed22transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382221, "embed22", 0, 0)</script><p class="pop_margin_title">LMS Estimation of One Random Variable Based on Another</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L16-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 16MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lms-estimation-of-one-random-variable-based-on-another/1R4IzkWSNgI.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lms-estimation-of-one-random-variable-based-on-another/1R4IzkWSNgI.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L16.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed23 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lms-performance-evaluation/CdrVM6MGnGo.srt'}</script><a rel="popup_name23" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video23', 'embed23', 'player23','https://www.youtube.com/v/CdrVM6MGnGo', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/CdrVM6MGnGo/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lms-performance-evaluation/CdrVM6MGnGo.srt', '');">LMS Performance Evaluation</a><div class="popup_block" id="popup_name23">
+<div class="inline-video" id="video23"><div id="embed23" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed23transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382220, "embed23", 0, 0)</script><p class="pop_margin_title">LMS Performance Evaluation</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L16-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 5MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lms-performance-evaluation/CdrVM6MGnGo.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lms-performance-evaluation/CdrVM6MGnGo.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L16.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed24 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/example-the-lms-estimate/O-dyKz5dpeY.srt'}</script><a rel="popup_name24" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video24', 'embed24', 'player24','https://www.youtube.com/v/O-dyKz5dpeY', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/O-dyKz5dpeY/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/example-the-lms-estimate/O-dyKz5dpeY.srt', '');">Example: The LMS Estimate</a><div class="popup_block" id="popup_name24">
+<div class="inline-video" id="video24"><div id="embed24" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed24transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382223, "embed24", 0, 0)</script><p class="pop_margin_title">Example: The LMS Estimate</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L16-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 8MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/example-the-lms-estimate/O-dyKz5dpeY.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/example-the-lms-estimate/O-dyKz5dpeY.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L16.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed25 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/example-continued-lms-performance-evaluation/tpaE_C8rqf8.srt'}</script><a rel="popup_name25" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video25', 'embed25', 'player25','https://www.youtube.com/v/tpaE_C8rqf8', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/tpaE_C8rqf8/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/example-continued-lms-performance-evaluation/tpaE_C8rqf8.srt', '');">Example Continued: LMS Performance Evaluation</a><div class="popup_block" id="popup_name25">
+<div class="inline-video" id="video25"><div id="embed25" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed25transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382222, "embed25", 0, 0)</script><p class="pop_margin_title">Example Continued: LMS Performance Evaluation</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L16-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 8MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/example-continued-lms-performance-evaluation/tpaE_C8rqf8.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/example-continued-lms-performance-evaluation/tpaE_C8rqf8.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L16.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed26 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lms-estimation-with-multiple-observations-or-unknowns/jzhFxJflHXQ.srt'}</script><a rel="popup_name26" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video26', 'embed26', 'player26','https://www.youtube.com/v/jzhFxJflHXQ', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/jzhFxJflHXQ/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lms-estimation-with-multiple-observations-or-unknowns/jzhFxJflHXQ.srt', '');">LMS Estimation with Multiple Observations or Unknowns</a><div class="popup_block" id="popup_name26">
+<div class="inline-video" id="video26"><div id="embed26" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed26transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382225, "embed26", 0, 0)</script><p class="pop_margin_title">LMS Estimation with Multiple Observations or Unknowns</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L16-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lms-estimation-with-multiple-observations-or-unknowns/jzhFxJflHXQ.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lms-estimation-with-multiple-observations-or-unknowns/jzhFxJflHXQ.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L16.8 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed27 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/properties-of-the-lms-estimation-error/BlO3xyeaZME.srt'}</script><a rel="popup_name27" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video27', 'embed27', 'player27','https://www.youtube.com/v/BlO3xyeaZME', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/BlO3xyeaZME/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/properties-of-the-lms-estimation-error/BlO3xyeaZME.srt', '');">Properties of the LMS Estimation Error</a><div class="popup_block" id="popup_name27">
+<div class="inline-video" id="video27"><div id="embed27" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed27transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382226, "embed27", 0, 0)</script><p class="pop_margin_title">Properties of the LMS Estimation Error</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L16-08_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 9MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/properties-of-the-lms-estimation-error/BlO3xyeaZME.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/properties-of-the-lms-estimation-error/BlO3xyeaZME.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+</div>
+</td>             <td>
+<p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L16.pdf">Lecture 16 Slides (PDF - 1.0MB)</a></p>             <p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L16AS.pdf">Lecture 16 Slides Annotated (PDF - 1.2MB)</a></p>
+</td>         </tr>         <tr class="row">             <td colspan="2"><strong>Lecture 17: Linear Least Mean Squares (LLMS) Estimation</strong></td>         </tr>         <tr class="alt-row">             <td>
+<div class="reveal4"><p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p></div>             <div style="display: none;" class="toggle4">
+<p>L17.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed28 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview-3/kwbDWPrPfQI.srt'}</script><a rel="popup_name28" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video28', 'embed28', 'player28','https://www.youtube.com/v/kwbDWPrPfQI', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/kwbDWPrPfQI/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview-3/kwbDWPrPfQI.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name28">
+<div class="inline-video" id="video28"><div id="embed28" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed28transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382227, "embed28", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L17-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 4MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview-3/kwbDWPrPfQI.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview-3/kwbDWPrPfQI.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L17.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed29 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/llms-formulation/HL7qwWvON4.srt'}</script><a rel="popup_name29" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video29', 'embed29', 'player29','https://www.youtube.com/v/_HL7qwWvON4', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/_HL7qwWvON4/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/llms-formulation/HL7qwWvON4.srt', '');">LLMS Formulation</a><div class="popup_block" id="popup_name29">
+<div class="inline-video" id="video29"><div id="embed29" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed29transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382230, "embed29", 0, 0)</script><p class="pop_margin_title">LLMS Formulation</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L17-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/llms-formulation/HL7qwWvON4.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/llms-formulation/HL7qwWvON4.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L17.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed33 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/solution-to-the-llms-problem/k9f0N3ADvdM.srt'}</script><a rel="popup_name33" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video33', 'embed33', 'player33','https://www.youtube.com/v/k9f0N3ADvdM', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/k9f0N3ADvdM/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/solution-to-the-llms-problem/k9f0N3ADvdM.srt', '');">Solution to the LLMS Problem</a><div class="popup_block" id="popup_name33">
+<div class="inline-video" id="video33"><div id="embed33" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed33transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382228, "embed33", 0, 0)</script><p class="pop_margin_title">Solution to the LLMS Problem</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L17-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 8MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/solution-to-the-llms-problem/k9f0N3ADvdM.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/solution-to-the-llms-problem/k9f0N3ADvdM.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L17.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed30 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/remarks-on-the-llms-solution-and-on-the-error-variance/yqdcK6-9kv8.srt'}</script><a rel="popup_name30" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video30', 'embed30', 'player30','https://www.youtube.com/v/yqdcK6-9kv8', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/yqdcK6-9kv8/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/remarks-on-the-llms-solution-and-on-the-error-variance/yqdcK6-9kv8.srt', '');">Remarks on the LLMS Solution and on the Error Variance</a><div class="popup_block" id="popup_name30">
+<div class="inline-video" id="video30"><div id="embed30" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed30transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382229, "embed30", 0, 0)</script><p class="pop_margin_title">Remarks on the LLMS Solution and on the Error Variance</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L17-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 14MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/remarks-on-the-llms-solution-and-on-the-error-variance/yqdcK6-9kv8.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/remarks-on-the-llms-solution-and-on-the-error-variance/yqdcK6-9kv8.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L17.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed31 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/llms-example/KPF8owESMdo.srt'}</script><a rel="popup_name31" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video31', 'embed31', 'player31','https://www.youtube.com/v/KPF8owESMdo', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/KPF8owESMdo/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/llms-example/KPF8owESMdo.srt', '');">LLMS Example</a><div class="popup_block" id="popup_name31">
+<div class="inline-video" id="video31"><div id="embed31" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed31transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382233, "embed31", 0, 0)</script><p class="pop_margin_title">LLMS Example</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L17-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 12MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/llms-example/KPF8owESMdo.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/llms-example/KPF8owESMdo.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L17.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed32 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/llms-for-inferring-the-parameter-of-a-coin/4CkWjk40TBY.srt'}</script><a rel="popup_name32" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video32', 'embed32', 'player32','https://www.youtube.com/v/4CkWjk40TBY', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/4CkWjk40TBY/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/llms-for-inferring-the-parameter-of-a-coin/4CkWjk40TBY.srt', '');">LLMS for Inferring the Parameter of a Coin</a><div class="popup_block" id="popup_name32">
+<div class="inline-video" id="video32"><div id="embed32" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed32transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382231, "embed32", 0, 0)</script><p class="pop_margin_title">LLMS for Inferring the Parameter of a Coin</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L17-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 18MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/llms-for-inferring-the-parameter-of-a-coin/4CkWjk40TBY.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/llms-for-inferring-the-parameter-of-a-coin/4CkWjk40TBY.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L17.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed34 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/llms-with-multiple-observations/ipSdsosGJBs.srt'}</script><a rel="popup_name34" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video34', 'embed34', 'player34','https://www.youtube.com/v/ipSdsosGJBs', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/ipSdsosGJBs/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/llms-with-multiple-observations/ipSdsosGJBs.srt', '');">LLMS with Multiple Observations</a><div class="popup_block" id="popup_name34">
+<div class="inline-video" id="video34"><div id="embed34" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed34transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382232, "embed34", 0, 0)</script><p class="pop_margin_title">LLMS with Multiple Observations</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L17-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 9MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/llms-with-multiple-observations/ipSdsosGJBs.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/llms-with-multiple-observations/ipSdsosGJBs.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L17.8 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed35 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-simplest-llms-example-with-multiple-observations/byGWKoOc6EM.srt'}</script><a rel="popup_name35" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video35', 'embed35', 'player35','https://www.youtube.com/v/byGWKoOc6EM', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/byGWKoOc6EM/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-simplest-llms-example-with-multiple-observations/byGWKoOc6EM.srt', '');">The Simplest LLMS Example with Multiple Observations</a><div class="popup_block" id="popup_name35">
+<div class="inline-video" id="video35"><div id="embed35" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed35transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382234, "embed35", 0, 0)</script><p class="pop_margin_title">The Simplest LLMS Example with Multiple Observations</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L17-08_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 6MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-simplest-llms-example-with-multiple-observations/byGWKoOc6EM.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-simplest-llms-example-with-multiple-observations/byGWKoOc6EM.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L17.9 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed36 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-representation-of-the-data-matters-in-llms/f_BHF-OYwr4.srt'}</script><a rel="popup_name36" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video36', 'embed36', 'player36','https://www.youtube.com/v/f_BHF-OYwr4', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/f_BHF-OYwr4/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-representation-of-the-data-matters-in-llms/f_BHF-OYwr4.srt', '');">The Representation of the Data Matters in LLMS</a><div class="popup_block" id="popup_name36">
+<div class="inline-video" id="video36"><div id="embed36" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed36transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382235, "embed36", 0, 0)</script><p class="pop_margin_title">The Representation of the Data Matters in LLMS</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L17-09_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 9MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-representation-of-the-data-matters-in-llms/f_BHF-OYwr4.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-representation-of-the-data-matters-in-llms/f_BHF-OYwr4.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+</div>
+</td>             <td>
+<p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L17.pdf">Lecture 17 Slides (PDF - 1.0MB)</a></p>             <p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L17AS.pdf">Lecture 17 Slides Annotated (PDF - 1.2MB)</a></p>
+</td>         </tr>         <tr class="row">             <td colspan="2"><strong>Lecture 18: Inequalities, Convergence, and the Weak Law of Large Numbers</strong></td>         </tr>         <tr class="alt-row">             <td>
+<div class="reveal5"><p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p></div>             <div style="display: none;" class="toggle5">
+<p>L18.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed37 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview-4/sD0i6bWxmRY.srt'}</script><a rel="popup_name37" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video37', 'embed37', 'player37','https://www.youtube.com/v/sD0i6bWxmRY', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/sD0i6bWxmRY/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview-4/sD0i6bWxmRY.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name37">
+<div class="inline-video" id="video37"><div id="embed37" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed37transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382236, "embed37", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L18-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 5MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview-4/sD0i6bWxmRY.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview-4/sD0i6bWxmRY.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L18.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed38 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-markov-inequality/vjYanZ1nsZg.srt'}</script><a rel="popup_name38" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video38', 'embed38', 'player38','https://www.youtube.com/v/vjYanZ1nsZg', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/vjYanZ1nsZg/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-markov-inequality/vjYanZ1nsZg.srt', '');">The Markov Inequality</a><div class="popup_block" id="popup_name38">
+<div class="inline-video" id="video38"><div id="embed38" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed38transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382237, "embed38", 0, 0)</script><p class="pop_margin_title">The Markov Inequality</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L18-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 12MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-markov-inequality/vjYanZ1nsZg.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-markov-inequality/vjYanZ1nsZg.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L18.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed39 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-chebyshev-inequality/d5pnfFvggYk.srt'}</script><a rel="popup_name39" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video39', 'embed39', 'player39','https://www.youtube.com/v/d5pnfFvggYk', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/d5pnfFvggYk/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-chebyshev-inequality/d5pnfFvggYk.srt', '');">The Chebyshev Inequality</a><div class="popup_block" id="popup_name39">
+<div class="inline-video" id="video39"><div id="embed39" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed39transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382239, "embed39", 0, 0)</script><p class="pop_margin_title">The Chebyshev Inequality</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L18-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-chebyshev-inequality/d5pnfFvggYk.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-chebyshev-inequality/d5pnfFvggYk.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L18.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed40 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-weak-law-of-large-numbers/Yh5bR7X3ch8.srt'}</script><a rel="popup_name40" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video40', 'embed40', 'player40','https://www.youtube.com/v/Yh5bR7X3ch8', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/Yh5bR7X3ch8/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-weak-law-of-large-numbers/Yh5bR7X3ch8.srt', '');">The Weak Law of Large Numbers</a><div class="popup_block" id="popup_name40">
+<div class="inline-video" id="video40"><div id="embed40" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed40transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382238, "embed40", 0, 0)</script><p class="pop_margin_title">The Weak Law of Large Numbers</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L18-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 10MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-weak-law-of-large-numbers/Yh5bR7X3ch8.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-weak-law-of-large-numbers/Yh5bR7X3ch8.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L18.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed43 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/polling/uQTFiXQR4PQ.srt'}</script><a rel="popup_name43" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video43', 'embed43', 'player43','https://www.youtube.com/v/uQTFiXQR4PQ', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/uQTFiXQR4PQ/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/polling/uQTFiXQR4PQ.srt', '');">Polling</a><div class="popup_block" id="popup_name43">
+<div class="inline-video" id="video43"><div id="embed43" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed43transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382240, "embed43", 0, 0)</script><p class="pop_margin_title">Polling</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L18-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 10MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/polling/uQTFiXQR4PQ.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/polling/uQTFiXQR4PQ.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L18.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed41 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/convergence-in-probability/Ajar_6MAOLw.srt'}</script><a rel="popup_name41" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video41', 'embed41', 'player41','https://www.youtube.com/v/Ajar_6MAOLw', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/Ajar_6MAOLw/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/convergence-in-probability/Ajar_6MAOLw.srt', '');">Convergence in Probability</a><div class="popup_block" id="popup_name41">
+<div class="inline-video" id="video41"><div id="embed41" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed41transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382241, "embed41", 0, 0)</script><p class="pop_margin_title">Convergence in Probability</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L18-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 11MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/convergence-in-probability/Ajar_6MAOLw.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/convergence-in-probability/Ajar_6MAOLw.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L18.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed42 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/convergence-in-probability-examples/l9y2Kv8VHw.srt'}</script><a rel="popup_name42" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video42', 'embed42', 'player42','https://www.youtube.com/v/_l9y2Kv8VHw', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/_l9y2Kv8VHw/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/convergence-in-probability-examples/l9y2Kv8VHw.srt', '');">Convergence in Probability Examples</a><div class="popup_block" id="popup_name42">
+<div class="inline-video" id="video42"><div id="embed42" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed42transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382242, "embed42", 0, 0)</script><p class="pop_margin_title">Convergence in Probability Examples</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L18-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 9MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/convergence-in-probability-examples/l9y2Kv8VHw.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/convergence-in-probability-examples/l9y2Kv8VHw.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L18.8 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed44 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/related-topics/iBqEF1cB7nE.srt'}</script><a rel="popup_name44" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video44', 'embed44', 'player44','https://www.youtube.com/v/iBqEF1cB7nE', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/iBqEF1cB7nE/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/related-topics/iBqEF1cB7nE.srt', '');">Related Topics</a><div class="popup_block" id="popup_name44">
+<div class="inline-video" id="video44"><div id="embed44" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed44transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382243, "embed44", 0, 0)</script><p class="pop_margin_title">Related Topics</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L18-08_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 9MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/related-topics/iBqEF1cB7nE.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/related-topics/iBqEF1cB7nE.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>S18.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed45 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/convergence-in-probability-of-the-sum-of-two-random-variables/AH5jnR3RxJU.srt'}</script><a rel="popup_name45" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video45', 'embed45', 'player45','https://www.youtube.com/v/AH5jnR3RxJU', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/AH5jnR3RxJU/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/convergence-in-probability-of-the-sum-of-two-random-variables/AH5jnR3RxJU.srt', '');">Convergence in Probability of the Sum of Two Random Variables</a><div class="popup_block" id="popup_name45">
+<div class="inline-video" id="video45"><div id="embed45" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed45transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382337, "embed45", 0, 0)</script><p class="pop_margin_title">Convergence in Probability of the Sum of Two Random Variables</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_S18-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 14MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/convergence-in-probability-of-the-sum-of-two-random-variables/AH5jnR3RxJU.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/convergence-in-probability-of-the-sum-of-two-random-variables/AH5jnR3RxJU.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>S18.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed46 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/jensens-inequality/GDJFLfmyb20.srt'}</script><a rel="popup_name46" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video46', 'embed46', 'player46','https://www.youtube.com/v/GDJFLfmyb20', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/GDJFLfmyb20/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/jensens-inequality/GDJFLfmyb20.srt', '');">Jensen's Inequality</a><div class="popup_block" id="popup_name46">
+<div class="inline-video" id="video46"><div id="embed46" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed46transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382341, "embed46", 0, 0)</script><p class="pop_margin_title">Jensen's Inequality</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_S18-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 17MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/jensens-inequality/GDJFLfmyb20.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/jensens-inequality/GDJFLfmyb20.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>S18.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed47 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/hoeffdings-inequality/MWcO8ZTOQQQ.srt'}</script><a rel="popup_name47" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video47', 'embed47', 'player47','https://www.youtube.com/v/MWcO8ZTOQQQ', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/MWcO8ZTOQQQ/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/hoeffdings-inequality/MWcO8ZTOQQQ.srt', '');">Hoeffding's Inequality</a><div class="popup_block" id="popup_name47">
+<div class="inline-video" id="video47"><div id="embed47" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed47transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382339, "embed47", 0, 0)</script><p class="pop_margin_title">Hoeffding's Inequality</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_S18-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 27MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/hoeffdings-inequality/MWcO8ZTOQQQ.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/hoeffdings-inequality/MWcO8ZTOQQQ.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+</div>
+</td>             <td>
+<p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L18.pdf">Lecture 18 Slides (PDF - 1.3MB)</a></p>             <p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L18AS.pdf">Lecture 18 Slides Annotated (PDF - 1.9MB)</a></p>
+</td>         </tr>         <tr class="row">             <td colspan="2"><strong>Lecture 19: The Central Limit Theorem (CLT)</strong></td>         </tr>         <tr class="alt-row">             <td>
+<div class="reveal6"><p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p></div>             <div style="display: none;" class="toggle6">
+<p>L19.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed48 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview-5/Hmm9IqosCv4.srt'}</script><a rel="popup_name48" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video48', 'embed48', 'player48','https://www.youtube.com/v/Hmm9IqosCv4', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/Hmm9IqosCv4/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview-5/Hmm9IqosCv4.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name48">
+<div class="inline-video" id="video48"><div id="embed48" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed48transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382246, "embed48", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L19-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 4MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview-5/Hmm9IqosCv4.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview-5/Hmm9IqosCv4.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L19.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed49 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-central-limit-theorem/IrKUM3nNXJE.srt'}</script><a rel="popup_name49" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video49', 'embed49', 'player49','https://www.youtube.com/v/IrKUM3nNXJE', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/IrKUM3nNXJE/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-central-limit-theorem/IrKUM3nNXJE.srt', '');">The Central Limit Theorem</a><div class="popup_block" id="popup_name49">
+<div class="inline-video" id="video49"><div id="embed49" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed49transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382244, "embed49", 0, 0)</script><p class="pop_margin_title">The Central Limit Theorem</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L19-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 10MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-central-limit-theorem/IrKUM3nNXJE.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-central-limit-theorem/IrKUM3nNXJE.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L19.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed50 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/discussion-of-the-clt/Cw2Lz5I3wk0.srt'}</script><a rel="popup_name50" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video50', 'embed50', 'player50','https://www.youtube.com/v/Cw2Lz5I3wk0', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/Cw2Lz5I3wk0/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/discussion-of-the-clt/Cw2Lz5I3wk0.srt', '');">Discussion of the CLT</a><div class="popup_block" id="popup_name50">
+<div class="inline-video" id="video50"><div id="embed50" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed50transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382247, "embed50", 0, 0)</script><p class="pop_margin_title">Discussion of the CLT</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L19-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 11MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/discussion-of-the-clt/Cw2Lz5I3wk0.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/discussion-of-the-clt/Cw2Lz5I3wk0.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L19.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed51 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/illustration-of-the-clt/Bj3sA7vGpYo.srt'}</script><a rel="popup_name51" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video51', 'embed51', 'player51','https://www.youtube.com/v/Bj3sA7vGpYo', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/Bj3sA7vGpYo/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/illustration-of-the-clt/Bj3sA7vGpYo.srt', '');">Illustration of the CLT</a><div class="popup_block" id="popup_name51">
+<div class="inline-video" id="video51"><div id="embed51" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed51transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382245, "embed51", 0, 0)</script><p class="pop_margin_title">Illustration of the CLT</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L19-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 3MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/illustration-of-the-clt/Bj3sA7vGpYo.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/illustration-of-the-clt/Bj3sA7vGpYo.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L19.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed52 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/clt-examples/pd7dvQBqQqY.srt'}</script><a rel="popup_name52" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video52', 'embed52', 'player52','https://www.youtube.com/v/pd7dvQBqQqY', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/pd7dvQBqQqY/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/clt-examples/pd7dvQBqQqY.srt', '');">CLT Examples</a><div class="popup_block" id="popup_name52">
+<div class="inline-video" id="video52"><div id="embed52" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed52transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382248, "embed52", 0, 0)</script><p class="pop_margin_title">CLT Examples</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L19-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 21MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/clt-examples/pd7dvQBqQqY.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/clt-examples/pd7dvQBqQqY.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L19.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed53 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/normal-approximation-to-the-binomial/fBfMIVXc_OM.srt'}</script><a rel="popup_name53" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video53', 'embed53', 'player53','https://www.youtube.com/v/fBfMIVXc_OM', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/fBfMIVXc_OM/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/normal-approximation-to-the-binomial/fBfMIVXc_OM.srt', '');">Normal Approximation to the Binomial</a><div class="popup_block" id="popup_name53">
+<div class="inline-video" id="video53"><div id="embed53" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed53transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382251, "embed53", 0, 0)</script><p class="pop_margin_title">Normal Approximation to the Binomial</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L19-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 17MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/normal-approximation-to-the-binomial/fBfMIVXc_OM.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/normal-approximation-to-the-binomial/fBfMIVXc_OM.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L19.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed54 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/polling-revisited/mxpC3MEiATQ.srt'}</script><a rel="popup_name54" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video54', 'embed54', 'player54','https://www.youtube.com/v/mxpC3MEiATQ', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/mxpC3MEiATQ/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/polling-revisited/mxpC3MEiATQ.srt', '');">Polling Revisited</a><div class="popup_block" id="popup_name54">
+<div class="inline-video" id="video54"><div id="embed54" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed54transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382249, "embed54", 0, 0)</script><p class="pop_margin_title">Polling Revisited</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L19-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 21MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/polling-revisited/mxpC3MEiATQ.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/polling-revisited/mxpC3MEiATQ.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+</div>
+</td>             <td>
+<p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L19.pdf">Lecture 19 Slides (PDF - 2.1MB)</a></p>             <p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L19AS.pdf">Lecture 19 Slides Annotated (PDF - 2.0MB)</a></p>
+</td>         </tr>         <tr class="row">             <td colspan="2"><strong>Lecture 20: An Introduction to Classical Statistics</strong></td>         </tr>         <tr class="alt-row">             <td>
+<div class="reveal7"><p>› <span style="color: #680a12; text-decoration: underline; cursor: pointer;"><em>View Lecture Videos</em></span></p></div>             <div style="display: none;" class="toggle7">
+<p>L20.1 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed55 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview-6/P5rZKt3SgNM.srt'}</script><a rel="popup_name55" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video55', 'embed55', 'player55','https://www.youtube.com/v/P5rZKt3SgNM', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/P5rZKt3SgNM/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/lecture-overview-6/P5rZKt3SgNM.srt', '');">Lecture Overview</a><div class="popup_block" id="popup_name55">
+<div class="inline-video" id="video55"><div id="embed55" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed55transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382250, "embed55", 0, 0)</script><p class="pop_margin_title">Lecture Overview</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L20-01_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview-6/P5rZKt3SgNM.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/lecture-overview-6/P5rZKt3SgNM.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L20.2 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed56 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/overview-of-the-classical-statistical-framework/fMHJPEcoC08.srt'}</script><a rel="popup_name56" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video56', 'embed56', 'player56','https://www.youtube.com/v/fMHJPEcoC08', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/fMHJPEcoC08/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/overview-of-the-classical-statistical-framework/fMHJPEcoC08.srt', '');">Overview of the Classical Statistical Framework</a><div class="popup_block" id="popup_name56">
+<div class="inline-video" id="video56"><div id="embed56" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed56transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382252, "embed56", 0, 0)</script><p class="pop_margin_title">Overview of the Classical Statistical Framework</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L20-02_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 12MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/overview-of-the-classical-statistical-framework/fMHJPEcoC08.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/overview-of-the-classical-statistical-framework/fMHJPEcoC08.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L20.3 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed57 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-sample-mean-and-some-terminology/nuXDb9B3y0M.srt'}</script><a rel="popup_name57" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video57', 'embed57', 'player57','https://www.youtube.com/v/nuXDb9B3y0M', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/nuXDb9B3y0M/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/the-sample-mean-and-some-terminology/nuXDb9B3y0M.srt', '');">The Sample Mean and Some Terminology</a><div class="popup_block" id="popup_name57">
+<div class="inline-video" id="video57"><div id="embed57" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed57transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382253, "embed57", 0, 0)</script><p class="pop_margin_title">The Sample Mean and Some Terminology</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L20-03_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 6MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-sample-mean-and-some-terminology/nuXDb9B3y0M.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/the-sample-mean-and-some-terminology/nuXDb9B3y0M.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L20.4 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed58 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/on-the-mean-squared-error-of-an-estimator/lET4uQLpmM0.srt'}</script><a rel="popup_name58" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video58', 'embed58', 'player58','https://www.youtube.com/v/lET4uQLpmM0', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/lET4uQLpmM0/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/on-the-mean-squared-error-of-an-estimator/lET4uQLpmM0.srt', '');">On the Mean Squared Error of an Estimator</a><div class="popup_block" id="popup_name58">
+<div class="inline-video" id="video58"><div id="embed58" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed58transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382254, "embed58", 0, 0)</script><p class="pop_margin_title">On the Mean Squared Error of an Estimator</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L20-04_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 8MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/on-the-mean-squared-error-of-an-estimator/lET4uQLpmM0.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/on-the-mean-squared-error-of-an-estimator/lET4uQLpmM0.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L20.5 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed59 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/confidence-intervals/NInNhFm046w.srt'}</script><a rel="popup_name59" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video59', 'embed59', 'player59','https://www.youtube.com/v/NInNhFm046w', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/NInNhFm046w/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/confidence-intervals/NInNhFm046w.srt', '');">Confidence Intervals</a><div class="popup_block" id="popup_name59">
+<div class="inline-video" id="video59"><div id="embed59" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed59transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382256, "embed59", 0, 0)</script><p class="pop_margin_title">Confidence Intervals</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L20-05_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 6MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/confidence-intervals/NInNhFm046w.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/confidence-intervals/NInNhFm046w.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L20.6 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed60 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/confidence-intervals-for-the-estimation-of-the-mean/mImHCY0A3a0.srt'}</script><a rel="popup_name60" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video60', 'embed60', 'player60','https://www.youtube.com/v/mImHCY0A3a0', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/mImHCY0A3a0/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/confidence-intervals-for-the-estimation-of-the-mean/mImHCY0A3a0.srt', '');">Confidence Intervals for the Estimation of the Mean</a><div class="popup_block" id="popup_name60">
+<div class="inline-video" id="video60"><div id="embed60" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed60transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382257, "embed60", 0, 0)</script><p class="pop_margin_title">Confidence Intervals for the Estimation of the Mean</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L20-06_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 5MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/confidence-intervals-for-the-estimation-of-the-mean/mImHCY0A3a0.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/confidence-intervals-for-the-estimation-of-the-mean/mImHCY0A3a0.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L20.7 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed61 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/confidence-intervals-for-the-mean-when-the-variance-is-unknown/MzvRQFYUEFU.srt'}</script><a rel="popup_name61" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video61', 'embed61', 'player61','https://www.youtube.com/v/MzvRQFYUEFU', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/MzvRQFYUEFU/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/confidence-intervals-for-the-mean-when-the-variance-is-unknown/MzvRQFYUEFU.srt', '');">Confidence Intervals for the Mean, When the Variance is Unknown</a><div class="popup_block" id="popup_name61">
+<div class="inline-video" id="video61"><div id="embed61" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed61transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382258, "embed61", 0, 0)</script><p class="pop_margin_title">Confidence Intervals for the Mean, When the Variance is Unknown</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L20-07_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/confidence-intervals-for-the-mean-when-the-variance-is-unknown/MzvRQFYUEFU.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/confidence-intervals-for-the-mean-when-the-variance-is-unknown/MzvRQFYUEFU.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L20.8 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed62 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/other-natural-estimators/8Zq9TKaCV-A.srt'}</script><a rel="popup_name62" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video62', 'embed62', 'player62','https://www.youtube.com/v/8Zq9TKaCV-A', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/8Zq9TKaCV-A/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/other-natural-estimators/8Zq9TKaCV-A.srt', '');">Other Natural Estimators</a><div class="popup_block" id="popup_name62">
+<div class="inline-video" id="video62"><div id="embed62" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed62transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382259, "embed62", 0, 0)</script><p class="pop_margin_title">Other Natural Estimators</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L20-08_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 5MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/other-natural-estimators/8Zq9TKaCV-A.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/other-natural-estimators/8Zq9TKaCV-A.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L20.9 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed63 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/maximum-likelihood-estimation/ZgCBmERwZlI.srt'}</script><a rel="popup_name63" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video63', 'embed63', 'player63','https://www.youtube.com/v/ZgCBmERwZlI', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/ZgCBmERwZlI/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/maximum-likelihood-estimation/ZgCBmERwZlI.srt', '');">Maximum Likelihood Estimation</a><div class="popup_block" id="popup_name63">
+<div class="inline-video" id="video63"><div id="embed63" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed63transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382260, "embed63", 0, 0)</script><p class="pop_margin_title">Maximum Likelihood Estimation</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L20-09_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 7MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/maximum-likelihood-estimation/ZgCBmERwZlI.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/maximum-likelihood-estimation/ZgCBmERwZlI.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>             <p>L20.10 </p>
+<noscript>
+             <style type="text/css">
+                 .pagecontainer {display:none;}
+             </style>
+                <div id="atnmsg" style="width: 300px;" class="attention_message">
+                <p>Flash and JavaScript are required for this feature.</p>
+            </div>
+        </noscript>
+<script type="text/javascript">var caption_embed64 ={'English - US': '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/maximum-likelihood-estimation-examples/00krscK7iBA.srt'}</script><a rel="popup_name64" class="poplight pagecontainer" href="#?w=535" onclick="video_popup('video64', 'embed64', 'player64','https://www.youtube.com/v/00krscK7iBA', 'youtube', '/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems', 'https://img.youtube.com/vi/00krscK7iBA/0.jpg',0,0,'https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/maximum-likelihood-estimation-examples/00krscK7iBA.srt', '');">Maximum Likelihood Estimation Examples</a><div class="popup_block" id="popup_name64">
+<div class="inline-video" id="video64"><div id="embed64" class="attention_message"> <p> Flash and JavaScript are required for this feature. </p> </div></div>
+<div id="embed64transcript1"></div>
+<script type="text/javascript">createThreePlayParams(2, 2382262, "embed64", 0, 0)</script><p class="pop_margin_title">Maximum Likelihood Estimation Examples</p>
+<p class="pop_margin_link"><a class="poplink" href="https://archive.org/download/MITRES.6-012S18/MITRES6_012S18_L20-10_300k.mp4" target="_blank">&gt; Download from Internet Archive (MP4 - 11MB) </a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/maximum-likelihood-estimation-examples/00krscK7iBA.pdf" target="_blank">&gt; Download English-US transcript (PDF)</a></p>
+<p class="pop_margin_link"><a class="poplink" href="../../contents/part-ii-inference-limit-theorems/maximum-likelihood-estimation-examples/00krscK7iBA.srt" target="_blank">&gt; Download English-US caption (SRT)</a></p>
+</div>
+</div>
+</td>             <td>
+<p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L20.pdf">Lecture 20 Slides (PDF - 1.3MB)</a></p>             <p><a href="../../contents/part-ii-inference-limit-theorems/MITRES_6_012S18_L20AS.pdf">Lecture 20 Slides Annotated</a></p>
+</td>         </tr>              </tbody> </table></div> <p> </p>    
+	                    
+    
+    
+    
+
+
+	        			
+	                    
+	                    
+	                    
+	                    
+
+    			    </main><!--Course_inner_section tag close -->
+           		     <div class="clear"></div>
+ 				 </div>
+<!--Course_wrapper tag close -->             
+ 			 </div>
+<!--left tag close -->
+ 			                 
+         </div>
+<!--grid tag close --> 
+      </div>
+		
+		<footer id="bottom">
+			<div id="grid">
+				
+<div id="portletwrapper-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572" class="portletWrapper kssattr-portlethash-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572">
+<div class="portletStaticText portlet-static-site-footer"><div id="footer">
+<nav aria-label="Footer">     <nav id="foot-c1" class="grid_2 alpha" aria-labelledby="f-find-courses">       <span class="footer" id="f-find-courses" aria-hidden="true">Find Courses</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/">Find by Topic</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-number/">Find by Course Number</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-department/">Find by Department</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/new-courses/">New Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/audio-video-courses/">Audio/Video Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/instructor-insights/">Instructor Insights</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/resources/">Supplemental Resources</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/mitx-related-courseware/">MITx &amp; Related OCW Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/">Translated Courses</a></li>
+</ul>
+</nav>
+<div id="foot-c2" class="grid_2"><nav aria-labelledby="f-for-educators">         <span id="f-for-educators" class="footer" aria-hidden="true">For Educators</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=instructional&amp;utm_campaign=Educator&amp;utm_source=footer&amp;utm_medium=find-courses&amp;utm_content=approaches">Search for Instructor Insights</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=teaching&amp;utm_campaign=Educator&amp;utm_source=footer&amp;utm_medium=find-courses&amp;utm_content=materials">Search for Teaching Materials</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/#cat=teachingandeducation">MIT Courses about Teaching and Education</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/high-school/">Highlights for High School</a></li>
+    <li><a href="http://k12videos.mit.edu" aria-label="External Link: MIT+K12 Videos">MIT+K12 Videos</a></li>
+    <li><a href="http://teachingexcellence.mit.edu/" aria-label="External Link: Teaching Excellence at MIT">Teaching Excellence at MIT</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/mit-curriculum-guide/">MIT Undergraduate Curriculum Map</a></li>
+</ul>
+</nav></div>
+<nav class="grid_2" id="foot-c3" aria-labelledby="f-donate">       <span id="f-donate" class="footer" aria-hidden="true">Give Now</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/give/">Make a Donation</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/why-give/">Why Give?</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/our-supporters/">Our Supporters</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/shop-ocw/">Shop OCW</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/support/">Become a Corporate Sponsor</a></li>
+</ul>
+</nav>
+<div class="grid_2" id="foot-c4">
+<nav aria-labelledby="f-about">         <span id="f-about" class="footer" aria-hidden="true">About</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/about/">About OpenCourseWare</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/site-statistics/">Site Statistics</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/ocw-stories/">OCW Stories</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/newsletter/">News</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/media-coverage/press-releases/">Press Releases</a></li>
+</ul>
+</nav><!--about-->       <nav aria-labelledby="f-tools">         <span id="f-tools" class="footer" aria-hidden="true">Tools</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/help/">Help &amp; FAQs</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/jsp/feedback.jsp">Contact Us</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/help/site-map/">Site Map</a></li>
+    <li><a href="../../common/terms/index.htm">Privacy &amp; Terms of Use</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/help/rss/">RSS Feeds</a></li>
+</ul>
+</nav><!--tools-->
+</div>
+</nav> <aside style="min-height: 289px;" aria-labelledby="f-our-corporate-supporters" class="grid_4 omega" id="foot-c5">           <span aria-hidden="true" class="footer" id="f-our-corporate-supporters">Our Corporate Supporters</span>           <!-- HOME_CORP_LOGO_1 -->
+<div id="div-gpt-ad-1388181177156-0" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-0'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_2 -->
+<div id="div-gpt-ad-1388181177156-1" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-1'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_3 -->
+<div id="div-gpt-ad-1388181177156-2" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-2'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_4 -->
+<div id="div-gpt-ad-1388181177156-3" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-3'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_5 -->
+<div id="div-gpt-ad-1388181177156-4" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-4'); });
+              </script></div>
+<!-- HOME_CORP_LOGO_6 -->
+<div id="div-gpt-ad-1388181177156-5" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-5'); });
+              </script></div>
+</aside>
+<div class="grid_12 alpha omega" itemprop="publisher" itemscope="" itemtype="http://schema.org/CollegeOrUniversity">
+<h4 class="footer" style="border-top: thin solid #d5c9ba; padding-top: 10px; margin-bottom: 10px;">About <span itemprop="name">MIT OpenCourseWare</span>
+</h4>
+<p style="color: #999; font-size: 1em; line-height: 1.5em; margin-top: 10px;" itemprop="description">MIT OpenCourseWare makes the materials used in the teaching of almost all of MIT's subjects available on the Web, free of charge. With more than 2,400 courses available, OCW is delivering on the promise of open sharing of knowledge. <a href="http://ocw.mit.edu/about/">Learn more »</a></p>
+</div>
+<div id="foot-copy" class="grid_12 alpha omega" style="border-top: none;">
+<a href="http://web.mit.edu"><img src="../../common/images/logo_mit.png" alt="Massachusetts Institute of Technology logo and name." style="width: 195; height: 44;"></a><a href="http://odl.mit.edu"><img src="https://ocw-origin.odl.mit.edu/images/logo_odl.png" alt="MIT Office of Digital Learning logo and name." style="width: 289; height: 54; vertical-align: top;"></a><a href="http://www.oeconsortium.org/"><img src="https://ocw-origin.odl.mit.edu/images/logo_oec.png" alt="Open Education Consortium logo." style="width: 219px; height: 59px; vertical-align: top;"></a><a rel="license" itemprop="useRightsUrl" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="../../common/images/cc_by-nc-sa.png" alt="Creative Commons logo with terms BY-NC-SA." style="width: 126px; height: 44px; margin-right: 0; margin-left: 13px;"></a>
+<p class="copyright">© 2001–2018<br>
+Massachusetts Institute of Technology</p>
+<p style="font-size: 0.9em; margin-bottom: 15px;">Your use of the MIT OpenCourseWare site and materials is subject to our <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">Creative Commons License</a> and other <a href="../../common/terms/index.htm" rel="cc:morePermissions">terms of use</a>.</p>
+</div>
+</div></div>
+
+</div>
+
+
+
+
+
+                
+			</div> <!-- bottom grid end -->
+		</footer><!-- footer bottom end -->
+
+
+   </body>
+ </html>

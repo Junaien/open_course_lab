@@ -1,0 +1,553 @@
+1
+00:00:00,460 --> 00:00:04,310
+By now, we have defined the
+notion of independence of
+
+2
+00:00:04,310 --> 00:00:06,480
+events and also the notion of
+
+3
+00:00:06,480 --> 00:00:09,080
+independence of random variables.
+
+4
+00:00:09,080 --> 00:00:12,130
+The two definitions look
+fairly similar, but the
+
+5
+00:00:12,130 --> 00:00:14,820
+details are not exactly the
+same, because the two
+
+6
+00:00:14,820 --> 00:00:18,190
+definitions refer to different
+situations.
+
+7
+00:00:18,190 --> 00:00:21,370
+For two events, we know what
+it means for them to be
+
+8
+00:00:21,370 --> 00:00:22,420
+independent.
+
+9
+00:00:22,420 --> 00:00:25,250
+The probability of their
+intersection is the product of
+
+10
+00:00:25,250 --> 00:00:27,490
+their individual
+probabilities.
+
+11
+00:00:27,490 --> 00:00:32,240
+Now, to make a relation with
+random variables, we introduce
+
+12
+00:00:32,240 --> 00:00:35,430
+the so-called indicator
+random variables.
+
+13
+00:00:35,430 --> 00:00:38,910
+So for example, the random
+variable X is defined to be
+
+14
+00:00:38,910 --> 00:00:43,660
+equal to 1 if event A occurs
+and to be equal
+
+15
+00:00:43,660 --> 00:00:45,870
+to 0 if event [A]
+
+16
+00:00:45,870 --> 00:00:47,640
+does not occur.
+
+17
+00:00:47,640 --> 00:00:50,660
+And there is a similar
+definition for random variable
+
+18
+00:00:50,660 --> 00:00:51,720
+Y.
+
+19
+00:00:51,720 --> 00:00:55,130
+In particular, the probability
+that random variable X takes
+
+20
+00:00:55,130 --> 00:00:57,260
+the value of 1, this
+is the probability
+
+21
+00:00:57,260 --> 00:00:58,870
+that event A occurs.
+
+22
+00:01:01,960 --> 00:01:05,610
+It turns out that the
+independence of the two
+
+23
+00:01:05,610 --> 00:01:10,670
+events, A and B, is equivalent
+to the independence of the two
+
+24
+00:01:10,670 --> 00:01:13,789
+indicator random variables.
+
+25
+00:01:13,789 --> 00:01:15,780
+And there is a similar
+statement, which
+
+26
+00:01:15,780 --> 00:01:17,730
+is true more generally.
+
+27
+00:01:17,730 --> 00:01:22,450
+That is, n events are
+independent if and only if the
+
+28
+00:01:22,450 --> 00:01:28,520
+associated n indicator random
+variables are independent.
+
+29
+00:01:28,520 --> 00:01:33,670
+This is a useful statement,
+because it allows us to
+
+30
+00:01:33,670 --> 00:01:36,950
+sometimes, instead of
+manipulating events, to
+
+31
+00:01:36,950 --> 00:01:39,810
+manipulate random variables,
+and vice versa.
+
+32
+00:01:39,810 --> 00:01:42,100
+And depending on the
+context, one maybe
+
+33
+00:01:42,100 --> 00:01:43,950
+easier than the other.
+
+34
+00:01:43,950 --> 00:01:47,289
+Now, the intuitive content is
+that events A and B are
+
+35
+00:01:47,289 --> 00:01:50,320
+independent if the occurrence
+of event A does not change
+
+36
+00:01:50,320 --> 00:01:54,720
+your beliefs about B. And in
+terms of random variables, one
+
+37
+00:01:54,720 --> 00:01:58,110
+random variable taking a certain
+value, which indicates
+
+38
+00:01:58,110 --> 00:02:01,580
+whether event A has occurred or
+not does not give you any
+
+39
+00:02:01,580 --> 00:02:04,480
+information about the other
+random variable, which would
+
+40
+00:02:04,480 --> 00:02:09,720
+tell you whether event B
+has occurred or not.
+
+41
+00:02:09,720 --> 00:02:13,430
+It is instructive now to go
+through the derivation of this
+
+42
+00:02:13,430 --> 00:02:18,030
+fact, at least for the case of
+two events, because it gives
+
+43
+00:02:18,030 --> 00:02:21,050
+us perhaps some additional
+understanding about the
+
+44
+00:02:21,050 --> 00:02:23,710
+precise content of the
+definitions we have
+
+45
+00:02:23,710 --> 00:02:25,440
+introduced.
+
+46
+00:02:25,440 --> 00:02:28,850
+So let us suppose that random
+variables X and Y are
+
+47
+00:02:28,850 --> 00:02:30,070
+independent.
+
+48
+00:02:30,070 --> 00:02:31,320
+What does that mean?
+
+49
+00:02:31,320 --> 00:02:34,680
+Independence means that the
+joint PMF of the two random
+
+50
+00:02:34,680 --> 00:02:40,160
+variables, X and Y, factors as a
+product of the corresponding
+
+51
+00:02:40,160 --> 00:02:42,480
+marginal PMFs.
+
+52
+00:02:42,480 --> 00:02:48,670
+And this factorization must be
+true no matter what arguments
+
+53
+00:02:48,670 --> 00:02:52,840
+we use inside the joint PMF.
+
+54
+00:02:52,840 --> 00:02:57,030
+And the combination of X and Y
+in this instance have a total
+
+55
+00:02:57,030 --> 00:03:00,240
+of four possible values.
+
+56
+00:03:00,240 --> 00:03:02,130
+These are the combinations
+of zeroes and
+
+57
+00:03:02,130 --> 00:03:03,740
+ones that we can form.
+
+58
+00:03:03,740 --> 00:03:07,420
+And for this reason, we have
+a total of four equations.
+
+59
+00:03:07,420 --> 00:03:11,510
+These four equalities are what
+is required for X and Y to be
+
+60
+00:03:11,510 --> 00:03:13,130
+independent.
+
+61
+00:03:13,130 --> 00:03:16,780
+So suppose that this is true,
+that the random variables are
+
+62
+00:03:16,780 --> 00:03:18,320
+independent.
+
+63
+00:03:18,320 --> 00:03:21,329
+Let us take this first relation
+and write it in
+
+64
+00:03:21,329 --> 00:03:23,860
+probability notation.
+
+65
+00:03:23,860 --> 00:03:26,710
+The random variable X taking
+the value of 1, that's the
+
+66
+00:03:26,710 --> 00:03:29,740
+same as event A occurring.
+
+67
+00:03:29,740 --> 00:03:33,329
+And random variable Y taking
+the value of 1, that's the
+
+68
+00:03:33,329 --> 00:03:36,400
+same as event B occurring.
+
+69
+00:03:36,400 --> 00:03:40,960
+So the joint PMF evaluated at
+1, 1 is the probability that
+
+70
+00:03:40,960 --> 00:03:44,170
+events A and B both occur.
+
+71
+00:03:44,170 --> 00:03:46,040
+On the other side of the
+equation, we have the
+
+72
+00:03:46,040 --> 00:03:48,860
+probability that X is equal to
+1, which is the probability
+
+73
+00:03:48,860 --> 00:03:53,980
+that A occurs, and similarly,
+the probability that B occurs.
+
+74
+00:03:53,980 --> 00:03:59,690
+But if this is true, then by
+definition, A and B are
+
+75
+00:03:59,690 --> 00:04:02,910
+independent events.
+
+76
+00:04:02,910 --> 00:04:05,840
+So we have verified one
+direction of this statement.
+
+77
+00:04:05,840 --> 00:04:09,310
+If the random variables are
+independent, then events A and
+
+78
+00:04:09,310 --> 00:04:11,430
+B are independent.
+
+79
+00:04:11,430 --> 00:04:15,180
+Now, we would like to verify
+the reverse statement.
+
+80
+00:04:15,180 --> 00:04:19,170
+So suppose that events A
+and B are independent.
+
+81
+00:04:19,170 --> 00:04:23,560
+In that case, this
+relation is true.
+
+82
+00:04:23,560 --> 00:04:28,060
+And as we just argued, this
+relation is the same as this
+
+83
+00:04:28,060 --> 00:04:31,650
+relation but just written
+in different notation.
+
+84
+00:04:31,650 --> 00:04:35,500
+So we have shown that if A and
+B are independent, this
+
+85
+00:04:35,500 --> 00:04:37,890
+relation will be true.
+
+86
+00:04:37,890 --> 00:04:40,530
+But how about the remaining
+three relations?
+
+87
+00:04:40,530 --> 00:04:41,850
+We have more work to do.
+
+88
+00:04:44,400 --> 00:04:46,870
+Here's how we can proceed.
+
+89
+00:04:46,870 --> 00:04:52,260
+If A and B are independent, we
+have shown some time ago that
+
+90
+00:04:52,260 --> 00:04:58,670
+events A and B complement will
+also be independent.
+
+91
+00:04:58,670 --> 00:05:01,560
+Intuitively, A doesn't tell
+you anything about
+
+92
+00:05:01,560 --> 00:05:03,330
+B occuring or not.
+
+93
+00:05:03,330 --> 00:05:06,270
+So A does not tell you anything
+about whether B
+
+94
+00:05:06,270 --> 00:05:09,060
+complement will occur or not.
+
+95
+00:05:09,060 --> 00:05:12,200
+Now, these two events being
+independent, by the definition
+
+96
+00:05:12,200 --> 00:05:15,640
+of independence, we have that
+the probability of A
+
+97
+00:05:15,640 --> 00:05:19,190
+intersection with B complement
+is the product of the
+
+98
+00:05:19,190 --> 00:05:22,968
+probabilities of A and
+of B complement.
+
+99
+00:05:26,250 --> 00:05:31,620
+And then we realize that this
+equality, if written in PMF
+
+100
+00:05:31,620 --> 00:05:37,409
+notation, corresponds exactly
+to this equation here.
+
+101
+00:05:37,409 --> 00:05:41,760
+Event A corresponds to X taking
+the value of 1, event B
+
+102
+00:05:41,760 --> 00:05:44,770
+complement corresponds to
+the event that Y takes
+
+103
+00:05:44,770 --> 00:05:47,830
+the value of 0.
+
+104
+00:05:47,830 --> 00:05:52,980
+By a similar argument, B and
+A complement will be
+
+105
+00:05:52,980 --> 00:05:55,780
+independent.
+
+106
+00:05:55,780 --> 00:05:59,415
+And we translate that into
+probability notation.
+
+107
+00:06:09,850 --> 00:06:14,250
+And then we translate this
+equality into PMF notation.
+
+108
+00:06:14,250 --> 00:06:16,380
+And we get this relation.
+
+109
+00:06:16,380 --> 00:06:21,880
+Finally, using the same property
+that we used to do
+
+110
+00:06:21,880 --> 00:06:26,270
+the first step here, we have
+that A complement and B
+
+111
+00:06:26,270 --> 00:06:28,820
+complement are also
+independent.
+
+112
+00:06:28,820 --> 00:06:32,170
+And by following the same line
+of reasoning, this implies the
+
+113
+00:06:32,170 --> 00:06:35,300
+fourth relation as well.
+
+114
+00:06:35,300 --> 00:06:38,310
+So we have verified that
+if events A and B are
+
+115
+00:06:38,310 --> 00:06:41,590
+independent, then we can argue
+that all of these four
+
+116
+00:06:41,590 --> 00:06:43,970
+equations will be true.
+
+117
+00:06:43,970 --> 00:06:47,830
+And therefore, random variables
+X and Y will also be
+
+118
+00:06:47,830 --> 00:06:49,080
+independent.

@@ -1,0 +1,453 @@
+1
+00:00:01,510 --> 00:00:06,070
+Let us now introduce the linear
+least mean squares formulation.
+
+2
+00:00:06,070 --> 00:00:07,960
+The setting is
+the usual one-- we
+
+3
+00:00:07,960 --> 00:00:11,250
+have an unknown random variable
+and another random variable,
+
+4
+00:00:11,250 --> 00:00:12,830
+which is our observation.
+
+5
+00:00:12,830 --> 00:00:16,320
+We're given enough information
+so that we can, for example,
+
+6
+00:00:16,320 --> 00:00:21,060
+calculate the joint distribution
+of these two random variables.
+
+7
+00:00:21,060 --> 00:00:23,530
+What we would like to
+do in the least squares
+
+8
+00:00:23,530 --> 00:00:27,460
+methodology is to come up
+with an estimator, such
+
+9
+00:00:27,460 --> 00:00:30,210
+that the mean squared
+error of this estimator
+
+10
+00:00:30,210 --> 00:00:31,890
+is as small as possible.
+
+11
+00:00:31,890 --> 00:00:34,960
+And we have seen the general
+solution to this problem.
+
+12
+00:00:34,960 --> 00:00:38,010
+If we consider
+arbitrary estimators,
+
+13
+00:00:38,010 --> 00:00:40,510
+it turns out that the
+best possible estimator,
+
+14
+00:00:40,510 --> 00:00:43,815
+the best possible function g,
+is this particular function
+
+15
+00:00:43,815 --> 00:00:45,110
+of the observations.
+
+16
+00:00:45,110 --> 00:00:50,390
+Our estimator is a conditional
+expectation of Theta, given X.
+
+17
+00:00:50,390 --> 00:00:54,200
+Now, let us look at an example
+that we considered earlier.
+
+18
+00:00:54,200 --> 00:00:57,770
+Suppose that X and Theta
+have a joint PDF, which
+
+19
+00:00:57,770 --> 00:01:01,110
+is uniform over this
+particular region.
+
+20
+00:01:01,110 --> 00:01:03,440
+We did consider
+this example and we
+
+21
+00:01:03,440 --> 00:01:06,960
+found that the
+optimal estimator was
+
+22
+00:01:06,960 --> 00:01:10,300
+a function that had
+this particular shape.
+
+23
+00:01:10,300 --> 00:01:13,580
+So this blue curve
+here corresponds
+
+24
+00:01:13,580 --> 00:01:16,510
+to the function, which is
+the conditional expectation
+
+25
+00:01:16,510 --> 00:01:20,980
+of Theta, given the
+value of the observation
+
+26
+00:01:20,980 --> 00:01:23,690
+that we have obtained.
+
+27
+00:01:23,690 --> 00:01:26,990
+We notice that this
+function is nonlinear,
+
+28
+00:01:26,990 --> 00:01:29,990
+but it is only mildly nonlinear.
+
+29
+00:01:29,990 --> 00:01:34,030
+The fact that it is nonlinear
+is a little bit of a nuisance.
+
+30
+00:01:34,030 --> 00:01:38,320
+It makes it somewhat of
+a complicated function.
+
+31
+00:01:38,320 --> 00:01:41,660
+Wouldn't it be nicer if our
+estimator had turned out
+
+32
+00:01:41,660 --> 00:01:45,590
+to be a linear function of
+the data, such as this one?
+
+33
+00:01:45,590 --> 00:01:48,479
+It would have been nicer,
+but, unfortunately,
+
+34
+00:01:48,479 --> 00:01:50,200
+that's not the case.
+
+35
+00:01:50,200 --> 00:01:53,900
+By what if we impose
+it as a constraint,
+
+36
+00:01:53,900 --> 00:01:56,530
+that we will only
+look at estimators
+
+37
+00:01:56,530 --> 00:01:59,670
+that are linear
+functions of the data.
+
+38
+00:01:59,670 --> 00:02:00,680
+What does that mean?
+
+39
+00:02:00,680 --> 00:02:03,280
+Mathematically
+speaking, it means
+
+40
+00:02:03,280 --> 00:02:06,150
+that we will only
+consider estimators
+
+41
+00:02:06,150 --> 00:02:11,009
+that depend linearly
+on the data X.
+
+42
+00:02:11,009 --> 00:02:14,400
+Now, a and b here
+are some parameters
+
+43
+00:02:14,400 --> 00:02:16,430
+that are for us to choose.
+
+44
+00:02:16,430 --> 00:02:18,760
+If I choose a and
+b differently, I'm
+
+45
+00:02:18,760 --> 00:02:22,360
+going to get a different
+red curve here.
+
+46
+00:02:22,360 --> 00:02:24,900
+Which one is the best red curve?
+
+47
+00:02:24,900 --> 00:02:26,055
+Well, we need a criterion.
+
+48
+00:02:26,055 --> 00:02:31,770
+But let us stick to our mean
+squared error criterion.
+
+49
+00:02:31,770 --> 00:02:36,590
+And in that case, we're led
+to the following formulation.
+
+50
+00:02:36,590 --> 00:02:40,370
+We want to find
+choices for a and b.
+
+51
+00:02:40,370 --> 00:02:44,700
+That is, we want to choose
+a particular red line,
+
+52
+00:02:44,700 --> 00:02:49,870
+so that the resulting
+estimation error, the resulting
+
+53
+00:02:49,870 --> 00:02:53,890
+mean squared estimation error,
+is as small as possible.
+
+54
+00:02:53,890 --> 00:02:56,420
+So what we have here
+is a random variable.
+
+55
+00:02:56,420 --> 00:02:58,260
+Here is the value
+that's going to be
+
+56
+00:02:58,260 --> 00:03:00,490
+given to us by our estimator.
+
+57
+00:03:00,490 --> 00:03:03,060
+And we look at the
+associated error,
+
+58
+00:03:03,060 --> 00:03:06,260
+square it, and take
+the expectation.
+
+59
+00:03:06,260 --> 00:03:10,030
+So this is the linear least
+mean squares formulation.
+
+60
+00:03:10,030 --> 00:03:11,980
+We're looking for
+an estimator, which
+
+61
+00:03:11,980 --> 00:03:14,120
+is a linear function
+of the data.
+
+62
+00:03:14,120 --> 00:03:19,010
+And we want to choose the
+best possible linear function.
+
+63
+00:03:19,010 --> 00:03:21,630
+How does it compare
+to the earlier problem
+
+64
+00:03:21,630 --> 00:03:23,870
+of picking the best estimator?
+
+65
+00:03:23,870 --> 00:03:28,040
+Here we were considering
+an arbitrary function g
+
+66
+00:03:28,040 --> 00:03:31,620
+and we were trying to find
+the best possible function
+
+67
+00:03:31,620 --> 00:03:34,650
+of the data, which
+would be our estimator.
+
+68
+00:03:34,650 --> 00:03:37,060
+So this was really
+an optimization
+
+69
+00:03:37,060 --> 00:03:39,490
+over all possible functions.
+
+70
+00:03:39,490 --> 00:03:42,960
+Here we only have an
+optimization with respect
+
+71
+00:03:42,960 --> 00:03:44,370
+to two numbers.
+
+72
+00:03:44,370 --> 00:03:48,079
+So at least mathematically, this
+should be a simpler problem.
+
+73
+00:03:48,079 --> 00:03:51,610
+And we will see that it
+has a simple solution.
+
+74
+00:03:51,610 --> 00:03:54,300
+Before going on to
+the solution, however,
+
+75
+00:03:54,300 --> 00:03:57,520
+let me make one comment
+that in some cases,
+
+76
+00:03:57,520 --> 00:03:59,290
+the linear least
+squares estimation
+
+77
+00:03:59,290 --> 00:04:02,850
+problem is relatively
+easy to solve.
+
+78
+00:04:02,850 --> 00:04:07,450
+And these are the cases where
+the conditional expectation
+
+79
+00:04:07,450 --> 00:04:11,020
+turns out to be
+linear in the data.
+
+80
+00:04:11,020 --> 00:04:13,460
+This is the best
+possible estimator.
+
+81
+00:04:13,460 --> 00:04:16,660
+If it happens to be
+linear, it's at least
+
+82
+00:04:16,660 --> 00:04:20,029
+as good as any other
+linear estimator,
+
+83
+00:04:20,029 --> 00:04:25,750
+so it's also going to be the
+optimal linear estimator.
+
+84
+00:04:25,750 --> 00:04:28,350
+That is, if the optimal
+solution turns out
+
+85
+00:04:28,350 --> 00:04:32,040
+to be already linear, by
+imposing the extra constraint
+
+86
+00:04:32,040 --> 00:04:34,970
+of sticking to linear
+estimators is not
+
+87
+00:04:34,970 --> 00:04:37,870
+going to make any difference.
+
+88
+00:04:37,870 --> 00:04:40,360
+But for the general
+case, in general,
+
+89
+00:04:40,360 --> 00:04:42,340
+this is not going
+to be the case.
+
+90
+00:04:42,340 --> 00:04:44,890
+The conditional
+expectation may well
+
+91
+00:04:44,890 --> 00:04:47,820
+turn out to be a nonlinear
+function of the data,
+
+92
+00:04:47,820 --> 00:04:49,390
+as in this example.
+
+93
+00:04:49,390 --> 00:04:53,960
+And in those cases, the linear
+least mean squares estimator
+
+94
+00:04:53,960 --> 00:04:56,760
+is going to turn
+out to be different.

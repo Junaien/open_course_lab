@@ -1,0 +1,400 @@
+1
+00:00:00,400 --> 00:00:03,200
+Let us now consider
+a simple example.
+
+2
+00:00:03,200 --> 00:00:07,460
+Let random variables X and Y
+be described by a joint PMF
+
+3
+00:00:07,460 --> 00:00:09,820
+which is the one shown
+in this table.
+
+4
+00:00:09,820 --> 00:00:10,990
+Question--
+
+5
+00:00:10,990 --> 00:00:14,190
+are X and Y independent?
+
+6
+00:00:14,190 --> 00:00:16,910
+We can try to answer this
+question by using the
+
+7
+00:00:16,910 --> 00:00:18,670
+definition of independence.
+
+8
+00:00:18,670 --> 00:00:22,320
+But it is actually more
+instructive to proceed in a
+
+9
+00:00:22,320 --> 00:00:24,660
+somewhat more intuitive way.
+
+10
+00:00:24,660 --> 00:00:29,320
+We look at this table, and we
+observe that the value of one
+
+11
+00:00:29,320 --> 00:00:33,000
+is possible for X. In
+particular, the probability
+
+12
+00:00:33,000 --> 00:00:36,950
+that X takes the value of one,
+this is the marginal
+
+13
+00:00:36,950 --> 00:00:41,690
+probability, this can be found
+by adding the probabilities of
+
+14
+00:00:41,690 --> 00:00:45,580
+all of the outcomes in this
+column, which, in this case,
+
+15
+00:00:45,580 --> 00:00:48,710
+is 3 over 20.
+
+16
+00:00:48,710 --> 00:00:52,560
+Suppose now that somebody tells
+you the value of Y. For
+
+17
+00:00:52,560 --> 00:00:57,430
+example, I tell you that Y
+happens to be equal to one, in
+
+18
+00:00:57,430 --> 00:01:02,100
+which case you are transported
+into this universe.
+
+19
+00:01:02,100 --> 00:01:06,110
+In this universe, the
+conditional probability that X
+
+20
+00:01:06,110 --> 00:01:10,510
+takes a value of one, given that
+Y takes a value of one,
+
+21
+00:01:10,510 --> 00:01:12,100
+what is it?
+
+22
+00:01:12,100 --> 00:01:14,800
+In this universe, there's
+zero probability
+
+23
+00:01:14,800 --> 00:01:17,070
+associated to this outcome.
+
+24
+00:01:17,070 --> 00:01:19,660
+So this probability
+is zero, which is
+
+25
+00:01:19,660 --> 00:01:23,010
+different than 3 over 20.
+
+26
+00:01:23,010 --> 00:01:26,789
+And since these two numbers are
+different, this means that
+
+27
+00:01:26,789 --> 00:01:31,720
+information from Y changes our
+beliefs about what's going to
+
+28
+00:01:31,720 --> 00:01:35,600
+happen to X. And so, we do
+not have independence.
+
+29
+00:01:35,600 --> 00:01:40,009
+So again, intuitively, in the
+beginning, we thought that X
+
+30
+00:01:40,009 --> 00:01:42,380
+equal to one was possible.
+
+31
+00:01:42,380 --> 00:01:47,360
+But information given by Y,
+namely that Y is equal to one,
+
+32
+00:01:47,360 --> 00:01:51,360
+tells us that, actually, X
+equals to one is impossible.
+
+33
+00:01:51,360 --> 00:01:56,700
+Information about Y changed our
+beliefs about X, so X and
+
+34
+00:01:56,700 --> 00:01:57,990
+Y are dependent.
+
+35
+00:02:00,540 --> 00:02:03,510
+Now, when we first introduced
+the notion of independence
+
+36
+00:02:03,510 --> 00:02:06,310
+some time ago, we also
+introduced the notion of
+
+37
+00:02:06,310 --> 00:02:07,620
+conditional independence.
+
+38
+00:02:07,620 --> 00:02:10,500
+And we said that conditional
+independence is the same as
+
+39
+00:02:10,500 --> 00:02:15,940
+ordinary independence, except
+that it would be applied to a
+
+40
+00:02:15,940 --> 00:02:18,880
+conditional universe.
+
+41
+00:02:18,880 --> 00:02:21,480
+Something similar can be done
+for the case of random
+
+42
+00:02:21,480 --> 00:02:22,960
+variables as well.
+
+43
+00:02:22,960 --> 00:02:29,030
+So suppose, for example, that
+someone tells us that the
+
+44
+00:02:29,030 --> 00:02:32,680
+outcome of the experiment
+was such that it belongs
+
+45
+00:02:32,680 --> 00:02:35,250
+to this blue set.
+
+46
+00:02:35,250 --> 00:02:38,960
+This is the set where X is less
+than or equal to 2, and Y
+
+47
+00:02:38,960 --> 00:02:41,250
+is larger than or
+equal to three.
+
+48
+00:02:41,250 --> 00:02:44,420
+So we're given this information,
+and this is now
+
+49
+00:02:44,420 --> 00:02:47,050
+our new conditional model.
+
+50
+00:02:47,050 --> 00:02:51,600
+The question is, within this
+new conditional model are
+
+51
+00:02:51,600 --> 00:02:55,079
+random variables X and
+Y independent?
+
+52
+00:02:55,079 --> 00:02:58,440
+Let's just right down the
+conditional model, where I'm
+
+53
+00:02:58,440 --> 00:03:02,610
+only showing the four possible
+outcomes that are allowed in
+
+54
+00:03:02,610 --> 00:03:03,850
+the conditional model.
+
+55
+00:03:03,850 --> 00:03:06,810
+All the others, of course, will
+have zero probability in
+
+56
+00:03:06,810 --> 00:03:08,540
+the conditional model.
+
+57
+00:03:08,540 --> 00:03:12,110
+So in the conditional model,
+probabilities will keep the
+
+58
+00:03:12,110 --> 00:03:16,260
+same proportions as in the
+unconditional model--
+
+59
+00:03:16,260 --> 00:03:19,260
+and the proportions
+are 1, 2, 2, 4--
+
+60
+00:03:19,260 --> 00:03:22,990
+but then they need to be scaled,
+or normalized, so that
+
+61
+00:03:22,990 --> 00:03:24,810
+they add to 1.
+
+62
+00:03:24,810 --> 00:03:30,030
+And to make them add to 1, we
+need to divide them all by 9.
+
+63
+00:03:30,030 --> 00:03:34,520
+In this conditional model, this
+is the joint PMF of the
+
+64
+00:03:34,520 --> 00:03:39,400
+two random variables X and Y.
+Let us find the marginal PMFs.
+
+65
+00:03:39,400 --> 00:03:42,020
+To find the marginal PMF
+of X, we add the
+
+66
+00:03:42,020 --> 00:03:43,300
+entries in this column.
+
+67
+00:03:43,300 --> 00:03:47,829
+And we get here 1/3,
+and here 2/3.
+
+68
+00:03:47,829 --> 00:03:50,829
+And to find the marginal
+PMF of y, we add the
+
+69
+00:03:50,829 --> 00:03:52,110
+entries in this [row]
+
+70
+00:03:52,110 --> 00:03:54,090
+to find 2/3.
+
+71
+00:03:54,090 --> 00:03:55,940
+And we adds the entries
+in that [row]
+
+72
+00:03:55,940 --> 00:03:58,020
+to find 1/3.
+
+73
+00:03:58,020 --> 00:04:00,000
+So this is the marginal
+PMF of x.
+
+74
+00:04:00,000 --> 00:04:04,900
+That's the marginal PMF of Y.
+And now we notice that this
+
+75
+00:04:04,900 --> 00:04:08,670
+entry of the joint PMF
+is 1/3 times 1/3, the
+
+76
+00:04:08,670 --> 00:04:10,300
+product of the marginals.
+
+77
+00:04:10,300 --> 00:04:14,560
+This entry is the product of 1/3
+times 2/3, the product of
+
+78
+00:04:14,560 --> 00:04:18,070
+the marginals, and so on for
+the remaining entries.
+
+79
+00:04:18,070 --> 00:04:22,670
+So each entry of the joint PMF
+is equal to the product of the
+
+80
+00:04:22,670 --> 00:04:25,680
+corresponding entries of
+the marginal PMFs.
+
+81
+00:04:25,680 --> 00:04:29,670
+And this is the definition
+of independence.
+
+82
+00:04:29,670 --> 00:04:33,670
+So in this conditional blue
+universe, we do have
+
+83
+00:04:33,670 --> 00:04:35,210
+independence.
+
+84
+00:04:35,210 --> 00:04:38,909
+And the way that this was
+established was to check that
+
+85
+00:04:38,909 --> 00:04:42,940
+the joint PMF factors as a
+product of marginal PMFs.

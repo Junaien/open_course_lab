@@ -1,0 +1,179 @@
+1
+00:00:00,500 --> 00:00:04,230
+In this lecture, we introduce
+Markov chains, a general class
+
+2
+00:00:04,230 --> 00:00:06,860
+of random processes
+with many applications
+
+3
+00:00:06,860 --> 00:00:10,380
+dealing with the evolution
+of dynamical systems.
+
+4
+00:00:10,380 --> 00:00:12,230
+As opposed to the
+Bernoulli and Poisson
+
+5
+00:00:12,230 --> 00:00:15,420
+processes, which are
+memoryless in a sense
+
+6
+00:00:15,420 --> 00:00:17,860
+that the future does
+not depend on the past,
+
+7
+00:00:17,860 --> 00:00:20,350
+Markov chains are more
+elaborate, as they
+
+8
+00:00:20,350 --> 00:00:23,980
+allow some dependencies
+between different times.
+
+9
+00:00:23,980 --> 00:00:27,640
+However, these dependencies
+are of simple and restricted
+
+10
+00:00:27,640 --> 00:00:31,330
+nature, captured by the
+so-called Markov property.
+
+11
+00:00:31,330 --> 00:00:34,710
+Conditional on the current state
+of the Markov chain, its future
+
+12
+00:00:34,710 --> 00:00:37,420
+and past evolutions
+are independent.
+
+13
+00:00:37,420 --> 00:00:39,830
+As mentioned in
+the unit overview,
+
+14
+00:00:39,830 --> 00:00:41,760
+we will only consider
+discrete time
+
+15
+00:00:41,760 --> 00:00:46,170
+Markov chains that evolve
+within finite state spaces.
+
+16
+00:00:46,170 --> 00:00:49,270
+This allows us to concentrate
+on the main concepts
+
+17
+00:00:49,270 --> 00:00:52,760
+without having to deal with
+some required technical details
+
+18
+00:00:52,760 --> 00:00:57,470
+needed to study general Markov
+processes under continuous time
+
+19
+00:00:57,470 --> 00:01:02,850
+and general, possibly
+uncountable, state spaces.
+
+20
+00:01:02,850 --> 00:01:05,550
+We will first introduced
+the basic concepts,
+
+21
+00:01:05,550 --> 00:01:08,270
+using the simple example
+of a checkout counter
+
+22
+00:01:08,270 --> 00:01:12,610
+at a supermarket, an example
+of a simple queuing system.
+
+23
+00:01:12,610 --> 00:01:14,570
+We will then abstract
+from the example
+
+24
+00:01:14,570 --> 00:01:17,200
+and give some general
+definitions, including
+
+25
+00:01:17,200 --> 00:01:21,570
+the central notions of states,
+transition probabilities,
+
+26
+00:01:21,570 --> 00:01:26,090
+Markov property, and
+transition probability graphs.
+
+27
+00:01:26,090 --> 00:01:28,920
+Afterwards, we will look
+at various questions,
+
+28
+00:01:28,920 --> 00:01:32,560
+such as predicting what
+will happen in n-steps
+
+29
+00:01:32,560 --> 00:01:36,310
+in the future, given the
+current state of our system.
+
+30
+00:01:36,310 --> 00:01:40,180
+We will define n-step
+transition probabilities exactly
+
+31
+00:01:40,180 --> 00:01:43,180
+and show how to calculate
+them efficiency.
+
+32
+00:01:43,180 --> 00:01:45,530
+We will also discuss
+what could happen
+
+33
+00:01:45,530 --> 00:01:49,570
+when we let the Markov chain
+run for a very long time.
+
+34
+00:01:49,570 --> 00:01:51,710
+We will end this
+lecture by introducing
+
+35
+00:01:51,710 --> 00:01:55,039
+the notions of recurrent
+and transient states
+
+36
+00:01:55,039 --> 00:01:59,570
+and their importance in studying
+Markov chains in the long run.

@@ -1,0 +1,482 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=1.8cm, right=1.8cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\newtheorem{claim}{Claim}
+\usepackage[toc,page]{appendix}
+\usepackage[utf8]{inputenc}
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+ 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+
+\lstdefinestyle{Python}{
+    language        = Python,
+    frame           = lines, 
+    basicstyle      = \footnotesize,
+    keywordstyle    = \color{blue},
+    stringstyle     = \color{green},
+    commentstyle    = \color{red}\ttfamily,
+    inputencoding   = utf8,
+    extendedchars   = \true,
+}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{CS 381}
+\newcommand\hwnumber{1}                  % <-- homework number
+\newcommand\NetIDa{En Lin}                % <-- NetID of person #1
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\NetIDa}
+\chead{\textbf{\Large Problem Set \hwnumber}}
+\rhead{\course \\ \today}
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+    discussed problem 5, 3c with Gao Sheng Chen, Han Wen Loh. All codes were original. \\
+    code for question 5,6 is appended at the last few pages.
+\section*{Problem 2}
+\begin{enumerate}
+  \item[2a.]
+    The Diffie-Hellman key establishment protocol that we discussed in class employs powers of a primitive root g. Suppose you were forbidden to use a primitive root base.  Redesign the protocol to make it work.  Discuss how you chose your new base value and why you would do it this way. And be sure to quantify the security change in doing so from the usual choice of primitive root g.  Given primitive root g, explicitly construct your new base value from g.\\ \\
+    \textbf{Solution:} I will use $g^2$ as the new base value.  And not change other parts of the protocol. \\
+    assuming $k = order_p(g^2)$, since g is primitive root of p
+    \begin{align}
+      (g^2) ^ k \equiv g^{2k}  \equiv 1(mod \ p) \\
+      (g^2)^\frac{p-1}{2} \equiv g^{p-1} \equiv 1(mod \ p)
+    \end{align}
+    by the definition of order we have
+    \begin{align*}
+      k <= \frac{p-1}{2} \\
+      p-1 <= 2k
+    \end{align*}
+
+    So $k = \frac{p-1}{2}$, we know that $g^2$ is not a primitive root of p, and $(g^2)^x$ can be $\frac{p-1}{2}$ distinct values, So the time for methods to break this protocol will stay within a constant factor comparing to use g as base value.
+  \item[2b.]
+  The Diffie-Hellman key establishment protocol that we have discussed in class employs prime modulus. Suppose you are not allowed to use a prime modulus, you must use an odd modulus and it has to be square-free. Redesign the Diffie-Hellman protocol to make it work, if that is at all necessary - you want to make the new protocol as secure as possible - and discuss how to chose your (non-prime) modulus and why you would do it this way. And quantify the security change in doing so. \\ \\
+  \textbf{Solution:} I will use 3p as new modulus, where p is a sophie prime p = 2q + 1 \\
+  \begin{align*}
+    \phi{(3p)} = 2(p - 1) = 4q
+  \end{align*} \\
+  obviously, 3p is an odd non-prime modulus, and it is square-free \\
+  because the order of a(mod 3p) must divide $\phi{(3p)} = 4q$, the order of a(mod 3p) can only be 1, 2, 4, q, 2q, 4q. \\
+  I can always find some number g' so that $order_{3p}g'$ $\notin \{1,2,4\}$.  In the worse case the order of g'(mod 3p) is q, So the time for methods to break this protocol will stay within a constant factor comparing to use g as base value and p as modulus.   
+
+\end{enumerate}
+\section*{Problem 3}
+\begin{enumerate}
+    \item[a.]
+      Is 7 a primitive root modulo 65537 \\ \\
+      Solution: The answer is yes. following is the code snippet.
+      \begin{lstlisting}[style = Python]
+        def is_primitive_root(n = 7, m = 65537):
+          # only check if 7 ^ (2 ^ (k), where k in [1, 15]
+          power = 7 
+          for i in range(1, 16):
+            power = (power * power) % 65537
+            if power == 1:
+              print(f"7 is not primitive root of 65537")
+              return
+
+          print("7 is a primitive root of 65537")
+      \end{lstlisting}
+      this function uses O(log(65536)) multiplications \\
+      \\ The basic idea is that, $\phi(65537) = 2^{16}$. \\
+      because $ord_p(a)$ must divide  $\phi(p)$, we only need to check $7^{2^{[1..15]}}$ to see if they are 1.  
+    \\
+    \item[b.]
+      Solve the DLP $7^x \equiv 2 (mod \ 65537)$ 
+      \\ 
+      \\
+      The answer is 43008, following is the code snippet that solves $g^x \equiv h(mod \ m)$ by brute force
+      \begin{lstlisting}[style = Python]
+        def dlp_solver_bf(g, h, m):
+          x, accumulator = 0, 1
+          for i in range(m):
+            if accumulator == h:
+              return x
+            x += 1
+            accumulator = (g * accumulator) % m
+          return -1
+      \end{lstlisting}
+    \item[c.]
+      $2^x \equiv$ 92327518017225 (mod 247457076132467).  Try to solve the DLP by brute force.  How did it go? Clearly answer that question by defining what you consider 'brute force', the extent of your attempt and you system information.  Calculate how much storage space you need to implement the Shanks algorithm for this problem.  Now solve it using BS-GS algorithm.
+      \\ 
+      \\
+      \\
+      I tried to solve the equation by brute force search. \\
+      what I mean by brute force: try to compute $2^i$(mod  247457076132567), for i from 1 to 247457076132466, once we find such i that makes the equation holds, we return the value of i.\\
+      The computation ran for half an hour without giving an answer.  My computer was Mac Pro 2012 with 2.5 GHz Intel Core i5 processor
+      \\ \\ 
+      following is my implementation of BS-GS algorithm:
+      \begin{lstlisting}[style = Python]
+        #Algorithm to find x, where g^x = h(mod m), gcd(g, m) = 1
+        #  let n = m^0.5 + 1
+        #  case 1: 
+        #    if there is k in [0, m) so that k solves the equation,
+        #    it must exist k = i * n - j, where i in [0, n], j in [0, n],
+        #    g ^ k = g ^ ((i * n) - j) = h(mod m)
+        #    there must be i, j such that g ^ (i * n) = h * (g ^ j) (mod m)
+        #  case 2: 
+        #    if there is no k that solves the equation, 
+        #    then there is no such (i, j) pair
+
+        def dlp_solver(g, h, m):
+          n = int(math.sqrt(m) + 1);  
+          g_i_n_table = {}
+          
+          # step1: calculate g ^ n
+          g_n = 1
+          for i in range(n):
+            g_n = (g_n * g) % m
+    
+          # step2: for all i in [0, n], store g ^ (i * n)
+          accumulateA = 1
+          for i in range(1, n + 1):
+            accumulateA = (accumulateA * g_n) % m
+            g_i_n_table[accumulateA] = i
+        
+          # step3: loop through all j in [0, n],
+          #        to find g^(i * n), h * (g^j) match in g_i_n_table
+          accumulateB = 1
+          for j in range(1, n + 1):
+            accumulateB = (accumulateB * g) % m
+            key = ((accumulateB * h) % m)
+            if key in g_i_n_table:
+              return (g_i_n_table[key] * n - j + (m-1)) % (m - 1)
+        
+          # there is no answer, because if there were, we would have find it
+          return -1;  
+      \end{lstlisting}
+      In step 2, BS\_GS algorithm acquires $O(\sqrt{modulo})$ storage for g\_i\_n\_table.
+      This program gives one answer x $\equiv$ 208891284998759 (mod 247457076132466 :note that $2^{m-1} \equiv$ 1(mod m))
+
+
+\end{enumerate}
+\section*{Problem 4}
+\setcounter{equation}{0}
+\begin{enumerate}
+  \item[b.]
+    Suppose p is a prime and 2 and 3 are both primitive roots (mod p). Prove that 6 is not a primitive root (mod p)
+    \begin{proof}
+      given that 2 and 3 are a primitive root of (mod p)
+      \begin{align}
+        2^1 * 2^2 * 2^3 ... 2^{p-1} \equiv 1 * 2 * 3 ... * p - 1 (mod \hspace{3} p) \\
+        3^1 * 3^2 * 3^3 ... 3^{p-1} \equiv 1 * 2 * 3 ... * p - 1 (mod \hspace{3} p)
+      \end{align}
+    now assume 6 is a primitive root of (mod p), by multiplying (1) and (2) we have
+      \begin{align}
+        6^1 * 6^2 * 6^3 ... 6^{p-1} \equiv (p - 1)!^2 (mod \ p) \\
+        6^1 * 6^2 * 6^3 ... 6^{p-1} \equiv (p - 1)! (mod \ p)
+      \end{align}
+    by (3)(4), since p is a prime we can always find inverse for all numbers from 1 to p - 1, on both side we multiply $1^{-1}$, $2^{-1}$, $3^{-1}$ ... $(p-1)^{-1}$, we have
+      \begin{align}
+        (p - 1)! \equiv 1 (mod \ p)
+      \end{align}
+    now if we look at what numbers are the inverse of themselves.
+      \begin{align*}
+        x^2 \equiv 1 (mod \ p) \\
+        (x - 1)(x + 1) \equiv 0(mod \ p) \\
+        k_1*p = (x - 1) \ or \  k_2*p = (x + 1) \\
+        x \equiv -1 \ or \ 1 (mod \ p)
+      \end{align*}
+    So by the equations above, we know that for number n from 1 to p-1, where gcd(n, p) = 1, only \{1, p - 1\} are inverse of themselves, so there are $\frac{(p - 3)}{2}$ pair of $(n, n^{-1})$ where $n != n^{-1}$, we reach contradiction with (5)
+      \begin{align}
+          (p - 1)! \equiv 1 * 1 * 1 ... (p - 1) \equiv -1(mod \ p)
+      \end{align}
+    In general, we prove that if a and b are both primitive roots of (mod p), then a * b is not a primitive root of (mod p)
+    \end{proof}
+  \item[c.]
+    Find, with proof, all n such that $\phi(n)$ divides 25n. \\ \\ 
+    by listing out small numbers which satisfy this condition, we can indentify some characteristics of them: 
+    \begin{align*}
+      2 = 2^1 \\
+      8 = 2^3 \\
+      22 = 2^1*11^1 \\
+      88 = 2^3*11^1 \\
+      1458 = 2^1*3^6 \\
+      7744 = 2^6*11^2 \\
+      ...
+    \end{align*}
+    we want $\phi(n) = n\prod_{p | n}(1 - \frac{1}{p})$ to divide 5*5*n, if we simply the equation we get the following equivalence, where $\{p_1, p_2, ... p_k\}$ are prime factors of n
+    \setcounter{equation}{0}
+    \begin{align}
+          (p_1-1)(p_2-1)(p_3-1)...(p_k-1) \ divides \ 5*5*p_1*p_2*p_3..*p_k
+    \end{align}
+    \begin{claim}
+      the smallest prime factor of n must be 2
+    \end{claim}
+    \begin{proof}
+      assume that $p_1 > 2$. since $p_1$ is odd prime, $p_1-1$ must be even
+      \begin{align*}
+        (p_1-1)(p_2-1)(p_3-1)...(p_k-1) \ is \ even \\
+        5*5*p_1*p_2*p_3..*p_k \ is \ odd
+      \end{align*}
+      because even number can't divide odd number, claim 1 holds
+    \end{proof} 
+    \vspace{3}
+    \begin{claim}
+      there can be at most 2 prime factors of n
+    \end{claim}
+    \begin{proof}
+      assume that n has more than 2 prime factors, $p_1, p_2, p_3...p_k$ and $p_2-1, p_3-1$ are both even, and $p_1 = 2$
+      \begin{align*}
+        (p_1-1)(p_2-1)(p_3-1)...(p_k-1) \ is \ multiple \ of \ 2^2 \\
+        5*5*p_1*p_2*p_3..*p_k \ not \ multiple \ of \ 2^2
+      \end{align*}
+      obviously (1) is not possible if n has more than 2 prime factors, so we have claim 2 holds
+    \end{proof}
+    \begin{claim}
+      if n is composed of 2 prime factors, then those two factors are {2,3} or {2,11}
+    \end{claim}
+    \begin{proof}
+      if n is composed of only two prime factors, according to (1), we want
+      \begin{align*}
+        (p_2-1) \ divides \ 5*5*2*p_2 => (p_2-1) \ divides \ 5*5*2
+      \end{align*}
+      so prime factorization of $p_2-1$ has to be subset of {5, 5, 2}, if we list out all the possibility: \\
+      $p_2-1 \in$ \{5, 2, 5*5, 5*2, 5*5*2\} = \{5, 2, 25, 10, 50\}, 
+      rule out all the non-primes $p_2 \in  \{3, 11\}$ 
+    \end{proof}
+    So by claim 1,2,3,  \textbf{$n = 2^k3^z, (k >= 1, z >= 0)$ or $n = 2^k11^z, (k >= 1, z >= 0)$}
+\end{enumerate}
+\section*{Problem 5}
+    Consider the following encrypted text. Using your result from Problem 1a or otherwise, recover the plaintext (given that the method of encryption was one we have discussed in class)\\ \\
+    using key: gbjui \\
+    The original text was:\\
+    oursisessentiallyatragicagesowerefusetotakeittragicallythecataclysmhashappenedweareamongthe\\ruinswestarttobuildupnewlittlehabitatstohavenewlittlehopesitisratherhardworkthereisnownosmooth\\roadintothefuturebutwegoroundorscrambleovertheobstacleswevegottobivenomatterhowmanyskies\\havefallen\\ \\
+    How I broke the code:
+
+    \textbf{Step1:} for key length \textbf{L} in [3..12], I plot out the character frequency distribution at every (index \% L). Among all \textbf{L}, I found that when \textbf{L=5}, the character frequency distribution was most close to regular English alphabet frequency.
+    \begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\linewidth]{q5.png}
+    \caption{character frequency.dist at key Length 5}
+    \end{figure}
+    
+    \textbf{Step2:} Next based on the guess that key length is 5.\\ At this stage, for each (index \% 5) we get one character frequency array F = [a: 10\%, b: 3\%, c: 3\% ...], we have regular English alphabet frequency RF = [a: 8.2\%, 1.5\%, 2.8\% ...], Let $F_i$ = array F shifted to left by amount $i\in [0, 25]$, we find out i where
+    \begin{align*}
+      vector \ angle(F_i, RF) is \ the \ smallest
+    \end{align*}
+    Following is the code snippet (for entire code see last few pages):
+    \begin{lstlisting}[style = Python]
+      for i in range(guess_key_length):
+        angle_list = {}
+        for shift in range(len(alphabet)):
+          F = percentage(selected_histo[i], len(cypher) / guess_key_length)
+          F_shift = np.roll(F, -shift)
+          angle_list[shift] = angle(alphabet_frequency, F_shift)
+
+        angle_list = sorted(angle_list.items(), key=lambda x : x[1])
+        print(angle_list)
+    \end{lstlisting}\\ \\ 
+    \textbf{Step3:} Now by looking at angle list, we try to figure out the key
+    
+    For example, the angle list looks like:
+     
+    at index 0: [(6, 0.46), (19, 0.88), (2, 0.95), (10, 0.95), (13, 0.97), (20, 0.98)...], \\
+    at index 1: [(1, 0.51), (14, 0.87), (23, 0.9), (5, 0.94), (12, 0.97), ...], \\
+    at index 2: [(9, 0.31), (20, 0.81), (24, 0.81), (22, 0.89), (13, 0.9), (5, 0.91)...], \\
+    at index 3: [(20, 0.51), (9, 0.8), (5, 0.82), (8, 0.84), (24, 0.94), (12, 0.96) ...], \\
+    at index 4: [(8, 0.36), (12, 0.82), (23, 0.84), (1, 0.89), (15, 0.89), (4, 0.9) ...], \\
+    , we know that $F_6, F_1, F_9, F_{20}, F_8$  are the obvious winners. And hence the key characters are alphabet[6] + alphabet[1] + alphabet[9] + alphabet[20] + alphabet[8] = `gbjui'
+
+\section*{Problem 6}
+  using key: íþróttir \\
+  The original text was:\\
+  okerhonhittihannþáspurðihonerþatsattþrinderþúviðltilþingsríðavildaekatþúsegðirmérhvat\\væriíráðagerðþinniekskalsegjaþérkvaðhannhvatekhefihugsatekætlaathafatilþingsmeðmérkistur\\þærtværeraðalsteinnkonungrgafmérerhvártveggjaerfullafenskuýilfriætlaekatlátaberakisturn\\arrtllögbergsþáerþarerfjölmennastsíðanætlaekatsásilfrinuokþykkirmérundarligtefallirskiptavel\\sínímilliætlaekatþarmyndiveraþáhrundningareðapústrareðabæristatumsíðiratallrþingheimrinnber\\ðist\\
+
+  Follow the paradigm of solving problem 5
+  
+  \textbf{Step1:} I found out the most likely key length is 8 (Figure 2)
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\linewidth]{q6.png}
+    \caption{character frequency.dist at key Length 8}
+  \end{figure}
+  \\
+  \textbf{Step2:} Next based on the guess that key length is 8. We look at the angle list for each (index \% 8)
+  
+  index 0: [(11, 0.55), (1, 0.81), (23, 0.85), (21, 0.99), (27, 0.99), (16, 1.02)...] \\
+  index 1: [(29, 0.46), (14, 0.83), (2, 0.9), (30, 0.9), (20, 0.92), (13, 0.93)  ...] \\
+  index 2: [(20, 0.46), (4, 0.89), (10, 0.92), (25, 0.93), (5, 0.97), (15, 0.97)... ] \\
+  index 3: [(18, 0.58), (22, 0.91), (2, 0.93), (6, 0.94), (17, 1.0)...] \\
+  index 4: [(22, 0.44), (2, 0.92), (12, 0.94), (6, 0.95), (0, 0.96) ...] \\
+  index 5: [(22, 0.61), (27, 0.85), (12, 0.88), (0, 0.91), (10, 0.91), (19, 0.99) ...] \\
+  index 6: [(10, 0.43), (20, 0.93), (26, 0.94), (30, 0.98), (5, 1.01), (0, 1.03) ...] \\
+  index 7: [(20, 0.72), (8, 0.89), (18, 0.93), (12, 0.96), (14, 0.96), (24, 0.96)...] \\ \\
+  \textbf{Step3:} other possibilities are not even close, we found that key most likely was, \\ alphabet[11]+alphabet[29]...+alphabet[10]+alphabet[20] =  
+  íþróttir
+  
+  \clearpage
+  \section*{code for problem 5,6}
+  \begin{lstlisting}[style = Python]
+    import numpy as np
+    import math
+    import matplotlib.pyplot as plt
+    from numpy.linalg import norm
+    
+    def vigenere(alphabet_c_2_i, alphabet, alphabet_frequency, 
+                 guess_key_length, cypher_path, save_path):
+      cypher = ""
+      # read text, replace empty and newline character
+      with open(cypher_path, 'r') as file:
+        cypher = file.read().replace('\n', '')
+        cypher = cypher.replace(' ', '')
+    
+      # step 1: plot character histogram based on each potential key length
+      #         select most likely key length
+      for i in range(3, 13):
+        calculate_histo_and_plot(alphabet_c_2_i, cypher, i, save_path);
+    
+      # step 2: for each index from 0...l-1, try to guess possible character mapping
+      selected_histo = calculate_histo_and_plot(alphabet_c_2_i, cypher, guess_key_length, save_path);
+      key = []
+
+      for i in range(guess_key_length):
+        # shift our character frequency array to the left various time 
+        # compute the angle between vector (alphabet_frequency, shifted_frequency)
+        angle_list = {}
+        for shift in range(len(alphabet)):
+          F = percentage(selected_histo[i], len(cypher) / guess_key_length)
+          F_shift = np.roll(F, -shift)
+          angle_list[shift] = angle(alphabet_frequency, F_shift)
+    
+        angle_list = sorted(angle_list.items(), key=lambda x : x[1])
+        print(f'current index mod length [{i}], angle list(shift_amount, angle in radius):')
+        print(angle_list)
+        print()
+    
+        # step 3: select most likely shift amount for each [0...l-1] index
+        #         key character = alphabet[shift_amount]
+        #         e.g. if best match is shift -3 unit, then key = 3 = 'd'
+        key.append(alphabet[angle_list[0][0]])
+    
+      key = ''.join(key)
+      print(f"using key: {key}")
+      print("possible original text:")
+      print(decrypt(cypher, key, alphabet, alphabet_c_2_i))
+      
+      
+    
+    def calculate_histo_and_plot(alphabet_c_2_i, cypher, l, save_path):
+      histo = np.zeros((l, len(alphabet_c_2_i)), 'int32')
+      
+      # calculate character occurrence frequency for length index [0...l-1]
+      for i in range(len(cypher)):
+        histo[i % l][alphabet_c_2_i[cypher[i]]] += 1;
+      
+      # plot character occurrence frequency at each lenth index
+      for i in range(l):
+        plt.close("all")
+        plot(sorted(histo[i],reverse = True), i, color='r')
+        save_plot(i, f'{l}L{i}.png', f'{save_path}/{l}L{i}.png')
+      return histo
+    
+    def decrypt(cypher, key, alphabet, alphabet_c_2_i):
+      text = []
+      l = len(key)
+      for i in range(len(cypher)):
+        key_shift = alphabet_c_2_i[key[i % l]]
+        text.append(alphabet[(alphabet_c_2_i[cypher[i]] - 
+                              key_shift + 
+                              len(alphabet)) % len(alphabet)])
+
+      return ''.join(text)
+    
+    def encrypt(text, key, alphabet, alphabet_c_2_i):
+      cypher = []
+      l = len(key)
+      for i in range(len(text)):
+        key_shift = alphabet_c_2_i[key[i % l]]
+        cypher.append(alphabet[(key_shift + alphabet_c_2_i[text[i]]) % len(alphabet)])
+
+      return ''.join(cypher)
+    
+    def plot(hist, fig, color):
+      plt.figure(fig)
+      plt.bar(range(len(hist)), hist, color = color)
+    
+    def save_plot(fig, title, location):
+      plt.figure(fig)
+      plt.title(title)
+      plt.savefig(location)
+    
+    # make histogram display percentage 
+    def percentage(a, denominator):
+      rt = []
+      for i in a:
+        rt.append(i / denominator)
+      return rt
+    
+    def angle(a, b):
+      return round(np.arccos((a @ b) / (norm(a) * norm(b))), 2)
+    
+    def test():
+      # test encryption & decryption are inverse function
+      alphabet = "abcdefghijklmnopqrstuvwxyz"
+      alphabet_c_2_i = {x : ord(x) - ord('a') for x in alphabet}
+    
+      text = "thequickbrown"
+      inverted_text = decrypt(encrypt(text, "fox", alphabet, alphabet_c_2_i),
+                             "fox", alphabet, alphabet_c_2_i)
+    
+      assert inverted_text == text
+      assert encrypt("txhpoi", "bytxcq", alphabet, alphabet_c_2_i) == "uvamqy"
+    
+      print("functions tests successfully passed!")
+    
+    def main():
+      test()
+      # solve question 5 
+      print("<<<")
+      print("solving question 5......")
+      q5_alphabet = "abcdefghijklmnopqrstuvwxyz"
+      q5_alphabet_c_2_i = {q5_alphabet[x] : x for x in range(len(q5_alphabet))}
+      q5_alphabet_frequency = [8.2, 1.5, 2.8, 4.3, 12.7, 2.3, 2.0, 
+                               6.1, 7.0, 0.2, 0.8, 4.0, 2.4, 6.7, 7.5, 1.9, 
+                               0.1, 6.0, 6.3, 9.1, 2.8, 1.0, 2.4, 0.2, 2.0, 0.1]
+    
+      vigenere(q5_alphabet_c_2_i, q5_alphabet, q5_alphabet_frequency, 5, 
+              'question5.txt', './q5')
+    
+      # solve question 6
+      print("solving question 6......")
+      q6_alphabet = "aábdðeéfghiíjklmnoóprstuúvxyýþæö"
+      q6_alphabet_c_2_i = {q6_alphabet[x] : x for x in range(len(q6_alphabet))}
+      q6_alphabet_frequency = [9.14, 2.15, 0.96, 1.48, 3.13, 6.16, 0.53, 2.88, 
+                              3.08, 2.47, 8.00, 1.26, 0.96, 4.35, 4.75, 3.40, 
+                              8.26, 2.63, 1.43, 0.62, 9.81, 4.76, 5.90, 3.66, 
+                              0.48, 2.46, 0.04, 0.76, 0.10, 2.91, 0.59, 0.89]
+
+      vigenere(q6_alphabet_c_2_i, q6_alphabet, q6_alphabet_frequency, 8, 
+              'question6.txt', './q6')
+
+    if __name__== "__main__":
+      main()
+  \end{lstlisting}
+\end{document}
+
+

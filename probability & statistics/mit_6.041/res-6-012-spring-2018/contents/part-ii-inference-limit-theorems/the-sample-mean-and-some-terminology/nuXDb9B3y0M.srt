@@ -1,0 +1,404 @@
+1
+00:00:00,220 --> 00:00:03,420
+Let us now discuss a little bit
+the simplest estimation
+
+2
+00:00:03,420 --> 00:00:06,740
+problem that there is, the
+problem of estimating the mean
+
+3
+00:00:06,740 --> 00:00:10,130
+of a certain probability
+distribution, and we will take
+
+4
+00:00:10,130 --> 00:00:13,830
+this occasion to introduce some
+additional terminology
+
+5
+00:00:13,830 --> 00:00:17,430
+and discuss some desirable
+properties of estimators.
+
+6
+00:00:17,430 --> 00:00:19,620
+So the context is as follows.
+
+7
+00:00:19,620 --> 00:00:23,390
+We have n random variables
+that are independent, and
+
+8
+00:00:23,390 --> 00:00:24,880
+they're identically
+distributed.
+
+9
+00:00:24,880 --> 00:00:27,090
+They are drawn from some
+distribution that has a
+
+10
+00:00:27,090 --> 00:00:30,560
+certain mean theta and
+some variance.
+
+11
+00:00:30,560 --> 00:00:33,970
+We assume that we do not know
+the value of the mean, and we
+
+12
+00:00:33,970 --> 00:00:35,490
+want to estimate it.
+
+13
+00:00:35,490 --> 00:00:39,090
+The most natural way of
+estimating the mean is to form
+
+14
+00:00:39,090 --> 00:00:42,760
+the sample mean, that is, we
+take the n observations and
+
+15
+00:00:42,760 --> 00:00:45,530
+take their average.
+
+16
+00:00:45,530 --> 00:00:51,040
+Notice, that this quantity, the
+sample mean or, in this
+
+17
+00:00:51,040 --> 00:00:54,900
+case, it is the estimator that
+we're using, is a random
+
+18
+00:00:54,900 --> 00:00:59,370
+variable because its value is
+determined by the values of
+
+19
+00:00:59,370 --> 00:01:03,500
+the random variables
+X1 up to Xn.
+
+20
+00:01:03,500 --> 00:01:06,880
+Let us discuss some properties
+of this estimator.
+
+21
+00:01:06,880 --> 00:01:11,070
+The first property is that the
+expected value of this
+
+22
+00:01:11,070 --> 00:01:13,720
+estimator is equal
+to the true mean.
+
+23
+00:01:13,720 --> 00:01:16,870
+This is because the expected
+value of each one of the Xs is
+
+24
+00:01:16,870 --> 00:01:20,140
+theta, and therefore, the
+expected value of this ratio
+
+25
+00:01:20,140 --> 00:01:22,390
+is theta as well.
+
+26
+00:01:22,390 --> 00:01:26,240
+Now, this is a relation
+that's true for all
+
+27
+00:01:26,240 --> 00:01:28,130
+possible values of theta.
+
+28
+00:01:31,270 --> 00:01:34,800
+Let us appreciate the content
+of this statement.
+
+29
+00:01:34,800 --> 00:01:38,509
+Let us think what this
+expectation actually is.
+
+30
+00:01:38,509 --> 00:01:41,390
+More generally, suppose that
+we're dealing with some
+
+31
+00:01:41,390 --> 00:01:46,210
+estimator, which is some
+function of the data.
+
+32
+00:01:46,210 --> 00:01:53,050
+Then, the expected value of this
+estimator is using the
+
+33
+00:01:53,050 --> 00:01:56,340
+expected value rule, and
+assuming that we're dealing
+
+34
+00:01:56,340 --> 00:02:01,140
+with a discrete random variable
+X, the expected value
+
+35
+00:02:01,140 --> 00:02:04,315
+of theta hat is determined
+as follows.
+
+36
+00:02:07,940 --> 00:02:12,050
+And so we see that the expected
+value for estimator
+
+37
+00:02:12,050 --> 00:02:15,310
+depends, or is affected,
+by what the true
+
+38
+00:02:15,310 --> 00:02:17,210
+value of theta is.
+
+39
+00:02:17,210 --> 00:02:20,400
+So this is a quantity that
+generally depends on theta.
+
+40
+00:02:20,400 --> 00:02:24,660
+And what we want in order to
+have a so-called unbiased
+
+41
+00:02:24,660 --> 00:02:29,130
+estimator is that no matter
+what theta is, this
+
+42
+00:02:29,130 --> 00:02:33,760
+expectation evaluates
+to the true unknown
+
+43
+00:02:33,760 --> 00:02:37,170
+value equal to theta.
+
+44
+00:02:37,170 --> 00:02:40,760
+In general, having this
+property, having an unbiased
+
+45
+00:02:40,760 --> 00:02:43,370
+estimator, is a desirable one.
+
+46
+00:02:43,370 --> 00:02:47,070
+We do not want our estimates to
+be systematically high or
+
+47
+00:02:47,070 --> 00:02:49,840
+systematically low, no
+matter what the true
+
+48
+00:02:49,840 --> 00:02:52,740
+value of theta is.
+
+49
+00:02:52,740 --> 00:02:54,510
+A second property of
+the sample mean
+
+50
+00:02:54,510 --> 00:02:56,630
+estimator is the following.
+
+51
+00:02:56,630 --> 00:03:00,010
+By the weak law of large
+numbers, we know that the
+
+52
+00:03:00,010 --> 00:03:04,890
+sample mean converges to the
+true mean in the sense of
+
+53
+00:03:04,890 --> 00:03:07,670
+convergence in probability.
+
+54
+00:03:07,670 --> 00:03:13,450
+Once more, this is a property
+that's true, no matter what
+
+55
+00:03:13,450 --> 00:03:18,570
+the underlying unknown value
+little theta is.
+
+56
+00:03:18,570 --> 00:03:23,050
+When this is true, this
+convergence is true, for all
+
+57
+00:03:23,050 --> 00:03:27,070
+values of little theta, then we
+say that our estimator is
+
+58
+00:03:27,070 --> 00:03:30,650
+consistent or that we
+have consistency.
+
+59
+00:03:30,650 --> 00:03:33,320
+Having a consistent estimator
+is definitely a
+
+60
+00:03:33,320 --> 00:03:35,240
+very desirable property.
+
+61
+00:03:35,240 --> 00:03:39,220
+We would like, when we obtain
+more and more data, that our
+
+62
+00:03:39,220 --> 00:03:43,350
+estimator will give us
+the correct value.
+
+63
+00:03:43,350 --> 00:03:46,690
+Finally, we would like to say
+something about the size of
+
+64
+00:03:46,690 --> 00:03:48,670
+the estimation error.
+
+65
+00:03:48,670 --> 00:03:50,290
+This is measured--
+
+66
+00:03:50,290 --> 00:03:53,920
+one way of measuring it, but
+which is the most common, it's
+
+67
+00:03:53,920 --> 00:03:57,460
+measured in terms of the
+mean squared error.
+
+68
+00:03:57,460 --> 00:03:59,420
+So theta is the unknown value.
+
+69
+00:03:59,420 --> 00:04:00,840
+This is our estimator.
+
+70
+00:04:00,840 --> 00:04:02,070
+This is the error.
+
+71
+00:04:02,070 --> 00:04:05,680
+We square the error, and
+we take the average.
+
+72
+00:04:05,680 --> 00:04:09,810
+What we've got here for this
+specific example of the sample
+
+73
+00:04:09,810 --> 00:04:12,670
+mean estimator is
+the following.
+
+74
+00:04:12,670 --> 00:04:17,279
+Since it is unbiased, we have
+a random variable minus the
+
+75
+00:04:17,279 --> 00:04:21,870
+mean of that random variable,
+so this is just the variance
+
+76
+00:04:21,870 --> 00:04:23,120
+of the estimator.
+
+77
+00:04:26,240 --> 00:04:30,770
+And for the sample mean, we
+know that its variance is
+
+78
+00:04:30,770 --> 00:04:33,200
+sigma squared over n.
+
+79
+00:04:33,200 --> 00:04:37,520
+So this gives us some very
+specific knowledge about how
+
+80
+00:04:37,520 --> 00:04:41,320
+the mean squared error behaves
+as we change n.
+
+81
+00:04:41,320 --> 00:04:45,600
+In this particular example, the
+mean squared error did not
+
+82
+00:04:45,600 --> 00:04:47,540
+depend on theta.
+
+83
+00:04:47,540 --> 00:04:51,040
+It's the same no matter what
+the true theta is.
+
+84
+00:04:51,040 --> 00:04:54,340
+But in other situations and
+with other estimators, you
+
+85
+00:04:54,340 --> 00:04:57,280
+might actually obtain here
+a function of theta.
