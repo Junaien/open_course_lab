@@ -2,9 +2,11 @@
 =======================
 01-goodbye-world.js
 =======================
-Student ID:
+Student ID: 23510362
 Comment (Required):
 
+- Since variable salutation is changed before event loop picks up print_farewell function from callback queue
+- when print_farewell is invoked, it prints out the variable after the change
 =======================
 */
 

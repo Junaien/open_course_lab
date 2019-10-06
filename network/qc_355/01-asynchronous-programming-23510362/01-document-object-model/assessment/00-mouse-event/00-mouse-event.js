@@ -2,9 +2,11 @@
 =======================
 00-mouse-event.js
 =======================
-Student ID:
+Student ID: 23510362
 Comment (Required):
 
+- register a callback function for a click event of document object, whenever a click event happens,
+  click_handler function will be pushed into callback queue and then called
 =======================
 */
 const click_handler = function (e) {

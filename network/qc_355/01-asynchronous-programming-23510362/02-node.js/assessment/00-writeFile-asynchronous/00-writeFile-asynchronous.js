@@ -2,9 +2,12 @@
 =======================
 00-writeFile-asynchronous.js
 =======================
-Student ID:
+Student ID: 23510362
 Comment (Required):
 
+- the finishing time for each write doesn't have to be in chronological order, 
+  so we simply use a for loop to call asyn writeFile function
+- to determine the time when all writing finishes, we use an array to record how many writes succeeded already
 =======================
 */
 const fs = require("fs");

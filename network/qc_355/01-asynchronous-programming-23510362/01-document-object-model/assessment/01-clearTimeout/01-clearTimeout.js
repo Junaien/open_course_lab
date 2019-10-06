@@ -2,9 +2,11 @@
 =======================
 01-clearTimeout.js
 =======================
-Student ID:
+Student ID: 23510362
 Comment (Required):
 
+- we store all timerIDs triggered by setTimeout into an array
+- we register a callback function for click event of btn01 to clear all timer in the array
 =======================
 */
 let btn00 = document.getElementById('btn00');

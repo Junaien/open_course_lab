@@ -1,10 +1,9 @@
-// question 1: do we need to do deep copy on node.next
-// question 2: what happend 2 to 1 in linkedlist, how do we do delete
 #include<iostream>
 #include<cstdlib>
 #include<cassert>
 using namespace std;
 
+// Author En Lin
 class poly_node {
   private:
     int coefficient;
@@ -12,12 +11,14 @@ class poly_node {
     poly_node * next;
 
   public:
+    // default constructor
     poly_node() {
       coefficient = 0;
-      exponential = -1;
+      exponential = 0;
       next = NULL;
     }
 
+    // constructor: initializes coefficient and exponential
     poly_node(int coeff, int exp) {
       coefficient = coeff;
       exponential = exp;
@@ -31,6 +32,7 @@ class poly_node {
       next = NULL;
     }
 
+    // destruct the node it links to, if the linked node is not NULL
     ~poly_node() {
       delete next;
     }
@@ -42,38 +44,52 @@ class poly_node {
     int get_coeff() const {
       return coefficient;
     }
-    
-    void set_coeff(int coeff) {
-      coefficient = coeff;
-    }
 
     poly_node * get_next() const {
       return next;
     }
 
+    void set_coeff(int coeff) {
+      coefficient = coeff;
+    }
+
     void set_next(poly_node * n) {
       next = n;
     }
-};
 
-namespace poly_node_op {
-  poly_node operator+(const poly_node & this_node, const poly_node & that_node) {
-      if(this_node.get_exp() != that_node.get_exp()) {
-        return poly_node();
+    // overloads << so we can directly output poly_node
+    friend ostream& operator<<(ostream& os, const poly_node & p_node) {
+      // we need to print sign
+      if (p_node.coefficient > 0) {
+        os << "+";
       }
 
+      // print coefficient only when appropriate
+      if (p_node.exponential == 0 || p_node.coefficient != 1) {
+        os << p_node.coefficient;
+      }
+
+      // print exponential only when appropriate
+      if (p_node.exponential == 1) {
+        os << "X";
+      } else if(p_node.exponential != 0) {
+        os << "X^" << p_node.exponential;
+      }
+      return os;
+    }
+};
+
+// overloaded operations for poly_node
+namespace poly_node_op {
+  poly_node operator+(const poly_node & this_node, const poly_node & that_node) {
       int n_exp = that_node.get_exp();
-      int n_coeff = that_node.get_coeff() + this_node.get_coeff();
+      int n_coeff = this_node.get_coeff() + that_node.get_coeff();
       return poly_node(n_coeff, n_exp);
     }
 
     poly_node operator-(const poly_node & this_node, const poly_node & that_node) {
-      if(this_node.get_exp() != that_node.get_exp()) {
-        return poly_node();
-      }
-
       int n_exp = that_node.get_exp();
-      int n_coeff = that_node.get_coeff() - this_node.get_coeff();
+      int n_coeff = this_node.get_coeff() - that_node.get_coeff();
       return poly_node(n_coeff, n_exp);
     }
 
@@ -83,5 +99,3 @@ namespace poly_node_op {
       return poly_node(n_coeff, n_exp);
     }
 }
-
-  
