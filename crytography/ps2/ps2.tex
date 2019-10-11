@@ -1,0 +1,519 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=1.8cm, right=1.8cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\newtheorem{claim}{Claim}
+\usepackage[toc,page]{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{algorithmic}
+\newtheorem*{justify}{Justify}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+\lstdefinestyle{Python}{
+    language        = Python,
+    frame           = lines, 
+    basicstyle      = \ttfamily\footnotesize,
+    keywordstyle    = \color{blue},
+    stringstyle     = \color{green},
+    commentstyle    = \color{red}\ttfamily,
+}
+% Edit these as appropriate
+\newcommand\course{CS 381}
+\newcommand\hwnumber{2}                  % <-- homework number
+\newcommand\NetIDa{En Lin}                % <-- NetID of person #1
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\NetIDa}
+\chead{\textbf{\Large Problem Set \hwnumber}}
+\rhead{\course \\ \today}
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+    collaborate with Aaron Ko on question 2, 3a
+\section*{Problem 1}
+    In crytography, as in life, the order in which you do certain things makes addifference - and sometimes it does not. For each of the following statements, determine whether or not the assertion is true and if it is, prove that it is. If it is not, prove that it IS not.
+    \begin{enumerate}
+        \item [i.] 
+        DES operating on a general plaintext input first with key K1 and then with key K2 produces the same output as if K2 were first used and then K2.\\
+        
+        \textbf{FALSE: } I applied python library implementation of DES, with key1 = "some key", key2 = "anotherk" and plaintext = "any messagexyzab". The ouput of applying Key1 then Key2 was different than applying Key2 then Key1.  Following is the code snippet.
+        \begin{lstlisting}[style = Python]
+          from Crypto.Cipher import DES
+
+          key0 = b"some key"
+          key1 = b"anotherk"
+            
+          cipher1 = DES.new(key0, DES.MODE_ECB)
+          cipher2 = DES.new(key1, DES.MODE_ECB)
+          m1 = "any messagexyzab"
+        
+          print(cipher1.encrypt(cipher2.encrypt(m1)))
+          print(cipher2.encrypt(cipher1.encrypt(m1)))
+        \end{lstlisting}
+        \item[ii.] 
+        Starting with a general English plaintext P and two mono-alphabetic substitution shcema, M1 and M2, the outcome of M2 applied to (M1 applied to P) is the same as the outcome of M1 applied to (M2 applied to P)\\\\
+        \textbf{FALSE: } without loss of generality, I will give a false example with 3 alphabet substitution. \\
+        let's say M1 = 
+        \begin{tabular}{ c c c }
+         a & b & c \\ 
+         b & a & c \\  
+        \end{tabular}\\
+
+        let's say M2 = 
+        \begin{tabular}{ c c c }
+         a & b & c \\ 
+         b & c & a \\  
+        \end{tabular}\\\\
+        if plaintext = "aaa", then\\
+        M1(M2(plaintext)) = aaa 
+        \\
+        M2(M1(plaintext)) = ccc\\\\
+        So this example proves it flase.
+        
+        \item[iii.]
+        Using two keys K1 and K2 and the Vigenere polyalphabetic method, the result of encryption a general plaintext first with K1 and then encrypting the result with K2 is the same as first encrypting the plaintext with K2 and then the result with K1\\
+        
+        \textbf{TRUE:}
+        \begin{proof} let plaintext = $x_1 x_2 x_3 x_4 ... x_n$, where $x_i$ is a single character in alphabet. 
+        \\
+        \\
+        let key1 = $k^1_1 k^1_2 k^1_3 ... k^1_z$,\\\\
+        let key2 = $k^2_1 k^2_2 k^2_3 ... k^2_h$ \\
+        
+        let $shift1[i]$ = the position of $k^1_i$ in alphabet (e.g. In English, a's position = 0,  .. z = 25)\\
+        let $shift2[i]$ = the position of $k^2_i$ in alphabet\\
+        \\ we focus on one character $x_i$ and the rest of the characters will follow the same pattern.\\\\
+        after ENC(k2, ENC(k1, plaintext)) 
+        \begin{align*}
+          first, \  character \ x_i \  is \ shifted \ to \ the \ right \ by  \ shift1[i \  mod \  k_1's \ length] \\
+          then, \  character \ x_i \  is \ shifted \ to \ the \ right \ by  \ shift2[i \  mod  \ k_2's \ length] \\
+          (if\ it\ overflows, \ wrap\ around)
+        \end{align*}
+        \\in the same way, ENC(k1, ENC(k2, plaintext)) 
+         \begin{align*}
+          first, \  character \ x_i \  is \ shifted \ to \ the \ right \ by  \ shift2[i \  mod \  k_2's \ length] \\
+          then, \  character \ x_i \  is \ shifted \ to \ the \ right \ by  \ shift1[i \  mod  \ k_1's \ length] \\
+          (if\ it\ overflows, \ wrap\ around)
+        \end{align*}
+        \\
+        Since "shifting character to the right" is commutative, this type of encryption is commutative, too
+       \end{proof}
+       \item[iv.]
+       RSA encrypting a message M first with public key (e1, n1) and then with public key(e2, n2) produces the same output as if M were first encrypted with (e2, n2) and then with (e1, n1).\\\\
+       \textbf{FALSE:}
+          Let m = 10, (e1, n1) = (3, 7), (e2, n2) = (11, 13)\\\\
+          after ENC((e2, n2), ENC((e1, n1), m)), we have 
+          \begin{align*}
+              c =  (10^{3} (mod \ 7))^{11} (mod \ 13) = 46
+          \end{align*}
+          after ENC((e1, n1), ENC((e2, n2), m)), we have 
+          \begin{align*}
+              c =  (10^{11} (mod \ 13))^{3} (mod \ 7) = 19
+          \end{align*}
+      So the answer is false
+
+       
+    \end{enumerate}
+\section*{Problem 2}
+    The hawaiian language consistes of 12 letters. There are 7 consonants: HKLMNP and W and there are five vowels: AEIO and U.  In a word, no two consecutive letters can be consonant and all words end in a vowel.  Suppose you are given, without spaces, a very long list of putative decrypts of a given cipher(where you know the plaintext is in Hawaiian). Let's say you have $2^{50}$ decrypts. The decrypts may only use 12 letters. how would you program your computer to recognize the correct answer? Quantify how efficient your method would be. \\ \\
+    \textbf{Answer:} The algorithm for my program is very simple, it runs in $O(2^{50})$ time
+    \begin{figure}[ht]
+      \centering
+      \begin{minipage}{.7\linewidth}
+        \begin{algorithm}[H]
+        \SetAlgoLined
+          \ForEach{D $\in 2^{50}$ decrypts}{
+          \eIf{D contains two consecutive letters}{
+            mark D as invalid\;
+            continue\;
+          }{
+            mark D as valid\;
+            return D\;
+          }
+         }
+         \caption{Identify correct Hawaiian decrypt}
+        \end{algorithm}
+      \end{minipage}
+    \end{figure}
+    \\
+    \textbf{Assumption:} we assume that any two decrypts are independent of each other, and in a given decrypt
+    \begin{align}
+      consonant \ character \ appear \ 7/12 \ of \  the \ time \ independently\\
+      vowel \ characters \ appear \ 5/12 \ of \ the \ time \ independently 
+    \end{align}
+   
+    \textbf{Definition:} \\
+    event N = a given decrypt contains no consecutive consonant\\
+    event C = the first character of a given decrypt is consonant\\
+    event V = the first character of a given decrypt is vowel\\
+    let $P_L(N)$ = the probability of a decrypt, with length L, contains no consecutive consonant\\
+    by (1)(2) and Total Probability Thereom:
+    \begin{align}
+      P_L(N \ | \ V) = \frac{5}{12}P_{L-1}(N \ | \ V) +  \frac{7}{12}P_{L-1}(N \ | \ C) \\
+      P_L(N \ | \ C) = \frac{5}{12}P_{L-1}(N \ | \ V)\\
+      P_1(N \ | \ V) = P_1(N \ | \ C) = 1 (base \ case)
+    \end{align}
+    we are interested in $P_L(N)$, following is the code to compute this recurrence relationship:
+    \begin{align}
+      P_L(N) = \frac{5}{12}P_L(N \ | \ V) +  \frac{7}{12}P_L(N \ | \ C)
+    \end{align}
+    \begin{lstlisting}[style = Python]
+        N_V_memo = {1:1} # base case
+        N_C_memo = {1:1} # base case
+
+        def p_N_V(L):
+          if L in N_V_memo:
+            return N_V_memo[L]
+        
+          N_V_memo[L] = (7 / 12) * p_N_C(L - 1) + (5 / 12) * p_N_V(L - 1)
+          return N_V_memo[L]
+        
+        def p_N_C(L):
+          if L in N_C_memo:
+            return N_C_memo[L]
+        
+          N_C_memo[L] = (5 / 12) * p_N_V(L - 1)
+          return N_C_memo[L]
+        
+        def p_N(L):
+          return (7 / 12) * p_N_C(L) + (5 / 12) * p_N_V(L)
+        
+        def test():
+          assert abs(pr_N(1) - 1) < 0.00001
+          assert abs(pr_N(2) - 0.6597) < 0.001
+          assert abs(pr_N(3) - 0.5179) < 0.001
+
+        def main():
+          test()
+          for i in range(2, 200): 
+            print(f"{i} : {p_N(i)}")
+    \end{lstlisting}
+     we can compute $P_{128}(N) = 4.179*10^{-17}$, which means the probability of a single 128 characters decrypt contains no consecutive consonant is very small.\\\\
+    \textbf{Analysis:} by the two rules in Hawaiian language
+    \begin{align*}
+       no \ two \  consecutive \ letters\ can \ be \ consonant \\
+       all \ words \ end \ in \ a \ vowel
+    \end{align*}
+    We know that \textbf{there should not be any consecutive consonant} in the correct decrypt. If it does, then one of the rules will be violated.  Now, If we model our program as $2^{50}$ bernoulli trials with:
+    \begin{align*}
+      P(success) = P(single \ decrypt \ contains \ consecutive \  consonant) = 1 - 4.179*10^{-17} \\
+      then \\
+      P(all \ 2^{50}  \ decrypts \ have \ consecutive \ consonant) = (1 - 4.179*10^{-17})^{2^{50}} \approx \ 0.954
+    \end{align*}
+    \\
+    Let's assume that all decrypts contain more than 128 characters. In the case where we have $2^{50} decrypts$, my program has more than 95.4\% chance to find the correct decrypt.
+    
+\section*{Problem 3}
+\setcounter{equation}{0}
+\begin{enumerate}
+    \item[a.]
+      Invent an efficient method to factor an RSA modulus of the form pq if you happend to know that p and q are consecutive primes. Bound the (expected or absolute) running time of your algorithm (as a function of the log of the input size).\\ \\
+
+    \textbf{Answer:} 
+    \begin{figure}[ht]
+      \centering
+      \begin{minipage}{.7\linewidth}
+        \begin{algorithm}[H]
+        \SetAlgoLined
+          \KwIn{N = RSA modulus we are trying to factor}
+          Initialize M = $\lfloor\sqrt{N} \ \rfloor$ 
+          
+          \While{M >= 2}{
+          \If{p divides N}{
+            return (p, N / p) as result\;
+            }
+          M = M - 1
+          }
+         \caption{factorize RSA modulus N = pq}
+        \end{algorithm}
+      \end{minipage}
+    \end{figure} \\
+    \textbf{Expected Running Time:} O(ln($2^{b}$)) $\equiv$ O(b), where b is the number of bits used to represent N in computer\\\\
+    \textbf{Analysis:}
+    by the Prime Number Theorem, prime distribution follows $\pi(N)$ $\sim$ $\frac{ln(N)}{N}$. It means, for a large enough N, the probability that a random integer not greater than N is prime is very close to 1 / ln(N).  \textbf{In other words, the average gap between consecutive prime numbers among the first N integers is roughly ln(N)}.\\\\
+    We assume p < q. Since N = pq and p != q, it must be true that:
+    \begin{align}
+      p <= \lfloor\sqrt{N} \ \rfloor  < q
+    \end{align}
+    \begin{justify}[1]
+    if both p,q <= $\lfloor\sqrt{N} \ \rfloor$ and p != q, pq < N must be true.  This contradicts with N = pq.  if both p,q > $\lfloor\sqrt{N} \ \rfloor$, pq > N must be true.  This also contradicts with N = pq.
+    \end{justify}[1] \\\\
+    by the Prime Number Theorem, the expected gap between p and q is ln(N).  so in Algorithm 2, we expect to find p in ln(N) / 2 iterations.  Hence the expected running time of Algorithm 2 is O(ln(N)/2) = O(b), where b is the number of bits to represent N in computer.\\\\
+    
+    \item[b.] I attempted 4b. but I was not able to find a q value. 
+\end{enumerate}
+\section*{Problem 4}
+\setcounter{equation}{0}
+
+\begin{enumerate}
+  \item[a.]
+  Define the nth Fermat number $F_n$ as $2^{2^n} + 1$. Try "brute force" (and define what you mean by that) to factor $F_6$. Report on the outcome. Now learn and understand the Pollard rho factoring algorithm and use it to factor $F_6 = 2^{64} + 1$. (Do not use a factoring program written by anyone else. You or teammate must write your own code, if you choose to use a computer program to factor) Then try $F_7$. How long did your code run to get you an answer?\\\\\\\\
+  \textbf{Answer:}
+  I try on brute force method to factor $F_6$. I find one factor is 274177.\\
+  \textbf{What I mean by brute force: } I iterate through number i from 2 to $\sqrt{F_6}$ to check if i is a factor of $F_6$. Following is the code snippet to do it:
+  \begin{lstlisting}[style = Python, caption={Brute force factoring}]
+    def find_factor_bruteforce(n):
+      for i in range(2, math.ceil(math.sqrt(n))):
+        if n % i == 0:
+          print(f"finding factor {i}")
+          return i
+      return -1
+  \end{lstlisting}
+
+  
+  (Source code will be appended at last page)\\
+  I ran my Pollard rho program on input $F_6 = 2^{64} + 1$. it gave output that one factor was 274177, which was the same result as the program using brute force. \\\\
+  Unfortunately, my program took forever to compute $F_7$ (After 8 hours it didn't finish calculating, so I had to halt the machine manually)
+  
+  
+  \item[b.] 
+  Learn the Miller-Rabin primality test.
+  A string prime is a prime p such that p-1 and p+1 have large prime factors (r and s)and r-1 and s-1 also have large prime factors. Find 512 bit prime p such that both p-1 and p+1 have large prime factors. Are you sure your answer is prime? How sure are you? Discuss how you found p (we defind a 'large prime factor' of a number k, to be one at least $\frac{k}{log^3 k}$).\\\\
+  \textbf{Answer: } I found one such p = \\
+
+  109130454938118718525693949647241028739056421562647865607630059907091067718297555\\
+  87612621391713280494128728101890526468375891388805228227335026310649255093
+  
+  where p - 1 = 2196 * $q_1$ (big prime) \\
+  and \ \ \ p + 1 = 2 * $q_2$ (big prime) \\\\
+  I am not 100\% sure that this number is prime, but I have 99.6\% confidence that this is a prime number. according to Wikipedia, "if n is composite then the Miller–Rabin test declares n probably prime with a probability at most $\frac{1}{4^{k}}$ (where k is number of rounds we repeat the testing process)". When I tested the prime I found, I used 4 random base value in 4 rounds to test it.  So the probability of false positive occurred, which means my number was composite but passed the test, is $\frac{1}{4^{4}}$.\\\\  
+  (Source code will be appended at last page) \\\\
+  \textbf{How I found p: } I followed two steps to find such p\\\\
+  \textbf{Step 1:} 
+   \begin{figure}[ht]
+      \centering
+      \begin{minipage}{.7\linewidth}
+        \begin{algorithm}[H]
+        \SetAlgoLined
+          generate random q $\in [\frac{2^{511}}{2}, \frac{2^{512}}{512^3}]$ \;
+          \ForEach{a $\in [2, 512^3]$}{
+              \If{aq + 1 passes miller-rabin primality test}{
+                return aq + 1
+              }
+          }
+          repeat the whole process if we can't find such (a, q) pair
+         \caption{find p with (p - 1) having large prime}
+        \end{algorithm}
+      \end{minipage}
+    \end{figure} \\
+  Note: we pick such range q $\in [\frac{2^{511}}{2}, \frac{2^{512}}{512^3}]$, a $\in [2, 512^3]$, so that aq + 1 falls into a range of  $[2^{511}, 2^{512}]$(512 bits number).  we pick a in such range so that our q will be at least $\frac{k}{log^3 k}$) \\\\\
+  \textbf{Step 2:}
+  \begin{figure}[ht]
+      \centering
+      \begin{minipage}{.7\linewidth}
+        \begin{algorithm}[H]
+        \SetAlgoLined
+          \KwIn{p = prime number we calculate in step 1}
+          let n = p + 1\;
+          \ForEach{d $\in [2, 512]$}{
+              \While{n divides d}{
+                n = n / d
+              }
+          }
+          \eIf{n passes primality test AND n is at least $\frac{p}{log^3 p}$}{
+                return p as answer
+              }{go to step 1 line 2, try different \textbf{a}}
+         \caption{given a prime p, test if p + 1 is a prime}
+        \end{algorithm}
+      \end{minipage}
+    \end{figure} \\
+
+\end{enumerate}
+
+\section*{Problem 5}
+\setcounter{equation}{0}
+
+Suppose a block cipher BLOCK satisfies the following relation.  For every pair of blocks of input A and B.  
+\\\\
+ENC(A$\oplus$B) = ENC(A) $\oplus$ ENC(B).
+\\\\
+Discuss the security of BLOCK. That is, consider how hard it is to decrupt a given ciphertext.  That's the challenge.  You may assume that the key is fixed and that you have unlimited access to the ENC function so you may employ a chosen plaintext attack if you choose.  You do not know details of BLOCK but Kerckoffs' Principle applies. You may assume that the key is too large to bruteforce.
+\\\\
+\textbf{Answer:} we understand that 
+\begin{align}
+  with \ a \ fixed \ key, ENC \ must \ be \ a \ one-to-one \ function
+\end{align}
+If ENC is not an one-to-one function, there will be no decryption function DEC.  If two plaintexts encrypted to the same cipher, then there is no way that a decryption function can tell which plaintext it decrypts to.
+\\\\
+Also it is an obvious fact:
+\begin{align}
+  if \ C = A \oplus B  \ \ then \ \ \ \ \ \ C \oplus A = B \ \ AND \  \  C \oplus B = A
+\end{align}
+
+Assume block size is 64 bits. The following algorithm (chosen plaintext attack) might be one possible attack
+    \begin{figure}[ht]
+      \centering
+      \begin{minipage}{.7\linewidth}
+        \begin{algorithm}[H]
+        \SetAlgoLined
+          \KwIn{D = ciphertext we want to decrypt}
+          X = the set of $2^{32}$ (ciphertext, plaintext) pairs, randomly\;
+          (store X in a hash table data structure for quick search. X[cipertext] = plaintext)\;
+          \ForEach{pair (c', p') $\in$ X}{
+          \eIf{D\oplus p' \ is \ an \ existing \ key \ in \ X}{
+            return X[D$\oplus$ c'] $\oplus$ p'\; 
+          }{
+            continue \;
+          }
+         }
+         \caption{chosen plaintext attack}
+        \end{algorithm}
+      \end{minipage}
+    \end{figure} \\
+   \textbf{Correctness:} If ever Algorithm 5 returns a value, it is a correct decryption of the given cipher D. 
+   \begin{justify}
+     when we find pair D\oplus p', we \ know \ that D$\oplus$ c'$\oplus$c' = D.\\ which means ENC(X[D$\oplus$ c'] $\oplus$ p') = ENC(X[D$\oplus$ c'])$\oplus$ ENC(p') = D$\oplus$ c'$\oplus$c' = D.\\\\
+     by(1), Encryption is an one-to-one function. it must be true that X[D$\oplus$ c'] $\oplus$ p' = Decryption(D)
+   \end{justify}
+   \textbf{Efficiency:} There are $2^{128}$ ordered pair of plaintext (p1, p2), but there are only $2^{64}$ resulting XORs.  So with program randomly generating a pair (p1, p2) and corresponding ciphertext (c1,c2).  \\ the chance that c1 $\oplus c2$ = given ciphertext D(the one we want to decrpt) is $\frac{1}{2^{64}}$.
+   \\\\since in Algorithm 5, we are checking $2^{64}$ such (p1, p2) ordered pair.  We are expected to find match
+  \clearpage
+ \textbf{source code for 4a, I pledge that the author of the following code is: EnLin}
+ \\
+  \begin{lstlisting}[style = Python]
+    import math
+    import random
+    
+    def gcd(a, b):
+      if b == 0:
+        return a
+      return gcd(b, a % b);
+    
+    def pollard_rho(n):
+      x_i = 2
+      y_i = 2
+      c = random.randint(2, n)
+    
+      # y_i goes twice faster than x_i
+      # we know that y_i will catch up with x_i
+      # since we know their value will finally repeat
+      while True:
+        x_i = f(x_i, c, n)
+        y_i = f(f(y_i, c, n), c, n)
+        gcd_check = gcd(abs(x_i - y_i), n)
+    
+        if gcd_check == n:
+          print("finding factor failed, try different x_i, y_i, c or f(x) function")
+        elif gcd_check == 1:
+          continue
+        else:
+          print(f"one factor is: {gcd_check}")
+          break
+    
+    def f(x, c, m):
+      return (x ** 2 + c) % m
+    
+    def main():
+      pollard_rho(2**128 + 1) 
+    
+    if __name__ == "__main__":
+      main()
+  \end{lstlisting}
+    \clearpage
+
+  \textbf{source code for 4b, I pledge that the author of the following code is: EnLin}
+ \\
+  \begin{lstlisting}[style = Python]
+    import math
+    import random
+    
+    # assume n is prime
+    # since b ^ (n - 1) = 1(mod n)
+    # a): b ^ s = 1(mod n)
+    # b): b ^ s*(2^ri) = -1(mod n) for some ri in [0, r)
+    # if b) is not true, then b ^ s*(2^ri) = 1(mod n) 
+    # we can keep take square root of b ^ s*(2^ri) until ri = 0,
+    # at that time we have b ^ s = 1(mod n)
+    
+    def miller_rabin_test(b, r, s, n):
+      # 1: test if b ^ s = 1(mod n) or -1(mod n)
+      b_s = power(b, s, n)
+      if b_s == 1 or b_s == n-1:
+        return True
+    
+      # 2: test if b ^ s*(2^ri) = -1(mod n) for some ri in [0, r)
+      for i in range(r - 1):
+        b_s = (b_s * b_s) % n
+        if b_s == (n - 1):
+          return True
+    
+      return False
+    
+    def miller_rabin(n, k):
+      # step 1: find r,s where s * 2^r = n - 1
+      r = 0; 
+      s = n - 1;
+      while s > 0 and (s % 2 == 0):
+        r = r + 1
+        s = s // 2
+    
+      # step 2: randomly chose base b, do k times miller_rabin primality test
+      for i in range(k):
+        if not miller_rabin_test(random.randint(2, n - 2),r, s, n):
+          return False
+      return True
+    
+    def power(a, x, n):
+      ret = 1
+      if x == 0:
+        return ret
+      if (x % 2 == 1):
+        ret = a
+      return (ret * (power(a, x // 2, n)**2)) % n
+    
+    def test():
+      assert power(11,13,19) == 11, power(11,13,19)
+      assert power(11321, 134321, 19112) == 13449, power(11,13,19)
+      assert power(4324444233123, 134321321, 31219112) == 11676731, power(4324444233123, 134321321, 31219112)
+      assert miller_rabin(9018083461, 4) == True
+      print("all test successfully passed")
+    
+    def check_small_factor(bound, n):
+      factor_accumulator = 1
+      for i in range(2, bound):
+        while n % i == 0:
+          n = n // i
+          factor_accumulator = factor_accumulator * i
+    
+        if factor_accumulator > bound:
+          return False
+    
+        if miller_rabin(n, 4):
+          print(f"small factor for p + 1 is: {factor_accumulator}")
+          return True
+    
+      return False
+    #10913045493811871852569394964724102873905642156264786560763005990709106771829755587612621391713280494128728101890526468375891388805228227335026310649255093
+    if __name__ == "__main__":
+      test()
+      trials = 10000
+      for i in range(trials):
+        q = 4
+        while not miller_rabin(q, 4):
+          q = random.randint(round(2**511 // 2),round(2**512 // 512**3))
+    
+        for a in range(round(2**511 // q),round(2**512 // q)):
+          if miller_rabin(a * q + 1, 4):
+            print(f"a = {a}, q = {q}")
+            if check_small_factor(512, a * q + 2):
+              print(f"find p = {a} x {q} + 1 = {a * q + 1}!")
+              exit()
+            else:
+              print(f"a x q + 1 is not valid")
+  \end{lstlisting}
+\end{document}
