@@ -5,7 +5,7 @@ import random
 # since b ^ (n - 1) = 1(mod n)
 # a): b ^ s = 1(mod n)
 # b): b ^ s*(2^ri) = -1(mod n) for some ri in [0, r)
-# if b) is not true, then b ^ s*(2^ri) = 1(mod n) 
+# if b) is not true, then b ^ s*(2^ri) = - 1(mod n) 
 # we can keep take square root of b ^ s*(2^ri) until ri = 0,
 # at that time we have b ^ s = 1(mod n)
 
