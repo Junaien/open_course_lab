@@ -47,8 +47,9 @@ def main():
   m = 61845915503831114091865164962647232917206327870669899
   h = power(3, x, m)
 
-  offset = x - 9000000000000
   # set offset very close to x
+  offset = x - 9000000000000
+  
   assert bsgs(3, h, m, 10000000000000, offset) == x
 if __name__ == "__main__":
   main()
