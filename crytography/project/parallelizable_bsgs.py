@@ -43,12 +43,20 @@ def bsgs(g, h, m, r, offset = 0):
 
 # g^x = h (mod m)
 def main():
-  x = 312453215313253213123124314312312412
-  m = 61845915503831114091865164962647232917206327870669899
-  h = power(3, x, m)
+  
+  # x = 312453215313253213123124314312312412
+  p = 61845915503831114091865164962647232917206327870669899
+  # h = power(3, x, p)
 
-  offset = x - 99999
-  # set offset very close to x
-  assert bsgs(3, h, m, 10000000000000, offset) == x
+  # offset = x - 9000000000000
+  # # set offset very close to x
+  # assert bsgs(3, h, p, 10000000000000, offset) == x
+
+  sqrt = power(3, (p + 1) / 4, p)
+  # print(power(-1*sqrt + p, (p - 1) // 2, p))
+  # print(power(p-1,  (p - 1) // 2, p))
+  # print(power(2, (p-1) // 2, p))
+  print(power(12,  (p - 1) // 2, p))
+  
 if __name__ == "__main__":
   main()
