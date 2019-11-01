@@ -58,5 +58,13 @@ def main():
   # print(power(2, (p-1) // 2, p))
   print(power(12,  (p - 1) // 2, p))
   
+  x = 312453215313253213123124314312312412
+  m = 61845915503831114091865164962647232917206327870669899
+  h = power(3, x, m)
+
+  # set offset very close to x
+  offset = x - 9000000000000
+  
+  assert bsgs(3, h, m, 10000000000000, offset) == x
 if __name__ == "__main__":
   main()
