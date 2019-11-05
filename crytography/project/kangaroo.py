@@ -11,15 +11,15 @@ def power(a, x, n):
 
 # sudo randrom mapping function
 def f(x, k):
-  return ((x ** 2 + 1) % k) + 1 
+  return ((x ** 2 + 3) % k) + 1 
 
 # g^x = h (mod p)
 def kangaroo(g, h, p, b, k, n):
   
-  # step 0: initialize tame kangroo, distance = b
+  # step 0: initialize tame kangroo, starting at g^b
   t = power(g, b, p)
   d_t = 0
- 
+  
   # step 1: tame kangroo jump n times then set the trap
   for i in range(0, n):
     hop_distance = (2**f(t, k))
@@ -31,7 +31,7 @@ def kangaroo(g, h, p, b, k, n):
   answer = -1
   z = 0
   while answer == -1:
-    # step 2: initialize wild kangroo
+    # step 2: initialize wild kangroo at (x + z)
     w = (h * power(g, z, p))
     d_w = z
 
@@ -53,11 +53,11 @@ def kangaroo(g, h, p, b, k, n):
 
 def test():
   # g^x = h (mod p)
-  g = 2
-  p = 247457076132467
-  h = 208891284998759
+  g = 3
+  p = 61845915503831114091865164962647232917206327870669899
+  h = 5815015754374921280955691220093049847105334794690583
 
-  print(kangaroo(g, h, p, p - 1, 25, 10000000))
+  print(kangaroo(g, h, p, p - 1, 100, 600000))
 
 def main():
   test()
