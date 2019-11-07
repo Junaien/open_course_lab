@@ -1,5 +1,5 @@
 import math
-
+import project
 # fast exponentiation
 def power(a, x, n):
   ret = 1
@@ -44,27 +44,40 @@ def bsgs(g, h, m, r, offset = 0):
 # g^x = h (mod m)
 def main():
   
-  # x = 312453215313253213123124314312312412
+  # # x = 312453215313253213123124314312312412
   p = 61845915503831114091865164962647232917206327870669899
-  # h = power(3, x, p)
+  # # h = power(3, x, p)
 
-  # offset = x - 9000000000000
+  # # offset = x - 9000000000000
+  # # # set offset very close to x
+  # # assert bsgs(3, h, p, 10000000000000, offset) == x
+
+  # sqrt = power(3, (p + 1) / 4, p)
+  # # print(power(-1*sqrt + p, (p - 1) // 2, p))
+  # # print(power(p-1,  (p - 1) // 2, p))
+  # # print(power(2, (p-1) // 2, p))
+  # print(power(12,  (p - 1) // 2, p))
+  
+  # x = 312453215313253213123124314312312412
+  # m = 61845915503831114091865164962647232917206327870669899
+  # h = power(3, x, m)
+
   # # set offset very close to x
-  # assert bsgs(3, h, p, 10000000000000, offset) == x
+  # offset = x - 9000000000000
 
-  sqrt = power(3, (p + 1) / 4, p)
-  # print(power(-1*sqrt + p, (p - 1) // 2, p))
-  # print(power(p-1,  (p - 1) // 2, p))
-  # print(power(2, (p-1) // 2, p))
-  print(power(12,  (p - 1) // 2, p))
-  
-  x = 312453215313253213123124314312312412
-  m = 61845915503831114091865164962647232917206327870669899
-  h = power(3, x, m)
+  # assert bsgs(3, h, m, 10000000000000, offset) == x
 
-  # set offset very close to x
-  offset = x - 9000000000000
+  #1 a lot small prime that don't have log_3
+  # for i in range(5, 100000):
+  #   if project.miller_rabin(i, 100) and project.power(i, (p -  1) // 2, p) != 1:
+  #     print(f"{i} -> {project.power(i, (p -  1) // 2, p)}")
   
-  assert bsgs(3, h, m, 10000000000000, offset) == x
+
+  #2 find primitive root from 3
+  # print(-power(3, (p + 1) // 4, p) + p)
+  r1 = 33581942672444699059859716725063662956571986784026691
+  assert ((r1 ** 2) % p) == 3
+  assert power(r1, (p - 1) // 2, p) != 1
+
 if __name__ == "__main__":
   main()
