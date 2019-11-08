@@ -92,7 +92,8 @@ def index_calculus(g, h, p, smoothness, slack):
   # step 2 output the equation we find to a file
   
 def main():
-  index_calculus(3, 5, 131, 10, 20)
+  # index_calculus(3, 5, 131, 10, 20)
+  print(power(5, 251, 503))
 
 if __name__ == "__main__":
   main()
