@@ -67,22 +67,15 @@ def check_small_factor(bound, n):
       return True
 
   return False
-#10913045493811871852569394964724102873905642156264786560763005990709106771829755587612621391713280494128728101890526468375891388805228227335026310649255093
 if __name__ == "__main__":
-  # print(miller_rabin(30922957751915557045932582481323616458603163935334949, 100))
-  print(miller_rabin(23476518809109841512388888255597834570025548669239101 // 1019, 1000))
-  # test()
-  # trials = 10000
-  # for i in range(trials):
-  #   q = 4
-  #   while not miller_rabin(q, 4):
-  #     q = random.randint(round(2**511 // 2),round(2**512 // 512**3))
-
-  #   for a in range(round(2**511 // q),round(2**512 // q)):
-  #     if miller_rabin(a * q + 1, 4):
-  #       print(f"a = {a}, q = {q}")
-  #       if check_small_factor(512, a * q + 2):
-  #         print(f"find p = {a} x {q} + 1 = {a * q + 1}!")
-  #         exit()
-  #       else:
-  #         print(f"a x q + 1 is not valid")
+  test()
+  bits = 50
+  trials = 10000
+  for i in range(trials):
+    q = 4
+    while not miller_rabin(q, 100):
+      q = random.randint(2**(bits - 1), 2 ** bits)
+    if miller_rabin(2 * q + 1, 100):
+      print(f"q = {q}")
+      exit(0)
+        
