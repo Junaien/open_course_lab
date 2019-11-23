@@ -1,4 +1,7 @@
-from sage.misc.prandom import randrange
+# version 1:
+# vanila
+
+from sage.misc.prandom import random.randint
 
 # fast exponentiation
 def power(a, x, n):
@@ -47,7 +50,7 @@ def miller_rabin(n, k):
 
   # step 2: randomly chose base b, do k times miller_rabin primality test
   for i in range(k):
-    if not miller_rabin_test(randrange(2, n - 2),r, s, n):
+    if not miller_rabin_test(random.randint(2, n - 2),r, s, n):
       return False
   return True
 
@@ -92,7 +95,7 @@ def index_calculus(g, h, p, smoothness, slack):
   # step 1: find system relations for g^k
   relations = []
   while True:
-    k = randrange(1, p)
+    k = random.randint(1, p)
     # test if we already have enough system relations
     if len(relations) >= (slack + smoothness):
       break
@@ -110,7 +113,7 @@ def index_calculus(g, h, p, smoothness, slack):
 
   #step 2: try to factorize h*g^s into our factor base
   while True:
-    k = randrange(1, p)
+    k = random.randint(1, p)
     g_k_h = (power(g, k ,p) * h) % p
     factor_base_hits = factor_base_hit(g_k_h, factor_base)
     if factor_base_hits:

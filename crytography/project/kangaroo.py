@@ -1,6 +1,37 @@
 import math
 import random
 from timeit import default_timer as timer
+# g^x = h (mod m)
+# r is range we want to search
+# offset is starting point we want to search on
+def bsgs(g, h, m, r, offset = 0):
+  n = int(math.sqrt(r) + 1);  
+  g_i_n_table = {}
+
+  # step0: calculate g ^ offset
+  g_offset = power(g, offset, m)
+
+  # step1: calculate g ^ n
+  g_n = 1
+  for i in range(n):
+    g_n = (g_n * g) % m
+
+  # step2: for all i in [1, n], store g ^ (i * n) + offset
+  accumulateA = 1
+  for i in range(1, n + 1):
+    accumulateA = (accumulateA * g_n) % m
+    g_i_n_table[(accumulateA * g_offset) % m] = i
+
+  # step3: loop through all j in [1, n] to find match in g_i_n_table
+  accumulateB = 1
+  for j in range(1, n + 1):
+    accumulateB = (accumulateB * g) % m
+    key = ((accumulateB * h) % m)
+    if key in g_i_n_table:
+      return (g_i_n_table[key] * n - j + offset)
+
+  # there is no answer, because if there were, we would have find it
+  return -1;  
 
 # assume n is prime
 # since b ^ (n - 1) = 1(mod n)
@@ -96,7 +127,7 @@ def kangaroo(g, h, p, b, k, n):
 def test():
   # g^x = h (mod p)
   t_time = 0
-  trials = 1
+  trials = 10000
   for i in range(trials):
     # ---------------- experiment 1, [0.00022s] ---------------------
     # g = 7
@@ -106,6 +137,7 @@ def test():
 
     # start = timer()
     # ans = kangaroo(g, h, p, p - 1, 7, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
     # end = timer()
     # t_time = t_time + end - start
 
@@ -116,7 +148,8 @@ def test():
     # h = power(g, x, p)
 
     # start = timer()
-    # ans = kangaroo(g, h, p, p - 1, 9, int(math.sqrt(p)))
+    # # ans = kangaroo(g, h, p, p - 1, 9, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
     # end = timer()
     # t_time = t_time + end - start
 
@@ -131,7 +164,8 @@ def test():
     # # assert miller_rabin((p-1)//2, 100)
 
     # start = timer()
-    # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
     # end = timer()
     # t_time = t_time + end - start
 
@@ -147,6 +181,7 @@ def test():
 
     # start = timer()
     # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
     # end = timer()
     # t_time = t_time + end - start
 
@@ -161,13 +196,14 @@ def test():
     # # assert miller_rabin((p - 1)//2, 100)
 
     # start = timer()
-    # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
     # end = timer()
     # t_time = t_time + end - start
 
     # -------------------- experitment 6, [2s] 2 ^ 30 ---------------------------
     # g = 7
-    # p = 1188017399
+    # p = 2376034799
     # x = random.randint(1, p - 1)
     # h = power(g, x, p)
     # i = 29
@@ -176,7 +212,8 @@ def test():
     # # assert miller_rabin((p - 1)//2, 100)
 
     # start = timer()
-    # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
     # end = timer()
     # t_time = t_time + end - start
 
@@ -192,6 +229,7 @@ def test():
 
     # start = timer()
     # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
     # end = timer()
     # t_time = t_time + end - start
 
@@ -207,6 +245,7 @@ def test():
 
     # start = timer()
     # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
     # end = timer()
     # t_time = t_time + end - start
 
@@ -222,25 +261,140 @@ def test():
 
     # start = timer()
     # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
     # end = timer()
     # t_time = t_time + end - start
 
     # -------------------- experitment 10, [] 2 ^ 50 (1 sample)---------------------------
-    g = 2
-    p = 1323314315162339
-    x = random.randint(1, p - 1)
-    h = power(g, x, p)
-    i = 49
+    # g = 2
+    # p = 1323314315162339
+    # x = random.randint(1, p - 1)
+    # h = power(g, x, p)
+    # i = 49
+
+    # # assert power(g, (p - 1)//2, p) == p - 1
+    # # assert miller_rabin((p - 1)//2, 100)
+
+    # start = timer()
+    # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # # ans = bsgs(g, h, p, p)
+    # end = timer()
+    # t_time = t_time + end - start
+
+    # -------------------- experitment 11, [] 2 ^ 55 (1 sample)---------------------------
+    # g = 5
+    # p = 1303302925709858303
+    # x = random.randint(1, p - 1)
+    # h = power(g, x, p)
+    # i = 54
 
     # assert power(g, (p - 1)//2, p) == p - 1
     # assert miller_rabin((p - 1)//2, 100)
 
-    start = timer()
-    ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
-    end = timer()
-    t_time = t_time + end - start
+    # start = timer()
+    # # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
+    # end = timer()
+    # t_time = t_time + end - start
 
-  assert ans % (p-1) == x
+    # -------------------- experitment 12, [] 2 ^ 130 (1 sample)---------------------------
+    # g = 7
+    # p = 2352135217867182205962592313493773501999
+    # x = random.randint(1, p - 1)
+    # h = power(g, x, p)
+    # # i = 54
+
+    # assert power(g, (p - 1)//2, p) == p - 1
+    # assert miller_rabin((p - 1)//2, 100)
+
+    # start = timer()
+    # # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
+    # end = timer()
+    # t_time = t_time + end - start
+
+    # -------------------- experitment 13, [] 2 ^ 80 (1 sample)---------------------------
+    # g = 13
+    # p = 1747657214360998464084959
+    # x = random.randint(1, p - 1)
+    # h = power(g, x, p)
+    # # i = 54
+
+    # assert power(g, (p - 1)//2, p) == p - 1
+    # assert miller_rabin((p - 1)//2, 100)
+
+    # start = timer()
+    # # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
+    # end = timer()
+    # t_time = t_time + end - start
+
+    # -------------------- experitment 14, [] 2 ^ 60 (1 sample)---------------------------
+    # g = 5
+    # p = 1683035312517090047
+    # x = random.randint(1, p - 1)
+    # h = power(g, x, p)
+    # # # i = 54
+
+    # assert power(g, (p - 1)//2, p) == p - 1
+    # assert miller_rabin((p - 1)//2, 100)
+
+    # start = timer()
+    # # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
+    # end = timer()
+    # t_time = t_time + end - start
+
+
+    # -------------------- experitment 15, [] 2 ^ 70 (1 sample)---------------------------
+    # g = 5
+    # p = 1789553520200033022047
+    # x = random.randint(1, p - 1)
+    # h = power(g, x, p)
+    # # # i = 54
+
+    # assert power(g, (p - 1)//2, p) == p - 1
+    # assert miller_rabin((p - 1)//2, 100)
+
+    # start = timer()
+    # # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
+    # end = timer()
+    # t_time = t_time + end - start
+    
+    # -------------------- experitment 16, [] (1 sample)---------------------------
+    # p = 247457076132467
+    # g = 2
+    # x = random.randint(1, p - 1)
+    # h = power(g, x, p)
+    # # # i = 54
+
+    # assert power(g, (p - 1)//2, p) == p - 1
+    # assert miller_rabin((p - 1)//2, 100)
+
+    # start = timer()
+    # # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
+    # end = timer()
+    # t_time = t_time + end - start
+    
+
+    # -------------------- experitment 16, [] (1 sample)---------------------------
+    # p = 61845915503831114091865164962647232917206327870669899
+    # g = 2
+    # x = random.randint(1, p - 1)
+    # h = power(g, x, p)
+    # # # i = 54
+
+    # assert power(g, (p - 1)//2, p) == p - 1
+    # assert miller_rabin((p - 1)//2, 100)
+
+    # start = timer()
+    # # ans = kangaroo(g, h, p, p - 1, i, int(math.sqrt(p)))
+    # ans = bsgs(g, h, p, p)
+    # end = timer()
+    # t_time = t_time + end - start
+  # assert ans % (p-1) == x
   print(f"time = {(t_time) / trials}")
 
 def main():

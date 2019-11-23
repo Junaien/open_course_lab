@@ -81,8 +81,29 @@ def power(a, x, n):
     ret = a
   return (ret * (power(a, x // 2, n)**2)) % n
 
-def main():
-  print(pollard_rho2(23476518809109841512388888255597834570025548669239101 // 1019))
+
+def test():
+  f = pollard_rho2(31341252151251)
+  print(f)
+  assert 31341252151251 % f == 0
+
+  f = pollard_rho2(23125432132133123)
+  print(f)
+  assert 23125432132133123 % f == 0
+
+  f = pollard_rho2(3312312222123)
+  print(f)
+  assert 3312312222123 % f == 0
+
+  f = pollard_rho2(123214123213)
+  print(f)
+  assert 123214123213 % f == 0
+  
+  f = pollard_rho2(31254365371223)
+  print(f)
+  assert 31254365371223 % f == 0
+# def main():
+  # print(pollard_rho2(23476518809109841512388888255597834570025548669239101 // 1019))
   # =  1019 * 
   # 9360629713 * 621220573045321281255951676388360716165991
 
@@ -94,8 +115,10 @@ def main():
   #     if ((i >> shift) & 1) != 0:
   #       p = p * factors[shift]
   #   print(f'power= {p}, result={power(3, p, 61845915503831114091865164962647232917206327870669899)}\n')
+
 if __name__ == "__main__":
-  main()
+  test()
+  # main()
 
 # order = 
 # p = 61845915503831114091865164962647232917206327870669899
