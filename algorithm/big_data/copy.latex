@@ -1,0 +1,278 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out
+                                                          % if you need a4paper
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
+                                                          % paper
+
+\IEEEoverridecommandlockouts                              % This command is only
+                                                          % needed if you want to
+                                                          % use the \thanks command
+\overrideIEEEmargins
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+
+\usepackage{bm}
+\usepackage{amsmath}
+% The following packages can be found on http:\\www.ctan.org
+\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+%\usepackage{amsmath} % assumes amsmath package installed
+%\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{amsmath}
+\title{\LARGE \bf
+Big Data Research Report
+}
+
+%\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
+%         \thanks{*Use the $\backslash$thanks command to put information here}\\
+%         Faculty of Electrical Engineering, Mathematics and Computer Science\\
+%         University of Twente\\
+%         7500 AE Enschede, The Netherlands\\
+%         {\tt\small h.kwakernaak@autsubmit.com}}
+%         \hspace*{ 0.5 in}
+%         \parbox{3 in}{ \centering Pradeep Misra**
+%         \thanks{**The footnote marks may be inserted manually}\\
+%        Department of Electrical Engineering \\
+%         Wright State University\\
+%         Dayton, OH 45435, USA\\
+%         {\tt\small pmisra@cs.wright.edu}}
+%}
+
+\author{En Lin% stops a space
+}
+
+
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Abstract}
+
+This report is based on the paper \textit{An efficient approximation for point-set diameter in higher dimensions}[1] that was accepted in the 28th Canadian Conference on Computational Geometry.  Authors of this paper are Mahdi Imanparast, Seyed Naser Hashemi and Ali Mohades.  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+Given a set S = \{$p_1, p_2, p_3 ... p_n$\}, where $p_i$ is a point in $R^d$, we are interested in D(S) = $\max_{\substack{p,q \in{S}}} ||p - q||$.  D(S) is also called the diameter of S, which is, explained in plaint English, equivalent to the largest distance between any two points in S.  The application of computing diameter could be across various fields like AI, data mining and computer vision.  Algorithms that involve identifying clusters might also need to calculate the diameter of clusters.  Currently, in the literature of computing diameter, we only have $O(nlogn)$ algorithms for dimension d $\leq$ 3.  Many attempts have been done to approximate diameter in higher dimension.  This report will explain one (1+$\epsilon$)-approximation and one (1+O($\epsilon$))-approximation algorithm for the diameter problem based on the paper[1].       
+
+\section{Proposed Algorithm}
+\subsection{Brute force}
+One naive way to compute diameter exactly is by calculating $||p - q||$ for every point pair (p, q).  This algorithm has time complexity O($dn^2$), which is too slow in practice.  
+\subsection{2-approximation}
+A classic 2-approximation algorithm goes like this: pick any point x$\in$ S, compute $D^*$ = $max_{y\in{S}} ||x - y||$.  Draw a d-dimension sphere C that centered in x with radius D*.  It is true that all points in S must be inside C.  Hence $D^* <= D(S) <= 2D^*$, we have a 2-approximation algorithm for diameter D(S).  The time complexity for this algorithm is $O(dn)$.  However, we are more interested in the case where we can tune the approximation parameter $\epsilon$.
+
+\subsection{Grid}
+We take $D^*$ from 2-approximation method. let's build a uniform grid of side length $\frac{\epsilon D^*}{\sqrt{d}}$.  Then we round each point p$\in$S to its nearest grid point.  The error introduced is upper bounded by the diagonal length of the hyper-cube that forms the grid, which is O($\epsilon D^*$) =  O($\epsilon D(S)$).  After the rounding, we use quadratic brute force algorithm to compute the diameter $\bar{D}$ of rounded point-set.  $\bar{D}$ will be (1+O($\epsilon$))-approximation on true diameter D(S).\\
+
+
+The smallest bounding box that contains all points in S will have side length smaller than D(S), So $Volume(Box) = O(D^d(S))$.  Our small hyper-cubes that form the grid have side length $\frac{\epsilon D^*}{\sqrt{d}}$.  So by dividing the bounding box's volume by the hyper-cube's, we have at most O($\frac{\sqrt{d}^d}{\epsilon^d}$) points after rounding.  By brute force, computing diameter on rounded point-set takes O($\frac{\sqrt{d}^{2d}}{\epsilon^{2d}}$) time.  Rounding n points to grid points takes time $O(dn)$.  So the total running time for this (1+O($\epsilon$))-approximation algorithm is O($dn +  \frac{\sqrt{d}^{2d}}{\epsilon^{2d}}$).  Chan[3] pointed out that by pruning those points that are not in the boundary(neither highest nor lowest in any dimension), we can reduce grid points to $O(\frac{\sqrt{d}^{d-1}}{\epsilon^{d-1}})$.  This improves the running time of grid method to O($dn +  \frac{\sqrt{d}^{2d-2}}{\epsilon^{2d-2}}$).
+
+\subsection{Double Rounding}
+Now we present the algorithm that was proposed in the paper[1]. For simplicity, we define: \\\\
+$A_{\delta}^{p_i} =\{all \  points \ x \in A:||p_i - x|| <= \delta \}$\\
+$B(S) =$ smallest bounding box contains all points in set S.\\
+$L = $ largest side length of $B(S)$. \\ \\
+\textbf{Algorithm:}\\
+Input $\leftarrow$ a set S of n points in $R^d$, an error parameter $\epsilon$\\
+Output $\rightarrow$ $\bar{D}:D(S) \leq \bar{D} \leq (1+\epsilon)D(S)$ 
+
+$step1:$ let $u = \frac{\epsilon L}{2\sqrt{d}}$, $v = \frac{\sqrt{\epsilon} L}{2\sqrt{d}}$
+
+$step2:$ $U \leftarrow$ Round each point in S into its nearest central-cell point in a $u$-grid
+
+$step3:$ $V \leftarrow$ Round each point in $U$ into its nearest grid point in a $v$-grid
+
+$step4:$ compute the diameter $D(V)$ in brute force manner and maintain a list $H = \{all \ (p_i,p_j)\in V:||p_i - p_j|| = D(V)\}$
+
+$step5:$ compute $\Tilde{D}\leftarrow$  $max_{(p_i,p_j) \in H} D(U_{v}^{p_i} \cup U_{v}^{p_j})$ in brute force manner.
+
+$step6:$ output $\bar{D}\leftarrow \Tilde{D} + \frac{\epsilon L}{2}$\\\\
+\textbf{Time complexity:}
+
+$step1-3$: L: the largest side length of B(S) can be calculated in $O(dn)$ by iterating through all extreme points in every dimension.  By applying floor function, we also need $O(dn)$ time to round our points. 
+
+$step4:$ This step computes D(V) in brute force manner, which takes $O(|V|^2)$ time (checking every pair of points). The volume of bounding box B(S) = $L^d$, and in step3 we get set V by rounding U into nearest grid point in v-grid, where $v = \frac{\sqrt{\epsilon} L}{2\sqrt{d}}$.  Hence $|V| = O(\frac{L^d}{v^d}) = O(\frac{(2\sqrt{d})^d}{\sqrt{\epsilon}^d})$. This step takes $O(\frac{(2\sqrt{d})^{2d}}{\epsilon^d})$ time.
+
+$step5:$ To calculate the time complexity in this step, we need to know the cardinality of two sets: $|H| \ and \ |U_{v}^{p_i} \cup U_{v}^{p_j}|$.  H contains all diameter pairs $(p_i,p_j)$ whose distance is the largest in V.  From step3 we know point-set V is composed of a bunch of grid points.  Hence $|H| = O(2^d)$.  What is $|U_{v}^{p_i}|$ and $|U_{v}^{p_j}|$? We can do the same trick of volume(bounding box) dividing volume(grid box).  The volume of bounding box is $O((2v)^d)$, and the volume of grid box is $O(u^d)$. So $|U_{v}^{p_i}| = O(\frac{2^d}{\sqrt{\epsilon}^d})$.  In step5, finding set $U_{v}^{p_i} \cup U_{v}^{p_j}$ for all $(p_i,p_j)\in H$ costs $O(2^ddn)$ time.  Computing the diameter of those sets cost $O(|H| * |U_{v}^{p_i} \cup U_{v}^{p_j}|^2)$ = $O(\frac{(2\sqrt{2})^{2d}}{\epsilon^d})$ time.  In total the cost is $O(2^ddn+\frac{(2\sqrt{2})^{2d}}{\epsilon^d})$.
+
+$In \ total:$ the time complexity of step5 dominates all other steps. So This Algorithm takes $O(2^ddn+\frac{(2\sqrt{2})^{2d}}{\epsilon^d})$ time. The authors assume d is a constant, the running time became $O(n + \frac{1}{\epsilon^d})$.  Furthermore, the authors[1] suggest that by pruning points that are not in the boundary(same trick used in Algorithm C), one can reduce the running time to $O(n + \frac{1}{\epsilon^{d-1}})$.\\\\
+\textbf{Correctness:}\\
+We now explain why $D(S) \leq \bar{D} \leq (1+\epsilon)D(S)$.
+
+The authors assume that the true diameter pair will be inside set $\{U_{v}^{p_i} \cup U_{v}^{p_j}$ for all $(p_i,p_j)\in H\}$.  Then the error is only introduced when we do the first rounding in step2.  In step2 we use u-grid to round points in S, the diagonal length of the hyper-cube of the u-grid = $O(\frac{\epsilon L}{2})$.  Hence the additive error introduced is $O(\frac{\epsilon L}{2})$.  Remember we output $\bar{D}\leftarrow \Tilde{D} + \frac{\epsilon L}{2}$ instead of $\Tilde{D}$.  Since $L \leq D(S)$, $D(S) \leq \Tilde{D} + \frac{\epsilon L}{2} \leq D(S) + \epsilon L \leq (1+\epsilon)D(S)$. We get an $(1+\epsilon)$-approximation algorithm.
+
+\section{The modified algorithm}
+In this section we will explain modified version of Algorithm D, which is based on the direction partitioning approach by Agarwal et al[2] and dimension reduction approach by Chan[3].
+\setcounter{subsection}{4}
+\subsection{Direction partitioning in a plane}
+Given an error parameter $\epsilon$ and a point set S in $R^2$. we know there is a 2-approximation algorithm that computes the diameter of S in $O(n)$.  Can we do better? One insight is that we don't need to consider interior points since they will definitely not affect the diameter.  Agarwal et al[2] suggested that we could break directions into a set of unit vectors and find the extreme point along each direction vector.
+
+
+Break our unit sphere(circle in two dimension) uniformly into t parts.  By doing this we form a set V of directional unit vectors:
+$$V=
+\{\forall \ integer \ i\in [0,t) : v_i = (cos \frac{2\pi i}{t}, sin\frac{2\pi i}{t})\} \eqno{(1)}
+$$
+We now use the term vector r and point r interchangeably.  vector r means a vector starts from origin and ends at point r.  For any vector p, you can always find a direction vector that has angle close enough to the vector p.  
+$$
+\forall p\in R^2, cos\frac{\pi}{t} \leq cos\angle(v_i,p)=\frac{\max_{\substack{v_i \in V}}(v_i \bullet p)}{||p||}  \leq 1 \eqno{(2)}
+$$
+If we set $t=\frac{\pi}{\sqrt{2 \epsilon}}$, $cos\frac{\pi}{t}= 1 - 2sin^2\frac{\sqrt{2\epsilon}}{2} \ge 1-\epsilon$. (2) leads to:
+$$
+\forall p\in R^2, (1-\epsilon)||p|| \leq max_{\substack{v_i \in V}}(v_i \bullet p) \leq ||p|| \eqno{(3)}
+$$
+\textbf{How to compute diameter:}\\
+Now how do we find a $(1+\epsilon)$-approximation?  For any two pair (p, q) in S, by (3) we have 
+$$
+(1-\epsilon)||p-q|| \leq max_{\substack{v_i \in V}}(v_i \bullet (p-q)) \leq ||p-q||  \eqno{(4)}
+$$
+we iterate through every $v_i$ and compute maximal $v_i \bullet p$ and minimal $v_i \bullet q$.  Then we subtract $v_i \bullet p$ by $v_i \bullet q$.  we do this for every $v_i$ and output the maximum value we get.\\\\
+\textbf{Correctness:}\\
+Let $(p', q')$ be the true diameter pair, and $\bar{p}, \bar{q}, \bar{v}$ is where we get the optimal, by (4) we know 
+$$
+||p'-q'||\ge ||\bar{p} - \bar{q}|| \ge \bar{v} \bullet (\bar{p}-\bar{q})) \ge max_{\substack{v_i \in V}}(v_i \bullet (p'-q'))
+$$
+$$
+(1-\epsilon)||p'-q'|| \leq max_{\substack{v_i \in V}}(v_i \bullet (p'-q')) \leq ||p'-q'||
+$$
+Hence
+$$
+(1-\epsilon)||p' - q'|| \leq \bar{v} \bullet (\bar{p}-\bar{q}) \leq ||p'-q'|| \eqno{(5)}
+$$
+We obtain a $(1+\epsilon)$-approximation algorithm for computing true diameter of point set S in $R^2$.\\\\
+\textbf{Time complexity:}\\
+The analysis for time is quite simple. We iterate through each direction vector, each iteration cost $O(n)$ due to maintaining maximal $v_i \bullet p$ and minimal  $v_i \bullet q$. So the total running time of this algorithm is $O(t*n) = O(\frac{n}{\sqrt{\epsilon}})$
+\subsection{Direction partitioning in higher dimensions}
+Fortunately, Algorithm E can be adapted to higher dimensions.  Based on Yao's observation[4], Agarwal et al[3] suggested that d-dimension space can be divided into a set of directional unit vectors V in $|V|$ time, where $|V| = O(\frac{1}{\sqrt{\epsilon}^{d-1}})$, so that $\forall p \in R^d, \exists v_i \in V, cos\angle (p, v_i) \ge \frac{1}{1+\epsilon}$. By the same argument in (2), for any point $p\in R^d$ we have:
+
+
+$$ 
+\frac{1}{1+\epsilon}||p|| \leq max_{\substack{v_i \in V}}(v_i \bullet p) \leq ||p|| \eqno{(6)}
+$$\\
+\textbf{Time complexity:}\\
+The argument for direction partitioning in higher dimensions is the same as in 2 dimensions.  We iterate through each direction vector, there are $O(\frac{1}{\sqrt{\epsilon}^{d-1}})$ of them.  in each iteration we maintain maximal $v_i \bullet p$ and minimal  $v_i \bullet q$, which requires $O(dn)$ time.  So the time complexity for this $(1+\epsilon)$-approximation algorithm is $O(\frac{dn}{\sqrt{\epsilon}^{d-1}})$.  
+\subsection{Dimension reduction by Chan[3]}
+Chan came up with a recursive $(1+O(\epsilon))$-approximation algorithm that runs faster than algorithm C.  The idea was to reduce problem from d to (d-1) dimensions, and then recursively solve the problem in (d-1) dimensions.  For point $p \in R^d$, if we only look at the first two dimensions of p, apply (6) we have,
+$$
+\frac{1}{1+\epsilon} \sqrt{p_1^{2} + p_2^2} \leq max_{\substack{v_i \in V}}(v_i \bullet p) \leq \sqrt{p_1^{2} + p_2^2} \eqno{(7)}
+$$
+In this case V is a set of direction vectors in $R^2$.
+Square all sides and add term $p_3^2 + p_4^2 + p_5^2 + ...p_d^2$.  We obtain:\\\\
+$$
+\frac{(p_1^2 + p_2^2 ..+ p_d^2)}{(1+\epsilon)^2} \leq \frac{p_1^{2} + p_2^2}{(1+\epsilon)^2} + p_3^2 + p_4^2 + ..p_d^2 \leq
+$$
+$$
+max_{\substack{v_i \in V}}(v_1p_1 + v_2p_2)^2 + p_3^2 + ..p_d^2 \leq p_1^2 + p_2^2 + ...p_d^2
+$$
+Simplify it a little bit we have:
+$$
+\frac{||p||^2}{(1+\epsilon)^2} \leq max_{\substack{v_i \in V}}(v_1p_1 + v_2p_2)^2 + p_3^2 + ..p_d^2 \leq ||p||^2\eqno{(8)}
+$$
+Now define a mapping $\pi_v : R^d \rightarrow R^{(d-1)}$, such that $\pi_v(p_1, p_2, p_3, .. p_d)   \rightarrow (v_1p_1 + v_2p_2, p_3, p_4, ...p_d)$, we can simplify (8) more to 
+$$
+\frac{||p||}{(1+\epsilon)} \leq max_{\substack{v_i \in V}}||\pi(p)|| \leq ||p||\eqno{(9)}
+$$
+Notice that V is still a set of unit direction vectors in $R^2$.  Now we use same trick as in (4), for any two pair (p, q) in $R^d$:
+$$
+\frac{||p-q||}{(1+\epsilon)} \leq max_{\substack{v_i \in V}}||\pi(p) - \pi(q)|| \leq ||p-q||\eqno{(10)}
+$$
+We iterate through every $v_i$ and recursively compute the diameter under $\pi_v$ transformation of our input point-set S.  We record the maximum value.\\\\
+\textbf{Correctness:}this is a $(1+O(\epsilon))$-approximation algorithm on computing diameter.
+
+Let $(p',q')$ be the true diameter pair.  We first assume our algorithm has the ability to compute $(1+O(\epsilon))$-approximation of the diameter of a point-set on $R^{d-1}$, then we will prove this algorithm also computes $(1+O(\epsilon))$-approximation  of the diameter of a point-set on $R^d$.  Hence by induction we can prove the correctness.
+
+Let's say by recursively computing maximal(diametrical) $||\pi(p)- \pi(q)||$ for every $v_i \in V$, we obtain optimal at $(\bar{v}, \bar{p}, \bar{q})$.  by (10), we know:
+$$
+\frac{||p'-q'||}{(1+\epsilon)} \leq max_{\substack{v_i \in V}}||\pi(p') - \pi(q')|| \leq ||p'-q'||
+$$
+and
+$$
+max_{\substack{v_i \in V}}||\pi(p') - \pi(q') || \leq ||\pi_{\bar{v}}(\bar{p}) - \pi_{\bar{v}}(\bar{q})|| \leq ||\bar{p}-\bar{q}||
+$$
+combining two inequalities:
+$$
+\frac{||p'-q'||}{(1+\epsilon)} \leq ||\pi_{\bar{v}}(\bar{p}) - \pi_{\bar{v}}(\bar{q})|| \leq ||p'-q'||\eqno{(11)}
+$$
+Because we introduce $O(\epsilon)$ errors when recursively computing $||\pi_{v}p - \pi_{v}q||$, our algorithm is a $(1+O(\epsilon))$-approximation algorithm.\\\\
+\textbf{Time complexity:}\\
+In Chan's recursive method, we only care about partition directions in a plane, which is the same case as algorithm E.  Hence, we can partition unit sphere(circle in 2-d case) uniformly into t parts, where $t = \frac{\pi}{\sqrt{2\epsilon}}$.  Before Chan's method recurs on itself, it applies algorithm C.  Points are rounded into  $O(\frac{1}{\epsilon^{d-1}})$ grid points.  The factor $\sqrt{d}^{d-1}$ on top seems to be ignored by Chan.  The rounding costs O(n) time.  There are $\frac{\pi}{\sqrt{2\epsilon}}$ many sub-problems to be solved (since $\frac{\pi}{\sqrt{2\epsilon}}$ is the carnality of the set of unit direction vectors).  Each sub-problem has size $O(\frac{1}{\epsilon^{d-1}})$ after the rounding.  The recurrence relation for Chan's method is $T_d(n) = O(n+\frac{\pi}{\sqrt{2\epsilon}}T_{d-1}(O(\frac{1}{\epsilon^{d-1}}))$, which solves to $T_d(n) = O(n+\frac{1}{\epsilon^{d-0.5}})$ 
+\subsection{Improved version of algorithm D}
+We now can discuss the improved version of algorithm D by the paper we report on[1].  Comparing to algorithm D, the update on this version is on step5.  Chan's[3] recursive approach is used in step5 instead of brute force method.  Also the rounding parameter v is changed from $\frac{\sqrt{\epsilon} L}{2\sqrt{d}}$ to $\frac{\epsilon^{\frac{1}{3}} L}{2\sqrt{d}}$\\\\
+$A_{\delta}^{p_i} =\{all \  points \ x \in A:||p_i - x|| <= \delta \}$\\
+$B(S) =$ smallest bounding box contains all points in set S.\\
+$L = $ largest side length of B(S). \\ \\
+\textbf{Algorithm:}\\
+Input $\leftarrow$ a set S of n points in $R^d$, an error parameter $\epsilon$\\
+Output $\rightarrow$ $\bar{D}:D(S) \leq \bar{D} \leq (1+\epsilon)D(S)$ 
+
+$step1:$ let $u = \frac{\epsilon L}{2\sqrt{d}}$, $v = \frac{\epsilon^{\frac{1}{3}} L}{2\sqrt{d}}$
+
+$step2:$ $U \leftarrow$ Round each point in S into its nearest central-cell point in a $u$-grid
+
+$step3:$ $V \leftarrow$ Round each point in $U$ into its nearest grid point in a $v$-grid
+
+$step4:$ compute the diameter $D(V)$ in brute force manner and maintain a list $H = \{all \ (p_i,p_j)\in V:||p_i - p_j|| = D(V)\}$
+
+$step5:$ compute $\Tilde{D}\leftarrow$  $max_{(p_i,p_j) \in H} D(U_{v}^{p_i} \cup U_{v}^{p_j})$ by using Chan's method[3].
+
+$step6:$ output $\Tilde{D}$\\\\
+%   \begin{figure}[thpb]
+%       \centering
+%       \includegraphics{U.png}[scale=0.1,width=]
+%       \caption{Triangulo de potencias.}
+%       \label{figurelabel}
+%   \end{figure}
+\textbf{Claim:} H is a  $(1+O(\epsilon))$-approximation for the diameter of a set.  It computes in $O(n+1/\epsilon^{\frac{2d}{3} - \frac{1}{3}})$
+
+The correctness argument is the same as algorithm D.  Let's calculate the time required to compute in each step. 
+
+$step1-3$: The time required in step1-3 is $O(dn)$, which is the same as algorithm D. 
+
+$step4:$ This step computes D(V) in brute force manner, which takes $O(|V|^2)$ time (checking every pair of points). The volume of Bounding box B(S) = $L^d$, and in step3 we get set V by rounding U into nearest grid point in v-grid, where  $v = \frac{\epsilon^{\frac{1}{3}} L}{2\sqrt{d}}$.  Hence $|V| = O(\frac{L^d}{v^d}) = O(\frac{(2\sqrt{d})^d}{\epsilon^{\frac{d}{3}}})$.  We can then prune all points that are not highest or lowest in any dimension.  By pruning we end up with $|V| = O(\frac{(2\sqrt{d})^d}{\epsilon^{\frac{d}{3} - \frac{1}{3}}})$. Since We compute the diameter of This step takes $|V|^2$ = $|V| = O(\frac{(2\sqrt{d})^d}{\epsilon^{\frac{2d}{3} - \frac{2}{3}}})$ time.
+
+$step5:$ To calculate the time complexity in this step, we again need to know the cardinality of two sets: $|H| \ and \ |U_{v}^{p_i} \cup U_{v}^{p_j}|$. The same as algorithm D, H contains all diameter pairs $(p_i,p_j)$ whose distance is the largest in V.  Since V is composed of a bunch of grid points, $|H| = O(2^d)$.  What is $|U_{v}^{p_i}|$ and $|U_{v}^{p_j}|$?  The volume of the bounding box is $O((2v)^d)$, the volume of grid box is $O(u^d)$. So $|U_{v}^{p_i}|$ = $|U_{v}^{p_j}|$ = $O(\frac{2^d}{\epsilon^{\frac{2d}{3}}})$.  Again by pruning, we throw away points that is neither highest nor lowest in any dimension, we end up with $|U_{v}^{p_i}|$ and $|U_{v}^{p_j}|$ = $O(\frac{2^d}{\epsilon^{\frac{2d}{3}-\frac{1}{3}}})$.  Now computing $U_{v}^{p_i} \cup U_{v}^{p_j}$ for all $(p_i,p_j)\in H$ costs $O(2^ddn)$ time, and computing the diameter of those set by Chan's[3] recursive method cost $O(\frac{2^{2d}}{\epsilon^{\frac{2d}{3}-\frac{1}{3}}})$
+
+
+$In total:$ the time complexity of step5 dominates all other steps.  Hence the time complexity for this $(1+O(\epsilon))$-approximation algorithm is $O(n + \frac{1}{\epsilon^{\frac{2d}{3}-\frac{1}{3}}})$(assume d is fixed).
+
+\section{Conclusion}
+
+The paper presented a new $(1+\epsilon)$-approximation algorithm to compute diameter for a point-set in $R^d$.  The running time of it is $O(n+\frac{1}{\epsilon^{d-1}})$.  The proposed approximation algorithm was then modified to a $(1+O(\epsilon))$-approximation algorithm with $O(n+\frac{1}{\epsilon^{\frac{2d}{3} - \frac{1}{3}}})$ time complexity.  Compared to existing algorithms for computing diameter, both algorithms are simple with regard to understanding and the data structure it used.  
+
+\addtolength{\textheight}{-12cm}   % This command serves to balance the column lengths
+                                  % on the last page of the document manually. It shortens
+                                  % the textheight of the last page by a suitable amount.
+                                  % This command does not take effect until the next page
+                                  % so it should come on the page before the last. Make
+                                  % sure that you do not shorten the textheight too much.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{thebibliography}{99}
+
+\bibitem{c1} Imanparast, Mahdi & Hashemi, Seyed & Mohades, Ali. (2018). An Efficient Approximation for Point-set Diameter in Higher Dimensions.
+\\
+\bibitem{c2} Agarwal, P.K., Matousek, J. , Suri, S.: Farthest neighbors maximum spanning trees
+and related problems in higher dimensions. Computational Geometry: Theory and
+Applications, 1, pp. 189-201, (1992). 
+\\
+\bibitem{c3} Chan, T. M.: Approximating the diameter, width, smallest enclosing cylinder, and
+minimum-width annulus. International Journal of Computational Geometry and
+Applications, pp. 67-85, (2002) 
+\\
+\bibitem{c4} Yao, A. C.: On constructing minimum spanning trees in k-dimensional spaces and
+related problems. SIAM Journal of Computing, 11, pp. 721-736, (1982)
+\end{thebibliography}
+
+\end{document}

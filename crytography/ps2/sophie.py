@@ -69,7 +69,7 @@ def check_small_factor(bound, n):
   return False
 if __name__ == "__main__":
   test()
-  bits = 20
+  bits = 100
   trials = 10000
   for i in range(trials):
     q = 4
