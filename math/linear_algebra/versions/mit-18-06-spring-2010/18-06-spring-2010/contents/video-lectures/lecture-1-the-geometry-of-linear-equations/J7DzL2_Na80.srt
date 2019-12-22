@@ -1,0 +1,2985 @@
+1
+00:00:08,711 --> 00:00:09,210
+Hi.
+
+2
+00:00:09,210 --> 00:00:14,230
+This is the first lecture
+in MIT's course 18.06,
+
+3
+00:00:14,230 --> 00:00:19,430
+linear algebra, and
+I'm Gilbert Strang.
+
+4
+00:00:19,430 --> 00:00:23,440
+The text for the
+course is this book,
+
+5
+00:00:23,440 --> 00:00:26,070
+Introduction to Linear Algebra.
+
+6
+00:00:26,070 --> 00:00:32,729
+And the course web page, which
+has got a lot of exercises from
+
+7
+00:00:32,729 --> 00:00:38,470
+the past, MatLab codes, the
+syllabus for the course,
+
+8
+00:00:38,470 --> 00:00:44,060
+is web.mit.edu/18.06.
+
+9
+00:00:44,060 --> 00:00:47,350
+And this is the first
+lecture, lecture one.
+
+10
+00:00:49,920 --> 00:00:55,490
+So, and later we'll give the
+web address for viewing these,
+
+11
+00:00:55,490 --> 00:00:57,270
+videotapes.
+
+12
+00:00:57,270 --> 00:00:59,200
+Okay, so what's in
+the first lecture?
+
+13
+00:01:02,680 --> 00:01:05,530
+This is my plan.
+
+14
+00:01:05,530 --> 00:01:09,340
+The fundamental problem
+of linear algebra,
+
+15
+00:01:09,340 --> 00:01:13,880
+which is to solve a system
+of linear equations.
+
+16
+00:01:13,880 --> 00:01:16,210
+So let's start
+with a case when we
+
+17
+00:01:16,210 --> 00:01:21,440
+have some number of equations,
+say n equations and n unknowns.
+
+18
+00:01:21,440 --> 00:01:23,820
+So an equal number of
+equations and unknowns.
+
+19
+00:01:23,820 --> 00:01:26,860
+That's the normal, nice case.
+
+20
+00:01:26,860 --> 00:01:31,870
+And what I want to do is --
+with examples, of course --
+
+21
+00:01:31,870 --> 00:01:37,230
+to describe, first, what
+I call the Row picture.
+
+22
+00:01:37,230 --> 00:01:40,870
+That's the picture of
+one equation at a time.
+
+23
+00:01:40,870 --> 00:01:43,980
+It's the picture you've
+seen before in two
+
+24
+00:01:43,980 --> 00:01:46,350
+by two equations
+where lines meet.
+
+25
+00:01:46,350 --> 00:01:49,460
+So in a minute, you'll
+see lines meeting.
+
+26
+00:01:49,460 --> 00:01:52,230
+The second picture,
+I'll put a star
+
+27
+00:01:52,230 --> 00:01:55,070
+beside that, because that's
+such an important one.
+
+28
+00:01:55,070 --> 00:02:01,600
+And maybe new to you is the
+picture -- a column at a time.
+
+29
+00:02:01,600 --> 00:02:05,440
+And those are the rows
+and columns of a matrix.
+
+30
+00:02:05,440 --> 00:02:08,970
+So the third -- the algebra
+way to look at the problem is
+
+31
+00:02:08,970 --> 00:02:13,790
+the matrix form and using
+a matrix that I'll call A.
+
+32
+00:02:13,790 --> 00:02:17,490
+Okay, so can I do an example?
+
+33
+00:02:17,490 --> 00:02:23,420
+The whole semester will be
+examples and then see what's
+
+34
+00:02:23,420 --> 00:02:25,110
+going on with the example.
+
+35
+00:02:25,110 --> 00:02:27,990
+So, take an example.
+
+36
+00:02:27,990 --> 00:02:30,430
+Two equations, two unknowns.
+
+37
+00:02:30,430 --> 00:02:38,290
+So let me take 2x
+-y =0, let's say.
+
+38
+00:02:38,290 --> 00:02:45,350
+And -x 2y=3.
+
+39
+00:02:45,350 --> 00:02:46,530
+Okay.
+
+40
+00:02:46,530 --> 00:02:50,680
+let me -- I can even
+say right away --
+
+41
+00:02:50,680 --> 00:02:57,650
+what's the matrix, that is,
+what's the coefficient matrix?
+
+42
+00:02:57,650 --> 00:03:00,590
+The matrix that involves
+these numbers --
+
+43
+00:03:00,590 --> 00:03:05,190
+a matrix is just a
+rectangular array of numbers.
+
+44
+00:03:05,190 --> 00:03:09,610
+Here it's two rows and
+two columns, so 2 and --
+
+45
+00:03:09,610 --> 00:03:14,420
+minus 1 in the first row minus
+1 and 2 in the second row,
+
+46
+00:03:14,420 --> 00:03:16,700
+that's the matrix.
+
+47
+00:03:16,700 --> 00:03:21,610
+And the right-hand
+-- the, unknown --
+
+48
+00:03:21,610 --> 00:03:23,090
+well, we've got two unknowns.
+
+49
+00:03:23,090 --> 00:03:27,370
+So we've got a vector, with
+two components, x and y,
+
+50
+00:03:27,370 --> 00:03:31,150
+and we've got two right-hand
+sides that go into a vector
+
+51
+00:03:31,150 --> 00:03:32,940
+0 3.
+
+52
+00:03:32,940 --> 00:03:38,260
+I couldn't resist writing
+the matrix form, right --
+
+53
+00:03:38,260 --> 00:03:41,050
+even before the pictures.
+
+54
+00:03:41,050 --> 00:03:45,030
+So I always will think
+of this as the matrix A,
+
+55
+00:03:45,030 --> 00:03:49,440
+the matrix of coefficients,
+then there's a vector of
+
+56
+00:03:49,440 --> 00:03:50,030
+unknowns.
+
+57
+00:03:50,030 --> 00:03:51,790
+Here we've only
+got two unknowns.
+
+58
+00:03:51,790 --> 00:03:54,100
+Later we'll have any
+number of unknowns.
+
+59
+00:03:54,100 --> 00:03:57,620
+And that vector of
+unknowns, well I'll often --
+
+60
+00:03:57,620 --> 00:03:59,820
+I'll make that x --
+
+61
+00:03:59,820 --> 00:04:01,150
+extra bold.
+
+62
+00:04:01,150 --> 00:04:04,850
+A and the right-hand
+side is also a vector
+
+63
+00:04:04,850 --> 00:04:08,230
+that I'll always call b.
+
+64
+00:04:08,230 --> 00:04:13,790
+So linear equations are A
+x equal b and the idea now
+
+65
+00:04:13,790 --> 00:04:16,820
+is to solve this
+particular example
+
+66
+00:04:16,820 --> 00:04:20,940
+and then step back to
+see the bigger picture.
+
+67
+00:04:20,940 --> 00:04:24,630
+Okay, what's the picture for
+this example, the Row picture?
+
+68
+00:04:24,630 --> 00:04:26,740
+Okay, so here comes
+the Row picture.
+
+69
+00:04:30,210 --> 00:04:32,890
+So that means I take
+one row at a time
+
+70
+00:04:32,890 --> 00:04:38,520
+and I'm drawing
+here the xy plane
+
+71
+00:04:38,520 --> 00:04:43,990
+and I'm going to plot
+all the points that
+
+72
+00:04:43,990 --> 00:04:47,860
+satisfy that first equation.
+
+73
+00:04:47,860 --> 00:04:53,120
+So I'm looking at all the
+points that satisfy 2x-y =0.
+
+74
+00:04:53,120 --> 00:04:59,000
+It's often good to start with
+which point on the horizontal
+
+75
+00:04:59,000 --> 00:05:02,480
+line -- on this horizontal
+line, y is zero.
+
+76
+00:05:02,480 --> 00:05:06,510
+The x axis has y as zero and
+that -- in this case, actually,
+
+77
+00:05:06,510 --> 00:05:07,720
+then x is zero.
+
+78
+00:05:07,720 --> 00:05:11,230
+So the point, the origin --
+
+79
+00:05:11,230 --> 00:05:16,560
+the point with coordinates
+(0,0) is on the line.
+
+80
+00:05:16,560 --> 00:05:18,290
+It solves that equation.
+
+81
+00:05:18,290 --> 00:05:22,340
+Okay, tell me in -- well,
+I guess I have to tell you
+
+82
+00:05:22,340 --> 00:05:26,980
+another point that solves
+this same equation.
+
+83
+00:05:26,980 --> 00:05:32,090
+Let me suppose x is one,
+so I'll take x to be one.
+
+84
+00:05:32,090 --> 00:05:34,930
+Then y should be two, right?
+
+85
+00:05:34,930 --> 00:05:40,250
+So there's the point one two
+that also solves this equation.
+
+86
+00:05:40,250 --> 00:05:42,840
+And I could put in more points.
+
+87
+00:05:42,840 --> 00:05:45,720
+But, but let me put
+in all the points
+
+88
+00:05:45,720 --> 00:05:50,810
+at once, because they all
+lie on a straight line.
+
+89
+00:05:50,810 --> 00:05:53,540
+This is a linear equation
+and that word linear
+
+90
+00:05:53,540 --> 00:05:54,310
+got the letters
+
+91
+00:05:54,310 --> 00:05:56,760
+Okay, thanks. for line in it.
+
+92
+00:05:56,760 --> 00:05:59,760
+That's the equation --
+this is the line that ...
+
+93
+00:05:59,760 --> 00:06:08,690
+of solutions to 2x-y=0 my
+first row, first equation.
+
+94
+00:06:08,690 --> 00:06:14,060
+So typically, maybe, x equal
+a half, y equal one will work.
+
+95
+00:06:14,060 --> 00:06:15,660
+And sure enough it does.
+
+96
+00:06:15,660 --> 00:06:17,600
+Okay, that's the first one.
+
+97
+00:06:17,600 --> 00:06:22,750
+Now the second one is not
+going to go through the origin.
+
+98
+00:06:22,750 --> 00:06:24,390
+It's always important.
+
+99
+00:06:24,390 --> 00:06:26,900
+Do we go through
+the origin or not?
+
+100
+00:06:26,900 --> 00:06:30,020
+In this case, yes, because
+there's a zero over there.
+
+101
+00:06:30,020 --> 00:06:32,270
+In this case we don't
+go through the origin,
+
+102
+00:06:32,270 --> 00:06:36,220
+because if x and y are
+zero, we don't get three.
+
+103
+00:06:36,220 --> 00:06:40,350
+So, let me again say
+suppose y is zero,
+
+104
+00:06:40,350 --> 00:06:42,560
+what x do we actually get?
+
+105
+00:06:42,560 --> 00:06:48,230
+If y is zero, then I
+get x is minus three.
+
+106
+00:06:48,230 --> 00:06:52,610
+So if y is zero, I
+go along minus three.
+
+107
+00:06:52,610 --> 00:06:56,360
+So there's one point
+on this second line.
+
+108
+00:06:56,360 --> 00:07:03,450
+Now let me say, well,
+suppose x is minus one --
+
+109
+00:07:03,450 --> 00:07:05,370
+just to take another x.
+
+110
+00:07:05,370 --> 00:07:09,280
+If x is minus one,
+then this is a one
+
+111
+00:07:09,280 --> 00:07:15,870
+and I think y should be a one,
+because if x is minus one,
+
+112
+00:07:15,870 --> 00:07:19,790
+then I think y should be a
+one and we'll get that point.
+
+113
+00:07:19,790 --> 00:07:20,900
+Is that right?
+
+114
+00:07:20,900 --> 00:07:23,330
+If x is minus one, that's a one.
+
+115
+00:07:23,330 --> 00:07:25,640
+If y is a one, that's
+a two and the one
+
+116
+00:07:25,640 --> 00:07:28,550
+and the two make three and
+that point's on the equation.
+
+117
+00:07:28,550 --> 00:07:29,330
+Okay.
+
+118
+00:07:29,330 --> 00:07:31,740
+Now, I should just
+draw the line, right,
+
+119
+00:07:31,740 --> 00:07:34,470
+connecting those
+two points at --
+
+120
+00:07:34,470 --> 00:07:36,410
+that will give me
+the whole line.
+
+121
+00:07:36,410 --> 00:07:40,480
+And if I've done
+this reasonably well,
+
+122
+00:07:40,480 --> 00:07:42,640
+I think it's going to happen
+to go through -- well,
+
+123
+00:07:42,640 --> 00:07:46,520
+not happen -- it was arranged
+to go through that point.
+
+124
+00:07:46,520 --> 00:07:50,600
+So I think that the
+second line is this one,
+
+125
+00:07:50,600 --> 00:07:56,100
+and this is the all-important
+point that lies on both lines.
+
+126
+00:07:56,100 --> 00:07:58,830
+Shall we just check
+that that point which
+
+127
+00:07:58,830 --> 00:08:03,690
+is the point x equal one
+and y was two, right?
+
+128
+00:08:03,690 --> 00:08:07,790
+That's the point there
+and that, I believe,
+
+129
+00:08:07,790 --> 00:08:10,530
+solves both equations.
+
+130
+00:08:10,530 --> 00:08:11,500
+Let's just check this.
+
+131
+00:08:11,500 --> 00:08:18,590
+If x is one, I have a minus one
+plus four equals three, okay.
+
+132
+00:08:18,590 --> 00:08:21,680
+Apologies for
+drawing this picture
+
+133
+00:08:21,680 --> 00:08:25,150
+that you've seen before.
+
+134
+00:08:25,150 --> 00:08:29,690
+But this -- seeing
+the row picture --
+
+135
+00:08:29,690 --> 00:08:33,140
+first of all, for n equal 2,
+two equations and two unknowns,
+
+136
+00:08:33,140 --> 00:08:35,460
+it's the right place to start.
+
+137
+00:08:35,460 --> 00:08:36,270
+Okay.
+
+138
+00:08:36,270 --> 00:08:37,690
+So we've got the solution.
+
+139
+00:08:37,690 --> 00:08:39,679
+The point that
+lies on both lines.
+
+140
+00:08:39,679 --> 00:08:43,600
+Now can I come to
+the column picture?
+
+141
+00:08:43,600 --> 00:08:47,880
+Pay attention, this
+is the key point.
+
+142
+00:08:47,880 --> 00:08:49,930
+So the column picture.
+
+143
+00:08:49,930 --> 00:08:53,520
+I'm now going to look at
+the columns of the matrix.
+
+144
+00:08:53,520 --> 00:08:56,790
+I'm going to look at
+this part and this part.
+
+145
+00:08:56,790 --> 00:09:05,010
+I'm going to say that the
+x part is really x times --
+
+146
+00:09:05,010 --> 00:09:06,740
+you see, I'm putting the two --
+
+147
+00:09:06,740 --> 00:09:10,160
+I'm kind of getting the
+two equations at once --
+
+148
+00:09:10,160 --> 00:09:15,290
+that part and then I have a
+y and in the first equation
+
+149
+00:09:15,290 --> 00:09:19,260
+it's multiplying a minus one and
+in the second equation a two,
+
+150
+00:09:19,260 --> 00:09:22,030
+and on the right-hand
+side, zero and three.
+
+151
+00:09:26,500 --> 00:09:29,860
+You see, the columns of the
+matrix, the columns of A
+
+152
+00:09:29,860 --> 00:09:33,050
+are here and the
+right-hand side b is there.
+
+153
+00:09:33,050 --> 00:09:36,940
+And now what is the
+equation asking for?
+
+154
+00:09:36,940 --> 00:09:42,750
+It's asking us to find --
+somehow to combine that vector
+
+155
+00:09:42,750 --> 00:09:47,470
+and this one in the right
+amounts to get that one.
+
+156
+00:09:47,470 --> 00:09:51,830
+It's asking us to find the
+right linear combination --
+
+157
+00:09:51,830 --> 00:09:55,420
+this is called a
+linear combination.
+
+158
+00:09:55,420 --> 00:09:58,840
+And it's the most fundamental
+operation in the whole course.
+
+159
+00:10:01,710 --> 00:10:06,330
+It's a linear combination
+of the columns.
+
+160
+00:10:06,330 --> 00:10:09,550
+That's what we're
+seeing on the left side.
+
+161
+00:10:09,550 --> 00:10:13,190
+Again, I don't want to
+write down a big definition.
+
+162
+00:10:13,190 --> 00:10:15,010
+You can see what it is.
+
+163
+00:10:15,010 --> 00:10:17,470
+There's column one,
+there's column two.
+
+164
+00:10:17,470 --> 00:10:21,690
+I multiply by some
+numbers and I add.
+
+165
+00:10:21,690 --> 00:10:25,940
+That's a combination -- a linear
+combination and I want to make
+
+166
+00:10:25,940 --> 00:10:30,870
+those numbers the right
+numbers to produce zero three.
+
+167
+00:10:30,870 --> 00:10:32,070
+Okay.
+
+168
+00:10:32,070 --> 00:10:37,110
+Now I want to draw a picture
+that, represents what this --
+
+169
+00:10:37,110 --> 00:10:38,230
+this is algebra.
+
+170
+00:10:38,230 --> 00:10:41,740
+What's the geometry, what's
+the picture that goes with it?
+
+171
+00:10:41,740 --> 00:10:42,360
+Okay.
+
+172
+00:10:42,360 --> 00:10:45,260
+So again, these vectors
+have two components,
+
+173
+00:10:45,260 --> 00:10:50,730
+so I better draw a
+picture like that.
+
+174
+00:10:50,730 --> 00:10:52,680
+So can I put down these columns?
+
+175
+00:10:52,680 --> 00:10:55,470
+I'll draw these
+columns as they are,
+
+176
+00:10:55,470 --> 00:10:58,700
+and then I'll do a
+combination of them.
+
+177
+00:10:58,700 --> 00:11:04,000
+So the first column is over
+two and down one, right?
+
+178
+00:11:04,000 --> 00:11:06,210
+So there's the first column.
+
+179
+00:11:06,210 --> 00:11:07,860
+The first column.
+
+180
+00:11:07,860 --> 00:11:10,960
+Column one.
+
+181
+00:11:10,960 --> 00:11:13,830
+It's the vector two minus one.
+
+182
+00:11:13,830 --> 00:11:18,580
+The second column is --
+
+183
+00:11:18,580 --> 00:11:22,000
+minus one is the first
+component and up two.
+
+184
+00:11:22,000 --> 00:11:24,960
+It's here.
+
+185
+00:11:24,960 --> 00:11:27,710
+There's column two.
+
+186
+00:11:27,710 --> 00:11:32,280
+So this, again, you see
+what its components are.
+
+187
+00:11:32,280 --> 00:11:35,530
+Its components are
+minus one, two.
+
+188
+00:11:35,530 --> 00:11:36,030
+Good.
+
+189
+00:11:36,030 --> 00:11:36,840
+That's this guy.
+
+190
+00:11:39,471 --> 00:11:40,845
+Now I have to take
+a combination.
+
+191
+00:11:43,740 --> 00:11:47,310
+What combination shall I take?
+
+192
+00:11:47,310 --> 00:11:50,510
+Why not the right
+combination, what the hell?
+
+193
+00:11:50,510 --> 00:11:51,010
+Okay.
+
+194
+00:11:51,010 --> 00:11:53,840
+So the combination
+I'm going to take
+
+195
+00:11:53,840 --> 00:11:57,250
+is the right one to
+produce zero three
+
+196
+00:11:57,250 --> 00:11:59,620
+and then we'll see it
+happen in the picture.
+
+197
+00:11:59,620 --> 00:12:04,530
+So the right combination is
+to take x as one of those
+
+198
+00:12:04,530 --> 00:12:06,140
+and two of these.
+
+199
+00:12:09,230 --> 00:12:12,760
+It's because we already know
+that that's the right x and y,
+
+200
+00:12:12,760 --> 00:12:15,720
+so why not take the correct
+combination here and see it
+
+201
+00:12:15,720 --> 00:12:16,280
+happen?
+
+202
+00:12:16,280 --> 00:12:21,840
+Okay, so how do I picture
+this linear combination?
+
+203
+00:12:21,840 --> 00:12:25,180
+So I start with this vector
+that's already here --
+
+204
+00:12:25,180 --> 00:12:28,220
+so that's one of column
+one, that's one times column
+
+205
+00:12:28,220 --> 00:12:30,400
+one, right there.
+
+206
+00:12:30,400 --> 00:12:33,720
+And now I want to add on --
+so I'm going to hook the next
+
+207
+00:12:33,720 --> 00:12:38,660
+vector onto the front of the
+arrow will start the next
+
+208
+00:12:38,660 --> 00:12:40,590
+vector and it will go this way.
+
+209
+00:12:40,590 --> 00:12:44,170
+So let's see, can I do it right?
+
+210
+00:12:44,170 --> 00:12:46,240
+If I added on one
+of these vectors,
+
+211
+00:12:46,240 --> 00:12:50,589
+it would go left one and up two,
+so we'd go left one and up two,
+
+212
+00:12:50,589 --> 00:12:52,130
+so it would probably
+get us to there.
+
+213
+00:12:52,130 --> 00:12:54,650
+Maybe I'll do dotted
+line for that.
+
+214
+00:12:54,650 --> 00:12:55,610
+Okay?
+
+215
+00:12:55,610 --> 00:12:59,710
+That's one of column
+two tucked onto the end,
+
+216
+00:12:59,710 --> 00:13:03,390
+but I wanted to tuck
+on two of column two.
+
+217
+00:13:03,390 --> 00:13:07,000
+So that -- the second one --
+we'll go up left one and up two
+
+218
+00:13:07,000 --> 00:13:07,660
+also.
+
+219
+00:13:07,660 --> 00:13:09,440
+It'll probably end there.
+
+220
+00:13:09,440 --> 00:13:10,520
+And there's another one.
+
+221
+00:13:10,520 --> 00:13:14,350
+So what I've put in here
+is two of column two.
+
+222
+00:13:17,310 --> 00:13:19,340
+Added on.
+
+223
+00:13:19,340 --> 00:13:20,615
+And where did I end up?
+
+224
+00:13:23,280 --> 00:13:28,230
+What are the coordinates
+of this result?
+
+225
+00:13:28,230 --> 00:13:32,570
+What do I get when I take
+one of this plus two of that?
+
+226
+00:13:32,570 --> 00:13:34,810
+I do get that, of course.
+
+227
+00:13:34,810 --> 00:13:38,870
+There it is, x is zero,
+y is three, that's b.
+
+228
+00:13:38,870 --> 00:13:41,530
+That's the answer we wanted.
+
+229
+00:13:41,530 --> 00:13:43,530
+And how do I do it?
+
+230
+00:13:43,530 --> 00:13:46,860
+You see I do it just
+like the first component.
+
+231
+00:13:46,860 --> 00:13:50,700
+I have a two and a minus
+two that produces a zero,
+
+232
+00:13:50,700 --> 00:13:54,680
+and in the second component I
+have a minus one and a four,
+
+233
+00:13:54,680 --> 00:13:57,750
+they combine to give the three.
+
+234
+00:13:57,750 --> 00:14:01,190
+But look at this picture.
+
+235
+00:14:01,190 --> 00:14:03,230
+So here's our key picture.
+
+236
+00:14:03,230 --> 00:14:10,280
+I combine this column and
+this column to get this guy.
+
+237
+00:14:10,280 --> 00:14:11,360
+That was the b.
+
+238
+00:14:11,360 --> 00:14:13,680
+That's the zero three.
+
+239
+00:14:13,680 --> 00:14:14,540
+Okay.
+
+240
+00:14:14,540 --> 00:14:18,790
+So that idea of linear
+combination is crucial,
+
+241
+00:14:18,790 --> 00:14:21,130
+and also --
+
+242
+00:14:21,130 --> 00:14:22,915
+do we want to think
+about this question?
+
+243
+00:14:25,420 --> 00:14:26,470
+Sure, why not.
+
+244
+00:14:26,470 --> 00:14:29,830
+What are all the combinations?
+
+245
+00:14:29,830 --> 00:14:32,655
+If I took -- can I
+go back to xs and ys?
+
+246
+00:14:35,240 --> 00:14:38,610
+This is a question for really --
+
+247
+00:14:38,610 --> 00:14:41,450
+it's going to come
+up over and over,
+
+248
+00:14:41,450 --> 00:14:45,350
+but why don't we
+see it once now?
+
+249
+00:14:45,350 --> 00:14:50,610
+If I took all the xs and all
+the ys, all the combinations,
+
+250
+00:14:50,610 --> 00:14:53,830
+what would be all the results?
+
+251
+00:14:53,830 --> 00:14:56,200
+And, actually, the
+result would be
+
+252
+00:14:56,200 --> 00:14:59,400
+that I could get any
+right-hand side at all.
+
+253
+00:14:59,400 --> 00:15:02,680
+The combinations
+of this and this
+
+254
+00:15:02,680 --> 00:15:06,250
+would fill the whole plane.
+
+255
+00:15:06,250 --> 00:15:08,510
+You can tuck that away.
+
+256
+00:15:08,510 --> 00:15:14,080
+We'll, explore it further.
+
+257
+00:15:14,080 --> 00:15:19,610
+But this idea of what linear
+combination gives b and what do
+
+258
+00:15:19,610 --> 00:15:21,650
+all the linear
+combinations give,
+
+259
+00:15:21,650 --> 00:15:25,070
+what are all the possible,
+achievable right-hand sides be
+
+260
+00:15:25,070 --> 00:15:26,610
+-- that's going to be basic.
+
+261
+00:15:26,610 --> 00:15:27,220
+Okay.
+
+262
+00:15:27,220 --> 00:15:31,980
+Can I move to three
+equations and three unknowns?
+
+263
+00:15:31,980 --> 00:15:38,610
+Because it's easy to
+picture the two by two case.
+
+264
+00:15:38,610 --> 00:15:40,980
+Let me do a three
+by three example.
+
+265
+00:15:40,980 --> 00:15:43,330
+Okay, I'll sort of
+start it the same way,
+
+266
+00:15:43,330 --> 00:15:50,210
+say maybe 2x-y and maybe I'll
+take no zs as a zero and maybe
+
+267
+00:15:50,210 --> 00:15:55,940
+a -x 2y and maybe
+a -z as a -- oh,
+
+268
+00:15:55,940 --> 00:16:01,130
+let me make that a minus one
+and, just for variety let me
+
+269
+00:16:01,130 --> 00:16:09,930
+take, -3z, -3ys, I should
+keep the ys in that line,
+
+270
+00:16:09,930 --> 00:16:14,400
+and 4zs is, say, 4.
+
+271
+00:16:14,400 --> 00:16:16,480
+Okay.
+
+272
+00:16:16,480 --> 00:16:19,100
+That's three equations.
+
+273
+00:16:19,100 --> 00:16:22,380
+I'm in three
+dimensions, x, y, z.
+
+274
+00:16:22,380 --> 00:16:27,210
+And, I don't have
+a solution yet.
+
+275
+00:16:27,210 --> 00:16:32,230
+So I want to understand the
+equations and then solve them.
+
+276
+00:16:32,230 --> 00:16:32,780
+Okay.
+
+277
+00:16:32,780 --> 00:16:35,450
+So how do I you understand them?
+
+278
+00:16:35,450 --> 00:16:37,350
+The row picture one way.
+
+279
+00:16:37,350 --> 00:16:41,120
+The column picture is
+another very important way.
+
+280
+00:16:41,120 --> 00:16:43,720
+Just let's remember
+the matrix form, here,
+
+281
+00:16:43,720 --> 00:16:45,020
+because that's easy.
+
+282
+00:16:45,020 --> 00:16:49,140
+The matrix form --
+what's our matrix A?
+
+283
+00:16:49,140 --> 00:16:54,280
+Our matrix A is this right-hand
+side, the two and the minus one
+
+284
+00:16:54,280 --> 00:16:58,620
+and the zero from the first
+row, the minus one and the two
+
+285
+00:16:58,620 --> 00:17:00,780
+and the minus one
+from the second row,
+
+286
+00:17:00,780 --> 00:17:08,530
+the zero, the minus three and
+the four from the third row.
+
+287
+00:17:08,530 --> 00:17:11,050
+So it's a three by three matrix.
+
+288
+00:17:11,050 --> 00:17:12,970
+Three equations, three unknowns.
+
+289
+00:17:12,970 --> 00:17:14,680
+And what's our right-hand side?
+
+290
+00:17:14,680 --> 00:17:20,190
+Of course, it's the vector,
+zero minus one, four.
+
+291
+00:17:20,190 --> 00:17:21,180
+Okay.
+
+292
+00:17:21,180 --> 00:17:26,950
+So that's the way, well, that's
+the short-hand to write out
+
+293
+00:17:26,950 --> 00:17:28,690
+the three equations.
+
+294
+00:17:28,690 --> 00:17:31,429
+But it's the picture that
+I'm looking for today.
+
+295
+00:17:31,429 --> 00:17:32,470
+Okay, so the row picture.
+
+296
+00:17:32,470 --> 00:17:38,370
+All right, so I'm in
+three dimensions, x,
+
+297
+00:17:38,370 --> 00:17:42,680
+find out when there
+isn't a solution.
+
+298
+00:17:42,680 --> 00:17:45,950
+y and z.
+
+299
+00:17:45,950 --> 00:17:51,150
+And I want to take those
+equations one at a time and ask
+
+300
+00:17:51,150 --> 00:17:51,820
+--
+
+301
+00:17:51,820 --> 00:17:55,280
+and make a picture of all
+the points that satisfy --
+
+302
+00:17:55,280 --> 00:17:57,960
+let's take equation number two.
+
+303
+00:17:57,960 --> 00:18:00,820
+If I make a picture of all
+the points that satisfy --
+
+304
+00:18:00,820 --> 00:18:05,900
+all the x, y, z points
+that solve this equation --
+
+305
+00:18:05,900 --> 00:18:09,550
+well, first of all, the
+origin is not one of them.
+
+306
+00:18:09,550 --> 00:18:14,620
+x, y, z -- it being 0, 0, 0
+would not solve that equation.
+
+307
+00:18:14,620 --> 00:18:17,790
+So what are some points
+that do solve the equation?
+
+308
+00:18:17,790 --> 00:18:23,750
+Let's see, maybe if x is
+one, y and z could be zero.
+
+309
+00:18:23,750 --> 00:18:24,750
+That would work, right?
+
+310
+00:18:24,750 --> 00:18:26,870
+So there's one point.
+
+311
+00:18:26,870 --> 00:18:29,520
+I'm looking at this
+second equation,
+
+312
+00:18:29,520 --> 00:18:33,120
+here, just, to start with.
+
+313
+00:18:33,120 --> 00:18:33,670
+Let's see.
+
+314
+00:18:33,670 --> 00:18:36,430
+Also, I guess, if
+z could be one,
+
+315
+00:18:36,430 --> 00:18:38,710
+x and y could be zero,
+so that would just
+
+316
+00:18:38,710 --> 00:18:41,930
+go straight up that axis.
+
+317
+00:18:41,930 --> 00:18:46,880
+And, probably I'd want
+a third point here.
+
+318
+00:18:46,880 --> 00:18:55,390
+Let me take x to be
+zero, z to be zero,
+
+319
+00:18:55,390 --> 00:19:00,400
+then y would be
+minus a half, right?
+
+320
+00:19:00,400 --> 00:19:06,120
+So there's a third point,
+somewhere -- oh my -- okay.
+
+321
+00:19:06,120 --> 00:19:07,900
+Let's see.
+
+322
+00:19:07,900 --> 00:19:13,080
+I want to put in all the points
+that satisfy that equation.
+
+323
+00:19:13,080 --> 00:19:17,930
+Do you know what that
+bunch of points will be?
+
+324
+00:19:17,930 --> 00:19:19,350
+It's a plane.
+
+325
+00:19:19,350 --> 00:19:22,430
+If we have a linear
+equation, then, fortunately,
+
+326
+00:19:22,430 --> 00:19:27,070
+the graph of the thing, the plot
+of all the points that solve it
+
+327
+00:19:27,070 --> 00:19:30,390
+are a plane.
+
+328
+00:19:30,390 --> 00:19:32,220
+These three points
+determine a plane,
+
+329
+00:19:32,220 --> 00:19:37,570
+but your lecturer
+is not Rembrandt
+
+330
+00:19:37,570 --> 00:19:43,380
+and the art is going to
+be the weak point here.
+
+331
+00:19:43,380 --> 00:19:46,460
+So I'm just going to
+draw a plane, right?
+
+332
+00:19:46,460 --> 00:19:48,310
+There's a plane somewhere.
+
+333
+00:19:48,310 --> 00:19:50,800
+That's my plane.
+
+334
+00:19:50,800 --> 00:19:54,960
+That plane is all the
+points that solves this guy.
+
+335
+00:19:54,960 --> 00:19:59,880
+Then, what about this one?
+
+336
+00:19:59,880 --> 00:20:02,760
+Two x minus y plus zero z.
+
+337
+00:20:02,760 --> 00:20:05,410
+So z actually can be anything.
+
+338
+00:20:05,410 --> 00:20:08,390
+Again, it's going
+to be another plane.
+
+339
+00:20:08,390 --> 00:20:11,290
+Each row in a three
+by three problem
+
+340
+00:20:11,290 --> 00:20:14,480
+gives us a plane in
+three dimensions.
+
+341
+00:20:14,480 --> 00:20:17,730
+So this one is going to
+be some other plane --
+
+342
+00:20:17,730 --> 00:20:20,250
+maybe I'll try to
+draw it like this.
+
+343
+00:20:20,250 --> 00:20:25,240
+And those two planes
+meet in a line.
+
+344
+00:20:25,240 --> 00:20:29,280
+So if I have two equations,
+just the first two
+
+345
+00:20:29,280 --> 00:20:33,380
+equations in three dimensions,
+those give me a line.
+
+346
+00:20:33,380 --> 00:20:35,290
+The line where those
+two planes meet.
+
+347
+00:20:35,290 --> 00:20:42,210
+And now, the third
+guy is a third plane.
+
+348
+00:20:42,210 --> 00:20:49,290
+And it goes somewhere.
+
+349
+00:20:49,290 --> 00:20:51,820
+Okay, those three
+things meet in a point.
+
+350
+00:20:51,820 --> 00:20:55,090
+Now I don't know where
+that point is, frankly.
+
+351
+00:20:55,090 --> 00:20:58,140
+But -- linear
+algebra will find it.
+
+352
+00:20:58,140 --> 00:21:05,580
+The main point is that the three
+planes, because they're not
+
+353
+00:21:05,580 --> 00:21:08,100
+parallel, they're not special.
+
+354
+00:21:08,100 --> 00:21:11,780
+They do meet in one point
+and that's the solution.
+
+355
+00:21:11,780 --> 00:21:16,910
+But, maybe you can see
+that this row picture is
+
+356
+00:21:16,910 --> 00:21:19,120
+getting a little hard to see.
+
+357
+00:21:19,120 --> 00:21:24,520
+The row picture was a cinch
+when we looked at two lines
+
+358
+00:21:24,520 --> 00:21:25,220
+meeting.
+
+359
+00:21:25,220 --> 00:21:27,740
+When we look at
+three planes meeting,
+
+360
+00:21:27,740 --> 00:21:32,890
+it's not so clear and in
+four dimensions probably
+
+361
+00:21:32,890 --> 00:21:34,780
+a little less clear.
+
+362
+00:21:34,780 --> 00:21:37,530
+So, can I quit on
+the row picture?
+
+363
+00:21:37,530 --> 00:21:41,870
+Or quit on the row picture
+before I've successfully
+
+364
+00:21:41,870 --> 00:21:45,940
+found the point where
+the three planes meet?
+
+365
+00:21:45,940 --> 00:21:51,510
+All I really want to see is
+that the row picture consists
+
+366
+00:21:51,510 --> 00:21:55,780
+of three planes and, if
+everything works right,
+
+367
+00:21:55,780 --> 00:21:59,340
+three planes meet in one
+point and that's a solution.
+
+368
+00:21:59,340 --> 00:22:04,730
+Now, you can tell I
+prefer the column picture.
+
+369
+00:22:04,730 --> 00:22:06,990
+Okay, so let me take
+the column picture.
+
+370
+00:22:06,990 --> 00:22:09,820
+That's x times --
+
+371
+00:22:09,820 --> 00:22:14,400
+so there were two xs in the
+first equation minus one x is,
+
+372
+00:22:14,400 --> 00:22:16,690
+and no xs in the third.
+
+373
+00:22:16,690 --> 00:22:19,000
+It's just the first
+column of that.
+
+374
+00:22:19,000 --> 00:22:21,300
+And how many ys are there?
+
+375
+00:22:21,300 --> 00:22:24,730
+There's minus one in the first
+equations, two in the second
+
+376
+00:22:24,730 --> 00:22:27,430
+and maybe minus
+three in the third.
+
+377
+00:22:27,430 --> 00:22:29,830
+Just the second
+column of my matrix.
+
+378
+00:22:29,830 --> 00:22:37,740
+And z times no zs minus
+one zs and four zs.
+
+379
+00:22:37,740 --> 00:22:41,270
+And it's those three
+columns, right,
+
+380
+00:22:41,270 --> 00:22:46,640
+that I have to combine to
+produce the right-hand side,
+
+381
+00:22:46,640 --> 00:22:48,945
+which is zero minus one four.
+
+382
+00:22:52,830 --> 00:22:54,910
+Okay.
+
+383
+00:22:54,910 --> 00:22:57,940
+So what have we got on
+this left-hand side?
+
+384
+00:22:57,940 --> 00:22:59,470
+A linear combination.
+
+385
+00:22:59,470 --> 00:23:02,540
+It's a linear combination
+now of three vectors,
+
+386
+00:23:02,540 --> 00:23:05,720
+and they happen to be -- each
+one is a three dimensional
+
+387
+00:23:05,720 --> 00:23:10,000
+vector, so we want to know
+what combination of those three
+
+388
+00:23:10,000 --> 00:23:12,090
+vectors produces that one.
+
+389
+00:23:12,090 --> 00:23:15,820
+Shall I try to draw the
+column picture, then?
+
+390
+00:23:15,820 --> 00:23:18,830
+So, since these vectors
+have three components --
+
+391
+00:23:18,830 --> 00:23:21,660
+so it's some multiple -- let
+me draw in the first column
+
+392
+00:23:21,660 --> 00:23:23,340
+as before --
+
+393
+00:23:23,340 --> 00:23:27,287
+x is two and y is minus one.
+
+394
+00:23:27,287 --> 00:23:28,620
+Maybe there is the first column.
+
+395
+00:23:32,320 --> 00:23:38,570
+y -- the second column has maybe
+a minus one and a two and the y
+
+396
+00:23:38,570 --> 00:23:44,180
+is a minus three, somewhere,
+there possibly, column two.
+
+397
+00:23:44,180 --> 00:23:46,950
+And the third column has --
+
+398
+00:23:46,950 --> 00:23:52,760
+no zero minus one four,
+so how shall I draw that?
+
+399
+00:23:52,760 --> 00:23:57,000
+So this was the first component.
+
+400
+00:23:57,000 --> 00:23:59,230
+The second component
+was a minus one.
+
+401
+00:23:59,230 --> 00:24:01,270
+Maybe up here.
+
+402
+00:24:01,270 --> 00:24:08,921
+That's column three, that's the
+column zero minus one and four.
+
+403
+00:24:08,921 --> 00:24:09,420
+This guy.
+
+404
+00:24:12,050 --> 00:24:15,430
+So, again, what's my problem?
+
+405
+00:24:15,430 --> 00:24:18,260
+What this equation
+is asking me to do
+
+406
+00:24:18,260 --> 00:24:21,340
+is to combine
+these three vectors
+
+407
+00:24:21,340 --> 00:24:27,900
+with a right combination
+to produce this one.
+
+408
+00:24:27,900 --> 00:24:33,620
+Well, you can see what the
+right combination is, because
+
+409
+00:24:33,620 --> 00:24:38,250
+in this special problem,
+specially chosen
+
+410
+00:24:38,250 --> 00:24:42,780
+by the lecturer, that right-hand
+side that I'm trying to get
+
+411
+00:24:42,780 --> 00:24:45,060
+is actually one
+of these columns.
+
+412
+00:24:45,060 --> 00:24:46,660
+So I know how to get that one.
+
+413
+00:24:46,660 --> 00:24:48,420
+So what's the solution?
+
+414
+00:24:48,420 --> 00:24:50,910
+What combination will work?
+
+415
+00:24:50,910 --> 00:24:53,940
+I just want one of
+these and none of these.
+
+416
+00:24:53,940 --> 00:24:59,070
+So x should be zero, y
+should be zero and z should
+
+417
+00:24:59,070 --> 00:25:00,040
+be one.
+
+418
+00:25:02,860 --> 00:25:04,520
+That's the combination.
+
+419
+00:25:04,520 --> 00:25:07,600
+One of those is
+obviously the right one.
+
+420
+00:25:07,600 --> 00:25:09,870
+Column three is
+actually the same
+
+421
+00:25:09,870 --> 00:25:12,090
+as b in this particular problem.
+
+422
+00:25:15,640 --> 00:25:17,860
+I made it work
+that way just so we
+
+423
+00:25:17,860 --> 00:25:21,770
+would get an answer,
+(0,0,1), so somehow that's
+
+424
+00:25:21,770 --> 00:25:25,890
+the point where those
+three planes met
+
+425
+00:25:25,890 --> 00:25:28,710
+and I couldn't see it before.
+
+426
+00:25:28,710 --> 00:25:31,830
+Of course, I won't always be
+able to see it from the column
+
+427
+00:25:31,830 --> 00:25:33,170
+picture, either.
+
+428
+00:25:33,170 --> 00:25:39,390
+It's the next lecture, actually,
+which is about elimination,
+
+429
+00:25:39,390 --> 00:25:46,670
+which is the systematic
+way that everybody --
+
+430
+00:25:46,670 --> 00:25:51,950
+every bit of software, too --
+
+431
+00:25:51,950 --> 00:25:56,830
+production, large-scale software
+would solve the equations.
+
+432
+00:25:56,830 --> 00:25:59,020
+So the lecture that's coming up.
+
+433
+00:25:59,020 --> 00:26:02,450
+If I was to add that
+to the syllabus,
+
+434
+00:26:02,450 --> 00:26:09,050
+will be about how to find
+x, y, z in all cases.
+
+435
+00:26:09,050 --> 00:26:15,110
+Can I just think again,
+though, about the big picture?
+
+436
+00:26:15,110 --> 00:26:18,910
+By the big picture I mean
+let's keep this same matrix
+
+437
+00:26:18,910 --> 00:26:21,990
+on the left but
+imagine that we have
+
+438
+00:26:21,990 --> 00:26:24,250
+a different right-hand side.
+
+439
+00:26:24,250 --> 00:26:27,430
+Oh, let me take a
+different right-hand side.
+
+440
+00:26:27,430 --> 00:26:29,100
+So I'll change that
+right-hand side
+
+441
+00:26:29,100 --> 00:26:34,610
+to something that actually
+is also pretty special.
+
+442
+00:26:34,610 --> 00:26:36,810
+Let me change it to --
+
+443
+00:26:36,810 --> 00:26:38,940
+if I add those
+first two columns,
+
+444
+00:26:38,940 --> 00:26:43,220
+that would give me a one
+and a one and a minus three.
+
+445
+00:26:43,220 --> 00:26:46,210
+There's a very special
+right-hand side.
+
+446
+00:26:46,210 --> 00:26:51,420
+I just cooked it up by
+adding this one to this one.
+
+447
+00:26:51,420 --> 00:26:54,640
+Now, what's the solution with
+this new right-hand side?
+
+448
+00:26:54,640 --> 00:26:58,960
+The solution with this new
+right-hand side is clear.
+
+449
+00:26:58,960 --> 00:27:04,880
+took one of these
+and none of those.
+
+450
+00:27:04,880 --> 00:27:08,030
+So actually, it just
+changed around to this
+
+451
+00:27:08,030 --> 00:27:11,150
+when I took this
+new right-hand side.
+
+452
+00:27:11,150 --> 00:27:12,010
+Okay.
+
+453
+00:27:12,010 --> 00:27:19,070
+So in the row picture, I
+have three different planes,
+
+454
+00:27:19,070 --> 00:27:23,800
+three new planes meeting
+now at this point.
+
+455
+00:27:23,800 --> 00:27:27,000
+In the column picture, I
+have the same three columns,
+
+456
+00:27:27,000 --> 00:27:30,640
+but now I'm combining
+them to produce this guy,
+
+457
+00:27:30,640 --> 00:27:34,100
+and it turned out that column
+one plus column two which would
+
+458
+00:27:34,100 --> 00:27:38,500
+be somewhere -- there
+is the right column --
+
+459
+00:27:38,500 --> 00:27:42,260
+one of this and one of this
+would give me the new b.
+
+460
+00:27:45,190 --> 00:27:45,690
+Okay.
+
+461
+00:27:45,690 --> 00:27:48,730
+So we squeezed in
+an extra example.
+
+462
+00:27:48,730 --> 00:27:55,970
+But now think about all
+bs, all right-hand sides.
+
+463
+00:27:55,970 --> 00:27:58,920
+Can I solve these equations
+for every right-hand side?
+
+464
+00:28:02,030 --> 00:28:04,980
+Can I ask that question?
+
+465
+00:28:04,980 --> 00:28:07,020
+So that's the algebra question.
+
+466
+00:28:07,020 --> 00:28:11,870
+Can I solve A x=b for every b?
+
+467
+00:28:11,870 --> 00:28:13,490
+Let me write that down.
+
+468
+00:28:13,490 --> 00:28:24,320
+Can I solve A x =b for
+every right-hand side b?
+
+469
+00:28:24,320 --> 00:28:26,420
+I mean, is there a solution?
+
+470
+00:28:26,420 --> 00:28:29,670
+And then, if there
+is, elimination
+
+471
+00:28:29,670 --> 00:28:31,940
+will give me a way to find it.
+
+472
+00:28:31,940 --> 00:28:34,520
+I really wanted to ask,
+is there a solution
+
+473
+00:28:34,520 --> 00:28:36,850
+for every right-hand side?
+
+474
+00:28:36,850 --> 00:28:40,390
+So now, can I put that
+in different words --
+
+475
+00:28:40,390 --> 00:28:43,140
+in this linear
+combination words?
+
+476
+00:28:43,140 --> 00:28:52,510
+So in linear combination words,
+do the linear combinations
+
+477
+00:28:52,510 --> 00:29:03,060
+of the columns fill
+three dimensional space?
+
+478
+00:29:05,740 --> 00:29:12,500
+Every b means all the bs
+in three dimensional space.
+
+479
+00:29:12,500 --> 00:29:16,050
+Do you see that I'm just
+asking the same question
+
+480
+00:29:16,050 --> 00:29:19,600
+in different words?
+
+481
+00:29:19,600 --> 00:29:21,040
+Solving A x --
+
+482
+00:29:21,040 --> 00:29:25,020
+A x -- that's very important.
+
+483
+00:29:25,020 --> 00:29:31,790
+A times x -- when I multiply
+a matrix by a vector,
+
+484
+00:29:31,790 --> 00:29:34,940
+I get a combination
+of the columns.
+
+485
+00:29:34,940 --> 00:29:38,650
+I'll write that
+down in a moment.
+
+486
+00:29:38,650 --> 00:29:43,550
+But in my column picture,
+that's really what I'm doing.
+
+487
+00:29:43,550 --> 00:29:47,080
+I'm taking linear combinations
+of these three columns
+
+488
+00:29:47,080 --> 00:29:50,620
+and I'm trying to find b.
+
+489
+00:29:50,620 --> 00:29:57,750
+And, actually, the answer
+for this matrix will be yes.
+
+490
+00:29:57,750 --> 00:30:04,330
+For this matrix A -- for these
+columns, the answer is yes.
+
+491
+00:30:04,330 --> 00:30:19,590
+This matrix -- that I chose for
+an example is a good matrix.
+
+492
+00:30:19,590 --> 00:30:21,780
+A non-singular matrix.
+
+493
+00:30:21,780 --> 00:30:23,180
+An invertible matrix.
+
+494
+00:30:23,180 --> 00:30:26,700
+Those will be the matrices
+that we like best.
+
+495
+00:30:26,700 --> 00:30:29,490
+There could be other --
+
+496
+00:30:29,490 --> 00:30:35,070
+and we will see other matrices
+where the answer becomes, no --
+
+497
+00:30:35,070 --> 00:30:38,320
+oh, actually, you can see
+when it would become no.
+
+498
+00:30:38,320 --> 00:30:43,890
+What could go wrong? find out
+-- because if elimination fails,
+
+499
+00:30:43,890 --> 00:30:46,820
+How could it go wrong
+that out of these --
+
+500
+00:30:46,820 --> 00:30:51,310
+out of three columns and
+all their combinations --
+
+501
+00:30:51,310 --> 00:30:58,390
+when would I not be able
+to produce some b off here?
+
+502
+00:30:58,390 --> 00:31:00,610
+When could it go wrong?
+
+503
+00:31:00,610 --> 00:31:04,350
+Do you see that
+the combinations --
+
+504
+00:31:04,350 --> 00:31:06,370
+let me say when it goes wrong.
+
+505
+00:31:06,370 --> 00:31:12,310
+If these three columns
+all lie in the same plane,
+
+506
+00:31:12,310 --> 00:31:18,110
+then their combinations
+will lie in that same plane.
+
+507
+00:31:18,110 --> 00:31:19,640
+So then we're in trouble.
+
+508
+00:31:19,640 --> 00:31:23,880
+If the three columns
+of my matrix --
+
+509
+00:31:23,880 --> 00:31:28,180
+if those three vectors happen
+to lie in the same plane --
+
+510
+00:31:28,180 --> 00:31:31,090
+for example, if
+column three is just
+
+511
+00:31:31,090 --> 00:31:36,360
+the sum of column one and column
+two, I would be in trouble.
+
+512
+00:31:36,360 --> 00:31:40,060
+That would be a matrix A
+where the answer would be no,
+
+513
+00:31:40,060 --> 00:31:44,360
+because the combinations --
+
+514
+00:31:44,360 --> 00:31:48,260
+if column three is in the same
+plane as column one and two,
+
+515
+00:31:48,260 --> 00:31:50,250
+I don't get anything
+new from that.
+
+516
+00:31:50,250 --> 00:31:54,610
+All the combinations are in the
+plane and only right-hand sides
+
+517
+00:31:54,610 --> 00:32:00,010
+b that I could get would
+be the ones in that plane.
+
+518
+00:32:00,010 --> 00:32:03,680
+So I could solve it for
+some right-hand sides, when
+
+519
+00:32:03,680 --> 00:32:08,320
+b is in the plane, but
+most right-hand sides
+
+520
+00:32:08,320 --> 00:32:11,270
+would be out of the
+plane and unreachable.
+
+521
+00:32:11,270 --> 00:32:14,190
+So that would be
+a singular case.
+
+522
+00:32:14,190 --> 00:32:16,830
+The matrix would
+be not invertible.
+
+523
+00:32:16,830 --> 00:32:19,810
+There would not be a
+solution for every b.
+
+524
+00:32:19,810 --> 00:32:22,511
+The answer would
+become no for that.
+
+525
+00:32:22,511 --> 00:32:23,010
+Okay.
+
+526
+00:32:25,740 --> 00:32:27,040
+I don't know --
+
+527
+00:32:27,040 --> 00:32:29,190
+shall we take just a
+little shot at thinking
+
+528
+00:32:29,190 --> 00:32:34,510
+about nine dimensions?
+
+529
+00:32:34,510 --> 00:32:38,645
+Imagine that we have vectors
+with nine components.
+
+530
+00:32:41,170 --> 00:32:44,920
+Well, it's going to be
+hard to visualize those.
+
+531
+00:32:44,920 --> 00:32:46,800
+I don't pretend to do it.
+
+532
+00:32:46,800 --> 00:32:51,950
+But somehow, pretend you do.
+
+533
+00:32:51,950 --> 00:32:55,610
+Pretend we have -- if this
+was nine equations and nine
+
+534
+00:32:55,610 --> 00:32:59,260
+unknowns, then we would
+have nine columns,
+
+535
+00:32:59,260 --> 00:33:02,720
+and each one would be a vector
+in nine-dimensional space
+
+536
+00:33:02,720 --> 00:33:06,930
+and we would be looking at
+their linear combinations.
+
+537
+00:33:06,930 --> 00:33:09,340
+So we would be having
+the linear combinations
+
+538
+00:33:09,340 --> 00:33:12,320
+of nine vectors in
+nine-dimensional space,
+
+539
+00:33:12,320 --> 00:33:15,380
+and we would be trying to
+find the combination that hit
+
+540
+00:33:15,380 --> 00:33:18,000
+the correct right-hand side b.
+
+541
+00:33:18,000 --> 00:33:22,990
+And we might also ask the
+question can we always do it?
+
+542
+00:33:22,990 --> 00:33:25,380
+Can we get every
+right-hand side b?
+
+543
+00:33:25,380 --> 00:33:29,840
+And certainly it will depend
+on those nine columns.
+
+544
+00:33:29,840 --> 00:33:32,480
+Sometimes the answer
+will be yes --
+
+545
+00:33:32,480 --> 00:33:35,500
+if I picked a random matrix,
+it would be yes, actually.
+
+546
+00:33:35,500 --> 00:33:39,630
+If I used MatLab and just used
+the random command, picked
+
+547
+00:33:39,630 --> 00:33:44,820
+out a nine by nine matrix,
+I guarantee it would be
+
+548
+00:33:44,820 --> 00:33:45,320
+good.
+
+549
+00:33:45,320 --> 00:33:47,140
+It would be
+non-singular, it would
+
+550
+00:33:47,140 --> 00:33:49,270
+be invertible, all beautiful.
+
+551
+00:33:49,270 --> 00:34:00,750
+But if I choose those columns
+so that they're not independent,
+
+552
+00:34:00,750 --> 00:34:05,790
+so that the ninth column is
+the same as the eighth column,
+
+553
+00:34:05,790 --> 00:34:09,020
+then it contributes
+nothing new and there
+
+554
+00:34:09,020 --> 00:34:13,080
+would be right-hand sides
+b that I couldn't get.
+
+555
+00:34:13,080 --> 00:34:18,210
+Can you sort of think
+about nine vectors
+
+556
+00:34:18,210 --> 00:34:22,050
+in nine-dimensional space
+an take their combinations?
+
+557
+00:34:22,050 --> 00:34:26,460
+That's really the
+central thought --
+
+558
+00:34:26,460 --> 00:34:30,920
+that you get kind of used
+to in linear algebra.
+
+559
+00:34:30,920 --> 00:34:33,340
+Even though you can't
+really visualize it,
+
+560
+00:34:33,340 --> 00:34:36,139
+you sort of think you
+can after a while.
+
+561
+00:34:36,139 --> 00:34:40,830
+Those nine columns and
+all their combinations
+
+562
+00:34:40,830 --> 00:34:45,030
+may very well fill out the
+whole nine-dimensional space.
+
+563
+00:34:45,030 --> 00:34:48,239
+But if the ninth column happened
+to be the same as the eighth
+
+564
+00:34:48,239 --> 00:34:51,090
+column and gave nothing new,
+then probably what it would
+
+565
+00:34:51,090 --> 00:34:53,102
+fill out would be --
+
+566
+00:34:55,820 --> 00:35:03,070
+I hesitate even to say this --
+it would be a sort of a plane
+
+567
+00:35:03,070 --> 00:35:04,320
+--
+
+568
+00:35:04,320 --> 00:35:10,030
+an eight dimensional plane
+inside nine-dimensional space.
+
+569
+00:35:10,030 --> 00:35:12,890
+And it's those eight
+dimensional planes
+
+570
+00:35:12,890 --> 00:35:16,040
+inside nine-dimensional
+space that we
+
+571
+00:35:16,040 --> 00:35:18,830
+have to work with eventually.
+
+572
+00:35:18,830 --> 00:35:25,970
+For now, let's stay with a nice
+case where the matrices work,
+
+573
+00:35:25,970 --> 00:35:29,980
+we can get every
+right-hand side b and here
+
+574
+00:35:29,980 --> 00:35:32,350
+we see how to do
+it with columns.
+
+575
+00:35:32,350 --> 00:35:33,160
+Okay.
+
+576
+00:35:33,160 --> 00:35:36,520
+There was one step
+which I realized
+
+577
+00:35:36,520 --> 00:35:41,210
+I was saying in words that I
+now want to write in letters.
+
+578
+00:35:41,210 --> 00:35:45,750
+Because I'm coming back to the
+matrix form of the equation,
+
+579
+00:35:45,750 --> 00:35:49,210
+so let me write it here.
+
+580
+00:35:49,210 --> 00:35:54,270
+The matrix form of my
+equation, of my system
+
+581
+00:35:54,270 --> 00:35:57,970
+is some matrix A
+times some vector x
+
+582
+00:35:57,970 --> 00:36:00,920
+equals some right-hand side b.
+
+583
+00:36:00,920 --> 00:36:01,950
+Okay.
+
+584
+00:36:01,950 --> 00:36:03,450
+So this is a multiplication.
+
+585
+00:36:03,450 --> 00:36:04,520
+A times x.
+
+586
+00:36:04,520 --> 00:36:07,430
+Matrix times vector,
+and I just want to say
+
+587
+00:36:07,430 --> 00:36:11,620
+how do you multiply
+a matrix by a vector?
+
+588
+00:36:11,620 --> 00:36:16,550
+Okay, so I'm just going
+to create a matrix --
+
+589
+00:36:16,550 --> 00:36:21,640
+let me take two
+five one three --
+
+590
+00:36:21,640 --> 00:36:28,140
+and let me take a vector
+x to be, say, 1and 2.
+
+591
+00:36:28,140 --> 00:36:31,500
+How do I multiply a
+matrix by a vector?
+
+592
+00:36:34,150 --> 00:36:40,530
+But just think a little
+bit about matrix notation
+
+593
+00:36:40,530 --> 00:36:42,120
+and how to do that
+in multiplication.
+
+594
+00:36:42,120 --> 00:36:45,390
+So let me say how I multiply
+a matrix by a vector.
+
+595
+00:36:45,390 --> 00:36:47,760
+Actually, there are
+two ways to do it.
+
+596
+00:36:47,760 --> 00:36:50,430
+Let me tell you my favorite way.
+
+597
+00:36:50,430 --> 00:36:52,770
+It's columns again.
+
+598
+00:36:52,770 --> 00:36:54,720
+It's a column at a time.
+
+599
+00:36:54,720 --> 00:36:57,980
+For me, this matrix
+multiplication
+
+600
+00:36:57,980 --> 00:37:03,290
+says I take one of that column
+and two of that column and add.
+
+601
+00:37:03,290 --> 00:37:06,770
+So this is the way
+I would think of it
+
+602
+00:37:06,770 --> 00:37:12,820
+is one of the first column
+and two of the second column
+
+603
+00:37:12,820 --> 00:37:17,300
+and let's just see what we get.
+
+604
+00:37:17,300 --> 00:37:21,510
+So in the first component
+I'm getting a two and a ten.
+
+605
+00:37:21,510 --> 00:37:23,470
+I'm getting a twelve there.
+
+606
+00:37:23,470 --> 00:37:26,220
+In the second component I'm
+getting a one and a six,
+
+607
+00:37:26,220 --> 00:37:27,860
+I'm getting a seven.
+
+608
+00:37:27,860 --> 00:37:35,460
+So that matrix times that
+vector is twelve seven.
+
+609
+00:37:35,460 --> 00:37:39,207
+Now, you could do
+that another way.
+
+610
+00:37:39,207 --> 00:37:40,540
+You could do it a row at a time.
+
+611
+00:37:40,540 --> 00:37:43,760
+And you would get this twelve --
+and actually I pretty much did
+
+612
+00:37:43,760 --> 00:37:44,970
+it here --
+
+613
+00:37:44,970 --> 00:37:45,710
+this way.
+
+614
+00:37:45,710 --> 00:37:48,470
+Two -- I could take that
+row times my vector.
+
+615
+00:37:48,470 --> 00:37:53,180
+This is the idea
+of a dot product.
+
+616
+00:37:53,180 --> 00:37:58,140
+This vector times this vector,
+two times one plus five times
+
+617
+00:37:58,140 --> 00:38:00,720
+two is the twelve.
+
+618
+00:38:00,720 --> 00:38:04,610
+This vector times this vector --
+one times one plus three times
+
+619
+00:38:04,610 --> 00:38:06,000
+two is the seven.
+
+620
+00:38:06,000 --> 00:38:11,810
+So I can do it by rows,
+and in each row times
+
+621
+00:38:11,810 --> 00:38:16,360
+my x is what I'll later
+call a dot product.
+
+622
+00:38:16,360 --> 00:38:19,430
+But I also like to
+see it by columns.
+
+623
+00:38:19,430 --> 00:38:22,490
+I see this as a linear
+combination of a column.
+
+624
+00:38:22,490 --> 00:38:24,130
+So here's my point.
+
+625
+00:38:24,130 --> 00:38:36,180
+A times x is a combination
+of the columns of A.
+
+626
+00:38:36,180 --> 00:38:43,650
+That's how I hope you will
+think of A times x when we need
+
+627
+00:38:43,650 --> 00:38:44,150
+it.
+
+628
+00:38:44,150 --> 00:38:47,230
+Right now we've got
+-- with small ones,
+
+629
+00:38:47,230 --> 00:38:51,390
+we can always do it in
+different ways, but later,
+
+630
+00:38:51,390 --> 00:38:53,930
+think of it that way.
+
+631
+00:38:53,930 --> 00:38:54,480
+Okay.
+
+632
+00:38:54,480 --> 00:39:02,020
+So that's the picture
+for a two by two system.
+
+633
+00:39:02,020 --> 00:39:05,970
+And if the right-hand side B
+happened to be twelve seven,
+
+634
+00:39:05,970 --> 00:39:12,110
+then of course the correct
+solution would be one two.
+
+635
+00:39:12,110 --> 00:39:12,610
+Okay.
+
+636
+00:39:12,610 --> 00:39:17,950
+So let me come back next
+time to a systematic way,
+
+637
+00:39:17,950 --> 00:39:23,470
+using elimination,
+to find the solution,
+
+638
+00:39:23,470 --> 00:39:29,810
+if there is one, to a
+system of any size and

@@ -1,0 +1,3709 @@
+1
+00:00:09,720 --> 00:00:12,130
+OK, this is quiz review day.
+
+2
+00:00:12,130 --> 00:00:17,750
+The quiz coming up on
+Wednesday will before this
+
+3
+00:00:17,750 --> 00:00:22,520
+lecture the quiz will be this
+hour one o'clock Wednesday
+
+4
+00:00:22,520 --> 00:00:27,740
+in Walker, top floor of Walker,
+closed book, all normal.
+
+5
+00:00:27,740 --> 00:00:33,760
+I wrote down what we've
+covered in this second part
+
+6
+00:00:33,760 --> 00:00:38,830
+of the course, and actually
+I'm impressed as I write it.
+
+7
+00:00:38,830 --> 00:00:42,250
+so that's chapter
+four on orthogonality
+
+8
+00:00:42,250 --> 00:00:45,790
+and you're remembering these --
+
+9
+00:00:45,790 --> 00:00:50,530
+what this is suggesting,
+these are those columns are
+
+10
+00:00:50,530 --> 00:00:56,810
+orthonormal vectors, and then
+we call that matrix Q and the --
+
+11
+00:00:56,810 --> 00:01:01,270
+what's the key -- how do we
+state the fact that those v-
+
+12
+00:01:01,270 --> 00:01:04,989
+those columns are
+orthonormal in terms of Q,
+
+13
+00:01:04,989 --> 00:01:11,920
+it means that Q transpose
+Q is the identity.
+
+14
+00:01:11,920 --> 00:01:15,480
+So that's the matrix
+statement of the --
+
+15
+00:01:15,480 --> 00:01:18,930
+of the property that the
+columns are orthonormal,
+
+16
+00:01:18,930 --> 00:01:21,710
+the dot products are
+either one or zero,
+
+17
+00:01:21,710 --> 00:01:30,160
+and then we computed the
+projections onto lines and onto
+
+18
+00:01:30,160 --> 00:01:35,920
+subspaces, and we used that
+to solve problems Ax=b in --
+
+19
+00:01:35,920 --> 00:01:38,800
+in the least square sense,
+when there was no solution,
+
+20
+00:01:38,800 --> 00:01:40,640
+we found the best solution.
+
+21
+00:01:40,640 --> 00:01:43,530
+And then finally this
+Graham-Schmidt idea,
+
+22
+00:01:43,530 --> 00:01:50,790
+which takes independent vectors
+and lines them up, takes --
+
+23
+00:01:50,790 --> 00:01:54,000
+subtracts off the
+projections of the part
+
+24
+00:01:54,000 --> 00:01:58,390
+you've already done, so that
+the new part is orthogonal
+
+25
+00:01:58,390 --> 00:02:03,850
+and so it takes a basis
+to an orthonormal basis.
+
+26
+00:02:03,850 --> 00:02:07,440
+And you -- those calculations
+involve square roots a lot
+
+27
+00:02:07,440 --> 00:02:11,300
+because you're making
+things unit vectors,
+
+28
+00:02:11,300 --> 00:02:13,440
+but you should know that step.
+
+29
+00:02:13,440 --> 00:02:16,540
+OK, for determinants,
+the three big --
+
+30
+00:02:16,540 --> 00:02:19,720
+the big picture is the
+properties of the determinant,
+
+31
+00:02:19,720 --> 00:02:24,020
+one to three d- properties
+one, two and three, d-
+
+32
+00:02:24,020 --> 00:02:27,590
+that define the determinant,
+and then four, five,
+
+33
+00:02:27,590 --> 00:02:31,110
+six through ten
+were consequences.
+
+34
+00:02:31,110 --> 00:02:35,330
+Then the big formula that has
+n factorial terms, half of them
+
+35
+00:02:35,330 --> 00:02:38,350
+have plus signs and half
+minus signs, and then
+
+36
+00:02:38,350 --> 00:02:40,420
+the cofactor formula.
+
+37
+00:02:40,420 --> 00:02:46,240
+So and which led us to a
+formula for the inverse.
+
+38
+00:02:46,240 --> 00:02:48,780
+And finally, just
+so you know what's
+
+39
+00:02:48,780 --> 00:02:53,550
+covered in from chapter
+three, it's section six point
+
+40
+00:02:53,550 --> 00:02:58,920
+one and two, so that's the
+basic idea of eigenvalues
+
+41
+00:02:58,920 --> 00:03:02,660
+and eigenvectors, the
+equation for the eigenvalues,
+
+42
+00:03:02,660 --> 00:03:07,800
+the mechanical step, this
+is really Ax equal lambda
+
+43
+00:03:07,800 --> 00:03:11,450
+x for all n
+eigenvectors at once,
+
+44
+00:03:11,450 --> 00:03:14,480
+if we have n independent
+eigenvectors,
+
+45
+00:03:14,480 --> 00:03:18,520
+and then using that to
+compute powers of a matrix.
+
+46
+00:03:18,520 --> 00:03:22,430
+So you notice the differential
+equations not on this list,
+
+47
+00:03:22,430 --> 00:03:28,390
+because that's six point three,
+that that's for the third quiz.
+
+48
+00:03:28,390 --> 00:03:30,330
+OK.
+
+49
+00:03:30,330 --> 00:03:36,140
+Shall I what I usually do for
+review is to take an old exam
+
+50
+00:03:36,140 --> 00:03:40,720
+and just try to pick out
+questions that are significant
+
+51
+00:03:40,720 --> 00:03:44,070
+and write them quickly
+on the board, shall I --
+
+52
+00:03:44,070 --> 00:03:46,210
+shall I proceed that way again?
+
+53
+00:03:46,210 --> 00:03:51,650
+This -- this exam is really old.
+
+54
+00:03:51,650 --> 00:03:54,770
+November nineteen --
+nineteen eighty-four,
+
+55
+00:03:54,770 --> 00:03:59,850
+so that was before
+the Web existed.
+
+56
+00:03:59,850 --> 00:04:04,760
+So not only were the
+lectures not on the Web,
+
+57
+00:04:04,760 --> 00:04:07,260
+nobody even had a
+Web page, my God.
+
+58
+00:04:07,260 --> 00:04:10,760
+OK, so can I nevertheless
+linear algebra
+
+59
+00:04:10,760 --> 00:04:14,530
+was still as great as ever.
+
+60
+00:04:14,530 --> 00:04:22,290
+So may I and that wasn't meant
+to be a joke, OK, all right,
+
+61
+00:04:22,290 --> 00:04:25,575
+so let me just take these
+questions as they come.
+
+62
+00:04:28,420 --> 00:04:28,930
+All right.
+
+63
+00:04:28,930 --> 00:04:30,260
+OK.
+
+64
+00:04:30,260 --> 00:04:32,460
+So the first question's
+about projections.
+
+65
+00:04:32,460 --> 00:04:35,670
+It says we're given
+the line, the --
+
+66
+00:04:35,670 --> 00:04:39,930
+the vector a is the
+vector two, one, two,
+
+67
+00:04:39,930 --> 00:04:44,320
+and I want to find the
+projection matrix P that
+
+68
+00:04:44,320 --> 00:04:46,900
+projects onto the
+line through a.
+
+69
+00:04:46,900 --> 00:04:51,510
+So my picture is, well I'm in
+three dimensions, of course,
+
+70
+00:04:51,510 --> 00:04:55,710
+so there's a vector, two --
+there's the vector a, two, one,
+
+71
+00:04:55,710 --> 00:04:59,210
+two, let me draw the
+whole line through it,
+
+72
+00:04:59,210 --> 00:05:05,690
+and I want to project any
+vector b onto that line,
+
+73
+00:05:05,690 --> 00:05:08,490
+and I'm looking for
+the projection matrix.
+
+74
+00:05:08,490 --> 00:05:12,360
+So -- so this -- the projection
+matrix is the matrix that I
+
+75
+00:05:12,360 --> 00:05:15,320
+multiply b by to get here.
+
+76
+00:05:15,320 --> 00:05:19,260
+And I guess this first
+part, this is just part one
+
+77
+00:05:19,260 --> 00:05:23,860
+a, I'm really asking you the
+-- the quick way to answer,
+
+78
+00:05:23,860 --> 00:05:28,600
+to find P, is just to
+remember what the formula is.
+
+79
+00:05:28,600 --> 00:05:31,740
+And -- and we're in -- we're
+projecting onto a line,
+
+80
+00:05:31,740 --> 00:05:37,800
+so our formula, our -- our
+usual formula is AA transpose A
+
+81
+00:05:37,800 --> 00:05:43,800
+inverse A transpose, but
+now A is just a column,
+
+82
+00:05:43,800 --> 00:05:49,920
+one-column matrix, so it'll be
+just a, so I'll just call it
+
+83
+00:05:49,920 --> 00:05:53,850
+little a, little a transpose,
+and this is just a number now,
+
+84
+00:05:53,850 --> 00:05:56,970
+one by one, so I can put
+it in the denominator,
+
+85
+00:05:56,970 --> 00:05:58,950
+so there's our --
+
+86
+00:05:58,950 --> 00:06:01,560
+that's really what we
+want to remember, and --
+
+87
+00:06:01,560 --> 00:06:05,490
+and using that two, one,
+two, what will I get?
+
+88
+00:06:05,490 --> 00:06:08,280
+I'm dividing by --
+
+89
+00:06:08,280 --> 00:06:12,020
+what's the length
+squared of that vector?
+
+90
+00:06:12,020 --> 00:06:13,970
+So what's a transpose a?
+
+91
+00:06:13,970 --> 00:06:18,370
+Looks like nine, and what's
+the matrix, well, I'm --
+
+92
+00:06:18,370 --> 00:06:21,580
+I'm doing two, one,
+two against two,
+
+93
+00:06:21,580 --> 00:06:28,520
+one, two, so it's one-ninth of
+this matrix four, two, four,
+
+94
+00:06:28,520 --> 00:06:30,790
+two, one, two, four, two, four.
+
+95
+00:06:34,250 --> 00:06:37,410
+Now the next part asked
+about eigenvalues.
+
+96
+00:06:37,410 --> 00:06:39,450
+So you see we're --
+since we're learning,
+
+97
+00:06:39,450 --> 00:06:43,070
+we know a lot more now, we can
+make connections between these
+
+98
+00:06:43,070 --> 00:06:47,880
+chapters, so what's
+the eigenvector,
+
+99
+00:06:47,880 --> 00:06:50,200
+what are the eigenvalues of P?
+
+100
+00:06:50,200 --> 00:06:53,140
+I could ask what's
+the rank of P. What's
+
+101
+00:06:53,140 --> 00:06:55,860
+the rank of that matrix?
+
+102
+00:06:55,860 --> 00:06:58,120
+Uh -- one.
+
+103
+00:06:58,120 --> 00:06:59,410
+Rank is one.
+
+104
+00:06:59,410 --> 00:07:01,780
+What's the column space?
+
+105
+00:07:01,780 --> 00:07:06,780
+If I apply P to all vectors
+then I fill up the column space,
+
+106
+00:07:06,780 --> 00:07:09,650
+it's combinations of the
+columns, so what's the column
+
+107
+00:07:09,650 --> 00:07:10,880
+space?
+
+108
+00:07:10,880 --> 00:07:13,370
+Well, it's just this line.
+
+109
+00:07:13,370 --> 00:07:17,310
+The column space is the
+line through two, one, two.
+
+110
+00:07:17,310 --> 00:07:20,770
+And now what's the eigenvalue?
+
+111
+00:07:20,770 --> 00:07:24,090
+So, or since that
+matrix has rank one,
+
+112
+00:07:24,090 --> 00:07:26,750
+so tell me the eigenvalues
+of this matrix.
+
+113
+00:07:29,330 --> 00:07:31,330
+It's a singular
+matrix, so it certainly
+
+114
+00:07:31,330 --> 00:07:34,970
+has an eigenvalue zero.
+
+115
+00:07:34,970 --> 00:07:39,470
+Actually, the rank
+is only one, so that
+
+116
+00:07:39,470 --> 00:07:42,720
+means that there
+like going to be
+
+117
+00:07:42,720 --> 00:07:48,120
+t- a two-dimensional null
+space, there'll be at least two,
+
+118
+00:07:48,120 --> 00:07:50,990
+this lambda equals zero
+will be repeated twice
+
+119
+00:07:50,990 --> 00:07:55,630
+because I can find two
+independent eigenvectors
+
+120
+00:07:55,630 --> 00:07:58,740
+with lambda equals zero, and
+then of course since it's
+
+121
+00:07:58,740 --> 00:08:02,370
+got three eigenvalues,
+what's the third one?
+
+122
+00:08:02,370 --> 00:08:03,300
+It's one.
+
+123
+00:08:03,300 --> 00:08:05,080
+How do I know it's one?
+
+124
+00:08:05,080 --> 00:08:09,640
+Either from the trace, which is
+nine over nine, which is one,
+
+125
+00:08:09,640 --> 00:08:13,810
+or by remembering what --
+
+126
+00:08:13,810 --> 00:08:16,350
+what is the eigenvector,
+and actually now
+
+127
+00:08:16,350 --> 00:08:18,350
+it's going to ask
+for the eigenvector,
+
+128
+00:08:18,350 --> 00:08:21,545
+so what's the eigenvector
+for that eigenvalue?
+
+129
+00:08:24,150 --> 00:08:28,310
+What's the eigenvector
+for that eigenvalue?
+
+130
+00:08:28,310 --> 00:08:35,020
+It's the -- it's the vector that
+doesn't move, eigenvalue one,
+
+131
+00:08:35,020 --> 00:08:37,460
+so the vector that doesn't move
+
+132
+00:08:37,460 --> 00:08:38,630
+is a.
+
+133
+00:08:38,630 --> 00:08:41,390
+This a is the --
+
+134
+00:08:41,390 --> 00:08:47,040
+is -- is also the eigenvector
+with lambda equal one,
+
+135
+00:08:47,040 --> 00:08:51,250
+because if I apply the
+projection matrix to a, I get
+
+136
+00:08:51,250 --> 00:08:52,290
+a again.
+
+137
+00:08:52,290 --> 00:08:55,580
+Everybody sees that if I apply
+that matrix to a, can I do it
+
+138
+00:08:55,580 --> 00:08:59,380
+in little letters, if I
+apply that matrix to a,
+
+139
+00:08:59,380 --> 00:09:02,320
+then I have a transpose
+a canceling a transpose a
+
+140
+00:09:02,320 --> 00:09:04,190
+and I get a again.
+
+141
+00:09:04,190 --> 00:09:06,720
+So sure enough, Pa equals a.
+
+142
+00:09:09,620 --> 00:09:12,220
+And the eigenvalue is one.
+
+143
+00:09:12,220 --> 00:09:13,350
+OK.
+
+144
+00:09:13,350 --> 00:09:16,140
+Good.
+
+145
+00:09:16,140 --> 00:09:22,840
+now, actually it asks
+you further to solve this
+
+146
+00:09:22,840 --> 00:09:27,200
+difference equation, so
+this will be -- this is --
+
+147
+00:09:27,200 --> 00:09:36,030
+this is solve u(k+1)=Puk,
+starting from u0 equal nine,
+
+148
+00:09:36,030 --> 00:09:36,655
+nine, zero.
+
+149
+00:09:39,590 --> 00:09:41,740
+And find uk.
+
+150
+00:09:44,380 --> 00:09:49,950
+So -- so what's up?
+
+151
+00:09:49,950 --> 00:09:53,140
+Shall we find u1 first of all?
+
+152
+00:09:53,140 --> 00:09:55,870
+So just to get started.
+
+153
+00:09:55,870 --> 00:09:57,780
+So what is u1?
+
+154
+00:09:57,780 --> 00:10:01,570
+It's Pu0 of course.
+
+155
+00:10:01,570 --> 00:10:04,480
+So if I do the projection of --
+
+156
+00:10:04,480 --> 00:10:10,020
+of this vector onto the line,
+so this is like my vector b now
+
+157
+00:10:10,020 --> 00:10:12,070
+that I'm projecting
+onto the line,
+
+158
+00:10:12,070 --> 00:10:19,410
+I get a times a transpose
+u0 over a transpose a.
+
+159
+00:10:19,410 --> 00:10:23,080
+Well, one way or another I
+just do this multiplication.
+
+160
+00:10:23,080 --> 00:10:26,100
+but maybe this is the
+easiest way to do it.
+
+161
+00:10:26,100 --> 00:10:29,530
+a transpose, can I
+remember what a is on
+
+162
+00:10:29,530 --> 00:10:30,340
+this board?
+
+163
+00:10:30,340 --> 00:10:37,110
+Two, one, two, so I'm projecting
+onto the line through there.
+
+164
+00:10:37,110 --> 00:10:41,450
+This is the projection,
+it's P times the vector u0,
+
+165
+00:10:41,450 --> 00:10:44,590
+so what do I have for a
+transpose u0 looks like
+
+166
+00:10:44,590 --> 00:10:47,000
+eighteen, looks
+like twenty-seven,
+
+167
+00:10:47,000 --> 00:10:50,140
+and a transpose a
+we figured was nine,
+
+168
+00:10:50,140 --> 00:10:57,790
+so it's three a, so that this
+is the -- this is the x hat,
+
+169
+00:10:57,790 --> 00:11:00,870
+the -- the multiple of
+a, in -- in our formulas,
+
+170
+00:11:00,870 --> 00:11:03,162
+and of course that's
+six, three, six.
+
+171
+00:11:06,650 --> 00:11:08,320
+So that's u1.
+
+172
+00:11:08,320 --> 00:11:11,500
+Computed out directly.
+
+173
+00:11:11,500 --> 00:11:17,530
+That's on the line through a and
+it's the closest point to u0,
+
+174
+00:11:17,530 --> 00:11:19,600
+and it's just Pu0.
+
+175
+00:11:19,600 --> 00:11:23,070
+You just straightforward
+multiplication produces that.
+
+176
+00:11:23,070 --> 00:11:23,620
+OK.
+
+177
+00:11:23,620 --> 00:11:25,300
+Now, what's u2?
+
+178
+00:11:28,420 --> 00:11:31,310
+Well, u2 is Pu1, I agree.
+
+179
+00:11:31,310 --> 00:11:32,750
+Do I need to compute that again?
+
+180
+00:11:35,540 --> 00:11:41,730
+No, because once I'm already on
+the line through A, uk will be,
+
+181
+00:11:41,730 --> 00:11:45,220
+I could do the
+projection k times,
+
+182
+00:11:45,220 --> 00:11:47,635
+but it's enough
+just to do it once.
+
+183
+00:11:50,380 --> 00:11:53,570
+It's the same, it's the
+same, six, three, six.
+
+184
+00:11:53,570 --> 00:11:59,780
+So this is a case
+where I could and --
+
+185
+00:11:59,780 --> 00:12:03,620
+and actually on the quiz
+if you see one of these,
+
+186
+00:12:03,620 --> 00:12:09,360
+which could very well be there,
+and it could very well be not
+
+187
+00:12:09,360 --> 00:12:16,120
+a projection matrix, then we
+would use all the eigenvalues
+
+188
+00:12:16,120 --> 00:12:16,940
+and eigenvectors.
+
+189
+00:12:16,940 --> 00:12:19,790
+Let's think for a moment,
+how do you do those?
+
+190
+00:12:19,790 --> 00:12:24,400
+M - the point of this small part
+of a question was that when P
+
+191
+00:12:24,400 --> 00:12:28,900
+is a projection matrix, so that
+P squared equals P and P cubed
+
+192
+00:12:28,900 --> 00:12:33,600
+equals P, then -- then we don't
+need to get into the mechanics
+
+193
+00:12:33,600 --> 00:12:38,520
+of all knowing all the other
+eigenvalues and eigenvectors.
+
+194
+00:12:38,520 --> 00:12:40,670
+We just can go directly.
+
+195
+00:12:40,670 --> 00:12:48,200
+But if P was now some other
+matrix, can you just --
+
+196
+00:12:48,200 --> 00:12:51,140
+let's just remember from these
+very recent lectures how you
+
+197
+00:12:51,140 --> 00:12:52,560
+would proceed.
+
+198
+00:12:52,560 --> 00:12:57,590
+from these very recent lectures
+we know that uk we would --
+
+199
+00:12:57,590 --> 00:13:02,780
+we would expand u0 as a
+combination of eigenvectors.
+
+200
+00:13:02,780 --> 00:13:07,020
+Let me leave -- yeah, as a
+combination of eigenvectors,
+
+201
+00:13:07,020 --> 00:13:12,650
+c1x1, some multiple of
+the second eigenvector,
+
+202
+00:13:12,650 --> 00:13:15,470
+some multiple of the
+third eigenvector,
+
+203
+00:13:15,470 --> 00:13:22,320
+and then A to the ku0
+would be c1, so this --
+
+204
+00:13:22,320 --> 00:13:27,270
+we have to find these numbers
+here, that's the work actually.
+
+205
+00:13:27,270 --> 00:13:30,280
+The work is find
+the eigenvalues,
+
+206
+00:13:30,280 --> 00:13:33,500
+find the eigenvectors and
+find the c-s because they all
+
+207
+00:13:33,500 --> 00:13:35,320
+come into the formula.
+
+208
+00:13:35,320 --> 00:13:50,230
+We have -- so -- so to do
+this, you can see what you have
+
+209
+00:13:50,230 --> 00:13:51,280
+to compute.
+
+210
+00:13:51,280 --> 00:13:53,320
+You have to compute
+the eigenvalues,
+
+211
+00:13:53,320 --> 00:13:55,430
+you have to compute
+the eigenvectors,
+
+212
+00:13:55,430 --> 00:13:59,230
+and then to match u0
+you compute the c-s,
+
+213
+00:13:59,230 --> 00:14:01,210
+and then you've got it.
+
+214
+00:14:01,210 --> 00:14:06,610
+So it's -- it's just that's a
+formula that shows what pieces
+
+215
+00:14:06,610 --> 00:14:07,810
+we need.
+
+216
+00:14:07,810 --> 00:14:12,550
+And what would actually happen
+in the case of this projection
+
+217
+00:14:12,550 --> 00:14:13,070
+matrix?
+
+218
+00:14:13,070 --> 00:14:15,310
+If this A is a
+projection matrix,
+
+219
+00:14:15,310 --> 00:14:19,050
+then a couple of
+eigenvalues are zero.
+
+220
+00:14:19,050 --> 00:14:21,200
+That's why we just
+throw those away.
+
+221
+00:14:21,200 --> 00:14:27,780
+The other eigenvalue was a one,
+so that we got the same thing
+
+222
+00:14:27,780 --> 00:14:30,890
+every time, c3x3.
+
+223
+00:14:30,890 --> 00:14:33,050
+From the first
+time, second time,
+
+224
+00:14:33,050 --> 00:14:37,160
+third, all iterations pro-
+left us with this constant,
+
+225
+00:14:37,160 --> 00:14:39,620
+left us right here
+at six, three, six.
+
+226
+00:14:39,620 --> 00:14:41,220
+But maybe I take --
+
+227
+00:14:41,220 --> 00:14:43,840
+I'm taking this chance
+to remind you of what
+
+228
+00:14:43,840 --> 00:14:47,900
+to do for other matrices.
+
+229
+00:14:47,900 --> 00:14:48,600
+OK.
+
+230
+00:14:48,600 --> 00:14:52,910
+So that's part way through.
+
+231
+00:14:52,910 --> 00:14:53,460
+OK.
+
+232
+00:14:53,460 --> 00:14:55,980
+The next question in
+nineteen eighty-four
+
+233
+00:14:55,980 --> 00:15:01,030
+is fitting a straight
+line to points.
+
+234
+00:15:01,030 --> 00:15:04,712
+And actually a straight
+line through the origin.
+
+235
+00:15:04,712 --> 00:15:06,170
+A straight line
+through the origin.
+
+236
+00:15:06,170 --> 00:15:10,120
+So can I go to question two?
+
+237
+00:15:10,120 --> 00:15:15,360
+So this is fitting a straight
+line to these points, can I --
+
+238
+00:15:15,360 --> 00:15:26,580
+I'll just give you the points
+at t=1 the y is four, at t=2,
+
+239
+00:15:26,580 --> 00:15:30,710
+y is five, at t=3, y is eight.
+
+240
+00:15:34,190 --> 00:15:42,630
+So we've got points one, two,
+three, four, five, and eight.
+
+241
+00:15:42,630 --> 00:15:45,720
+And I'm trying to fit a
+straight line through the origin
+
+242
+00:15:45,720 --> 00:15:48,540
+to these three values.
+
+243
+00:15:48,540 --> 00:15:57,170
+OK, so my equation that
+I'm allowing myself
+
+244
+00:15:57,170 --> 00:16:00,950
+is just y equal Dt.
+
+245
+00:16:00,950 --> 00:16:03,470
+So I have only one unknown.
+
+246
+00:16:03,470 --> 00:16:04,950
+One degree of freedom.
+
+247
+00:16:04,950 --> 00:16:07,730
+One parameter D.
+
+248
+00:16:07,730 --> 00:16:12,510
+So I'm expecting to end up
+my matrix so my -- my --
+
+249
+00:16:12,510 --> 00:16:14,510
+when I try to --
+
+250
+00:16:14,510 --> 00:16:17,440
+when I try to fit a
+straight line, that
+
+251
+00:16:17,440 --> 00:16:19,660
+goes through the origin,
+that's because it goes
+
+252
+00:16:19,660 --> 00:16:22,570
+through the origin, I've
+lost the constant c here,
+
+253
+00:16:22,570 --> 00:16:27,330
+so I have just this should
+be a quick calculation.
+
+254
+00:16:27,330 --> 00:16:32,590
+and I can write down the three
+equations that -- that --
+
+255
+00:16:32,590 --> 00:16:33,200
+that would --
+
+256
+00:16:33,200 --> 00:16:36,990
+I'd like to solve if the line
+went through the points, that's
+
+257
+00:16:36,990 --> 00:16:38,080
+a good start.
+
+258
+00:16:38,080 --> 00:16:40,015
+Because that
+displays the matrix.
+
+259
+00:16:43,410 --> 00:16:45,270
+So can I continue that problem?
+
+260
+00:16:45,270 --> 00:16:48,760
+We would like to solve--
+
+261
+00:16:48,760 --> 00:16:54,200
+so y is Dt, so I'd like
+to solve D times one times
+
+262
+00:16:54,200 --> 00:17:00,030
+D equals four, two times
+D equals five and three
+
+263
+00:17:00,030 --> 00:17:02,690
+times D equals eight.
+
+264
+00:17:02,690 --> 00:17:04,500
+That would be perfection.
+
+265
+00:17:04,500 --> 00:17:09,150
+If I could find such
+a D, then the line y
+
+266
+00:17:09,150 --> 00:17:13,349
+equal Dt would satisfy
+all three equations,
+
+267
+00:17:13,349 --> 00:17:16,500
+would go through all three
+points, but it doesn't exist.
+
+268
+00:17:16,500 --> 00:17:19,140
+So -- so I have to
+solve this -- so the --
+
+269
+00:17:19,140 --> 00:17:23,680
+my matrix is now you can see my
+matrix, it just has one column.
+
+270
+00:17:23,680 --> 00:17:27,589
+Multiplying a scalar D.
+
+271
+00:17:27,589 --> 00:17:30,260
+And you can see the
+right-hand side.
+
+272
+00:17:30,260 --> 00:17:31,500
+This is my Ax=b.
+
+273
+00:17:34,280 --> 00:17:38,860
+I don't need three equals signs
+now because I've got vectors.
+
+274
+00:17:38,860 --> 00:17:39,620
+OK.
+
+275
+00:17:39,620 --> 00:17:43,610
+There's Ax=b and you
+take it from there.
+
+276
+00:17:43,610 --> 00:17:47,570
+You the -- the best x will
+be -- will come from --
+
+277
+00:17:47,570 --> 00:17:49,510
+so what's the --
+the key equation?
+
+278
+00:17:49,510 --> 00:17:54,960
+So this is the A, this is
+the Ax hat equal b equation.
+
+279
+00:17:54,960 --> 00:17:57,900
+Well, Ax=b.
+
+280
+00:17:57,900 --> 00:18:00,590
+And what's the
+equation for x hat?
+
+281
+00:18:00,590 --> 00:18:08,490
+The best D, so to find
+the best D, the best x,
+
+282
+00:18:08,490 --> 00:18:14,660
+the equation is A
+transpose A, the best D,
+
+283
+00:18:14,660 --> 00:18:20,900
+is A transpose times
+the right-hand side.
+
+284
+00:18:20,900 --> 00:18:24,340
+This is all coming from
+projection on a line, our --
+
+285
+00:18:24,340 --> 00:18:26,620
+our matrix only has one column.
+
+286
+00:18:26,620 --> 00:18:30,070
+So A transpose A would
+be maybe fourteen,
+
+287
+00:18:30,070 --> 00:18:35,410
+D hat, and A transpose
+b I'm getting four, ten,
+
+288
+00:18:35,410 --> 00:18:37,520
+and twenty-four.
+
+289
+00:18:37,520 --> 00:18:38,590
+Is that right?
+
+290
+00:18:38,590 --> 00:18:40,950
+Four, ten and twenty-four.
+
+291
+00:18:40,950 --> 00:18:43,000
+So thirty-eight.
+
+292
+00:18:43,000 --> 00:18:47,530
+So that tells me the
+best D hat is D hat
+
+293
+00:18:47,530 --> 00:18:52,150
+is thirty-eight over fourteen.
+
+294
+00:18:52,150 --> 00:18:53,310
+OK.
+
+295
+00:18:53,310 --> 00:18:54,930
+Fine.
+
+296
+00:18:54,930 --> 00:18:57,620
+All right.
+
+297
+00:18:57,620 --> 00:18:59,240
+so we found the best line.
+
+298
+00:18:59,240 --> 00:19:01,830
+And now here's a --
+here's the next question.
+
+299
+00:19:01,830 --> 00:19:07,050
+What vector did I just
+project onto what line?
+
+300
+00:19:07,050 --> 00:19:12,210
+See in this section on least
+squares here's the key point,
+
+301
+00:19:12,210 --> 00:19:12,740
+I'm --
+
+302
+00:19:12,740 --> 00:19:14,700
+I'm asking you to think
+of the least squares
+
+303
+00:19:14,700 --> 00:19:17,240
+problem in two ways.
+
+304
+00:19:17,240 --> 00:19:18,890
+Two different pictures.
+
+305
+00:19:18,890 --> 00:19:20,080
+Two different graphs.
+
+306
+00:19:20,080 --> 00:19:22,320
+One graph is this.
+
+307
+00:19:22,320 --> 00:19:28,060
+This is a graph in the -- in the
+b -- in the tb plane, ty plane.
+
+308
+00:19:28,060 --> 00:19:30,900
+The -- the -- the line itself.
+
+309
+00:19:30,900 --> 00:19:32,940
+The other picture I'm
+asking you to think of
+
+310
+00:19:32,940 --> 00:19:35,050
+is like my projection picture.
+
+311
+00:19:35,050 --> 00:19:38,610
+What -- what projection --
+what -- what vector I --
+
+312
+00:19:38,610 --> 00:19:42,940
+I projecting onto what line or
+what subspace when I -- when I
+
+313
+00:19:42,940 --> 00:19:44,050
+do this?
+
+314
+00:19:44,050 --> 00:19:48,700
+So the -- my second picture is
+a projection picture that --
+
+315
+00:19:48,700 --> 00:19:51,280
+that sees the whole
+thing with vectors.
+
+316
+00:19:51,280 --> 00:19:53,970
+Here's my vector of course
+that I'm projecting.
+
+317
+00:19:53,970 --> 00:20:06,800
+I'm projecting that vector b
+onto the column space of A.
+
+318
+00:20:06,800 --> 00:20:15,800
+Of if you like -- it's just
+a line onto that's the line
+
+319
+00:20:15,800 --> 00:20:18,620
+it's just a line, of course.
+
+320
+00:20:18,620 --> 00:20:21,070
+That's what this
+calculation is doing.
+
+321
+00:20:21,070 --> 00:20:25,595
+This is computing the best D,
+which is -- this is the x hat.
+
+322
+00:20:30,230 --> 00:20:34,090
+So -- so seeing it as a
+projection means I don't see
+
+323
+00:20:34,090 --> 00:20:36,570
+the projection in
+this figure, right?
+
+324
+00:20:36,570 --> 00:20:39,060
+In this figure I'm not
+projecting those points
+
+325
+00:20:39,060 --> 00:20:41,760
+onto that line or
+anything of the sort.
+
+326
+00:20:41,760 --> 00:20:48,430
+The projection s-picture for --
+for least squares is in the --
+
+327
+00:20:48,430 --> 00:20:51,900
+in the space where b
+lies, the whole vector b,
+
+328
+00:20:51,900 --> 00:20:54,870
+and the columns of A.
+
+329
+00:20:54,870 --> 00:21:02,570
+And then the x is
+the best combination
+
+330
+00:21:02,570 --> 00:21:04,600
+that gives the projection.
+
+331
+00:21:04,600 --> 00:21:05,100
+OK.
+
+332
+00:21:05,100 --> 00:21:07,980
+So that's a chance
+to tell me that.
+
+333
+00:21:07,980 --> 00:21:08,760
+OK.
+
+334
+00:21:08,760 --> 00:21:12,310
+I'll go -- OK now
+finally in orthogonality
+
+335
+00:21:12,310 --> 00:21:14,610
+there's the Graham-Schmidt idea.
+
+336
+00:21:14,610 --> 00:21:20,230
+So that's problem two D here.
+
+337
+00:21:20,230 --> 00:21:24,840
+It asks me if I have two
+vectors, a1 equal one, two,
+
+338
+00:21:24,840 --> 00:21:32,650
+three, and a2 equal
+one, one, one, find
+
+339
+00:21:32,650 --> 00:21:37,650
+two orthogonal
+vectors in that plane.
+
+340
+00:21:37,650 --> 00:21:43,480
+So those two vectors give
+a plane, they give a plane.
+
+341
+00:21:43,480 --> 00:21:47,860
+Which is of course the --
+the column space of the --
+
+342
+00:21:47,860 --> 00:21:50,710
+of the matrix.
+
+343
+00:21:50,710 --> 00:21:55,050
+And I'm looking for
+an orthogonal basis
+
+344
+00:21:55,050 --> 00:21:55,710
+for that plane.
+
+345
+00:21:55,710 --> 00:21:58,300
+So I'm looking for two
+orthogonal vectors.
+
+346
+00:21:58,300 --> 00:22:02,100
+And of course there
+are lots of --
+
+347
+00:22:02,100 --> 00:22:05,330
+I mean, I've got a plane there.
+
+348
+00:22:05,330 --> 00:22:08,700
+If I get one orthogonal
+pair, I can rotate it.
+
+349
+00:22:08,700 --> 00:22:10,910
+There's not just
+one answer here.
+
+350
+00:22:10,910 --> 00:22:16,140
+But Graham-Schmidt says OK,
+start with the first vector,
+
+351
+00:22:16,140 --> 00:22:19,840
+and let that be --
+and keep that one.
+
+352
+00:22:19,840 --> 00:22:23,300
+And then take the second
+one orthogonal to this.
+
+353
+00:22:23,300 --> 00:22:27,400
+So -- so Graham-Schmidt says
+start with this one and then
+
+354
+00:22:27,400 --> 00:22:31,220
+make a second vector B, can
+I call that second vector B,
+
+355
+00:22:31,220 --> 00:22:35,970
+this is going to be orthogonal
+to, so perpendicular to a1.
+
+356
+00:22:35,970 --> 00:22:40,650
+If I can with my chalk
+create the key equation.
+
+357
+00:22:40,650 --> 00:22:46,740
+This vector B is going
+to be this one, one, one,
+
+358
+00:22:46,740 --> 00:22:50,720
+but that one, one -- one, one,
+one is not perpendicular to a1,
+
+359
+00:22:50,720 --> 00:22:54,340
+so I have to subtract
+off its projection,
+
+360
+00:22:54,340 --> 00:23:00,820
+I have to subtract off the B,
+the -- the B trans- ye the B --
+
+361
+00:23:00,820 --> 00:23:07,780
+the -- the I should say the a1
+transpose b over a1 transpose
+
+362
+00:23:07,780 --> 00:23:11,400
+a1, that multiple of
+a1, I've got to remove.
+
+363
+00:23:14,990 --> 00:23:17,090
+So I just have to
+compute what that is,
+
+364
+00:23:17,090 --> 00:23:21,440
+and I get ano- I get a vector
+B that's orthogonal to a1.
+
+365
+00:23:21,440 --> 00:23:24,440
+It's the -- it's --
+
+366
+00:23:24,440 --> 00:23:29,630
+it's the original vector
+minus its projection.
+
+367
+00:23:29,630 --> 00:23:32,110
+Oh, so what is --
+
+368
+00:23:32,110 --> 00:23:33,490
+I mean this to be a2.
+
+369
+00:23:36,130 --> 00:23:39,430
+So I'm projecting a2
+onto the line through a1.
+
+370
+00:23:39,430 --> 00:23:40,190
+Yeah.
+
+371
+00:23:40,190 --> 00:23:42,190
+That's the part that I
+don't want because that's
+
+372
+00:23:42,190 --> 00:23:45,250
+in the direction I already
+have, so I subtract off
+
+373
+00:23:45,250 --> 00:23:48,170
+that projection and I
+get the part I want,
+
+374
+00:23:48,170 --> 00:23:50,240
+the orthogonal part.
+
+375
+00:23:50,240 --> 00:23:52,540
+So that's the
+Graham-Schmidt thing
+
+376
+00:23:52,540 --> 00:23:54,640
+and we can put numbers in.
+
+377
+00:23:54,640 --> 00:23:55,370
+OK.
+
+378
+00:23:55,370 --> 00:24:00,710
+one, one, one take away
+a1 transpose a2 is six,
+
+379
+00:24:00,710 --> 00:24:06,900
+a1 transpose a1 is
+fourteen,multiplying a1.
+
+380
+00:24:06,900 --> 00:24:13,400
+And that gives us the
+new orthogonal vector B.
+
+381
+00:24:13,400 --> 00:24:15,340
+Because I only ask for
+orthogonal right now,
+
+382
+00:24:15,340 --> 00:24:19,200
+I don't have to divide
+by the length which
+
+383
+00:24:19,200 --> 00:24:20,590
+will involve a square root.
+
+384
+00:24:20,590 --> 00:24:23,210
+OK.
+
+385
+00:24:23,210 --> 00:24:23,940
+Third question.
+
+386
+00:24:27,540 --> 00:24:28,677
+Third question.
+
+387
+00:24:28,677 --> 00:24:29,510
+All right, let me --
+
+388
+00:24:29,510 --> 00:24:33,270
+I'll move this board up.
+
+389
+00:24:33,270 --> 00:24:37,930
+third question will probably
+be about eigenvalues.
+
+390
+00:24:37,930 --> 00:24:38,610
+OK.
+
+391
+00:24:38,610 --> 00:24:41,200
+Three.
+
+392
+00:24:41,200 --> 00:24:44,020
+This is a four-by-four matrix.
+
+393
+00:24:44,020 --> 00:24:47,320
+Its eigenvalues are lambda
+one, lambda two, lambda three,
+
+394
+00:24:47,320 --> 00:24:50,310
+lambda four.
+
+395
+00:24:50,310 --> 00:24:52,930
+Question one.
+
+396
+00:24:52,930 --> 00:24:55,870
+What's the condition
+on the lambdas so
+
+397
+00:24:55,870 --> 00:24:59,380
+that the matrix is invertible?
+
+398
+00:24:59,380 --> 00:24:59,990
+OK.
+
+399
+00:24:59,990 --> 00:25:02,510
+So under what conditions
+on the lambdas
+
+400
+00:25:02,510 --> 00:25:05,900
+will the matrix be invertible?
+
+401
+00:25:05,900 --> 00:25:08,850
+So that's easy.
+
+402
+00:25:08,850 --> 00:25:17,780
+Invertible if what's the
+condition on the lambdas?
+
+403
+00:25:17,780 --> 00:25:19,370
+None of them are zero.
+
+404
+00:25:19,370 --> 00:25:23,900
+A zero eigenvalue would mean
+something in the null space
+
+405
+00:25:23,900 --> 00:25:28,850
+would mean a solution to
+Ax=0x, but we're invertible,
+
+406
+00:25:28,850 --> 00:25:32,170
+so none of them is
+zero, the product --
+
+407
+00:25:32,170 --> 00:25:34,120
+however you want to say, no --
+
+408
+00:25:34,120 --> 00:25:38,510
+no zero eigenvalues.
+
+409
+00:25:38,510 --> 00:25:39,170
+Good.
+
+410
+00:25:39,170 --> 00:25:43,200
+OK, what's the
+determinant of A inverse?
+
+411
+00:25:43,200 --> 00:25:45,555
+The determinant of A inverse?
+
+412
+00:25:49,280 --> 00:25:52,120
+So where is that
+going to come from?
+
+413
+00:25:52,120 --> 00:25:55,470
+Well, if we knew the
+eigenvalues of A inverse,
+
+414
+00:25:55,470 --> 00:25:59,780
+we could multiply them together
+to find the determinant.
+
+415
+00:25:59,780 --> 00:26:02,110
+And we do know the
+eigenvalues of A inverse.
+
+416
+00:26:02,110 --> 00:26:04,370
+What are they?
+
+417
+00:26:04,370 --> 00:26:08,580
+They're just one
+over lambda one times
+
+418
+00:26:08,580 --> 00:26:11,470
+one over lambda two, that's
+the second eigenvalue,
+
+419
+00:26:11,470 --> 00:26:13,640
+the third eigenvalue and the
+
+420
+00:26:13,640 --> 00:26:14,760
+fourth.
+
+421
+00:26:14,760 --> 00:26:18,770
+So the product of the four
+eigenvalues of the inverse
+
+422
+00:26:18,770 --> 00:26:21,450
+will give us the
+determinant of the inverse.
+
+423
+00:26:21,450 --> 00:26:21,950
+Fine.
+
+424
+00:26:21,950 --> 00:26:23,110
+OK.
+
+425
+00:26:23,110 --> 00:26:39,600
+And what's the
+trace of A plus I?
+
+426
+00:26:39,600 --> 00:26:41,170
+So what do we know about trace?
+
+427
+00:26:44,160 --> 00:26:46,510
+It's the sum down
+the diagonal, but we
+
+428
+00:26:46,510 --> 00:26:48,630
+don't know what our matrix is.
+
+429
+00:26:48,630 --> 00:26:51,960
+The trace is also the
+sum of the eigenvalues,
+
+430
+00:26:51,960 --> 00:26:55,710
+and we do know the
+eigenvalues of A plus I.
+
+431
+00:26:55,710 --> 00:26:57,410
+So we just add them up.
+
+432
+00:26:57,410 --> 00:27:02,520
+So what -- what's the first
+eigenvalue of A plus I?
+
+433
+00:27:02,520 --> 00:27:05,610
+When the matrix A has
+eigenvalues lambda one, two,
+
+434
+00:27:05,610 --> 00:27:08,030
+three and four,
+then the eigenvalues
+
+435
+00:27:08,030 --> 00:27:11,610
+if I add the identity, that
+moves all the eigenvalues
+
+436
+00:27:11,610 --> 00:27:17,450
+by one, so I just add
+up lambda one plus one,
+
+437
+00:27:17,450 --> 00:27:22,520
+lambda two plus one, and so on,
+lambda three plus one, lambda
+
+438
+00:27:22,520 --> 00:27:27,180
+four plus one, so it's lambda
+one plus lambda two plus lambda
+
+439
+00:27:27,180 --> 00:27:32,180
+three plus lambda
+four plus four.
+
+440
+00:27:32,180 --> 00:27:34,850
+Right.
+
+441
+00:27:34,850 --> 00:27:38,110
+That movement by the identity
+moved all the eigenvalues
+
+442
+00:27:38,110 --> 00:27:42,290
+by one, so it moved the
+whole trace by four.
+
+443
+00:27:42,290 --> 00:27:45,690
+So it was the trace
+of A plus four more.
+
+444
+00:27:45,690 --> 00:27:46,880
+OK.
+
+445
+00:27:46,880 --> 00:27:48,240
+Let's see.
+
+446
+00:27:48,240 --> 00:27:51,600
+We may be finished this
+quiz twenty minutes early.
+
+447
+00:27:51,600 --> 00:27:52,420
+No.
+
+448
+00:27:52,420 --> 00:27:54,700
+There's another question.
+
+449
+00:27:54,700 --> 00:27:57,590
+Oh, God, OK.
+
+450
+00:27:57,590 --> 00:27:59,270
+How did this class ever do it?
+
+451
+00:27:59,270 --> 00:28:02,710
+Well, you'll see.
+you'll be able to do it.
+
+452
+00:28:02,710 --> 00:28:03,510
+OK.
+
+453
+00:28:03,510 --> 00:28:06,950
+this has got to be a
+determinant question.
+
+454
+00:28:06,950 --> 00:28:09,290
+All right.
+
+455
+00:28:09,290 --> 00:28:13,810
+More determinants and cofactors
+and big formula question.
+
+456
+00:28:13,810 --> 00:28:14,430
+OK.
+
+457
+00:28:14,430 --> 00:28:18,760
+Let me do that.
+
+458
+00:28:18,760 --> 00:28:22,820
+So it's about a matrix, a --
+a whole family of matrices.
+
+459
+00:28:22,820 --> 00:28:26,200
+Here's the four-by-four one.
+
+460
+00:28:26,200 --> 00:28:29,990
+The four-by-four one is, and
+-- and all the matrices in this
+
+461
+00:28:29,990 --> 00:28:35,240
+family are tridiagonal with --
+
+462
+00:28:35,240 --> 00:28:38,230
+with ones.
+
+463
+00:28:38,230 --> 00:28:40,110
+Otherwise zeroes.
+
+464
+00:28:40,110 --> 00:28:43,480
+So that's the pattern, and
+we've seen this matrix.
+
+465
+00:28:43,480 --> 00:28:44,840
+OK.
+
+466
+00:28:44,840 --> 00:28:47,850
+So the -- it's tridiagonal
+with ones on the diagonal,
+
+467
+00:28:47,850 --> 00:28:52,790
+ones above and ones below, and
+you see the general formula An,
+
+468
+00:28:52,790 --> 00:28:58,780
+so I'll use Dn for
+the determinant of An.
+
+469
+00:28:58,780 --> 00:28:59,950
+OK.
+
+470
+00:28:59,950 --> 00:29:00,990
+All right.
+
+471
+00:29:00,990 --> 00:29:02,950
+So I'm going to do a --
+
+472
+00:29:02,950 --> 00:29:14,740
+the first question is use
+cofactors to show that Dn is
+
+473
+00:29:14,740 --> 00:29:20,680
+something times D(n-1) plus
+something times D(n-2).
+
+474
+00:29:20,680 --> 00:29:23,150
+And find those somethings.
+
+475
+00:29:23,150 --> 00:29:23,650
+OK.
+
+476
+00:29:26,310 --> 00:29:31,020
+So this -- the fact that it's
+tridiagonal with these constant
+
+477
+00:29:31,020 --> 00:29:37,290
+diagonals means that there
+is such a recurrence formula.
+
+478
+00:29:37,290 --> 00:29:39,660
+And so the first
+question is find it.
+
+479
+00:29:39,660 --> 00:29:41,810
+Well, what's the
+recurrence formula?
+
+480
+00:29:41,810 --> 00:29:43,550
+OK, how does it go?
+
+481
+00:29:43,550 --> 00:29:47,390
+So I'll use cofactors
+along the first row.
+
+482
+00:29:47,390 --> 00:29:51,570
+So I take that number
+times its cofactor.
+
+483
+00:29:51,570 --> 00:29:56,730
+So it's one times its cofactor
+and what is its cofactor?
+
+484
+00:29:56,730 --> 00:30:00,120
+D(n-1), right, exactly,
+the cofactor is this --
+
+485
+00:30:00,120 --> 00:30:03,510
+is this guy uses up
+row one and column one,
+
+486
+00:30:03,510 --> 00:30:07,670
+so the cofactor is down
+here, so it's one of those.
+
+487
+00:30:10,230 --> 00:30:12,550
+OK, that's the
+first cofactor term.
+
+488
+00:30:12,550 --> 00:30:17,090
+Now the other cofactor
+term is this guy.
+
+489
+00:30:17,090 --> 00:30:20,740
+Which uses up row
+one and column two
+
+490
+00:30:20,740 --> 00:30:24,870
+and what's surprising
+about that?
+
+491
+00:30:24,870 --> 00:30:30,660
+When you use row one and column
+two that brings in a minus.
+
+492
+00:30:30,660 --> 00:30:32,940
+There'll be a minus
+because the --
+
+493
+00:30:32,940 --> 00:30:38,490
+the cofactor is this
+determinant times minus one.
+
+494
+00:30:38,490 --> 00:30:44,440
+The the one-two cofactor is
+that determinant with its sign
+
+495
+00:30:44,440 --> 00:30:45,460
+changed.
+
+496
+00:30:45,460 --> 00:30:45,960
+OK.
+
+497
+00:30:45,960 --> 00:30:47,270
+So I have to look
+at that determinant
+
+498
+00:30:47,270 --> 00:30:48,645
+and I have to
+remember in my head
+
+499
+00:30:48,645 --> 00:30:50,620
+a sign is going to get changed.
+
+500
+00:30:50,620 --> 00:30:51,160
+OK.
+
+501
+00:30:51,160 --> 00:30:54,970
+Now how do I do
+that determinant?
+
+502
+00:30:54,970 --> 00:30:58,180
+How do I make that one clear?
+
+503
+00:30:58,180 --> 00:31:01,810
+I -- the -- the neat way to
+do is -- is here I see I --
+
+504
+00:31:01,810 --> 00:31:05,570
+I'll use cofactors
+down the first column.
+
+505
+00:31:05,570 --> 00:31:08,880
+Because the first column is
+all zeroes except for that one,
+
+506
+00:31:08,880 --> 00:31:13,220
+so this one is now --
+and what's its cofactor?
+
+507
+00:31:13,220 --> 00:31:17,490
+Within this three-by-three its
+cofactor will be two-by-two,
+
+508
+00:31:17,490 --> 00:31:19,080
+and what is it?
+
+509
+00:31:19,080 --> 00:31:20,970
+It's this, right?
+
+510
+00:31:20,970 --> 00:31:25,730
+So -- so that part is all gone,
+so I'm taking that times its
+
+511
+00:31:25,730 --> 00:31:29,550
+cofactor, then zero times
+whatever its cofactor is,
+
+512
+00:31:29,550 --> 00:31:34,040
+so it's really just one times
+and what's this in the general
+
+513
+00:31:34,040 --> 00:31:35,510
+n-by-n case?
+
+514
+00:31:35,510 --> 00:31:39,420
+It's Dn minus two.
+
+515
+00:31:39,420 --> 00:31:43,660
+But now so is this a plus or
+sign or a minus sign, it's --
+
+516
+00:31:43,660 --> 00:31:48,360
+it's just a one, because there's
+a one from there and a one from
+
+517
+00:31:48,360 --> 00:31:50,050
+there.
+
+518
+00:31:50,050 --> 00:31:52,930
+And is it a plus or a minus?
+
+519
+00:31:52,930 --> 00:31:56,010
+It's minus I guess because
+there was a minus the first time
+
+520
+00:31:56,010 --> 00:31:57,970
+and then the second
+time it's a plus,
+
+521
+00:31:57,970 --> 00:32:00,240
+so it's overall it's a minus.
+
+522
+00:32:00,240 --> 00:32:04,864
+So there's my a and b
+were one and minus one.
+
+523
+00:32:04,864 --> 00:32:05,530
+Those constants.
+
+524
+00:32:05,530 --> 00:32:09,140
+Th- that's the --
+that's the recurrence.
+
+525
+00:32:09,140 --> 00:32:10,220
+OK.
+
+526
+00:32:10,220 --> 00:32:19,180
+And oh, then it asks you to then
+it asks you to solve this thing
+
+527
+00:32:19,180 --> 00:32:22,070
+first by writing it as a --
+
+528
+00:32:22,070 --> 00:32:25,120
+as a system.
+
+529
+00:32:25,120 --> 00:32:28,200
+So now I'd like to
+know the solution.
+
+530
+00:32:28,200 --> 00:32:30,600
+I -- I better know
+how it starts, right?
+
+531
+00:32:30,600 --> 00:32:34,020
+It starts with D1,
+what was D1, that's
+
+532
+00:32:34,020 --> 00:32:39,550
+just the one-by-one case, so
+D1 is one, and what is D2?
+
+533
+00:32:39,550 --> 00:32:41,880
+Just to get us started and
+then this would give us
+
+534
+00:32:41,880 --> 00:32:45,520
+D3, D4, and forever.
+
+535
+00:32:45,520 --> 00:32:48,390
+D2 is this two-by-two
+that I'm seeing here
+
+536
+00:32:48,390 --> 00:32:51,620
+and that determinant
+is obviously zero.
+
+537
+00:32:51,620 --> 00:32:57,410
+So those little ones will start
+the recurrence and then we take
+
+538
+00:32:57,410 --> 00:32:58,030
+off.
+
+539
+00:32:58,030 --> 00:33:02,070
+And then the idea is to
+write this recurrence as --
+
+540
+00:33:02,070 --> 00:33:11,990
+as a Dn, D(n-1) is some
+matrix times the one before,
+
+541
+00:33:11,990 --> 00:33:16,613
+the D(n-1), D(n-2).
+
+542
+00:33:20,250 --> 00:33:22,270
+What's the matrix?
+
+543
+00:33:22,270 --> 00:33:26,570
+You see, you remember this step
+of taking a single second order
+
+544
+00:33:26,570 --> 00:33:31,090
+equation and by introducing
+a vector unknown to make it
+
+545
+00:33:31,090 --> 00:33:32,600
+into a --
+
+546
+00:33:32,600 --> 00:33:35,600
+to a first order system.
+
+547
+00:33:35,600 --> 00:33:36,200
+OK.
+
+548
+00:33:36,200 --> 00:33:41,860
+So Dn is one of Dn minus one
+minus one, I think that --
+
+549
+00:33:41,860 --> 00:33:43,530
+that goes in the
+first row, right?
+
+550
+00:33:43,530 --> 00:33:45,640
+From the equation above?
+
+551
+00:33:45,640 --> 00:33:48,200
+And the second one is
+this is the same as this,
+
+552
+00:33:48,200 --> 00:33:50,010
+so one and zero are fine.
+
+553
+00:33:53,500 --> 00:33:55,330
+So there's the matrix.
+
+554
+00:33:55,330 --> 00:33:55,920
+OK.
+
+555
+00:33:55,920 --> 00:33:58,820
+So now how do I proceed?
+
+556
+00:33:58,820 --> 00:34:01,590
+We can guess what
+this examiner's
+
+557
+00:34:01,590 --> 00:34:02,845
+got in his little mind.
+
+558
+00:34:07,740 --> 00:34:09,120
+well, find the eigenvalues.
+
+559
+00:34:12,760 --> 00:34:19,469
+And actually it tells
+us that the sixth power
+
+560
+00:34:19,469 --> 00:34:23,679
+of these eigenvalues
+turns out to be one.
+
+561
+00:34:23,679 --> 00:34:30,065
+Uh, well, can -- can we get the
+equation for the eigenvalues?
+
+562
+00:34:30,065 --> 00:34:31,940
+Let's do it and let's
+get a formula for them.
+
+563
+00:34:31,940 --> 00:34:32,880
+OK.
+
+564
+00:34:32,880 --> 00:34:35,260
+So what are the eigenvalues?
+
+565
+00:34:35,260 --> 00:34:39,590
+I look at the -- the matrix,
+this determinant one minus
+
+566
+00:34:39,590 --> 00:34:44,420
+lambda and zero minus lambda,
+and these guys are still there,
+
+567
+00:34:44,420 --> 00:34:49,400
+I compute that determinant, I
+get lambda squared minus lambda
+
+568
+00:34:49,400 --> 00:34:52,310
+and then plus one.
+
+569
+00:34:52,310 --> 00:34:54,820
+And I set that to zero.
+
+570
+00:34:54,820 --> 00:34:55,820
+OK.
+
+571
+00:34:55,820 --> 00:34:59,540
+So we're not Fibonacci here.
+
+572
+00:34:59,540 --> 00:35:02,930
+We're -- we're not
+seeing Fibonacci numbers.
+
+573
+00:35:02,930 --> 00:35:07,500
+Because the sign -- we
+had a sign change there.
+
+574
+00:35:07,500 --> 00:35:11,040
+And it's not clear right
+away whether these --
+
+575
+00:35:11,040 --> 00:35:13,380
+whether this -- is it clear?
+
+576
+00:35:13,380 --> 00:35:18,400
+Is this matrix
+stable or unstable?
+
+577
+00:35:18,400 --> 00:35:21,000
+When we take -- when we go
+further and further out?
+
+578
+00:35:21,000 --> 00:35:23,520
+Are these Ds increasing?
+
+579
+00:35:23,520 --> 00:35:25,050
+Are they going to zero?
+
+580
+00:35:25,050 --> 00:35:27,860
+Are they bouncing
+around periodically?
+
+581
+00:35:27,860 --> 00:35:30,600
+the answers have to be here.
+
+582
+00:35:30,600 --> 00:35:34,840
+I would like to know how big
+these lambdas are, right?
+
+583
+00:35:34,840 --> 00:35:37,880
+And the point is probably
+these -- let's -- let's see,
+
+584
+00:35:37,880 --> 00:35:38,930
+what's lambda?
+
+585
+00:35:38,930 --> 00:35:42,780
+From the quadratic
+formula lambda is one,
+
+586
+00:35:42,780 --> 00:35:45,390
+I switch the sign of
+that, plus or minus
+
+587
+00:35:45,390 --> 00:35:50,570
+the square root of one minus
+4ac, I getting a minus three
+
+588
+00:35:50,570 --> 00:35:51,970
+there?
+
+589
+00:35:51,970 --> 00:35:52,710
+Over two.
+
+590
+00:35:58,860 --> 00:36:00,960
+What's up?
+
+591
+00:36:00,960 --> 00:36:03,340
+They're complex.
+
+592
+00:36:03,340 --> 00:36:08,240
+The -- the eigenvalues are one
+plus square root of three I
+
+593
+00:36:08,240 --> 00:36:15,600
+over two and one minus square
+root of three I over two.
+
+594
+00:36:15,600 --> 00:36:18,240
+What's the magnitude of lambda?
+
+595
+00:36:18,240 --> 00:36:19,765
+That's the key
+point for stability.
+
+596
+00:36:22,560 --> 00:36:26,480
+These are two numbers
+in the complex plane.
+
+597
+00:36:26,480 --> 00:36:30,650
+One plus some -- somewhere
+here, and its complex conjugate
+
+598
+00:36:30,650 --> 00:36:32,820
+there.
+
+599
+00:36:32,820 --> 00:36:37,580
+I want to know how far from
+the origin are those numbers.
+
+600
+00:36:37,580 --> 00:36:40,840
+What's the magnitude of lambda?
+
+601
+00:36:40,840 --> 00:36:43,230
+And do you see what it is?
+
+602
+00:36:43,230 --> 00:36:46,690
+Do you recognize this
+-- a number like that?
+
+603
+00:36:46,690 --> 00:36:50,220
+Take the real part squared
+and the imaginary part squared
+
+604
+00:36:50,220 --> 00:36:51,510
+and add.
+
+605
+00:36:51,510 --> 00:36:53,840
+What do you get?
+
+606
+00:36:53,840 --> 00:36:57,010
+So the real part
+squared is a quarter.
+
+607
+00:36:57,010 --> 00:36:59,990
+The imaginary part
+squared is three-quarters.
+
+608
+00:36:59,990 --> 00:37:01,200
+They add to one.
+
+609
+00:37:01,200 --> 00:37:06,090
+That's a number with --
+that's on the unit circle.
+
+610
+00:37:06,090 --> 00:37:08,540
+That's an e to the i theta.
+
+611
+00:37:08,540 --> 00:37:10,180
+That's a cos(theta)+isin(theta).
+
+612
+00:37:10,180 --> 00:37:14,650
+And what's theta?
+
+613
+00:37:14,650 --> 00:37:19,330
+This -- this is like a complex
+number that's worth knowing,
+
+614
+00:37:19,330 --> 00:37:23,670
+it's not totally
+obvious but it's nice.
+
+615
+00:37:23,670 --> 00:37:27,480
+That's -- I should see that
+as cos(theta)+isin(theta),
+
+616
+00:37:27,480 --> 00:37:30,770
+and the angle that would
+do that is sixty degrees,
+
+617
+00:37:30,770 --> 00:37:32,580
+pi over three.
+
+618
+00:37:32,580 --> 00:37:36,520
+So that's a -- let me
+improve my picture.
+
+619
+00:37:36,520 --> 00:37:39,990
+So those -- that's e
+to the i pi over six --
+
+620
+00:37:39,990 --> 00:37:40,920
+pi over three.
+
+621
+00:37:40,920 --> 00:37:46,840
+This is -- this number is e
+to the i pi over three and e
+
+622
+00:37:46,840 --> 00:37:49,840
+to the minus i pi over three.
+
+623
+00:37:49,840 --> 00:37:54,400
+We'll be doing more
+complex numbers briefly
+
+624
+00:37:54,400 --> 00:37:56,545
+but a little more in
+the next two days.
+
+625
+00:37:59,560 --> 00:38:00,940
+next two lectures.
+
+626
+00:38:00,940 --> 00:38:05,670
+Anyway, the -- so what's
+the deal with stability,
+
+627
+00:38:05,670 --> 00:38:08,600
+what do the Dn-s do?
+
+628
+00:38:08,600 --> 00:38:13,570
+Well, look, if -- if I take the
+sixth power I'm around at one,
+
+629
+00:38:13,570 --> 00:38:16,300
+the problem actually
+told me this.
+
+630
+00:38:16,300 --> 00:38:18,950
+The sixth power of those
+eigenvalues brings me around to
+
+631
+00:38:18,950 --> 00:38:23,350
+What does that tell you about
+the matrix, by the way? one.
+
+632
+00:38:23,350 --> 00:38:26,010
+Suppose you know -- this
+was a great quiz question,
+
+633
+00:38:26,010 --> 00:38:29,510
+so I should never have just
+said it, but popped out.
+
+634
+00:38:29,510 --> 00:38:33,600
+Suppose lambda one to the sixth
+and lambda two to the sixth are
+
+635
+00:38:33,600 --> 00:38:36,930
+-- are one, which they are.
+
+636
+00:38:36,930 --> 00:38:40,090
+What does that tell me
+about a m- a matrix?
+
+637
+00:38:40,090 --> 00:38:43,890
+About my matrix A here.
+
+638
+00:38:43,890 --> 00:38:47,290
+Well, what -- what matrix
+is connected with lambda one
+
+639
+00:38:47,290 --> 00:38:49,180
+to the sixth and lambda
+two to the sixth?
+
+640
+00:38:49,180 --> 00:38:51,890
+It's got to be the
+matrix A to the sixth.
+
+641
+00:38:51,890 --> 00:38:55,700
+So what is A to the
+sixth for that matrix?
+
+642
+00:38:55,700 --> 00:39:00,170
+It's got eigenvalues
+one and one.
+
+643
+00:39:00,170 --> 00:39:04,720
+Because when I take the
+sixth power, actually, ye,
+
+644
+00:39:04,720 --> 00:39:09,610
+if I take the sixth power b- all
+the sixth power of that is one
+
+645
+00:39:09,610 --> 00:39:12,990
+and the sixth power of that is
+one, the sixth power of this
+
+646
+00:39:12,990 --> 00:39:16,660
+is e to the two pi i, that's
+one, the sixth power of this
+
+647
+00:39:16,660 --> 00:39:19,330
+is e to the minus
+two pi i, that's one.
+
+648
+00:39:19,330 --> 00:39:24,190
+So the sixth powers, the -- the
+sixth power of that matrix has
+
+649
+00:39:24,190 --> 00:39:27,850
+eigenvalues one and
+one, so what is it?
+
+650
+00:39:27,850 --> 00:39:30,400
+It's the identity, right.
+
+651
+00:39:30,400 --> 00:39:33,940
+So if I operate this -- if
+I run this thing six times,
+
+652
+00:39:33,940 --> 00:39:35,930
+I'm back where I was.
+
+653
+00:39:35,930 --> 00:39:39,340
+The sixth power of that
+matrix is the identity.
+
+654
+00:39:39,340 --> 00:39:40,550
+Good.
+
+655
+00:39:40,550 --> 00:39:41,670
+OK.
+
+656
+00:39:41,670 --> 00:39:44,890
+So it'll loop around, it's
+-- it doesn't go to zero,
+
+657
+00:39:44,890 --> 00:39:49,080
+it doesn't blow up, it just
+periodically goes around with
+
+658
+00:39:49,080 --> 00:39:50,360
+period six.
+
+659
+00:39:50,360 --> 00:39:51,460
+OK.
+
+660
+00:39:51,460 --> 00:39:54,440
+let's just see if there's a --
+
+661
+00:39:54,440 --> 00:39:55,095
+all right.
+
+662
+00:39:58,520 --> 00:40:00,020
+I'll -- let's see.
+
+663
+00:40:00,020 --> 00:40:02,250
+Could I also look at a --
+
+664
+00:40:02,250 --> 00:40:05,155
+at a final exam from
+nineteen ninety-two.
+
+665
+00:40:07,870 --> 00:40:11,570
+I think that's yeah, let me
+do that on this last board.
+
+666
+00:40:14,740 --> 00:40:18,080
+It starts -- a lot of the
+questions in this exam are
+
+667
+00:40:18,080 --> 00:40:20,760
+about a family of matrices.
+
+668
+00:40:20,760 --> 00:40:25,300
+Let me give you the fourth, the
+fourth guy in the family is --
+
+669
+00:40:25,300 --> 00:40:29,880
+has a one, so it's
+zeroes on the diagonal,
+
+670
+00:40:29,880 --> 00:40:34,130
+but these are going one,
+two, three and so on.
+
+671
+00:40:34,130 --> 00:40:37,420
+One, two, three, and so on.
+
+672
+00:40:37,420 --> 00:40:42,190
+But, for the four-by-four
+case I'm stopping at four.
+
+673
+00:40:42,190 --> 00:40:47,070
+You see the pattern?
+
+674
+00:40:47,070 --> 00:40:49,670
+It's a family of matrices
+which is growing,
+
+675
+00:40:49,670 --> 00:40:52,760
+and actually the numbers
+-- it's symmetric, right,
+
+676
+00:40:52,760 --> 00:40:56,490
+it's equal to A4 transpose.
+
+677
+00:40:56,490 --> 00:41:00,880
+And we can ask all sorts of
+questions about its null space,
+
+678
+00:41:00,880 --> 00:41:07,030
+its range, r- its column
+space find the projection
+
+679
+00:41:07,030 --> 00:41:12,330
+matrix onto the column space
+of A3, for example, is in here.
+
+680
+00:41:12,330 --> 00:41:21,730
+So -- so one -- so A3 is zero,
+one, zero, one, zero, two,
+
+681
+00:41:21,730 --> 00:41:24,100
+zero, two, zero.
+
+682
+00:41:32,400 --> 00:41:36,900
+OK, find the projection
+matrix onto the column space.
+
+683
+00:41:36,900 --> 00:41:41,540
+By the way, is that matrix
+singular or invertible?
+
+684
+00:41:41,540 --> 00:41:42,310
+Singular.
+
+685
+00:41:42,310 --> 00:41:45,750
+Why do we know it's singular?
+
+686
+00:41:45,750 --> 00:41:50,500
+I see that column three is
+a multiple of column one.
+
+687
+00:41:50,500 --> 00:41:53,090
+Or we could take
+its determinant.
+
+688
+00:41:53,090 --> 00:41:55,730
+So it's certainly singular.
+
+689
+00:41:55,730 --> 00:42:00,200
+The projection will be
+matrix will be three-by-three
+
+690
+00:42:00,200 --> 00:42:03,190
+but it will project
+onto the column space,
+
+691
+00:42:03,190 --> 00:42:05,610
+it'll project onto this plane.
+
+692
+00:42:05,610 --> 00:42:09,240
+The column space of A3, and
+I guess I would find it from
+
+693
+00:42:09,240 --> 00:42:11,100
+the formula AA --
+
+694
+00:42:11,100 --> 00:42:15,120
+AA transpose A inverse,
+I would have to --
+
+695
+00:42:15,120 --> 00:42:17,120
+I would -- I guess
+I would do all this.
+
+696
+00:42:20,970 --> 00:42:23,050
+There may be a
+better way, perhaps
+
+697
+00:42:23,050 --> 00:42:25,700
+I could think there might
+be a slightly quicker way,
+
+698
+00:42:25,700 --> 00:42:27,390
+but that would come
+out pretty fast.
+
+699
+00:42:27,390 --> 00:42:28,450
+OK.
+
+700
+00:42:28,450 --> 00:42:31,260
+So that's be the
+projection matrix.
+
+701
+00:42:31,260 --> 00:42:32,360
+Next question.
+
+702
+00:42:32,360 --> 00:42:35,010
+Find the eigenvalues and
+eigenvectors of that matrix.
+
+703
+00:42:35,010 --> 00:42:36,020
+OK.
+
+704
+00:42:36,020 --> 00:42:38,590
+There's a three-by-three
+matrix, oh, yeah,
+
+705
+00:42:38,590 --> 00:42:40,560
+so what are its eigenvalues
+and eigenvectors,
+
+706
+00:42:40,560 --> 00:42:42,840
+we haven't done any
+three-by-threes.
+
+707
+00:42:42,840 --> 00:42:45,070
+Let's do one.
+
+708
+00:42:45,070 --> 00:42:48,770
+I want to find, so how
+do I find eigenvalues?
+
+709
+00:42:48,770 --> 00:42:53,280
+I take the determinant
+of A3 minus lambda I.
+
+710
+00:42:53,280 --> 00:42:57,200
+So this is you just have to --
+so I'm subtracting lambda from
+
+711
+00:42:57,200 --> 00:43:02,650
+the diagonal, and I have a
+one, one, zero, zero, two,
+
+712
+00:43:02,650 --> 00:43:07,200
+two there, and I just have
+to find that determinant.
+
+713
+00:43:07,200 --> 00:43:11,030
+OK, since it's three-by-three
+I'll just go for it.
+
+714
+00:43:11,030 --> 00:43:16,850
+This way gives me minus lambda
+cubed and a zero and zero.
+
+715
+00:43:16,850 --> 00:43:20,060
+Then in this direction which
+has the minus sign, that's
+
+716
+00:43:20,060 --> 00:43:25,090
+a zero, four lambdas, I
+mean minus four lambdas,
+
+717
+00:43:25,090 --> 00:43:29,110
+and minus another lambda, so
+that's minus five lambdas,
+
+718
+00:43:29,110 --> 00:43:32,550
+but that direction
+goes with a minus sign,
+
+719
+00:43:32,550 --> 00:43:36,850
+so I think it's
+plus five lambda.
+
+720
+00:43:36,850 --> 00:43:40,330
+That looks like the determinant
+of A3 minus lambda I,
+
+721
+00:43:40,330 --> 00:43:43,030
+so I set it to zero.
+
+722
+00:43:43,030 --> 00:43:45,520
+So what are the eigenvalues?
+
+723
+00:43:45,520 --> 00:43:48,950
+Well, lambda equals zero --
+lambda factors out of this,
+
+724
+00:43:48,950 --> 00:43:52,790
+times minus lambda
+squared plus four,
+
+725
+00:43:52,790 --> 00:44:03,610
+so the eigenvalues are
+five, thanks, thanks,
+
+726
+00:44:03,610 --> 00:44:08,470
+so the eigenvalues are
+zero, square root of five,
+
+727
+00:44:08,470 --> 00:44:11,410
+and minus square root of five.
+
+728
+00:44:11,410 --> 00:44:13,970
+And I would never write
+down those three eigenvalues
+
+729
+00:44:13,970 --> 00:44:17,120
+without checking the
+trace to tell the truth.
+
+730
+00:44:17,120 --> 00:44:19,520
+Because -- because we did a
+bunch of calculations here
+
+731
+00:44:19,520 --> 00:44:22,990
+but then I can quickly add up
+the eigenvalues to get zero,
+
+732
+00:44:22,990 --> 00:44:27,270
+add up the trace to get
+zero, and feel that I'm --
+
+733
+00:44:27,270 --> 00:44:30,510
+well, I guess that wouldn't have
+caught my error if I'd made it
+
+734
+00:44:30,510 --> 00:44:34,280
+-- if -- if that had been a
+four I wouldn't have noticed,the
+
+735
+00:44:34,280 --> 00:44:37,660
+determinant isn't anything
+greatly useful here, right,
+
+736
+00:44:37,660 --> 00:44:41,310
+because the determinant
+is just zero.
+
+737
+00:44:41,310 --> 00:44:44,190
+And so I never would
+know whether that five
+
+738
+00:44:44,190 --> 00:44:48,990
+was right or wrong, but
+thanks for making it right.
+
+739
+00:44:48,990 --> 00:44:49,490
+OK.
+
+740
+00:44:52,690 --> 00:44:54,380
+Ha.
+
+741
+00:44:54,380 --> 00:45:00,760
+Question two c, whoever
+wrote this, probably me,
+
+742
+00:45:00,760 --> 00:45:03,270
+said this is not difficult.
+
+743
+00:45:03,270 --> 00:45:06,570
+I don't know why I put that in.
+
+744
+00:45:06,570 --> 00:45:10,640
+just -- it asks for the
+projection matrix onto
+
+745
+00:45:10,640 --> 00:45:12,050
+the column space of A4.
+
+746
+00:45:15,402 --> 00:45:17,360
+How could I have thought
+that wasn't difficult?
+
+747
+00:45:17,360 --> 00:45:25,580
+It looks extremely difficult.
+what's the projection matrix
+
+748
+00:45:25,580 --> 00:45:27,505
+onto the column space of A4?
+
+749
+00:45:32,250 --> 00:45:34,680
+I don't know whether that --
+this is not difficult is just
+
+750
+00:45:34,680 --> 00:45:37,650
+like helpful or -- or insulting.
+
+751
+00:45:37,650 --> 00:45:41,380
+Uh, what do you think?
+
+752
+00:45:41,380 --> 00:45:43,870
+The -- what's the
+column space of A4 here?
+
+753
+00:45:46,910 --> 00:45:52,800
+Well, what's our first question
+is is the matrix singular
+
+754
+00:45:52,800 --> 00:45:54,280
+or invertible?
+
+755
+00:45:54,280 --> 00:45:58,210
+If the answer is invertible,
+then what's the column space?
+
+756
+00:46:00,770 --> 00:46:03,820
+If -- if this matrix A4 is
+invertible, so that's my guess,
+
+757
+00:46:03,820 --> 00:46:07,200
+if this problem's easy it has
+to be because this matrix is
+
+758
+00:46:07,200 --> 00:46:08,600
+probably invertible.
+
+759
+00:46:08,600 --> 00:46:12,940
+Then its column
+space is R^4, good,
+
+760
+00:46:12,940 --> 00:46:15,260
+the column space
+is the whole space,
+
+761
+00:46:15,260 --> 00:46:18,320
+and the answer to this easy
+question is the projection
+
+762
+00:46:18,320 --> 00:46:23,180
+matrix is the identity, it's the
+four-by-four identity matrix.
+
+763
+00:46:23,180 --> 00:46:26,130
+If this matrix is invertible.
+
+764
+00:46:26,130 --> 00:46:27,510
+Shall we check invertibility?
+
+765
+00:46:27,510 --> 00:46:29,840
+How would you find
+its determinant?
+
+766
+00:46:29,840 --> 00:46:33,770
+Can we just like take the
+determinant of that matrix?
+
+767
+00:46:33,770 --> 00:46:37,010
+I could ask you how -- so there
+-- there are twenty-four terms,
+
+768
+00:46:37,010 --> 00:46:39,950
+do we want to write all
+twenty-four terms down?
+
+769
+00:46:39,950 --> 00:46:42,470
+not in the remaining
+ten seconds.
+
+770
+00:46:42,470 --> 00:46:43,930
+Better to use cofactors.
+
+771
+00:46:43,930 --> 00:46:47,890
+So I go along row
+one, I see one --
+
+772
+00:46:47,890 --> 00:46:52,060
+the only nonzero is this guy,
+so I should take that one times
+
+773
+00:46:52,060 --> 00:46:53,380
+the cofactor.
+
+774
+00:46:53,380 --> 00:46:55,680
+Now so I'm down to
+this determinant.
+
+775
+00:46:55,680 --> 00:46:56,640
+OK.
+
+776
+00:46:56,640 --> 00:47:00,970
+So now I'm -- look at this first
+column, I see one times this,
+
+777
+00:47:00,970 --> 00:47:05,640
+there's the cofactor of the
+one, so I'm using up row one --
+
+778
+00:47:05,640 --> 00:47:09,530
+row one and column one of
+this three-by-three matrix,
+
+779
+00:47:09,530 --> 00:47:12,060
+I'm down to this
+cofactor, and by the way,
+
+780
+00:47:12,060 --> 00:47:14,370
+those were both
+plus signs, right?
+
+781
+00:47:14,370 --> 00:47:15,410
+No, they weren't.
+
+782
+00:47:15,410 --> 00:47:17,240
+That was a minus sign.
+
+783
+00:47:17,240 --> 00:47:18,490
+That was a --
+
+784
+00:47:18,490 --> 00:47:22,540
+that was a minus, and then that
+was a plus, and then this, so
+
+785
+00:47:22,540 --> 00:47:24,670
+what's the determinant?
+
+786
+00:47:24,670 --> 00:47:25,400
+Nine.
+
+787
+00:47:25,400 --> 00:47:25,900
+Nine.
+
+788
+00:47:25,900 --> 00:47:27,960
+Determinant is nine.
+
+789
+00:47:27,960 --> 00:47:31,190
+Determinant of A4 is nine.
+
+790
+00:47:31,190 --> 00:47:32,580
+OK.
+
+791
+00:47:32,580 --> 00:47:38,640
+Where A3, so my guess is I'll
+put that on the final this
+
+792
+00:47:38,640 --> 00:47:43,320
+year, the -- probably the odd-
+numbered ones are singular
+
+793
+00:47:43,320 --> 00:47:47,830
+and the even-numbered
+ones are invertible.
+
+794
+00:47:47,830 --> 00:47:50,710
+And I don't know
+what the determinants
+
+795
+00:47:50,710 --> 00:47:55,750
+are but I'm betting that
+they have some nice formula.
+
+796
+00:47:55,750 --> 00:47:56,290
+OK.
+
+797
+00:47:56,290 --> 00:48:02,770
+So, recitations this week
+will also be quiz review
+
+798
+00:48:02,770 --> 00:48:08,740
+and then the quiz is
+Wednesday at one o'clock.
+
+799
+00:48:08,740 --> 00:48:10,290
+Thanks.

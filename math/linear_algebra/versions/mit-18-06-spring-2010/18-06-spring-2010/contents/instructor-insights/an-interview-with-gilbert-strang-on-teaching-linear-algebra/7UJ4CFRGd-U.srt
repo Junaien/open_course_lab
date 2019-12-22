@@ -1,0 +1,640 @@
+1
+00:00:06,840 --> 00:00:11,020
+SARAH HANSEN: Well, you have a
+lot of followers of your 18.06
+
+2
+00:00:11,020 --> 00:00:11,520
+videos.
+
+3
+00:00:11,520 --> 00:00:13,440
+GILBERT STRANG:
+That's wonderful.
+
+4
+00:00:13,440 --> 00:00:16,350
+SARAH HANSEN: And I'll
+read this quote to you.
+
+5
+00:00:16,350 --> 00:00:19,260
+"A commenter even noted
+that this is not lecture,
+
+6
+00:00:19,260 --> 00:00:20,850
+this is art."
+
+7
+00:00:20,850 --> 00:00:21,780
+GILBERT STRANG: Gosh.
+
+8
+00:00:21,780 --> 00:00:22,860
+OK.
+
+9
+00:00:22,860 --> 00:00:27,120
+Well, if you're going to ask
+what's my system, I have none.
+
+10
+00:00:30,390 --> 00:00:32,540
+I guess-- well, first
+I like students.
+
+11
+00:00:32,540 --> 00:00:34,240
+And I want to help.
+
+12
+00:00:34,240 --> 00:00:42,930
+And maybe the key point
+is to think with them.
+
+13
+00:00:42,930 --> 00:00:48,480
+Not to just say, OK, here
+it is, listen, listen up.
+
+14
+00:00:48,480 --> 00:00:55,490
+I think through the question
+all over again as they do.
+
+15
+00:00:55,490 --> 00:00:56,820
+And you have to give time.
+
+16
+00:00:56,820 --> 00:01:01,170
+You can't zip through a proof.
+
+17
+00:01:01,170 --> 00:01:05,620
+Because this class has to be
+sort of thinking with you.
+
+18
+00:01:05,620 --> 00:01:11,040
+And that's-- yeah,
+that's my thought.
+
+19
+00:01:11,040 --> 00:01:15,820
+I don't know if I achieve it,
+but I think it's the goal.
+
+20
+00:01:15,820 --> 00:01:19,110
+SARAH HANSEN: One
+of our users on OCW
+
+21
+00:01:19,110 --> 00:01:23,970
+noted that during
+lectures you sometimes ask
+
+22
+00:01:23,970 --> 00:01:28,877
+rhetorical questions, or maybe
+feign confusion as a way--
+
+23
+00:01:28,877 --> 00:01:30,210
+GILBERT STRANG: Feign confusion?
+
+24
+00:01:30,210 --> 00:01:31,080
+I'm confused.
+
+25
+00:01:31,080 --> 00:01:31,371
+SARAH HANSEN: Are you?
+
+26
+00:01:31,371 --> 00:01:31,470
+OK.
+
+27
+00:01:31,470 --> 00:01:32,580
+GILBERT STRANG: Well, no.
+
+28
+00:01:32,580 --> 00:01:36,060
+Well, no, it's probably true.
+
+29
+00:01:36,060 --> 00:01:41,160
+That's maybe part of
+not rushing through it.
+
+30
+00:01:41,160 --> 00:01:49,500
+But getting-- so I'll pause
+at the critical point, maybe.
+
+31
+00:01:49,500 --> 00:01:57,500
+You have to give time to see,
+OK, what's the next step?
+
+32
+00:01:57,500 --> 00:02:01,170
+You know, mathematics
+is beautifully ordered,
+
+33
+00:02:01,170 --> 00:02:03,180
+and sensible, and logical.
+
+34
+00:02:03,180 --> 00:02:06,750
+And linear algebra
+is not too difficult.
+
+35
+00:02:06,750 --> 00:02:09,690
+But still, you can't rush.
+
+36
+00:02:09,690 --> 00:02:14,660
+You have to sort of see
+the idea a few times.
+
+37
+00:02:14,660 --> 00:02:18,240
+First maybe on the
+board as symbols.
+
+38
+00:02:18,240 --> 00:02:21,000
+But not everybody
+picks up on symbols.
+
+39
+00:02:21,000 --> 00:02:23,770
+Then you say, what does it mean?
+
+40
+00:02:23,770 --> 00:02:26,580
+And then finally you
+say, why is it true?
+
+41
+00:02:26,580 --> 00:02:28,560
+But you don't say,
+"Why is it true?
+
+42
+00:02:28,560 --> 00:02:31,670
+Give the proof,"
+the very first step.
+
+43
+00:02:31,670 --> 00:02:34,620
+You want to make people
+think, yeah, it is true.
+
+44
+00:02:37,670 --> 00:02:42,260
+SARAH HANSEN: Others have noted
+that you do this thing where
+
+45
+00:02:42,260 --> 00:02:45,620
+you display your own
+thinking kind of on the spot
+
+46
+00:02:45,620 --> 00:02:47,290
+as you work through problems.
+
+47
+00:02:47,290 --> 00:02:48,440
+GILBERT STRANG: Yeah.
+
+48
+00:02:48,440 --> 00:02:50,810
+SARAH HANSEN: Is there ever
+a risk in that for you?
+
+49
+00:02:50,810 --> 00:02:52,040
+GILBERT STRANG: Oh, yes.
+
+50
+00:02:52,040 --> 00:02:56,750
+And it happens, that
+I lose the thread
+
+51
+00:02:56,750 --> 00:03:00,620
+or I come up to a dead
+end where I don't know
+
+52
+00:03:00,620 --> 00:03:01,950
+what I'm supposed to do next.
+
+53
+00:03:01,950 --> 00:03:09,170
+But generally, especially in
+18.06, The basic linear algebra
+
+54
+00:03:09,170 --> 00:03:14,180
+course that many
+people have watched,
+
+55
+00:03:14,180 --> 00:03:16,950
+there I kind of get it OK.
+
+56
+00:03:16,950 --> 00:03:19,490
+Yeah, I've taught
+it enough times
+
+57
+00:03:19,490 --> 00:03:23,120
+to have a good chance
+of getting it right.
+
+58
+00:03:23,120 --> 00:03:26,630
+SARAH HANSEN: Is this a strategy
+that you developed over time?
+
+59
+00:03:26,630 --> 00:03:29,270
+You know, lots of people
+are nervous to do that,
+
+60
+00:03:29,270 --> 00:03:32,900
+to make themselves vulnerable
+in front of a large lecture
+
+61
+00:03:32,900 --> 00:03:33,680
+class like that.
+
+62
+00:03:33,680 --> 00:03:36,290
+But you're working
+problems in real time
+
+63
+00:03:36,290 --> 00:03:38,848
+and demonstrating what happens
+when you hit a dead end.
+
+64
+00:03:38,848 --> 00:03:40,890
+GILBERT STRANG: Well,
+that's OK, because students
+
+65
+00:03:40,890 --> 00:03:44,300
+are going to hit dead ends, so
+it seems to me it's OK for me
+
+66
+00:03:44,300 --> 00:03:46,310
+to get stuck, too.
+
+67
+00:03:46,310 --> 00:03:50,150
+And then if they see,
+oh, OK, maybe this
+
+68
+00:03:50,150 --> 00:03:53,600
+is the way to get
+out of that corner.
+
+69
+00:03:53,600 --> 00:03:55,910
+Yeah.
+
+70
+00:03:55,910 --> 00:04:00,080
+So essentially I think the
+thing is I like students.
+
+71
+00:04:00,080 --> 00:04:01,610
+I like math.
+
+72
+00:04:01,610 --> 00:04:07,020
+And putting them together is
+just the best job in the world.
+
+73
+00:04:07,020 --> 00:04:09,818
+SARAH HANSEN: Let's talk
+about humor for a second.
+
+74
+00:04:09,818 --> 00:04:10,610
+GILBERT STRANG: OK.
+
+75
+00:04:10,610 --> 00:04:11,985
+SARAH HANSEN: You
+have been known
+
+76
+00:04:11,985 --> 00:04:15,172
+to say things like, keep things
+in their Gauss-given order.
+
+77
+00:04:15,172 --> 00:04:16,089
+GILBERT STRANG: I see.
+
+78
+00:04:16,089 --> 00:04:18,381
+SARAH HANSEN: And other really
+funny things that people
+
+79
+00:04:18,381 --> 00:04:19,730
+just love.
+
+80
+00:04:19,730 --> 00:04:23,000
+So what's the role of
+humor in your teaching?
+
+81
+00:04:23,000 --> 00:04:24,830
+GILBERT STRANG:
+Well, maybe it's--
+
+82
+00:04:24,830 --> 00:04:29,630
+which is what I'm saying
+here, maybe the key point
+
+83
+00:04:29,630 --> 00:04:31,160
+is to make it human.
+
+84
+00:04:31,160 --> 00:04:36,080
+You know, you're a person,
+like the student is a person.
+
+85
+00:04:36,080 --> 00:04:39,890
+The book isn't quite a person,
+but it was written by a person.
+
+86
+00:04:39,890 --> 00:04:47,120
+And to see that it's just
+like a natural thing to do.
+
+87
+00:04:47,120 --> 00:04:47,660
+Yeah.
+
+88
+00:04:47,660 --> 00:04:48,380
+Yeah.
+
+89
+00:04:48,380 --> 00:04:49,010
+Yeah.
+
+90
+00:04:49,010 --> 00:04:50,990
+SARAH HANSEN: So
+one of our users
+
+91
+00:04:50,990 --> 00:04:54,260
+was thinking about how you
+teach complex material, how
+
+92
+00:04:54,260 --> 00:04:58,430
+you convey it in ways that
+are comfortable for students.
+
+93
+00:04:58,430 --> 00:05:00,380
+And the user was
+wondering, how do
+
+94
+00:05:00,380 --> 00:05:05,330
+you know when to go into
+detail and when not to?
+
+95
+00:05:05,330 --> 00:05:11,000
+GILBERT STRANG: I suppose I try
+to think it through once again.
+
+96
+00:05:11,000 --> 00:05:13,460
+And then you sort
+of automatically
+
+97
+00:05:13,460 --> 00:05:18,370
+see the word-- you recognize
+what words you need to use,
+
+98
+00:05:18,370 --> 00:05:21,990
+and what the steps are.
+
+99
+00:05:21,990 --> 00:05:23,570
+Yeah.
+
+100
+00:05:23,570 --> 00:05:25,560
+If you're not
+thinking it yourself,
+
+101
+00:05:25,560 --> 00:05:27,950
+then you're probably
+going too fast
+
+102
+00:05:27,950 --> 00:05:35,290
+and not connecting with
+the thinking of the class.
+
+103
+00:05:35,290 --> 00:05:36,790
+SARAH HANSEN: And
+how do you connect
+
+104
+00:05:36,790 --> 00:05:40,230
+with the thinking of the class
+when it's such a large lecture
+
+105
+00:05:40,230 --> 00:05:40,730
+hall?
+
+106
+00:05:40,730 --> 00:05:43,000
+And everyone's at a different
+point in their understanding.
+
+107
+00:05:43,000 --> 00:05:43,930
+GILBERT STRANG:
+That's probably true.
+
+108
+00:05:43,930 --> 00:05:45,910
+And of course, you don't
+know what everybody
+
+109
+00:05:45,910 --> 00:05:47,980
+is thinking in that class.
+
+110
+00:05:47,980 --> 00:05:54,540
+But overall, if you get--
+
+111
+00:05:54,540 --> 00:06:00,720
+if you stay sort of conscious
+of the class, conscious of where
+
+112
+00:06:00,720 --> 00:06:06,620
+they are, that's, I think,
+the thing for any speaker,
+
+113
+00:06:06,620 --> 00:06:09,120
+is to be conscious
+of the audience
+
+114
+00:06:09,120 --> 00:06:12,210
+and not just a A-B inverse.
+
+115
+00:06:14,145 --> 00:06:15,520
+SARAH HANSEN: What
+else would you
+
+116
+00:06:15,520 --> 00:06:20,330
+like to add about teaching
+18.06 linear algebra?
+
+117
+00:06:20,330 --> 00:06:23,130
+GILBERT STRANG: Well, with
+18.06 of course, I'm just--
+
+118
+00:06:23,130 --> 00:06:26,770
+so, recently, Open
+CourseWare, which I think
+
+119
+00:06:26,770 --> 00:06:28,930
+was just such a great idea.
+
+120
+00:06:28,930 --> 00:06:30,400
+Great idea for MIT.
+
+121
+00:06:30,400 --> 00:06:33,220
+Great idea for faculty.
+
+122
+00:06:33,220 --> 00:06:39,400
+So they did a count of the
+number of viewers in 18.06,
+
+123
+00:06:39,400 --> 00:06:41,600
+and it was 10 million.
+
+124
+00:06:41,600 --> 00:06:43,240
+Which was like, woo.
+
+125
+00:06:43,240 --> 00:06:44,880
+I never expected.
+
+126
+00:06:44,880 --> 00:06:49,270
+But I do get nice,
+really nice messages
+
+127
+00:06:49,270 --> 00:06:52,940
+from all over the world.
+
+128
+00:06:52,940 --> 00:06:55,300
+And I reply to
+them far as I can.
+
+129
+00:06:58,690 --> 00:07:03,430
+Sometimes they'll ask what's
+a good way to learn math?
+
+130
+00:07:03,430 --> 00:07:05,770
+I don't know if I have
+an answer to that.
+
+131
+00:07:05,770 --> 00:07:08,650
+But anyway, I try
+to be encouraging.
+
+132
+00:07:08,650 --> 00:07:13,210
+So yeah.
+
+133
+00:07:13,210 --> 00:07:14,740
+It's been wonderful.
+
+134
+00:07:14,740 --> 00:07:23,035
+Just having the video
+lectures available
+
+135
+00:07:23,035 --> 00:07:26,500
+allows everybody
+to be in the class.
+
+136
+00:07:26,500 --> 00:07:27,700
+Yeah.
+
+137
+00:07:27,700 --> 00:07:32,270
+So, thank you all for
+joining the class.
+
+138
+00:07:32,270 --> 00:07:34,090
+Thank you.

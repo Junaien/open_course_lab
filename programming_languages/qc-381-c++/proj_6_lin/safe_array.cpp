@@ -146,7 +146,6 @@ bool sorted(SA<T> & arr, int low, int high) {
       return false;
     }
   }
-
   return true;
 }
 

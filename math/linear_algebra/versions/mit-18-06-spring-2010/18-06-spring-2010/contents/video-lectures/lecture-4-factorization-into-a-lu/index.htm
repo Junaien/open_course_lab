@@ -1,0 +1,1450 @@
+<!DOCTYPE html><html lang="en">
+      
+      
+        
+    
+    
+    
+    
+
+      
+      
+      <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">  
+        
+        <title>Lecture 4: Factorization into A = LU | Video Lectures | Linear Algebra | Mathematics | MIT OpenCourseWare</title>
+    <!-- Begin Automatic Metadata Insertion -->
+    <meta content="18-06-linear-algebra-spring-2010" name="WT.cg_n">
+    <meta content="Lecture 4: Factorization into A = LU" name="WT.cg_s">
+    <meta content="" name="Description">
+    <meta content="Strang, Gilbert" name="Author">
+    <meta content="18.06,matrix theory,linear algebra,systems of equations,vector spaces,determinants,eigenvalues,similarity,positive definite matrices,least-squares approximations,stability of differential equations,networks,Fourier transforms,Markov processes,Linear Algebra" name="keywords">
+    <meta content="18.06 Linear Algebra | Lecture 4: Factorization into A = LU" name="Search_Display">
+    <meta content="Linear Algebra" itemprop="about">
+    <!-- End Automatic Metadata Insertion -->
+
+	<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/grid.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/base.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/menu.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/jquery.bubblepopup.css">
+<link title="default" rel="stylesheet" type="text/css" href="https://ocw-origin.odl.mit.edu/styles/search.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/courses.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/courses_new.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/jquery.jscrollpane.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/media_tabs.css">
+	<link href="https://ocw-origin.odl.mit.edu/xml/ocwcc.rdf" type="application/rdf+xml" rel="metadata">
+	<link rel="canonical" href="https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/lecture-4-factorization-into-a-lu/">
+	<link rel="apple-touch-icon" href="../../../common/images/apple-touch-icon.png">
+	
+	
+      
+	
+	<script type="text/javascript" src="../../../common/scripts/jquery.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/ocw-media-utils-offline.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/ocw-offline.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/jquery.bubblepopup.min.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/expandy.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/bubble-popup-offline.js"></script>
+	
+	
+	
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#tabs").tabs();
+        IpadScroller();
+      });
+    </script>
+    
+    
+    
+    
+    
+    
+      
+       
+		 
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </head>
+    <body itemscope itemtype="http://schema.org/WebPage">
+        
+	
+
+        <header id="top">
+			<div id="grid">
+				
+				
+					
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572">
+<div class="portletStaticText portlet-static-site-header">
+<!--googleoff: index--> <div class="grid_6 alpha" id="banner"><a href="https://ocw-origin.odl.mit.edu/"><img src="../../../common/images/ocw_mast.png" class="logo" alt="MIT OpenCourseWare, Massachusetts Institute of Technology"></a></div> <div class="grid_6 omega" id="subscribe">
+<aside class="module" aria-label="Connect with OCW"> <table class="social">     <tbody>         <tr>             <td class="socialbutton"><a aria-label="Subscribe to the OCW Newsletter" href="https://ocw-origin.odl.mit.edu/subscribe/index.htm?utm_source=header"><img src="../../../common/images/trans.gif" alt="An icon depicting an envelope.">Subscribe to the OCW Newsletter</a></td>             <td>
+<a aria-label="Facebook" href="https://facebook.com/mitocw"><img src="../../../common/images/icon_fb.png" alt="Click to visit our Facebook page."></a>   <a aria-label="Twitter" href="https://twitter.com/mitocw"><img src="https://ocw-origin.odl.mit.edu/images/icon_twitter.png" alt="Click to visit our Twitter feed."></a>   <a aria-label="YouTube" href="https://www.youtube.com/mitocw"><img src="https://ocw-origin.odl.mit.edu/images/icon_yt.png" alt="Click to visit our YouTube page."></a>   <a aria-label="Open Matters blog on WordPress" href="https://mitopencourseware.wordpress.com/"><img src="https://ocw-origin.odl.mit.edu/images/icon_wp.png" alt="Click to visit our blog on WordPress."></a>
+</td>         </tr>     </tbody> </table> </aside><nav aria-label="Help Links" class="helplinks">     <a aria-label="OCW Site Help" href="https://ocw-origin.odl.mit.edu/help">Help</a><span aria-hidden="true">|</span>     <a href="https://ocw-origin.odl.mit.edu/about/contactus">Contact Us</a>   </nav>
+</div> <div class="clear"> </div> <!--googleon: index-->
+</div>
+
+</div>
+
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a6d6567612d6d656e75" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a6d6567612d6d656e75">
+<div class="portletStaticText portlet-static-mega-menu"><div><nav id="mega" class="grid_8 alpha" aria-label="Site"> <ul id="menu" role="presentation">     <li id="menu_home">
+<a href="https://ocw-origin.odl.mit.edu/" aria-label="Homepage"><img src="../../../common/images/top-nav_home.png" class="home_icon" alt="Click for site home page."></a><!-- Begin Home Item -->
+</li>     <!-- End Home Item -->     <li id="drop_1" aria-label="Find Courses">
+<a href="#" aria-hidden="true">FIND COURSES</a><!-- Begin 5 columns Item -->     <div class="dropdown_5columns-a mega-courses"><div class="col_1a">
+<div class="row_1a">
+<nav aria-labelledby="mm-find-courses-by">     <span id="mm-find-courses-by" class="nav" aria-hidden="true">Find courses by:</span>     <ul class="find_by" role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/">Topic</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-number/">MIT Course Number</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-department/">Department</a></li>     </ul>     </nav>     <nav aria-labelledby="mm-collections">     <span id="mm-collections" class="nav" aria-hidden="true">Collections</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/new-courses/">New Courses</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/audio-video-courses/">Audio/Video Lectures</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/resources/">Supplemental Resources</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/high-school/">OCW Highlights for High School</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/mitx-related-courseware/">MITx &amp; Related OCW Courses</a></li>     </ul>     </nav>     <nav class="col_1b" aria-labelledby="mm-translated-courses">     <span id="mm-translated-courses" class="nav" aria-hidden="true" style="line-height: 1.3;">Cross-Disciplinary Topic Lists</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/energy-courses">Energy</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/entrepreneurship">Entrepreneurship</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/environment-courses">Environment</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/intro-programming">Introductory Programming</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/life-sciences">Life Sciences</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/transportation-courses">Transportation</a></li>     </ul>     </nav>
+</div>     <div class="row_1b"><nav aria-labelledby="mm-cross-disciplinary-topic-lists">     <span id="mm-cross-disciplinary-topic-lists" class="nav" aria-hidden="true">Translated Courses</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/traditional-chinese" aria-label="Traditional Chinese">繁體字 / Traditional Chinese</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/spanish" aria-label="Spanish">Español / Spanish</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/turkish" aria-label="Turkish">Türkçe / Turkish</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/korean" aria-label="Korean">(비디오)한국 / Korean</a></li>     </ul>     </nav></div>
+</div></div>
+</li>     <li id="drop_2">
+<a href="#" aria-label="For Educators">For Educators</a>     <div class="dropdown_1column-a" style="width: 270px;"><nav aria-labelledby="mm-find-courses-by">     <span id="mm-find-courses-by" class="nav" aria-hidden="true">OCW Educator Portal</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=instructional&amp;utm_campaign=Educator&amp;utm_source=megamenu&amp;utm_medium=find-courses&amp;utm_content=approaches">Search for Instructor Insights</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=teaching&amp;utm_campaign=Educator&amp;utm_source=megamenu&amp;utm_medium=find-courses&amp;utm_content=materials">Search for Teaching Materials</a></li>     </ul>     <span id="mm-collections" class="nav" aria-hidden="true">OCW Collections</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/#cat=teachingandeducation">MIT Courses about Teaching and Education</a></li>     </ul>     <span id="mm-collections" class="nav" aria-hidden="true">K-12</span>     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/high-school/">OCW Highlights for High School</a></li>         <li><a href="https://www.k12videos.mit.edu/videos" aria-label="External Link: MIT Plus K12 Videos">MIT+K12 Videos</a></li>     </ul>     <span id="mm-higher-ed" class="nav" aria-hidden="true">Higher Ed</span>     <ul>         <li><a href="https://teachingexcellence.mit.edu/" aria-label="External Link: Teaching Excellence at MIT">Teaching Excellence at MIT</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/courses/mit-curriculum-guide/">MIT Undergraduate Curriculum Map</a></li>
+<li><a href="https://openlearning.mit.edu/campus/digital-innovations/">Residential Digital Innovations</a></li>     </ul>     </nav></div>
+</li>     <li id="drop_3">
+<a href="#" aria-hidden="true">Give Now</a>     <div class="dropdown_1column-a"><nav class="col_1" aria-label="Donate">     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/give/">Make a Donation</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/why-give/">Why Give?</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/our-supporters/">Our Supporters</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/give/shop-ocw">Shop OCW</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/support/">Become a Corporate Sponsor</a></li>     </ul>     </nav></div>
+</li>     <li id="drop_4">
+<a href="#" aria-hidden="true">About</a>     <div class="dropdown_1column-a"><nav class="col_1" aria-label="About">     <ul role="presentation">         <li><a href="https://ocw-origin.odl.mit.edu/about/">About MIT OpenCourseWare</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/about/site-statistics/">Site Statistics</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/about/ocw-stories/">OCW Stories</a></li>         <li><a href="https://ocw-origin.odl.mit.edu/about/newsletter/">News</a></li>     </ul>     </nav></div>
+</li> </ul> </nav></div></div>
+
+</div>
+
+
+
+
+
+<!--googleoff: index-->
+<script>
+  (function() {
+	var cx = '012626166551961672889:owjdpuboktq';
+	var gcse = document.createElement('script');
+	gcse.type = 'text/javascript';
+	gcse.async = true;
+	gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(gcse, s);
+  })();
+  window.onload = function(){
+	document.getElementById('gsc-i-id1').placeholder = 'Search';	
+  };
+
+$(document).ready(function(){
+
+$('.advanceSearch a').keydown(function(event){showSearchTips($(this),event);})
+$('#searchTipsModal').keydown(function(event){showSearchTips($(this),event);})
+
+function showSearchTips(obj,evt) {
+// if pressed enter key
+	if ( evt.which == 13 || evt.which == 32) {
+		showModal();
+		ga('send', 'pageview', "AdvanceSearch");
+		$(".advanceSearch a").attr('aria-expanded', 'true');
+		$('.searchTipsModal').focus();
+		evt.preventDefault();
+		}
+	if ( evt.which == 27 ) {
+		hideModal();
+		$(".advanceSearch a").attr('aria-expanded', 'false');
+		var modal = document.getElementById('searchTipsModal');
+		modal.style.display = "none";
+		$(".advanceSearch a").focus();
+		evt.preventDefault();
+		}
+}
+
+});
+function showModal(){
+	var modal = document.getElementById('searchTipsModal');
+	modal.style.display = "block";
+	ga('send', 'pageview', "AdvanceSearch");
+	document.getElementById("searchTipsBtn").setAttribute("aria-expanded", true);
+	window.setTimeout(function () {
+    document.getElementById('searchTipsModal').focus(); }, 0);
+}
+
+function hideModal(){
+	var modal = document.getElementById('searchTipsModal');
+	modal.style.display = "none";
+	document.getElementById("searchTipsBtn").setAttribute("aria-expanded", false);
+}
+</script>
+<div id="search" role="search" class="grid_4 omega">
+    	<table class="search">
+				<tbody>
+					<tr>
+						<td><div class="searchboxheader"><searchbox-only resultsurl="/search/ocwsearch.htm"></searchbox-only></div></td>
+						<td>
+							<div class="advanceSearch">
+								<a id="searchTipsBtn" onclick="showModal();" href="#" role="button" aria-label="search tips" aria-expanded="false" aria-describedby="searchtips">Search Tips</a>
+
+								<!-- The Modal -->
+								<div id="searchTipsModal" class="modal" tabindex="-1">
+								  <!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-body">
+											<button class="close" onclick="hideModal();" aria-label="close">X</button>
+											<span>
+												<b>Exclude words from your search</b>
+												<br>Put - in front of a word you want to leave out. For example, jaguar speed -car
+												<br><br>
+												<b>Search for an exact match</b>
+												<br>Put a word or phrase inside quotes. For example, "tallest building".
+												<br><br>
+												<b>Search for wildcards or unknown words</b>
+												<br>Put a * in your word or phrase where you want to leave a placeholder. For example, "largest * in the world".
+												<br><br>
+												<b>Search within a range of numbers</b>
+												<br>Put .. between two numbers. For example, camera $50..$100.
+												<br><br>
+												<b>Combine searches</b>
+												<br>Put "OR" between each search query. For example,  marathon OR race.
+												<br><br>
+											</span>
+										</div>
+								  </div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+		</table>
+</div>
+<div class="clear"></div>
+<!--googleon: index-->
+<!-- *end header* -->
+
+				
+				
+			</div>
+<!-- top grid end -->
+		</header><!-- top end -->
+			
+		<div id="center_media">
+      	<div id="grid">
+      		<div id="left">
+        		<nav id="breadcrumb_media" aria-label="Breadcrumb">
+                	<p>
+
+    <a href="https://ocw-origin.odl.mit.edu/">Home</a>
+    
+        »
+        
+    
+    
+        
+            <a href="https://ocw-origin.odl.mit.edu/courses">Courses</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="https://ocw-origin.odl.mit.edu/courses/mathematics">Mathematics</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../../contents/index.htm">Linear Algebra</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../../contents/video-lectures/index.htm">Video Lectures</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            
+            
+            Lecture 4: Factorization into A = LU
+         
+    
+</p>
+
+            	</nav>
+            	<div class="clear"></div>
+        		<div id="media_title">
+        		<h1 class="title" itemprop="name" property="dct:title">
+        <span class="" id="parent-fieldname-title">
+            Lecture 4: Factorization into A = LU
+        </span>
+    </h1>
+        		</div>
+           		<div class="clear"></div>
+           		<div id="course_wrapper_media">
+           			<nav id="course_nav" aria-label="Course">
+           				<script language="javascript" type="text/javascript">
+function toggleMenu(objID) {
+  if (!document.getElementById) return;
+  var ob = document.getElementById(objID);
+  ob.className = (ob.className == 'selected')?'': 'selected';
+}
+function toggleClass(id)
+{
+  var divtoggleClass= document.getElementById(id);
+  divtoggleClass.className = (divtoggleClass.className == 'mO')?'mC': 'mO';
+  return false;
+}
+function changeAlt(id)
+{
+  id.alt = (id.alt == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+  id.title = (id.title == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+}
+</script>
+<!--Left Nav Starts -->
+
+
+	<ul>			  
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/index.htm">
+		                  Course Home  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/syllabus/index.htm">
+		                  Syllabus  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/calendar/index.htm">
+		                  Calendar  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/instructor-insights/index.htm">
+		                  Instructor Insights  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="selected">
+			   			<a href="../../../contents/video-lectures/index.htm">
+		                  Video Lectures  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/readings/index.htm">
+		                  Readings  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/assignments/index.htm">
+		                  Assignments  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/exams/index.htm">
+		                  Exams  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/study-materials/index.htm">
+		                  Study Materials  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/tools/index.htm">
+		                  Tools  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/related-resources/index.htm">
+		                  Related Resources  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    
+		    
+         	
+	<!--second tal block close-->  
+	
+</ul>
+
+
+<!--Left Nav Ends -->
+
+
+
+
+
+           			</nav>
+           			<main id="course_inner_media" aria-labelledby="media_title">
+      					 
+        <div class="" id="parent-fieldname-text">
+            
+            
+        </div>
+    
+      					     
+    
+    
+
+
+
+<script type="text/javascript">var caption_embed_1 ={'English - US': '/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/lecture-4-factorization-into-a-lu/MsIvs_6vC38.srt'}</script>     
+     <div id="media-embed">
+         <div class="attention_message" id="embed_1">
+<p>Flash and JavaScript are required for this feature.</p>
+<p>Download the video from <a href="https://itunes.apple.com/us/itunes-u/id354869137">iTunes U</a> or the <a href="http://www.archive.org/download/MIT18.06S05_MP4/04.mp4">Internet Archive</a>.</p>
+</div>
+     </div>
+    
+     <script type="text/javascript">ocw_embed_chapter_media('embed_1', 'https://www.youtube.com/v/MsIvs_6vC38', 'youtube', '/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/lecture-4-factorization-into-a-lu', 'https://img.youtube.com/vi/MsIvs_6vC38/0.jpg',0,0, 'https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/lecture-4-factorization-into-a-lu/MsIvs_6vC38.srt')</script>
+	 
+	 
+	 		
+	 		<div id="transcript1"></div>
+				 <script type="text/javascript">createThreePlayParams(2, 1669954, "embed_1", 0, 0)</script>
+			 
+	
+
+     <div id="media_resource_next_prev_nav" style="margin-top: 1em;">
+        <p>
+        
+            <a href="../../../contents/video-lectures/lecture-3-multiplication-and-inverse-matrices/index.htm">
+                <img src="../../../common/images/btn_previous_resource.png" style="margin: 0 30px 0 50px;" alt="Previous track" title="Previous track"></a>
+     	
+     	
+        
+            <a href="../../../contents/video-lectures/lecture-5-transposes-permutations-spaces-r-n/index.htm"> 
+                <img src="../../../common/images/btn_next_resource.png" alt="Next track" title="Next track"></a>
+       
+       </p>
+     </div>
+ 
+
+
+<script type="text/javascript">
+		window.onload=function(){
+		init();
+		
+		}
+		var tabLinks = new Array();
+		var contentDivs = new Array();
+		function init() {
+		  // Grab the tab links and content divs from the page
+		  var tabListItems = document.getElementById('tabs').childNodes;
+		  for ( var i = 0; i < tabListItems.length; i++ ) {
+			if ( tabListItems[i].nodeName == "LI" ) {
+			  var tabLink = getFirstChildWithTagName( tabListItems[i], 'A' );
+			  var id = getHash( tabLink.getAttribute('href') );
+			  tabLinks[id] = tabLink;
+			  contentDivs[id] = document.getElementById( id );
+			}
+		  }
+		  // Assign onclick events to the tab links, and
+		  // highlight the first tab
+		  var i = 0;
+		  for ( var id in tabLinks ) {
+			tabLinks[id].onclick = showTab;
+			tabLinks[id].onfocus = function() { this.blur() };
+			if ( i == 0 ) tabLinks[id].className = 'selected';
+			i++;
+		  }
+		  // Hide all content divs except the first
+		  var i = 0;
+		  for ( var id in contentDivs ) {
+			if ( i != 0 ) contentDivs[id].className = 'tabContent hide';
+			i++;
+		  }
+		}
+		function showTab() {
+		  var selectedId = getHash( this.getAttribute('href') );
+		  // Highlight the selected tab, and dim all others.
+		  // Also show the selected content div, and hide all others.
+		  for ( var id in contentDivs ) {
+			if ( id == selectedId ) {
+			  tabLinks[id].className = 'selected';
+			  contentDivs[id].className = 'tabContent';
+			} else {
+			  tabLinks[id].className = '';
+			  contentDivs[id].className = 'tabContent hide';
+			}
+		  }
+		  // Stop the browser following the link
+		  return false;
+		}
+		function getFirstChildWithTagName( element, tagName ) {
+		  for ( var i = 0; i < element.childNodes.length; i++ ) {
+			if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
+		  }
+		}
+		function getHash( url ) {
+		  var hashPos = url.lastIndexOf ( '#' );
+		  return url.substring( hashPos + 1 );
+		}
+ </script>	
+ 
+
+  <div id="media_tabs">
+     
+        <ul id="tabs">
+            <li class="first">
+                <a href="#vid_about" class="selected">About this Video</a>
+            </li>
+            <li class="">
+                <a href="#vid_index" class="">Playlist</a>
+            </li>
+            <li class="">
+                <a href="#vid_playlist" class="">Related Resources</a>
+            </li>
+            <li class="">
+                <a href="#vid_related" class="">Transcript</a>
+            </li>
+            <li class="">
+                <a href="#vid_transcript" class="">Download this Video</a>
+            </li>
+        </ul>
+   
+        <div id="vid_about" itemprop="description" class="tabContent"><div id="vid_about" itemprop="description" class="tabContent"><div class="vidpad">
+<p>These  video lectures of Professor Gilbert Strang teaching 18.06 were recorded  in Fall 1999 and do not correspond precisely to the current   edition  of the textbook. However, this book is  still the best  reference  for  more information on the topics covered in  each lecture.</p> <p><a href="http://www.amazon.com/exec/obidos/ASIN/0980232775/ref=nosim/mitopencourse-20"><img alt="Buy at Amazon" src="https://ocwcms.mit.edu/images/a_logo_17.gif" border="0" align="absmiddle"></a> Strang, Gilbert. <em>Introduction to Linear Algebra</em>. 5th ed. <a href="http://www.wellesleycambridge.com/">Wellesley-Cambridge Press</a>, 2016. ISBN: 9780980232776.</p> <p><strong>Instructor/speaker:</strong> Prof. Gilbert Strang</p>
+</div></div></div>
+        <div id="vid_index" itemprop="description" class="tabContent hide">
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-1-the-geometry-of-linear-equations/index.htm">
+<img src="../../../contents/video-lectures/lecture-1-the-geometry-of-linear-equations/18.06_L01.jpg" title="Lecture 1: The geometry of linear equations" alt="Lecture 1: The geometry of linear equations">
+<p>Lecture 1: The geometry of ...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-2-elimination-with-matrices/index.htm">
+<img src="../../../contents/video-lectures/lecture-2-elimination-with-matrices/18.06_L02.jpg" title="Lecture 2: Elimination with matrices" alt="Lecture 2: Elimination with matrices">
+<p>Lecture 2: Elimination with...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-3-multiplication-and-inverse-matrices/index.htm">
+<img src="../../../contents/video-lectures/lecture-3-multiplication-and-inverse-matrices/18.06_L03.jpg" title="Lecture 3: Multiplication and inverse matrices" alt="Lecture 3: Multiplication and inverse matrices">
+<p>Lecture 3: Multiplication a...</p></a>
+</div>
+<div class="related-media-thumbnail-nolink">
+<div class="now-playing-resource">Now Playing</div>
+<img src="../../../contents/video-lectures/lecture-4-factorization-into-a-lu/18.06_L04.jpg" title="Lecture 4: Factorization into A = LU" alt="Lecture 4: Factorization into A = LU">
+<p>Lecture 4: Factorization in...</p>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-5-transposes-permutations-spaces-r-n/index.htm">
+<img src="../../../contents/video-lectures/lecture-5-transposes-permutations-spaces-r-n/18.06_L05.jpg" title="Lecture 5: Transposes, permutations, spaces R^n" alt="Lecture 5: Transposes, permutations, spaces R^n">
+<p>Lecture 5: Transposes, perm...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-6-column-space-and-nullspace/index.htm">
+<img src="../../../contents/video-lectures/lecture-6-column-space-and-nullspace/18.06_L06.jpg" title="Lecture 6: Column space and nullspace" alt="Lecture 6: Column space and nullspace">
+<p>Lecture 6: Column space and...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-7-solving-ax-0-pivot-variables-special-solutions/index.htm">
+<img src="../../../contents/video-lectures/lecture-7-solving-ax-0-pivot-variables-special-solutions/18.06_L07.jpg" title="Lecture 7: Solving Ax = 0: pivot variables, special solutions" alt="Lecture 7: Solving Ax = 0: pivot variables, special solutions">
+<p>Lecture 7: Solving Ax = 0: ...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-8-solving-ax-b-row-reduced-form-r/index.htm">
+<img src="../../../contents/video-lectures/lecture-8-solving-ax-b-row-reduced-form-r/18.06_L08.jpg" title="Lecture 8: Solving Ax = b: row reduced form R" alt="Lecture 8: Solving Ax = b: row reduced form R">
+<p>Lecture 8: Solving Ax = b: ...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-9-independence-basis-and-dimension/index.htm">
+<img src="../../../contents/video-lectures/lecture-9-independence-basis-and-dimension/18.06_L09.jpg" title="Lecture 9: Independence, basis, and dimension" alt="Lecture 9: Independence, basis, and dimension">
+<p>Lecture 9: Independence, ba...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-10-the-four-fundamental-subspaces/index.htm">
+<img src="../../../contents/video-lectures/lecture-10-the-four-fundamental-subspaces/18.06_L10.jpg" title="Lecture 10: The four fundamental subspaces" alt="Lecture 10: The four fundamental subspaces">
+<p>Lecture 10: The four fundam...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-11-matrix-spaces-rank-1-small-world-graphs/index.htm">
+<img src="../../../contents/video-lectures/lecture-11-matrix-spaces-rank-1-small-world-graphs/18.06_L11.jpg" title="Lecture 11: Matrix spaces; rank 1; small world graphs" alt="Lecture 11: Matrix spaces; rank 1; small world graphs">
+<p>Lecture 11: Matrix spaces; ...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-12-graphs-networks-incidence-matrices/index.htm">
+<img src="../../../contents/video-lectures/lecture-12-graphs-networks-incidence-matrices/18.06_L12.jpg" title="Lecture 12: Graphs, networks, incidence matrices" alt="Lecture 12: Graphs, networks, incidence matrices">
+<p>Lecture 12: Graphs, network...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-13-quiz-1-review/index.htm">
+<img src="../../../contents/video-lectures/lecture-13-quiz-1-review/18.06_L13.jpg" title="Lecture 13: Quiz 1 review" alt="Lecture 13: Quiz 1 review">
+<p>Lecture 13: Quiz 1 review</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-14-orthogonal-vectors-and-subspaces/index.htm">
+<img src="../../../contents/video-lectures/lecture-14-orthogonal-vectors-and-subspaces/18.06_L14.jpg" title="Lecture 14: Orthogonal vectors and subspaces" alt="Lecture 14: Orthogonal vectors and subspaces">
+<p>Lecture 14: Orthogonal vect...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-15-projections-onto-subspaces/index.htm">
+<img src="../../../contents/video-lectures/lecture-15-projections-onto-subspaces/18.06_L15.jpg" title="Lecture 15: Projections onto subspaces" alt="Lecture 15: Projections onto subspaces">
+<p>Lecture 15: Projections ont...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-16-projection-matrices-and-least-squares/index.htm">
+<img src="../../../contents/video-lectures/lecture-16-projection-matrices-and-least-squares/18.06_L16.jpg" title="Lecture 16: Projection matrices and least squares" alt="Lecture 16: Projection matrices and least squares">
+<p>Lecture 16: Projection matr...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-17-orthogonal-matrices-and-gram-schmidt/index.htm">
+<img src="../../../contents/video-lectures/lecture-17-orthogonal-matrices-and-gram-schmidt/18.06_L17.jpg" title="Lecture 17: Orthogonal matrices and Gram-Schmidt" alt="Lecture 17: Orthogonal matrices and Gram-Schmidt">
+<p>Lecture 17: Orthogonal matr...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-18-properties-of-determinants/index.htm">
+<img src="../../../contents/video-lectures/lecture-18-properties-of-determinants/18.06_L18.jpg" title="Lecture 18: Properties of determinants" alt="Lecture 18: Properties of determinants">
+<p>Lecture 18: Properties of d...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-19-determinant-formulas-and-cofactors/index.htm">
+<img src="../../../contents/video-lectures/lecture-19-determinant-formulas-and-cofactors/18.06_L19.jpg" title="Lecture 19: Determinant formulas and cofactors" alt="Lecture 19: Determinant formulas and cofactors">
+<p>Lecture 19: Determinant for...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-20-cramers-rule-inverse-matrix-and-volume/index.htm">
+<img src="../../../contents/video-lectures/lecture-20-cramers-rule-inverse-matrix-and-volume/18.06_L20.jpg" title="Lecture 20: Cramer's rule, inverse matrix, and volume" alt="Lecture 20: Cramer's rule, inverse matrix, and volume">
+<p>Lecture 20: Cramer's rule, ...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-21-eigenvalues-and-eigenvectors/index.htm">
+<img src="../../../contents/video-lectures/lecture-21-eigenvalues-and-eigenvectors/18.06_L21.jpg" title="Lecture 21: Eigenvalues and eigenvectors" alt="Lecture 21: Eigenvalues and eigenvectors">
+<p>Lecture 21: Eigenvalues and...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-22-diagonalization-and-powers-of-a/index.htm">
+<img src="../../../contents/video-lectures/lecture-22-diagonalization-and-powers-of-a/18.06_L22.jpg" title="Lecture 22: Diagonalization and powers of A" alt="Lecture 22: Diagonalization and powers of A">
+<p>Lecture 22: Diagonalization...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-23-differential-equations-and-exp-at/index.htm">
+<img src="../../../contents/video-lectures/lecture-23-differential-equations-and-exp-at/18.06_L23.jpg" title="Lecture 23: Differential equations and exp(At)" alt="Lecture 23: Differential equations and exp(At)">
+<p>Lecture 23: Differential eq...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-24-markov-matrices-fourier-series/index.htm">
+<img src="../../../contents/video-lectures/lecture-24-markov-matrices-fourier-series/18.06_L24.jpg" title="Lecture 24: Markov matrices; fourier series" alt="Lecture 24: Markov matrices; fourier series">
+<p>Lecture 24: Markov matrices...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-24b-quiz-2-review/index.htm">
+<img src="../../../contents/video-lectures/lecture-24b-quiz-2-review/18.06_L24b.jpg" title="Lecture 24b: Quiz 2 review" alt="Lecture 24b: Quiz 2 review">
+<p>Lecture 24b: Quiz 2 review</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-25-symmetric-matrices-and-positive-definiteness/index.htm">
+<img src="../../../contents/video-lectures/lecture-25-symmetric-matrices-and-positive-definiteness/18.06_L25.jpg" title="Lecture 25: Symmetric matrices and positive definiteness" alt="Lecture 25: Symmetric matrices and positive definiteness">
+<p>Lecture 25: Symmetric matri...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-26-complex-matrices-fast-fourier-transform/index.htm">
+<img src="../../../contents/video-lectures/lecture-26-complex-matrices-fast-fourier-transform/18.06_L26.jpg" title="Lecture 26: Complex matrices; fast fourier transform" alt="Lecture 26: Complex matrices; fast fourier transform">
+<p>Lecture 26: Complex matrice...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-27-positive-definite-matrices-and-minima/index.htm">
+<img src="../../../contents/video-lectures/lecture-27-positive-definite-matrices-and-minima/18.06_L27.jpg" title="Lecture 27: Positive definite matrices and minima" alt="Lecture 27: Positive definite matrices and minima">
+<p>Lecture 27: Positive defini...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-28-similar-matrices-and-jordan-form/index.htm">
+<img src="../../../contents/video-lectures/lecture-28-similar-matrices-and-jordan-form/18.06_L28.jpg" title="Lecture 28: Similar matrices and jordan form" alt="Lecture 28: Similar matrices and jordan form">
+<p>Lecture 28: Similar matrice...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-29-singular-value-decomposition/index.htm">
+<img src="../../../contents/video-lectures/lecture-29-singular-value-decomposition/18.06_L29.jpg" title="Lecture 29: Singular value decomposition" alt="Lecture 29: Singular value decomposition">
+<p>Lecture 29: Singular value ...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-30-linear-transformations-and-their-matrices/index.htm">
+<img src="../../../contents/video-lectures/lecture-30-linear-transformations-and-their-matrices/18.06_L30.jpg" title="Lecture 30: Linear transformations and their matrices" alt="Lecture 30: Linear transformations and their matrices">
+<p>Lecture 30: Linear transfor...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-31-change-of-basis-image-compression/index.htm">
+<img src="../../../contents/video-lectures/lecture-31-change-of-basis-image-compression/18.06_L31.jpg" title="Lecture 31: Change of basis; image compression" alt="Lecture 31: Change of basis; image compression">
+<p>Lecture 31: Change of basis...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-32-quiz-3-review/index.htm">
+<img src="../../../contents/video-lectures/lecture-32-quiz-3-review/18.06_L32.jpg" title="Lecture 32: Quiz 3 review" alt="Lecture 32: Quiz 3 review">
+<p>Lecture 32: Quiz 3 review</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-33-left-and-right-inverses-pseudoinverse/index.htm">
+<img src="../../../contents/video-lectures/lecture-33-left-and-right-inverses-pseudoinverse/18.06_L33.jpg" title="Lecture 33: Left and right inverses; pseudoinverse" alt="Lecture 33: Left and right inverses; pseudoinverse">
+<p>Lecture 33: Left and right ...</p></a>
+</div>
+<div class="related-media-thumbnail">
+<a href="../../../contents/video-lectures/lecture-34-final-course-review/index.htm">
+<img src="../../../contents/video-lectures/lecture-34-final-course-review/18.06_L34.jpg" title="Lecture 34: Final course review" alt="Lecture 34: Final course review">
+<p>Lecture 34: Final course re...</p></a>
+</div>
+</div>
+        <div id="vid_playlist" itemprop="description" class="tabContent hide">
+<h2 class="subhead">Related Resources</h2>
+<p><a target="_blank" href="../../../contents/readings/index.htm">Readings</a><br><a target="_blank" href="../../../contents/readings#Table_of_Contents">Table of Contents</a></p>
+</div>
+        <div id="vid_related" itemprop="description" class="tabContent hide">
+<ul><li><a class="transcript-link" title="Open in a new window." alt="Open in a new window." style="text-decoration: none; font-size: 1.0em;" target="_blank" text-decoration: none font-size: href="../../../contents/video-lectures/lecture-4-factorization-into-a-lu/MsIvs_6vC38.pdf"> Download English-US transcript (PDF)</a></li></ul>
+<p><span m="12380"> Okay, this is linear algebra, lecture four.</span></p>
+<p><span m="16800">And, the first thing I have to do is something that was on the list for last time, but here</span> <span m="24810">it is now.</span></p>
+<p><span m="26169">What's the inverse of a product?</span></p>
+<p><span m="29369">If I multiply two matrices together and I know their inverses, how do I get the inverse</span> <span m="36300">of A times B?</span></p>
+<p><span m="39559">So I know what inverses mean for a single matrix A and for a matrix B.</span></p>
+<p><span m="46760">What matrix do I multiply by to get the identity if I have A B?</span></p>
+<p><span m="53229">Okay, that'll be simple but so basic.</span></p>
+<p><span m="57100">Then I'm going to use that to -- I will have a product of matrices and the product that</span> <span m="66120">we'll meet will be these elimination matrices and the net result of today's lectures is</span> <span m="73660">the big formula for elimination, so the net result of today's lecture is this great way</span> <span m="82960">to look at Gaussian elimination.</span></p>
+<p><span m="87710">We know that we get from A to U by elimination.</span></p>
+<p><span m="91400">We know the steps -- but now we get the right way to look at it, A equals L U.</span></p>
+<p><span m="98060">So that's the high point for today.</span></p>
+<p><span m="100800">Okay.</span></p>
+<p><span m="101800">Can I take the easy part, the first step first?</span></p>
+<p><span m="107320">So, suppose A is invertible -- and of course it's going to be a big question, when is the</span> <span m="114560">matrix invertible?</span></p>
+<p><span m="115860">But let's say A is invertible and B is invertible, then what matrix gives me the inverse of A B?</span></p>
+<p><span m="124920">So that's the direct question.</span></p>
+<p><span m="127470">What's the inverse of A B?</span></p>
+<p><span m="128869">Do I multiply those separate inverses?</span></p>
+<p><span m="132120">Yes. I multiply the two matrices A inverse and B inverse, but what order do I multiply?</span></p>
+<p><span m="141230">In reverse order.</span></p>
+<p><span m="142290">And you see why.</span></p>
+<p><span m="144020">So the right thing to put here is B inverse A inverse.</span></p>
+<p><span m="149780">That's the inverse I'm after.</span></p>
+<p><span m="151820">We can just check that A B times that matrix gives the identity.</span></p>
+<p><span m="158950">Okay.</span></p>
+<p><span m="159950">So why -- once again, it's this fact that I can move parentheses around.</span></p>
+<p><span m="166480">I can just erase them all and do the multiplications any way I want to.</span></p>
+<p><span m="172329">So what's the right multiplication to do first?</span></p>
+<p><span m="176209">B times B inverse.</span></p>
+<p><span m="178220">This product here I is the identity.</span></p>
+<p><span m="182400">Then A times the identity is the identity and then finally A times A inverse gives the</span> <span m="188100">identity.</span></p>
+<p><span m="190060">So forgive the dumb example in the book.</span></p>
+<p><span m="195680">Why do you, do the inverse things in reverse order?</span></p>
+<p><span m="201189">It's just like -- you take off your shoes, you take off your socks, then the good way</span> <span m="207020">to invert that process is socks back on first, then shoes.</span></p>
+<p><span m="215060">Sorry, okay.</span></p>
+<p><span m="216660">I'm sorry that's on the tape.</span></p>
+<p><span m="221320">And, of course, on the other side we should really just check -- on the other side I have</span> <span m="226460">B inverse,</span> <span m="227480">A inverse. That does multiply A B, and this time it's these guys that give the identity,</span> <span m="234099">squeeze down, they give the identity, we're in shape.</span></p>
+<p><span m="238040">Okay. So there's the inverse.</span></p>
+<p><span m="241700">Good. While we're at it, let me do a transpose, because the next lecture has got a lot to</span> <span m="248480">-- involves transposes.</span></p>
+<p><span m="249780">So how do I -- if I transpose a matrix, I'm talking about square, invertible matrices</span> <span m="256860">right now.</span></p>
+<p><span m="258300">If I transpose one, what's its inverse?</span></p>
+<p><span m="263500">Well, the nice formula is -- let's see.</span></p>
+<p><span m="267640">Let me start from A, A inverse equal the identity.</span></p>
+<p><span m="274760">And let me transpose both sides.</span></p>
+<p><span m="279790">That will bring a transpose into the picture.</span></p>
+<p><span m="283199">So if I transpose the identity matrix, what do I have?</span></p>
+<p><span m="288300">The identity, right?</span></p>
+<p><span m="289600">If I exchange rows and columns, the identity is a symmetric matrix.</span></p>
+<p><span m="294990">It doesn't know the difference.</span></p>
+<p><span m="296940">If I transpose these guys, that product, then again it turns out that I have to reverse</span> <span m="307780">the order.</span></p>
+<p><span m="309160">I can transpose them separately, but when I multiply, those transposes come in the opposite</span> <span m="315260">order.</span></p>
+<p><span m="316220">So it's A inverse transpose times A transpose giving the identity.</span></p>
+<p><span m="323600">So that's -- this equation is -- just comes directly from that</span> <span m="326700">one. But this equation tells me what I wanted to know, namely what is the inverse of this</span> <span m="332690">guy A transpose?</span></p>
+<p><span m="335700">What's the inverse of that -- if I transpose a matrix, what'ss the inverse of the result?</span></p>
+<p><span m="343180">And this equation tells me that here it is.</span></p>
+<p><span m="347000">This is the inverse of A transpose.</span></p>
+<p><span m="356659">Inverse of A transpose.</span></p>
+<p><span m="362220">Of A transpose.</span></p>
+<p><span m="368100">So I'll put a big circle around that, because that's the answer, that's the best answer</span> <span m="373480">we could hope for.</span></p>
+<p><span m="376560">That if you want to know the inverse of A transpose and you know the inverse of A, then</span> <span m="384640">you just transpose that.</span></p>
+<p><span m="386640">So in a -- to put it another way, transposing and inversing you can do in either order for</span> <span m="393790">a single matrix.</span></p>
+<p><span m="395390">Okay. So these are like basic facts that we can now use, all right -- so now I put it</span> <span m="402770">to use.</span></p>
+<p><span m="404920">I put it to use by thinking -- we're really completing, the subject of elimination.</span></p>
+<p><span m="412980">Actually, -- the thing about elimination is it's the right way to understand what the</span> <span m="425930">matrix has got.</span></p>
+<p><span m="426930">This A equal L U is the most basic factorization of a matrix.</span></p>
+<p><span m="435550">I always worry that you will think this course is all elimination.</span></p>
+<p><span m="443960">It's just row operations.</span></p>
+<p><span m="447100">And please don't.</span></p>
+<p><span m="449420">We'll be beyond that, but it's the right algebra to do first.</span></p>
+<p><span m="461120">Okay. So, now I'm coming near the end of it, but I want to get it in a decent form.</span></p>
+<p><span m="468630">So my decent form is matrix form.</span></p>
+<p><span m="472270">I have a matrix A, let's suppose it's a good matrix, I can do elimination, no row exchanges</span> <span m="479360">-- So no row exchanges for now.</span></p>
+<p><span m="483220">Pivots all fine, nothing zero in the pivot position.</span></p>
+<p><span m="487640">I get to the very end, which is U.</span></p>
+<p><span m="490240">So I get from A to U.</span></p>
+<p><span m="492000">And I want to know what's the connection?</span></p>
+<p><span m="495220">How is A related to U?</span></p>
+<p><span m="497690">And this is going to tell me that there's a matrix L that connects them.</span></p>
+<p><span m="501991">Okay.</span></p>
+<p><span m="503000">Can I do it for a two by two first?</span></p>
+<p><span m="508700">Okay. Two by two, elimination.</span></p>
+<p><span m="512679">Okay, so I'll do it under here.</span></p>
+<p><span m="517186">Okay. So let my matrix A be -- We'll keep it simple, say two and an eight, so we know</span> <span m="526680">that the first pivot is a two, and the multiplier's going to be a four and then let me put a one</span> <span m="534029">here and what number do I not want to put there?</span></p>
+<p><span m="538720">Four. I don't want a four there, because in that case, the second pivot would not -- we</span> <span m="545780">wouldn't have a second pivot.</span></p>
+<p><span m="547642">The matrix would be singular, general screw-up. Okay.</span></p>
+<p><span m="551360">So let me put some other number here like seven.</span></p>
+<p><span m="555090">Okay.</span></p>
+<p><span m="556580">Okay. Now I want to operate on that with my elementary matrix.</span></p>
+<p><span m="564680">So what's the elementary matrix?</span></p>
+<p><span m="568340">Strictly speaking, it's E21, because it's the guy that's going to produce a zero in</span> <span m="574560">that position.</span></p>
+<p><span m="575560">And it's going to produce U in one shot, because it's just a two by two matrix.</span></p>
+<p><span m="583310">So two one and I'm going to take four of those away from those, produce that zero and leave</span> <span m="590150">a three there.</span></p>
+<p><span m="591580">And that's U.</span></p>
+<p><span m="593080">And what's the matrix that did it?</span></p>
+<p><span m="595140">Quick review, then.</span></p>
+<p><span m="596900">What's the elimination elementary matrix E21 -- it's one zero, thanks.</span></p>
+<p><span m="603060">And -- negative four one,</span> <span m="605760">right. Good.</span></p>
+<p><span m="607880">Okay. So that -- you see the difference between this and what I'm shooting for.</span></p>
+<p><span m="614100">I'm shooting for A on one side and the other matrices on the other side of the equation.</span></p>
+<p><span m="621990">Okay.</span></p>
+<p><span m="622990">So I can do that right away.</span></p>
+<p><span m="625940">Now here's going to be my A equals L U.</span></p>
+<p><span m="629500">And you won't have any trouble telling me what -- so A is still two one eight seven.</span></p>
+<p><span m="638160">L is what you're going to tell me and U is still two one zero three.</span></p>
+<p><span m="644940">Okay. So what's L in this case?</span></p>
+<p><span m="649800">Well, first -- so how is L related to this E guy?</span></p>
+<p><span m="657220">It's the inverse, because I want to multiply through by the inverse of this, which will</span> <span m="662650">put the identity here, and the inverse will show up there and I'll call it L.</span></p>
+<p><span m="668570">So what is the inverse of this?</span></p>
+<p><span m="671360">Remember those elimination matrices are easy to invert.</span></p>
+<p><span m="677650">The inverse matrix for this one is 1 0 4 1, it has the plus sign because it adds back</span> <span m="690130">what this removes.</span></p>
+<p><span m="692200">Okay. Do you want -- if we did the numbers right, we must -- this should be correct.</span></p>
+<p><span m="699860">Okay. And of course it is.</span></p>
+<p><span m="702390">That says the first row's right, four times the first row plus the second row is eight</span> <span m="707730">seven. Good. Okay.</span></p>
+<p><span m="709720">That's simple, two by two.</span></p>
+<p><span m="711920">But it already shows the form that we're headed for.</span></p>
+<p><span m="717390">It shows -- so what's the L stand for?</span></p>
+<p><span m="721190">Why the letter L?</span></p>
+<p><span m="722640">If U stood for upper triangular, then of course L stands for lower triangular.</span></p>
+<p><span m="729860">And actually, it has ones on the diagonal, where this thing has the pivots on the diagonal.</span></p>
+<p><span m="736920">Oh, sometimes we may want to separate out the pivots, so can I just mention that sometimes</span> <span m="747089">we could also write this as -- we could have this one zero four one -- I'll just show you</span> <span m="754340">how I would divide out this matrix of pivots -- two three.</span></p>
+<p><span m="759160">There's a diagonal matrix.</span></p>
+<p><span m="761880">And I just -- whatever is left is here.</span></p>
+<p><span m="765980">Now what's left?</span></p>
+<p><span m="769630">If I divide this first row by two to pull out the two, then I have a one and a one half.</span></p>
+<p><span m="777140">And if I divide the second row by three to pull out the three, then I have a one.</span></p>
+<p><span m="782580">So if this is L U, this is maybe called L D or pivot U.</span></p>
+<p><span m="791180">And now it's a little more balanced, because we have ones on the diagonal here and here.</span></p>
+<p><span m="801100">And the diagonal matrix in the middle.</span></p>
+<p><span m="802920">So both of those...</span></p>
+<p><span m="804380">Matlab would produce either one.</span></p>
+<p><span m="809400">I'll basically stay with L U.</span></p>
+<p><span m="812860">Okay. Now I have to think about bigger than two by two.</span></p>
+<p><span m="819960">But right now, this was just like easy exercise.</span></p>
+<p><span m="823780">And, to tell the truth, this one was a minus sign and this one was a plus sign.</span></p>
+<p><span m="830920">I mean, that's the only difference.</span></p>
+<p><span m="834740">But, with three by three, there's a more significant difference.</span></p>
+<p><span m="842700">Let me show you how that works.</span></p>
+<p><span m="845740">Let me move up to a three by three, let's say some matrix A, okay?</span></p>
+<p><span m="857760">Let's imagine it's three by three.</span></p>
+<p><span m="860130">I won't write numbers down for now.</span></p>
+<p><span m="863050">So what's the first elimination step that I do, the first matrix I multiply it by, what</span> <span m="869351">letter will I use for</span> <span m="870870">that? It'll be E two one, because it's -- the first step will be to get a zero in that two</span> <span m="881490">one position. right?</span></p>
+<p><span m="883520">And then the next step will be to get a zero in the three one position.</span></p>
+<p><span m="888260">And the final step will be to get a zero in the three two</span> <span m="893560">That's what elimination is, and it produced U. position.</span></p>
+<p><span m="897089">And again, no row exchanges.</span></p>
+<p><span m="906820">I'm taking the nice case, now, the typical case, too -- when I don't have to do any row</span> <span m="913180">exchange, all I do is these elimination steps.</span></p>
+<p><span m="915920">Okay.</span></p>
+<p><span m="916900">Now, suppose I want that stuff over on the right-hand side, as I really do.</span></p>
+<p><span m="922880">That's, like, my point here.</span></p>
+<p><span m="925470">I can multiply these together to get a matrix E, but I want it over on the right.</span></p>
+<p><span m="930300">I want its inverse over there.</span></p>
+<p><span m="933670">So what's the right expression now?</span></p>
+<p><span m="939160">If I write A and U, what goes there?</span></p>
+<p><span m="946440">Okay.</span></p>
+<p><span m="947060">So I've got the inverse of this, I've got three matrices in</span> <span m="950040">a row now.</span></p>
+<p><span m="952020">And it's their inverses that are going to show up, because each one is easy to invert.</span></p>
+<p><span m="958300">Question is, what about the whole bunch?</span></p>
+<p><span m="961460">How easy is it to invert the whole bunch?</span></p>
+<p><span m="964780">So, that's what we know how to do.</span></p>
+<p><span m="968630">We know how to invert, we should take the separate inverses, but they go in the opposite</span> <span m="972840">order.</span></p>
+<p><span m="973840">So what goes here?</span></p>
+<p><span m="975800">E three two inverse, right, because I'll multiply from the left by E three two inverse, then</span> <span m="981640">I'll pop it up next to U.</span></p>
+<p><span m="986600">And then will come E three one inverse.</span></p>
+<p><span m="990880">And then this'll be the only guy left standing and that's gone when I do an E two one inverse.</span></p>
+<p><span m="1000910">So there is L.</span></p>
+<p><span m="1003590">That's L U.</span></p>
+<p><span m="1007300">L is product of inverses.</span></p>
+<p><span m="1010860">Now you still can ask why is this guy preferring inverses?</span></p>
+<p><span m="1017680">And let me explain why.</span></p>
+<p><span m="1019570">Let me explain why is this product nicer than this one?</span></p>
+<p><span m="1025619">This product turns out to be better than this one.</span></p>
+<p><span m="1030380">Let me take a typical case here.</span></p>
+<p><span m="1035060">Let me take a typical case.</span></p>
+<p><span m="1037250">So let me -- I have to do three by three for you to see the improvement.</span></p>
+<p><span m="1043000">Two by two, it was just one E, no problem.</span></p>
+<p><span m="1047400">But let me go up to this case.</span></p>
+<p><span m="1049960">Suppose my matrices E21 -- suppose E21 has a minus two in there.</span></p>
+<p><span m="1061460">Suppose that -- and now suppose -- oh, I'll even suppose E31 is the identity.</span></p>
+<p><span m="1069840">I'm going to make the point with just a couple of these.</span></p>
+<p><span m="1074360">Okay.</span></p>
+<p><span m="1074900">Now this guy will have -- do something -- now let's suppose minus five one.</span></p>
+<p><span m="1082720">Okay. There's typical.</span></p>
+<p><span m="1087560">That's a typical case in which we didn't need an E31. Maybe we already had a zero in that</span> <span m="1092760">three one position.</span></p>
+<p><span m="1094660">Okay.</span></p>
+<p><span m="1097560">Let me see -- is that going to be enough to, show my point?</span></p>
+<p><span m="1104700">Let me do that multiplication.</span></p>
+<p><span m="1109500">So if I do that multiplication it's like good practice to</span> <span m="1112640">multiply these matrices.</span></p>
+<p><span m="1115000">Tell me what's above the diagonal when I do this multiplication?</span></p>
+<p><span m="1119900">All zeroes. When I do this multiplication, I'm going to get ones on the diagonal and</span> <span m="1124500">zeroes above.</span></p>
+<p><span m="1128280">Because -- what does that say?</span></p>
+<p><span m="1130140">That says that I'm subtracting rows from lower rows.</span></p>
+<p><span m="1134549">So nothing is moving upwards as it did last time in Gauss-Jordan. Okay.</span></p>
+<p><span m="1140970">Now -- so really, what I have to do is check this minus two one zero, now this is -- what's</span> <span m="1150280">that number?</span></p>
+<p><span m="1151240">This is the number that I'm really have in mind.</span></p>
+<p><span m="1155740">That number is ten.</span></p>
+<p><span m="1159900">And this one is -- what goes here?</span></p>
+<p><span m="1165620">Row three against column two, it looks like the minus five.</span></p>
+<p><span m="1172000">What – it's that ten.</span></p>
+<p><span m="1175100">How did that ten get in there?</span></p>
+<p><span m="1177020">I don't like that ten.</span></p>
+<p><span m="1179040">I mean -- of course, I don't want to erase it, because it's right.</span></p>
+<p><span m="1182220">But I don't want it there.</span></p>
+<p><span m="1185840">It's because -- the ten got in there because I subtracted two of row one from row two,</span> <span m="1193800">and then I subtracted five of that new row two from row three.</span></p>
+<p><span m="1198760">So doing it in that order, how did row one effect row three?</span></p>
+<p><span m="1204920">Well, it did, because two of it got removed from row two and then five of those got removed</span> <span m="1210480">from row three.</span></p>
+<p><span m="1211590">So altogether ten of row one got thrown into row three.</span></p>
+<p><span m="1217800">Now my point is in the reverse direction -- so now I can do it -- below it I'll do the inverses.</span></p>
+<p><span m="1227540">Okay.</span></p>
+<p><span m="1228100">And, of course, opposite order.</span></p>
+<p><span m="1229820">Reverse order.</span></p>
+<p><span m="1231660">Reverse order.</span></p>
+<p><span m="1235960">Okay. So now this is going to -- this is the E that goes on the left side.</span></p>
+<p><span m="1244020">Left of A.</span></p>
+<p><span m="1247790">Now I'm going to do the inverses in the opposite order, so what's the -- So the opposite order</span> <span m="1254340">means I put this inverse first.</span></p>
+<p><span m="1257530">And what is its inverse?</span></p>
+<p><span m="1258890">What's the inverse of E21? Same thing with a plus sign, right?</span></p>
+<p><span m="1264660">For the individual matrices, instead of taking away two I add back two of row one to row</span> <span m="1272730">two, so no problem.</span></p>
+<p><span m="1276620">And now, in reverse order, I want to invert that.</span></p>
+<p><span m="1281400">Just right?</span></p>
+<p><span m="1282840">I'm doing just this, this.</span></p>
+<p><span m="1285540">So now the inverse is again the same thing, but add in the five.</span></p>
+<p><span m="1296320">And now I'll do that multiplication and I'll get a happy result.</span></p>
+<p><span m="1305460">I hope.</span></p>
+<p><span m="1307800">Did I do it right so far?</span></p>
+<p><span m="1310220">Yes, okay.</span></p>
+<p><span m="1310960">Let me do the multiplication.</span></p>
+<p><span m="1311650">I believe this comes out.</span></p>
+<p><span m="1313350">So row one of the answer is one zero zero.</span></p>
+<p><span m="1316660">Oh, I know that all this is going to be left,</span> <span m="1319300">right? Then I have two one zero.</span></p>
+<p><span m="1324090">So I get two one zero there, right?</span></p>
+<p><span m="1327560">And what's the third row?</span></p>
+<p><span m="1330060">What's the third row in this product?</span></p>
+<p><span m="1335160">Just read it out to me, the third row?</span></p>
+<p><span m="1338640">0 5 1</span> <span m="1342980">Because one way to say is – this is saying take one of the</span> <span m="1347240">last row and there it is.</span></p>
+<p><span m="1349640">And this is my matrix L.</span></p>
+<p><span m="1352590">And it's the one that goes on the left of U.</span></p>
+<p><span m="1358450">It goes into -- what do I mean here?</span></p>
+<p><span m="1365190">Maybe rather than saying left of A, left of U, let me right down again what I mean.</span></p>
+<p><span m="1372040">E A is U, whereas A is L U.</span></p>
+<p><span m="1378600">Okay.</span></p>
+<p><span m="1381560">Let me make the point now in words.</span></p>
+<p><span m="1386300">The order that the matrices come for L is the right order.</span></p>
+<p><span m="1391090">The two and the five don't sort of interfere to produce this ten one. In the</span> <span m="1401800">right order, the multipliers just sit in the matrix L.</span></p>
+<p><span m="1406919">That's the point -- that if I want to know L, I have no work to do.</span></p>
+<p><span m="1415530">I just keep a record of what those multipliers were, and that gives me L.</span></p>
+<p><span m="1421370">So I'll draw the -- let me say it.</span></p>
+<p><span m="1432610">So this is the A=L U.</span></p>
+<p><span m="1436320">So if no row exchanges, the multipliers that those numbers that we multiplied rows by and</span> <span m="1454010">subtracted, when we did an elimination step -- the multipliers go directly into L.</span></p>
+<p><span m="1467550">Okay.</span></p>
+<p><span m="1469950">So L is -- this is the way, to look at elimination.</span></p>
+<p><span m="1482770">You go through the elimination steps, and actually if you do it right, you can throw</span> <span m="1491510">away A as you create L U.</span></p>
+<p><span m="1497120">If you think about it, those steps of elimination, as when you've finished with row two of A,</span> <span m="1508520">you've created a new row two of U, which you have to save, and you've created the multipliers</span> <span m="1516540">that you used -- which you have to save, and then you can forget A.</span></p>
+<p><span m="1522980">So because it's all there in L and U.</span></p>
+<p><span m="1525919">So that's -- this moment is maybe the new insight in elimination that comes from matrix</span> <span m="1541580">-- doing it in matrix form.</span></p>
+<p><span m="1544070">So it was -- the product of Es is -- we can't see what that product of Es is.</span></p>
+<p><span m="1552350">The matrix E is not a particularly attractive one.</span></p>
+<p><span m="1556350">What's great is when we put them on the other side -- their inverses in the opposite order,</span> <span m="1562130">there the L comes out just right. Okay.</span></p>
+<p><span m="1566210">Now -- oh gosh, so today's a sort of,</span> <span m="1569580">like, practical day.</span></p>
+<p><span m="1574160">Can we think together how expensive is elimination?</span></p>
+<p><span m="1580670">How many operations do we do?</span></p>
+<p><span m="1584570">So this is now a kind of new topic which I didn't list as -- on the program, but here</span> <span m="1592540">it came. Here it comes.</span></p>
+<p><span m="1594980">How many operations on an n by n matrix A.</span></p>
+<p><span m="1615780">I mean, it's a very practical question.</span></p>
+<p><span m="1618020">Can we solve systems of order a thousand, in a second or a minute or a week?</span></p>
+<p><span m="1628280">Can we solve systems of order a million in a second or an hour or a week?</span></p>
+<p><span m="1636460">I mean, what's the -- if it's n by n, we often want to take n bigger.</span></p>
+<p><span m="1645059">I mean, we've put in more information.</span></p>
+<p><span m="1648700">We make the whole thing is more accurate for the bigger matrix.</span></p>
+<p><span m="1653880">But it's more expensive, too, and the question is how much more expensive?</span></p>
+<p><span m="1659000">If I have matrices of order a hundred.</span></p>
+<p><span m="1661679">Let's say a hundred by a hundred.</span></p>
+<p><span m="1663150">Let me take n to be a hundred.</span></p>
+<p><span m="1667660">Say n equal a hundred.</span></p>
+<p><span m="1670840">How many steps are we doing?</span></p>
+<p><span m="1674860">How many operations are we actually doing that we -- And let's suppose there aren't</span> <span m="1682770">any zeroes, because of course if a matrix has got a lot of zeroes in good places, we</span> <span m="1687800">don't have to do those operations, and,</span> <span m="1689870">it'll be much faster.</span></p>
+<p><span m="1693500">But -- so just think for a moment about the first step.</span></p>
+<p><span m="1701940">So here's our matrix A, hundred by a hundred.</span></p>
+<p><span m="1707180">And the first step will be -- that column, is got zeroes down</span> <span m="1714880">here. So it's down to 99 by 99, right?</span></p>
+<p><span m="1721080">That's really like the first stage of elimination,</span> <span m="1725920">to get from this hundred</span> <span m="1728490">by hundred non-zero matrix to this stage where the first pivot is sitting up here and the</span> <span m="1735600">first row's okay the first column is okay.</span></p>
+<p><span m="1739440">So, eventually -- how many steps did that take?</span></p>
+<p><span m="1745120">You see, I'm trying to get an idea.</span></p>
+<p><span m="1747409">Is the answer proportional to n?</span></p>
+<p><span m="1751860">Is the total number of steps in elimination, the total number, is it proportional to n</span> <span m="1757260">-- in which case if I double n from a hundred to two hundred -- does it take me twice as</span> <span m="1762520">long?</span></p>
+<p><span m="1764140">Does it square, so it would take me four times as long?</span></p>
+<p><span m="1767350">Does it cube so it would take me eight times as long?</span></p>
+<p><span m="1770600">Or is it n factorial, so it would take me a hundred times as long?</span></p>
+<p><span m="1777120">I think, you know, from a practical point of view, we have to have some idea of the</span> <span m="1781560">cost, here.</span></p>
+<p><span m="1784280">So these are the questions that I'm -- let me ask those questions again.</span></p>
+<p><span m="1788720">Is it proportional -- does it go like n, like n squared, like n cubed -- or some higher</span> <span m="1794900">power of n?</span></p>
+<p><span m="1796420">Like n factorial where every step up multiplies by a hundred and then by a hundred and one</span> <span m="1804580">and then by a hundred and two -- which is it?</span></p>
+<p><span m="1807980">Okay, so that's the only way I know to answer that is to think through what we actually</span> <span m="1814320">had to do.</span></p>
+<p><span m="1816100">Okay.</span></p>
+<p><span m="1817100">So what was the cost here?</span></p>
+<p><span m="1822680">Well, let's see.</span></p>
+<p><span m="1823309">What do I mean by an operation?</span></p>
+<p><span m="1825700">I guess I mean, well an addition or -- yeah.</span></p>
+<p><span m="1832549">No big deal.</span></p>
+<p><span m="1833549">I guess I mean an addition or a subtraction or a multiplication or a division.</span></p>
+<p><span m="1838980">Okay.</span></p>
+<p><span m="1841540">And actually, what operation I doing all the time?</span></p>
+<p><span m="1848980">When I multiply row one by multiplier L and I subtract from row six.</span></p>
+<p><span m="1858870">What's happening there individually?</span></p>
+<p><span m="1861060">What's going on?</span></p>
+<p><span m="1863460">If I multiply -- I do a multiplication by L and then a subtraction.</span></p>
+<p><span m="1868490">So I guess operation -- Can I count that for the moment as, like, one operation?</span></p>
+<p><span m="1875610">Or you may want to count them separately.</span></p>
+<p><span m="1878520">The typical operation is multiply plus a subtract.</span></p>
+<p><span m="1886740">So if I count those together, my answer's going to come out</span> <span m="1891420">half as many as if -- I mean, if I count them separately, I'd have a certain</span> <span m="1896540">number of multiplies, certain number of subtracts.</span></p>
+<p><span m="1899000">That's really want to do.</span></p>
+<p><span m="1900580">Okay. How many have I got here?</span></p>
+<p><span m="1903360">So, I think -- let's see.</span></p>
+<p><span m="1909500">It's about -- well, how many, roughly?</span></p>
+<p><span m="1916293">How many operations to get from here to here?</span></p>
+<p><span m="1919360">Well, maybe one way to look at it is all these numbers had to get changed.</span></p>
+<p><span m="1925800">The first row didn't get changed, but all the other rows got changed at this step.</span></p>
+<p><span m="1931900">So this step -- well, I guess maybe -- shall I say it cost about a hundred squared.</span></p>
+<p><span m="1945880">I mean, if I had changed the first row, then it would have been exactly hundred squared,</span> <span m="1952110">because -- because that's how many numbers are here.</span></p>
+<p><span m="1955549">A hundred squared numbers is the total count of the entry, and all but this insignificant</span> <span m="1962279">first row got changed.</span></p>
+<p><span m="1964300">So I would say about a hundred squared.</span></p>
+<p><span m="1967660">Okay.</span></p>
+<p><span m="1968620">Now, what about the next step?</span></p>
+<p><span m="1974150">So now the first row is fine.</span></p>
+<p><span m="1976960">The second row is fine.</span></p>
+<p><span m="1980020">And I'm changing these zeroes are all fine, so what's up with the second step?</span></p>
+<p><span m="1986700">And then you're with me.</span></p>
+<p><span m="1988620">Roughly, what's the cost?</span></p>
+<p><span m="1990390">If this first step cost a hundred squared, about, operations then this one, which is</span> <span m="1997330">really working on this guy to produce this, costs about what?</span></p>
+<p><span m="2007490">How many operations to fix?</span></p>
+<p><span m="2011250">About ninety-nine squared, or ninety-nine times ninety-eight. But less, right?</span></p>
+<p><span m="2016610">Less, because our problem's getting smaller.</span></p>
+<p><span m="2019590">About ninety-nine squared.</span></p>
+<p><span m="2022280">And then I go down and down and the next one will be ninety-eight squared, the next ninety-seven</span> <span m="2026160">squared and finally I'm down around one squared or -- where it's just like the little numbers.</span></p>
+<p><span m="2033750">The big numbers are here.</span></p>
+<p><span m="2035890">So the number of operations is about n squared plus that was n, right? n was a hundred?</span></p>
+<p><span m="2046190">n squared for the first step, then n minus one squared, then n minus two squared, finally</span> <span m="2053589">down to three squared and two squared and even one squared.</span></p>
+<p><span m="2063040">No way I should have written that -- squeezed that in.</span></p>
+<p><span m="2067929">Let me try it so the count is n squared plus n minus one squared plus -- all the way down</span> <span m="2077570">to one squared.</span></p>
+<p><span m="2081980">That's a pretty decent count.</span></p>
+<p><span m="2084899">Admittedly, we didn't catch every single tiny operation, but we got the right leading term</span> <span m="2096040">here.</span></p>
+<p><span m="2097040">And what do those add up to?</span></p>
+<p><span m="2101180">Okay, so now we're coming to the punch of this, question, this operation count.</span></p>
+<p><span m="2110030">So the operations on the left side, on the matrix A to finally get to U.</span></p>
+<p><span m="2119820">And anybody -- so which of these quantities is the right ballpark for that count?</span></p>
+<p><span m="2128540">If I add a hundred squared to ninety nine squared to ninety eight squared -- ninety</span> <span m="2134080">seven squared, all the way down to two squared then one squared, what have I got, about?</span></p>
+<p><span m="2144020">It's just one of these -- let's identify it first.</span></p>
+<p><span m="2148100">Is it n?</span></p>
+<p><span m="2149020">Certainly not.</span></p>
+<p><span m="2152080">Is it n factorial?</span></p>
+<p><span m="2155700">No.</span></p>
+<p><span m="2156460">If it was n factorial, we would -- with determinants, it is n factorial.</span></p>
+<p><span m="2162020">I'll put in a bad mark against determinants, because that -- okay, so what is it?</span></p>
+<p><span m="2172400">It's n -- well, this is the answer.</span></p>
+<p><span m="2178580">It's this order -- n cubed.</span></p>
+<p><span m="2181240">It's like I have n terms, right?</span></p>
+<p><span m="2186380">I've got n terms in this sum.</span></p>
+<p><span m="2188690">And the biggest one is n squared.</span></p>
+<p><span m="2191140">So the worst it could be would be n cubed, but it's not as bad as -- it's n cubed times</span> <span m="2200750">-- it's about one third of n cubed.</span></p>
+<p><span m="2205270">That's the magic operation count.</span></p>
+<p><span m="2213690">Somehow that one third takes account of the fact that the numbers are getting smaller.</span></p>
+<p><span m="2222339">If they weren't getting smaller, we would have n terms times n squared, but it would</span> <span m="2226900">be exactly n cubed.</span></p>
+<p><span m="2228240">But our numbers are getting smaller -- actually, row two and row one moves down to row three.</span></p>
+<p><span m="2230640">do you remember where does one third come in this -- I'll even allow a mention of calculus.</span></p>
+<p><span m="2239400">So calculus can be mentioned, integration can be mentioned now in the next minute and</span> <span m="2245940">not again for weeks.</span></p>
+<p><span m="2248360">It's not that I don't like 18.01, but18.06 is better.</span></p>
+<p><span m="2253440">Okay. So, -- so what's -- what's the calculus formula that looks like?</span></p>
+<p><span m="2262350">It looks like -- if we were in calculus instead of summing stuff, we would integrate.</span></p>
+<p><span m="2270589">So I would integrate x squared and I would get one third x</span> <span m="2276800">cubed. So if that was like an integral from one to n, of x squared b x, if the answer</span> <span m="2287430">would be one third n cubed -- and it's correct for the sum also, because that's, like, the</span> <span m="2293690">whole point of calculus.</span></p>
+<p><span m="2294900">The whole point of calculus is -- oh, I don't want to tell you the whole -- I mean, you</span> <span m="2299315">know the whole point of calculus.</span></p>
+<p><span m="2301280">Calculus is like sums except it's continuous.</span></p>
+<p><span m="2307990">Okay. And algebra is discreet.</span></p>
+<p><span m="2311950">Okay.</span></p>
+<p><span m="2312950">So the answer is one third n cubed.</span></p>
+<p><span m="2315010">Now I'll just -- let me say one more thing about operations.</span></p>
+<p><span m="2320080">What about the right-hand side?</span></p>
+<p><span m="2321920">This was what it cost on the left side.</span></p>
+<p><span m="2325250">This is on A.</span></p>
+<p><span m="2330380">Because this is A that we're working with.</span></p>
+<p><span m="2332180">But what's the cost on the extra column vector b that we're hanging around here?</span></p>
+<p><span m="2340660">So b costs a lot less, obviously, because it's just one column.</span></p>
+<p><span m="2347570">We carry it through elimination and then actually we do back substitution.</span></p>
+<p><span m="2354260">Let me just tell you the answer there.</span></p>
+<p><span m="2356160">It's n squared.</span></p>
+<p><span m="2358420">So the cost for every right hand side is n squared.</span></p>
+<p><span m="2363220">So let me -- I'll just fit that in here -- for the cost of b turns out to be n squared.</span></p>
+<p><span m="2377000">So you see if we have, as we often have, a a matrix A and several right-hand sides, then</span> <span m="2389580">we pay the price on A, the higher price on A to get it split up into L and U to do elimination</span> <span m="2397670">on A, but then we can process every right-hand side at low cost.</span></p>
+<p><span m="2402810">Okay.</span></p>
+<p><span m="2403860">So the -- We really have discussed the most fundamental algorithm for a system of equations.</span></p>
+<p><span m="2416560">Okay.</span></p>
+<p><span m="2419700">So, I'm ready to allow row exchanges.</span></p>
+<p><span m="2429500">I'm ready to allow -- now what happens to this whole -- today's lecture if there are</span> <span m="2434220">row exchanges?</span></p>
+<p><span m="2438400">When would there be row exchanges?</span></p>
+<p><span m="2442240">There are row -- we need to do row exchanges if a zero shows up in the pivot position.</span></p>
+<p><span m="2447840">So moving then into the final section of this chapter, which is about transposes -- well,</span> <span m="2455820">we've already seen some transposes, and -- the title of this section is,</span> <span m="2468640">"Transposes and Permutations."</span> <span m="2473700">Okay. So can I say, now, where does a permutation come in?</span></p>
+<p><span m="2481160">Let me talk a little about permutations.</span></p>
+<p><span m="2483300">So that'll be up here, permutations.</span></p>
+<p><span m="2494620">So these are the matrices that I need to do row exchanges.</span></p>
+<p><span m="2501420">And I may have to do two row exchanges.</span></p>
+<p><span m="2504560">Can you invent a matrix where I would have to do two row exchanges and then would come</span> <span m="2512320">out fine?</span></p>
+<p><span m="2514180">Yeah let's just, for the heck of it -- so I'll put it here.</span></p>
+<p><span m="2521460">Let me do three by threes.</span></p>
+<p><span m="2524120">Actually, why don't I just plain list all the three by three permutation matrices.</span></p>
+<p><span m="2530480">There're a nice little group of them.</span></p>
+<p><span m="2533010">What are all the matrices that exchange no rows at all?</span></p>
+<p><span m="2540880">Well, I'll include the identity.</span></p>
+<p><span m="2546070">So that's a permutation matrix that doesn't do anything.</span></p>
+<p><span m="2549710">Now what's the permutation matrix that exchanges -- what is P12? The permutation matrix that</span> <span m="2558680">exchanges rows one and two would be -- 0 1 0 -- 1 0 0, right.</span></p>
+<p><span m="2568540">I just exchanged those rows of the identity and I've got it.</span></p>
+<p><span m="2573360">Okay. Actually, I'll -- yes.</span></p>
+<p><span m="2576080">Let me clutter this up.</span></p>
+<p><span m="2581840">Okay. Give me a complete list of all the row exchange matrices.</span></p>
+<p><span m="2586340">So what are they?</span></p>
+<p><span m="2587540">They're all the ways I can take the identity matrix and rearrange its rows.</span></p>
+<p><span m="2593780">How many will there be?</span></p>
+<p><span m="2596620">How many three by three permutation matrices?</span></p>
+<p><span m="2601820">Shall we keep going and get the answer?</span></p>
+<p><span m="2604100">So tell me some more.</span></p>
+<p><span m="2607500">STUDENT: Zero one –</span> <span m="2608580">STRANG: Zero – What one are you going to do now?</span></p>
+<p><span m="2611000">STUDENT: I'm going to switch the –</span> <span m="2612840">STRANG: Switch rows one and -- One and three, okay. One and three, leaving two alone.</span></p>
+<p><span m="2623520">Okay.</span></p>
+<p><span m="2624460">Now what else? Switch -- what would be the next easy one -- is switch two and</span> <span m="2630780">three, good. So I'll leave one zero zero alone and I'll switch -- I'll move number three</span> <span m="2637250">up and number two down.</span></p>
+<p><span m="2640329">Okay. Those are the ones that just exchange single -- a pair of</span> <span m="2645380">rows. This guy, this guy and this guy exchanges a pair of rows, but now there are more possibilities.</span></p>
+<p><span m="2653340">What's left?</span></p>
+<p><span m="2656080">So tell -- there is another one here.</span></p>
+<p><span m="2659640">What's that?</span></p>
+<p><span m="2662260">It's going to move -- it's going to change all rows, right?</span></p>
+<p><span m="2666440">Where shall we put them?</span></p>
+<p><span m="2668160">So -- give me a first row.</span></p>
+<p><span m="2669780">STUDENT: Zero one zero?</span></p>
+<p><span m="2670800">STRANG: Zero one zero.</span></p>
+<p><span m="2672740">Okay, now a second row -- say zero zero one and the third guy</span> <span m="2678000">One zero zero.</span></p>
+<p><span m="2681960">So that is like a cycle.</span></p>
+<p><span m="2684420">That puts row two moves up to row one, row three moves up to</span> <span m="2689800">row two and row one moves down to row three.</span></p>
+<p><span m="2693420">And there's one more, which is -- let's see.</span></p>
+<p><span m="2700180">What's left?</span></p>
+<p><span m="2703280">I'm lost.</span></p>
+<p><span m="2704160">STUDENT: Is it zero zero one?</span></p>
+<p><span m="2705240">STRANG: Is it zero zero one? Okay.</span></p>
+<p><span m="2706780">STUDENT: One zero zero.</span></p>
+<p><span m="2708120">STRANG: One zero zero, okay.</span></p>
+<p><span m="2711260">Zero one zero, okay.</span></p>
+<p><span m="2716460">Great.</span></p>
+<p><span m="2717980">Six. Six of them.</span></p>
+<p><span m="2721780">Six P. And they're sort of nice, because what happens if I write, multiply two of them together?</span></p>
+<p><span m="2735580">If I multiply two of these matrices together, what can you tell me about the answer?</span></p>
+<p><span m="2742100">It's on the list.</span></p>
+<p><span m="2744360">If I do some row exchanges and then I do some more row exchanges, then all together I've</span> <span m="2749220">done row exchanges.</span></p>
+<p><span m="2750520">So if I multiply -- but, I don't know.</span></p>
+<p><span m="2754520">And if I invert, then I'm just doing row exchanges to get back again.</span></p>
+<p><span m="2760349">So the inverses are all there.</span></p>
+<p><span m="2761869">It's a little family of matrices that -- they've got their own -- if I multiply, I'm still</span> <span m="2772790">inside this group.</span></p>
+<p><span m="2774400">If I invert I'm inside this group -- actually, group is the right name for this subject.</span></p>
+<p><span m="2778920">It's a group of six matrices, and what about the inverses?</span></p>
+<p><span m="2784320">What's the inverse of this guy, for example?</span></p>
+<p><span m="2788160">What's the inverse -- if I exchange rows one and two, what's the inverse matrix?</span></p>
+<p><span m="2794700">Just tell me fast.</span></p>
+<p><span m="2796760">The inverse of that matrix is -- if I exchange rows one and two, then what I should do to</span> <span m="2806910">get back to where I started is the same thing.</span></p>
+<p><span m="2811150">So this thing is its own inverse.</span></p>
+<p><span m="2814905">That's probably its own inverse.</span></p>
+<p><span m="2815905">This is probably not -- actually, I think these are inverses of each other.</span></p>
+<p><span m="2820380">Oh, yeah, actually -- the inverse is the transpose.</span></p>
+<p><span m="2826320">There's a curious fact about permutations matrices, that the inverses are the transposes.</span></p>
+<p><span m="2836020">And final moment -- how many are there if I -- how many four by four permutations?</span></p>
+<p><span m="2841820">So let me take four by four -- how many Ps?</span></p>
+<p><span m="2849880">Well, okay.</span></p>
+<p><span m="2852720">Make a good guess.</span></p>
+<p><span m="2854940">Twenty four, right. Twenty four Ps.</span></p>
+<p><span m="2858020">Okay. So, we've got these permutation matrices, and in the next lecture, we'll use them.</span></p>
+<p><span m="2868820">So the next lecture, finishes Chapter 2</span> <span m="2871660">and moves to Chapter 3.</span></p>
+<p><span m="2875160">Thank you.</span></p>
+</div>
+        <div id="vid_transcript" itemprop="description" class="tabContent hide">
+<h2 class="subhead">Free Downloads</h2>
+<h3 class="subsubhead">Free Streaming</h3>
+<ul>
+<li><a href="http://videolectures.net/mit1806s05_linear_algebra/">VideoLectures.net</a></li>
+</ul>
+<br>
+<h3 class="subsubhead">Video</h3>
+<ul>
+<li>iTunes U (<a href="https://itunes.apple.com/us/itunes-u/id354869137">MP4 - 107MB</a>)</li>
+<li>Internet Archive (<a href="http://www.archive.org/download/MIT18.06S05_MP4/04.mp4">MP4 - 107MB</a>)</li>
+</ul>
+<br>
+<h3 class="subsubhead">Caption</h3>
+<ul>
+<li>English-US (<a href="../../../contents/video-lectures/lecture-4-factorization-into-a-lu/MsIvs_6vC38.srt">SRT</a>)</li>
+</ul>
+</div>
+    
+   </div>  
+
+
+
+      					 
+        <div class="" id="parent-fieldname-bottom_html_area">
+            
+            
+        </div>
+    
+               </main><!--Course_inner_media tag close -->
+           		</div>
+<!--Course_wrapper tag close -->
+            </div>
+<!--left tag close -->
+            <aside id="right">
+                <!--Begin Right Portion -->
+                    <div>
+    
+
+
+
+</div>
+
+                	<div>
+    
+
+
+
+</div>
+
+
+        <div class="" id="parent-fieldname-rsi_top_html_area">
+            
+            
+        </div>
+    
+
+<!-- RSI google ad space-->
+
+
+
+<div id="google_ads">    
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script type="text/javascript">var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];</script>
+    <script type="text/javascript">
+googletag.cmd.push(function() {googletag.defineSlot('/1064917/VIDEO_INDIVIDUAL_SLOT_A_DL', [[300, 250], [300, 300], [180, 200], [180, 150], [160, 600]], 'VIDEO_INDIVIDUAL_SLOT_A_DL').addService(googletag.pubads());googletag.defineSlot('/1064917/VIDEO_INDIVIDUAL_SLOT_B_DL', [[300, 250], [300, 300], [180, 200], [180, 150], [160, 600]], 'VIDEO_INDIVIDUAL_SLOT_B_DL').addService(googletag.pubads());googletag.defineSlot('/1064917/VIDEO_INDIVIDUAL_SLOT_C_DL', [[300, 250], [300, 300], [180, 200], [180, 150], [160, 600]], 'VIDEO_INDIVIDUAL_SLOT_C_DL').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+ googletag.enableServices();
+});</script>
+    <script language="javascript" type="text/javascript">
+googletag.cmd.push(function() {googletag.pubads().set("TYPE","HOUSE");googletag.pubads().set("DEPARTMENT","18");googletag.pubads().set("CRS_BEG2","06");googletag.pubads().set("CRS_END","");googletag.pubads().set("SESSION","S");googletag.pubads().set("YEAR","10");})
+</script>
+    
+    <div id="VIDEO_INDIVIDUAL_SLOT_A_DL">
+    	<script>googletag.cmd.push(function() { googletag.display('VIDEO_INDIVIDUAL_SLOT_A_DL'); });</script>
+    </div>
+    <div id="VIDEO_INDIVIDUAL_SLOT_B_DL">
+    	<script>googletag.cmd.push(function() { googletag.display('VIDEO_INDIVIDUAL_SLOT_B_DL'); });</script>
+    </div>
+    <div id="VIDEO_INDIVIDUAL_SLOT_C_DL">
+    	<script>googletag.cmd.push(function() { googletag.display('VIDEO_INDIVIDUAL_SLOT_C_DL'); });</script>
+    </div>
+</div>
+
+<!-- End RSI ads--> 
+
+
+<div>
+    
+
+
+
+</div>
+
+            </aside><!--Right div close -->
+            <div class="clear"></div>
+        </div>
+<!--grid tag close -->
+      </div>
+		
+		<footer id="bottom">
+			<div id="grid">
+				
+<div id="portletwrapper-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572" class="portletWrapper kssattr-portlethash-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572">
+<div class="portletStaticText portlet-static-site-footer"><div id="footer">
+<nav aria-label="Footer">     <nav id="foot-c1" class="grid_2 alpha" aria-labelledby="f-find-courses">       <span class="footer" id="f-find-courses" aria-hidden="true">Find Courses</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/">Find by Topic</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-number/">Find by Course Number</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-department/">Find by Department</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/new-courses/">New Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/audio-video-courses/">Audio/Video Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/instructor-insights/">Instructor Insights</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/resources/">Supplemental Resources</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/mitx-related-courseware/">MITx &amp; Related OCW Courses</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/translated-courses/">Translated Courses</a></li>
+</ul>
+</nav>
+<div id="foot-c2" class="grid_2"><nav aria-labelledby="f-for-educators">         <span id="f-for-educators" class="footer" aria-hidden="true">For Educators</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=instructional&amp;utm_campaign=Educator&amp;utm_source=footer&amp;utm_medium=find-courses&amp;utm_content=approaches">Search for Instructor Insights</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/educator/?view=teaching&amp;utm_campaign=Educator&amp;utm_source=footer&amp;utm_medium=find-courses&amp;utm_content=materials">Search for Teaching Materials</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/find-by-topic/#cat=teachingandeducation">MIT Courses about Teaching and Education</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/high-school/">Highlights for High School</a></li>
+    <li><a href="http://k12videos.mit.edu" aria-label="External Link: MIT+K12 Videos">MIT+K12 Videos</a></li>
+    <li><a href="http://teachingexcellence.mit.edu/" aria-label="External Link: Teaching Excellence at MIT">Teaching Excellence at MIT</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/courses/mit-curriculum-guide/">MIT Undergraduate Curriculum Map</a></li>
+</ul>
+</nav></div>
+<nav class="grid_2" id="foot-c3" aria-labelledby="f-donate">       <span id="f-donate" class="footer" aria-hidden="true">Give Now</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/give/">Make a Donation</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/why-give/">Why Give?</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/our-supporters/">Our Supporters</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/give/shop-ocw/">Shop OCW</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/support/">Become a Corporate Sponsor</a></li>
+</ul>
+</nav>
+<div class="grid_2" id="foot-c4">
+<nav aria-labelledby="f-about">         <span id="f-about" class="footer" aria-hidden="true">About</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/about/">About OpenCourseWare</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/site-statistics/">Site Statistics</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/ocw-stories/">OCW Stories</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/newsletter/">News</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/media-coverage/press-releases/">Press Releases</a></li>
+</ul>
+</nav><!--about-->       <nav aria-labelledby="f-tools">         <span id="f-tools" class="footer" aria-hidden="true">Tools</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw-origin.odl.mit.edu/help/">Help &amp; FAQs</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/about/contactus">Contact Us</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/help/site-map/">Site Map</a></li>
+    <li><a href="../../../common/terms/index.htm">Privacy &amp; Terms of Use</a></li>
+    <li><a href="https://ocw-origin.odl.mit.edu/help/rss/">RSS Feeds</a></li>
+</ul>
+</nav><!--tools-->
+</div>
+</nav> <aside style="min-height: 289px;" aria-labelledby="f-our-corporate-supporters" class="grid_4 omega" id="foot-c5">           <span aria-hidden="true" class="footer" id="f-our-corporate-supporters">Our Corporate Supporters</span>           <!-- HOME_CORP_LOGO_1 -->
+<div id="div-gpt-ad-1388181177156-0" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-0'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_2 -->
+<div id="div-gpt-ad-1388181177156-1" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-1'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_3 -->
+<div id="div-gpt-ad-1388181177156-2" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-2'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_4 -->
+<div id="div-gpt-ad-1388181177156-3" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-3'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_5 -->
+<div id="div-gpt-ad-1388181177156-4" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-4'); });
+              </script></div>
+<!-- HOME_CORP_LOGO_6 -->
+<div id="div-gpt-ad-1388181177156-5" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-5'); });
+              </script></div>
+</aside>
+<div class="grid_12 alpha omega" itemprop="publisher" itemscope="" itemtype="http://schema.org/CollegeOrUniversity">
+<h4 class="footer" style="border-top: thin solid #d5c9ba; padding-top: 10px; margin-bottom: 10px;">About <span itemprop="name">MIT OpenCourseWare</span>
+</h4>
+<p style="color: #999; font-size: 1em; line-height: 1.5em; margin-top: 10px;" itemprop="description">MIT OpenCourseWare makes the materials used in the teaching of almost all of MIT's subjects available on the Web, free of charge. With more than 2,400 courses available, OCW is delivering on the promise of open sharing of knowledge. <a href="http://ocw.mit.edu/about/">Learn more »</a></p>
+</div>
+<div id="foot-copy" class="grid_12 alpha omega" style="border-top: none;">
+<a href="http://web.mit.edu"><img src="../../../common/images/logo_mit.png" alt="Massachusetts Institute of Technology logo and name." style="width: 195; height: 44;"></a><a href="http://odl.mit.edu"><img src="https://ocw-origin.odl.mit.edu/images/logo_odl.png" alt="MIT Office of Digital Learning logo and name." style="width: 289; height: 54; vertical-align: top;"></a><a href="http://www.oeconsortium.org/"><img src="https://ocw-origin.odl.mit.edu/images/logo_oec.png" alt="Open Education Consortium logo." style="width: 219px; height: 59px; vertical-align: top;"></a><a rel="license" itemprop="useRightsUrl" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="../../../common/images/cc_by-nc-sa.png" alt="Creative Commons logo with terms BY-NC-SA." style="width: 126px; height: 44px; margin-right: 0; margin-left: 13px;"></a>
+<p class="copyright">© 2001–2018<br>
+Massachusetts Institute of Technology</p>
+<p style="font-size: 0.9em; margin-bottom: 15px;">Your use of the MIT OpenCourseWare site and materials is subject to our <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">Creative Commons License</a> and other <a href="../../../common/terms/index.htm" rel="cc:morePermissions">terms of use</a>.</p>
+</div>
+</div></div>
+
+</div>
+
+
+
+
+
+                
+			</div> <!-- bottom grid end -->
+		</footer><!-- footer bottom end -->
+
+
+   </body>
+ </html>

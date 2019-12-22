@@ -1,0 +1,3571 @@
+1
+00:00:00,000 --> 00:00:12,050
+2 times this equation, Okay.
+
+2
+00:00:12,050 --> 00:00:13,510
+This is it.
+
+3
+00:00:13,510 --> 00:00:17,360
+The second lecture
+in linear algebra,
+
+4
+00:00:17,360 --> 00:00:25,860
+and I've put below my
+main topics for today.
+
+5
+00:00:25,860 --> 00:00:28,270
+I put right there a
+system of equations
+
+6
+00:00:28,270 --> 00:00:30,780
+that's going to be our
+example to work with.
+
+7
+00:00:30,780 --> 00:00:35,150
+But what are we
+going to do with it?
+
+8
+00:00:35,150 --> 00:00:37,540
+We're going to solve it.
+
+9
+00:00:37,540 --> 00:00:41,900
+And the method of solution
+will not be determinants.
+
+10
+00:00:41,900 --> 00:00:44,560
+Determinants are something
+that will come later.
+
+11
+00:00:44,560 --> 00:00:47,930
+The method we'll use
+is called elimination.
+
+12
+00:00:47,930 --> 00:00:53,630
+And it's the way every software
+package solves equations.
+
+13
+00:00:57,960 --> 00:01:03,360
+And elimination, well, if it
+succeeds, it gets the answer.
+
+14
+00:01:03,360 --> 00:01:05,870
+And normally it does succeed.
+
+15
+00:01:05,870 --> 00:01:09,790
+If the matrix A that's
+coming into that system
+
+16
+00:01:09,790 --> 00:01:12,460
+is a good matrix, and
+I think this one is,
+
+17
+00:01:12,460 --> 00:01:14,770
+then elimination will work.
+
+18
+00:01:14,770 --> 00:01:18,290
+We'll get the answer
+in an efficient way.
+
+19
+00:01:18,290 --> 00:01:21,310
+But why don't we, as long
+as we're sort of seeing how
+
+20
+00:01:21,310 --> 00:01:25,120
+elimination works -- it's
+always good to ask how could it
+
+21
+00:01:25,120 --> 00:01:26,010
+fail?
+
+22
+00:01:26,010 --> 00:01:29,180
+So at the same
+time, we'll see how
+
+23
+00:01:29,180 --> 00:01:32,570
+elimination decides whether
+the matrix is a good one
+
+24
+00:01:32,570 --> 00:01:35,040
+or has problems.
+
+25
+00:01:35,040 --> 00:01:37,030
+Then to complete
+the answer, there's
+
+26
+00:01:37,030 --> 00:01:40,780
+an obvious step of
+back substitution.
+
+27
+00:01:40,780 --> 00:01:44,600
+In fact, the idea
+of elimination is --
+
+28
+00:01:44,600 --> 00:01:47,750
+you would have
+thought of it, right?
+
+29
+00:01:47,750 --> 00:01:51,090
+I mean Gauss thought
+of it before we did,
+
+30
+00:01:51,090 --> 00:01:54,140
+but only because he
+was born earlier.
+
+31
+00:01:54,140 --> 00:01:58,070
+It's a natural idea...
+
+32
+00:01:58,070 --> 00:02:00,020
+and died earlier, too.
+
+33
+00:02:00,020 --> 00:02:07,020
+Okay, and you've seen the idea.
+
+34
+00:02:07,020 --> 00:02:11,870
+But now, the part that I want
+to show you is elimination
+
+35
+00:02:11,870 --> 00:02:16,040
+expressed in matrix language,
+because the whole course --
+
+36
+00:02:16,040 --> 00:02:21,740
+all the key ideas get expressed
+as matrix operations, not as
+
+37
+00:02:21,740 --> 00:02:23,420
+words.
+
+38
+00:02:23,420 --> 00:02:27,080
+And one of the operations,
+of course, that we'll meet
+
+39
+00:02:27,080 --> 00:02:30,500
+is how do we multiply
+matrices and why?
+
+40
+00:02:30,500 --> 00:02:34,150
+Okay, so there's a
+system of equations.
+
+41
+00:02:34,150 --> 00:02:38,270
+Three equations
+and three unknowns.
+
+42
+00:02:38,270 --> 00:02:42,700
+And there's the matrix, the
+three by three matrix --
+
+43
+00:02:42,700 --> 00:02:47,860
+so this is the system Ax = b.
+
+44
+00:02:47,860 --> 00:02:51,260
+This is our system
+to solve, Ax equal --
+
+45
+00:02:51,260 --> 00:02:55,260
+and the right-hand side
+is that vector 2, 12, 2.
+
+46
+00:02:55,260 --> 00:02:56,970
+Okay.
+
+47
+00:02:56,970 --> 00:03:00,640
+Now, when I describe
+elimination --
+
+48
+00:03:00,640 --> 00:03:04,300
+it gets to be a pain to
+keep writing the equal signs
+
+49
+00:03:04,300 --> 00:03:06,330
+and the pluses and so on.
+
+50
+00:03:06,330 --> 00:03:10,220
+It's that matrix
+that totally matters.
+
+51
+00:03:10,220 --> 00:03:12,340
+Everything is in that matrix.
+
+52
+00:03:12,340 --> 00:03:14,820
+But behind it is
+those equations.
+
+53
+00:03:14,820 --> 00:03:17,384
+So what does elimination do?
+
+54
+00:03:17,384 --> 00:03:18,925
+What's the first
+step of elimination?
+
+55
+00:03:22,680 --> 00:03:26,110
+We accept the first
+equation, it's okay.
+
+56
+00:03:26,110 --> 00:03:29,220
+I'm going to multiply that
+equation by the right number,
+
+57
+00:03:29,220 --> 00:03:32,980
+the right multiplier and
+I'm going to subtract it
+
+58
+00:03:32,980 --> 00:03:36,220
+from the second equation.
+
+59
+00:03:36,220 --> 00:03:37,400
+With what purpose?
+
+60
+00:03:37,400 --> 00:03:41,530
+So that will decide what
+the multiplier should be.
+
+61
+00:03:41,530 --> 00:03:50,180
+Our purpose is to knock out
+the x part of equation two.
+
+62
+00:03:50,180 --> 00:03:54,980
+So our purpose is
+to eliminate x.
+
+63
+00:03:54,980 --> 00:03:57,820
+So what do I multiply --
+
+64
+00:03:57,820 --> 00:03:59,650
+and again, I'll do
+it with this matrix,
+
+65
+00:03:59,650 --> 00:04:01,590
+because I can do it short.
+
+66
+00:04:01,590 --> 00:04:03,340
+What's the multiplier here?
+
+67
+00:04:03,340 --> 00:04:06,770
+What do I multiply --
+equation one and subtract.
+
+68
+00:04:06,770 --> 00:04:08,810
+Notice I'm saying
+that word subtract.
+
+69
+00:04:08,810 --> 00:04:10,870
+I'd like to stick
+to that convention.
+
+70
+00:04:10,870 --> 00:04:13,890
+I'll do a subtraction.
+
+71
+00:04:13,890 --> 00:04:19,790
+First of all this is the key
+number that I'm starting with.
+
+72
+00:04:19,790 --> 00:04:22,170
+And that's called the pivot.
+
+73
+00:04:22,170 --> 00:04:25,270
+I'll put a box around it
+and write its name down.
+
+74
+00:04:25,270 --> 00:04:27,800
+That's the first pivot.
+
+75
+00:04:27,800 --> 00:04:30,641
+The first pivot.
+
+76
+00:04:30,641 --> 00:04:31,140
+Okay.
+
+77
+00:04:31,140 --> 00:04:33,130
+So I'm going to use --
+
+78
+00:04:33,130 --> 00:04:35,710
+that's sort of like the key
+number in that equation.
+
+79
+00:04:35,710 --> 00:04:37,260
+And now what's the multiplier?
+
+80
+00:04:37,260 --> 00:04:39,720
+So I'm going to --
+
+81
+00:04:39,720 --> 00:04:45,950
+my first row won't change,
+that's the pivot row.
+
+82
+00:04:45,950 --> 00:04:48,680
+But I'm going to use it --
+
+83
+00:04:48,680 --> 00:04:51,700
+and now, finally, let me ask
+you what the multiplier is.
+
+84
+00:04:51,700 --> 00:04:52,680
+Yes?
+
+85
+00:04:52,680 --> 00:04:58,170
+3 times that first equation
+will knock out that 3.
+
+86
+00:04:58,170 --> 00:04:59,110
+Okay.
+
+87
+00:04:59,110 --> 00:05:00,220
+So what will it leave?
+
+88
+00:05:00,220 --> 00:05:02,000
+So the multiplier is 3.
+
+89
+00:05:02,000 --> 00:05:05,220
+3 times that will make that 0.
+
+90
+00:05:05,220 --> 00:05:06,720
+That was our purpose.
+
+91
+00:05:06,720 --> 00:05:11,490
+3 2s away from the 8 will leave
+a 2 and three 1s away from 1
+
+92
+00:05:11,490 --> 00:05:12,960
+will leave a minus 2.
+
+93
+00:05:12,960 --> 00:05:15,400
+And this guy didn't change.
+
+94
+00:05:17,980 --> 00:05:22,530
+Now the next step -- this is
+forward elimination and that
+
+95
+00:05:22,530 --> 00:05:23,802
+Okay. step's completed.
+
+96
+00:05:23,802 --> 00:05:26,260
+Oh, well, you could say wait
+a minute, what about the right
+
+97
+00:05:26,260 --> 00:05:27,280
+hand side?
+
+98
+00:05:27,280 --> 00:05:32,610
+Shall I carry -- the right-hand
+side gets carried along.
+
+99
+00:05:32,610 --> 00:05:36,410
+Actually MatLab finishes up
+with the left side before --
+
+100
+00:05:36,410 --> 00:05:38,330
+and then just goes back
+to do the right side.
+
+101
+00:05:38,330 --> 00:05:42,340
+Maybe I'll be MatLab for
+a moment and do that.
+
+102
+00:05:42,340 --> 00:05:44,610
+Okay.
+
+103
+00:05:44,610 --> 00:05:49,470
+I'm leaving a room for a column
+of b, the right-hand side.
+
+104
+00:05:49,470 --> 00:05:51,310
+But I'll fill it in later.
+
+105
+00:05:51,310 --> 00:05:52,360
+Okay.
+
+106
+00:05:52,360 --> 00:05:54,680
+Now the next step of
+elimination is what?
+
+107
+00:05:54,680 --> 00:05:56,850
+Well, strictly speaking...
+
+108
+00:05:56,850 --> 00:06:05,250
+this position that I cleaned
+up was like the 2, 1 position,
+
+109
+00:06:05,250 --> 00:06:07,470
+row 2, column 1.
+
+110
+00:06:07,470 --> 00:06:10,310
+So I got a 0 in
+the 2, 1 position.
+
+111
+00:06:10,310 --> 00:06:13,990
+I'll use 2,1 as the
+index of that step.
+
+112
+00:06:13,990 --> 00:06:17,050
+The next step should
+be to finish the column
+
+113
+00:06:17,050 --> 00:06:20,770
+and get a 0 in that position.
+
+114
+00:06:20,770 --> 00:06:24,350
+So the next step is really
+the 3,1 step, row three,
+
+115
+00:06:24,350 --> 00:06:25,330
+column one.
+
+116
+00:06:25,330 --> 00:06:30,390
+But of course, I already have 0.
+
+117
+00:06:30,390 --> 00:06:31,070
+Okay.
+
+118
+00:06:31,070 --> 00:06:32,930
+So the multiplier is 0.
+
+119
+00:06:32,930 --> 00:06:39,390
+I take 0 of this equation away
+from this one and I'm all set.
+
+120
+00:06:39,390 --> 00:06:43,940
+So I won't repeat that, but
+there was a step there which,
+
+121
+00:06:43,940 --> 00:06:48,750
+MatLab would have to look --
+it would look at this number
+
+122
+00:06:48,750 --> 00:06:53,370
+and, do that step, unless you
+told it in advance that it was
+
+123
+00:06:53,370 --> 00:06:53,870
+0.
+
+124
+00:06:53,870 --> 00:06:54,590
+Okay.
+
+125
+00:06:54,590 --> 00:06:56,530
+Now what?
+
+126
+00:06:56,530 --> 00:07:00,920
+Now we can see the second
+pivot, which is what?
+
+127
+00:07:00,920 --> 00:07:04,700
+The second pivot --
+see, we've eliminated --
+
+128
+00:07:04,700 --> 00:07:06,870
+x is now gone from
+this equation, right?
+
+129
+00:07:06,870 --> 00:07:12,570
+We're down to two
+equations in y and z.
+
+130
+00:07:12,570 --> 00:07:14,260
+And so now I just do it again.
+
+131
+00:07:14,260 --> 00:07:17,270
+Like, everything's very cursive
+at this -- this is like --
+
+132
+00:07:17,270 --> 00:07:20,240
+such a basic algorithm
+and you've seen it,
+
+133
+00:07:20,240 --> 00:07:25,670
+but carry me through
+one last step.
+
+134
+00:07:25,670 --> 00:07:28,490
+So this is still
+the first pivot.
+
+135
+00:07:28,490 --> 00:07:32,060
+Now the second pivot is this
+guy, who has appeared there.
+
+136
+00:07:32,060 --> 00:07:36,620
+And what's the multiplier, the
+appropriate multiplier now?
+
+137
+00:07:36,620 --> 00:07:38,130
+And what's my purpose?
+
+138
+00:07:38,130 --> 00:07:44,560
+Is it to wipe out the
+3, 2 position, right?
+
+139
+00:07:44,560 --> 00:07:47,640
+This was the 2, 1 step.
+
+140
+00:07:47,640 --> 00:07:53,010
+And now I'm going to
+take the 3, 2 step.
+
+141
+00:07:53,010 --> 00:08:00,350
+So this all stays the
+same, 1 2 1, 0 2 -1
+
+142
+00:08:00,350 --> 00:08:03,340
+and the pivots are there.
+
+143
+00:08:03,340 --> 00:08:05,510
+Now I'm using this pivot,
+so what's the multiplier?
+
+144
+00:08:10,840 --> 00:08:14,630
+this row, gets subtracted from
+this row and makes that a 0.
+
+145
+00:08:14,630 --> 00:08:20,770
+So it's 0, 0 and is it a 5?
+
+146
+00:08:20,770 --> 00:08:24,200
+Yeah, I guess it's
+a 5, is that right?
+
+147
+00:08:24,200 --> 00:08:26,560
+Because I have a
+one there and I'm
+
+148
+00:08:26,560 --> 00:08:32,330
+subtracting twice of twice
+this, so I think it's a 5 there.
+
+149
+00:08:32,330 --> 00:08:33,370
+There's the third pivot.
+
+150
+00:08:33,370 --> 00:08:35,874
+So let me put a box
+around all three pivots.
+
+151
+00:08:41,370 --> 00:08:48,900
+Is there a -- oh, did I
+just invent a negative one?
+
+152
+00:08:48,900 --> 00:08:53,800
+I'm sorry that the tape
+can't, correct that
+
+153
+00:08:53,800 --> 00:08:55,220
+as easily as I can.
+
+154
+00:08:55,220 --> 00:08:55,750
+Okay.
+
+155
+00:08:55,750 --> 00:08:57,683
+Thank you very much.
+
+156
+00:09:00,860 --> 00:09:03,610
+You get an A in the course now.
+
+157
+00:09:03,610 --> 00:09:04,570
+Is that correct?
+
+158
+00:09:07,600 --> 00:09:09,790
+Is it correct now?
+
+159
+00:09:09,790 --> 00:09:10,810
+Okay.
+
+160
+00:09:10,810 --> 00:09:15,830
+So the three pivots are there --
+
+161
+00:09:15,830 --> 00:09:19,840
+I know right away a
+lot about this matrix.
+
+162
+00:09:19,840 --> 00:09:24,400
+This elimination step from A --
+this matrix I'm going to call
+
+163
+00:09:24,400 --> 00:09:27,830
+U. U for upper triangular.
+
+164
+00:09:27,830 --> 00:09:29,690
+So the whole purpose
+of elimination
+
+165
+00:09:29,690 --> 00:09:32,060
+was to get from A to U.
+
+166
+00:09:32,060 --> 00:09:35,830
+And, literally, that's the
+most common calculation
+
+167
+00:09:35,830 --> 00:09:38,580
+in scientific computing.
+
+168
+00:09:38,580 --> 00:09:40,790
+And people think of how
+could I do that faster?
+
+169
+00:09:40,790 --> 00:09:44,210
+Because it's a
+major, major thing.
+
+170
+00:09:44,210 --> 00:09:47,560
+But we're doing it the
+straightforward way.
+
+171
+00:09:47,560 --> 00:09:52,000
+We found three pivots, and by
+the way, I didn't say this,
+
+172
+00:09:52,000 --> 00:09:54,410
+pivots can't be 0.
+
+173
+00:09:54,410 --> 00:09:57,160
+I don't accept 0 as a pivot.
+
+174
+00:09:57,160 --> 00:09:58,750
+And I didn't get 0.
+
+175
+00:09:58,750 --> 00:10:00,650
+So this matrix is great.
+
+176
+00:10:00,650 --> 00:10:03,150
+It gave me three
+pivots, I didn't
+
+177
+00:10:03,150 --> 00:10:07,450
+have to do anything special,
+I just followed the rules and,
+
+178
+00:10:07,450 --> 00:10:11,130
+and the pivots are 1, 2 and 5.
+
+179
+00:10:11,130 --> 00:10:14,880
+By the way, just because I
+always anticipate stuff from
+
+180
+00:10:14,880 --> 00:10:20,120
+a later day, if I wanted to know
+the determinant of this matrix
+
+181
+00:10:20,120 --> 00:10:22,010
+-- which I never
+do want to know,
+
+182
+00:10:22,010 --> 00:10:23,990
+but I would just
+multiply the pivots.
+
+183
+00:10:23,990 --> 00:10:25,540
+The determinant is 10.
+
+184
+00:10:25,540 --> 00:10:32,820
+So even things like the
+determinant are here.
+
+185
+00:10:32,820 --> 00:10:34,960
+Okay.
+
+186
+00:10:34,960 --> 00:10:38,410
+Now -- oh, let me talk
+about failure for a moment,
+
+187
+00:10:38,410 --> 00:10:40,510
+and then --
+
+188
+00:10:40,510 --> 00:10:44,370
+and then come back to success.
+
+189
+00:10:44,370 --> 00:10:47,700
+How could this have failed?
+
+190
+00:10:47,700 --> 00:10:54,525
+How could -- by fail, I mean
+to come up with three pivots.
+
+191
+00:10:58,570 --> 00:11:00,800
+I mean, there are
+a couple of points.
+
+192
+00:11:00,800 --> 00:11:02,530
+I would have already
+been in trouble
+
+193
+00:11:02,530 --> 00:11:06,520
+if this very first
+number here was 0.
+
+194
+00:11:06,520 --> 00:11:10,610
+If it was a 0 there --
+suppose that had been a 0,
+
+195
+00:11:10,610 --> 00:11:14,760
+there were no Xs in that
+equation -- first equation.
+
+196
+00:11:14,760 --> 00:11:17,040
+Does that mean I can't
+solve the problem?
+
+197
+00:11:17,040 --> 00:11:19,180
+Does that mean I quit?
+
+198
+00:11:19,180 --> 00:11:21,700
+No.
+
+199
+00:11:21,700 --> 00:11:22,860
+What do I do?
+
+200
+00:11:22,860 --> 00:11:24,570
+I switch rows.
+
+201
+00:11:24,570 --> 00:11:26,010
+I exchange rows.
+
+202
+00:11:26,010 --> 00:11:30,210
+So in case of a 0, I
+will not say 0 pivot.
+
+203
+00:11:30,210 --> 00:11:33,680
+I will never be heard to
+utter those words, 0 pivot.
+
+204
+00:11:33,680 --> 00:11:37,270
+But if there's a 0 in
+the pivot position,
+
+205
+00:11:37,270 --> 00:11:39,930
+maybe I can say
+that, I would try
+
+206
+00:11:39,930 --> 00:11:45,400
+to exchange for a lower equation
+and get a proper pivot up
+
+207
+00:11:45,400 --> 00:11:46,140
+there.
+
+208
+00:11:46,140 --> 00:11:46,640
+Okay.
+
+209
+00:11:46,640 --> 00:11:51,020
+Now, for example, this
+second pivot came out two.
+
+210
+00:11:51,020 --> 00:11:52,510
+Could it have come out 0?
+
+211
+00:11:52,510 --> 00:11:56,110
+What -- actually, if I
+change that 8 a little bit,
+
+212
+00:11:56,110 --> 00:12:01,650
+I would have got
+a little trouble.
+
+213
+00:12:01,650 --> 00:12:08,210
+What should I change that 8
+to so that I run into trouble?
+
+214
+00:12:08,210 --> 00:12:09,070
+A 6.
+
+215
+00:12:09,070 --> 00:12:14,840
+If that had been a 6, then
+this would have been 0
+
+216
+00:12:14,840 --> 00:12:17,320
+and I couldn't have
+used that as the pivot.
+
+217
+00:12:17,320 --> 00:12:20,230
+But I could have
+exchanged again.
+
+218
+00:12:20,230 --> 00:12:21,960
+In this case.
+
+219
+00:12:21,960 --> 00:12:26,840
+In this case, because when
+can I get out of trouble?
+
+220
+00:12:26,840 --> 00:12:28,490
+I can get out of
+trouble if there's
+
+221
+00:12:28,490 --> 00:12:32,580
+a non-0 below this
+troublesome 0.
+
+222
+00:12:32,580 --> 00:12:34,350
+And there is here.
+
+223
+00:12:34,350 --> 00:12:36,890
+So I would be okay in this case.
+
+224
+00:12:36,890 --> 00:12:40,080
+If this was a 6, I
+would survive by a row
+
+225
+00:12:40,080 --> 00:12:41,290
+exchange.
+
+226
+00:12:41,290 --> 00:12:46,430
+Now -- of course, it might have
+happened that I couldn't do
+
+227
+00:12:46,430 --> 00:12:49,280
+the row, that -- that
+there was 0s below it,
+
+228
+00:12:49,280 --> 00:12:50,780
+but here there wasn't.
+
+229
+00:12:50,780 --> 00:12:55,370
+Now, I could also have got in
+trouble if this number 1 was
+
+230
+00:12:55,370 --> 00:12:58,540
+a little different.
+
+231
+00:12:58,540 --> 00:13:02,260
+See, that 1 became a
+5, I guess, by the end.
+
+232
+00:13:05,040 --> 00:13:08,940
+So can you see what
+number there would
+
+233
+00:13:08,940 --> 00:13:14,130
+have got me trouble that I
+really couldn't get out of?
+
+234
+00:13:14,130 --> 00:13:15,710
+Trouble that I
+couldn't get out of
+
+235
+00:13:15,710 --> 00:13:22,810
+would mean if 0 is
+in the pivot position
+
+236
+00:13:22,810 --> 00:13:26,270
+and I've got no
+place to exchange.
+
+237
+00:13:26,270 --> 00:13:31,970
+So there must be some number
+which if I had had here
+
+238
+00:13:31,970 --> 00:13:34,460
+it would have meant failure.
+
+239
+00:13:34,460 --> 00:13:36,590
+Negative 4, good.
+
+240
+00:13:36,590 --> 00:13:39,670
+If it was a negative 4 here --
+if it happened to be a negative
+
+241
+00:13:39,670 --> 00:13:43,900
+4, I'll temporarily
+put it up here.
+
+242
+00:13:43,900 --> 00:13:47,800
+If this had been a
+negative 4 z, then I
+
+243
+00:13:47,800 --> 00:13:50,264
+would have gone
+through the same steps.
+
+244
+00:13:50,264 --> 00:13:52,680
+This would have been a minus
+4, it still would have been a
+
+245
+00:13:52,680 --> 00:13:53,750
+minus 4.
+
+246
+00:13:53,750 --> 00:13:58,610
+But at the last minute
+it would have become 0.
+
+247
+00:13:58,610 --> 00:14:02,080
+And there wouldn't have
+been a third pivot.
+
+248
+00:14:02,080 --> 00:14:04,790
+The matrix would have
+not been invertible.
+
+249
+00:14:04,790 --> 00:14:08,860
+Well, of course, the inverse of
+a matrix is coming next week,
+
+250
+00:14:08,860 --> 00:14:11,850
+but, you've heard these words
+
+251
+00:14:11,850 --> 00:14:12,590
+before.
+
+252
+00:14:12,590 --> 00:14:16,940
+So, that's how we
+identify failure.
+
+253
+00:14:16,940 --> 00:14:20,680
+There's temporary failure when
+we can do a row exchange --
+
+254
+00:14:20,680 --> 00:14:24,350
+and get out of it, or there's
+complete failure when we get
+
+255
+00:14:24,350 --> 00:14:26,020
+a 0 and --
+
+256
+00:14:26,020 --> 00:14:28,280
+and there's nothing
+below that we can use.
+
+257
+00:14:28,280 --> 00:14:29,400
+Okay.
+
+258
+00:14:29,400 --> 00:14:31,240
+Let's stay with --
+
+259
+00:14:31,240 --> 00:14:34,380
+back to success now.
+
+260
+00:14:34,380 --> 00:14:39,020
+In fact, I guess the next
+topic is back substitution.
+
+261
+00:14:39,020 --> 00:14:40,430
+So what's back substitution?
+
+262
+00:14:40,430 --> 00:14:46,690
+Well, now I'd better bring
+the right-hand side in.
+
+263
+00:14:46,690 --> 00:14:52,040
+So what would MatLab do
+and what should we do?
+
+264
+00:14:52,040 --> 00:14:55,540
+Let me bring in the right-hand
+side as an extra column.
+
+265
+00:14:55,540 --> 00:14:56,720
+So there comes B.
+
+266
+00:14:56,720 --> 00:15:05,650
+So it's 2, 12, I would call
+this the augmented matrix.
+
+267
+00:15:05,650 --> 00:15:08,270
+"Augment" means you've
+tacked something on.
+
+268
+00:15:08,270 --> 00:15:11,810
+I've tacked on
+this extra column.
+
+269
+00:15:11,810 --> 00:15:14,870
+Because, when I'm
+working with equations,
+
+270
+00:15:14,870 --> 00:15:17,990
+I do the same thing
+to both sides.
+
+271
+00:15:17,990 --> 00:15:22,940
+So, at this step, I subtracted 2
+of the first equation away from
+
+272
+00:15:22,940 --> 00:15:26,910
+the second equation so
+that this augmented --
+
+273
+00:15:26,910 --> 00:15:31,960
+I even brought some colored
+chalk, but I don't know if it
+
+274
+00:15:31,960 --> 00:15:32,550
+shows up.
+
+275
+00:15:32,550 --> 00:15:35,920
+So this is like the augmented --
+
+276
+00:15:35,920 --> 00:15:36,580
+no!
+
+277
+00:15:36,580 --> 00:15:39,060
+Damn, circled the wrong thing.
+
+278
+00:15:39,060 --> 00:15:41,020
+Okay.
+
+279
+00:15:41,020 --> 00:15:44,020
+Here is b.
+
+280
+00:15:44,020 --> 00:15:46,090
+Okay, that's the extra column.
+
+281
+00:15:46,090 --> 00:15:46,590
+Okay.
+
+282
+00:15:46,590 --> 00:15:49,380
+So what happened to
+that extra column,
+
+283
+00:15:49,380 --> 00:15:51,170
+the right-hand side
+of the equations,
+
+284
+00:15:51,170 --> 00:15:53,160
+when I did the first step?
+
+285
+00:15:53,160 --> 00:15:57,320
+So that was 3 of this away
+from this, so it took --
+
+286
+00:15:57,320 --> 00:16:02,210
+the 2 stayed the same, but
+three 2s got taken away from 12,
+
+287
+00:16:02,210 --> 00:16:04,900
+leaving 6, and that
+2 stayed the same.
+
+288
+00:16:04,900 --> 00:16:09,050
+So this is how it's
+looking halfway along.
+
+289
+00:16:09,050 --> 00:16:11,310
+And let me just
+carry to the end.
+
+290
+00:16:11,310 --> 00:16:16,350
+The 2 and the 6 stay
+the same, but --
+
+291
+00:16:16,350 --> 00:16:19,110
+what do I have here?
+
+292
+00:16:19,110 --> 00:16:19,790
+Oh, gosh.
+
+293
+00:16:23,090 --> 00:16:23,880
+Help me out, now.
+
+294
+00:16:23,880 --> 00:16:26,410
+What -- so now I'm --
+
+295
+00:16:26,410 --> 00:16:29,560
+This is still like
+forward elimination.
+
+296
+00:16:29,560 --> 00:16:32,430
+I got to this point,
+which I think is right,
+
+297
+00:16:32,430 --> 00:16:34,420
+and now what did
+I do at this step?
+
+298
+00:16:34,420 --> 00:16:38,250
+I multiplied that pivot by 2
+or that whole equation by 2
+
+299
+00:16:38,250 --> 00:16:40,430
+and subtracted from
+that, so I think
+
+300
+00:16:40,430 --> 00:16:43,620
+I take two 6s, which
+is 12, away from the 2.
+
+301
+00:16:43,620 --> 00:16:49,630
+Do you think minus 10 is
+my final right-hand side --
+
+302
+00:16:49,630 --> 00:16:51,940
+the right-hand side that
+goes with U, and let me
+
+303
+00:16:51,940 --> 00:16:56,820
+call that once and
+forever the vector c.
+
+304
+00:16:56,820 --> 00:17:04,060
+So c is what happens to b,
+and U is what happens to A.
+
+305
+00:17:04,060 --> 00:17:04,640
+Okay.
+
+306
+00:17:04,640 --> 00:17:09,050
+There you've seen
+elimination clean.
+
+307
+00:17:09,050 --> 00:17:11,319
+Okay.
+
+308
+00:17:11,319 --> 00:17:14,300
+Oh, what's back substitution?
+
+309
+00:17:14,300 --> 00:17:16,810
+So what are my final
+equations, then?
+
+310
+00:17:16,810 --> 00:17:20,200
+Can I copy these equations?
+
+311
+00:17:20,200 --> 00:17:34,650
+x+2y+z=2 is still there and
+2y-2z=6 is there, and 5z=-10.
+
+312
+00:17:34,650 --> 00:17:36,250
+Okay.
+
+313
+00:17:36,250 --> 00:17:40,120
+Those are the equations
+that these numbers
+
+314
+00:17:40,120 --> 00:17:42,000
+are telling me about.
+
+315
+00:17:42,000 --> 00:17:46,960
+Those are the
+equations U x equals c.
+
+316
+00:17:46,960 --> 00:17:50,390
+Okay, how do I solve them?
+
+317
+00:17:50,390 --> 00:17:52,780
+What one do I solve for first?
+
+318
+00:17:52,780 --> 00:17:54,280
+z.
+
+319
+00:17:54,280 --> 00:17:59,550
+I see immediately that the
+correct value of z is negative
+
+320
+00:17:59,550 --> 00:18:02,860
+And what do I do next?
+
+321
+00:18:02,860 --> 00:18:04,020
+I go back upwards.
+
+322
+00:18:04,020 --> 00:18:07,100
+I now know z here.
+
+323
+00:18:07,100 --> 00:18:12,360
+So, if z is negative 2,
+that's 4 there, is that right?
+
+324
+00:18:12,360 --> 00:18:17,910
+And so 2 y plus a 4
+is 6, maybe y is 1.
+
+325
+00:18:17,910 --> 00:18:21,070
+Going -- this is
+back substitution.
+
+326
+00:18:21,070 --> 00:18:23,660
+We're doing it on the
+fly because it's so easy.
+
+327
+00:18:23,660 --> 00:18:27,120
+And then x is --
+
+328
+00:18:27,120 --> 00:18:31,810
+so x -- 2y is 2 minus
+2, maybe x is 2?
+
+329
+00:18:38,540 --> 00:18:41,580
+So you see what back
+substitution is.
+
+330
+00:18:41,580 --> 00:18:46,160
+It's the simple step solving
+the equations in reverse order
+
+331
+00:18:46,160 --> 00:18:49,350
+because the system
+is triangular.
+
+332
+00:18:49,350 --> 00:18:50,340
+Okay.
+
+333
+00:18:50,340 --> 00:18:52,010
+Good.
+
+334
+00:18:52,010 --> 00:18:54,860
+So that's elimination
+and back substitution,
+
+335
+00:18:54,860 --> 00:18:57,620
+and I kept the
+right-hand side along.
+
+336
+00:18:57,620 --> 00:19:00,360
+Okay, now what do I --
+
+337
+00:19:00,360 --> 00:19:04,060
+that, like, is
+first piece of the
+
+338
+00:19:04,060 --> 00:19:05,330
+lecture.
+
+339
+00:19:05,330 --> 00:19:08,780
+What's the second piece?
+
+340
+00:19:08,780 --> 00:19:11,530
+Matrices are going to get in.
+
+341
+00:19:11,530 --> 00:19:17,640
+So I wrote stuff with x, y-s
+and z-s in there, then I really,
+
+342
+00:19:17,640 --> 00:19:24,060
+got the right shorthand, just
+writing the matrix entries,
+
+343
+00:19:24,060 --> 00:19:27,980
+and now I want to
+write the operations
+
+344
+00:19:27,980 --> 00:19:32,080
+that I did in matrices, right?
+
+345
+00:19:32,080 --> 00:19:34,190
+I've carried the
+matrices along, but I
+
+346
+00:19:34,190 --> 00:19:42,860
+haven't said the operation
+those elimination steps,
+
+347
+00:19:42,860 --> 00:19:45,251
+I now want to
+express as matrices.
+
+348
+00:19:45,251 --> 00:19:45,750
+Okay.
+
+349
+00:19:45,750 --> 00:19:46,460
+Here they come.
+
+350
+00:19:49,570 --> 00:19:51,466
+So now this is
+elimination matrices.
+
+351
+00:19:55,280 --> 00:19:57,500
+Okay.
+
+352
+00:19:57,500 --> 00:20:02,700
+Let me take that first step,
+which took me from 1 2 1 3 8 1
+
+353
+00:20:02,700 --> 00:20:06,140
+0 4 1.
+
+354
+00:20:09,970 --> 00:20:12,310
+I want to operate on that --
+
+355
+00:20:12,310 --> 00:20:16,260
+I want to do
+elimination on that.
+
+356
+00:20:16,260 --> 00:20:17,380
+Okay.
+
+357
+00:20:17,380 --> 00:20:21,170
+Okay, now I'm
+remembering a point
+
+358
+00:20:21,170 --> 00:20:29,390
+I want to single out as
+especially important.
+
+359
+00:20:29,390 --> 00:20:32,953
+Let me move the
+board up for that.
+
+360
+00:20:36,600 --> 00:20:40,020
+Because when we do matrix
+operations, we've got to, like,
+
+361
+00:20:40,020 --> 00:20:41,860
+be able to see the big picture.
+
+362
+00:20:41,860 --> 00:20:42,360
+Okay.
+
+363
+00:20:42,360 --> 00:20:46,290
+Last time, I spoke about
+the big picture of --
+
+364
+00:20:46,290 --> 00:20:50,380
+when I multiply a matrix
+by a right-hand side.
+
+365
+00:20:50,380 --> 00:20:54,690
+If I have some matrix there
+and I multiply it by 3 4 5,
+
+366
+00:20:54,690 --> 00:20:55,920
+let's say --
+
+367
+00:20:55,920 --> 00:20:59,520
+so here's a matrix --
+
+368
+00:20:59,520 --> 00:21:02,120
+what did I say -- well,
+I guess I only said it
+
+369
+00:21:02,120 --> 00:21:06,500
+on the videotape, but -- do
+you remember how I look at that
+
+370
+00:21:06,500 --> 00:21:08,480
+matrix multiplication?
+
+371
+00:21:08,480 --> 00:21:13,410
+The result of multiplying
+a matrix by some vector
+
+372
+00:21:13,410 --> 00:21:21,830
+is a combination of the
+columns of the matrix.
+
+373
+00:21:21,830 --> 00:21:24,640
+It's 3 times the first column.
+
+374
+00:21:24,640 --> 00:21:33,630
+It's 3 times column one plus 4
+times column two plus 5 times
+
+375
+00:21:33,630 --> 00:21:34,450
+column three.
+
+376
+00:21:39,760 --> 00:21:40,370
+Okay.
+
+377
+00:21:40,370 --> 00:21:43,970
+I'm going to come back
+to that multiple times.
+
+378
+00:21:43,970 --> 00:21:51,430
+What I wanted to do now was to
+emphasize the parallel thing
+
+379
+00:21:51,430 --> 00:21:54,390
+with rows.
+
+380
+00:21:54,390 --> 00:21:55,050
+Why?
+
+381
+00:21:55,050 --> 00:21:59,620
+Because all our operations
+here for this two weeks
+
+382
+00:21:59,620 --> 00:22:04,150
+of the course are
+row operations.
+
+383
+00:22:04,150 --> 00:22:10,270
+So this isn't what I
+need for row operations.
+
+384
+00:22:10,270 --> 00:22:12,040
+Let me do a row operation.
+
+385
+00:22:12,040 --> 00:22:20,380
+Suppose I have my matrix
+again and suppose I multiply
+
+386
+00:22:20,380 --> 00:22:23,520
+on the left by some
+-- let's say 1 2 7.
+
+387
+00:22:28,680 --> 00:22:33,860
+Again, I'm just, like,
+saying what the result is.
+
+388
+00:22:33,860 --> 00:22:38,240
+And then we'll say how
+matrix multiplication works
+
+389
+00:22:38,240 --> 00:22:40,470
+and we'll see that it's true.
+
+390
+00:22:40,470 --> 00:22:41,260
+Okay.
+
+391
+00:22:41,260 --> 00:22:45,600
+But maybe already I'm making --
+
+392
+00:22:45,600 --> 00:22:49,960
+I'm sort of bringing up -- the
+central idea of linear algebra
+
+393
+00:22:49,960 --> 00:22:55,490
+is how these matrices work by
+rows as well as by columns.
+
+394
+00:22:55,490 --> 00:22:55,990
+Okay.
+
+395
+00:22:55,990 --> 00:22:57,730
+How does it work by rows?
+
+396
+00:22:57,730 --> 00:23:05,310
+What -- so that's a row vector.
+
+397
+00:23:05,310 --> 00:23:08,860
+I could say that's a one
+by three matrix, a row
+
+398
+00:23:08,860 --> 00:23:11,335
+vector multiplying a
+three by three matrix.
+
+399
+00:23:15,300 --> 00:23:17,300
+What's the output?
+
+400
+00:23:17,300 --> 00:23:23,440
+What's the product of
+a row times a matrix?
+
+401
+00:23:23,440 --> 00:23:26,260
+And -- okay, it's a row.
+
+402
+00:23:26,260 --> 00:23:29,080
+A row -- a column --
+
+403
+00:23:29,080 --> 00:23:29,580
+I'm sorry.
+
+404
+00:23:29,580 --> 00:23:31,690
+A matrix times a
+column is a column.
+
+405
+00:23:31,690 --> 00:23:35,350
+So matrix times a -- yeah.
+
+406
+00:23:35,350 --> 00:23:41,760
+Matrix times a
+column is a column.
+
+407
+00:23:41,760 --> 00:23:44,080
+And we know what column it is.
+
+408
+00:23:44,080 --> 00:23:47,400
+Over here, I'm doing
+a row times a matrix.
+
+409
+00:23:47,400 --> 00:23:49,500
+And what's the answer?
+
+410
+00:23:49,500 --> 00:23:53,260
+It's one of that first
+row, so it's 1 times --
+
+411
+00:23:53,260 --> 00:24:05,000
+1 times row one, plus 2 times
+row two plus 7 times row three.
+
+412
+00:24:05,000 --> 00:24:07,810
+When -- as we do
+matrix multiplication,
+
+413
+00:24:07,810 --> 00:24:13,650
+keep your eye on what it's
+doing with whole vectors.
+
+414
+00:24:13,650 --> 00:24:18,140
+And what it's doing -- what
+it's doing in this case is
+
+415
+00:24:18,140 --> 00:24:20,520
+it's combining the rows.
+
+416
+00:24:20,520 --> 00:24:24,750
+And we have a combination, a
+linear combination of the rows.
+
+417
+00:24:24,750 --> 00:24:26,130
+Okay, I want to use that.
+
+418
+00:24:33,160 --> 00:24:38,190
+Okay, so my question is what's
+the matrix that does this first
+
+419
+00:24:38,190 --> 00:24:44,180
+step, that takes -- subtracts
+3 of equation one from equation
+
+420
+00:24:44,180 --> 00:24:44,680
+two?
+
+421
+00:24:44,680 --> 00:24:46,550
+That's what I want to do.
+
+422
+00:24:46,550 --> 00:24:48,800
+So this is going to
+be a matrix that's
+
+423
+00:24:48,800 --> 00:25:03,780
+going to subtract 3 times
+row one from row two,
+
+424
+00:25:03,780 --> 00:25:05,160
+and leaves the other rows the
+
+425
+00:25:05,160 --> 00:25:05,670
+same.
+
+426
+00:25:05,670 --> 00:25:09,150
+Just in -- I mean, the
+answer is going to be that.
+
+427
+00:25:09,150 --> 00:25:12,600
+So whatever matrix this is --
+
+428
+00:25:12,600 --> 00:25:15,450
+and you're going to, like,
+tell me what matrix will do it,
+
+429
+00:25:15,450 --> 00:25:19,820
+it's the matrix that leaves
+the first row unchanged,
+
+430
+00:25:19,820 --> 00:25:23,680
+leaves the last row unchanged,
+but takes 3 of these
+
+431
+00:25:23,680 --> 00:25:27,740
+away from this so it puts a 0
+there, a 2 there and a minus 2.
+
+432
+00:25:27,740 --> 00:25:29,470
+Good.
+
+433
+00:25:29,470 --> 00:25:31,420
+What matrix will do it?
+
+434
+00:25:31,420 --> 00:25:33,010
+It's these.
+
+435
+00:25:33,010 --> 00:25:35,880
+It should be a
+pretty simple matrix,
+
+436
+00:25:35,880 --> 00:25:40,360
+because we're doing
+a very simple step.
+
+437
+00:25:40,360 --> 00:25:43,840
+We're just doing this
+step that changes row two.
+
+438
+00:25:43,840 --> 00:25:46,060
+So actually, row
+one is not changing.
+
+439
+00:25:46,060 --> 00:25:48,490
+So tell me how the
+matrix should begin.
+
+440
+00:25:51,250 --> 00:26:01,130
+One -- the first row of
+the matrix will be 1 0 0,
+
+441
+00:26:01,130 --> 00:26:05,050
+because that's just the right
+thing that takes one of that
+
+442
+00:26:05,050 --> 00:26:08,030
+row and none of the other
+rows, and that's what we want.
+
+443
+00:26:08,030 --> 00:26:11,160
+What's the last
+row of the matrix?
+
+444
+00:26:11,160 --> 00:26:17,090
+0 0 1, because that takes
+one of the third row
+
+445
+00:26:17,090 --> 00:26:19,030
+and none of the other
+rows, that's great.
+
+446
+00:26:19,030 --> 00:26:20,370
+Okay.
+
+447
+00:26:20,370 --> 00:26:24,420
+Now, suppose I didn't want
+to do anything at all.
+
+448
+00:26:24,420 --> 00:26:28,340
+Suppose my row -- well, I guess
+maybe I had a case here when I
+
+449
+00:26:28,340 --> 00:26:33,080
+already had a 0 and,
+didn't have to do anything.
+
+450
+00:26:33,080 --> 00:26:40,540
+What matrix does nothing, like,
+just leaves you where you were?
+
+451
+00:26:40,540 --> 00:26:42,420
+If I put in --
+
+452
+00:26:42,420 --> 00:26:49,280
+if I put in 0 1 0, that
+would be -- that would be --
+
+453
+00:26:49,280 --> 00:26:52,390
+that's the matrix -- what's
+the name of that matrix?
+
+454
+00:26:52,390 --> 00:26:55,140
+The identity matrix, right.
+
+455
+00:26:55,140 --> 00:26:56,720
+So it does absolutely nothing.
+
+456
+00:26:56,720 --> 00:26:59,240
+It just multiplies everything
+and leaves it where it is.
+
+457
+00:26:59,240 --> 00:27:03,120
+It's like a one, like the
+number one, for matrices.
+
+458
+00:27:03,120 --> 00:27:06,360
+But that's not what we want,
+because we want to change this
+
+459
+00:27:06,360 --> 00:27:08,100
+row to --
+
+460
+00:27:08,100 --> 00:27:11,060
+so what's the correct --
+
+461
+00:27:11,060 --> 00:27:16,610
+what should I put in
+here now to do it right?
+
+462
+00:27:16,610 --> 00:27:18,280
+I want to get -- what do I want?
+
+463
+00:27:18,280 --> 00:27:20,660
+What I -- I'm after --
+
+464
+00:27:20,660 --> 00:27:24,360
+I want 3 of row one
+to get subtracted
+
+465
+00:27:24,360 --> 00:27:25,210
+off.
+
+466
+00:27:25,210 --> 00:27:32,620
+So what's the right matrix,
+finish that matrix for me.
+
+467
+00:27:32,620 --> 00:27:36,390
+Negative 3 goes here?
+
+468
+00:27:36,390 --> 00:27:37,560
+And what goes here?
+
+469
+00:27:37,560 --> 00:27:38,720
+That 1.
+
+470
+00:27:38,720 --> 00:27:39,610
+And what goes here?
+
+471
+00:27:39,610 --> 00:27:40,740
+The 0.
+
+472
+00:27:40,740 --> 00:27:43,230
+That's the good matrix.
+
+473
+00:27:43,230 --> 00:27:46,700
+That's the matrix
+that takes minus 3
+
+474
+00:27:46,700 --> 00:27:50,800
+of row one plus the row two
+and gives the new row 2.
+
+475
+00:27:50,800 --> 00:27:57,350
+Should we just, like,
+check some particular
+
+476
+00:27:57,350 --> 00:27:58,130
+entry?
+
+477
+00:27:58,130 --> 00:28:00,380
+How do I check a
+particular entry
+
+478
+00:28:00,380 --> 00:28:03,640
+of a matrix in matrix
+multiplication?
+
+479
+00:28:03,640 --> 00:28:09,050
+Like, suppose I wanted to check
+the entry here that's in row
+
+480
+00:28:09,050 --> 00:28:11,850
+two, column three.
+
+481
+00:28:11,850 --> 00:28:16,400
+So where does the entry in row
+two, column three come from?
+
+482
+00:28:16,400 --> 00:28:19,660
+I would look at
+row two of this guy
+
+483
+00:28:19,660 --> 00:28:26,230
+and column three of this
+one to get that number.
+
+484
+00:28:26,230 --> 00:28:29,950
+That number comes from the
+second row and the third column
+
+485
+00:28:29,950 --> 00:28:34,120
+and I just take this
+dot product minus 3 --
+
+486
+00:28:34,120 --> 00:28:39,360
+I'm multiplying -- minus 3
+plus 1 and 0 gives the minus 2.
+
+487
+00:28:39,360 --> 00:28:40,010
+Yeah.
+
+488
+00:28:40,010 --> 00:28:41,640
+It works.
+
+489
+00:28:41,640 --> 00:28:46,840
+So we got various ways
+to multiply matrices now.
+
+490
+00:28:46,840 --> 00:28:49,870
+We're sort of,
+like -- informally.
+
+491
+00:28:49,870 --> 00:28:52,600
+We've got by columns,
+we've got -- well,
+
+492
+00:28:52,600 --> 00:28:56,670
+we will have by columns,
+by rows, by each entry at a
+
+493
+00:28:56,670 --> 00:28:57,370
+time.
+
+494
+00:28:57,370 --> 00:29:01,360
+But it's good to see that
+matrix multiplication when one
+
+495
+00:29:01,360 --> 00:29:04,030
+of the matrices is so simple.
+
+496
+00:29:04,030 --> 00:29:08,180
+So this guy is our
+elementary matrix.
+
+497
+00:29:08,180 --> 00:29:12,530
+Let's call it E for
+elementary or elimination.
+
+498
+00:29:12,530 --> 00:29:18,130
+And let me put the indexes 2 1,
+because it's the matrix that we
+
+499
+00:29:18,130 --> 00:29:22,380
+needed to fix the 2 1 position.
+
+500
+00:29:22,380 --> 00:29:25,790
+It's the matrix that we
+needed to get this 2 1
+
+501
+00:29:25,790 --> 00:29:29,340
+position to be Okay.
+
+502
+00:29:29,340 --> 00:29:30,000
+Good enough.
+
+503
+00:29:30,000 --> 00:29:32,140
+So what do I do next?
+
+504
+00:29:32,140 --> 00:29:34,550
+I need another matrix, right?
+
+505
+00:29:34,550 --> 00:29:36,610
+I need to --
+
+506
+00:29:36,610 --> 00:29:39,420
+there's another step here.
+
+507
+00:29:39,420 --> 00:29:43,330
+And I want to express
+the whole elimination
+
+508
+00:29:43,330 --> 00:29:46,780
+process in matrix language.
+
+509
+00:29:46,780 --> 00:29:54,510
+So tell me what -- so next
+step, step two, which was what?
+
+510
+00:29:54,510 --> 00:29:59,970
+Subtract -- what was -- what
+was the actual step that we did?
+
+511
+00:29:59,970 --> 00:30:03,670
+I think I subtracted
+-- do you remember?
+
+512
+00:30:03,670 --> 00:30:06,730
+I had a 2 in the pivot
+and a 4 below it,
+
+513
+00:30:06,730 --> 00:30:11,700
+so I subtracted two times --
+
+514
+00:30:11,700 --> 00:30:16,690
+times row two from row three.
+
+515
+00:30:16,690 --> 00:30:18,870
+From row three.
+
+516
+00:30:18,870 --> 00:30:21,040
+Tell me the matrix
+that will do that.
+
+517
+00:30:23,910 --> 00:30:26,600
+And tell me its name.
+
+518
+00:30:26,600 --> 00:30:31,390
+Okay, it's going to be E,
+for elementary or elimination
+
+519
+00:30:31,390 --> 00:30:36,080
+matrix and what's the index
+number that I used to tell me
+
+520
+00:30:36,080 --> 00:30:38,590
+what E --
+
+521
+00:30:38,590 --> 00:30:39,750
+3, 2, right?
+
+522
+00:30:39,750 --> 00:30:43,690
+Because it's fixing
+this 3 2 position.
+
+523
+00:30:43,690 --> 00:30:47,550
+And what's the matrix, now?
+
+524
+00:30:47,550 --> 00:30:52,200
+Okay, you remember -- so E 3 2
+is supposed to multiply my guy
+
+525
+00:30:52,200 --> 00:30:58,840
+that I have and it's supposed
+to produce the right result,
+
+526
+00:30:58,840 --> 00:31:01,320
+which was -- it leaves -- it's
+supposed to leave the first
+
+527
+00:31:01,320 --> 00:31:05,420
+row, it's supposed to leave the
+second row and it's supposed
+
+528
+00:31:05,420 --> 00:31:10,490
+to straighten out that
+third row to this.
+
+529
+00:31:10,490 --> 00:31:12,775
+And what's the matrix
+that does that?
+
+530
+00:31:15,620 --> 00:31:16,820
+1 0 0, right?
+
+531
+00:31:16,820 --> 00:31:21,350
+Because we don't change the
+first row and the next row
+
+532
+00:31:21,350 --> 00:31:24,190
+we don't change either,
+and the last row
+
+533
+00:31:24,190 --> 00:31:27,240
+is the one we do change.
+
+534
+00:31:27,240 --> 00:31:29,730
+And what do I do?
+
+535
+00:31:29,730 --> 00:31:33,540
+Let's see, I
+subtract two times --
+
+536
+00:31:33,540 --> 00:31:35,120
+so what's this row?
+
+537
+00:31:35,120 --> 00:31:37,100
+What's this here?
+
+538
+00:31:37,100 --> 00:31:41,530
+0, right, because the
+first row's not involved.
+
+539
+00:31:41,530 --> 00:31:44,520
+It's just in the 3 2
+position, isn't it?
+
+540
+00:31:44,520 --> 00:31:49,980
+This the key number is this
+minus the multiplier that goes
+
+541
+00:31:49,980 --> 00:31:52,430
+-- sitting there in
+that 3 2 position.
+
+542
+00:31:52,430 --> 00:31:59,233
+Is it a minus 2 to subtract 2
+and then this is a 1 so that --
+
+543
+00:32:02,550 --> 00:32:06,660
+the overall effect is to take
+minus 2 of this row plus 1 of
+
+544
+00:32:06,660 --> 00:32:07,200
+that.
+
+545
+00:32:07,200 --> 00:32:07,700
+Okay.
+
+546
+00:32:10,430 --> 00:32:15,280
+So, I've now given you the
+pieces, the elimination
+
+547
+00:32:15,280 --> 00:32:18,720
+matrices, the elementary
+matrices that take each step.
+
+548
+00:32:21,510 --> 00:32:23,890
+So now what?
+
+549
+00:32:23,890 --> 00:32:27,510
+Now the next point
+in the lecture
+
+550
+00:32:27,510 --> 00:32:32,450
+is to put those steps together
+into a matrix that does it all
+
+551
+00:32:32,450 --> 00:32:34,930
+and see how it all happens.
+
+552
+00:32:34,930 --> 00:32:37,220
+So now I'm going to
+express the whole --
+
+553
+00:32:37,220 --> 00:32:46,530
+everything we did today so
+far on A was to start with A,
+
+554
+00:32:46,530 --> 00:32:53,150
+we multiplied it by E 2 1,
+that was the first step --
+
+555
+00:32:53,150 --> 00:33:01,080
+and then we multiplied that
+result by E 3 2 and that led us
+
+556
+00:33:01,080 --> 00:33:04,970
+to this thing and
+what was that matrix?
+
+557
+00:33:04,970 --> 00:33:10,890
+U.
+
+558
+00:33:10,890 --> 00:33:13,840
+You see why I like
+matrix notation,
+
+559
+00:33:13,840 --> 00:33:18,750
+because there in,
+like, little space --
+
+560
+00:33:18,750 --> 00:33:23,460
+a few bits when its compressed
+on the web -- is everything --
+
+561
+00:33:23,460 --> 00:33:25,490
+is this whole lecture.
+
+562
+00:33:25,490 --> 00:33:26,550
+Okay.
+
+563
+00:33:26,550 --> 00:33:33,720
+Now there -- there are
+important facts about matrix
+
+564
+00:33:33,720 --> 00:33:35,940
+multiplication.
+
+565
+00:33:35,940 --> 00:33:40,440
+And we're close to maybe
+the most important.
+
+566
+00:33:40,440 --> 00:33:42,320
+And that is this.
+
+567
+00:33:42,320 --> 00:33:44,470
+Suppose I ask you this question.
+
+568
+00:33:44,470 --> 00:33:49,140
+Suppose I start with
+a matrix A and I
+
+569
+00:33:49,140 --> 00:33:52,410
+want to end with
+a matrix U and I
+
+570
+00:33:52,410 --> 00:33:55,230
+want to say what matrix
+does the whole job?
+
+571
+00:33:57,750 --> 00:34:05,240
+What matrix takes me from A to
+U, using the letters I've got?
+
+572
+00:34:07,880 --> 00:34:09,969
+And the answer is simple.
+
+573
+00:34:09,969 --> 00:34:13,275
+I'm not asking this as --
+but it's highly important.
+
+574
+00:34:17,199 --> 00:34:19,429
+How would I create
+the matrix that
+
+575
+00:34:19,429 --> 00:34:21,639
+does the whole job
+at once, that does
+
+576
+00:34:21,639 --> 00:34:24,840
+all of elimination in one shot?
+
+577
+00:34:24,840 --> 00:34:25,810
+It would be --
+
+578
+00:34:25,810 --> 00:34:29,489
+I would just put
+these together, right?
+
+579
+00:34:29,489 --> 00:34:34,310
+In other words, this is the
+thing I'm struggling to say.
+
+580
+00:34:34,310 --> 00:34:35,810
+I can move those parentheses.
+
+581
+00:34:38,699 --> 00:34:41,050
+If I keep the
+matrices in order --
+
+582
+00:34:41,050 --> 00:34:45,030
+I can't mess around with
+the order of the matrices,
+
+583
+00:34:45,030 --> 00:34:49,460
+but I can change the order
+that I do the multiplications.
+
+584
+00:34:49,460 --> 00:34:53,004
+I can multiply
+these two first --
+
+585
+00:34:55,670 --> 00:34:59,490
+in other words, you see what
+those parentheses are doing?
+
+586
+00:34:59,490 --> 00:35:04,910
+It's saying -- multiply the
+Es first and that gives you
+
+587
+00:35:04,910 --> 00:35:07,660
+the matrix that does
+everything at once.
+
+588
+00:35:07,660 --> 00:35:09,370
+Okay.
+
+589
+00:35:09,370 --> 00:35:13,920
+So this fact, that this is
+automatically the same as this
+
+590
+00:35:13,920 --> 00:35:14,870
+--
+
+591
+00:35:14,870 --> 00:35:20,590
+for every matrix multiplication,
+which I'm conscious of still
+
+592
+00:35:20,590 --> 00:35:24,600
+not telling you in
+every detail, but, like,
+
+593
+00:35:24,600 --> 00:35:27,910
+you're seeing how it works --
+and this is highly important --
+
+594
+00:35:27,910 --> 00:35:32,150
+and maybe tell me the long
+word that describes this law
+
+595
+00:35:32,150 --> 00:35:37,620
+for matrices, that you
+can move the parentheses?
+
+596
+00:35:37,620 --> 00:35:40,670
+It's called the associative law.
+
+597
+00:35:40,670 --> 00:35:42,551
+I think you can now forget that.
+
+598
+00:35:45,380 --> 00:35:47,320
+But don't forget the law.
+
+599
+00:35:47,320 --> 00:35:49,450
+I mean, like, forget
+the word associative.
+
+600
+00:35:49,450 --> 00:35:50,240
+I don't know.
+
+601
+00:35:50,240 --> 00:35:51,950
+But don't forget the law.
+
+602
+00:35:51,950 --> 00:35:59,540
+Because actually, we'll see so
+many steps in linear algebra,
+
+603
+00:35:59,540 --> 00:36:03,220
+so many proofs,
+even, of main fact
+
+604
+00:36:03,220 --> 00:36:05,495
+come from just moving
+the parentheses.
+
+605
+00:36:08,610 --> 00:36:15,400
+And it's not that easy to
+prove that this is correct,
+
+606
+00:36:15,400 --> 00:36:18,240
+you have to go into the
+gory details of matrix
+
+607
+00:36:18,240 --> 00:36:20,700
+multiplication, do
+it both ways and see
+
+608
+00:36:20,700 --> 00:36:23,360
+that you come out the same.
+
+609
+00:36:23,360 --> 00:36:27,360
+Maybe I'll leave the
+author to do that.
+
+610
+00:36:27,360 --> 00:36:28,160
+Okay.
+
+611
+00:36:28,160 --> 00:36:29,650
+So there we go.
+
+612
+00:36:34,550 --> 00:36:40,160
+So there's a single matrix,
+I could call it E --
+
+613
+00:36:40,160 --> 00:36:45,780
+while we're talking about these
+matrices, tell me one other --
+
+614
+00:36:45,780 --> 00:36:49,140
+there's another type
+of elementary matrix,
+
+615
+00:36:49,140 --> 00:36:52,510
+and we already said
+why we might need it.
+
+616
+00:36:52,510 --> 00:36:54,520
+We didn't need it in this case.
+
+617
+00:36:54,520 --> 00:36:58,580
+But it's the matrix
+that exchanges two rows.
+
+618
+00:36:58,580 --> 00:37:01,990
+It's called a
+permutation matrix.
+
+619
+00:37:01,990 --> 00:37:06,500
+Can you just, like, tell me what
+that would So I'm just -- like,
+
+620
+00:37:06,500 --> 00:37:10,260
+this is a slight digression
+and be? we'll -- yes,
+
+621
+00:37:10,260 --> 00:37:12,600
+so let me get some -- let me
+figure out where I'm going
+
+622
+00:37:12,600 --> 00:37:13,970
+to put a permutation matrix.
+
+623
+00:37:16,870 --> 00:37:19,120
+You'll see I'm always
+squeezing stuff in.
+
+624
+00:37:19,120 --> 00:37:19,840
+So permutation.
+
+625
+00:37:23,270 --> 00:37:33,530
+Or, in fact this one you'll,
+like, exchange rows --
+
+626
+00:37:33,530 --> 00:37:37,920
+shall I exchange rows one and
+two, just to make life easy?
+
+627
+00:37:37,920 --> 00:37:41,450
+So if I had my matrix -- no, let
+-- let me just do two by two.
+
+628
+00:37:41,450 --> 00:37:44,330
+|a b; c d|.
+
+629
+00:37:44,330 --> 00:37:49,610
+Suppose I want to find
+the matrix that exchanges
+
+630
+00:37:49,610 --> 00:37:50,330
+those rows.
+
+631
+00:37:55,060 --> 00:37:58,350
+What is it?
+
+632
+00:37:58,350 --> 00:38:01,260
+So the matrix that
+exchanges those rows --
+
+633
+00:38:01,260 --> 00:38:03,640
+the row I want is
+c d and it's there.
+
+634
+00:38:03,640 --> 00:38:07,100
+So I better take one of it.
+
+635
+00:38:07,100 --> 00:38:11,010
+And the row I want here is up
+top, so I'll take one of that.
+
+636
+00:38:11,010 --> 00:38:13,180
+So actually, I'm just --
+
+637
+00:38:13,180 --> 00:38:16,850
+the easy way -- this is my
+matrix that I'll call P,
+
+638
+00:38:16,850 --> 00:38:17,750
+for permutation.
+
+639
+00:38:21,560 --> 00:38:26,650
+It's the matrix -- actually, the
+easy way to find it is just do
+
+640
+00:38:26,650 --> 00:38:30,500
+the thing to the
+identity matrix.
+
+641
+00:38:30,500 --> 00:38:32,650
+Exchange the rows of
+the identity matrix
+
+642
+00:38:32,650 --> 00:38:38,830
+and then that's the matrix that
+will do row exchanges for you.
+
+643
+00:38:38,830 --> 00:38:43,000
+Suppose I wanted to
+exchange columns instead.
+
+644
+00:38:43,000 --> 00:38:45,290
+Columns have hardly got
+into today's lecture,
+
+645
+00:38:45,290 --> 00:38:48,430
+but they certainly are
+going to be around.
+
+646
+00:38:48,430 --> 00:38:53,010
+How could I -- if I started
+with this matrix |a b; c d|
+
+647
+00:38:53,010 --> 00:38:55,740
+then I wouldn't --
+
+648
+00:38:55,740 --> 00:38:57,480
+I'm not even going
+to write this down,
+
+649
+00:38:57,480 --> 00:39:03,460
+I'm just going to ask you,
+because in elimination, we're
+
+650
+00:39:03,460 --> 00:39:05,240
+doing rows.
+
+651
+00:39:05,240 --> 00:39:08,090
+But suppose we
+wanted to exchange
+
+652
+00:39:08,090 --> 00:39:10,225
+the columns of a matrix.
+
+653
+00:39:13,180 --> 00:39:15,450
+How would I do that?
+
+654
+00:39:15,450 --> 00:39:19,110
+What matrix multiplication
+would do that job?
+
+655
+00:39:19,110 --> 00:39:19,980
+Actually, why not?
+
+656
+00:39:19,980 --> 00:39:22,020
+I'll write it down.
+
+657
+00:39:22,020 --> 00:39:23,840
+So this is --
+
+658
+00:39:23,840 --> 00:39:28,220
+I'll write it under here
+and then hide it again.
+
+659
+00:39:28,220 --> 00:39:28,740
+Okay.
+
+660
+00:39:28,740 --> 00:39:32,580
+Suppose I had my
+matrix |a b; c d|
+
+661
+00:39:32,580 --> 00:39:38,160
+and I want to get to a c
+over here and b d here.
+
+662
+00:39:44,790 --> 00:39:46,620
+What matrix does that job?
+
+663
+00:39:52,300 --> 00:39:58,520
+Can I multiply -- can I cook up
+some matrix that produces that
+
+664
+00:39:58,520 --> 00:40:00,800
+answer?
+
+665
+00:40:00,800 --> 00:40:04,200
+You can see from where I
+put my hand I was really
+
+666
+00:40:04,200 --> 00:40:09,660
+asking can I put a matrix
+here on the left that
+
+667
+00:40:09,660 --> 00:40:11,850
+will exchange columns?
+
+668
+00:40:11,850 --> 00:40:16,260
+And the answer is no.
+
+669
+00:40:16,260 --> 00:40:18,000
+I'm just bringing
+out again this point
+
+670
+00:40:18,000 --> 00:40:22,940
+that when I multiply on the
+left, I'm doing row operations.
+
+671
+00:40:22,940 --> 00:40:24,790
+So if I want to do
+a column operation,
+
+672
+00:40:24,790 --> 00:40:29,260
+where do I put that
+permutation matrix?
+
+673
+00:40:29,260 --> 00:40:30,970
+On the right.
+
+674
+00:40:30,970 --> 00:40:35,220
+If I put it here, where I just
+barely left room for it --
+
+675
+00:40:35,220 --> 00:40:40,230
+so I'll exchange the two
+columns of the identity.
+
+676
+00:40:40,230 --> 00:40:43,410
+Then it comes out
+right, because now I'm
+
+677
+00:40:43,410 --> 00:40:45,980
+multiplying a column at a time.
+
+678
+00:40:45,980 --> 00:40:49,230
+This is the first column
+and says take one --
+
+679
+00:40:49,230 --> 00:40:52,500
+take none of that column,
+one of this one and then you
+
+680
+00:40:52,500 --> 00:40:53,500
+got it.
+
+681
+00:40:53,500 --> 00:40:56,240
+Over here, take one
+of this one, none
+
+682
+00:40:56,240 --> 00:40:58,420
+of this one and you've got a c.
+
+683
+00:40:58,420 --> 00:41:01,990
+So, in short, to do
+column operations,
+
+684
+00:41:01,990 --> 00:41:04,310
+the matrix multiplies
+on the right.
+
+685
+00:41:04,310 --> 00:41:07,660
+To do row operations, it
+multiplies on the left.
+
+686
+00:41:07,660 --> 00:41:11,990
+Okay, okay, and it's row
+operations that we're really
+
+687
+00:41:11,990 --> 00:41:12,535
+doing.
+
+688
+00:41:12,535 --> 00:41:13,035
+Okay.
+
+689
+00:41:18,790 --> 00:41:23,230
+And of course, I
+mentioned in passing,
+
+690
+00:41:23,230 --> 00:41:30,840
+but I better say it very
+clearly that you can't exchange
+
+691
+00:41:30,840 --> 00:41:32,120
+the orders of matrices.
+
+692
+00:41:32,120 --> 00:41:35,340
+And that's just the point
+I was making again here.
+
+693
+00:41:35,340 --> 00:41:39,520
+A times B is not the
+same as B times A.
+
+694
+00:41:39,520 --> 00:41:46,030
+You have to keep these matrices
+in their Gauss given order
+
+695
+00:41:46,030 --> 00:41:49,750
+here, right?
+
+696
+00:41:49,750 --> 00:41:52,930
+But you can move
+the parentheses,
+
+697
+00:41:52,930 --> 00:41:57,310
+so that, in other words,
+the commutative law, which
+
+698
+00:41:57,310 --> 00:42:03,850
+would allow you to take it
+in the other order is false.
+
+699
+00:42:03,850 --> 00:42:05,930
+So we have to keep
+it in that order.
+
+700
+00:42:05,930 --> 00:42:06,690
+Okay.
+
+701
+00:42:06,690 --> 00:42:10,915
+So what next?
+
+702
+00:42:13,730 --> 00:42:16,670
+I could do this multiplication.
+
+703
+00:42:16,670 --> 00:42:19,110
+I could do E 32.
+
+704
+00:42:19,110 --> 00:42:21,525
+So let me come back
+to see what that was.
+
+705
+00:42:24,750 --> 00:42:28,470
+Here was E 2 1.
+
+706
+00:42:28,470 --> 00:42:33,020
+And here is E 3 2.
+
+707
+00:42:33,020 --> 00:42:39,320
+And if I multiply those
+two matrices together --
+
+708
+00:42:39,320 --> 00:42:43,064
+E 3 2 and then E 2 1,
+I'll get a single matrix
+
+709
+00:42:43,064 --> 00:42:43,980
+that does elimination.
+
+710
+00:42:49,240 --> 00:42:52,110
+I don't want to do it that --
+
+711
+00:42:52,110 --> 00:42:55,350
+if I do that multiplication --
+
+712
+00:42:55,350 --> 00:43:00,790
+there -- there's a
+better way to do this.
+
+713
+00:43:00,790 --> 00:43:03,520
+And so in this last few
+minutes of today's lecture,
+
+714
+00:43:03,520 --> 00:43:05,540
+can I anticipate
+that better way?
+
+715
+00:43:08,320 --> 00:43:15,260
+The better way is to think
+not how do I get from A to U,
+
+716
+00:43:15,260 --> 00:43:20,310
+but how do I get
+from U back to A?
+
+717
+00:43:20,310 --> 00:43:24,730
+So reversing steps
+is going to come in.
+
+718
+00:43:24,730 --> 00:43:28,950
+Inverse -- I'll use
+the word inverse here.
+
+719
+00:43:28,950 --> 00:43:29,630
+Okay.
+
+720
+00:43:29,630 --> 00:43:37,250
+So let me make the first step
+at what's the inverse matrix?
+
+721
+00:43:37,250 --> 00:43:40,560
+All the matrices you've seen
+on this board have inverses.
+
+722
+00:43:43,720 --> 00:43:47,910
+I didn't write any
+bad matrices down.
+
+723
+00:43:47,910 --> 00:43:50,770
+We spoke about possible
+failure, and for a moment,
+
+724
+00:43:50,770 --> 00:43:53,400
+we put in a matrix
+that would fail.
+
+725
+00:43:53,400 --> 00:43:56,260
+But right now, all
+these matrices are good,
+
+726
+00:43:56,260 --> 00:43:57,720
+they're all invertible.
+
+727
+00:43:57,720 --> 00:44:01,010
+And let's take the
+inverse -- well,
+
+728
+00:44:01,010 --> 00:44:04,800
+let me say first what does
+the inverse mean and find it?
+
+729
+00:44:04,800 --> 00:44:05,300
+Okay.
+
+730
+00:44:05,300 --> 00:44:10,850
+So we're getting a little
+leg up on inverses.
+
+731
+00:44:10,850 --> 00:44:16,172
+Okay, so this is the
+final moments of today.
+
+732
+00:44:18,770 --> 00:44:22,870
+Sorry, he's still there.
+
+733
+00:44:22,870 --> 00:44:23,382
+Okay.
+
+734
+00:44:23,382 --> 00:44:23,882
+Inverses.
+
+735
+00:44:31,290 --> 00:44:33,320
+Okay, and I'm just going
+to take one example
+
+736
+00:44:33,320 --> 00:44:34,870
+and then we're done.
+
+737
+00:44:34,870 --> 00:44:39,480
+The example I'll take will
+be that E. So my matrix
+
+738
+00:44:39,480 --> 00:44:45,640
+is 1 0 0 minus 3 1 0 0 0 1.
+
+739
+00:44:48,240 --> 00:44:55,870
+And I want to find the
+matrix that undoes that step.
+
+740
+00:44:55,870 --> 00:44:57,720
+So what was that step?
+
+741
+00:44:57,720 --> 00:45:03,600
+The step was subtract 3
+times row one from row two.
+
+742
+00:45:03,600 --> 00:45:10,670
+So what matrix will get me back?
+
+743
+00:45:10,670 --> 00:45:14,540
+What matrix will bring back --
+
+744
+00:45:14,540 --> 00:45:19,530
+you know, if I started with a 2
+12 2 and I changed it to a 2 6
+
+745
+00:45:19,530 --> 00:45:25,580
+2 because of this guy, I want
+to get back to the 2 12 I want
+
+746
+00:45:25,580 --> 00:45:30,150
+to find the matrix which --
+which undoes elimination,
+
+747
+00:45:30,150 --> 00:45:33,240
+the matrix which multiplies
+this to give the identity.
+
+748
+00:45:38,390 --> 00:45:42,940
+And you can tell me what I
+should do in words first,
+
+749
+00:45:42,940 --> 00:45:45,570
+and then we'll write down
+the matrix that does it.
+
+750
+00:45:45,570 --> 00:45:50,130
+If this step subtracted
+3 times row 1 from row 2,
+
+751
+00:45:50,130 --> 00:45:51,500
+what's the inverse step?
+
+752
+00:45:51,500 --> 00:46:02,120
+I add 3 times row one
+to row two, right?
+
+753
+00:46:02,120 --> 00:46:03,080
+I add it back.
+
+754
+00:46:03,080 --> 00:46:05,610
+The -- what I subtracted
+away, I add back.
+
+755
+00:46:05,610 --> 00:46:08,770
+So the inverse matrix
+in this case is --
+
+756
+00:46:08,770 --> 00:46:12,660
+I now want to add 3
+times row one to row two,
+
+757
+00:46:12,660 --> 00:46:17,020
+so I won't change row one,
+I won't change row three
+
+758
+00:46:17,020 --> 00:46:23,000
+and I'll add 3 times
+row one to row two.
+
+759
+00:46:23,000 --> 00:46:27,740
+That's a case where
+the inverse is clear.
+
+760
+00:46:27,740 --> 00:46:33,530
+It's clear in words what to
+do, because what this did
+
+761
+00:46:33,530 --> 00:46:37,330
+was simple to express.
+
+762
+00:46:37,330 --> 00:46:43,290
+It just changed row two by
+subtracting 3 of row one.
+
+763
+00:46:43,290 --> 00:46:45,670
+So to invert it, I go that way.
+
+764
+00:46:45,670 --> 00:46:47,940
+And if you -- if we
+do that calculation,
+
+765
+00:46:47,940 --> 00:46:51,240
+3 times this row plus
+1 times this row,
+
+766
+00:46:51,240 --> 00:46:53,980
+comes out the right
+row of the identity.
+
+767
+00:46:53,980 --> 00:46:57,050
+Okay, so inverses are an --
+
+768
+00:46:57,050 --> 00:47:05,020
+so if this matrix was E and this
+matrix is I for identity, then
+
+769
+00:47:05,020 --> 00:47:08,370
+what's the notation
+for this guy?
+
+770
+00:47:08,370 --> 00:47:11,010
+E to the minus one.
+
+771
+00:47:11,010 --> 00:47:12,710
+E inverse.
+
+772
+00:47:12,710 --> 00:47:13,950
+Okay.
+
+773
+00:47:13,950 --> 00:47:16,040
+Let's stop there for today.
+
+774
+00:47:16,040 --> 00:47:20,660
+That's a little jump on
+what's coming on Monday.
+
+775
+00:47:20,660 --> 00:47:23,050
+So, see you Monday.
