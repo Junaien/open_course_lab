@@ -1,0 +1,62 @@
+1388. Pizza With 3n Slices
+
+There is a pizza with 3n slices of varying size, you and your friends will take slices of pizza as follows:
+
+You will pick any pizza slice.
+Your friend Alice will pick next slice in anti clockwise direction of your pick. 
+Your friend Bob will pick next slice in clockwise direction of your pick.
+Repeat until there are no more slices of pizzas.
+Sizes of Pizza slices is represented by circular array slices in clockwise direction.
+
+Return the maximum possible sum of slice sizes which you can have.
+
+Example 1:
+Input: slices = [1,2,3,4,5,6]
+Output: 10
+Explanation: Pick pizza slice of size 4, Alice and Bob will pick slices with size 3 and 5 respectively. Then Pick slices with size 6, finally Alice and Bob will pick slice of size 2 and 1 respectively. Total = 4 + 6.
+
+
+Example 2:
+Input: slices = [8,9,8,6,1,1]
+Output: 16
+Output: Pick pizza slice of size 8 in each turn. If you pick slice with size 9 your partners will pick slices of size 8.
+
+Example 3:
+Input: slices = [4,1,2,5,8,3,1,9,7]
+Output: 21
+
+Example 4:
+Input: slices = [3,1,2]
+Output: 3
+
+-----
+
+Algorithm:
+  A1: Dynamic programming
+    Input:
+      slices [], all pizza slices
+      l int, size of slices
+    Output:
+      max int, maximum sum of pizza slices
+    
+    initialization:
+      dp [i][j], denotes only considering first i items, pick j slices that are not neighbor
+                 not considering circular
+
+    process:
+      dp[i][j] = max(dp[i-2][j-1], dp[i-1][j]);
+
+    termination:
+      maximal of dp[0][l-2] & dp[1][l-1];
+
+  P1: proof by problem reduction
+    1. select l/3 elements in slices so that none are adjacent. 
+      Maximize the sum of selected
+    2. proof of equivalent solution in P1->1 vs original problem
+      2.1 any solotion in P1->1 is mapped to a original problem solution
+        2.11 - there always exist x (selectedL) x (selected) x x (selectedR), 
+               so that not both selected neighbors are distanced by 1
+             - pick that middle selected.  and recursively 2.11 is still true, hence we can always pick some selected
+               elements until the end
+      2.2 any solution in original problem can be done in P1->1
+        2.21 - any picked element must not be adjacent so, original solution can always mapped to a valid solution in P1->1
